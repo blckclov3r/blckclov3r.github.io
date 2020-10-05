@@ -1,6 +1,0 @@
-{
-    "require": {
-	    "leafo/scssphp": "0.0.12",
-        "vladkens/autoprefixer": "dev-master"
-    }
-}
