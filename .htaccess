@@ -1,0 +1,20 @@
+
+# BEGIN WordPress
+# The directives (lines) between "BEGIN WordPress" and "END WordPress" are
+# dynamically generated, and should only be modified via WordPress filters.
+# Any changes to the directives between these markers will be overwritten.
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /blckclov3r/
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /blckclov3r/index.php [L]
+</IfModule>
+# END WordPress
+# BEGIN FRedirect_ErrorDocument
+# The directives (lines) between "BEGIN FRedirect_ErrorDocument" and "END FRedirect_ErrorDocument" are
+# dynamically generated, and should only be modified via WordPress filters.
+# Any changes to the directives between these markers will be overwritten.
+ErrorDocument 404 /blckclov3r/index.php?error=404
+# END FRedirect_ErrorDocument

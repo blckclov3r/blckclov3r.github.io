@@ -1,0 +1,13 @@
+#block h3{background:url(../images/h3.png) no-repeat center;color:#dd3c04;font-size:13px;font-weight:normal;text-align:center;text-transform:uppercase;margin-bottom:17px;}
+#block .photo{background:url(../images/photo-bg.png) no-repeat center;margin-right:6px;position:relative;float:left;}
+#block .photo img{max-width:115px;max-height:115px;overflow:hidden;position:absolute;}
+#block .photo img.photo-bg{z-index:1;}
+#block .photo img.photo{left:0;}
+#block p.content{font-style:italic;line-height:24px;padding-left:19px;margin-left:121px;position:relative;overflow:hidden;}
+#block p.content span {text-indent;}
+#block p.content span.laquo{background:url(../images/laquo.png) no-repeat;width:14px;height:11px;position:absolute;left:0;top:4px;display:block;}
+#block p.content span.raquo{background:url(../images/raquo.png) no-repeat right 4px;width:13px;height:15px;padding-left:4px;display:inline-block;}
+#block .sign{text-align:right;float:right;}
+#block .sign a{color:#577302;font-family:Arial,sans-serif;font-size:13px;text-decoration:none;}
+#block .sign a:hover{text-decoration:underline;}
+#block .sign p{color:#5a5a5a;font-size:12px;line-height:15px;margin-top:6px;}

@@ -1,0 +1,5178 @@
+# Copyright (C) 2020 Kadence
+# This file is distributed under the same license as the Kadence package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Kadence\n"
+"Report-Msgid-Bugs-To: Kadence\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2020-07-24 11:06-0600\n"
+"Last-Translator: \n"
+"Language-Team: Español\n"
+"Language: es_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;"
+"_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;"
+"esc_html_e;esc_html_x:1,2c\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Poedit 2.3.1\n"
+"X-Loco-Version: 2.4.0; wp-5.4.2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: comments.php:33
+msgid "One Comment"
+msgstr "Un comentario"
+
+#: comments.php:37
+#, php-format
+msgctxt "comments title"
+msgid "%1$s Comment"
+msgid_plural "%1$s Comments"
+msgstr[0] "%1$s Comentario"
+msgstr[1] "%1$s Comentarios"
+
+#: comments.php:52
+msgid "Comments are closed."
+msgstr "Los Comentarios están cerrados."
+
+#: functions.php:47
+msgid "Thanks for choosing the Kadence Theme"
+msgstr "Gracias por elegir el Tema Kadence"
+
+#: functions.php:48
+msgid ""
+"This theme relies on the latest code from the WordPress Block Editor, please "
+"update WordPress to 5.4 to make sure all the features work."
+msgstr ""
+"Este tema se basa en el último código del Editor de Bloques de WordPress, "
+"por favor, actualice WordPress a 5.4 para asegurarse de que todas las "
+"funciones funcionen."
+
+#: inc/back-compat.php:25
+#, php-format
+msgid ""
+"Kadence requires at least WordPress version %1$s and PHP version %2$s. You "
+"are running versions %3$s and %3$s respectively. Please update and try again."
+msgstr ""
+"Kadence requiere al menos una versión de WordPress %1$s y una versión de PHP "
+"%2$s. Está ejecutando las versiones %3$s y %3$s respectivamente. Actualiza e "
+"intenta nuevamente."
+
+#: inc/back-compat.php:30
+#, php-format
+msgid ""
+"Kadence requires at least WordPress version %1$s. You are running version "
+"%2$s. Please update and try again."
+msgstr ""
+"Kadence requiere al menos una versión de WordPress %1$s. Está ejecutando la "
+"versión %2$s. Actualiza e intenta nuevamente."
+
+#: inc/back-compat.php:35
+#, php-format
+msgid ""
+"Kadence requires at least PHP version %1$s. You are running version %2$s. "
+"Please update and try again."
+msgstr ""
+"Kadence requiere al menos una versión de PHP %1$s. Está ejecutando la "
+"versión %2$s. Actualiza e intenta nuevamente."
+
+#: inc/class-theme.php:119
+#, php-format
+msgid "The theme component %1$s does not implement the %2$s interface."
+msgstr "El componente de tema %1$s no implementa la interfaz %2$s."
+
+#: inc/class-theme.php:178 inc/class-theme.php:188
+msgid "Something went wrong."
+msgstr "Algo salió mal."
+
+#: inc/class-theme.php:234
+#, php-format
+msgid "No theme component with the slug %s exists."
+msgstr "No existe ningún componente de tema con el slug %s."
+
+#: inc/components/accessibility/component.php:49
+msgid "Skip to content"
+msgstr "Saltar al Contenido"
+
+#: inc/components/archive_title/component.php:65
+#, php-format
+msgid "Author: %s"
+msgstr "Autor: %s"
+
+#: inc/components/archive_title/component.php:68
+#, php-format
+msgid "Day: %s"
+msgstr "Día: %s"
+
+#: inc/components/archive_title/component.php:71
+#, php-format
+msgid "Month: %s"
+msgstr "Meses: %s"
+
+#: inc/components/archive_title/component.php:74
+#, php-format
+msgid "Year: %s"
+msgstr "Año: %s"
+
+#: inc/components/author_meta/component.php:50
+msgid "Extra profile information for author box"
+msgstr "Información del perfil adicional para el cuadro de autor"
+
+#: inc/components/author_meta/component.php:55
+msgid "Occupation"
+msgstr "Ocupación"
+
+#: inc/components/author_meta/component.php:60
+msgid "Please enter your Occupation."
+msgstr "Por favor ingrese su Ocupación."
+
+#: inc/components/author_meta/component.php:68
+msgid "Please enter your Facebook url. (be sure to include http://)"
+msgstr "Ingresa tu URL de Facebook. (asegúrese de incluir http://)"
+
+#: inc/components/author_meta/component.php:77
+msgid "Please enter your Twitter url. (be sure to include http://)"
+msgstr "Ingresa tu URL de Twiter. (asegúrese de incluir http://)"
+
+#: inc/components/author_meta/component.php:86
+msgid "Please enter your Instagram url. (be sure to include http://)"
+msgstr "Ingresa tu URL de Instagram. (asegúrese de incluir http://)"
+
+#: inc/components/author_meta/component.php:95
+msgid "Please enter your YouTube url. (be sure to include http://)"
+msgstr "Ingresa tu URL de YouTube. (asegúrese de incluir http://)"
+
+#: inc/components/author_meta/component.php:104
+msgid "Please enter your Flickr url. (be sure to include http://)"
+msgstr "Ingresa tu URL de Flickr. (asegúrese de incluir http://)"
+
+#: inc/components/author_meta/component.php:113
+msgid "Please enter your Vimeo url. (be sure to include http://)"
+msgstr "Ingresa tu URL de Vimeo. (asegúrese de incluir http://)"
+
+#: inc/components/author_meta/component.php:122
+msgid "Please enter your Linkedin url. (be sure to include http://)"
+msgstr "Ingresa tu URL de LinkedIn. (asegúrese de incluir http://)"
+
+#: inc/components/author_meta/component.php:131
+msgid "Please enter your Dribbble url. (be sure to include http://)"
+msgstr "Ingresa tu URL de Dribbble. (asegúrese de incluir http://)"
+
+#: inc/components/author_meta/component.php:140
+msgid "Please enter your Pinterest url. (be sure to include http://)"
+msgstr "Ingresa tu URL de Pinterest. (asegúrese de incluir http://)"
+
+#: inc/components/base_support/component.php:176
+#: template-parts/footer/footer-row.php:24
+msgid "Click to edit this element."
+msgstr "Click para editar este elemento."
+
+#: inc/components/breadcrumbs/component.php:112
+msgid "Home"
+msgstr "Inicio"
+
+#: inc/components/breadcrumbs/component.php:113
+msgid "Error 404"
+msgstr "Error 404"
+
+#: inc/components/breadcrumbs/component.php:114
+msgid "Search results for"
+msgstr "Resultados de búsqueda para"
+
+#: inc/components/breadcrumbs/component.php:115
+msgid "Page"
+msgstr "Página"
+
+#: inc/components/breadcrumbs/component.php:211
+msgid "Knowledge Base"
+msgstr "Base de Conocimiento"
+
+#: inc/components/color_palette/component.php:64
+msgid "Global Palette"
+msgstr "Paleta Global"
+
+#: inc/components/color_palette/component.php:65
+msgid "Learn how to use this"
+msgstr ""
+
+#: inc/components/color_palette/component.php:85
+msgid "Accent"
+msgstr ""
+
+#: inc/components/color_palette/component.php:90
+msgid "Accent - alt"
+msgstr ""
+
+#: inc/components/color_palette/component.php:95
+msgid "Strongest text"
+msgstr ""
+
+#: inc/components/color_palette/component.php:100
+msgid "Strong Text"
+msgstr ""
+
+#: inc/components/color_palette/component.php:105
+#, fuzzy
+#| msgid "Medium"
+msgid "Medium text"
+msgstr "Medio"
+
+#: inc/components/color_palette/component.php:110
+msgid "Subtle Text"
+msgstr ""
+
+#: inc/components/color_palette/component.php:115
+#, fuzzy
+#| msgid "Site Background"
+msgid "Subtle Background"
+msgstr "Fondo del Sitio"
+
+#: inc/components/color_palette/component.php:120
+#, fuzzy
+#| msgid "Site Background"
+msgid "Lighter Background"
+msgstr "Fondo del Sitio"
+
+#: inc/components/color_palette/component.php:125
+msgid "White or offwhite"
+msgstr ""
+
+#: inc/components/comments/component.php:134
+msgid "New comment(s)"
+msgstr "Nuevo(s) comentario(s)"
+
+#: inc/components/comments/component.php:153
+msgid "Name"
+msgstr "Nombre"
+
+#: inc/components/comments/component.php:153
+msgid "John Dow"
+msgstr ""
+
+#: inc/components/comments/component.php:155
+#: inc/components/icons/component.php:247
+#: inc/components/icons/component.php:253
+#: inc/components/icons/component.php:259
+#: inc/customizer/options/general-social-options.php:174
+msgid "Email"
+msgstr "Email"
+
+#: inc/components/comments/component.php:155
+msgid "john@example.com"
+msgstr ""
+
+#: inc/components/comments/component.php:157
+msgid "Website"
+msgstr "Sitio web"
+
+#: inc/components/comments/component.php:157
+msgid "https://www.example.com"
+msgstr ""
+
+#: inc/components/comments/component.php:171
+msgid "Leave a comment..."
+msgstr ""
+
+#: inc/components/comments/component.php:171
+#: template-parts/content/entry_loop_meta.php:203
+#: template-parts/content/entry_meta.php:203 template-parts/title/meta.php:204
+msgid "Comment"
+msgstr "Comentario"
+
+#: inc/components/editor/component.php:186
+#: inc/customizer/options/header-mobile-button-options.php:88
+msgid "Small"
+msgstr "Pequeño"
+
+#: inc/components/editor/component.php:187
+msgid "S"
+msgstr "S"
+
+#: inc/components/editor/component.php:192
+#: inc/components/icons/component.php:235
+#: inc/customizer/options/header-mobile-button-options.php:91
+msgid "Medium"
+msgstr "Medio"
+
+#: inc/components/editor/component.php:193
+msgid "M"
+msgstr "M"
+
+#: inc/components/editor/component.php:198
+#: inc/customizer/options/header-mobile-button-options.php:95
+msgid "Large"
+msgstr "Grande"
+
+#: inc/components/editor/component.php:199
+msgid "L"
+msgstr "L"
+
+#: inc/components/editor/component.php:204
+msgid "Larger"
+msgstr "Más grande"
+
+#: inc/components/editor/component.php:205
+msgid "XL"
+msgstr "XL"
+
+#: inc/components/elementor_pro/class-elementor-dynamic-colors.php:49
+msgid "Kadence Color Palette"
+msgstr ""
+
+#: inc/components/elementor_pro/class-elementor-dynamic-colors.php:93
+msgid "1 - Accent"
+msgstr ""
+
+#: inc/components/elementor_pro/class-elementor-dynamic-colors.php:94
+msgid "2 - Accent - alt"
+msgstr ""
+
+#: inc/components/elementor_pro/class-elementor-dynamic-colors.php:95
+msgid "3 - Strongest text"
+msgstr ""
+
+#: inc/components/elementor_pro/class-elementor-dynamic-colors.php:96
+msgid "4 - Strong Text"
+msgstr ""
+
+#: inc/components/elementor_pro/class-elementor-dynamic-colors.php:97
+msgid "5 - Medium text"
+msgstr ""
+
+#: inc/components/elementor_pro/class-elementor-dynamic-colors.php:98
+msgid "6 - Subtle Text"
+msgstr ""
+
+#: inc/components/elementor_pro/class-elementor-dynamic-colors.php:99
+#, fuzzy
+#| msgid "Site Background"
+msgid "7 - Subtle Background"
+msgstr "Fondo del Sitio"
+
+#: inc/components/elementor_pro/class-elementor-dynamic-colors.php:100
+#, fuzzy
+#| msgid "Site Background"
+msgid "8 - Lighter Background"
+msgstr "Fondo del Sitio"
+
+#: inc/components/elementor_pro/class-elementor-dynamic-colors.php:101
+msgid "9 - White or offwhite"
+msgstr ""
+
+#: inc/components/elementor_pro/class-elementor-dynamic-colors.php:106
+#: inc/customizer/options/header-sticky-options.php:546
+#: inc/customizer/options/header-sticky-options.php:624
+#: inc/customizer/options/header-sticky-options.php:688
+#: inc/customizer/options/header-sticky-options.php:778
+#: inc/customizer/options/header-sticky-options.php:834
+#: inc/customizer/options/lifter-course-archive-layout-options.php:269
+#: inc/customizer/options/lifter-member-archive-layout-options.php:275
+#: inc/customizer/options/post-archive-layout-options.php:269
+#: inc/customizer/options/product-archive-layout-options.php:269
+#: inc/customizer/options/search-layout-options.php:255
+#: inc/customizer/options/transparent-header-options.php:490
+#: inc/customizer/options/transparent-header-options.php:568
+#: inc/customizer/options/transparent-header-options.php:632
+#: inc/customizer/options/transparent-header-options.php:760
+#: inc/customizer/options/transparent-header-options.php:816
+msgid "Color"
+msgstr "Color"
+
+#: inc/components/elementor_pro/component.php:59
+msgid "Kadence Theme"
+msgstr ""
+
+#: inc/components/icons/component.php:66 inc/components/icons/component.php:72
+#: inc/customizer/options/header-builder-options.php:76
+#: template-parts/archive-title/hkb-searchbox.php:23
+msgid "Search"
+msgstr "Búsqueda"
+
+#: inc/components/icons/component.php:78
+msgid "Zoom In"
+msgstr "Acercarse"
+
+#: inc/components/icons/component.php:84
+msgid "Bag"
+msgstr "Bolsa"
+
+#: inc/components/icons/component.php:90 inc/components/icons/component.php:96
+#: inc/components/icons/component.php:102
+#: inc/customizer/options/general-social-options.php:30
+msgid "Facebook"
+msgstr "Facebook"
+
+#: inc/components/icons/component.php:108
+#: inc/components/icons/component.php:114
+#: inc/customizer/options/general-social-options.php:36
+msgid "Twitter"
+msgstr "Twitter"
+
+#: inc/components/icons/component.php:120
+#: inc/components/icons/component.php:126
+#: inc/customizer/options/general-social-options.php:42
+msgid "Instagram"
+msgstr "Instagram"
+
+#: inc/components/icons/component.php:132
+#: inc/customizer/options/general-social-options.php:54
+msgid "Vimeo"
+msgstr "Vimeo"
+
+#: inc/components/icons/component.php:138
+#: inc/components/icons/component.php:144
+#: inc/customizer/options/general-social-options.php:48
+msgid "YouTube"
+msgstr "YouTube"
+
+#: inc/components/icons/component.php:150
+#: inc/components/icons/component.php:156
+msgid "Github"
+msgstr "Github"
+
+#: inc/components/icons/component.php:162
+#: inc/components/icons/component.php:168
+#: inc/components/icons/component.php:373
+#: inc/customizer/options/general-social-options.php:132
+msgid "RSS"
+msgstr "RSS"
+
+#: inc/components/icons/component.php:174
+msgid "FaceBook Group"
+msgstr "FaceBook Group"
+
+#: inc/components/icons/component.php:180
+#: inc/customizer/options/general-social-options.php:78
+msgid "Dribbble"
+msgstr "Dribbble"
+
+#: inc/components/icons/component.php:186
+#: inc/customizer/options/general-social-options.php:126
+msgid "Xing"
+msgstr "Xing"
+
+#: inc/components/icons/component.php:192
+#: inc/customizer/options/general-social-options.php:108
+msgid "WordPress"
+msgstr "WordPress"
+
+#: inc/components/icons/component.php:198
+#: inc/customizer/options/general-social-options.php:162
+msgid "WhatsApp"
+msgstr "WhatsApp"
+
+#: inc/components/icons/component.php:204
+#: inc/customizer/options/general-social-options.php:120
+msgid "VK"
+msgstr "VK"
+
+#: inc/components/icons/component.php:210
+msgid "Tumblr"
+msgstr "Tumblr"
+
+#: inc/components/icons/component.php:216
+#: inc/components/icons/component.php:222
+#: inc/customizer/options/general-social-options.php:96
+msgid "Reddit"
+msgstr "Reddit"
+
+#: inc/components/icons/component.php:228
+#: inc/customizer/options/general-social-options.php:90
+msgid "Patreon"
+msgstr "Patreon"
+
+#: inc/components/icons/component.php:241
+#: inc/customizer/options/general-social-options.php:84
+msgid "Behance"
+msgstr "Behance"
+
+#: inc/components/icons/component.php:265
+#: inc/components/icons/component.php:271
+#: inc/components/icons/component.php:277
+#: inc/customizer/options/general-social-options.php:180
+msgid "Phone"
+msgstr "Teléfono"
+
+#: inc/components/icons/component.php:283
+#: inc/customizer/options/general-social-options.php:138
+msgid "Google Reviews"
+msgstr "Google Reviews"
+
+#: inc/components/icons/component.php:289
+#: inc/components/icons/component.php:295
+#: inc/customizer/options/general-social-options.php:168
+msgid "Telegram"
+msgstr ""
+
+#: inc/components/icons/component.php:301
+#: inc/customizer/options/general-social-options.php:150
+msgid "Trip Advisor"
+msgstr "Trip Advisor"
+
+#: inc/components/icons/component.php:307
+#: inc/customizer/options/general-social-options.php:144
+msgid "Yelp"
+msgstr "Yelp"
+
+#: inc/components/icons/component.php:313
+msgid "User"
+msgstr "Usuario"
+
+#: inc/components/icons/component.php:319
+#: inc/components/icons/component.php:325
+#: template-parts/content/entry_loop_meta.php:205
+#: template-parts/content/entry_meta.php:205 template-parts/title/meta.php:206
+msgid "Comments"
+msgstr "Comentarios"
+
+#: inc/components/icons/component.php:331
+#: tutor/single/course/content-lead-info.php:24
+#: tutor/single/course/enrolled/content-lead-info.php:24
+#, fuzzy
+#| msgid "Category Colors"
+msgid "Categories"
+msgstr "Colores de Categorías"
+
+#: inc/components/icons/component.php:337
+#: inc/components/icons/component.php:343
+msgid "Grid"
+msgstr "Cuadrícula"
+
+#: inc/components/icons/component.php:349
+msgid "List"
+msgstr "Lista"
+
+#: inc/components/icons/component.php:355
+#: inc/components/icons/component.php:361
+#: inc/components/icons/component.php:367
+msgid "Account"
+msgstr ""
+
+#: inc/components/icons/component.php:379
+#: inc/components/icons/component.php:385
+#: inc/customizer/options/general-social-options.php:66
+msgid "Pinterest"
+msgstr "Pinterest"
+
+#: inc/components/icons/component.php:391
+#: inc/components/nav_menus/component.php:85
+#: inc/customizer/options/general-scroll-to-top-options.php:283
+#: inc/customizer/options/header-search-options.php:86
+#: inc/customizer/options/transparent-header-options.php:122
+msgid "Mobile"
+msgstr "Móvil"
+
+#: inc/components/icons/component.php:397
+#: inc/components/icons/component.php:403
+#: inc/components/icons/component.php:409
+msgid "Hours"
+msgstr ""
+
+#: inc/components/icons/component.php:415
+#: inc/components/icons/component.php:421
+#: inc/components/icons/component.php:427
+#, fuzzy
+#| msgid "Occupation"
+msgid "Location"
+msgstr "Ocupación"
+
+#: inc/components/icons/component.php:433
+msgid "Envelop"
+msgstr "Envolver"
+
+#: inc/components/icons/component.php:439
+#: inc/components/icons/component.php:445
+#: inc/customizer/options/general-social-options.php:72
+msgid "Linkedin"
+msgstr "Linkedin"
+
+#: inc/components/icons/component.php:451
+msgid "Quotes"
+msgstr "Citas"
+
+#: inc/components/icons/component.php:457
+#: inc/components/icons/component.php:475
+#: template-parts/content/single-entry.php:43
+msgid "Previous"
+msgstr "Previo"
+
+#: inc/components/icons/component.php:463
+#: template-parts/content/single-entry.php:44
+msgid "Next"
+msgstr "Siguiente"
+
+#: inc/components/icons/component.php:469
+msgid "Continue"
+msgstr "Continuar"
+
+#: inc/components/icons/component.php:481
+msgid "Expand"
+msgstr "Expandir"
+
+#: inc/components/icons/component.php:487
+#: inc/components/icons/component.php:493
+#: inc/components/icons/component.php:499
+#: inc/components/icons/component.php:505
+msgid "Arrow Up"
+msgstr "Flecha arriba"
+
+#: inc/components/icons/component.php:511
+#: inc/components/icons/component.php:517
+#: inc/components/icons/component.php:523
+msgid "Toggle Menu"
+msgstr "Alternar Menú"
+
+#: inc/components/icons/component.php:529
+msgid "Toggle Menu Close"
+msgstr "Alternar Cierre de Menú"
+
+#: inc/components/icons/component.php:535
+#: inc/components/icons/component.php:541
+#: inc/template-functions/header-functions.php:696
+#: inc/template-functions/header-functions.php:709
+#: inc/template-functions/header-functions.php:762
+#: inc/template-functions/header-functions.php:775
+msgid "Shopping Cart"
+msgstr "Carrito de Compras"
+
+#: inc/components/icons/component.php:547
+#: inc/customizer/options/general-social-options.php:156
+msgid "IMDB"
+msgstr ""
+
+#: inc/components/icons/component.php:553
+msgid "Loading"
+msgstr "Cargando"
+
+#: inc/components/icons/component.php:559
+msgid "Done"
+msgstr "Hecho"
+
+#: inc/components/icons/component.php:565
+#: inc/components/icons/component.php:572
+#: inc/components/icons/component.php:578
+msgid "Check Mark"
+msgstr "Marca de Verificación"
+
+#: inc/components/icons/component.php:584
+msgid "Disc"
+msgstr "Disco"
+
+#: inc/components/layout/component.php:77
+msgid "Sidebar 1"
+msgstr "Barra Lateral 1"
+
+#: inc/components/layout/component.php:78
+msgid "Sidebar 2"
+msgstr "Barra Lateral 2"
+
+#: inc/components/layout/component.php:79
+msgid "Footer 1"
+msgstr "Pie de Página 1"
+
+#: inc/components/layout/component.php:80
+msgid "Footer 2"
+msgstr "Pie de Página 2"
+
+#: inc/components/layout/component.php:81
+msgid "Footer 3"
+msgstr "Pie de Página 3"
+
+#: inc/components/layout/component.php:82
+msgid "Footer 4"
+msgstr "Pie de Página 4"
+
+#: inc/components/layout/component.php:83
+msgid "Footer 5"
+msgstr "Pie de Página 5"
+
+#: inc/components/layout/component.php:84
+msgid "Footer 6"
+msgstr "Pie de Página 6"
+
+#: inc/components/layout/component.php:94
+msgid "Add widgets here."
+msgstr "Añadir widgets aquí."
+
+#: inc/components/nav_menus/component.php:83
+msgid "Primary"
+msgstr "Primario"
+
+#: inc/components/nav_menus/component.php:84
+msgid "Secondary"
+msgstr "Secundario"
+
+#: inc/components/nav_menus/component.php:86
+#: inc/customizer/class-theme-customizer.php:430
+msgid "Footer"
+msgstr "Pie de Página"
+
+#: inc/components/nav_menus/component.php:111
+#: inc/components/nav_menus/component.php:138
+#: inc/components/scripts/component.php:128
+msgid "Expand child menu"
+msgstr "Expandir menú hijo"
+
+#: inc/components/options/component.php:971
+#: inc/components/options/component.php:1321
+msgid "Insert HTML here"
+msgstr "Insertar HTML aquí"
+
+#: inc/components/options/component.php:996
+#: inc/components/options/component.php:1282
+#: inc/customizer/options/header-builder-options.php:80
+#: inc/customizer/options/header-builder-options.php:181
+msgid "Button"
+msgstr "Botón"
+
+#: inc/components/options/component.php:2701
+msgid "& Free Shipping"
+msgstr "& Envío Gratuito"
+
+#: inc/components/options/component.php:2712
+msgid "Free shipping on orders over $50!"
+msgstr "¡Envío gratis en pedidos superiores a $50!"
+
+#: inc/components/options/component.php:2713
+msgid "Satisfaction Guaranteed"
+msgstr "Satisfacción Garantizada"
+
+#: inc/components/options/component.php:2714
+msgid "No Hassle Refunds"
+msgstr "Sin Problemas de Reembolsos"
+
+#: inc/components/options/component.php:2715
+msgid "Secure Payments"
+msgstr "Pagos Seguros"
+
+#: inc/components/options/component.php:2726
+msgid "GUARANTEED SAFE CHECKOUT"
+msgstr "PAGO SEGURO GARANTIZADO"
+
+#: inc/components/scripts/component.php:129
+msgid "Collapse child menu"
+msgstr "Contraer menú hijo"
+
+#: inc/components/styles/component.php:3515
+#, php-format
+msgid "Invalid theme stylesheet handle: %s"
+msgstr "Identificador de hoja de estilo de tema no válido: %s"
+
+#: inc/components/template_tags.php:54
+#, php-format
+msgid ""
+"The theme templating component %1$s does not implement the %2$s interface."
+msgstr ""
+"El componente de la plantilla del tema %1$s no implementa la interfaz %2$s."
+
+#: inc/components/template_tags.php:81
+#, php-format
+msgid "The template tag %s does not exist."
+msgstr "El tag de la plantilla %s no existe."
+
+#: inc/components/template_tags.php:110
+#, php-format
+msgid ""
+"The template tag method %1$s registered by theme component %2$s must either "
+"be a callable or an array."
+msgstr ""
+"El método de etiqueta de la plantilla %1$s registrado por el componente de "
+"tema %2$s debe ser uno invocable o una matriz."
+
+#: inc/components/template_tags.php:121
+#, php-format
+msgid ""
+"The template tag method %1$s registered by theme component %2$s conflicts "
+"with an already registered template tag of the same name."
+msgstr ""
+"El método de etiqueta de la plantilla %1$s registrado por el componente de "
+"tema %2$s entra en conflicto con una etiqueta de la plantilla ya registrada "
+"del mismo nombre."
+
+#: inc/components/woocommerce/component.php:632
+msgid "Cart Summary"
+msgstr "Sumario del Carrito"
+
+#: inc/components/woocommerce/component.php:667
+msgid "Update Profile Photo"
+msgstr "Actualizar Foto de Perfil"
+
+#: inc/components/woocommerce/component.php:865
+#: inc/components/woocommerce/component.php:877
+msgid "List View"
+msgstr "Vista en Lista"
+
+#: inc/components/woocommerce/component.php:868
+#: inc/components/woocommerce/component.php:874
+msgid "Grid View"
+msgstr "Vista en Cuadrícula"
+
+#: inc/customizer/class-theme-customizer.php:210
+#: inc/customizer/class-theme-customizer.php:217
+msgid "Cart"
+msgstr "Carrito"
+
+#: inc/customizer/class-theme-customizer.php:422
+#: inc/customizer/options/custom-layout-options.php:16
+#: inc/customizer/options/footer-bottom-options.php:16
+#: inc/customizer/options/footer-builder-options.php:31
+#: inc/customizer/options/footer-html-options.php:16
+#: inc/customizer/options/footer-middle-options.php:16
+#: inc/customizer/options/footer-navigation-options.php:16
+#: inc/customizer/options/footer-social-options.php:21
+#: inc/customizer/options/footer-social-options.php:38
+#: inc/customizer/options/footer-top-options.php:16
+#: inc/customizer/options/footer-widget1-options.php:16
+#: inc/customizer/options/footer-widget2-options.php:16
+#: inc/customizer/options/footer-widget3-options.php:16
+#: inc/customizer/options/footer-widget4-options.php:16
+#: inc/customizer/options/footer-widget5-options.php:16
+#: inc/customizer/options/footer-widget6-options.php:16
+#: inc/customizer/options/general-scroll-to-top-options.php:22
+#: inc/customizer/options/general-scroll-to-top-options.php:39
+#: inc/customizer/options/general-sidebar-options.php:16
+#: inc/customizer/options/general-sidebar-options.php:32
+#: inc/customizer/options/general-sidebar-options.php:49
+#: inc/customizer/options/header-bottom-options.php:16
+#: inc/customizer/options/header-builder-options.php:32
+#: inc/customizer/options/header-button-options.php:22
+#: inc/customizer/options/header-button-options.php:39
+#: inc/customizer/options/header-cart-options.php:22
+#: inc/customizer/options/header-cart-options.php:39
+#: inc/customizer/options/header-dropdown-options.php:22
+#: inc/customizer/options/header-dropdown-options.php:39
+#: inc/customizer/options/header-html-options.php:21
+#: inc/customizer/options/header-html-options.php:38
+#: inc/customizer/options/header-logo-options.php:16
+#: inc/customizer/options/header-main-options.php:16
+#: inc/customizer/options/header-mobile-button-options.php:16
+#: inc/customizer/options/header-mobile-cart-options.php:21
+#: inc/customizer/options/header-mobile-cart-options.php:38
+#: inc/customizer/options/header-mobile-html-options.php:16
+#: inc/customizer/options/header-mobile-nav-options.php:16
+#: inc/customizer/options/header-mobile-social-options.php:21
+#: inc/customizer/options/header-mobile-social-options.php:38
+#: inc/customizer/options/header-navigation-options.php:16
+#: inc/customizer/options/header-popup-options.php:21
+#: inc/customizer/options/header-popup-options.php:38
+#: inc/customizer/options/header-search-options.php:16
+#: inc/customizer/options/header-secondary-navigation-options.php:16
+#: inc/customizer/options/header-social-options.php:21
+#: inc/customizer/options/header-social-options.php:38
+#: inc/customizer/options/header-sticky-options.php:21
+#: inc/customizer/options/header-sticky-options.php:38
+#: inc/customizer/options/header-top-options.php:16
+#: inc/customizer/options/header-trigger-options.php:16
+#: inc/customizer/options/learndash-course-layout-options.php:21
+#: inc/customizer/options/learndash-course-layout-options.php:38
+#: inc/customizer/options/learndash-essays-layout-options.php:21
+#: inc/customizer/options/learndash-essays-layout-options.php:38
+#: inc/customizer/options/learndash-groups-layout-options.php:21
+#: inc/customizer/options/learndash-groups-layout-options.php:38
+#: inc/customizer/options/lifter-course-archive-layout-options.php:21
+#: inc/customizer/options/lifter-course-archive-layout-options.php:38
+#: inc/customizer/options/lifter-course-layout-options.php:21
+#: inc/customizer/options/lifter-course-layout-options.php:38
+#: inc/customizer/options/lifter-lesson-layout-options.php:21
+#: inc/customizer/options/lifter-lesson-layout-options.php:38
+#: inc/customizer/options/lifter-member-archive-layout-options.php:21
+#: inc/customizer/options/lifter-member-archive-layout-options.php:38
+#: inc/customizer/options/page-layout-options.php:16
+#: inc/customizer/options/post-archive-layout-options.php:21
+#: inc/customizer/options/post-archive-layout-options.php:38
+#: inc/customizer/options/post-layout-options.php:21
+#: inc/customizer/options/post-layout-options.php:38
+#: inc/customizer/options/product-archive-layout-options.php:21
+#: inc/customizer/options/product-archive-layout-options.php:38
+#: inc/customizer/options/product-layout-options.php:21
+#: inc/customizer/options/product-layout-options.php:38
+#: inc/customizer/options/search-layout-options.php:21
+#: inc/customizer/options/search-layout-options.php:38
+#: inc/customizer/options/transparent-header-options.php:21
+#: inc/customizer/options/transparent-header-options.php:38
+#: inc/customizer/options/tutor-course-layout-options.php:21
+#: inc/customizer/options/tutor-course-layout-options.php:38
+#: inc/customizer/options/woo-store-notice-options.php:21
+#: inc/customizer/options/woo-store-notice-options.php:38
+msgid "General"
+msgstr "General"
+
+#: inc/customizer/class-theme-customizer.php:426
+msgid "Header"
+msgstr "Cabecera"
+
+#: inc/customizer/class-theme-customizer.php:434
+msgid "Blog Posts"
+msgstr "Entradas del Blog"
+
+#: inc/customizer/class-theme-customizer.php:438
+msgid "Custom Post Types"
+msgstr "Tipos de Post Personalizados"
+
+#: inc/customizer/class-theme-customizer.php:444
+msgid "LearnDash"
+msgstr "LearnDash"
+
+#: inc/customizer/class-theme-customizer.php:454
+msgid "LifterLMS"
+msgstr "LifterLMS"
+
+#: inc/customizer/class-theme-customizer.php:464
+msgid "TutorLMS"
+msgstr ""
+
+#: inc/customizer/class-theme-customizer.php:490
+#: inc/customizer/class-theme-customizer.php:579
+msgid "Site Identity"
+msgstr "Identidad del sitio"
+
+#: inc/customizer/class-theme-customizer.php:494
+#: inc/customizer/class-theme-customizer.php:952
+#: inc/customizer/options/custom-layout-options.php:584
+#: inc/customizer/options/custom-layout-options.php:590
+#: inc/customizer/options/footer-bottom-options.php:119
+#: inc/customizer/options/footer-middle-options.php:119
+#: inc/customizer/options/footer-top-options.php:119
+#: inc/customizer/options/header-bottom-options.php:37
+#: inc/customizer/options/header-main-options.php:37
+#: inc/customizer/options/header-popup-options.php:53
+#: inc/customizer/options/header-top-options.php:37
+#: inc/meta/class-theme-meta.php:215 inc/meta/class-theme-meta.php:357
+msgid "Layout"
+msgstr "Diseño"
+
+#: inc/customizer/class-theme-customizer.php:499
+msgid "Sidebar"
+msgstr "Barra Lateral"
+
+#: inc/customizer/class-theme-customizer.php:504
+msgid "Sidebar Design"
+msgstr "Diseño de la Barra Lateral"
+
+#: inc/customizer/class-theme-customizer.php:509
+#: inc/customizer/options/footer-social-options.php:288
+#: inc/customizer/options/general-scroll-to-top-options.php:325
+#: inc/customizer/options/header-button-options.php:235
+#: inc/customizer/options/header-mobile-button-options.php:225
+#: inc/customizer/options/header-mobile-nav-options.php:51
+#: inc/customizer/options/header-mobile-social-options.php:204
+#: inc/customizer/options/header-social-options.php:204
+msgid "Colors"
+msgstr "Colores"
+
+#: inc/customizer/class-theme-customizer.php:514
+msgid "Buttons"
+msgstr "Botones"
+
+#: inc/customizer/class-theme-customizer.php:519
+msgid "Typography"
+msgstr "Tipografía"
+
+#: inc/customizer/class-theme-customizer.php:524
+#: inc/customizer/class-theme-customizer.php:529
+msgid "Scroll To Top"
+msgstr "Desplazar Hacia Arriba"
+
+#: inc/customizer/class-theme-customizer.php:534
+msgid "Social Links"
+msgstr "Enlaces Sociales"
+
+#: inc/customizer/class-theme-customizer.php:539
+msgid "Performance"
+msgstr "Rendimiento"
+
+#: inc/customizer/class-theme-customizer.php:544
+msgid "Header Layout"
+msgstr "Diseño de Cabecera"
+
+#: inc/customizer/class-theme-customizer.php:549
+#: inc/customizer/options/header-builder-options.php:25
+msgid "Header Builder"
+msgstr "Constructor de Cabecera"
+
+#: inc/customizer/class-theme-customizer.php:554
+msgid "Top Row"
+msgstr "Fila Superior"
+
+#: inc/customizer/class-theme-customizer.php:559
+msgid "Main Row"
+msgstr "Fila Principal"
+
+#: inc/customizer/class-theme-customizer.php:564
+msgid "Bottom Row"
+msgstr "Fila Inferior"
+
+#: inc/customizer/class-theme-customizer.php:569
+#: inc/customizer/class-theme-customizer.php:574
+msgid "Header Off Canvas"
+msgstr "Cabecera Fuera de Pantalla"
+
+#: inc/customizer/class-theme-customizer.php:584
+#: inc/customizer/options/header-builder-options.php:68
+#: inc/template-functions/header-functions.php:201
+msgid "Primary Navigation"
+msgstr "Navegación Primaria"
+
+#: inc/customizer/class-theme-customizer.php:589
+#: inc/customizer/options/header-builder-options.php:72
+#: inc/template-functions/header-functions.php:221
+msgid "Secondary Navigation"
+msgstr "Navegación Secundaria"
+
+#: inc/customizer/class-theme-customizer.php:594
+#: inc/customizer/class-theme-customizer.php:599
+msgid "Dropdown Navigation"
+msgstr "Navegación Desplegable"
+
+#: inc/customizer/class-theme-customizer.php:604
+msgid "Mobile Trigger"
+msgstr "Disparador Móvil"
+
+#: inc/customizer/class-theme-customizer.php:609
+#: inc/customizer/options/header-builder-options.php:169
+msgid "Mobile Navigation"
+msgstr "Navegación en Móvil"
+
+#: inc/customizer/class-theme-customizer.php:614
+msgid "Header Mobile Button"
+msgstr "Botón en Móvil de Cabecera"
+
+#: inc/customizer/class-theme-customizer.php:619
+msgid "Header Mobile HTML"
+msgstr "HTML de Cabecera Móvil"
+
+#: inc/customizer/class-theme-customizer.php:624
+#: inc/customizer/class-theme-customizer.php:629
+msgid "HTML Editor"
+msgstr "Editor HTML"
+
+#: inc/customizer/class-theme-customizer.php:634
+msgid "Header Cart"
+msgstr "Carrito en Cabecera"
+
+#: inc/customizer/class-theme-customizer.php:639
+msgid "Header Cart Design"
+msgstr "Diseño de Carrito en Cabecera"
+
+#: inc/customizer/class-theme-customizer.php:644
+#: inc/customizer/class-theme-customizer.php:649
+msgid "Mobile Header Cart"
+msgstr "Carrito de Cabecera Móvil"
+
+#: inc/customizer/class-theme-customizer.php:654
+#: inc/customizer/class-theme-customizer.php:659
+msgid "Header Button"
+msgstr "Botón de Cabecera"
+
+#: inc/customizer/class-theme-customizer.php:664
+#: inc/customizer/class-theme-customizer.php:669
+#: inc/customizer/class-theme-customizer.php:674
+#: inc/customizer/class-theme-customizer.php:679
+msgid "Header Social"
+msgstr "Cabecera Social"
+
+#: inc/customizer/class-theme-customizer.php:684
+msgid "Header Search"
+msgstr "Búsqueda en Cabecera"
+
+#: inc/customizer/class-theme-customizer.php:689
+#: inc/customizer/class-theme-customizer.php:694
+#: inc/customizer/options/header-builder-options.php:247
+#: inc/meta/class-theme-meta.php:191 inc/meta/class-theme-meta.php:309
+msgid "Transparent Header"
+msgstr "Cabecera Transparente"
+
+#: inc/customizer/class-theme-customizer.php:699
+#: inc/customizer/class-theme-customizer.php:704
+#: inc/customizer/options/header-builder-options.php:257
+msgid "Sticky Header"
+msgstr "Cabecera Sticky"
+
+#: inc/customizer/class-theme-customizer.php:709
+msgid "Footer Layout"
+msgstr "Diseño del Pie de Página"
+
+#: inc/customizer/class-theme-customizer.php:714
+#: inc/customizer/options/footer-builder-options.php:25
+msgid "Footer Builder"
+msgstr "Constructor del Pie de Página"
+
+#: inc/customizer/class-theme-customizer.php:719
+msgid "Footer Top"
+msgstr "Pie de Página Superior"
+
+#: inc/customizer/class-theme-customizer.php:724
+msgid "Footer Middle"
+msgstr "Pie de Página Medio"
+
+#: inc/customizer/class-theme-customizer.php:729
+msgid "Footer Bottom"
+msgstr "Pie de Página Inferior"
+
+#: inc/customizer/class-theme-customizer.php:734
+msgid "Footer Copyright HTML"
+msgstr "Copyright HTML del Pie de Página"
+
+#: inc/customizer/class-theme-customizer.php:739
+#: inc/customizer/class-theme-customizer.php:744
+msgid "Footer Social"
+msgstr "Social del Pie de página "
+
+#: inc/customizer/class-theme-customizer.php:749
+#: inc/customizer/options/footer-builder-options.php:57
+#: inc/template-functions/footer-functions.php:86
+msgid "Footer Navigation"
+msgstr "Navegación del Pie de Página"
+
+#: inc/customizer/class-theme-customizer.php:754
+#: inc/customizer/options/page-layout-options.php:574
+#: inc/customizer/options/page-layout-options.php:580
+msgid "Page Layout"
+msgstr "Diseño de Página"
+
+#: inc/customizer/class-theme-customizer.php:759
+#: inc/customizer/class-theme-customizer.php:763
+#, fuzzy
+#| msgid "Search results for"
+msgid "Search Results"
+msgstr "Resultados de búsqueda para"
+
+#: inc/customizer/class-theme-customizer.php:767
+#: inc/customizer/class-theme-customizer.php:772
+msgid "Single Post Layout"
+msgstr "Diseño de Entrada Única"
+
+#: inc/customizer/class-theme-customizer.php:777
+#: inc/customizer/class-theme-customizer.php:782
+#: inc/customizer/options/lifter-course-archive-layout-options.php:455
+#: inc/customizer/options/lifter-course-archive-layout-options.php:462
+#: inc/customizer/options/lifter-course-archive-layout-options.php:468
+#: inc/customizer/options/lifter-member-archive-layout-options.php:461
+#: inc/customizer/options/lifter-member-archive-layout-options.php:468
+#: inc/customizer/options/lifter-member-archive-layout-options.php:474
+#: inc/customizer/options/post-archive-layout-options.php:455
+#: inc/customizer/options/post-archive-layout-options.php:462
+#: inc/customizer/options/post-archive-layout-options.php:468
+#: inc/customizer/options/product-archive-layout-options.php:455
+#: inc/customizer/options/product-archive-layout-options.php:462
+#: inc/customizer/options/product-archive-layout-options.php:468
+#: inc/customizer/options/search-layout-options.php:373
+#: inc/customizer/options/search-layout-options.php:380
+#: inc/customizer/options/search-layout-options.php:386
+msgid "Archive Layout"
+msgstr "Diseño de Archivo"
+
+#: inc/customizer/class-theme-customizer.php:794
+#: inc/customizer/class-theme-customizer.php:799
+msgid "Product Catalog"
+msgstr "Catalogo de Productos"
+
+#: inc/customizer/class-theme-customizer.php:804
+#: inc/customizer/class-theme-customizer.php:809
+msgid "Single Product Layout"
+msgstr "Diseño de Producto Único"
+
+#: inc/customizer/class-theme-customizer.php:814
+msgid "My Account Layout"
+msgstr "Diseño de Mi Cuenta"
+
+#: inc/customizer/class-theme-customizer.php:819
+msgid "Store Notice"
+msgstr "Aviso de Tienda"
+
+#: inc/customizer/class-theme-customizer.php:831
+#: inc/customizer/class-theme-customizer.php:836
+#: inc/customizer/class-theme-customizer.php:867
+#: inc/customizer/class-theme-customizer.php:872
+#: inc/customizer/class-theme-customizer.php:928
+#: inc/customizer/class-theme-customizer.php:933
+#: inc/customizer/options/learndash-course-layout-options.php:469
+#: inc/customizer/options/learndash-course-layout-options.php:476
+#: inc/customizer/options/learndash-course-layout-options.php:482
+#: inc/customizer/options/lifter-course-layout-options.php:469
+#: inc/customizer/options/lifter-course-layout-options.php:476
+#: inc/customizer/options/lifter-course-layout-options.php:482
+#: inc/customizer/options/tutor-course-layout-options.php:438
+#: inc/customizer/options/tutor-course-layout-options.php:445
+#: inc/customizer/options/tutor-course-layout-options.php:451
+msgid "Course Layout"
+msgstr "Diseño del Curso"
+
+#: inc/customizer/class-theme-customizer.php:841
+#: inc/customizer/class-theme-customizer.php:846
+#, fuzzy
+#| msgid "Course Layout"
+msgid "Groups Layout"
+msgstr "Diseño del Curso"
+
+#: inc/customizer/class-theme-customizer.php:851
+#: inc/customizer/class-theme-customizer.php:856
+#: inc/customizer/options/learndash-essays-layout-options.php:469
+#: inc/customizer/options/learndash-essays-layout-options.php:476
+#: inc/customizer/options/learndash-essays-layout-options.php:482
+#, fuzzy
+#| msgid "Lesson Layout"
+msgid "Essay Layout"
+msgstr "Diseño de Lección"
+
+#: inc/customizer/class-theme-customizer.php:877
+#: inc/customizer/class-theme-customizer.php:882
+msgid "Course Archive"
+msgstr "Archivo del Curso"
+
+#: inc/customizer/class-theme-customizer.php:887
+#: inc/customizer/class-theme-customizer.php:892
+#: inc/customizer/options/lifter-lesson-layout-options.php:469
+#: inc/customizer/options/lifter-lesson-layout-options.php:476
+#: inc/customizer/options/lifter-lesson-layout-options.php:482
+msgid "Lesson Layout"
+msgstr "Diseño de Lección"
+
+#: inc/customizer/class-theme-customizer.php:897
+#: inc/customizer/options/lifter-quiz-layout-options.php:152
+#: inc/customizer/options/lifter-quiz-layout-options.php:158
+msgid "Quiz Layout"
+msgstr "Diseño del Cuestionario"
+
+#: inc/customizer/class-theme-customizer.php:902
+#: inc/customizer/options/lifter-member-layout-options.php:152
+#: inc/customizer/options/lifter-member-layout-options.php:158
+msgid "Membership Layout"
+msgstr "Diseño de Membresía"
+
+#: inc/customizer/class-theme-customizer.php:907
+#: inc/customizer/class-theme-customizer.php:912
+msgid "Membership Archive"
+msgstr "Archivo de Membresía"
+
+#: inc/customizer/class-theme-customizer.php:917
+msgid "User Dashboard"
+msgstr "Panel de Usuario"
+
+#: inc/customizer/options/custom-layout-options.php:19
+#: inc/customizer/options/footer-bottom-options.php:19
+#: inc/customizer/options/footer-builder-options.php:34
+#: inc/customizer/options/footer-html-options.php:19
+#: inc/customizer/options/footer-middle-options.php:19
+#: inc/customizer/options/footer-navigation-options.php:19
+#: inc/customizer/options/footer-social-options.php:25
+#: inc/customizer/options/footer-social-options.php:42
+#: inc/customizer/options/footer-top-options.php:19
+#: inc/customizer/options/general-scroll-to-top-options.php:26
+#: inc/customizer/options/general-scroll-to-top-options.php:43
+#: inc/customizer/options/general-sidebar-options.php:19
+#: inc/customizer/options/general-sidebar-options.php:36
+#: inc/customizer/options/general-sidebar-options.php:53
+#: inc/customizer/options/header-bottom-options.php:19
+#: inc/customizer/options/header-builder-options.php:35
+#: inc/customizer/options/header-button-options.php:26
+#: inc/customizer/options/header-button-options.php:43
+#: inc/customizer/options/header-cart-options.php:26
+#: inc/customizer/options/header-cart-options.php:43
+#: inc/customizer/options/header-dropdown-options.php:26
+#: inc/customizer/options/header-dropdown-options.php:43
+#: inc/customizer/options/header-html-options.php:25
+#: inc/customizer/options/header-html-options.php:42
+#: inc/customizer/options/header-logo-options.php:19
+#: inc/customizer/options/header-main-options.php:19
+#: inc/customizer/options/header-mobile-button-options.php:19
+#: inc/customizer/options/header-mobile-cart-options.php:25
+#: inc/customizer/options/header-mobile-cart-options.php:42
+#: inc/customizer/options/header-mobile-html-options.php:19
+#: inc/customizer/options/header-mobile-nav-options.php:19
+#: inc/customizer/options/header-mobile-social-options.php:25
+#: inc/customizer/options/header-mobile-social-options.php:42
+#: inc/customizer/options/header-navigation-options.php:19
+#: inc/customizer/options/header-popup-options.php:25
+#: inc/customizer/options/header-popup-options.php:42
+#: inc/customizer/options/header-search-options.php:19
+#: inc/customizer/options/header-secondary-navigation-options.php:19
+#: inc/customizer/options/header-social-options.php:25
+#: inc/customizer/options/header-social-options.php:42
+#: inc/customizer/options/header-sticky-options.php:25
+#: inc/customizer/options/header-sticky-options.php:42
+#: inc/customizer/options/header-top-options.php:19
+#: inc/customizer/options/header-trigger-options.php:19
+#: inc/customizer/options/learndash-course-layout-options.php:25
+#: inc/customizer/options/learndash-course-layout-options.php:42
+#: inc/customizer/options/learndash-essays-layout-options.php:25
+#: inc/customizer/options/learndash-essays-layout-options.php:42
+#: inc/customizer/options/learndash-groups-layout-options.php:25
+#: inc/customizer/options/learndash-groups-layout-options.php:42
+#: inc/customizer/options/lifter-course-archive-layout-options.php:25
+#: inc/customizer/options/lifter-course-archive-layout-options.php:42
+#: inc/customizer/options/lifter-course-layout-options.php:25
+#: inc/customizer/options/lifter-course-layout-options.php:42
+#: inc/customizer/options/lifter-lesson-layout-options.php:25
+#: inc/customizer/options/lifter-lesson-layout-options.php:42
+#: inc/customizer/options/lifter-member-archive-layout-options.php:25
+#: inc/customizer/options/lifter-member-archive-layout-options.php:42
+#: inc/customizer/options/page-layout-options.php:19
+#: inc/customizer/options/post-archive-layout-options.php:25
+#: inc/customizer/options/post-archive-layout-options.php:42
+#: inc/customizer/options/post-layout-options.php:25
+#: inc/customizer/options/post-layout-options.php:42
+#: inc/customizer/options/product-archive-layout-options.php:25
+#: inc/customizer/options/product-archive-layout-options.php:42
+#: inc/customizer/options/product-layout-options.php:25
+#: inc/customizer/options/product-layout-options.php:42
+#: inc/customizer/options/search-layout-options.php:25
+#: inc/customizer/options/search-layout-options.php:42
+#: inc/customizer/options/transparent-header-options.php:25
+#: inc/customizer/options/transparent-header-options.php:42
+#: inc/customizer/options/tutor-course-layout-options.php:25
+#: inc/customizer/options/tutor-course-layout-options.php:42
+#: inc/customizer/options/woo-store-notice-options.php:25
+#: inc/customizer/options/woo-store-notice-options.php:42
+msgid "Design"
+msgstr "Diseño"
+
+#: inc/customizer/options/custom-layout-options.php:44
+#: inc/customizer/options/footer-social-options.php:52
+msgid "Title"
+msgstr "Título"
+
+#: inc/customizer/options/custom-layout-options.php:52
+msgid "Show Title?"
+msgstr "¿Mostrar Título?"
+
+#: inc/customizer/options/custom-layout-options.php:64
+msgid "Title Layout"
+msgstr "Diseño del Título"
+
+#: inc/customizer/options/custom-layout-options.php:82
+#: inc/customizer/options/learndash-course-layout-options.php:87
+#: inc/customizer/options/learndash-essays-layout-options.php:87
+#: inc/customizer/options/learndash-groups-layout-options.php:87
+#: inc/customizer/options/lifter-course-archive-layout-options.php:87
+#: inc/customizer/options/lifter-course-layout-options.php:87
+#: inc/customizer/options/lifter-lesson-layout-options.php:87
+#: inc/customizer/options/lifter-member-archive-layout-options.php:87
+#: inc/customizer/options/lifter-member-layout-options.php:46
+#: inc/customizer/options/lifter-quiz-layout-options.php:46
+#: inc/customizer/options/page-layout-options.php:74
+#: inc/customizer/options/post-archive-layout-options.php:87
+#: inc/customizer/options/post-layout-options.php:87
+#: inc/customizer/options/product-archive-layout-options.php:87
+#: inc/customizer/options/search-layout-options.php:87
+#: inc/customizer/options/tutor-course-layout-options.php:72
+msgid "In Content"
+msgstr "En El Contenido"
+
+#: inc/customizer/options/custom-layout-options.php:86
+#: inc/customizer/options/learndash-course-layout-options.php:91
+#: inc/customizer/options/learndash-essays-layout-options.php:91
+#: inc/customizer/options/learndash-groups-layout-options.php:91
+#: inc/customizer/options/lifter-course-archive-layout-options.php:91
+#: inc/customizer/options/lifter-course-layout-options.php:91
+#: inc/customizer/options/lifter-lesson-layout-options.php:91
+#: inc/customizer/options/lifter-member-archive-layout-options.php:91
+#: inc/customizer/options/lifter-member-layout-options.php:50
+#: inc/customizer/options/lifter-quiz-layout-options.php:50
+#: inc/customizer/options/page-layout-options.php:78
+#: inc/customizer/options/post-archive-layout-options.php:91
+#: inc/customizer/options/post-layout-options.php:91
+#: inc/customizer/options/product-archive-layout-options.php:91
+#: inc/customizer/options/search-layout-options.php:91
+#: inc/customizer/options/tutor-course-layout-options.php:76
+msgid "Above Content"
+msgstr "Encima del Contenido"
+
+#: inc/customizer/options/custom-layout-options.php:99
+#: inc/customizer/options/footer-bottom-options.php:37
+#: inc/customizer/options/footer-middle-options.php:37
+#: inc/customizer/options/footer-top-options.php:37
+#: inc/customizer/options/lifter-course-archive-layout-options.php:104
+#: inc/customizer/options/lifter-member-archive-layout-options.php:104
+#: inc/customizer/options/post-archive-layout-options.php:104
+#: inc/customizer/options/post-layout-options.php:104
+#: inc/customizer/options/product-archive-layout-options.php:104
+#: inc/customizer/options/search-layout-options.php:104
+msgid "Container Width"
+msgstr "Ancho del Contenedor"
+
+#: inc/customizer/options/custom-layout-options.php:127
+#: inc/customizer/options/footer-bottom-options.php:59
+#: inc/customizer/options/footer-middle-options.php:59
+#: inc/customizer/options/footer-top-options.php:59
+#: inc/customizer/options/header-bottom-options.php:63
+#: inc/customizer/options/header-main-options.php:63
+#: inc/customizer/options/header-top-options.php:63
+#: inc/customizer/options/learndash-course-layout-options.php:128
+#: inc/customizer/options/learndash-essays-layout-options.php:128
+#: inc/customizer/options/learndash-groups-layout-options.php:128
+#: inc/customizer/options/lifter-course-archive-layout-options.php:128
+#: inc/customizer/options/lifter-course-layout-options.php:128
+#: inc/customizer/options/lifter-lesson-layout-options.php:128
+#: inc/customizer/options/lifter-member-archive-layout-options.php:128
+#: inc/customizer/options/lifter-member-layout-options.php:87
+#: inc/customizer/options/lifter-quiz-layout-options.php:87
+#: inc/customizer/options/page-layout-options.php:119
+#: inc/customizer/options/post-archive-layout-options.php:128
+#: inc/customizer/options/post-layout-options.php:128
+#: inc/customizer/options/product-archive-layout-options.php:128
+#: inc/customizer/options/product-layout-options.php:115
+#: inc/customizer/options/search-layout-options.php:128
+#: inc/customizer/options/tutor-course-layout-options.php:108
+msgid "Background Fullwidth, Content Contained"
+msgstr "Fondo de Ancho Completo, Contenido Estrecho"
+
+#: inc/customizer/options/custom-layout-options.php:128
+#: inc/customizer/options/footer-bottom-options.php:60
+#: inc/customizer/options/footer-middle-options.php:60
+#: inc/customizer/options/footer-top-options.php:60
+#: inc/customizer/options/header-bottom-options.php:64
+#: inc/customizer/options/header-main-options.php:64
+#: inc/customizer/options/header-navigation-options.php:169
+#: inc/customizer/options/header-navigation-options.php:170
+#: inc/customizer/options/header-secondary-navigation-options.php:169
+#: inc/customizer/options/header-secondary-navigation-options.php:170
+#: inc/customizer/options/header-top-options.php:64
+#: inc/customizer/options/learndash-course-layout-options.php:129
+#: inc/customizer/options/learndash-essays-layout-options.php:129
+#: inc/customizer/options/learndash-groups-layout-options.php:129
+#: inc/customizer/options/lifter-course-archive-layout-options.php:129
+#: inc/customizer/options/lifter-course-layout-options.php:129
+#: inc/customizer/options/lifter-course-layout-options.php:708
+#: inc/customizer/options/lifter-lesson-layout-options.php:129
+#: inc/customizer/options/lifter-member-archive-layout-options.php:129
+#: inc/customizer/options/lifter-member-layout-options.php:88
+#: inc/customizer/options/lifter-quiz-layout-options.php:88
+#: inc/customizer/options/page-layout-options.php:120
+#: inc/customizer/options/post-archive-layout-options.php:129
+#: inc/customizer/options/post-layout-options.php:129
+#: inc/customizer/options/product-archive-layout-options.php:129
+#: inc/customizer/options/product-layout-options.php:116
+#: inc/customizer/options/search-layout-options.php:129
+#: inc/customizer/options/tutor-course-layout-options.php:109
+msgid "Standard"
+msgstr "Estándar"
+
+#: inc/customizer/options/custom-layout-options.php:132
+#: inc/customizer/options/footer-bottom-options.php:64
+#: inc/customizer/options/footer-middle-options.php:64
+#: inc/customizer/options/footer-top-options.php:64
+#: inc/customizer/options/header-bottom-options.php:68
+#: inc/customizer/options/header-main-options.php:68
+#: inc/customizer/options/header-top-options.php:68
+#: inc/customizer/options/learndash-course-layout-options.php:133
+#: inc/customizer/options/learndash-essays-layout-options.php:133
+#: inc/customizer/options/learndash-groups-layout-options.php:133
+#: inc/customizer/options/lifter-course-archive-layout-options.php:133
+#: inc/customizer/options/lifter-course-layout-options.php:133
+#: inc/customizer/options/lifter-lesson-layout-options.php:133
+#: inc/customizer/options/lifter-member-archive-layout-options.php:133
+#: inc/customizer/options/lifter-member-layout-options.php:92
+#: inc/customizer/options/lifter-quiz-layout-options.php:92
+#: inc/customizer/options/page-layout-options.php:124
+#: inc/customizer/options/post-archive-layout-options.php:133
+#: inc/customizer/options/post-layout-options.php:133
+#: inc/customizer/options/product-archive-layout-options.php:133
+#: inc/customizer/options/product-layout-options.php:120
+#: inc/customizer/options/search-layout-options.php:133
+#: inc/customizer/options/tutor-course-layout-options.php:113
+msgid "Background & Content Fullwidth"
+msgstr "Fondo y Contenido de Ancho Completo"
+
+#: inc/customizer/options/custom-layout-options.php:133
+#: inc/customizer/options/custom-layout-options.php:611
+#: inc/customizer/options/footer-bottom-options.php:65
+#: inc/customizer/options/footer-middle-options.php:65
+#: inc/customizer/options/footer-top-options.php:65
+#: inc/customizer/options/header-bottom-options.php:69
+#: inc/customizer/options/header-main-options.php:69
+#: inc/customizer/options/header-popup-options.php:66
+#: inc/customizer/options/header-top-options.php:69
+#: inc/customizer/options/learndash-course-layout-options.php:134
+#: inc/customizer/options/learndash-course-layout-options.php:497
+#: inc/customizer/options/learndash-essays-layout-options.php:134
+#: inc/customizer/options/learndash-essays-layout-options.php:497
+#: inc/customizer/options/learndash-groups-layout-options.php:134
+#: inc/customizer/options/learndash-groups-layout-options.php:497
+#: inc/customizer/options/lifter-course-archive-layout-options.php:134
+#: inc/customizer/options/lifter-course-archive-layout-options.php:483
+#: inc/customizer/options/lifter-course-layout-options.php:134
+#: inc/customizer/options/lifter-course-layout-options.php:497
+#: inc/customizer/options/lifter-lesson-layout-options.php:134
+#: inc/customizer/options/lifter-lesson-layout-options.php:497
+#: inc/customizer/options/lifter-member-archive-layout-options.php:134
+#: inc/customizer/options/lifter-member-archive-layout-options.php:489
+#: inc/customizer/options/lifter-member-layout-options.php:93
+#: inc/customizer/options/lifter-member-layout-options.php:173
+#: inc/customizer/options/lifter-quiz-layout-options.php:93
+#: inc/customizer/options/lifter-quiz-layout-options.php:173
+#: inc/customizer/options/page-layout-options.php:125
+#: inc/customizer/options/page-layout-options.php:601
+#: inc/customizer/options/post-archive-layout-options.php:134
+#: inc/customizer/options/post-archive-layout-options.php:483
+#: inc/customizer/options/post-layout-options.php:134
+#: inc/customizer/options/post-layout-options.php:678
+#: inc/customizer/options/product-archive-layout-options.php:134
+#: inc/customizer/options/product-archive-layout-options.php:483
+#: inc/customizer/options/product-layout-options.php:121
+#: inc/customizer/options/product-layout-options.php:534
+#: inc/customizer/options/search-layout-options.php:134
+#: inc/customizer/options/search-layout-options.php:401
+#: inc/customizer/options/tutor-course-layout-options.php:114
+#: inc/meta/class-theme-meta.php:222 inc/meta/class-theme-meta.php:364
+msgid "Fullwidth"
+msgstr "Ancho completo"
+
+#: inc/customizer/options/custom-layout-options.php:137
+#: inc/customizer/options/footer-bottom-options.php:69
+#: inc/customizer/options/footer-middle-options.php:69
+#: inc/customizer/options/footer-top-options.php:69
+#: inc/customizer/options/header-bottom-options.php:73
+#: inc/customizer/options/header-main-options.php:73
+#: inc/customizer/options/header-top-options.php:73
+#: inc/customizer/options/learndash-course-layout-options.php:138
+#: inc/customizer/options/learndash-essays-layout-options.php:138
+#: inc/customizer/options/learndash-groups-layout-options.php:138
+#: inc/customizer/options/lifter-course-archive-layout-options.php:138
+#: inc/customizer/options/lifter-course-layout-options.php:138
+#: inc/customizer/options/lifter-lesson-layout-options.php:138
+#: inc/customizer/options/lifter-member-archive-layout-options.php:138
+#: inc/customizer/options/lifter-member-layout-options.php:97
+#: inc/customizer/options/lifter-quiz-layout-options.php:97
+#: inc/customizer/options/page-layout-options.php:129
+#: inc/customizer/options/post-archive-layout-options.php:138
+#: inc/customizer/options/post-layout-options.php:138
+#: inc/customizer/options/product-archive-layout-options.php:138
+#: inc/customizer/options/product-layout-options.php:125
+#: inc/customizer/options/search-layout-options.php:138
+#: inc/customizer/options/tutor-course-layout-options.php:118
+msgid "Background & Content Contained"
+msgstr "Fondo y Contenido Estrechos"
+
+#: inc/customizer/options/custom-layout-options.php:138
+#: inc/customizer/options/footer-bottom-options.php:70
+#: inc/customizer/options/footer-middle-options.php:70
+#: inc/customizer/options/footer-top-options.php:70
+#: inc/customizer/options/header-bottom-options.php:74
+#: inc/customizer/options/header-main-options.php:74
+#: inc/customizer/options/header-top-options.php:74
+#: inc/customizer/options/learndash-course-layout-options.php:139
+#: inc/customizer/options/learndash-essays-layout-options.php:139
+#: inc/customizer/options/learndash-groups-layout-options.php:139
+#: inc/customizer/options/lifter-course-archive-layout-options.php:139
+#: inc/customizer/options/lifter-course-layout-options.php:139
+#: inc/customizer/options/lifter-lesson-layout-options.php:139
+#: inc/customizer/options/lifter-member-archive-layout-options.php:139
+#: inc/customizer/options/lifter-member-layout-options.php:98
+#: inc/customizer/options/lifter-quiz-layout-options.php:98
+#: inc/customizer/options/page-layout-options.php:130
+#: inc/customizer/options/post-archive-layout-options.php:139
+#: inc/customizer/options/post-layout-options.php:139
+#: inc/customizer/options/product-archive-layout-options.php:139
+#: inc/customizer/options/product-layout-options.php:126
+#: inc/customizer/options/search-layout-options.php:139
+#: inc/customizer/options/tutor-course-layout-options.php:119
+msgid "Contained"
+msgstr "Contenido"
+
+#: inc/customizer/options/custom-layout-options.php:148
+msgid "Title Align"
+msgstr "Alineación del Título"
+
+#: inc/customizer/options/custom-layout-options.php:177
+#: inc/customizer/options/learndash-course-layout-options.php:174
+#: inc/customizer/options/learndash-essays-layout-options.php:174
+#: inc/customizer/options/learndash-groups-layout-options.php:174
+#: inc/customizer/options/lifter-course-archive-layout-options.php:174
+#: inc/customizer/options/lifter-course-layout-options.php:174
+#: inc/customizer/options/lifter-lesson-layout-options.php:174
+#: inc/customizer/options/lifter-member-archive-layout-options.php:174
+#: inc/customizer/options/lifter-member-layout-options.php:133
+#: inc/customizer/options/lifter-quiz-layout-options.php:133
+#: inc/customizer/options/page-layout-options.php:169
+#: inc/customizer/options/post-archive-layout-options.php:174
+#: inc/customizer/options/post-layout-options.php:174
+#: inc/customizer/options/product-archive-layout-options.php:174
+#: inc/customizer/options/product-layout-options.php:161
+#: inc/customizer/options/search-layout-options.php:174
+msgid "Left Align Title"
+msgstr "Alinear Título a la izquierda"
+
+#: inc/customizer/options/custom-layout-options.php:181
+#: inc/customizer/options/learndash-course-layout-options.php:178
+#: inc/customizer/options/learndash-essays-layout-options.php:178
+#: inc/customizer/options/learndash-groups-layout-options.php:178
+#: inc/customizer/options/lifter-course-archive-layout-options.php:178
+#: inc/customizer/options/lifter-course-layout-options.php:178
+#: inc/customizer/options/lifter-lesson-layout-options.php:178
+#: inc/customizer/options/lifter-member-archive-layout-options.php:178
+#: inc/customizer/options/lifter-member-layout-options.php:137
+#: inc/customizer/options/lifter-quiz-layout-options.php:137
+#: inc/customizer/options/page-layout-options.php:173
+#: inc/customizer/options/post-archive-layout-options.php:178
+#: inc/customizer/options/post-layout-options.php:178
+#: inc/customizer/options/product-archive-layout-options.php:178
+#: inc/customizer/options/product-layout-options.php:165
+#: inc/customizer/options/search-layout-options.php:178
+msgid "Center Align Title"
+msgstr "Alinear Título al Centro"
+
+#: inc/customizer/options/custom-layout-options.php:185
+#: inc/customizer/options/learndash-course-layout-options.php:182
+#: inc/customizer/options/learndash-essays-layout-options.php:182
+#: inc/customizer/options/learndash-groups-layout-options.php:182
+#: inc/customizer/options/lifter-course-archive-layout-options.php:182
+#: inc/customizer/options/lifter-course-layout-options.php:182
+#: inc/customizer/options/lifter-lesson-layout-options.php:182
+#: inc/customizer/options/lifter-member-archive-layout-options.php:182
+#: inc/customizer/options/lifter-member-layout-options.php:141
+#: inc/customizer/options/lifter-quiz-layout-options.php:141
+#: inc/customizer/options/page-layout-options.php:177
+#: inc/customizer/options/post-archive-layout-options.php:182
+#: inc/customizer/options/post-layout-options.php:182
+#: inc/customizer/options/product-archive-layout-options.php:182
+#: inc/customizer/options/product-layout-options.php:169
+#: inc/customizer/options/search-layout-options.php:182
+msgid "Right Align Title"
+msgstr "Alinear Título a la Derecha"
+
+#: inc/customizer/options/custom-layout-options.php:603
+#: inc/customizer/options/learndash-course-layout-options.php:489
+#: inc/customizer/options/learndash-essays-layout-options.php:489
+#: inc/customizer/options/learndash-groups-layout-options.php:489
+#: inc/customizer/options/lifter-course-archive-layout-options.php:475
+#: inc/customizer/options/lifter-course-layout-options.php:489
+#: inc/customizer/options/lifter-lesson-layout-options.php:489
+#: inc/customizer/options/lifter-member-archive-layout-options.php:481
+#: inc/customizer/options/lifter-member-layout-options.php:165
+#: inc/customizer/options/lifter-quiz-layout-options.php:165
+#: inc/customizer/options/page-layout-options.php:593
+#: inc/customizer/options/post-archive-layout-options.php:475
+#: inc/customizer/options/post-layout-options.php:670
+#: inc/customizer/options/post-layout-options.php:907
+#: inc/customizer/options/product-archive-layout-options.php:475
+#: inc/customizer/options/product-layout-options.php:526
+#: inc/customizer/options/search-layout-options.php:393
+#: inc/meta/class-theme-meta.php:220 inc/meta/class-theme-meta.php:362
+msgid "Normal"
+msgstr "Normal"
+
+#: inc/customizer/options/custom-layout-options.php:607
+#: inc/customizer/options/learndash-course-layout-options.php:493
+#: inc/customizer/options/learndash-essays-layout-options.php:493
+#: inc/customizer/options/learndash-groups-layout-options.php:493
+#: inc/customizer/options/lifter-course-archive-layout-options.php:479
+#: inc/customizer/options/lifter-course-layout-options.php:493
+#: inc/customizer/options/lifter-lesson-layout-options.php:493
+#: inc/customizer/options/lifter-member-archive-layout-options.php:485
+#: inc/customizer/options/lifter-member-layout-options.php:169
+#: inc/customizer/options/lifter-quiz-layout-options.php:169
+#: inc/customizer/options/page-layout-options.php:597
+#: inc/customizer/options/post-archive-layout-options.php:479
+#: inc/customizer/options/post-layout-options.php:674
+#: inc/customizer/options/product-archive-layout-options.php:479
+#: inc/customizer/options/product-layout-options.php:530
+#: inc/customizer/options/search-layout-options.php:397
+#: inc/meta/class-theme-meta.php:221 inc/meta/class-theme-meta.php:363
+msgid "Narrow"
+msgstr "Estrecho"
+
+#: inc/customizer/options/custom-layout-options.php:615
+#: inc/customizer/options/learndash-course-layout-options.php:501
+#: inc/customizer/options/learndash-essays-layout-options.php:501
+#: inc/customizer/options/learndash-groups-layout-options.php:501
+#: inc/customizer/options/lifter-course-archive-layout-options.php:487
+#: inc/customizer/options/lifter-course-layout-options.php:501
+#: inc/customizer/options/lifter-lesson-layout-options.php:501
+#: inc/customizer/options/lifter-member-archive-layout-options.php:493
+#: inc/customizer/options/lifter-member-layout-options.php:177
+#: inc/customizer/options/lifter-quiz-layout-options.php:177
+#: inc/customizer/options/page-layout-options.php:605
+#: inc/customizer/options/post-archive-layout-options.php:487
+#: inc/customizer/options/post-layout-options.php:682
+#: inc/customizer/options/product-archive-layout-options.php:487
+#: inc/customizer/options/product-layout-options.php:538
+#: inc/customizer/options/search-layout-options.php:405
+#: inc/customizer/options/tutor-course-layout-options.php:458
+msgid "Left Sidebar"
+msgstr "Barra Lateral izquierda"
+
+#: inc/customizer/options/custom-layout-options.php:619
+#: inc/customizer/options/learndash-course-layout-options.php:505
+#: inc/customizer/options/learndash-essays-layout-options.php:505
+#: inc/customizer/options/learndash-groups-layout-options.php:505
+#: inc/customizer/options/lifter-course-archive-layout-options.php:491
+#: inc/customizer/options/lifter-course-layout-options.php:505
+#: inc/customizer/options/lifter-lesson-layout-options.php:505
+#: inc/customizer/options/lifter-member-archive-layout-options.php:497
+#: inc/customizer/options/lifter-member-layout-options.php:181
+#: inc/customizer/options/lifter-quiz-layout-options.php:181
+#: inc/customizer/options/page-layout-options.php:609
+#: inc/customizer/options/post-archive-layout-options.php:491
+#: inc/customizer/options/post-layout-options.php:686
+#: inc/customizer/options/product-archive-layout-options.php:491
+#: inc/customizer/options/product-layout-options.php:542
+#: inc/customizer/options/search-layout-options.php:409
+#: inc/customizer/options/tutor-course-layout-options.php:462
+msgid "Right Sidebar"
+msgstr "Barra Lateral Derecha"
+
+#: inc/customizer/options/custom-layout-options.php:630
+msgid "Default Sidebar"
+msgstr "Barra Lateral Por Defecto"
+
+#: inc/customizer/options/custom-layout-options.php:647
+#: inc/customizer/options/learndash-course-layout-options.php:527
+#: inc/customizer/options/learndash-essays-layout-options.php:527
+#: inc/customizer/options/learndash-groups-layout-options.php:527
+#: inc/customizer/options/lifter-course-archive-layout-options.php:502
+#: inc/customizer/options/lifter-course-layout-options.php:527
+#: inc/customizer/options/lifter-lesson-layout-options.php:527
+#: inc/customizer/options/lifter-member-archive-layout-options.php:508
+#: inc/customizer/options/lifter-member-layout-options.php:203
+#: inc/customizer/options/lifter-quiz-layout-options.php:203
+#: inc/customizer/options/page-layout-options.php:637
+#: inc/customizer/options/post-archive-layout-options.php:513
+#: inc/customizer/options/post-layout-options.php:708
+#: inc/customizer/options/product-archive-layout-options.php:514
+#: inc/customizer/options/product-layout-options.php:564
+#: inc/customizer/options/search-layout-options.php:431
+#: inc/customizer/options/tutor-course-layout-options.php:473
+#: inc/meta/class-theme-meta.php:242 inc/meta/class-theme-meta.php:384
+msgid "Content Style"
+msgstr "Estilo del Contenido"
+
+#: inc/customizer/options/custom-layout-options.php:673
+#: inc/customizer/options/learndash-course-layout-options.php:541
+#: inc/customizer/options/learndash-essays-layout-options.php:541
+#: inc/customizer/options/learndash-groups-layout-options.php:541
+#: inc/customizer/options/lifter-course-archive-layout-options.php:522
+#: inc/customizer/options/lifter-course-layout-options.php:541
+#: inc/customizer/options/lifter-lesson-layout-options.php:541
+#: inc/customizer/options/lifter-member-archive-layout-options.php:528
+#: inc/customizer/options/lifter-member-layout-options.php:217
+#: inc/customizer/options/lifter-quiz-layout-options.php:217
+#: inc/customizer/options/page-layout-options.php:657
+#: inc/customizer/options/post-archive-layout-options.php:533
+#: inc/customizer/options/post-archive-layout-options.php:535
+#: inc/customizer/options/post-layout-options.php:722
+#: inc/customizer/options/product-archive-layout-options.php:539
+#: inc/customizer/options/product-layout-options.php:578
+#: inc/customizer/options/search-layout-options.php:445
+#: inc/customizer/options/search-layout-options.php:447
+#: inc/customizer/options/tutor-course-layout-options.php:487
+#: inc/meta/class-theme-meta.php:247 inc/meta/class-theme-meta.php:389
+msgid "Boxed"
+msgstr "En caja"
+
+#: inc/customizer/options/custom-layout-options.php:677
+#: inc/customizer/options/learndash-course-layout-options.php:545
+#: inc/customizer/options/learndash-essays-layout-options.php:545
+#: inc/customizer/options/learndash-groups-layout-options.php:545
+#: inc/customizer/options/lifter-course-archive-layout-options.php:526
+#: inc/customizer/options/lifter-course-layout-options.php:545
+#: inc/customizer/options/lifter-lesson-layout-options.php:545
+#: inc/customizer/options/lifter-member-archive-layout-options.php:532
+#: inc/customizer/options/lifter-member-layout-options.php:221
+#: inc/customizer/options/lifter-quiz-layout-options.php:221
+#: inc/customizer/options/page-layout-options.php:661
+#: inc/customizer/options/post-archive-layout-options.php:538
+#: inc/customizer/options/post-archive-layout-options.php:540
+#: inc/customizer/options/post-layout-options.php:726
+#: inc/customizer/options/product-archive-layout-options.php:543
+#: inc/customizer/options/product-layout-options.php:582
+#: inc/customizer/options/search-layout-options.php:450
+#: inc/customizer/options/search-layout-options.php:452
+#: inc/customizer/options/tutor-course-layout-options.php:491
+#: inc/meta/class-theme-meta.php:248 inc/meta/class-theme-meta.php:390
+msgid "Unboxed"
+msgstr "Sin caja"
+
+#: inc/customizer/options/custom-layout-options.php:688
+#: inc/customizer/options/learndash-course-layout-options.php:556
+#: inc/customizer/options/learndash-essays-layout-options.php:556
+#: inc/customizer/options/learndash-groups-layout-options.php:556
+#: inc/customizer/options/lifter-course-layout-options.php:556
+#: inc/customizer/options/lifter-lesson-layout-options.php:556
+#: inc/customizer/options/lifter-member-layout-options.php:232
+#: inc/customizer/options/lifter-quiz-layout-options.php:232
+#: inc/customizer/options/page-layout-options.php:672
+#: inc/customizer/options/post-layout-options.php:737
+#: inc/customizer/options/product-layout-options.php:593
+#: inc/customizer/options/tutor-course-layout-options.php:502
+#: inc/meta/class-theme-meta.php:266 inc/meta/class-theme-meta.php:408
+msgid "Content Vertical Padding"
+msgstr "Relleno Vertical del Contenido"
+
+#: inc/customizer/options/custom-layout-options.php:714
+#: inc/customizer/options/learndash-course-layout-options.php:570
+#: inc/customizer/options/learndash-essays-layout-options.php:570
+#: inc/customizer/options/learndash-groups-layout-options.php:570
+#: inc/customizer/options/lifter-course-layout-options.php:570
+#: inc/customizer/options/lifter-lesson-layout-options.php:570
+#: inc/customizer/options/lifter-member-layout-options.php:246
+#: inc/customizer/options/lifter-quiz-layout-options.php:246
+#: inc/customizer/options/page-layout-options.php:692
+#: inc/customizer/options/post-layout-options.php:751
+#: inc/customizer/options/product-layout-options.php:607
+#: inc/customizer/options/tutor-course-layout-options.php:516
+#: inc/meta/class-theme-meta.php:196 inc/meta/class-theme-meta.php:271
+#: inc/meta/class-theme-meta.php:314 inc/meta/class-theme-meta.php:338
+#: inc/meta/class-theme-meta.php:413
+msgid "Enable"
+msgstr "Habilitar"
+
+#: inc/customizer/options/custom-layout-options.php:717
+#: inc/customizer/options/learndash-course-layout-options.php:573
+#: inc/customizer/options/learndash-essays-layout-options.php:573
+#: inc/customizer/options/learndash-groups-layout-options.php:573
+#: inc/customizer/options/lifter-course-layout-options.php:573
+#: inc/customizer/options/lifter-lesson-layout-options.php:573
+#: inc/customizer/options/lifter-member-layout-options.php:249
+#: inc/customizer/options/lifter-quiz-layout-options.php:249
+#: inc/customizer/options/page-layout-options.php:695
+#: inc/customizer/options/post-layout-options.php:754
+#: inc/customizer/options/product-layout-options.php:610
+#: inc/customizer/options/tutor-course-layout-options.php:519
+#: inc/meta/class-theme-meta.php:197 inc/meta/class-theme-meta.php:272
+#: inc/meta/class-theme-meta.php:315 inc/meta/class-theme-meta.php:339
+#: inc/meta/class-theme-meta.php:414
+msgid "Disable"
+msgstr "Deshabilitar"
+
+#: inc/customizer/options/custom-layout-options.php:781
+#: inc/customizer/options/learndash-course-layout-options.php:584
+#: inc/customizer/options/learndash-essays-layout-options.php:584
+#: inc/customizer/options/learndash-groups-layout-options.php:584
+#: inc/customizer/options/lifter-course-layout-options.php:584
+#: inc/customizer/options/lifter-lesson-layout-options.php:584
+#: inc/customizer/options/page-layout-options.php:706
+#: inc/customizer/options/post-layout-options.php:765
+msgid "Show Featured Image?"
+msgstr "¿Mostrar Imagen Destacada?"
+
+#: inc/customizer/options/custom-layout-options.php:793
+#: inc/customizer/options/learndash-course-layout-options.php:590
+#: inc/customizer/options/learndash-essays-layout-options.php:590
+#: inc/customizer/options/learndash-groups-layout-options.php:590
+#: inc/customizer/options/lifter-course-layout-options.php:590
+#: inc/customizer/options/lifter-lesson-layout-options.php:590
+#: inc/customizer/options/page-layout-options.php:718
+#: inc/customizer/options/post-layout-options.php:771
+msgid "Featured Image Position"
+msgstr "Posición de la Imagen Destacada"
+
+#: inc/customizer/options/custom-layout-options.php:811
+#: inc/customizer/options/learndash-course-layout-options.php:604
+#: inc/customizer/options/learndash-essays-layout-options.php:604
+#: inc/customizer/options/learndash-groups-layout-options.php:604
+#: inc/customizer/options/lifter-course-layout-options.php:604
+#: inc/customizer/options/lifter-dashboard-layout-options.php:37
+#: inc/customizer/options/lifter-lesson-layout-options.php:604
+#: inc/customizer/options/my-account-layout-options.php:45
+#: inc/customizer/options/page-layout-options.php:736
+#: inc/customizer/options/post-archive-layout-options.php:596
+#: inc/customizer/options/post-layout-options.php:785
+#: inc/customizer/options/search-layout-options.php:508
+#: inc/customizer/options/woo-store-notice-options.php:63
+msgid "Above"
+msgstr "Encima"
+
+#: inc/customizer/options/custom-layout-options.php:814
+#: inc/customizer/options/learndash-course-layout-options.php:607
+#: inc/customizer/options/learndash-essays-layout-options.php:607
+#: inc/customizer/options/learndash-groups-layout-options.php:607
+#: inc/customizer/options/lifter-course-layout-options.php:607
+#: inc/customizer/options/lifter-lesson-layout-options.php:607
+#: inc/customizer/options/page-layout-options.php:739
+#: inc/customizer/options/post-layout-options.php:788
+msgid "Behind"
+msgstr "Detrás"
+
+#: inc/customizer/options/custom-layout-options.php:817
+#: inc/customizer/options/learndash-course-layout-options.php:610
+#: inc/customizer/options/learndash-essays-layout-options.php:610
+#: inc/customizer/options/learndash-groups-layout-options.php:610
+#: inc/customizer/options/lifter-course-layout-options.php:610
+#: inc/customizer/options/lifter-lesson-layout-options.php:610
+#: inc/customizer/options/page-layout-options.php:742
+#: inc/customizer/options/post-layout-options.php:791
+msgid "Below"
+msgstr "Abajo"
+
+#: inc/customizer/options/custom-layout-options.php:826
+#: inc/customizer/options/learndash-course-layout-options.php:619
+#: inc/customizer/options/learndash-essays-layout-options.php:619
+#: inc/customizer/options/learndash-groups-layout-options.php:619
+#: inc/customizer/options/lifter-course-layout-options.php:619
+#: inc/customizer/options/lifter-lesson-layout-options.php:619
+#: inc/customizer/options/page-layout-options.php:751
+#: inc/customizer/options/post-layout-options.php:831
+msgid "Featured Image Ratio"
+msgstr "Radio de Imagen Destacada"
+
+#: inc/customizer/options/custom-layout-options.php:857
+#: inc/customizer/options/learndash-course-layout-options.php:640
+#: inc/customizer/options/learndash-essays-layout-options.php:640
+#: inc/customizer/options/learndash-groups-layout-options.php:640
+#: inc/customizer/options/lifter-course-layout-options.php:640
+#: inc/customizer/options/lifter-course-layout-options.php:753
+#: inc/customizer/options/lifter-lesson-layout-options.php:640
+#: inc/customizer/options/page-layout-options.php:776
+#: inc/customizer/options/post-layout-options.php:852
+msgid "Inherit"
+msgstr "Heredar"
+
+#: inc/customizer/options/custom-layout-options.php:860
+#: inc/customizer/options/learndash-course-layout-options.php:643
+#: inc/customizer/options/learndash-essays-layout-options.php:643
+#: inc/customizer/options/learndash-groups-layout-options.php:643
+#: inc/customizer/options/lifter-course-layout-options.php:643
+#: inc/customizer/options/lifter-course-layout-options.php:756
+#: inc/customizer/options/lifter-lesson-layout-options.php:643
+#: inc/customizer/options/page-layout-options.php:779
+#: inc/customizer/options/post-layout-options.php:855
+msgid "1:1"
+msgstr "1:1"
+
+#: inc/customizer/options/custom-layout-options.php:863
+msgid "3:4"
+msgstr "3:4"
+
+#: inc/customizer/options/custom-layout-options.php:866
+msgid "2:3"
+msgstr "2:3"
+
+#: inc/customizer/options/custom-layout-options.php:869
+msgid "9:16"
+msgstr "9:16"
+
+#: inc/customizer/options/custom-layout-options.php:872
+#: inc/customizer/options/learndash-course-layout-options.php:655
+#: inc/customizer/options/learndash-essays-layout-options.php:655
+#: inc/customizer/options/learndash-groups-layout-options.php:655
+#: inc/customizer/options/lifter-course-layout-options.php:655
+#: inc/customizer/options/lifter-course-layout-options.php:768
+#: inc/customizer/options/lifter-lesson-layout-options.php:655
+#: inc/customizer/options/page-layout-options.php:791
+#: inc/customizer/options/post-layout-options.php:867
+#, fuzzy
+#| msgid "1:1"
+msgid "2:1"
+msgstr "1:1"
+
+#: inc/customizer/options/custom-layout-options.php:887
+#: inc/customizer/options/learndash-essays-layout-options.php:667
+#: inc/customizer/options/page-layout-options.php:803
+#: inc/customizer/options/post-layout-options.php:952
+msgid "Show Comments?"
+msgstr "¿Mostrar Comentarios?"
+
+#: inc/customizer/options/footer-bottom-options.php:79
+#: inc/customizer/options/footer-middle-options.php:79
+#: inc/customizer/options/footer-top-options.php:79
+msgid "Columns"
+msgstr "Columnas"
+
+#: inc/customizer/options/footer-bottom-options.php:97
+#: inc/customizer/options/footer-middle-options.php:97
+#: inc/customizer/options/footer-top-options.php:97
+#: inc/customizer/options/lifter-course-layout-options.php:679
+#: inc/customizer/options/post-archive-layout-options.php:557
+#: inc/customizer/options/search-layout-options.php:469
+msgid "1"
+msgstr "1"
+
+#: inc/customizer/options/footer-bottom-options.php:100
+#: inc/customizer/options/footer-middle-options.php:100
+#: inc/customizer/options/footer-top-options.php:100
+#: inc/customizer/options/lifter-course-archive-layout-options.php:544
+#: inc/customizer/options/lifter-course-layout-options.php:682
+#: inc/customizer/options/lifter-dashboard-layout-options.php:59
+#: inc/customizer/options/lifter-member-archive-layout-options.php:550
+#: inc/customizer/options/post-archive-layout-options.php:560
+#: inc/customizer/options/product-layout-options.php:674
+#: inc/customizer/options/search-layout-options.php:472
+msgid "2"
+msgstr "2"
+
+#: inc/customizer/options/footer-bottom-options.php:103
+#: inc/customizer/options/footer-middle-options.php:103
+#: inc/customizer/options/footer-top-options.php:103
+#: inc/customizer/options/lifter-course-archive-layout-options.php:547
+#: inc/customizer/options/lifter-course-layout-options.php:685
+#: inc/customizer/options/lifter-dashboard-layout-options.php:62
+#: inc/customizer/options/lifter-member-archive-layout-options.php:553
+#: inc/customizer/options/post-archive-layout-options.php:563
+#: inc/customizer/options/product-layout-options.php:677
+#: inc/customizer/options/search-layout-options.php:475
+msgid "3"
+msgstr "3"
+
+#: inc/customizer/options/footer-bottom-options.php:106
+#: inc/customizer/options/footer-middle-options.php:106
+#: inc/customizer/options/footer-top-options.php:106
+#: inc/customizer/options/lifter-course-archive-layout-options.php:550
+#: inc/customizer/options/lifter-dashboard-layout-options.php:65
+#: inc/customizer/options/lifter-member-archive-layout-options.php:556
+#: inc/customizer/options/product-layout-options.php:680
+msgid "4"
+msgstr "4"
+
+#: inc/customizer/options/footer-bottom-options.php:109
+#: inc/customizer/options/footer-middle-options.php:109
+#: inc/customizer/options/footer-top-options.php:109
+msgid "5"
+msgstr "5"
+
+#: inc/customizer/options/footer-bottom-options.php:151
+#: inc/customizer/options/footer-middle-options.php:151
+#: inc/customizer/options/footer-top-options.php:151
+msgid "Column Direction"
+msgstr "Dirección de Columna"
+
+#: inc/customizer/options/footer-bottom-options.php:173
+#: inc/customizer/options/footer-middle-options.php:173
+#: inc/customizer/options/footer-top-options.php:173
+msgid "Left to Right"
+msgstr "Izquierda a derecha"
+
+#: inc/customizer/options/footer-bottom-options.php:174
+#: inc/customizer/options/footer-middle-options.php:174
+#: inc/customizer/options/footer-top-options.php:174
+msgid "Row"
+msgstr "Fila"
+
+#: inc/customizer/options/footer-bottom-options.php:178
+#: inc/customizer/options/footer-middle-options.php:178
+#: inc/customizer/options/footer-top-options.php:178
+msgid "Top to Bottom"
+msgstr "De Arriba a Abajo"
+
+#: inc/customizer/options/footer-bottom-options.php:179
+#: inc/customizer/options/footer-middle-options.php:179
+#: inc/customizer/options/footer-top-options.php:179
+msgid "Column"
+msgstr "Columna"
+
+#: inc/customizer/options/footer-bottom-options.php:191
+#: inc/customizer/options/footer-middle-options.php:191
+#: inc/customizer/options/footer-top-options.php:191
+msgid "Column/Widget Spacing"
+msgstr "Espaciado de Columna/Widget"
+
+#: inc/customizer/options/footer-bottom-options.php:245
+#: inc/customizer/options/footer-middle-options.php:245
+#: inc/customizer/options/footer-top-options.php:245
+msgid "Top Spacing"
+msgstr "Espaciado Superior"
+
+#: inc/customizer/options/footer-bottom-options.php:285
+#: inc/customizer/options/footer-middle-options.php:285
+#: inc/customizer/options/footer-top-options.php:285
+msgid "Bottom Spacing"
+msgstr "Espacio Inferior"
+
+#: inc/customizer/options/footer-bottom-options.php:325
+#: inc/customizer/options/footer-middle-options.php:325
+#: inc/customizer/options/footer-top-options.php:325
+#: inc/customizer/options/header-bottom-options.php:84
+#: inc/customizer/options/header-main-options.php:84
+#: inc/customizer/options/header-top-options.php:84
+msgid "Min Height"
+msgstr "Altura Mínima"
+
+#: inc/customizer/options/footer-bottom-options.php:367
+#: inc/customizer/options/footer-middle-options.php:367
+#: inc/customizer/options/footer-top-options.php:367
+#: inc/customizer/options/general-sidebar-options.php:153
+msgid "Widget Titles"
+msgstr "Títulos de Widgets"
+
+#: inc/customizer/options/footer-bottom-options.php:395
+#: inc/customizer/options/footer-middle-options.php:395
+#: inc/customizer/options/footer-top-options.php:395
+#: inc/customizer/options/general-sidebar-options.php:181
+msgid "Widget Content"
+msgstr "Contenido del Widget"
+
+#: inc/customizer/options/footer-bottom-options.php:423
+#: inc/customizer/options/footer-html-options.php:168
+#: inc/customizer/options/footer-middle-options.php:423
+#: inc/customizer/options/footer-top-options.php:423
+#: inc/customizer/options/general-sidebar-options.php:209
+#: inc/customizer/options/header-html-options.php:111
+#: inc/customizer/options/header-mobile-html-options.php:83
+msgid "Link Colors"
+msgstr "Colores del Enlace"
+
+#: inc/customizer/options/footer-bottom-options.php:450
+#: inc/customizer/options/footer-html-options.php:195
+#: inc/customizer/options/footer-middle-options.php:450
+#: inc/customizer/options/footer-navigation-options.php:291
+#: inc/customizer/options/footer-social-options.php:309
+#: inc/customizer/options/footer-social-options.php:350
+#: inc/customizer/options/footer-social-options.php:384
+#: inc/customizer/options/footer-top-options.php:450
+#: inc/customizer/options/general-button-options.php:38
+#: inc/customizer/options/general-button-options.php:72
+#: inc/customizer/options/general-button-options.php:107
+#: inc/customizer/options/general-scroll-to-top-options.php:353
+#: inc/customizer/options/general-scroll-to-top-options.php:399
+#: inc/customizer/options/general-scroll-to-top-options.php:440
+#: inc/customizer/options/general-sidebar-options.php:236
+#: inc/customizer/options/header-button-options.php:256
+#: inc/customizer/options/header-button-options.php:297
+#: inc/customizer/options/header-button-options.php:331
+#: inc/customizer/options/header-cart-options.php:176
+#: inc/customizer/options/header-cart-options.php:251
+#: inc/customizer/options/header-dropdown-options.php:80
+#: inc/customizer/options/header-html-options.php:132
+#: inc/customizer/options/header-mobile-button-options.php:252
+#: inc/customizer/options/header-mobile-button-options.php:297
+#: inc/customizer/options/header-mobile-button-options.php:337
+#: inc/customizer/options/header-mobile-cart-options.php:175
+#: inc/customizer/options/header-mobile-cart-options.php:250
+#: inc/customizer/options/header-mobile-html-options.php:110
+#: inc/customizer/options/header-mobile-nav-options.php:85
+#: inc/customizer/options/header-mobile-social-options.php:225
+#: inc/customizer/options/header-mobile-social-options.php:266
+#: inc/customizer/options/header-navigation-options.php:287
+#: inc/customizer/options/header-popup-options.php:159
+#: inc/customizer/options/header-search-options.php:256
+#: inc/customizer/options/header-search-options.php:434
+#: inc/customizer/options/header-secondary-navigation-options.php:287
+#: inc/customizer/options/header-social-options.php:225
+#: inc/customizer/options/header-social-options.php:266
+#: inc/customizer/options/header-social-options.php:300
+#: inc/customizer/options/header-sticky-options.php:398
+#: inc/customizer/options/header-sticky-options.php:435
+#: inc/customizer/options/header-trigger-options.php:219
+#: inc/customizer/options/learndash-course-layout-options.php:310
+#: inc/customizer/options/learndash-essays-layout-options.php:310
+#: inc/customizer/options/learndash-groups-layout-options.php:310
+#: inc/customizer/options/lifter-course-archive-layout-options.php:299
+#: inc/customizer/options/lifter-course-archive-layout-options.php:333
+#: inc/customizer/options/lifter-course-layout-options.php:310
+#: inc/customizer/options/lifter-lesson-layout-options.php:310
+#: inc/customizer/options/lifter-member-archive-layout-options.php:305
+#: inc/customizer/options/lifter-member-archive-layout-options.php:339
+#: inc/customizer/options/page-layout-options.php:329
+#: inc/customizer/options/page-layout-options.php:393
+#: inc/customizer/options/post-archive-layout-options.php:299
+#: inc/customizer/options/post-archive-layout-options.php:333
+#: inc/customizer/options/post-archive-layout-options.php:711
+#: inc/customizer/options/post-archive-layout-options.php:763
+#: inc/customizer/options/post-layout-options.php:335
+#: inc/customizer/options/post-layout-options.php:387
+#: inc/customizer/options/post-layout-options.php:439
+#: inc/customizer/options/post-layout-options.php:491
+#: inc/customizer/options/product-archive-layout-options.php:299
+#: inc/customizer/options/product-archive-layout-options.php:333
+#: inc/customizer/options/product-layout-options.php:325
+#: inc/customizer/options/search-layout-options.php:623
+#: inc/customizer/options/search-layout-options.php:675
+#: inc/customizer/options/transparent-header-options.php:335
+#: inc/customizer/options/transparent-header-options.php:372
+#, fuzzy
+#| msgid "Inital Color"
+msgid "Initial Color"
+msgstr "Color Inicial"
+
+#: inc/customizer/options/footer-bottom-options.php:454
+#: inc/customizer/options/footer-html-options.php:199
+#: inc/customizer/options/footer-middle-options.php:454
+#: inc/customizer/options/footer-navigation-options.php:295
+#: inc/customizer/options/footer-social-options.php:313
+#: inc/customizer/options/footer-social-options.php:354
+#: inc/customizer/options/footer-social-options.php:388
+#: inc/customizer/options/footer-top-options.php:454
+#: inc/customizer/options/general-button-options.php:42
+#: inc/customizer/options/general-button-options.php:76
+#: inc/customizer/options/general-button-options.php:111
+#: inc/customizer/options/general-scroll-to-top-options.php:357
+#: inc/customizer/options/general-scroll-to-top-options.php:403
+#: inc/customizer/options/general-scroll-to-top-options.php:444
+#: inc/customizer/options/general-sidebar-options.php:240
+#: inc/customizer/options/header-button-options.php:260
+#: inc/customizer/options/header-button-options.php:301
+#: inc/customizer/options/header-button-options.php:335
+#: inc/customizer/options/header-cart-options.php:180
+#: inc/customizer/options/header-cart-options.php:255
+#: inc/customizer/options/header-dropdown-options.php:84
+#: inc/customizer/options/header-html-options.php:136
+#: inc/customizer/options/header-logo-options.php:229
+#: inc/customizer/options/header-mobile-button-options.php:256
+#: inc/customizer/options/header-mobile-button-options.php:301
+#: inc/customizer/options/header-mobile-button-options.php:341
+#: inc/customizer/options/header-mobile-cart-options.php:179
+#: inc/customizer/options/header-mobile-cart-options.php:254
+#: inc/customizer/options/header-mobile-html-options.php:114
+#: inc/customizer/options/header-mobile-nav-options.php:89
+#: inc/customizer/options/header-mobile-social-options.php:229
+#: inc/customizer/options/header-mobile-social-options.php:270
+#: inc/customizer/options/header-mobile-social-options.php:304
+#: inc/customizer/options/header-navigation-options.php:291
+#: inc/customizer/options/header-popup-options.php:163
+#: inc/customizer/options/header-search-options.php:260
+#: inc/customizer/options/header-secondary-navigation-options.php:291
+#: inc/customizer/options/header-social-options.php:229
+#: inc/customizer/options/header-social-options.php:270
+#: inc/customizer/options/header-social-options.php:304
+#: inc/customizer/options/header-sticky-options.php:439
+#: inc/customizer/options/header-sticky-options.php:550
+#: inc/customizer/options/header-sticky-options.php:628
+#: inc/customizer/options/header-sticky-options.php:782
+#: inc/customizer/options/header-sticky-options.php:838
+#: inc/customizer/options/header-trigger-options.php:223
+#: inc/customizer/options/transparent-header-options.php:376
+#: inc/customizer/options/transparent-header-options.php:494
+#: inc/customizer/options/transparent-header-options.php:572
+#: inc/customizer/options/transparent-header-options.php:764
+#: inc/customizer/options/transparent-header-options.php:820
+msgid "Hover Color"
+msgstr "Color en Hover"
+
+#: inc/customizer/options/footer-bottom-options.php:464
+#: inc/customizer/options/footer-middle-options.php:464
+#: inc/customizer/options/footer-top-options.php:464
+#: inc/customizer/options/header-html-options.php:88
+msgid "Link Style"
+msgstr "Estilo del Enlace"
+
+#: inc/customizer/options/footer-bottom-options.php:468
+#: inc/customizer/options/footer-middle-options.php:468
+#: inc/customizer/options/footer-top-options.php:468
+#: inc/customizer/options/header-html-options.php:92
+#: inc/customizer/options/header-navigation-options.php:180
+#: inc/customizer/options/header-secondary-navigation-options.php:180
+msgid "Underline"
+msgstr "Subrayar"
+
+#: inc/customizer/options/footer-bottom-options.php:471
+#: inc/customizer/options/footer-middle-options.php:471
+#: inc/customizer/options/footer-top-options.php:471
+#: inc/customizer/options/header-html-options.php:95
+msgid "No Underline"
+msgstr "Sin Subrayado"
+
+#: inc/customizer/options/footer-bottom-options.php:487
+#: inc/customizer/options/footer-bottom-options.php:505
+#: inc/customizer/options/header-bottom-options.php:126
+msgid "Bottom Row Background"
+msgstr "Fondo de la Fila Inferior"
+
+#: inc/customizer/options/footer-bottom-options.php:511
+#: inc/customizer/options/footer-middle-options.php:511
+#: inc/customizer/options/footer-top-options.php:511
+msgid "Column Border"
+msgstr "Borde de Columna"
+
+#: inc/customizer/options/footer-bottom-options.php:533
+#: inc/customizer/options/footer-middle-options.php:533
+#: inc/customizer/options/footer-social-options.php:397
+#: inc/customizer/options/footer-top-options.php:533
+#: inc/customizer/options/general-button-options.php:120
+#: inc/customizer/options/general-scroll-to-top-options.php:453
+#: inc/customizer/options/header-bottom-options.php:150
+#: inc/customizer/options/header-button-options.php:344
+#: inc/customizer/options/header-main-options.php:151
+#: inc/customizer/options/header-mobile-button-options.php:350
+#: inc/customizer/options/header-mobile-social-options.php:313
+#: inc/customizer/options/header-social-options.php:313
+#: inc/customizer/options/header-sticky-options.php:562
+#: inc/customizer/options/header-sticky-options.php:640
+#: inc/customizer/options/header-top-options.php:150
+#: inc/customizer/options/learndash-course-layout-options.php:426
+#: inc/customizer/options/learndash-essays-layout-options.php:426
+#: inc/customizer/options/learndash-groups-layout-options.php:426
+#: inc/customizer/options/lifter-course-archive-layout-options.php:412
+#: inc/customizer/options/lifter-course-layout-options.php:426
+#: inc/customizer/options/lifter-lesson-layout-options.php:426
+#: inc/customizer/options/lifter-member-archive-layout-options.php:418
+#: inc/customizer/options/page-layout-options.php:527
+#: inc/customizer/options/post-archive-layout-options.php:412
+#: inc/customizer/options/post-layout-options.php:607
+#: inc/customizer/options/product-archive-layout-options.php:412
+#: inc/customizer/options/product-layout-options.php:433
+#: inc/customizer/options/search-layout-options.php:330
+#: inc/customizer/options/transparent-header-options.php:506
+#: inc/customizer/options/transparent-header-options.php:584
+#: inc/customizer/options/tutor-course-layout-options.php:400
+msgid "Border"
+msgstr "Borde"
+
+#: inc/customizer/options/footer-builder-options.php:17
+#: inc/customizer/options/general-scroll-to-top-options.php:275
+#: inc/customizer/options/header-builder-options.php:17
+#: inc/customizer/options/header-search-options.php:78
+#: inc/customizer/options/transparent-header-options.php:118
+msgid "Desktop"
+msgstr "Escritorio"
+
+#: inc/customizer/options/footer-builder-options.php:21
+#: inc/customizer/options/header-builder-options.php:21
+msgid "Tablet / Mobile"
+msgstr "Tablet"
+
+#: inc/customizer/options/footer-builder-options.php:24
+#: inc/customizer/options/header-builder-options.php:24
+msgid "Hide"
+msgstr "Esconder"
+
+#: inc/customizer/options/footer-builder-options.php:61
+#: inc/customizer/options/header-builder-options.php:84
+#: inc/customizer/options/header-builder-options.php:185
+msgid "Social"
+msgstr "Social"
+
+#: inc/customizer/options/footer-builder-options.php:65
+msgid "Copyright"
+msgstr "Copyright"
+
+#: inc/customizer/options/footer-builder-options.php:69
+msgid "Widget 1"
+msgstr "Widget 1"
+
+#: inc/customizer/options/footer-builder-options.php:73
+msgid "Widget 2"
+msgstr "Widget 2"
+
+#: inc/customizer/options/footer-builder-options.php:77
+msgid "Widget 3"
+msgstr "Widget 3"
+
+#: inc/customizer/options/footer-builder-options.php:81
+msgid "Widget 4"
+msgstr "Widget 4"
+
+#: inc/customizer/options/footer-builder-options.php:85
+msgid "Widget 5"
+msgstr "Widget 5"
+
+#: inc/customizer/options/footer-builder-options.php:89
+msgid "Widget 6"
+msgstr "Widget 6"
+
+#: inc/customizer/options/footer-builder-options.php:98
+msgid "Top - 1"
+msgstr "Arriba - 1"
+
+#: inc/customizer/options/footer-builder-options.php:99
+msgid "Top - 2"
+msgstr "Arriba - 2"
+
+#: inc/customizer/options/footer-builder-options.php:100
+msgid "Top - 3"
+msgstr "Arriba - 3"
+
+#: inc/customizer/options/footer-builder-options.php:101
+msgid "Top - 4"
+msgstr "Arriba - 4"
+
+#: inc/customizer/options/footer-builder-options.php:102
+msgid "Top - 5"
+msgstr "Arriba - 5"
+
+#: inc/customizer/options/footer-builder-options.php:105
+msgid "Middle - 1"
+msgstr "Media - 1"
+
+#: inc/customizer/options/footer-builder-options.php:106
+msgid "Middle - 2"
+msgstr "Media - 2"
+
+#: inc/customizer/options/footer-builder-options.php:107
+msgid "Middle - 3"
+msgstr "Media - 3"
+
+#: inc/customizer/options/footer-builder-options.php:108
+msgid "Middle - 4"
+msgstr "Media - 4"
+
+#: inc/customizer/options/footer-builder-options.php:109
+msgid "Middle - 5"
+msgstr "Media - 5"
+
+#: inc/customizer/options/footer-builder-options.php:112
+msgid "Bottom - 1"
+msgstr "Inferior - 1"
+
+#: inc/customizer/options/footer-builder-options.php:113
+msgid "Bottom - 2"
+msgstr "Inferior - 2"
+
+#: inc/customizer/options/footer-builder-options.php:114
+msgid "Bottom - 3"
+msgstr "Inferior - 3"
+
+#: inc/customizer/options/footer-builder-options.php:115
+msgid "Bottom - 4"
+msgstr "Inferior - 4"
+
+#: inc/customizer/options/footer-builder-options.php:116
+msgid "Bottom - 5"
+msgstr "Inferior - 5"
+
+#: inc/customizer/options/footer-builder-options.php:146
+#: inc/customizer/options/footer-builder-options.php:164
+msgid "Footer Background"
+msgstr "Fondo del Pie de Página"
+
+#: inc/customizer/options/footer-html-options.php:35
+#, fuzzy
+#| msgid ""
+#| "Availbile Placeholders: {copyright} {year} {site-title} {theme-credit}"
+msgid "Available Placeholders: {copyright} {year} {site-title} {theme-credit}"
+msgstr "Marcadores Disponibles: {copyright} {year} {site-title} {theme-credit}"
+
+#: inc/customizer/options/footer-html-options.php:56
+#: inc/customizer/options/footer-navigation-options.php:173
+#: inc/customizer/options/footer-social-options.php:156
+#: inc/customizer/options/footer-widget1-options.php:32
+#: inc/customizer/options/footer-widget2-options.php:32
+#: inc/customizer/options/footer-widget3-options.php:32
+#: inc/customizer/options/footer-widget4-options.php:32
+#: inc/customizer/options/footer-widget5-options.php:32
+#: inc/customizer/options/footer-widget6-options.php:32
+msgid "Content Align"
+msgstr "Alineación del Contenido"
+
+#: inc/customizer/options/footer-html-options.php:80
+#: inc/customizer/options/footer-navigation-options.php:197
+#: inc/customizer/options/footer-social-options.php:174
+#: inc/customizer/options/footer-widget1-options.php:56
+#: inc/customizer/options/footer-widget2-options.php:56
+#: inc/customizer/options/footer-widget3-options.php:56
+#: inc/customizer/options/footer-widget4-options.php:56
+#: inc/customizer/options/footer-widget5-options.php:56
+#: inc/customizer/options/footer-widget6-options.php:56
+msgid "Left Align"
+msgstr "Alinear a la izquierda"
+
+#: inc/customizer/options/footer-html-options.php:84
+#: inc/customizer/options/footer-navigation-options.php:201
+#: inc/customizer/options/footer-social-options.php:178
+#: inc/customizer/options/footer-widget1-options.php:60
+#: inc/customizer/options/footer-widget2-options.php:60
+#: inc/customizer/options/footer-widget3-options.php:60
+#: inc/customizer/options/footer-widget4-options.php:60
+#: inc/customizer/options/footer-widget5-options.php:60
+#: inc/customizer/options/footer-widget6-options.php:60
+msgid "Center Align"
+msgstr "Alinear al Centro"
+
+#: inc/customizer/options/footer-html-options.php:88
+#: inc/customizer/options/footer-navigation-options.php:205
+#: inc/customizer/options/footer-social-options.php:182
+#: inc/customizer/options/footer-widget1-options.php:64
+#: inc/customizer/options/footer-widget2-options.php:64
+#: inc/customizer/options/footer-widget3-options.php:64
+#: inc/customizer/options/footer-widget4-options.php:64
+#: inc/customizer/options/footer-widget5-options.php:64
+#: inc/customizer/options/footer-widget6-options.php:64
+msgid "Right Align"
+msgstr "Alinear a la Derecha"
+
+#: inc/customizer/options/footer-html-options.php:98
+#: inc/customizer/options/footer-navigation-options.php:215
+#: inc/customizer/options/footer-social-options.php:192
+#: inc/customizer/options/footer-widget1-options.php:74
+#: inc/customizer/options/footer-widget2-options.php:74
+#: inc/customizer/options/footer-widget3-options.php:74
+#: inc/customizer/options/footer-widget4-options.php:74
+#: inc/customizer/options/footer-widget5-options.php:74
+#: inc/customizer/options/footer-widget6-options.php:74
+msgid "Content Vertical Align"
+msgstr "Alineación Vertical del Contenido"
+
+#: inc/customizer/options/footer-html-options.php:122
+#: inc/customizer/options/footer-navigation-options.php:239
+#: inc/customizer/options/footer-social-options.php:210
+#: inc/customizer/options/footer-widget1-options.php:98
+#: inc/customizer/options/footer-widget2-options.php:98
+#: inc/customizer/options/footer-widget3-options.php:98
+#: inc/customizer/options/footer-widget4-options.php:98
+#: inc/customizer/options/footer-widget5-options.php:98
+#: inc/customizer/options/footer-widget6-options.php:98
+msgid "Top Align"
+msgstr "Alinear Arriba"
+
+#: inc/customizer/options/footer-html-options.php:126
+#: inc/customizer/options/footer-navigation-options.php:243
+#: inc/customizer/options/footer-social-options.php:214
+#: inc/customizer/options/footer-widget1-options.php:102
+#: inc/customizer/options/footer-widget2-options.php:102
+#: inc/customizer/options/footer-widget3-options.php:102
+#: inc/customizer/options/footer-widget4-options.php:102
+#: inc/customizer/options/footer-widget5-options.php:102
+#: inc/customizer/options/footer-widget6-options.php:102
+msgid "Middle Align"
+msgstr "Alinear al Medio"
+
+#: inc/customizer/options/footer-html-options.php:130
+#: inc/customizer/options/footer-navigation-options.php:247
+#: inc/customizer/options/footer-social-options.php:218
+#: inc/customizer/options/footer-widget1-options.php:106
+#: inc/customizer/options/footer-widget2-options.php:106
+#: inc/customizer/options/footer-widget3-options.php:106
+#: inc/customizer/options/footer-widget4-options.php:106
+#: inc/customizer/options/footer-widget5-options.php:106
+#: inc/customizer/options/footer-widget6-options.php:106
+msgid "Bottom Align"
+msgstr "Alinear Abajo"
+
+#: inc/customizer/options/footer-html-options.php:140
+#: inc/customizer/options/footer-social-options.php:453
+#: inc/customizer/options/general-button-options.php:176
+#: inc/customizer/options/header-button-options.php:382
+#: inc/customizer/options/header-html-options.php:65
+#: inc/customizer/options/header-mobile-button-options.php:375
+#: inc/customizer/options/header-mobile-html-options.php:55
+#: inc/customizer/options/header-mobile-nav-options.php:189
+#: inc/customizer/options/header-mobile-social-options.php:369
+#: inc/customizer/options/header-social-options.php:369
+msgid "Font"
+msgstr "Fuente"
+
+#: inc/customizer/options/footer-html-options.php:210
+#: inc/customizer/options/footer-social-options.php:485
+#: inc/customizer/options/header-button-options.php:407
+#: inc/customizer/options/header-html-options.php:147
+#: inc/customizer/options/header-mobile-button-options.php:406
+#: inc/customizer/options/header-mobile-html-options.php:125
+#: inc/customizer/options/header-mobile-social-options.php:401
+#: inc/customizer/options/header-search-options.php:370
+#: inc/customizer/options/header-social-options.php:401
+msgid "Margin"
+msgstr "Margen"
+
+#: inc/customizer/options/footer-middle-options.php:487
+#: inc/customizer/options/footer-middle-options.php:505
+msgid "Middle Row Background"
+msgstr "Fondo de Fila Media"
+
+#: inc/customizer/options/footer-navigation-options.php:37
+#: inc/customizer/options/header-mobile-nav-options.php:37
+#: inc/customizer/options/header-navigation-options.php:37
+#: inc/customizer/options/header-secondary-navigation-options.php:37
+msgid "Select Menu"
+msgstr "Seleccionar Menú"
+
+#: inc/customizer/options/footer-navigation-options.php:52
+#: inc/customizer/options/header-navigation-options.php:52
+#: inc/customizer/options/header-secondary-navigation-options.php:52
+msgid "Items Spacing"
+msgstr "Espacio entre Items"
+
+#: inc/customizer/options/footer-navigation-options.php:104
+#: inc/customizer/options/header-navigation-options.php:104
+#: inc/customizer/options/header-secondary-navigation-options.php:104
+msgid "Stretch Menu?"
+msgstr "¿Estirar Menú?"
+
+#: inc/customizer/options/footer-navigation-options.php:123
+#: inc/customizer/options/header-navigation-options.php:196
+#: inc/customizer/options/header-secondary-navigation-options.php:196
+msgid "Items Top and Bottom Padding"
+msgstr "Relleno Superior e Inferior de los Items"
+
+#: inc/customizer/options/footer-navigation-options.php:257
+#: inc/customizer/options/header-navigation-options.php:253
+#: inc/customizer/options/header-secondary-navigation-options.php:253
+#: inc/customizer/options/header-sticky-options.php:407
+#: inc/customizer/options/transparent-header-options.php:344
+msgid "Navigation Colors"
+msgstr "Colores de Navegación"
+
+#: inc/customizer/options/footer-navigation-options.php:299
+#: inc/customizer/options/header-dropdown-options.php:88
+#: inc/customizer/options/header-logo-options.php:233
+#: inc/customizer/options/header-mobile-nav-options.php:93
+#: inc/customizer/options/header-navigation-options.php:295
+#: inc/customizer/options/header-secondary-navigation-options.php:295
+#: inc/customizer/options/header-sticky-options.php:443
+#: inc/customizer/options/transparent-header-options.php:380
+msgid "Active Color"
+msgstr "Color Activo"
+
+#: inc/customizer/options/footer-navigation-options.php:308
+#: inc/customizer/options/header-navigation-options.php:304
+#: inc/customizer/options/header-secondary-navigation-options.php:304
+#: inc/customizer/options/header-trigger-options.php:232
+msgid "Navigation Background"
+msgstr "Fondo de Navegación"
+
+#: inc/customizer/options/footer-navigation-options.php:342
+#: inc/customizer/options/header-cart-options.php:210
+#: inc/customizer/options/header-cart-options.php:292
+#: inc/customizer/options/header-dropdown-options.php:126
+#: inc/customizer/options/header-mobile-cart-options.php:209
+#: inc/customizer/options/header-mobile-cart-options.php:291
+#: inc/customizer/options/header-mobile-nav-options.php:137
+#: inc/customizer/options/header-navigation-options.php:338
+#: inc/customizer/options/header-search-options.php:296
+#: inc/customizer/options/header-secondary-navigation-options.php:338
+#: inc/customizer/options/header-sticky-options.php:480
+#: inc/customizer/options/header-trigger-options.php:259
+#: inc/customizer/options/transparent-header-options.php:417
+#, fuzzy
+#| msgid "Inital Background"
+msgid "Initial Background"
+msgstr "Fondo Inicial"
+
+#: inc/customizer/options/footer-navigation-options.php:346
+#: inc/customizer/options/header-cart-options.php:214
+#: inc/customizer/options/header-cart-options.php:296
+#: inc/customizer/options/header-dropdown-options.php:130
+#: inc/customizer/options/header-mobile-cart-options.php:213
+#: inc/customizer/options/header-mobile-cart-options.php:295
+#: inc/customizer/options/header-mobile-nav-options.php:141
+#: inc/customizer/options/header-navigation-options.php:342
+#: inc/customizer/options/header-search-options.php:300
+#: inc/customizer/options/header-secondary-navigation-options.php:342
+#: inc/customizer/options/header-sticky-options.php:484
+#: inc/customizer/options/header-trigger-options.php:263
+#: inc/customizer/options/transparent-header-options.php:421
+msgid "Hover Background"
+msgstr "Fondo en Hover"
+
+#: inc/customizer/options/footer-navigation-options.php:350
+#: inc/customizer/options/header-dropdown-options.php:134
+#: inc/customizer/options/header-mobile-nav-options.php:145
+#: inc/customizer/options/header-navigation-options.php:346
+#: inc/customizer/options/header-secondary-navigation-options.php:346
+#: inc/customizer/options/header-sticky-options.php:488
+#: inc/customizer/options/transparent-header-options.php:425
+msgid "Active Background"
+msgstr "Fondo Activo"
+
+#: inc/customizer/options/footer-navigation-options.php:359
+#: inc/customizer/options/header-navigation-options.php:355
+#: inc/customizer/options/header-secondary-navigation-options.php:355
+msgid "Navigation Font"
+msgstr "Fuente de Navegación"
+
+#: inc/customizer/options/footer-social-options.php:65
+#: inc/customizer/options/header-mobile-social-options.php:53
+#: inc/customizer/options/header-social-options.php:53
+msgid "Social Items"
+msgstr "Items Sociales"
+
+#: inc/customizer/options/footer-social-options.php:77
+#: inc/customizer/options/header-mobile-social-options.php:65
+#: inc/customizer/options/header-social-options.php:65
+msgid "Show Icon Label?"
+msgstr "¿Mostrar Etiqueta de Icono?"
+
+#: inc/customizer/options/footer-social-options.php:87
+#: inc/customizer/options/header-mobile-social-options.php:75
+#: inc/customizer/options/header-social-options.php:75
+msgid "Item Spacing"
+msgstr "Espaciado del Item"
+
+#: inc/customizer/options/footer-social-options.php:230
+#: inc/customizer/options/header-mobile-social-options.php:146
+#: inc/customizer/options/header-social-options.php:146
+msgid "Social Style"
+msgstr "Estilo Social"
+
+#: inc/customizer/options/footer-social-options.php:242
+#: inc/customizer/options/general-scroll-to-top-options.php:312
+#: inc/customizer/options/header-button-options.php:135
+#: inc/customizer/options/header-mobile-button-options.php:55
+#: inc/customizer/options/header-mobile-social-options.php:158
+#: inc/customizer/options/header-social-options.php:158
+msgid "Filled"
+msgstr "Lleno"
+
+#: inc/customizer/options/footer-social-options.php:245
+#: inc/customizer/options/general-scroll-to-top-options.php:315
+#: inc/customizer/options/header-button-options.php:138
+#: inc/customizer/options/header-mobile-button-options.php:58
+#: inc/customizer/options/header-mobile-social-options.php:161
+#: inc/customizer/options/header-social-options.php:161
+msgid "Outline"
+msgstr "Contorno"
+
+#: inc/customizer/options/footer-social-options.php:254
+#: inc/customizer/options/general-scroll-to-top-options.php:95
+#: inc/customizer/options/header-cart-options.php:121
+#: inc/customizer/options/header-mobile-cart-options.php:120
+#: inc/customizer/options/header-mobile-social-options.php:170
+#: inc/customizer/options/header-search-options.php:189
+#: inc/customizer/options/header-social-options.php:170
+#: inc/customizer/options/header-trigger-options.php:152
+msgid "Icon Size"
+msgstr "Tamaño del Icono"
+
+#: inc/customizer/options/footer-social-options.php:322
+#: inc/customizer/options/general-button-options.php:51
+#: inc/customizer/options/general-scroll-to-top-options.php:366
+#: inc/customizer/options/header-button-options.php:269
+#: inc/customizer/options/header-mobile-button-options.php:265
+#: inc/customizer/options/header-mobile-social-options.php:238
+#: inc/customizer/options/header-social-options.php:238
+msgid "Background Colors"
+msgstr "Colores de Fondo"
+
+#: inc/customizer/options/footer-social-options.php:363
+#: inc/customizer/options/general-button-options.php:86
+#: inc/customizer/options/general-scroll-to-top-options.php:412
+#: inc/customizer/options/header-button-options.php:310
+#: inc/customizer/options/header-mobile-button-options.php:310
+#: inc/customizer/options/header-mobile-social-options.php:279
+#: inc/customizer/options/header-social-options.php:279
+msgid "Border Colors"
+msgstr "Colores del Borde"
+
+#: inc/customizer/options/footer-social-options.php:416
+#: inc/customizer/options/general-button-options.php:139
+#: inc/customizer/options/general-scroll-to-top-options.php:481
+#: inc/customizer/options/header-button-options.php:365
+#: inc/customizer/options/header-mobile-social-options.php:332
+#: inc/customizer/options/header-social-options.php:332
+msgid "Border Radius"
+msgstr "Radio del Borde"
+
+#: inc/customizer/options/footer-social-options.php:504
+#: inc/customizer/options/header-social-options.php:420
+#, fuzzy
+#| msgid "Social Links"
+msgid "Set Social Links"
+msgstr "Enlaces Sociales"
+
+#: inc/customizer/options/footer-top-options.php:487
+#: inc/customizer/options/footer-top-options.php:505
+#: inc/customizer/options/header-top-options.php:126
+#: inc/customizer/options/header-top-options.php:144
+msgid "Top Row Background"
+msgstr "Fondo de Fila Superior"
+
+#: inc/customizer/options/general-button-options.php:17
+#: inc/customizer/options/header-search-options.php:407
+msgid "Text Colors"
+msgstr "Colores del Texto"
+
+#: inc/customizer/options/general-button-options.php:201
+#: inc/customizer/options/header-button-options.php:211
+#: inc/customizer/options/header-logo-options.php:284
+msgid "Padding"
+msgstr "Relleno"
+
+#: inc/customizer/options/general-colors-options.php:18
+msgid "Backgrounds"
+msgstr "Fondos"
+
+#: inc/customizer/options/general-colors-options.php:24
+#: inc/customizer/options/general-colors-options.php:36
+#: inc/customizer/options/learndash-course-layout-options.php:666
+#: inc/customizer/options/learndash-essays-layout-options.php:674
+#: inc/customizer/options/learndash-groups-layout-options.php:666
+#: inc/customizer/options/lifter-course-archive-layout-options.php:559
+#: inc/customizer/options/lifter-course-layout-options.php:779
+#: inc/customizer/options/lifter-lesson-layout-options.php:665
+#: inc/customizer/options/lifter-member-archive-layout-options.php:565
+#: inc/customizer/options/page-layout-options.php:815
+#: inc/customizer/options/post-archive-layout-options.php:794
+#: inc/customizer/options/post-layout-options.php:973
+#: inc/customizer/options/product-archive-layout-options.php:634
+#: inc/customizer/options/product-layout-options.php:689
+#: inc/customizer/options/search-layout-options.php:706
+#: inc/customizer/options/tutor-course-layout-options.php:725
+msgid "Site Background"
+msgstr "Fondo del Sitio"
+
+#: inc/customizer/options/general-colors-options.php:42
+#: inc/customizer/options/general-colors-options.php:54
+#: inc/customizer/options/learndash-course-layout-options.php:685
+#: inc/customizer/options/learndash-essays-layout-options.php:693
+#: inc/customizer/options/learndash-groups-layout-options.php:685
+#: inc/customizer/options/lifter-course-archive-layout-options.php:577
+#: inc/customizer/options/lifter-course-layout-options.php:798
+#: inc/customizer/options/lifter-lesson-layout-options.php:683
+#: inc/customizer/options/lifter-member-archive-layout-options.php:583
+#: inc/customizer/options/page-layout-options.php:839
+#: inc/customizer/options/post-archive-layout-options.php:812
+#: inc/customizer/options/post-layout-options.php:991
+#: inc/customizer/options/product-archive-layout-options.php:652
+#: inc/customizer/options/product-layout-options.php:707
+#: inc/customizer/options/search-layout-options.php:724
+#: inc/customizer/options/tutor-course-layout-options.php:744
+msgid "Content Background"
+msgstr "Fondo del Contenido"
+
+#: inc/customizer/options/general-colors-options.php:60
+#: inc/customizer/options/general-colors-options.php:72
+msgid "Title Above Content Background"
+msgstr "Título sobre el Fondo del Contenido"
+
+#: inc/customizer/options/general-colors-options.php:78
+msgid "Title Above Content Overlay Color"
+msgstr "Color de Superposición del Título sobre el Contenido"
+
+#: inc/customizer/options/general-colors-options.php:92
+#: inc/customizer/options/learndash-course-layout-options.php:416
+#: inc/customizer/options/learndash-essays-layout-options.php:416
+#: inc/customizer/options/learndash-groups-layout-options.php:416
+#: inc/customizer/options/lifter-course-archive-layout-options.php:402
+#: inc/customizer/options/lifter-course-layout-options.php:416
+#: inc/customizer/options/lifter-lesson-layout-options.php:416
+#: inc/customizer/options/lifter-member-archive-layout-options.php:408
+#: inc/customizer/options/page-layout-options.php:517
+#: inc/customizer/options/post-archive-layout-options.php:402
+#: inc/customizer/options/post-layout-options.php:597
+#: inc/customizer/options/product-archive-layout-options.php:402
+#: inc/customizer/options/product-layout-options.php:423
+#: inc/customizer/options/search-layout-options.php:320
+#: inc/customizer/options/tutor-course-layout-options.php:390
+#: inc/customizer/options/woo-store-notice-options.php:123
+msgid "Overlay Color"
+msgstr "Color de Superposición"
+
+#: inc/customizer/options/general-colors-options.php:102
+msgid "Content Links"
+msgstr "Enlaces del Contenido"
+
+#: inc/customizer/options/general-colors-options.php:109
+msgid "Links Color"
+msgstr "Color de Enlaces"
+
+#: inc/customizer/options/general-layout-options.php:18
+msgid "Content Max Width"
+msgstr "Ancho Máximo del Contenido"
+
+#: inc/customizer/options/general-layout-options.php:53
+msgid "Content Top and Bottom Spacing"
+msgstr "Espaciado Superior e Inferior del Contenido"
+
+#: inc/customizer/options/general-layout-options.php:98
+msgid "Narrow Layout Content Max Width"
+msgstr "Diseño del Contenido Estrecho - Ancho Máximo"
+
+#: inc/customizer/options/general-layout-options.php:136
+#, fuzzy
+#| msgid "Single Post Boxed Spacing"
+msgid "Single Post Boxed"
+msgstr "Espaciado de Entrada Única en Caja"
+
+#: inc/customizer/options/general-layout-options.php:143
+msgid "Single Post Boxed Spacing"
+msgstr "Espaciado de Entrada Única en Caja"
+
+#: inc/customizer/options/general-layout-options.php:178
+#, fuzzy
+#| msgid "Single Post Boxed Spacing"
+msgid "Single Post Boxed Shadow"
+msgstr "Espaciado de Entrada Única en Caja"
+
+#: inc/customizer/options/general-layout-options.php:194
+#, fuzzy
+#| msgid "Single Post Boxed Spacing"
+msgid "Single Post Boxed Border Radius"
+msgstr "Espaciado de Entrada Única en Caja"
+
+#: inc/customizer/options/general-layout-options.php:213
+#, fuzzy
+#| msgid "Archive Grid Boxed Spacing"
+msgid "Archive Grid Boxed"
+msgstr "Espaciado en Caja de Archivo en Cuadricula"
+
+#: inc/customizer/options/general-layout-options.php:220
+msgid "Archive Grid Boxed Spacing"
+msgstr "Espaciado en Caja de Archivo en Cuadricula"
+
+#: inc/customizer/options/general-layout-options.php:255
+#, fuzzy
+#| msgid "Archive Grid Boxed Spacing"
+msgid "Archive Grid Boxed Shadow"
+msgstr "Espaciado en Caja de Archivo en Cuadricula"
+
+#: inc/customizer/options/general-layout-options.php:271
+#, fuzzy
+#| msgid "Archive Grid Boxed Spacing"
+msgid "Archive Grid Boxed Border Radius"
+msgstr "Espaciado en Caja de Archivo en Cuadricula"
+
+#: inc/customizer/options/general-performance-options.php:19
+msgid "Enable CSS Preload"
+msgstr "Habilitar Pre-carga de CSS"
+
+#: inc/customizer/options/general-scroll-to-top-options.php:53
+msgid "Enable Scroll To Top"
+msgstr "Habilitar Desplazar Hacia Arriba"
+
+#: inc/customizer/options/general-scroll-to-top-options.php:61
+msgid "Scroll Up Icon"
+msgstr "Icono del Desplazamiento Hacia Arriba"
+
+#: inc/customizer/options/general-scroll-to-top-options.php:130
+msgid "Align"
+msgstr "Alineación"
+
+#: inc/customizer/options/general-scroll-to-top-options.php:149
+#: inc/customizer/options/header-cart-options.php:376
+#: inc/customizer/options/header-mobile-cart-options.php:375
+#: inc/customizer/options/header-popup-options.php:105
+#: inc/customizer/options/lifter-dashboard-layout-options.php:32
+#: inc/customizer/options/my-account-layout-options.php:40
+msgid "Left"
+msgstr "Izquierda"
+
+#: inc/customizer/options/general-scroll-to-top-options.php:153
+#: inc/customizer/options/header-cart-options.php:381
+#: inc/customizer/options/header-mobile-cart-options.php:380
+#: inc/customizer/options/header-popup-options.php:110
+#: inc/customizer/options/lifter-dashboard-layout-options.php:42
+#: inc/customizer/options/my-account-layout-options.php:50
+msgid "Right"
+msgstr "Derecha"
+
+#: inc/customizer/options/general-scroll-to-top-options.php:163
+msgid "Side Offset"
+msgstr "Compensación Lateral"
+
+#: inc/customizer/options/general-scroll-to-top-options.php:214
+msgid "Bottom Offset"
+msgstr "Compensación Inferior"
+
+#: inc/customizer/options/general-scroll-to-top-options.php:259
+msgid "Visiblity"
+msgstr "Visibilidad"
+
+#: inc/customizer/options/general-scroll-to-top-options.php:279
+#: inc/customizer/options/header-search-options.php:82
+msgid "Tablet"
+msgstr "Tableta"
+
+#: inc/customizer/options/general-scroll-to-top-options.php:293
+msgid "Scroll Button Style"
+msgstr "Estilo del Botón de Desplazamiento"
+
+#: inc/customizer/options/general-scroll-to-top-options.php:507
+msgid "Scroll Button Padding"
+msgstr "Relleno del Botón de Desplazamiento"
+
+#: inc/customizer/options/general-sidebar-options.php:63
+msgid "Sidebar Width"
+msgstr "Ancho de la Barra Lateral"
+
+#: inc/customizer/options/general-sidebar-options.php:114
+msgid "Widget Spacing"
+msgstr "Espaciado de Widgets"
+
+#: inc/customizer/options/general-sidebar-options.php:249
+#: inc/customizer/options/general-sidebar-options.php:267
+msgid "Sidebar Background"
+msgstr "Fondo de la Barra Lateral"
+
+#: inc/customizer/options/general-sidebar-options.php:273
+msgid "Sidebar Divider Border"
+msgstr "Borde Divisor de la Barra Lateral"
+
+#: inc/customizer/options/general-sidebar-options.php:305
+msgid "Sidebar Padding"
+msgstr "Relleno de la Barra Lateral"
+
+#: inc/customizer/options/general-social-options.php:14
+msgid "Social Network Links"
+msgstr "Enlaces de Redes Sociales"
+
+#: inc/customizer/options/general-social-options.php:60
+msgid "Facebook Group"
+msgstr "Facebook Group"
+
+#: inc/customizer/options/general-social-options.php:102
+msgid "medium"
+msgstr "Medium"
+
+#: inc/customizer/options/general-social-options.php:114
+msgid "GitHub"
+msgstr "GitHub"
+
+#: inc/customizer/options/general-typography-options.php:17
+msgid "Base Font"
+msgstr "Fuente Base"
+
+#: inc/customizer/options/general-typography-options.php:35
+msgid "Headings"
+msgstr "Encabezados"
+
+#: inc/customizer/options/general-typography-options.php:41
+msgid "Heading Font Family"
+msgstr "Familia de fuentes del Encabezado"
+
+#: inc/customizer/options/general-typography-options.php:59
+msgid "H1 Font"
+msgstr "Fuente H1"
+
+#: inc/customizer/options/general-typography-options.php:77
+msgid "H2 Font"
+msgstr "Fuente H2"
+
+#: inc/customizer/options/general-typography-options.php:95
+msgid "H3 Font"
+msgstr "Fuente H3"
+
+#: inc/customizer/options/general-typography-options.php:113
+msgid "H4 Font"
+msgstr "Fuente H4"
+
+#: inc/customizer/options/general-typography-options.php:131
+msgid "H5 Font"
+msgstr "Fuente H5"
+
+#: inc/customizer/options/general-typography-options.php:149
+msgid "H6 Font"
+msgstr "Fuente H6"
+
+#: inc/customizer/options/general-typography-options.php:167
+msgid "Title Above Content"
+msgstr "Titulo Sobre el Contenido"
+
+#: inc/customizer/options/general-typography-options.php:173
+msgid "H1 Title"
+msgstr "Título H1"
+
+#: inc/customizer/options/general-typography-options.php:191
+#: inc/customizer/options/product-layout-options.php:78
+msgid "Breadcrumbs"
+msgstr "Migas de Pan"
+
+#: inc/customizer/options/header-bottom-options.php:144
+#: inc/customizer/options/header-main-options.php:127
+#: inc/customizer/options/header-main-options.php:145
+msgid "Main Row Background"
+msgstr "Fondo de Fila Principal"
+
+#: inc/customizer/options/header-builder-options.php:64
+#: inc/customizer/options/header-builder-options.php:165
+msgid "Logo"
+msgstr "Logo"
+
+#: inc/customizer/options/header-builder-options.php:88
+#: inc/customizer/options/header-builder-options.php:189
+msgid "HTML"
+msgstr "HTML"
+
+#: inc/customizer/options/header-builder-options.php:97
+#: inc/customizer/options/header-builder-options.php:101
+#: inc/customizer/options/header-builder-options.php:205
+#: inc/customizer/options/header-builder-options.php:207
+msgid "Top - Right"
+msgstr "Arriba - Derecha"
+
+#: inc/customizer/options/header-builder-options.php:97
+#: inc/customizer/options/header-builder-options.php:101
+#: inc/customizer/options/header-builder-options.php:205
+#: inc/customizer/options/header-builder-options.php:207
+msgid "Top - Left"
+msgstr "Arriba - Izquierda"
+
+#: inc/customizer/options/header-builder-options.php:98
+#: inc/customizer/options/header-builder-options.php:100
+msgid "Top - Right Center"
+msgstr "Arriba - Centro Derecho"
+
+#: inc/customizer/options/header-builder-options.php:98
+#: inc/customizer/options/header-builder-options.php:100
+msgid "Top - Left Center"
+msgstr "Arriba - Centro Izquierdo"
+
+#: inc/customizer/options/header-builder-options.php:99
+#: inc/customizer/options/header-builder-options.php:206
+msgid "Top - Center"
+msgstr "Arriba - Centro"
+
+#: inc/customizer/options/header-builder-options.php:104
+#: inc/customizer/options/header-builder-options.php:108
+#: inc/customizer/options/header-builder-options.php:210
+#: inc/customizer/options/header-builder-options.php:212
+msgid "Main - Right"
+msgstr "Central - Derecha"
+
+#: inc/customizer/options/header-builder-options.php:104
+#: inc/customizer/options/header-builder-options.php:108
+#: inc/customizer/options/header-builder-options.php:210
+#: inc/customizer/options/header-builder-options.php:212
+msgid "Main - Left"
+msgstr "Principal - Izquierda"
+
+#: inc/customizer/options/header-builder-options.php:105
+#: inc/customizer/options/header-builder-options.php:107
+msgid "Main - Right Center"
+msgstr "Central - Centro Derecho"
+
+#: inc/customizer/options/header-builder-options.php:105
+#: inc/customizer/options/header-builder-options.php:107
+msgid "Main - Left Center"
+msgstr "Central - Centro Izquierdo"
+
+#: inc/customizer/options/header-builder-options.php:106
+#: inc/customizer/options/header-builder-options.php:211
+msgid "Main - Center"
+msgstr "Principal - Centro"
+
+#: inc/customizer/options/header-builder-options.php:111
+#: inc/customizer/options/header-builder-options.php:115
+#: inc/customizer/options/header-builder-options.php:215
+#: inc/customizer/options/header-builder-options.php:217
+msgid "Bottom - Right"
+msgstr "Inferior - Derecha"
+
+#: inc/customizer/options/header-builder-options.php:111
+#: inc/customizer/options/header-builder-options.php:115
+#: inc/customizer/options/header-builder-options.php:215
+#: inc/customizer/options/header-builder-options.php:217
+msgid "Bottom - Left"
+msgstr "Inferior - Izquierda"
+
+#: inc/customizer/options/header-builder-options.php:112
+#: inc/customizer/options/header-builder-options.php:114
+msgid "Bottom - Right Center"
+msgstr "Inferior - Centro Derecho"
+
+#: inc/customizer/options/header-builder-options.php:112
+#: inc/customizer/options/header-builder-options.php:114
+msgid "Bottom - Left Center"
+msgstr "Inferior - Centro Izquierdo"
+
+#: inc/customizer/options/header-builder-options.php:113
+#: inc/customizer/options/header-builder-options.php:216
+msgid "Bottom - Center"
+msgstr "Inferior - Centro"
+
+#: inc/customizer/options/header-builder-options.php:177
+msgid "Search Toggle"
+msgstr "Alternar Búsqueda"
+
+#: inc/customizer/options/header-builder-options.php:193
+msgid "Trigger"
+msgstr "Disparador"
+
+#: inc/customizer/options/header-builder-options.php:202
+msgid "Popup Content"
+msgstr "Contenido en Popup"
+
+#: inc/customizer/options/header-builder-options.php:265
+#: inc/customizer/options/header-builder-options.php:283
+msgid "Header Background"
+msgstr "Fondo de Cabecera"
+
+#: inc/customizer/options/header-button-options.php:53
+#: inc/customizer/options/header-mobile-button-options.php:106
+msgid "Label"
+msgstr "Etiqueta"
+
+#: inc/customizer/options/header-button-options.php:67
+#: inc/customizer/options/header-mobile-button-options.php:126
+msgid "URL"
+msgstr "URL"
+
+#: inc/customizer/options/header-button-options.php:81
+#: inc/customizer/options/header-mobile-button-options.php:146
+msgid "Open in New Tab?"
+msgstr "¿Abrir en Nueva Pestaña?"
+
+#: inc/customizer/options/header-button-options.php:95
+#: inc/customizer/options/header-mobile-button-options.php:159
+msgid "Set link to nofollow?"
+msgstr ""
+
+#: inc/customizer/options/header-button-options.php:109
+#: inc/customizer/options/header-mobile-button-options.php:177
+msgid "Set link attribute Sponsored?"
+msgstr ""
+
+#: inc/customizer/options/header-button-options.php:116
+msgid "Set link to Download?"
+msgstr ""
+
+#: inc/customizer/options/header-button-options.php:123
+#: inc/customizer/options/header-mobile-button-options.php:37
+msgid "Button Style"
+msgstr "Estilo del Botón"
+
+#: inc/customizer/options/header-button-options.php:150
+#: inc/customizer/options/header-mobile-button-options.php:195
+#, fuzzy
+#| msgid "Visiblity"
+msgid "Button Visibility"
+msgstr "Visibilidad"
+
+#: inc/customizer/options/header-button-options.php:159
+#: inc/customizer/options/header-mobile-button-options.php:210
+msgid "Everyone"
+msgstr ""
+
+#: inc/customizer/options/header-button-options.php:162
+#: inc/customizer/options/header-mobile-button-options.php:213
+msgid "Logged Out Only"
+msgstr ""
+
+#: inc/customizer/options/header-button-options.php:165
+#: inc/customizer/options/header-mobile-button-options.php:216
+msgid "Logged In Only"
+msgstr ""
+
+#: inc/customizer/options/header-button-options.php:176
+#: inc/customizer/options/header-mobile-button-options.php:70
+msgid "Button Size"
+msgstr "Tamaño del Botón"
+
+#: inc/customizer/options/header-button-options.php:188
+msgid "Sm"
+msgstr "Sm"
+
+#: inc/customizer/options/header-button-options.php:191
+msgid "Md"
+msgstr "Md"
+
+#: inc/customizer/options/header-button-options.php:195
+msgid "Lg"
+msgstr "Lg"
+
+#: inc/customizer/options/header-button-options.php:199
+msgid "Custom"
+msgstr "Personalizado"
+
+#: inc/customizer/options/header-cart-options.php:54
+#: inc/customizer/options/header-mobile-cart-options.php:53
+msgid "Cart Label"
+msgstr "Etiqueta del Carrito"
+
+#: inc/customizer/options/header-cart-options.php:69
+#: inc/customizer/options/header-mobile-cart-options.php:68
+msgid "Cart Icon"
+msgstr "Icono del Carrito"
+
+#: inc/customizer/options/header-cart-options.php:92
+#: inc/customizer/options/header-mobile-cart-options.php:91
+msgid "Cart Click Action"
+msgstr "Acción de Click del Carrito"
+
+#: inc/customizer/options/header-cart-options.php:97
+#: inc/customizer/options/header-mobile-cart-options.php:96
+msgid "Link"
+msgstr "Enlace"
+
+#: inc/customizer/options/header-cart-options.php:100
+#: inc/customizer/options/header-mobile-cart-options.php:99
+msgid "Popout Cart"
+msgstr "Carrito en Popout"
+
+#: inc/customizer/options/header-cart-options.php:116
+#: inc/customizer/options/header-mobile-cart-options.php:115
+msgid "Show Item Total Indicator"
+msgstr "Mostrar Item Indicador Total"
+
+#: inc/customizer/options/header-cart-options.php:155
+#: inc/customizer/options/header-mobile-cart-options.php:154
+#: inc/customizer/options/header-sticky-options.php:743
+#: inc/customizer/options/transparent-header-options.php:725
+msgid "Cart Colors"
+msgstr "Colores del Carrito"
+
+#: inc/customizer/options/header-cart-options.php:189
+#: inc/customizer/options/header-mobile-cart-options.php:188
+msgid "Cart Background"
+msgstr "Fondo del Carrito"
+
+#: inc/customizer/options/header-cart-options.php:223
+#: inc/customizer/options/header-mobile-cart-options.php:222
+#: inc/customizer/options/header-sticky-options.php:799
+#: inc/customizer/options/transparent-header-options.php:781
+msgid "Cart Total Colors"
+msgstr "Colores del Total del Carrito"
+
+#: inc/customizer/options/header-cart-options.php:264
+#: inc/customizer/options/header-mobile-cart-options.php:263
+msgid "Cart Total Background"
+msgstr "Fondo del Total del Carrito"
+
+#: inc/customizer/options/header-cart-options.php:305
+#: inc/customizer/options/header-mobile-cart-options.php:304
+msgid "Cart Label Font"
+msgstr "Fuente de la Etiqueta del Carrito"
+
+#: inc/customizer/options/header-cart-options.php:337
+#: inc/customizer/options/header-mobile-cart-options.php:336
+msgid "Cart Padding"
+msgstr "Relleno del Carrito"
+
+#: inc/customizer/options/header-cart-options.php:356
+#: inc/customizer/options/header-mobile-cart-options.php:355
+#: inc/customizer/options/header-popup-options.php:83
+msgid "Slide-Out Side"
+msgstr "Lado Deslizable"
+
+#: inc/customizer/options/header-cart-options.php:375
+#: inc/customizer/options/header-mobile-cart-options.php:374
+#: inc/customizer/options/header-popup-options.php:104
+msgid "Reveal from Left"
+msgstr "Revelar desde la Izquierda"
+
+#: inc/customizer/options/header-cart-options.php:380
+#: inc/customizer/options/header-mobile-cart-options.php:379
+#: inc/customizer/options/header-popup-options.php:109
+msgid "Reveal from Right"
+msgstr "Revelar desde la Derecha"
+
+#: inc/customizer/options/header-dropdown-options.php:52
+msgid "Dropdown Colors"
+msgstr "Colores del Desplegable"
+
+#: inc/customizer/options/header-dropdown-options.php:98
+msgid "Dropdown Background"
+msgstr "Fondo del Desplegable"
+
+#: inc/customizer/options/header-dropdown-options.php:144
+#: inc/customizer/options/header-mobile-nav-options.php:155
+msgid "Item Divider"
+msgstr "Divisor de Items"
+
+#: inc/customizer/options/header-dropdown-options.php:164
+msgid "Dropdown Font"
+msgstr "Fuente del Desplegable"
+
+#: inc/customizer/options/header-dropdown-options.php:188
+#, fuzzy
+#| msgid "Dropdown Font"
+msgid "Dropdown Shadow"
+msgstr "Fuente del Desplegable"
+
+#: inc/customizer/options/header-dropdown-options.php:205
+msgid "Dropdown Reveal"
+msgstr "Revelar Desplegable"
+
+#: inc/customizer/options/header-dropdown-options.php:217
+msgid "None"
+msgstr "Ninguno"
+
+#: inc/customizer/options/header-dropdown-options.php:220
+msgid "Fade"
+msgstr "Desvanecer"
+
+#: inc/customizer/options/header-dropdown-options.php:223
+msgid "Fade Up"
+msgstr "Aparecer Gradualmente"
+
+#: inc/customizer/options/header-dropdown-options.php:226
+msgid "Fade Down"
+msgstr "Apagar Gradualmente"
+
+#: inc/customizer/options/header-dropdown-options.php:236
+msgid "Dropdown Width"
+msgstr "Ancho del Desplegable"
+
+#: inc/customizer/options/header-dropdown-options.php:274
+msgid "Dropdown Items Vertical Spacing"
+msgstr "Espaciado Vertical de los Items del Desplegable"
+
+#: inc/customizer/options/header-logo-options.php:36
+#: inc/customizer/options/header-sticky-options.php:180
+#: inc/customizer/options/transparent-header-options.php:182
+msgid "Logo Max Width"
+msgstr "Ancho Máximo del Logo"
+
+#: inc/customizer/options/header-logo-options.php:37
+#: inc/customizer/options/header-sticky-options.php:181
+#: inc/customizer/options/transparent-header-options.php:183
+msgid "Define the maxium width for the logo"
+msgstr "Define el ancho máximo para el logo"
+
+#: inc/customizer/options/header-logo-options.php:90
+#: inc/customizer/options/header-sticky-options.php:337
+#: inc/customizer/options/transparent-header-options.php:249
+msgid "Different Logo for Mobile?"
+msgstr "¿Logo diferente para Móvil?"
+
+#: inc/customizer/options/header-logo-options.php:110
+#: inc/customizer/options/header-sticky-options.php:360
+#: inc/customizer/options/transparent-header-options.php:287
+msgid "Mobile Logo"
+msgstr "Logo en Móvil"
+
+#: inc/customizer/options/header-logo-options.php:133
+msgid "Logo Layout"
+msgstr "Diseño del Logo"
+
+#: inc/customizer/options/header-logo-options.php:149
+#, fuzzy
+#| msgid "Site Tite Font"
+msgid "Site Title Font"
+msgstr "Fuente del Titulo del Sitio"
+
+#: inc/customizer/options/header-logo-options.php:188
+#, fuzzy
+#| msgid "Site Title Color"
+msgid "Site Title Hover and Active Colors"
+msgstr "Color del Título del Sitio"
+
+#: inc/customizer/options/header-logo-options.php:243
+msgid "Site Tagline Font"
+msgstr "Fuente del Lema del Sitio"
+
+#: inc/customizer/options/header-logo-options.php:325
+#, fuzzy
+#| msgid "Search Icon"
+msgid "Site Icon"
+msgstr "Icono de Búsqueda"
+
+#: inc/customizer/options/header-logo-options.php:335
+#, fuzzy
+#| msgid "Site Title Color"
+msgid "Site Title and Logo Control"
+msgstr "Color del Título del Sitio"
+
+#: inc/customizer/options/header-mobile-nav-options.php:103
+#: inc/customizer/options/header-sticky-options.php:554
+#: inc/customizer/options/header-sticky-options.php:632
+#: inc/customizer/options/header-sticky-options.php:786
+#: inc/customizer/options/header-sticky-options.php:842
+#: inc/customizer/options/transparent-header-options.php:498
+#: inc/customizer/options/transparent-header-options.php:576
+#: inc/customizer/options/transparent-header-options.php:768
+#: inc/customizer/options/transparent-header-options.php:824
+msgid "Background"
+msgstr "Fondo"
+
+#: inc/customizer/options/header-mobile-nav-options.php:219
+msgid "Items Vertical Spacing"
+msgstr "Espaciado Vertical de los Items"
+
+#: inc/customizer/options/header-mobile-social-options.php:300
+#, fuzzy
+#| msgid "Color"
+msgid " Color"
+msgstr "Color"
+
+#: inc/customizer/options/header-navigation-options.php:125
+#: inc/customizer/options/header-secondary-navigation-options.php:125
+msgid "Fill and Center Menu Items?"
+msgstr "¿Completar y Centrar Items del Menú?"
+
+#: inc/customizer/options/header-navigation-options.php:151
+#: inc/customizer/options/header-secondary-navigation-options.php:151
+msgid "Navigation Style"
+msgstr "Estilo de Navegación"
+
+#: inc/customizer/options/header-navigation-options.php:174
+#: inc/customizer/options/header-secondary-navigation-options.php:174
+msgid "Menu items are full height"
+msgstr "Los items del menú están a altura completa"
+
+#: inc/customizer/options/header-navigation-options.php:175
+#: inc/customizer/options/header-secondary-navigation-options.php:175
+msgid "Full Height"
+msgstr "Altura Completa"
+
+#: inc/customizer/options/header-navigation-options.php:179
+#: inc/customizer/options/header-secondary-navigation-options.php:179
+msgid "Underline Hover/Active"
+msgstr "Subrayado en Hover/Activo"
+
+#: inc/customizer/options/header-navigation-options.php:184
+#: inc/customizer/options/header-secondary-navigation-options.php:184
+msgid "Full Height Underline Hover/Active"
+msgstr "Subrayada de altura completa en Hover/Activo"
+
+#: inc/customizer/options/header-navigation-options.php:185
+#: inc/customizer/options/header-secondary-navigation-options.php:185
+msgid "Full Height Underline"
+msgstr "Altura Completa Subrayado"
+
+#: inc/customizer/options/header-navigation-options.php:385
+#: inc/customizer/options/header-navigation-options.php:393
+#: inc/customizer/options/header-secondary-navigation-options.php:385
+#: inc/customizer/options/header-secondary-navigation-options.php:393
+msgid "Dropdown Options"
+msgstr "Opciones Desplegables"
+
+#: inc/customizer/options/header-popup-options.php:65
+msgid "Reveal as Fullwidth"
+msgstr "Revelar como Ancho Completo"
+
+#: inc/customizer/options/header-popup-options.php:70
+msgid "Reveal as Side Panel"
+msgstr "Revelar como Panel Lateral"
+
+#: inc/customizer/options/header-popup-options.php:71
+msgid "Side Panel"
+msgstr "Panel Lateral"
+
+#: inc/customizer/options/header-popup-options.php:120
+#: inc/customizer/options/header-popup-options.php:132
+msgid "Popup Background"
+msgstr "Fondo en Popup"
+
+#: inc/customizer/options/header-popup-options.php:138
+msgid "Close Toggle Colors"
+msgstr "Colores del Alternador de Cierre"
+
+#: inc/customizer/options/header-search-options.php:37
+msgid "Search Label"
+msgstr "Etiqueta de Búsqueda"
+
+#: inc/customizer/options/header-search-options.php:58
+msgid "Search Label Visiblity"
+msgstr "Visibilidad de la Etiqueta de Búsqueda"
+
+#: inc/customizer/options/header-search-options.php:97
+msgid "Search Icon"
+msgstr "Icono de Búsqueda"
+
+#: inc/customizer/options/header-search-options.php:127
+msgid "Search Style"
+msgstr "Estilo de Búsqueda"
+
+#: inc/customizer/options/header-search-options.php:145
+#: inc/customizer/options/header-trigger-options.php:108
+#: inc/meta/class-theme-meta.php:195 inc/meta/class-theme-meta.php:219
+#: inc/meta/class-theme-meta.php:246 inc/meta/class-theme-meta.php:270
+#: inc/meta/class-theme-meta.php:313 inc/meta/class-theme-meta.php:337
+#: inc/meta/class-theme-meta.php:361 inc/meta/class-theme-meta.php:388
+#: inc/meta/class-theme-meta.php:412 inc/meta/class-theme-meta.php:637
+msgid "Default"
+msgstr "Defecto"
+
+#: inc/customizer/options/header-search-options.php:148
+#: inc/customizer/options/header-trigger-options.php:111
+msgid "Bordered"
+msgstr "Bordeado"
+
+#: inc/customizer/options/header-search-options.php:157
+msgid "Search Border"
+msgstr "Borde de Búsqueda"
+
+#: inc/customizer/options/header-search-options.php:229
+msgid "Search Colors"
+msgstr "Colores de Búsqueda"
+
+#: inc/customizer/options/header-search-options.php:269
+msgid "Search Background"
+msgstr "Fondo de Búsqueda"
+
+#: inc/customizer/options/header-search-options.php:309
+msgid "Label Font"
+msgstr "Fuente de Etiqueta"
+
+#: inc/customizer/options/header-search-options.php:345
+msgid "Search Padding"
+msgstr "Relleno de Búsqueda"
+
+#: inc/customizer/options/header-search-options.php:394
+msgid "Modal Options"
+msgstr "Opciones Modales"
+
+#: inc/customizer/options/header-search-options.php:438
+msgid "Focus/Hover Color"
+msgstr "Color en Enfoque/Hover"
+
+#: inc/customizer/options/header-search-options.php:448
+#: inc/customizer/options/header-search-options.php:466
+msgid "Modal Background"
+msgstr "Fondo Modal"
+
+#: inc/customizer/options/header-search-options.php:479
+msgid "Search only Products?"
+msgstr "¿Buscar solo Productos?"
+
+#: inc/customizer/options/header-sticky-options.php:54
+msgid "Enable Sticky Header?"
+msgstr "¿Activar Cabecera Sticky?"
+
+#: inc/customizer/options/header-sticky-options.php:58
+#: inc/customizer/options/header-sticky-options.php:258
+msgid "No"
+msgstr "No"
+
+#: inc/customizer/options/header-sticky-options.php:61
+#: inc/customizer/options/header-sticky-options.php:261
+msgid "Yes - Only Main Row"
+msgstr "Sí, Solo la Fila Principal"
+
+#: inc/customizer/options/header-sticky-options.php:64
+#: inc/customizer/options/header-sticky-options.php:264
+msgid "Yes - Top Row & Main Row"
+msgstr "Sí, Fila Superior y Fila Principal"
+
+#: inc/customizer/options/header-sticky-options.php:67
+#: inc/customizer/options/header-sticky-options.php:267
+msgid "Yes - Whole Header"
+msgstr "Sí - En Toda la Cabecera"
+
+#: inc/customizer/options/header-sticky-options.php:70
+#: inc/customizer/options/header-sticky-options.php:270
+msgid "Yes - Only Top Row"
+msgstr "Sí, Solo la Fila Superior"
+
+#: inc/customizer/options/header-sticky-options.php:73
+#: inc/customizer/options/header-sticky-options.php:273
+msgid "Yes - Only Bottom Row"
+msgstr "Sí, Solo la Fila Inferior"
+
+#: inc/customizer/options/header-sticky-options.php:82
+#: inc/customizer/options/header-sticky-options.php:283
+msgid "Enabled Main Row Shrinking"
+msgstr "Habilitar Encogimiento de la Fila Principal"
+
+#: inc/customizer/options/header-sticky-options.php:95
+#: inc/customizer/options/header-sticky-options.php:297
+msgid "Main Row Shrink Height"
+msgstr "Altura de Encogimiento de la Fila Principal"
+
+#: inc/customizer/options/header-sticky-options.php:134
+msgid "Different Logo for Stuck Header?"
+msgstr "¿Logo Diferente para la Cabecera Sticky?"
+
+#: inc/customizer/options/header-sticky-options.php:156
+msgid "Stuck Header Logo"
+msgstr "Logotipo de la Cabecera Sticky"
+
+#: inc/customizer/options/header-sticky-options.php:245
+msgid "Mobile Sticky"
+msgstr "Sticky en Móvil"
+
+#: inc/customizer/options/header-sticky-options.php:254
+msgid "Enable Sticky for Mobile?"
+msgstr "¿Habilitar Sticky para Móvil?"
+
+#: inc/customizer/options/header-sticky-options.php:384
+#: inc/customizer/options/transparent-header-options.php:321
+msgid "Site Title Color"
+msgstr "Color del Título del Sitio"
+
+#: inc/customizer/options/header-sticky-options.php:452
+#: inc/customizer/options/transparent-header-options.php:389
+msgid "Navigation Items Background"
+msgstr "Fondo de Items de Navegación"
+
+#: inc/customizer/options/header-sticky-options.php:497
+#: inc/customizer/options/transparent-header-options.php:434
+msgid "Button Colors"
+msgstr "Colores del Botón"
+
+#: inc/customizer/options/header-sticky-options.php:558
+#: inc/customizer/options/header-sticky-options.php:636
+#: inc/customizer/options/header-sticky-options.php:790
+#: inc/customizer/options/header-sticky-options.php:846
+#: inc/customizer/options/transparent-header-options.php:502
+#: inc/customizer/options/transparent-header-options.php:580
+#: inc/customizer/options/transparent-header-options.php:772
+#: inc/customizer/options/transparent-header-options.php:828
+msgid "Background Hover"
+msgstr "Desplazamiento del Fondo"
+
+#: inc/customizer/options/header-sticky-options.php:566
+#: inc/customizer/options/header-sticky-options.php:644
+#: inc/customizer/options/transparent-header-options.php:510
+#: inc/customizer/options/transparent-header-options.php:588
+msgid "Border Hover"
+msgstr "Borde en Hover"
+
+#: inc/customizer/options/header-sticky-options.php:575
+#: inc/customizer/options/transparent-header-options.php:519
+msgid "Social Colors"
+msgstr "Colores Sociales"
+
+#: inc/customizer/options/header-sticky-options.php:653
+#: inc/customizer/options/transparent-header-options.php:597
+msgid "HTML Colors"
+msgstr "Colores HTML"
+
+#: inc/customizer/options/header-sticky-options.php:692
+#: inc/customizer/options/transparent-header-options.php:636
+msgid "Link Color"
+msgstr "Color de Enlace"
+
+#: inc/customizer/options/header-sticky-options.php:696
+#: inc/customizer/options/transparent-header-options.php:640
+msgid "Link Hover"
+msgstr "Enlace en Hover"
+
+#: inc/customizer/options/header-sticky-options.php:705
+#: inc/customizer/options/header-sticky-options.php:717
+msgid "Sticky Header Background"
+msgstr "Fondo de Cabecera Sticky"
+
+#: inc/customizer/options/header-sticky-options.php:723
+msgid "Sticky Bottom Border"
+msgstr "Borde Inferior Sticky"
+
+#: inc/customizer/options/header-trigger-options.php:37
+msgid "Menu Label"
+msgstr "Etiqueta del Menú"
+
+#: inc/customizer/options/header-trigger-options.php:58
+msgid "Trigger Icon"
+msgstr "Icono del Disparador"
+
+#: inc/customizer/options/header-trigger-options.php:90
+msgid "Trigger Style"
+msgstr "Estilo del Disparador"
+
+#: inc/customizer/options/header-trigger-options.php:120
+msgid "Trigger Border"
+msgstr "Borde del Disparador"
+
+#: inc/customizer/options/header-trigger-options.php:192
+msgid "Trigger Colors"
+msgstr "Colores del Disparador"
+
+#: inc/customizer/options/header-trigger-options.php:272
+msgid "Trigger Font"
+msgstr "Fuente del Disparador"
+
+#: inc/customizer/options/header-trigger-options.php:308
+msgid "Trigger Padding"
+msgstr "Relleno del Disparador"
+
+#: inc/customizer/options/header-trigger-options.php:332
+#: inc/customizer/options/header-trigger-options.php:340
+msgid "Drawer Container Options"
+msgstr "Opciones del Contenedores de Cajones"
+
+#: inc/customizer/options/learndash-course-layout-options.php:52
+#: inc/customizer/options/learndash-course-layout-options.php:59
+#: inc/customizer/options/lifter-course-layout-options.php:52
+#: inc/customizer/options/lifter-course-layout-options.php:59
+#: inc/customizer/options/tutor-course-layout-options.php:52
+#: inc/customizer/options/tutor-course-layout-options.php:59
+msgid "Course Title"
+msgstr "Título del Curso"
+
+#: inc/customizer/options/learndash-course-layout-options.php:67
+#: inc/customizer/options/lifter-course-layout-options.php:67
+msgid "Show Course Title?"
+msgstr "¿Mostrar Título del Curso?"
+
+#: inc/customizer/options/learndash-course-layout-options.php:73
+#: inc/customizer/options/lifter-course-layout-options.php:73
+#: inc/customizer/options/tutor-course-layout-options.php:65
+msgid "Course Title Layout"
+msgstr "Diseño del Título del Curso"
+
+#: inc/customizer/options/learndash-course-layout-options.php:104
+#: inc/customizer/options/learndash-essays-layout-options.php:104
+#: inc/customizer/options/learndash-groups-layout-options.php:104
+#: inc/customizer/options/lifter-course-layout-options.php:104
+#: inc/customizer/options/lifter-lesson-layout-options.php:104
+#: inc/customizer/options/lifter-member-layout-options.php:63
+#: inc/customizer/options/lifter-quiz-layout-options.php:63
+#: inc/customizer/options/page-layout-options.php:91
+#: inc/customizer/options/product-layout-options.php:96
+#: inc/customizer/options/tutor-course-layout-options.php:89
+msgid "Title Container Width"
+msgstr "Ancho del Contenedor del Título "
+
+#: inc/customizer/options/learndash-course-layout-options.php:149
+#: inc/customizer/options/lifter-course-archive-layout-options.php:149
+#: inc/customizer/options/lifter-course-layout-options.php:149
+msgid "Course Title Align"
+msgstr "Alineación del Título del Curso"
+
+#: inc/customizer/options/learndash-course-layout-options.php:193
+#: inc/customizer/options/learndash-essays-layout-options.php:193
+#: inc/customizer/options/learndash-groups-layout-options.php:193
+#: inc/customizer/options/lifter-course-layout-options.php:193
+#: inc/customizer/options/lifter-lesson-layout-options.php:193
+#: inc/customizer/options/page-layout-options.php:188
+#: inc/customizer/options/tutor-course-layout-options.php:173
+msgid "Title Container Min Height"
+msgstr "Altura Minima del Contenedor del Título"
+
+#: inc/customizer/options/learndash-course-layout-options.php:243
+#: inc/customizer/options/learndash-essays-layout-options.php:243
+#: inc/customizer/options/learndash-groups-layout-options.php:243
+#: inc/customizer/options/lifter-course-archive-layout-options.php:243
+#: inc/customizer/options/lifter-course-layout-options.php:243
+#: inc/customizer/options/lifter-lesson-layout-options.php:243
+#: inc/customizer/options/lifter-member-archive-layout-options.php:243
+#: inc/customizer/options/page-layout-options.php:242
+#: inc/customizer/options/post-archive-layout-options.php:243
+#: inc/customizer/options/post-layout-options.php:243
+#: inc/customizer/options/product-archive-layout-options.php:243
+msgid "Title Elements"
+msgstr "Elementos del Título"
+
+#: inc/customizer/options/learndash-course-layout-options.php:264
+#: inc/customizer/options/lifter-course-layout-options.php:264
+#: inc/customizer/options/tutor-course-layout-options.php:260
+msgid "Course Title Font"
+msgstr "Fuente del Título del Curso"
+
+#: inc/customizer/options/learndash-course-layout-options.php:289
+#: inc/customizer/options/learndash-essays-layout-options.php:289
+#: inc/customizer/options/learndash-groups-layout-options.php:289
+#: inc/customizer/options/lifter-course-archive-layout-options.php:312
+#: inc/customizer/options/lifter-course-layout-options.php:289
+#: inc/customizer/options/lifter-lesson-layout-options.php:289
+#: inc/customizer/options/lifter-member-archive-layout-options.php:318
+#: inc/customizer/options/page-layout-options.php:302
+#: inc/customizer/options/post-archive-layout-options.php:312
+#: inc/customizer/options/post-layout-options.php:366
+#: inc/customizer/options/product-archive-layout-options.php:312
+#: inc/customizer/options/product-layout-options.php:297
+msgid "Breadcrumb Colors"
+msgstr "Colores de las Migas de Pan"
+
+#: inc/customizer/options/learndash-course-layout-options.php:314
+#: inc/customizer/options/learndash-essays-layout-options.php:314
+#: inc/customizer/options/learndash-groups-layout-options.php:314
+#: inc/customizer/options/lifter-course-archive-layout-options.php:303
+#: inc/customizer/options/lifter-course-archive-layout-options.php:337
+#: inc/customizer/options/lifter-course-layout-options.php:314
+#: inc/customizer/options/lifter-lesson-layout-options.php:314
+#: inc/customizer/options/lifter-member-archive-layout-options.php:309
+#: inc/customizer/options/lifter-member-archive-layout-options.php:343
+#: inc/customizer/options/page-layout-options.php:333
+#: inc/customizer/options/page-layout-options.php:397
+#: inc/customizer/options/post-archive-layout-options.php:303
+#: inc/customizer/options/post-archive-layout-options.php:337
+#: inc/customizer/options/post-archive-layout-options.php:715
+#: inc/customizer/options/post-archive-layout-options.php:767
+#: inc/customizer/options/post-layout-options.php:339
+#: inc/customizer/options/post-layout-options.php:391
+#: inc/customizer/options/post-layout-options.php:443
+#: inc/customizer/options/post-layout-options.php:495
+#: inc/customizer/options/product-archive-layout-options.php:303
+#: inc/customizer/options/product-archive-layout-options.php:337
+#: inc/customizer/options/product-layout-options.php:329
+#: inc/customizer/options/search-layout-options.php:627
+#: inc/customizer/options/search-layout-options.php:679
+msgid "Link Hover Color"
+msgstr "Color del Enlace en Hover"
+
+#: inc/customizer/options/learndash-course-layout-options.php:323
+#: inc/customizer/options/learndash-essays-layout-options.php:323
+#: inc/customizer/options/learndash-groups-layout-options.php:323
+#: inc/customizer/options/lifter-course-layout-options.php:323
+#: inc/customizer/options/lifter-lesson-layout-options.php:323
+#: inc/customizer/options/page-layout-options.php:342
+#: inc/customizer/options/post-layout-options.php:400
+#: inc/customizer/options/product-layout-options.php:338
+msgid "Breadcrumb Font"
+msgstr "Fuente de las Migas de Pan"
+
+#: inc/customizer/options/learndash-course-layout-options.php:341
+#: inc/customizer/options/learndash-essays-layout-options.php:341
+#: inc/customizer/options/learndash-groups-layout-options.php:341
+#: inc/customizer/options/lifter-lesson-layout-options.php:341
+#: inc/customizer/options/product-layout-options.php:363
+msgid "Product Above Area Background"
+msgstr "Fondo del Producto Sobre el Área"
+
+#: inc/customizer/options/learndash-course-layout-options.php:365
+#: inc/customizer/options/lifter-course-layout-options.php:365
+#: inc/customizer/options/tutor-course-layout-options.php:349
+msgid "Course Title Background"
+msgstr "Fondo del Título del Curso"
+
+#: inc/customizer/options/learndash-course-layout-options.php:372
+#: inc/customizer/options/learndash-essays-layout-options.php:372
+#: inc/customizer/options/learndash-groups-layout-options.php:372
+#: inc/customizer/options/lifter-course-layout-options.php:372
+#: inc/customizer/options/lifter-lesson-layout-options.php:372
+#: inc/customizer/options/page-layout-options.php:465
+#: inc/customizer/options/post-layout-options.php:553
+#: inc/customizer/options/product-layout-options.php:389
+#: inc/customizer/options/tutor-course-layout-options.php:356
+msgid "Use Featured Image for Background?"
+msgstr "¿Usar la Imagen Destacada para el Fondo?"
+
+#: inc/customizer/options/learndash-course-layout-options.php:390
+#: inc/customizer/options/learndash-essays-layout-options.php:390
+#: inc/customizer/options/learndash-groups-layout-options.php:390
+#: inc/customizer/options/lifter-course-archive-layout-options.php:376
+#: inc/customizer/options/lifter-course-layout-options.php:390
+#: inc/customizer/options/lifter-lesson-layout-options.php:390
+#: inc/customizer/options/lifter-member-archive-layout-options.php:382
+#: inc/customizer/options/page-layout-options.php:487
+#: inc/customizer/options/post-archive-layout-options.php:376
+#: inc/customizer/options/post-layout-options.php:571
+#: inc/customizer/options/product-archive-layout-options.php:376
+#: inc/customizer/options/product-layout-options.php:402
+#: inc/customizer/options/search-layout-options.php:294
+#: inc/customizer/options/tutor-course-layout-options.php:369
+msgid "Background Overlay Color"
+msgstr "Color del Fondo de la Superposición"
+
+#: inc/customizer/options/learndash-course-layout-options.php:516
+#: inc/customizer/options/lifter-course-layout-options.php:516
+msgid "Course Default Sidebar"
+msgstr "Barra Lateral Por Defecto del Curso"
+
+#: inc/customizer/options/learndash-course-layout-options.php:646
+#: inc/customizer/options/learndash-groups-layout-options.php:646
+#: inc/customizer/options/lifter-course-layout-options.php:646
+#: inc/customizer/options/lifter-course-layout-options.php:759
+#: inc/customizer/options/lifter-lesson-layout-options.php:646
+#: inc/customizer/options/page-layout-options.php:782
+#: inc/customizer/options/post-layout-options.php:858
+#, fuzzy
+#| msgid "2:3"
+msgid "4:3"
+msgstr "2:3"
+
+#: inc/customizer/options/learndash-course-layout-options.php:649
+#: inc/customizer/options/learndash-essays-layout-options.php:649
+#: inc/customizer/options/learndash-groups-layout-options.php:649
+#: inc/customizer/options/lifter-course-layout-options.php:649
+#: inc/customizer/options/lifter-course-layout-options.php:762
+#: inc/customizer/options/lifter-lesson-layout-options.php:649
+#: inc/customizer/options/page-layout-options.php:785
+#: inc/customizer/options/post-layout-options.php:861
+#, fuzzy
+#| msgid "3:4"
+msgid "3:2"
+msgstr "3:4"
+
+#: inc/customizer/options/learndash-course-layout-options.php:652
+#: inc/customizer/options/learndash-essays-layout-options.php:652
+#: inc/customizer/options/learndash-groups-layout-options.php:652
+#: inc/customizer/options/lifter-course-layout-options.php:652
+#: inc/customizer/options/lifter-course-layout-options.php:765
+#: inc/customizer/options/lifter-lesson-layout-options.php:652
+#: inc/customizer/options/page-layout-options.php:788
+#: inc/customizer/options/post-layout-options.php:864
+msgid "16:9"
+msgstr ""
+
+#: inc/customizer/options/learndash-course-layout-options.php:678
+#: inc/customizer/options/lifter-course-layout-options.php:791
+#: inc/customizer/options/tutor-course-layout-options.php:737
+msgid "Course Background"
+msgstr "Fondo del Curso"
+
+#: inc/customizer/options/learndash-course-layout-options.php:697
+#: inc/customizer/options/lifter-course-layout-options.php:810
+#: inc/customizer/options/tutor-course-layout-options.php:756
+msgid "Course Content Background"
+msgstr "Fondo del Contenido del Curso"
+
+#: inc/customizer/options/learndash-essays-layout-options.php:52
+#: inc/customizer/options/learndash-essays-layout-options.php:59
+#, fuzzy
+#| msgid "Display Title"
+msgid "Essay Title"
+msgstr "Mostrar Título"
+
+#: inc/customizer/options/learndash-essays-layout-options.php:67
+#, fuzzy
+#| msgid "Show Lesson Title?"
+msgid "Show Essay Title?"
+msgstr "¿Mostrar el Título de la Lección?"
+
+#: inc/customizer/options/learndash-essays-layout-options.php:73
+#, fuzzy
+#| msgid "Lesson Title Layout"
+msgid "Essay Title Layout"
+msgstr "Diseño del Título de la Lección"
+
+#: inc/customizer/options/learndash-essays-layout-options.php:149
+#, fuzzy
+#| msgid "Lesson Title Align"
+msgid "Essay Title Align"
+msgstr "Alineación del Título de la Lección"
+
+#: inc/customizer/options/learndash-essays-layout-options.php:264
+#, fuzzy
+#| msgid "Lesson Title Font"
+msgid "Essay Title Font"
+msgstr "Fuente del Título de la Lección"
+
+#: inc/customizer/options/learndash-essays-layout-options.php:365
+#, fuzzy
+#| msgid "Lesson Title Background"
+msgid "Essay Title Background"
+msgstr "Fondo del Título de la Lección"
+
+#: inc/customizer/options/learndash-essays-layout-options.php:516
+#, fuzzy
+#| msgid "Lesson Default Sidebar"
+msgid "Essay Default Sidebar"
+msgstr "Barra Lateral Por Defecto de la Lección"
+
+#: inc/customizer/options/learndash-essays-layout-options.php:646
+#, fuzzy
+#| msgid "1:2"
+msgid "4:2"
+msgstr "1:2"
+
+#: inc/customizer/options/learndash-essays-layout-options.php:686
+#, fuzzy
+#| msgid "Lesson Background"
+msgid "Essay Background"
+msgstr "Fondo de la Lección"
+
+#: inc/customizer/options/learndash-essays-layout-options.php:705
+#, fuzzy
+#| msgid "Lesson Content Background"
+msgid "Essay Content Background"
+msgstr "Fondo del Contenido de la Lección"
+
+#: inc/customizer/options/learndash-groups-layout-options.php:52
+#: inc/customizer/options/learndash-groups-layout-options.php:59
+#, fuzzy
+#| msgid "Course Title"
+msgid "Group Title"
+msgstr "Título del Curso"
+
+#: inc/customizer/options/learndash-groups-layout-options.php:67
+#, fuzzy
+#| msgid "Show Course Title?"
+msgid "Show Group Title?"
+msgstr "¿Mostrar Título del Curso?"
+
+#: inc/customizer/options/learndash-groups-layout-options.php:73
+#, fuzzy
+#| msgid "Course Title Layout"
+msgid "Group Title Layout"
+msgstr "Diseño del Título del Curso"
+
+#: inc/customizer/options/learndash-groups-layout-options.php:149
+#, fuzzy
+#| msgid "Course Title Align"
+msgid "Group Title Align"
+msgstr "Alineación del Título del Curso"
+
+#: inc/customizer/options/learndash-groups-layout-options.php:264
+#, fuzzy
+#| msgid "Product Title Font"
+msgid "Group Title Font"
+msgstr "Fuente del Título del Producto"
+
+#: inc/customizer/options/learndash-groups-layout-options.php:365
+#, fuzzy
+#| msgid "Course Title Background"
+msgid "Group Title Background"
+msgstr "Fondo del Título del Curso"
+
+#: inc/customizer/options/learndash-groups-layout-options.php:469
+#: inc/customizer/options/learndash-groups-layout-options.php:476
+#: inc/customizer/options/learndash-groups-layout-options.php:482
+#, fuzzy
+#| msgid "Product Layout"
+msgid "Group Layout"
+msgstr "Diseño del Producto"
+
+#: inc/customizer/options/learndash-groups-layout-options.php:516
+#, fuzzy
+#| msgid "Product Default Sidebar"
+msgid "Group Default Sidebar"
+msgstr "Barra Lateral Por Defecto del Producto"
+
+#: inc/customizer/options/learndash-groups-layout-options.php:678
+#, fuzzy
+#| msgid "Popup Background"
+msgid "Group Background"
+msgstr "Fondo en Popup"
+
+#: inc/customizer/options/learndash-groups-layout-options.php:697
+#, fuzzy
+#| msgid "Product Content Background"
+msgid "Group Content Background"
+msgstr "Fondo del Contenido del Producto"
+
+#: inc/customizer/options/lifter-course-archive-layout-options.php:52
+#: inc/customizer/options/lifter-course-archive-layout-options.php:59
+#: inc/customizer/options/lifter-member-archive-layout-options.php:52
+#: inc/customizer/options/lifter-member-archive-layout-options.php:59
+#: inc/customizer/options/post-archive-layout-options.php:52
+#: inc/customizer/options/post-archive-layout-options.php:59
+#: inc/customizer/options/product-archive-layout-options.php:52
+#: inc/customizer/options/product-archive-layout-options.php:59
+msgid "Archive Title"
+msgstr "Título del Archivo"
+
+#: inc/customizer/options/lifter-course-archive-layout-options.php:67
+#: inc/customizer/options/lifter-member-archive-layout-options.php:67
+#: inc/customizer/options/post-archive-layout-options.php:67
+#: inc/customizer/options/product-archive-layout-options.php:67
+msgid "Show Archive Title?"
+msgstr "¿Mostrar Título del Archivo?"
+
+#: inc/customizer/options/lifter-course-archive-layout-options.php:73
+#: inc/customizer/options/lifter-member-archive-layout-options.php:73
+#: inc/customizer/options/post-archive-layout-options.php:73
+#: inc/customizer/options/product-archive-layout-options.php:73
+msgid "Archive Title Layout"
+msgstr "Diseño del Título de Archivo"
+
+#: inc/customizer/options/lifter-course-archive-layout-options.php:193
+#: inc/customizer/options/lifter-member-archive-layout-options.php:193
+#: inc/customizer/options/post-archive-layout-options.php:193
+#: inc/customizer/options/post-layout-options.php:193
+#: inc/customizer/options/product-archive-layout-options.php:193
+#: inc/customizer/options/search-layout-options.php:193
+msgid "Container Min Height"
+msgstr "Altura Mínima del Contenedor"
+
+#: inc/customizer/options/lifter-course-archive-layout-options.php:255
+#: inc/customizer/options/lifter-member-archive-layout-options.php:261
+#: inc/customizer/options/post-archive-layout-options.php:255
+#: inc/customizer/options/product-archive-layout-options.php:255
+#: inc/customizer/options/search-layout-options.php:241
+msgid "Title Color"
+msgstr "Color del Título"
+
+#: inc/customizer/options/lifter-course-archive-layout-options.php:278
+#: inc/customizer/options/lifter-member-archive-layout-options.php:284
+#: inc/customizer/options/post-archive-layout-options.php:278
+#: inc/customizer/options/product-archive-layout-options.php:278
+msgid "Description Colors"
+msgstr "Colores de la Descripción"
+
+#: inc/customizer/options/lifter-course-archive-layout-options.php:346
+#: inc/customizer/options/lifter-member-archive-layout-options.php:352
+#: inc/customizer/options/post-archive-layout-options.php:346
+#: inc/customizer/options/product-archive-layout-options.php:346
+#: inc/customizer/options/search-layout-options.php:264
+msgid "Archive Title Background"
+msgstr "Fondo del Título del Archivo"
+
+#: inc/customizer/options/lifter-course-archive-layout-options.php:370
+msgid "Course Archive Title Background"
+msgstr "Fondo del Título del Archivo del Curso"
+
+#: inc/customizer/options/lifter-course-archive-layout-options.php:538
+msgid "Course Archive Columns"
+msgstr "Columnas del Archivo del Curso"
+
+#: inc/customizer/options/lifter-course-archive-layout-options.php:571
+msgid "Course Archive Background"
+msgstr "Fondo del Archivo del Curso"
+
+#: inc/customizer/options/lifter-course-archive-layout-options.php:589
+#: inc/customizer/options/lifter-member-archive-layout-options.php:595
+#: inc/customizer/options/post-archive-layout-options.php:824
+#: inc/customizer/options/product-archive-layout-options.php:664
+msgid "Archive Content Background"
+msgstr "Fondo del Archivo de Contenido"
+
+#: inc/customizer/options/lifter-course-layout-options.php:341
+#: inc/customizer/options/tutor-course-layout-options.php:330
+#, fuzzy
+#| msgid "Product Above Area Background"
+msgid "Course Above Area Background"
+msgstr "Fondo del Producto Sobre el Área"
+
+#: inc/customizer/options/lifter-course-layout-options.php:666
+msgid "Course Syllabus Layout"
+msgstr "Diseño del Plan de Estudios del Curso"
+
+#: inc/customizer/options/lifter-course-layout-options.php:673
+msgid "Course Syllabus Columns"
+msgstr "Columnas del Plan de Estudios del Curso"
+
+#: inc/customizer/options/lifter-course-layout-options.php:694
+msgid "Course Lesson Style"
+msgstr "Estilo de Lecciones del Curso"
+
+#: inc/customizer/options/lifter-course-layout-options.php:711
+msgid "Two Column Tiles"
+msgstr "Azulejos de Dos Columnas"
+
+#: inc/customizer/options/lifter-course-layout-options.php:714
+msgid "One Column Center"
+msgstr "Centro de Una Columna"
+
+#: inc/customizer/options/lifter-course-layout-options.php:726
+msgid "Show Lesson Thumbnail in Syllabus?"
+msgstr "¿Mostrar la Miniatura de la Lección en el Plan de Estudios?"
+
+#: inc/customizer/options/lifter-course-layout-options.php:732
+msgid "Lesson Thumbnail Ratio"
+msgstr "Radio de Miniatura de la Lección"
+
+#: inc/customizer/options/lifter-dashboard-layout-options.php:18
+msgid "Dashboard Navigation"
+msgstr "Panel de Navegación"
+
+#: inc/customizer/options/lifter-dashboard-layout-options.php:24
+#: inc/customizer/options/my-account-layout-options.php:32
+#, fuzzy
+#| msgid "Navgiation Layout"
+msgid "Navigation Layout"
+msgstr "Diseño de Navegación"
+
+#: inc/customizer/options/lifter-dashboard-layout-options.php:31
+#: inc/customizer/options/my-account-layout-options.php:39
+msgid "Positioned on Left Content"
+msgstr "Posicionado en Contenido Izquierdo"
+
+#: inc/customizer/options/lifter-dashboard-layout-options.php:36
+#: inc/customizer/options/my-account-layout-options.php:44
+msgid "Positioned on Top Content"
+msgstr "Posicionado en Contenido Superior"
+
+#: inc/customizer/options/lifter-dashboard-layout-options.php:41
+#: inc/customizer/options/my-account-layout-options.php:49
+msgid "Positioned on Right Content"
+msgstr "Posicionado en Contenido Derecho"
+
+#: inc/customizer/options/lifter-dashboard-layout-options.php:53
+msgid "Course and Membership Items Columns"
+msgstr "Columnas de Items del Curso y Membresía"
+
+#: inc/customizer/options/lifter-lesson-layout-options.php:52
+#: inc/customizer/options/lifter-lesson-layout-options.php:59
+msgid "Lesson Title"
+msgstr "Título de la Lección"
+
+#: inc/customizer/options/lifter-lesson-layout-options.php:67
+msgid "Show Lesson Title?"
+msgstr "¿Mostrar el Título de la Lección?"
+
+#: inc/customizer/options/lifter-lesson-layout-options.php:73
+msgid "Lesson Title Layout"
+msgstr "Diseño del Título de la Lección"
+
+#: inc/customizer/options/lifter-lesson-layout-options.php:149
+msgid "Lesson Title Align"
+msgstr "Alineación del Título de la Lección"
+
+#: inc/customizer/options/lifter-lesson-layout-options.php:264
+msgid "Lesson Title Font"
+msgstr "Fuente del Título de la Lección"
+
+#: inc/customizer/options/lifter-lesson-layout-options.php:365
+msgid "Lesson Title Background"
+msgstr "Fondo del Título de la Lección"
+
+#: inc/customizer/options/lifter-lesson-layout-options.php:516
+msgid "Lesson Default Sidebar"
+msgstr "Barra Lateral Por Defecto de la Lección"
+
+#: inc/customizer/options/lifter-lesson-layout-options.php:677
+msgid "Lesson Background"
+msgstr "Fondo de la Lección"
+
+#: inc/customizer/options/lifter-lesson-layout-options.php:695
+msgid "Lesson Content Background"
+msgstr "Fondo del Contenido de la Lección"
+
+#: inc/customizer/options/lifter-member-archive-layout-options.php:149
+msgid "Membership Archive Title Align"
+msgstr "Alineación del Título del Archivo de Membresía"
+
+#: inc/customizer/options/lifter-member-archive-layout-options.php:376
+msgid "Membership Archive Title Background"
+msgstr "Fondo del Título del Archivo de Membresía"
+
+#: inc/customizer/options/lifter-member-archive-layout-options.php:544
+msgid "Membership Archive Columns"
+msgstr "Columnas del Archivo de Membresía"
+
+#: inc/customizer/options/lifter-member-archive-layout-options.php:577
+msgid "Membership Archive Background"
+msgstr "Fondo del Archivo de Membresía"
+
+#: inc/customizer/options/lifter-member-layout-options.php:18
+msgid "Membership Title"
+msgstr "Título de Membresía"
+
+#: inc/customizer/options/lifter-member-layout-options.php:26
+msgid "Show Membership Title?"
+msgstr "Mostrar Título de Membresía"
+
+#: inc/customizer/options/lifter-member-layout-options.php:32
+msgid "Membership Title Layout"
+msgstr "Diseño del Título de Membresía"
+
+#: inc/customizer/options/lifter-member-layout-options.php:108
+msgid "Membership Title Align"
+msgstr "Alineación del Título de Membresía"
+
+#: inc/customizer/options/lifter-member-layout-options.php:192
+msgid "Membership Default Sidebar"
+msgstr "Barra Lateral Por Defecto de Membresía"
+
+#: inc/customizer/options/lifter-quiz-layout-options.php:18
+msgid "Quiz Title"
+msgstr "Título del Cuestionario"
+
+#: inc/customizer/options/lifter-quiz-layout-options.php:26
+msgid "Show Quiz Title?"
+msgstr "¿Mostrar Título del Cuestionario?"
+
+#: inc/customizer/options/lifter-quiz-layout-options.php:32
+msgid "Quiz Title Layout"
+msgstr "Diseño del Título del Cuestionario"
+
+#: inc/customizer/options/lifter-quiz-layout-options.php:108
+msgid "Quiz Title Align"
+msgstr "Alineación del Título del Cuestionario"
+
+#: inc/customizer/options/lifter-quiz-layout-options.php:192
+msgid "Quiz Default Sidebar"
+msgstr "Barra Lateral Por Defecto del Cuestionario"
+
+#: inc/customizer/options/my-account-layout-options.php:18
+msgid "My Account Navigation"
+msgstr "Navegación de Mi Cuenta"
+
+#: inc/customizer/options/my-account-layout-options.php:26
+msgid "Show User Name and Avatar?"
+msgstr "¿Mostrar Nombre de Usuario y Avatar?"
+
+#: inc/customizer/options/page-layout-options.php:36
+msgid "Page Title"
+msgstr "Título de Página"
+
+#: inc/customizer/options/page-layout-options.php:44
+msgid "Show Page Title?"
+msgstr "¿Mostrar Título de la Pagina?"
+
+#: inc/customizer/options/page-layout-options.php:56
+msgid "Page Title Layout"
+msgstr "Diseño del Título de Página"
+
+#: inc/customizer/options/page-layout-options.php:140
+msgid "Page Title Align"
+msgstr "Alineación del Título de Página"
+
+#: inc/customizer/options/page-layout-options.php:273
+msgid "Page Title Font"
+msgstr "Fuente del Título de Página"
+
+#: inc/customizer/options/page-layout-options.php:366
+#: inc/customizer/options/post-layout-options.php:418
+msgid "Meta Colors"
+msgstr "Colores Meta"
+
+#: inc/customizer/options/page-layout-options.php:406
+#: inc/customizer/options/post-layout-options.php:452
+msgid "Meta Font"
+msgstr "Fuente Meta"
+
+#: inc/customizer/options/page-layout-options.php:430
+#: inc/customizer/options/page-layout-options.php:458
+msgid "Page Title Background"
+msgstr "Fondo del Título de Página"
+
+#: inc/customizer/options/page-layout-options.php:620
+msgid "Page Default Sidebar"
+msgstr "Barra Lateral de Página por Defecto"
+
+#: inc/customizer/options/page-layout-options.php:833
+msgid "Page Background"
+msgstr "Fondo de Página"
+
+#: inc/customizer/options/page-layout-options.php:857
+msgid "Page Content Background"
+msgstr "Fondo del Contenido de Página"
+
+#: inc/customizer/options/post-archive-layout-options.php:149
+#, fuzzy
+#| msgid "Product Archive Title Align"
+msgid "Post Archive Title Align"
+msgstr "Alineación del Título del Archivo de Productos"
+
+#: inc/customizer/options/post-archive-layout-options.php:370
+#: inc/customizer/options/post-layout-options.php:522
+#: inc/customizer/options/post-layout-options.php:546
+#: inc/customizer/options/search-layout-options.php:288
+msgid "Post Title Background"
+msgstr "Fondo del Título de la Entrada"
+
+#: inc/customizer/options/post-archive-layout-options.php:502
+#: inc/customizer/options/search-layout-options.php:420
+msgid "Post Archive Default Sidebar"
+msgstr "Barra Lateral Por Defecto del Archivo de Entradas"
+
+#: inc/customizer/options/post-archive-layout-options.php:551
+msgid "Post Archive Columns"
+msgstr "Columnas del Archivo de Entradas"
+
+#: inc/customizer/options/post-archive-layout-options.php:572
+#: inc/customizer/options/search-layout-options.php:484
+msgid "Item Image Placement"
+msgstr "Colocación de Imagen del Item"
+
+#: inc/customizer/options/post-archive-layout-options.php:593
+#: inc/customizer/options/search-layout-options.php:505
+msgid "Beside"
+msgstr "Junto a"
+
+#: inc/customizer/options/post-archive-layout-options.php:606
+msgid "Post Item Layout"
+msgstr "Diseño del Item de Entrada"
+
+#: inc/customizer/options/post-archive-layout-options.php:614
+msgid "Post Item Elements"
+msgstr "Elemento del Item de Entrada"
+
+#: inc/customizer/options/post-archive-layout-options.php:658
+msgid "Post Item Title Font"
+msgstr "Fuente del Título de los Items de Entradas"
+
+#: inc/customizer/options/post-archive-layout-options.php:676
+#: inc/customizer/options/search-layout-options.php:588
+msgid "Item Category Colors"
+msgstr "Colores de Categoría de Items"
+
+#: inc/customizer/options/post-archive-layout-options.php:724
+#: inc/customizer/options/search-layout-options.php:636
+msgid "Item Category Font"
+msgstr "Fuente del Artículo de Categoría"
+
+#: inc/customizer/options/post-archive-layout-options.php:742
+#: inc/customizer/options/search-layout-options.php:654
+msgid "Item Meta Colors"
+msgstr "Colores Meta del Item"
+
+#: inc/customizer/options/post-archive-layout-options.php:776
+#: inc/customizer/options/search-layout-options.php:688
+msgid "Item Meta Font"
+msgstr "Fuente Meta del item"
+
+#: inc/customizer/options/post-archive-layout-options.php:806
+#: inc/customizer/options/post-layout-options.php:985
+msgid "Post Background"
+msgstr "Fondo de Entrada"
+
+#: inc/customizer/options/post-layout-options.php:52
+#: inc/customizer/options/post-layout-options.php:59
+msgid "Post Title"
+msgstr "Título de Entrada"
+
+#: inc/customizer/options/post-layout-options.php:67
+msgid "Show Post Title?"
+msgstr "¿Mostrar el Título de Entrada?"
+
+#: inc/customizer/options/post-layout-options.php:73
+msgid "Post Title Layout"
+msgstr "Diseño del Título de la Entrada"
+
+#: inc/customizer/options/post-layout-options.php:149
+msgid "Post Title Align"
+msgstr "Alineación del Título de Entrada"
+
+#: inc/customizer/options/post-layout-options.php:282
+msgid "Post Title Font"
+msgstr "Fuente del Título de Entrada"
+
+#: inc/customizer/options/post-layout-options.php:300
+msgid "Category Colors"
+msgstr "Colores de Categorías"
+
+#: inc/customizer/options/post-layout-options.php:348
+msgid "Category Font"
+msgstr "Fuente de Categorías"
+
+#: inc/customizer/options/post-layout-options.php:470
+msgid "Excerpt Colors"
+msgstr "Colores del Extracto"
+
+#: inc/customizer/options/post-layout-options.php:504
+#, fuzzy
+#| msgid "Excert Font"
+msgid "Excerpt Font"
+msgstr "Fuente del Extractos"
+
+#: inc/customizer/options/post-layout-options.php:650
+#: inc/customizer/options/post-layout-options.php:657
+#: inc/customizer/options/post-layout-options.php:663
+msgid "Post Layout"
+msgstr "Diseño de Entrada"
+
+#: inc/customizer/options/post-layout-options.php:697
+msgid "Post Default Sidebar"
+msgstr "Barra Lateral Por Defecto de Entradas"
+
+#: inc/customizer/options/post-layout-options.php:800
+msgid "Featured Image Width"
+msgstr "Ancho de Imagen Destacada"
+
+#: inc/customizer/options/post-layout-options.php:819
+msgid "Wide"
+msgstr "Amplio"
+
+#: inc/customizer/options/post-layout-options.php:822
+msgid "Stretch Full"
+msgstr "Estiramiento Completo"
+
+#: inc/customizer/options/post-layout-options.php:879
+msgid "Show Post Tags?"
+msgstr "¿Mostrar Tags de Entradas?"
+
+#: inc/customizer/options/post-layout-options.php:887
+msgid "Show Post Author Box?"
+msgstr "¿Mostrar Cuadro del Autor de la Publicación?"
+
+#: inc/customizer/options/post-layout-options.php:893
+msgid "Author Box Style"
+msgstr "Estilo de Caja de Autor"
+
+#: inc/customizer/options/post-layout-options.php:910
+msgid "Center"
+msgstr "Centro"
+
+#: inc/customizer/options/post-layout-options.php:922
+msgid "Use Author Archive Link?"
+msgstr "¿Usar el Enlace del Archivo del Autor?"
+
+#: inc/customizer/options/post-layout-options.php:936
+msgid "Show Post Navigation?"
+msgstr "¿Mostrar Navegación de Publicación?"
+
+#: inc/customizer/options/post-layout-options.php:944
+msgid "Show Related Posts?"
+msgstr "¿Mostrar Entradas Relacionadas?"
+
+#: inc/customizer/options/post-layout-options.php:961
+msgid "Show Comment Date?"
+msgstr "¿Mostrar Día del Comentario?"
+
+#: inc/customizer/options/post-layout-options.php:1003
+msgid "Post Content Background"
+msgstr "Fondo del Contenido de Entrada"
+
+#: inc/customizer/options/product-archive-layout-options.php:149
+msgid "Product Archive Title Align"
+msgstr "Alineación del Título del Archivo de Productos"
+
+#: inc/customizer/options/product-archive-layout-options.php:370
+msgid "Product Archive Title Background"
+msgstr "Fondo del Título del Archivo de Productos"
+
+#: inc/customizer/options/product-archive-layout-options.php:502
+msgid "Product Archive Default Sidebar"
+msgstr "Barra Lateral Por Defecto del Archivo de Productos"
+
+#: inc/customizer/options/product-archive-layout-options.php:556
+msgid "Show Archive Results Count?"
+msgstr "¿Mostrar Recuento de Resultados de Archivos?"
+
+#: inc/customizer/options/product-archive-layout-options.php:564
+msgid "Show Archive Sorting Dropdown?"
+msgstr "¿Mostrar Lista Desplegable de Clasificación de Archivos?"
+
+#: inc/customizer/options/product-archive-layout-options.php:572
+msgid "Show Archive Grid/List Toggle?"
+msgstr "¿Mostrar Alternador de Archivo Cuadrícula/Lista?"
+
+#: inc/customizer/options/product-archive-layout-options.php:580
+msgid "Action Button Style"
+msgstr "Estilo del Botón de Acción"
+
+#: inc/customizer/options/product-archive-layout-options.php:585
+msgid "Slide up on hover"
+msgstr "Deslizar hacia arriba en Hover"
+
+#: inc/customizer/options/product-archive-layout-options.php:586
+msgid "Bottom Slide Up"
+msgstr "Deslizar Hacia Abajo"
+
+#: inc/customizer/options/product-archive-layout-options.php:589
+msgid "On the Bottom Always Visible"
+msgstr "En la Parte Inferior Siempre Visible"
+
+#: inc/customizer/options/product-archive-layout-options.php:590
+msgid "Always Visible"
+msgstr "Siempre Visible"
+
+#: inc/customizer/options/product-archive-layout-options.php:600
+msgid "Product Archive Title Font"
+msgstr "Fuente del Título del Archivo de Productos"
+
+#: inc/customizer/options/product-archive-layout-options.php:617
+#, fuzzy
+#| msgid "Product Archive Title Font"
+msgid "Product Archive Price Font"
+msgstr "Fuente del Título del Archivo de Productos"
+
+#: inc/customizer/options/product-archive-layout-options.php:646
+msgid "Product Archive Background"
+msgstr "Fondo del Archivo de Productos"
+
+#: inc/customizer/options/product-layout-options.php:52
+#: inc/customizer/options/product-layout-options.php:59
+msgid "Product Above Content"
+msgstr "Producto Sobre el Contenido"
+
+#: inc/customizer/options/product-layout-options.php:67
+msgid "Above Content Layout"
+msgstr "Diseño de Contenido Anterior"
+
+#: inc/customizer/options/product-layout-options.php:72
+msgid "Enables an Extra above content title area"
+msgstr "Habilita un Área de Título de Contenido Adicional Encima"
+
+#: inc/customizer/options/product-layout-options.php:73
+msgid "Extra Title Area"
+msgstr "Área de Título Adicional"
+
+#: inc/customizer/options/product-layout-options.php:77
+msgid "Enables Breadcrumbs"
+msgstr "Activar Migas de Pan"
+
+#: inc/customizer/options/product-layout-options.php:82
+msgid "Hides this area"
+msgstr "Oculta esta área"
+
+#: inc/customizer/options/product-layout-options.php:83
+msgid "Nothing"
+msgstr "Nada"
+
+#: inc/customizer/options/product-layout-options.php:136
+msgid "Product Above Align"
+msgstr "Alineación del Producto de Arriba"
+
+#: inc/customizer/options/product-layout-options.php:180
+msgid "Above Container Min Height"
+msgstr "Altura Mínima del Contenedor por Encima"
+
+#: inc/customizer/options/product-layout-options.php:225
+msgid "Above Elements"
+msgstr "Encima de los Elementos"
+
+#: inc/customizer/options/product-layout-options.php:247
+msgid "Product Above Title Font"
+msgstr "Fuente del Producto sobre el Título"
+
+#: inc/customizer/options/product-layout-options.php:272
+msgid "Product Above Category Font"
+msgstr "Fuente del Producto Sobre Categoría"
+
+#: inc/customizer/options/product-layout-options.php:382
+msgid "Product Above Title Background"
+msgstr "Fondo del Producto sobre el Título"
+
+#: inc/customizer/options/product-layout-options.php:471
+#: inc/customizer/options/product-layout-options.php:478
+#: inc/customizer/options/product-layout-options.php:519
+msgid "Product Layout"
+msgstr "Diseño del Producto"
+
+#: inc/customizer/options/product-layout-options.php:484
+msgid "Product In Content Category Font"
+msgstr "Fuente del Producto en la Categoría de Contenido"
+
+#: inc/customizer/options/product-layout-options.php:501
+msgid "Product Title Font"
+msgstr "Fuente del Título del Producto"
+
+#: inc/customizer/options/product-layout-options.php:553
+msgid "Product Default Sidebar"
+msgstr "Barra Lateral Por Defecto del Producto"
+
+#: inc/customizer/options/product-layout-options.php:621
+msgid "Product Elements"
+msgstr "Elementos del Producto"
+
+#: inc/customizer/options/product-layout-options.php:646
+msgid "Show Weight and Dimensions in Additional Information tab?"
+msgstr "¿Mostrar Peso y Dimensiones en la pestaña de Información Adicional?"
+
+#: inc/customizer/options/product-layout-options.php:654
+msgid "Show Related Products?"
+msgstr "¿Mostrar Productos Relacionados?"
+
+#: inc/customizer/options/product-layout-options.php:661
+msgid "Related Products Columns"
+msgstr "Columnas de Productos Relacionados"
+
+#: inc/customizer/options/product-layout-options.php:701
+msgid "Product Background"
+msgstr "Fondo del Producto"
+
+#: inc/customizer/options/product-layout-options.php:719
+msgid "Product Content Background"
+msgstr "Fondo del Contenido del Producto"
+
+#: inc/customizer/options/search-layout-options.php:52
+#: inc/customizer/options/search-layout-options.php:59
+#, fuzzy
+#| msgid "Search results for"
+msgid "Search Results Title"
+msgstr "Resultados de búsqueda para"
+
+#: inc/customizer/options/search-layout-options.php:67
+#, fuzzy
+#| msgid "Show Archive Results Count?"
+msgid "Show Search Results Title?"
+msgstr "¿Mostrar Recuento de Resultados de Archivos?"
+
+#: inc/customizer/options/search-layout-options.php:73
+#, fuzzy
+#| msgid "Archive Title Layout"
+msgid "Search Results Title Layout"
+msgstr "Diseño del Título de Archivo"
+
+#: inc/customizer/options/search-layout-options.php:149
+#, fuzzy
+#| msgid "Lesson Title Align"
+msgid "Search Results Title Align"
+msgstr "Alineación del Título de la Lección"
+
+#: inc/customizer/options/search-layout-options.php:463
+#, fuzzy
+#| msgid "Search Results for: %s"
+msgid "Search Result Columns"
+msgstr "Buscar Resultados por: %s"
+
+#: inc/customizer/options/search-layout-options.php:518
+#, fuzzy
+#| msgid "Post Item Layout"
+msgid "Search Item Layout"
+msgstr "Diseño del Item de Entrada"
+
+#: inc/customizer/options/search-layout-options.php:526
+#, fuzzy
+#| msgid "Post Item Elements"
+msgid "Search Item Elements"
+msgstr "Elemento del Item de Entrada"
+
+#: inc/customizer/options/search-layout-options.php:570
+#, fuzzy
+#| msgid "Post Item Title Font"
+msgid "Search Item Title Font"
+msgstr "Fuente del Título de los Items de Entradas"
+
+#: inc/customizer/options/search-layout-options.php:718
+#, fuzzy
+#| msgid "Search Background"
+msgid "Search Results Background"
+msgstr "Fondo de Búsqueda"
+
+#: inc/customizer/options/search-layout-options.php:736
+#, fuzzy
+#| msgid "Archive Content Background"
+msgid "Search Results Content Background"
+msgstr "Fondo del Archivo de Contenido"
+
+#: inc/customizer/options/transparent-header-options.php:53
+msgid "Enable Transparent Header?"
+msgstr "¿Habilitar Cabecera Transparente?"
+
+#: inc/customizer/options/transparent-header-options.php:61
+msgid "Disable on 404, Search and Archives?"
+msgstr "¿Deshabilitar en 404, Búsqueda y Archivos?"
+
+#: inc/customizer/options/transparent-header-options.php:76
+msgid "Disable on Pages?"
+msgstr "¿Deshabilitar en Páginas?"
+
+#: inc/customizer/options/transparent-header-options.php:91
+msgid "Disable on Posts?"
+msgstr "¿Deshabilitar en Entradas?"
+
+#: inc/customizer/options/transparent-header-options.php:107
+msgid "Enable for:"
+msgstr "Habilitar para:"
+
+#: inc/customizer/options/transparent-header-options.php:134
+msgid "Different Logo for Transparent Header?"
+msgstr "¿Logo Diferente para la Cabecera Transparente?"
+
+#: inc/customizer/options/transparent-header-options.php:157
+msgid "Transparent Header Logo"
+msgstr "Logo de Cabecera Transparente"
+
+#: inc/customizer/options/transparent-header-options.php:649
+#: inc/customizer/options/transparent-header-options.php:672
+msgid "Transparent Header Background"
+msgstr "Fondo de Cabecera Transparente"
+
+#: inc/customizer/options/transparent-header-options.php:678
+msgid "Bottom Border"
+msgstr "Borde Inferior"
+
+#: inc/customizer/options/transparent-header-options.php:712
+msgid "Disable on Products?"
+msgstr "¿Deshabilitar en Productos?"
+
+#: inc/customizer/options/transparent-header-options.php:852
+msgid "Disable on"
+msgstr "Deshabilitar en"
+
+#: inc/customizer/options/tutor-course-layout-options.php:217
+msgid "Move sidebar up into header?"
+msgstr ""
+
+#: inc/customizer/options/woo-store-notice-options.php:53
+msgid "Store Notice Placement"
+msgstr "Colocación del Aviso de Tienda"
+
+#: inc/customizer/options/woo-store-notice-options.php:57
+msgid "Hangs down over the top of the header"
+msgstr "Colgar sobre la parte superior del encabezado"
+
+#: inc/customizer/options/woo-store-notice-options.php:58
+msgid "Hang Over Top"
+msgstr "Colgar Encima"
+
+#: inc/customizer/options/woo-store-notice-options.php:62
+msgid "Placed above the Header"
+msgstr "Colocado encima de la Cabecera"
+
+#: inc/customizer/options/woo-store-notice-options.php:67
+msgid "Stuck to the Bottom of the screen"
+msgstr "Pegado a la Parte Inferior de la pantalla"
+
+#: inc/customizer/options/woo-store-notice-options.php:68
+msgid "Bottom"
+msgstr "Inferior"
+
+#: inc/customizer/options/woo-store-notice-options.php:79
+msgid "Disable Dismiss Button?"
+msgstr "¿Deshabilitar el Botón Descartar?"
+
+#: inc/customizer/options/woo-store-notice-options.php:92
+msgid "Notice Font"
+msgstr "Aviso de Fuente"
+
+#: inc/customizer/options/woo-store-notice-options.php:109
+msgid "Background Color"
+msgstr "Color de Fondo"
+
+#: inc/dashboard/class-theme-dashboard.php:68
+msgid "Kadence - Next Generation Theme"
+msgstr ""
+
+#: inc/dashboard/class-theme-dashboard.php:68
+msgid "Kadence"
+msgstr ""
+
+#: inc/dashboard/class-theme-dashboard.php:96
+msgid "Config Kadence Modules"
+msgstr ""
+
+#: inc/dashboard/class-theme-dashboard.php:116
+msgid "- Next Generation Theme"
+msgstr ""
+
+#: inc/dashboard/class-theme-dashboard.php:137
+msgid "Web Creators Community"
+msgstr ""
+
+#: inc/dashboard/class-theme-dashboard.php:138
+msgid ""
+"Join our community of fellow kadence users creating effective websites! "
+"Share your site, ask a question and help others."
+msgstr ""
+
+#: inc/dashboard/class-theme-dashboard.php:139
+#, fuzzy
+#| msgid "Facebook Group"
+msgid "Join our Facebook Group"
+msgstr "Facebook Group"
+
+#: inc/dashboard/class-theme-dashboard.php:144
+msgid "Support"
+msgstr ""
+
+#: inc/dashboard/class-theme-dashboard.php:145
+msgid ""
+"Have a question, we are happy to help! Get in touch with our support team."
+msgstr ""
+
+#: inc/dashboard/class-theme-dashboard.php:146
+msgid "Submit a Ticket"
+msgstr ""
+
+#: inc/meta/class-theme-meta.php:94 inc/meta/class-theme-meta.php:110
+msgid "Post Settings"
+msgstr "Configuraciones de Entradas"
+
+#: inc/meta/class-theme-meta.php:223 inc/meta/class-theme-meta.php:365
+msgid "Sidebar Left"
+msgstr "Barra Lateral izquierda"
+
+#: inc/meta/class-theme-meta.php:224 inc/meta/class-theme-meta.php:366
+msgid "Sidebar Right"
+msgstr "Barra Lateral Derecha"
+
+#: inc/meta/class-theme-meta.php:333
+msgid "Display Title"
+msgstr "Mostrar Título"
+
+#: inc/template-functions/footer-functions.php:149
+#: inc/template-functions/footer-functions.php:150
+#, fuzzy
+#| msgid "Scroll To Top"
+msgid "Scroll to top"
+msgstr "Desplazar Hacia Arriba"
+
+#: inc/template-functions/header-functions.php:473
+msgid "Open menu"
+msgstr "Abrir menú"
+
+#: inc/template-functions/header-functions.php:522
+msgid "Close menu"
+msgstr "Cerrar Menú"
+
+#: inc/template-functions/header-functions.php:547
+#, fuzzy
+#| msgid "Primary Navigation"
+msgid "Primary Mobile Navigation"
+msgstr "Navegación Primaria"
+
+#: inc/template-functions/header-functions.php:735
+msgid "Review Cart"
+msgstr "Revisar carrito"
+
+#: inc/template-functions/header-functions.php:736
+msgid "Close Cart"
+msgstr "Cerrar Carrito"
+
+#: inc/template-functions/header-functions.php:878
+msgid "View Search Form"
+msgstr "Ver Formulario de Búsqueda"
+
+#: inc/template-functions/header-functions.php:908
+msgid "Close search"
+msgstr "Cerrar Búsqueda"
+
+#: lifterlms/course/lesson-preview.php:45
+#, php-format
+msgctxt "lesson order within section"
+msgid "%1$d of %2$d"
+msgstr "%1$d de %2$d"
+
+#: lifterlms/course/syllabus.php:44
+msgid "This course does not have any sections."
+msgstr "Este curso no tiene secciones."
+
+#: lifterlms/course/syllabus.php:73
+msgid "This section does not have any lessons."
+msgstr "Esta sección no tiene lecciones."
+
+#: template-parts/archive-title/hkb-searchbox.php:17
+msgid "Search For"
+msgstr "Buscar Por"
+
+#: template-parts/archive-title/title.php:13
+#: template-parts/content/page_header.php:14
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "¡Uups! Esa página no se puede encontrar."
+
+#: template-parts/archive-title/title.php:19
+#: template-parts/content/page_header.php:22
+msgid "Nothing Found"
+msgstr "Nada encontrado"
+
+#: template-parts/archive-title/title.php:34
+#: template-parts/content/page_header.php:41
+#, php-format
+msgid "Search Results for: %s"
+msgstr "Buscar Resultados por: %s"
+
+#: template-parts/content/entry-attachment.php:33
+msgid "Previous:"
+msgstr "Previo:"
+
+#: template-parts/content/entry-attachment.php:43
+msgid "Next:"
+msgstr "Siguiente:"
+
+#: template-parts/content/entry-attachment.php:49
+msgid "Post navigation"
+msgstr "Navegación de Entradas"
+
+#: template-parts/content/entry_actions.php:17
+msgid "Read More"
+msgstr "Leer Más"
+
+#: template-parts/content/entry_author.php:37
+#, php-format
+msgid "Follow %1$s on %2$s"
+msgstr "Seguir %1$s en %2$s"
+
+#: template-parts/content/entry_content.php:18
+#, php-format
+msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr "Continuar leyendo<span class=\"screen-reader-text\"> \"%s\"</span>"
+
+#: template-parts/content/entry_content.php:31
+msgid "Pages:"
+msgstr "Páginas:"
+
+#: template-parts/content/entry_loop_meta.php:27
+#: template-parts/content/entry_meta.php:27 template-parts/title/meta.php:27
+msgid "By"
+msgstr "Por"
+
+#: template-parts/content/entry_loop_meta.php:42
+#: template-parts/content/entry_meta.php:42 template-parts/title/meta.php:42
+msgid "Posted on"
+msgstr "Publicado en"
+
+#: template-parts/content/entry_loop_meta.php:48
+#: template-parts/content/entry_meta.php:48 template-parts/title/meta.php:48
+msgid "Updated on"
+msgstr "Actualizado en"
+
+#: template-parts/content/entry_loop_meta.php:54
+#: template-parts/content/entry_meta.php:54 template-parts/title/meta.php:54
+msgid "Posted in"
+msgstr "Publicado en"
+
+#: template-parts/content/entry_loop_meta.php:180
+#: template-parts/content/entry_meta.php:180 template-parts/title/meta.php:180
+msgctxt "list item separator"
+msgid ", "
+msgstr ", "
+
+#: template-parts/content/entry_loop_taxonomies.php:21
+#: template-parts/content/entry_taxonomies.php:19
+#: template-parts/title/categories.php:19
+msgctxt "list item separator"
+msgid " / "
+msgstr " / "
+
+#: template-parts/content/entry_loop_taxonomies.php:25
+#: template-parts/content/entry_taxonomies.php:23
+#: template-parts/title/categories.php:23
+msgctxt "list item separator"
+msgid " - "
+msgstr " - "
+
+#: template-parts/content/entry_loop_taxonomies.php:29
+#: template-parts/content/entry_taxonomies.php:27
+#: template-parts/title/categories.php:27
+msgctxt "list item separator"
+msgid " | "
+msgstr " | "
+
+#: template-parts/content/entry_related.php:20
+msgid "Similar Posts"
+msgstr "Entradas Similares"
+
+#: template-parts/content/entry_summary.php:25
+#, fuzzy, php-format
+#| msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgid "Read More<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr "Continuar leyendo<span class=\"screen-reader-text\"> \"%s\"</span>"
+
+#: template-parts/content/entry_tags.php:18
+msgid "Post Tags:"
+msgstr "Tags de Entradas:"
+
+#: template-parts/content/error-404.php:19
+msgid "It looks like nothing was found at this location. Maybe try a search?"
+msgstr ""
+"Parece que no se encontró nada en esta ubicación. ¿Tal vez podría probar una "
+"búsqueda?"
+
+#: template-parts/content/error-500.php:18
+msgid "Oops! Something went wrong."
+msgstr "¡Uups! Algo salió mal."
+
+#: template-parts/content/error-offline.php:14
+msgid "Oops! It looks like you&#8217;re offline."
+msgstr "¡Uups! Parece que no estás conectado."
+
+#: template-parts/content/error.php:21
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+"¿Listo para publicar tu primera entrada? <a href=“%1$s”>Empieza aquí</a>."
+
+#: template-parts/content/error.php:36
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"Lo sentimos, pero nada coincide con sus términos de búsqueda. Intente "
+"nuevamente con algunas palabras clave diferentes."
+
+#: template-parts/content/error.php:42
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+"Parece que no podemos encontrar lo que estás buscando. Quizás una búsqueda "
+"pueda ayudar."
+
+#: template-parts/content/pagination.php:13
+msgctxt "previous set of archive results"
+msgid "Previous"
+msgstr "Previo"
+
+#: template-parts/content/pagination.php:14
+msgctxt "next set of archive results"
+msgid "Next"
+msgstr "Siguiente"
+
+#: template-parts/content/pagination.php:15
+msgid "Page navigation"
+msgstr "Navegación de Página"
+
+#: tutor/single/course/above-lead-info.php:55
+#: tutor/single/course/enrolled/above-lead-info.php:55
+msgid "by"
+msgstr ""
+
+#: tutor/single/course/above-lead-info.php:63
+#: tutor/single/course/enrolled/above-lead-info.php:63
+#, fuzzy
+#| msgid "Course Title"
+msgid "Course level:"
+msgstr "Título del Curso"
+
+#: tutor/single/course/above-lead-info.php:70
+#: tutor/single/course/enrolled/above-lead-info.php:70
+msgid "Share:"
+msgstr ""
+
+#: tutor/single/course/content-lead-info.php:44
+#: tutor/single/course/enrolled/content-lead-info.php:44
+#, fuzzy
+#| msgid "Occupation"
+msgid "Duration"
+msgstr "Ocupación"
+
+#: tutor/single/course/content-lead-info.php:53
+#: tutor/single/course/enrolled/content-lead-info.php:53
+msgid "Total Enrolled"
+msgstr ""
+
+#: tutor/single/course/content-lead-info.php:62
+#: tutor/single/course/enrolled/content-lead-info.php:62
+msgid "Last Update"
+msgstr ""
+
+#: tutor/single/course/content-lead-info.php:82
+#: tutor/single/course/enrolled/content-lead-info.php:82
+msgid "About Course"
+msgstr ""
+
+#~ msgid "Menu"
+#~ msgstr "Menú"
+
+#~ msgid "Main menu"
+#~ msgstr "Menu Principal"
+
+#~ msgid "Palette 1"
+#~ msgstr "Paleta 1"
+
+#~ msgid "Palette 2"
+#~ msgstr "Paleta 2"
+
+#~ msgid "Palette 3"
+#~ msgstr "Paleta 3"
+
+#~ msgid "Palette 4"
+#~ msgstr "Paleta 4"
+
+#~ msgid "Palette 5"
+#~ msgstr "Paleta 5"
+
+#~ msgid "Palette 6"
+#~ msgstr "Paleta 6"
+
+#~ msgid "Palette 7"
+#~ msgstr "Paleta 7"
+
+#~ msgid "Palette 8"
+#~ msgstr "Paleta 7"
+
+#~ msgid "Palette 9"
+#~ msgstr "Paleta 9"
+
+#~ msgid "Elements"
+#~ msgstr "Elementos"

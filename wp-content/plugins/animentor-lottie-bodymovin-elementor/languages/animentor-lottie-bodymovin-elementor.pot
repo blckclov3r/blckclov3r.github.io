@@ -1,0 +1,190 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Animentor – Lottie & Bodymovin widget for Elementor\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-02-19 10:42+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.3.1; wp-5.3.2"
+
+#. 1: Plugin name 2: Elementor
+#: animentor-lottie-bodymovin-elementor.php:110
+#, php-format
+msgid "\"%1$s\" requires \"%2$s\" to be installed and activated."
+msgstr ""
+
+#. 1: Plugin name 2: PHP 3: Required PHP version
+#: animentor-lottie-bodymovin-elementor.php:147
+#, php-format
+msgid "\"%1$s\" requires \"%2$s\" version %3$s or greater."
+msgstr ""
+
+#: widgets/lottie-widget.php:121
+msgid "Alignment"
+msgstr ""
+
+#. Description of the plugin
+msgid "An Elementor extension that adds a widget for Lottie animations."
+msgstr ""
+
+#: widgets/lottie-widget.php:104
+msgid "Animation"
+msgstr ""
+
+#: widgets/lottie-widget.php:177
+msgid "Animation Options"
+msgstr ""
+
+#: animentor-lottie-bodymovin-elementor.php:111
+#: animentor-lottie-bodymovin-elementor.php:148
+msgid "Animentor"
+msgstr ""
+
+#. Name of the plugin
+msgid "Animentor – Lottie & Bodymovin widget for Elementor"
+msgstr ""
+
+#: widgets/lottie-widget.php:197
+msgid "Autoplay"
+msgstr ""
+
+#: widgets/lottie-widget.php:460
+msgid "Border Radius"
+msgstr ""
+
+#: widgets/lottie-widget.php:129
+msgid "Center"
+msgstr ""
+
+#: widgets/lottie-widget.php:112
+msgid "Data file"
+msgstr ""
+
+#: widgets/lottie-widget.php:208
+msgid "Delay"
+msgstr ""
+
+#: animentor-lottie-bodymovin-elementor.php:112
+msgid "Elementor"
+msgstr ""
+
+#: widgets/lottie-widget.php:396
+msgid "Hover"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://over-engineer.com/"
+msgstr ""
+
+#. URI of the plugin
+msgid "https://over-engineer.com/plugins/animentor"
+msgstr ""
+
+#: widgets/lottie-widget.php:162
+msgid "https://your-link.com"
+msgstr ""
+
+#: widgets/lottie-widget.php:125
+msgid "Left"
+msgstr ""
+
+#: widgets/lottie-widget.php:147 widgets/lottie-widget.php:157
+msgid "Link"
+msgstr ""
+
+#: widgets/lottie-widget.php:222
+msgid "Loop"
+msgstr ""
+
+#: widgets/lottie-widget.php:79 widgets/lottie-widget.php:281
+msgid "Lottie"
+msgstr ""
+
+#: widgets/lottie-widget.php:325
+msgid "Max Width"
+msgstr ""
+
+#: widgets/lottie-widget.php:150 widgets/lottie-widget.php:200
+#: widgets/lottie-widget.php:225 widgets/lottie-widget.php:235
+#: widgets/lottie-widget.php:253
+msgid "No"
+msgstr ""
+
+#: widgets/lottie-widget.php:362
+msgid "Normal"
+msgstr ""
+
+#: widgets/lottie-widget.php:186
+msgid "Normal speed is 1"
+msgstr ""
+
+#: widgets/lottie-widget.php:260
+msgid "On mouse out"
+msgstr ""
+
+#: widgets/lottie-widget.php:369 widgets/lottie-widget.php:403
+msgid "Opacity"
+msgstr ""
+
+#. Author of the plugin
+msgid "overengineer"
+msgstr ""
+
+#: widgets/lottie-widget.php:264
+msgid "Pause"
+msgstr ""
+
+#: animentor-lottie-bodymovin-elementor.php:149
+msgid "PHP"
+msgstr ""
+
+#: widgets/lottie-widget.php:250
+msgid "Play on mouse over"
+msgstr ""
+
+#: widgets/lottie-widget.php:265
+msgid "Reverse"
+msgstr ""
+
+#: widgets/lottie-widget.php:232
+msgid "Reversed"
+msgstr ""
+
+#: widgets/lottie-widget.php:133
+msgid "Right"
+msgstr ""
+
+#: widgets/lottie-widget.php:185
+msgid "Speed"
+msgstr ""
+
+#: widgets/lottie-widget.php:263
+msgid "Stop"
+msgstr ""
+
+#: json-handler.php:31
+#, php-format
+msgid "The uploaded %s file is not supported. Please upload a valid JSON file"
+msgstr ""
+
+#: widgets/lottie-widget.php:429
+msgid "Transition Duration"
+msgstr ""
+
+#: widgets/lottie-widget.php:290
+msgid "Width"
+msgstr ""
+
+#: widgets/lottie-widget.php:149 widgets/lottie-widget.php:199
+#: widgets/lottie-widget.php:224 widgets/lottie-widget.php:234
+#: widgets/lottie-widget.php:252
+msgid "Yes"
+msgstr ""

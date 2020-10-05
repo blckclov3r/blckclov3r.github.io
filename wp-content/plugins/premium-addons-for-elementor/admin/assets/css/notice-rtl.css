@@ -1,0 +1,106 @@
+.error.pa-notice-wrap {
+    display: flex;
+    border: none;
+    padding: 0;
+    margin: 0;
+    min-height: 120px;
+    padding-left: 1em;
+    align-items: center;
+}
+
+.error.pa-notice-wrap div {
+    padding: 0;
+    margin: 0;
+}
+
+.error.pa-notice-wrap .pa-img-wrap {
+    display: flex;
+    align-items: center;
+    min-height: 120px;
+    padding: 0 0.7em;
+}
+
+.error.pa-black-notice,
+.error.pa-black-notice .pa-img-wrap {
+    min-height: auto;
+}
+
+.pa-new-feature-notice .pa-text-wrap {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: flex;
+    align-items: center;
+    padding: 10px 0 10px 10px;
+}
+
+.pa-new-feature-notice .pa-text-wrap .pa-notice-logo {
+    width: 40px;
+    margin-left: 0.8em;
+}
+
+.pa-new-feature-notice .pa-text-wrap .pa-notice-close {
+    text-decoration: none;
+    margin-right: 1em;
+    margin-right: auto;
+}
+
+.error .pa-text-wrap a:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+.error.pa-notice-wrap .pa-text-wrap {
+    padding-top: 0.3em;
+}
+
+.error.pa-notice-wrap .pa-img-wrap img {
+    width: 40px;
+}
+
+.error.pa-notice-wrap .pa-text-wrap a {
+    margin-left: 0.3em;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.error.pa-notice-wrap .pa-text-wrap a i {
+    margin-left: 0.1em;
+    margin-top: 0.1em;
+}
+
+.error.pa-notice-wrap .pa-text-wrap a:first-of-type {
+    background: #0f6aa7;
+}
+
+.error.pa-black-notice .pa-text-wrap a:first-of-type {
+    background: transparent;
+    text-transform: none;
+}
+
+.error .pa-text-wrap a {
+    margin: 0;
+}
+
+.pa-notice-wrap .pa-notice-close {
+    -webkit-flex-basis: 56%;
+    -ms-flex-preferred-size: 56%;
+    flex-basis: 56%;
+}
+
+.pa-notice-close a:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.pa-notice-close span {
+    float: left;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.error.pa-notice-wrap .pa-text-wrap a:not(:first-of-type) {
+    margin-right: 0.3em;
+}

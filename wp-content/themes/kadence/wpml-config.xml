@@ -1,0 +1,41 @@
+<wpml-config>   
+    <admin-texts>
+        <key name="theme_mods_kadence">
+            <key name="mobile_trigger_label" />
+            <key name="header_html_content" />
+            <key name="header_button_label" />
+            <key name="header_button_link" />
+            <key name="header_search_label" />
+            <key name="mobile_button_label" />
+            <key name="mobile_button_link" />
+            <key name="mobile_html_content" />
+            <key name="footer_html_content" />
+            <key name="post_title_element_meta">
+                <key name="authorLabel" />
+                <key name="dateLabel" />
+                <key name="dateUpdatedLabel" />
+                <key name="categoriesLabel" />
+            </key>
+             <key name="post_archive_element_meta">
+                <key name="authorLabel" />
+                <key name="dateLabel" />
+                <key name="dateUpdatedLabel" />
+                <key name="categoriesLabel" />
+            </key>
+            <key name="product_content_element_price">
+                <key name="shipping_statement" />
+            </key>
+            <key name="product_content_element_extras">
+                <key name="title" />
+                <key name="feature_1" />
+                <key name="feature_2" />
+                <key name="feature_3" />
+                <key name="feature_4" />
+                <key name="feature_5" />
+            </key>
+            <key name="product_content_element_payments">
+                <key name="title" />
+            </key>
+        </key>
+    </admin-texts>
+</wpml-config>

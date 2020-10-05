@@ -1,0 +1,202 @@
+== 2.1.4 ==
+Release date: September 14, 2020
+* Added: Info Box, Info Box Carousel - Option to show button in case of link type box option
+* Enhancement: Info Box Carousel - Updated Choose Arrow control
+* Fixed: Logo Grid - Greyscale option was not working in editor
+* Added: Image Hotspots - Typography option for hotspot type text
+* Added: Image Hotspots - Option to keep tooltips always open
+
+== 2.1.3 ==
+Release date: August 31, 2020
+* Fixed: Buttons - Tooltip styling options were not working in buttons widget
+* Fixed: Info Box Carousel - Icon type image was not showing on frontend
+* Fixed: PHP error in template library
+
+== 2.1.2 ==
+Release date: August 25, 2020
+* Enhancement: Compatibility to Elementor 3.0
+
+== 2.1.1 ==
+Release date: August 25, 2020
+* Fixed: Posts - Ajax error after updating to WP 5.5
+
+== 2.1.0 ==
+Release date: August 11, 2020
+* New: Posts widget
+* Fixed: Image Accordion - Stack On option was not working
+
+== 2.0.0 ==
+Release date: July 29, 2020
+* New: Template Library
+* Added: Team Member Carousel -  border, radius and padding options for team member box
+* Added: Flipbox - Icon text option
+* Added: Flipbox - Title HTML tag option
+
+== 1.3.0 ==
+Release date: July 20, 2020
+* Enhancement: Updated admin panel UI
+* Added: Advanced Accordion - Toggle icon alignment and few other styling options
+* Fixed: Hotspots - Hotspot text was not visible on hover
+* Added: Gravity Forms - Thank You Message Styling Options
+
+== 1.2.9.5 ==
+Release date: June 11, 2020
+* Added: Image Hotspots - Border, border radius and box shadow options for image
+* Fixed: Team Member Carousel - Email and phone icons were not working
+* Added: Info Box - Minimum height option
+* Added: Image Comparison - Added dynamic controls to image and labels
+
+== 1.2.9.4 ==
+Release date: May 7, 2020
+* Added: Advanced Accordion - Title HTML tag option
+* Fixed: Instagram Feed - Square images option was not working
+* Fixed: Image Hotspots, Flipbox - Dynamic tags were not working
+* Added: Icon List - Background color and hover colors for text
+
+== 1.2.9.3 ==
+Release date: April 20, 2020
+* Added: Button width option
+* Fixed: WPML compatibility was missing for some widgets
+* Fixed: Gravity Forms CSS & JS files were loading on all pages
+* Fixed: Link effects CSS issue
+* Fixed: Title container HTML markup in Info Box and Info Box carousel widgets
+* Fixed: Lightbox and Image Link options in Instagram Feed widget
+
+== 1.2.9.2 ==
+Release date: April 8, 2020
+* Fixed: Hotspot icon was not showing in editor in Image Hotspots widget
+* Added: Option to randomize logos in Logo Carousel widget
+* Fixed: Input fields padding option was not working in Gravity Forms widget
+* Fixed: Input focus background option was not working in Gravity Forms widget
+* Enhancement: Added styling for dropdown option in Gravity Forms widget
+* Updated: "Input & Textarea" section label to "Input, Textarea & Dropdown" in Gravity Forms widget
+* Added: input focus color option in Gravity Forms widget
+
+== 1.2.9.1 ==
+Release date: March 30, 2020
+* Fixed: PHP error in query control
+
+== 1.2.9 ==
+Release date: March 29, 2020
+* Enhancement: Updated query controls in Content Ticker and Advanced Accordion widgets
+
+== 1.2.8.7 ==
+Release date: March 11, 2020
+* Fixed: Swiper slider after updating to Elementor 2.9.5
+
+== 1.2.8.6 ==
+Release date: March 10, 2020
+* Added: Equal height boxes option in Info Box carousel widget
+* Removed Google+ icon option from Team Member carousel widget
+* Added: Image size option in Logo Grid widget
+* Added: Image width option in Logo Grid widget
+* Added: HTML tag option for heading and sub heading in Promo Box widget
+* Added: Icon number typography option in Info List widget
+* Added: Hotspot link option in Image Hotspots widget
+* Updated link options to support custom attribute option of Elementor 2.9.0
+* Fixed: Swiper slider for Elementor 2.9.0
+
+== 1.2.8.5 ==
+Release date: February 18, 2020
+* Fixed: Content ticker was not working
+
+== 1.2.8.4 ==
+Release date: February 6, 2020
+* Fixed: Lightbox option was not working in Instagram Feed widget
+* Added: Image Link option in Instagram Feed widget
+* Enhancement: Alignment, Vertical Position and Icon Size controls are now responsive in Flip Box widget
+
+== 1.2.8.3 ==
+Release date: January 8, 2020
+* Added Currency Format option
+* Fixed: Custom currency symbol option was not working
+* Moved Additional Info option into Button section
+* Moved Alignment option to Style tab
+
+== 1.2.8.2 ==
+Release date: December 9, 2019
+* Updated admin notice
+* Updated Instagram Feed widget
+
+== 1.2.8.1 ==
+Release date: December 5, 2019
+* Added: Title HTML tag option in Image Accordion widget
+
+== 1.2.8 ==
+Release date: November 27, 2019
+* New: Formidable Forms widget
+* New: Fluent Forms widget
+
+== 1.2.7.4 ==
+Release date: November 1, 2019
+* Added: Added Title HTML tag option in Info List widget
+
+== 1.2.7.3 ==
+Release date: October 14, 2019
+* Fixed: rel=nofollow was not working for button link
+
+== 1.2.7.2 ==
+Release date: October 9, 2019
+* Added: Option to enable/disable extensions
+
+== 1.2.7.1 ==
+Release date: October 3, 2019
+* Added: Orientation option in Image Accordion widget
+* Added: Image size option in Image Accordion widget
+* Added: Default active tab option in Image Accordion widget
+
+== 1.2.7 ==
+Release date: September 20, 2019
+* New: Added Display Conditions extension
+
+== 1.2.6 ==
+Release date: September 4, 2019
+* New: Fancy Heading widget
+* Enhancement: Updated icon controls in all widgets
+* Added: Image size option in Info Box Carousel, Info Table and Price Table widgets
+* Added: Info box background, border and padding options in Info Box Carousel widget
+* Added: Column gap and rows gap options in Instagram Feed widget
+* Added: Button position option in Price Table widget
+
+== 1.2.5 ==
+Release date: July 10, 2019
+* Fixed: Starting Number option was not working in editor in Counter widget
+
+== 1.2.4 ==
+Release date: July 9, 2019
+* Added: Starting Number option to Counter widget
+
+== 1.2.3 ==
+Release date: June 14, 2019
+* Added: 4 new layouts to Counter widget
+
+== 1.2.2 ==
+Release date: May 23, 2019
+* Added: Twitter widgets
+
+== 1.2.1 ==
+Release date: April 2, 2019
+* Added: Buttons widget
+
+== 1.2.0 ==
+Release date: March 26, 2019
+* Added: Scroll Image widget
+* Fixed: PHP error in Advanced Accordion widget
+
+== 1.1.2 ==
+Release date: March 13, 2019
+* Fix: Info List - PHP error
+
+== 1.1.1 ==
+Release date: March 7, 2019
+* Added: Image size option to info list widget
+* Added: Icon vertical align and horizontal align options in info list widget
+
+== 1.1.0 ==
+Release date: February 8, 2019
+* Added: Content ticker widget
+* Updated Flip Box widget with new options
+
+== 1.0.0 ==
+Release date: January 4, 2019
+* Initial Release

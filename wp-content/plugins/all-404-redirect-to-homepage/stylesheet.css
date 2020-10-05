@@ -1,0 +1,113 @@
+.pagination{font-family:Tahoma;font-size:12px;margin:0 0 30px}
+.pagination a,.pagination span{-moz-border-radius:3px;border:1px solid #CCC;color:#000;display:inline-block;margin:2px!important;padding:5px 8px}
+.pagination a{background:url(images/gradient_color_bg.gif) repeat-x scroll center top #EFEFEF;text-decoration:none}
+.pagination a:hover{background:none #313428;color:#FFF}
+.pagination span.currentpage{background:none #313428;color:#FFF;font-weight:700}
+.pagination span.spaninput{-moz-border-radius:3px;border:1px solid #CCC;color:#000;display:inline-block;margin:2px!important;padding:2px}
+.pagination input{border:0;font-family:Tahoma;font-size:12px;margin:2px;text-align:center;width:32px} 
+.grid{border:1px solid #CCC;border-collapse:collapse;font-family:Tahoma;font-size:10pt}
+.grid td{border:1px solid #CCC;padding:3px}
+.grid tbody tr:nth-child(even){background:#FDFDFD}
+.grid tbody tr:nth-child(odd){background:#FFF}
+.grid thead td{padding-left:6px;padding-right:6px}
+.grid thead,.grid tfoot{background:url(images/gradient_color_bg.gif) repeat-x scroll center top #EFEFEF;color:#000;font-weight:700}
+
+
+ 
+.isa_info, .isa_success, .isa_warning, .isa_error {
+margin: 3px 0px;
+padding:12px;
+ 
+}
+.isa_info {
+    color: #00529B;
+    background-color: #BDE5F8;
+}
+.isa_success {
+    color: #4F8A10;
+    background-color: #DFF2BF;
+}
+.isa_warning {
+    color: #9F6000;
+    background-color: #FEEFB3;
+}
+.isa_error {
+    color: #D8000C;
+    background-color: #FFD2D2;
+}
+.isa_info i, .isa_success i, .isa_warning i, .isa_error i {
+  /*  margin:10px 22px;*/
+    font-size:2em;
+    vertical-align:middle;
+}
+
+
+.info_icon
+{
+width:32px;
+height:32px;
+background:url(images/large-info.png) 0 0;
+float:left;
+margin-top: -7px;
+margin-right: 7px;
+}
+
+.warning_icon
+{
+width:32px;
+height:32px;
+background:url(images/dialog-warning.png) 0 0;
+float:left;
+margin-top: -7px;
+margin-right: 7px;
+}
+
+
+.success_icon
+{
+width:32px;
+height:32px;
+background:url(images/action_success.png) 0 0;
+float:left;
+margin-top: -7px;
+margin-right: 7px;
+}
+
+.failure_icon
+{
+width:30px;
+height:30px;
+background:url(images/error.png) 0 0;
+float:left;
+margin-top: -7px;
+margin-right: 7px;
+}
+
+
+.procontainer {
+border:1px solid #999;
+float:left;
+width:100%;
+min-width: 820px;
+background:#fff;
+-webkit-border-radius:8px;
+-moz-border-radius:8px;
+border-radius:8px;
+margin-top:15px;
+min-height:51px;
+
+}
+
+.procontainer ul {
+list-style-type: square;
+padding-left: 20px;
+}
+
+.procontainer ul li {
+padding-left: 5px;
+}
+
+ 
+.procontainer .inner {
+padding:20px;
+}

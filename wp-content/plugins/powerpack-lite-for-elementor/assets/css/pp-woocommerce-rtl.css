@@ -1,0 +1,31 @@
+.pp-woo-categories .products {
+    list-style: none;
+}
+.pp-woo-categories .product-category {
+    position: relative;
+}
+.pp-woo-categories .woocommerce-loop-category__title {
+    font-size: 1em;
+    margin: 0;
+    padding: 0;
+}
+.pp-woo-categories .pp-woo-category-content-wrap {
+    transition: background .25s;
+}
+.pp-woo-categories-fancy .pp-woo-category-content-wrap {
+    background-color: rgba(255,255,255,0.8);
+    padding: 10px;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    left: 20px;
+}
+.pp-woo-categories-top .pp-woo-category-content-wrap {
+    bottom: auto;
+    top: 20px;
+}
+.pp-woo-categories-middle .pp-woo-category-content-wrap {
+    bottom: auto;
+    top: 50%;
+    transform: translateY(-50%);
+}

@@ -1,0 +1,31 @@
+#tp_testimonials_shortcode_title {
+  border-bottom: 1px solid #dddddd;
+  color: #777777;
+  font-weight: normal;
+  height: 60px;
+  line-height: 60px;
+  margin: 0 20px 20px 0;
+}
+#tp_testimonials_shortcode_para {
+  color: #777777;
+  margin: 0 20px 20px 0;
+}
+.testimonials_btn_area a {
+    border: 1px solid #ddd;
+    padding: 10px 10px;
+    background: #0F6FA7;
+    display: inline-block;
+    overflow: hidden;
+    text-decoration: none;
+    box-shadow: none;
+    outline: none;
+    color: #fffdfd;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+.testimonials_btn_area {
+    display: block;
+    overflow: hidden;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 30px;
+}

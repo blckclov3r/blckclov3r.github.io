@@ -1,0 +1,1765 @@
+# Translation of Plugins - Gutenberg - Stable (latest release) in English (UK)
+# This file is distributed under the same license as the Plugins - Gutenberg - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-09-16 10:52:39+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/3.0.0-alpha.2\n"
+"Language: en_GB\n"
+"Project-Id-Version: Plugins - Gutenberg - Stable (latest release)\n"
+
+#: lib/customizer.php:62
+msgid "Widget Blocks"
+msgstr "Widget Blocks"
+
+#: lib/class-wp-rest-menu-items-controller.php:903
+msgid "HTML content to display for this block menu item."
+msgstr "HTML content to display for this block menu item."
+
+#: lib/patterns/text-three-columns-buttons.php:11
+msgid "Chapter Three"
+msgstr "Chapter Three"
+
+#: lib/patterns/text-three-columns-buttons.php:11
+msgid "Chapter Two"
+msgstr "Chapter Two"
+
+#: lib/patterns/text-three-columns-buttons.php:11
+msgid "Chapter One"
+msgstr "Chapter One"
+
+#: lib/class-wp-rest-sidebars-controller.php:536
+msgid "HTML representation of the widget admin form."
+msgstr "HTML representation of the widget admin form."
+
+#: lib/class-wp-rest-sidebars-controller.php:402
+msgid "Inactive widgets"
+msgstr "Inactive widgets"
+
+#: lib/patterns/large-header-button.php:10
+msgid "Read now"
+msgstr "Read now"
+
+#. translators: 1: Pattern name.
+#: lib/class-wp-block-patterns-registry.php:74
+msgid "Block pattern \"%1$s\" not found."
+msgstr "Block pattern \"%1$s\" not found."
+
+#: lib/class-wp-block-patterns-registry.php:46
+msgid "Block pattern title must be a string."
+msgstr "Block pattern title must be a string."
+
+#: lib/class-wp-rest-sidebars-controller.php:542
+msgid "Settings of the widget."
+msgstr "Settings of the widget."
+
+#: lib/class-wp-rest-sidebars-controller.php:530
+msgid "HTML representation of the widget."
+msgstr "HTML representation of the widget."
+
+#: lib/class-wp-rest-sidebars-controller.php:525
+msgid "Number of the widget."
+msgstr "Number of the widget."
+
+#: lib/class-wp-rest-sidebars-controller.php:520
+msgid "Description of the widget."
+msgstr "Description of the widget."
+
+#: lib/class-wp-rest-sidebars-controller.php:515
+msgid "Name of the widget."
+msgstr "Name of the widget."
+
+#: lib/class-wp-rest-sidebars-controller.php:510
+msgid "Class name of the widget implementation."
+msgstr "Class name of the widget implementation."
+
+#: lib/class-wp-rest-sidebars-controller.php:505
+msgid "Type of widget for the object."
+msgstr "Type of widget for the object."
+
+#: lib/class-wp-rest-sidebars-controller.php:494
+msgid "Nested widgets."
+msgstr "Nested widgets."
+
+#: lib/class-wp-rest-sidebars-controller.php:486
+msgid "Status of sidebar."
+msgstr "Status of sidebar."
+
+#: lib/class-wp-rest-sidebars-controller.php:479
+msgid "Description of sidebar."
+msgstr "Description of sidebar."
+
+#: lib/class-wp-rest-sidebars-controller.php:472
+msgid "Unique name identifying the sidebar."
+msgstr "Unique name identifying the sidebar."
+
+#: lib/class-wp-rest-sidebars-controller.php:465
+msgid "ID of sidebar."
+msgstr "ID of sidebar."
+
+#: lib/class-wp-rest-sidebars-controller.php:77
+msgid "The id of a registered sidebar"
+msgstr "The ID of a registered sidebar"
+
+#: lib/class-wp-widget-block.php:33
+msgid "Gutenberg block."
+msgstr "Gutenberg block."
+
+#: lib/patterns/large-header-button.php:13
+msgctxt "Block pattern description"
+msgid "A large hero section with a bright gradient background, a big heading and a filled button."
+msgstr "A large hero section with a bright gradient background, a big heading, and a filled button."
+
+#: lib/patterns/large-header-button.php:10
+msgid "nothing yet"
+msgstr "nothing yet"
+
+#: lib/patterns/large-header-button.php:10
+msgid "Thou hast seen"
+msgstr "Thou hast seen"
+
+#: lib/patterns/large-header-button.php:9
+msgid "Large header with a heading and a button "
+msgstr "Large header with a heading and a button "
+
+#: lib/patterns/two-images.php:12
+msgid "An old pencil drawing of Don Quixote and Sancho Panza sitting on their horses, by Wilhelm Marstrand."
+msgstr "An old pencil drawing of Don Quixote and Sancho Panza sitting on their horses, by Wilhelm Marstrand."
+
+#: lib/patterns/text-two-columns.php:12
+msgctxt "Block pattern description"
+msgid "Two columns of text preceded by a long heading."
+msgstr "Two columns of text preceded by a long heading."
+
+#: lib/patterns/text-two-columns.php:11
+msgid "The rest of it went in a doublet of fine cloth and velvet breeches and shoes to match for holidays, while on week-days he made a brave figure in his best homespun. He had in his house a housekeeper past forty, a niece under twenty, and a lad for the field and market-place, who used to saddle the hack as well as handle the bill-hook. The age of this gentleman of ours was bordering on fifty; he was of a hardy habit, spare, gaunt-featured, a very early riser and a great sportsman."
+msgstr "The rest of it went in a doublet of fine cloth and velvet breeches and shoes to match for holidays, while on week-days he made a brave figure in his best homespun. He had in his house a housekeeper past forty, a niece under twenty, and a lad for the field and market-place, who used to saddle the hack as well as handle the bill-hook. The age of this gentleman of ours was bordering on fifty; he was of a hardy habit, spare, gaunt-featured, a very early riser and a great sportsman."
+
+#: lib/patterns/text-two-columns.php:11
+msgid "In a village of La Mancha, the name of which I have no desire to call to mind, there lived not long since one of those gentlemen that keep a lance in the lance-rack, an old buckler, a lean hack, and a greyhound for coursing. An olla of rather more beef than mutton, a salad on most nights, scraps on Saturdays, lentils on Fridays, and a pigeon or so extra on Sundays, made away with three-quarters of his income."
+msgstr "In a village of La Mancha, the name of which I have no desire to call to mind, there lived not long since one of those gentlemen that keep a lance in the lance-rack, an old buckler, a lean hack, and a greyhound for coursing. An olla of rather more beef than mutton, a salad on most nights, scraps on Saturdays, lentils on Fridays, and a pigeon or so extra on Sundays, made away with three-quarters of his income."
+
+#: lib/patterns/text-two-columns.php:11
+msgid "Which treats of the character and pursuits of the famous gentleman Don Quixote of La Mancha"
+msgstr "Which treats of the character and pursuits of the famous gentleman Don Quixote of La Mancha"
+
+#: lib/patterns/two-buttons.php:13
+msgctxt "Block pattern description"
+msgid "Two buttons, one filled and one outlined, side by side."
+msgstr "Two buttons, one filled and one outlined, side by side."
+
+#: lib/patterns/two-buttons.php:10
+msgid "Download now"
+msgstr "Download now"
+
+#: lib/patterns/large-header.php:13
+msgctxt "Block pattern description"
+msgid "A large hero section with an example background image and a heading in the center."
+msgstr "A large hero section with an example background image and a heading in the centre."
+
+#: lib/patterns/large-header.php:10
+msgid "Don Quixote"
+msgstr "Don Quixote"
+
+#: lib/patterns/large-header.php:9
+msgid "Large header with a heading"
+msgstr "Large header with a heading"
+
+#: lib/patterns/heading-paragraph.php:13
+msgctxt "Block pattern description"
+msgid "A heading preceded by a chapter number, and followed by a paragraph."
+msgstr "A heading preceded by a chapter number, and followed by a paragraph."
+
+#: lib/patterns/heading-paragraph.php:10
+msgid "These preliminaries settled, he did not care to put off any longer the execution of his design, urged on to it by the thought of all the world was losing by his delay, seeing what wrongs he intended to right, grievances to redress, injustices to repair, abuses to remove, and duties to discharge."
+msgstr "These preliminaries settled, he did not care to put off any longer the execution of his design, urged on to it by the thought of all the world was losing by his delay, seeing what wrongs he intended to right, grievances to redress, injustices to repair, abuses to remove, and duties to discharge."
+
+#: lib/patterns/heading-paragraph.php:10
+msgid "Which treats of the first sally the ingenious Don Quixote made from home"
+msgstr "Which treats of the first sally the ingenious Don Quixote made from home"
+
+#: lib/patterns/heading-paragraph.php:9
+msgid "Heading and paragraph"
+msgstr "Heading and paragraph"
+
+#: lib/patterns/three-buttons.php:13
+msgctxt "Block pattern description"
+msgid "Three filled buttons with rounded corners, side by side."
+msgstr "Three filled buttons with rounded corners, side by side."
+
+#: lib/patterns/three-buttons.php:10 build/block-library/index.js:16
+msgid "Contact us"
+msgstr "Contact us"
+
+#: lib/patterns/two-buttons.php:10 lib/patterns/three-buttons.php:10
+msgid "About Cervantes"
+msgstr "About Cervantes"
+
+#: lib/patterns/text-three-columns-buttons.php:13
+msgctxt "Block pattern description"
+msgid "Three small columns of text, each with an outlined button with rounded corners at the bottom."
+msgstr "Three small columns of text, each with an outlined button with rounded corners at the bottom."
+
+#: lib/patterns/text-three-columns-buttons.php:11
+msgid "Wherein is related the droll way in which Don Quixote had himself dubbed a knight."
+msgstr "Wherein is related the droll way in which Don Quixote had himself dubbed a knight."
+
+#: lib/patterns/text-three-columns-buttons.php:11
+msgid "Which treats of the first sally the ingenious Don Quixote made from home."
+msgstr "Which treats of the first sally the ingenious Don Quixote made from home."
+
+#: lib/patterns/text-three-columns-buttons.php:11
+msgid "Which treats of the character and pursuits of the famous Don Quixote of La Mancha."
+msgstr "Which treats of the character and pursuits of the famous Don Quixote of La Mancha."
+
+#: lib/patterns/quote.php:13
+msgctxt "Block pattern description"
+msgid "A quote and citation with an image above, and a separator at the bottom."
+msgstr "A quote and citation with an image above, and a separator at the bottom."
+
+#: lib/patterns/quote.php:10
+msgid "— Don Quixote"
+msgstr "– Don Quixote"
+
+#: lib/patterns/quote.php:10
+msgid "\"Do you see over yonder, friend Sancho, thirty or forty hulking giants? I intend to do battle with them and slay them.\""
+msgstr "\"Do you see over yonder, friend Sancho, thirty or forty hulking giants? I intend to do battle with them and slay them.\""
+
+#: lib/patterns/quote.php:10
+msgid "Pencil drawing of Don Quixote"
+msgstr "Pencil drawing of Don Quixote"
+
+#: lib/patterns/text-two-columns-with-images.php:12
+msgctxt "Block pattern description"
+msgid "Two columns of text, each with an image on top."
+msgstr "Two columns of text, each with an image on top."
+
+#: lib/patterns/text-two-columns-with-images.php:11
+msgid "But of all there were none he liked so well as those of the famous Feliciano de Silva's composition, for their lucidity of style and complicated conceits were as pearls in his sight, particularly when in his reading he came upon courtships and cartels, where he often found passages like \"the reason of the unreason with which my reason is afflicted so weakens my reason that with reason I murmur at your beauty;\" or again, \"the high heavens render you deserving of the desert your greatness deserves.\""
+msgstr "But of all there were none he liked so well as those of the famous Feliciano de Silva's composition, for their lucidity of style and complicated conceits were as pearls in his sight, particularly when in his reading he came upon courtships and cartels, where he often found passages like \"the reason of the unreason with which my reason is afflicted so weakens my reason that with reason I murmur at your beauty;\" or again, \"the high heavens render you deserving of the desert your greatness deserves.\""
+
+#: lib/patterns/text-two-columns-with-images.php:11
+msgid "They must know, then, that the above-named gentleman whenever he was at leisure (which was mostly all the year round) gave himself up to reading books of chivalry with such ardour and avidity that he almost entirely neglected the pursuit of his field-sports, and even the management of his property; and to such a pitch did his eagerness and infatuation go that he sold many an acre of tillageland to buy books of chivalry to read, and brought home as many of them as he could get."
+msgstr "They must know, then, that the above-named gentleman, whenever he was at leisure, which was mostly all the year round, gave himself up to reading books of chivalry with such ardour and avidity that he almost entirely neglected the pursuit of his field sports, and even the management of his property; and to such a pitch did his eagerness and infatuation go, that he sold many an acre of tillageland to buy books of chivalry to read, and brought home as many of them as he could get."
+
+#: lib/edit-site-page.php:235
+msgid "The ID of the page that should be displayed on the front page"
+msgstr "The ID of the page that should be displayed on the front page"
+
+#: lib/edit-site-page.php:225
+msgid "What to show on the front page"
+msgstr "What to show on the front page"
+
+#: lib/compat.php:507
+msgid "Reusable Block updated."
+msgstr "Reusable Block updated."
+
+#: lib/compat.php:506
+msgid "Reusable Block scheduled."
+msgstr "Reusable Block scheduled."
+
+#: lib/compat.php:505
+msgid "Reusable Block reverted to draft."
+msgstr "Reusable Block reverted to draft."
+
+#: lib/compat.php:504
+msgid "Reusable Block published privately."
+msgstr "Reusable Block published privately."
+
+#: lib/compat.php:503
+msgid "Reusable Block published."
+msgstr "Reusable Block published."
+
+#: lib/compat.php:502
+msgid "Reusable Blocks list"
+msgstr "Reusable Blocks list"
+
+#: lib/compat.php:501
+msgid "Reusable Blocks list navigation"
+msgstr "Reusable Blocks list navigation"
+
+#: lib/compat.php:500
+msgid "Filter reusable blocks list"
+msgstr "Filter reusable blocks list"
+
+#: lib/compat.php:499
+msgid "No reusable blocks found in Trash."
+msgstr "No reusable blocks found in Bin."
+
+#: lib/compat.php:498
+msgid "No reusable blocks found."
+msgstr "No reusable blocks found."
+
+#: lib/compat.php:497
+msgid "Search Reusable Blocks"
+msgstr "Search Reusable Blocks"
+
+#: lib/compat.php:496
+msgid "All Reusable Blocks"
+msgstr "All Reusable Blocks"
+
+#: lib/compat.php:495
+msgid "View Reusable Block"
+msgstr "View Reusable Block"
+
+#: lib/compat.php:494
+msgid "Edit Reusable Block"
+msgstr "Edit Reusable Block"
+
+#: lib/compat.php:493
+msgid "New Reusable Block"
+msgstr "New Reusable Block"
+
+#: lib/compat.php:492
+msgid "Add New Reusable Block"
+msgstr "Add New Reusable Block"
+
+#: lib/compat.php:491
+msgctxt "Reusable Block"
+msgid "Add New"
+msgstr "Add New"
+
+#: lib/compat.php:490
+msgctxt "add new on admin bar"
+msgid "Reusable Block"
+msgstr "Reusable Block"
+
+#: lib/compat.php:489
+msgctxt "admin menu"
+msgid "Reusable Blocks"
+msgstr "Reusable Blocks"
+
+#: lib/compat.php:488
+msgctxt "post type singular name"
+msgid "Reusable Block"
+msgstr "Reusable Block"
+
+#: lib/compat.php:487
+msgctxt "post type general name"
+msgid "Reusable Blocks"
+msgstr "Reusable Blocks"
+
+#: build/block-library/blocks/site-logo.php:97
+msgid "Site logo."
+msgstr "Site logo."
+
+#: lib/patterns/three-buttons.php:10
+msgid "Books"
+msgstr "Books"
+
+#: lib/class-wp-rest-menus-controller.php:589
+msgid "Whether to automatically add top level pages to this menu."
+msgstr "Whether to automatically add top-level pages to this menu."
+
+#: lib/class-wp-rest-menus-controller.php:171
+msgid "Sorry, you are not allowed to set auto add pages."
+msgstr "Sorry, you are not allowed to set auto add pages."
+
+#: lib/patterns/text-two-columns-with-images.php:9
+msgid "Two columns of text with images"
+msgstr "Two columns of text with images"
+
+#: lib/patterns/two-images.php:11
+msgctxt "Block pattern description"
+msgid "An image gallery with two example images."
+msgstr "An image gallery with two example images."
+
+#: lib/patterns/three-buttons.php:9
+msgid "Three buttons"
+msgstr "Three buttons"
+
+#: lib/patterns/text-three-columns-buttons.php:9
+msgid "Three columns of text with buttons"
+msgstr "Three columns of text with buttons"
+
+#: lib/class-wp-block-patterns-registry.php:52
+msgid "Block pattern content must be a string."
+msgstr "Block pattern content must be a string."
+
+#: lib/class-wp-rest-menu-items-controller.php:923
+msgid "Version of the block format used in the HTML content."
+msgstr "Version of the block format used in the HTML content."
+
+#: lib/class-wp-rest-menu-items-controller.php:917
+msgid "HTML content, transformed for display."
+msgstr "HTML content, transformed for display."
+
+#: lib/class-wp-rest-menu-items-controller.php:912
+msgid "HTML content, as it exists in the database."
+msgstr "HTML content, as it exists in the database."
+
+#: lib/class-wp-rest-menu-items-controller.php:446
+msgid "Content required if menu item of type block."
+msgstr "Content required if menu item of type block."
+
+#: lib/class-wp-rest-image-editor-controller.php:249
+msgid "Unable to crop this image."
+msgstr "Unable to crop this image."
+
+#: lib/class-wp-rest-image-editor-controller.php:233
+msgid "Unable to rotate this image."
+msgstr "Unable to rotate this image."
+
+#: lib/class-wp-rest-image-editor-controller.php:225
+msgid "Unable to edit this image."
+msgstr "Unable to edit this image."
+
+#: lib/class-wp-rest-image-editor-controller.php:209
+msgid "The image was not edited. Edit the image before applying the changes."
+msgstr "The image was not edited. Edit the image before applying the changes."
+
+#: lib/class-wp-rest-image-editor-controller.php:190
+msgid "This type of file cannot be edited."
+msgstr "This type of file cannot be edited."
+
+#: lib/class-wp-rest-image-editor-controller.php:131
+#: lib/class-wp-rest-image-editor-controller.php:140
+#: lib/class-wp-rest-image-editor-controller.php:178
+msgid "Unable to get meta information for file."
+msgstr "Unable to get meta information for file."
+
+#: lib/class-wp-rest-image-editor-controller.php:99
+msgid "Sorry, you are not allowed to upload media on this site."
+msgstr "Sorry, you are not allowed to upload media on this site."
+
+#: lib/class-wp-rest-plugins-controller.php:938
+msgid "Limits results to plugins with the given status."
+msgstr "Limits results to plugins with the given status."
+
+#: lib/class-wp-rest-plugins-controller.php:914
+msgid "The plugin's text domain."
+msgstr "The plugin's text domain."
+
+#: lib/class-wp-rest-plugins-controller.php:908
+msgid "Minimum required version of PHP."
+msgstr "Minimum required version of PHP."
+
+#: lib/class-wp-rest-plugins-controller.php:902
+msgid "Minimum required version of WordPress."
+msgstr "Minimum required version of WordPress."
+
+#: lib/class-wp-rest-plugins-controller.php:896
+msgid "Whether the plugin can only be activated network-wide."
+msgstr "Whether the plugin can only be activated network wide."
+
+#: lib/class-wp-rest-plugins-controller.php:890
+msgid "The plugin version number."
+msgstr "The plugin version number."
+
+#: lib/class-wp-rest-plugins-controller.php:884
+msgid "The plugin description formatted for display."
+msgstr "The plugin description formatted for display."
+
+#: lib/class-wp-rest-plugins-controller.php:880
+msgid "The raw plugin description."
+msgstr "The raw plugin description."
+
+#: lib/class-wp-rest-plugins-controller.php:874
+msgid "The plugin description."
+msgstr "The plugin description."
+
+#: lib/class-wp-rest-plugins-controller.php:867
+msgid "Plugin author's website address."
+msgstr "The plugin author's website address."
+
+#: lib/class-wp-rest-plugins-controller.php:861
+msgid "The plugin author."
+msgstr "The plugin author."
+
+#: lib/class-wp-rest-plugins-controller.php:854
+msgid "The plugin's website address."
+msgstr "The plugin's website address."
+
+#: lib/class-wp-rest-plugins-controller.php:848
+msgid "The plugin name."
+msgstr "The plugin name."
+
+#: lib/class-wp-rest-plugins-controller.php:835
+msgid "The plugin file."
+msgstr "The plugin file."
+
+#: lib/class-wp-rest-plugins-controller.php:814
+msgid "The filesystem is currently unavailable for managing plugins."
+msgstr "The filesystem is currently unavailable for managing plugins."
+
+#: lib/class-wp-rest-plugins-controller.php:695
+msgid "Network only plugin must be network activated."
+msgstr "A network only plugin must be network activated."
+
+#: lib/class-wp-rest-plugins-controller.php:661
+msgid "Sorry, you are not allowed to deactivate this plugin."
+msgstr "Sorry, you are not allowed to deactivate this plugin."
+
+#: lib/class-wp-rest-plugins-controller.php:653
+msgid "Sorry, you are not allowed to activate this plugin."
+msgstr "Sorry, you are not allowed to activate this plugin."
+
+#: lib/class-wp-rest-plugins-controller.php:645
+msgid "Sorry, you do not have permission to manage network plugins."
+msgstr "Sorry, you do not have permission to manage network plugins."
+
+#: lib/class-wp-rest-plugins-controller.php:498
+msgid "Cannot delete an active plugin. Please deactivate it first."
+msgstr "Cannot delete an active plugin. Please deactivate it first."
+
+#: lib/class-wp-rest-plugins-controller.php:463
+msgid "Sorry, you are not allowed to delete plugins for this site."
+msgstr "Sorry, you are not allowed to delete plugins for this site."
+
+#: lib/class-wp-rest-plugins-controller.php:343
+msgid "Unable to determine what plugin was installed."
+msgstr "Unable to determine what plugin was installed."
+
+#: lib/class-wp-rest-plugins-controller.php:253
+msgid "Sorry, you are not allowed to activate plugins."
+msgstr "Sorry, you are not allowed to activate plugins."
+
+#: lib/class-wp-rest-plugins-controller.php:245
+msgid "Sorry, you are not allowed to install plugins on this site."
+msgstr "Sorry, you are not allowed to install plugins on this site."
+
+#: lib/class-wp-rest-plugins-controller.php:228
+msgid "Sorry, you are not allowed to manage this plugin."
+msgstr "Sorry, you are not allowed to manage this plugin."
+
+#: lib/class-wp-rest-plugins-controller.php:215
+#: lib/class-wp-rest-plugins-controller.php:601
+msgid "Plugin not found."
+msgstr "Plugin not found."
+
+#: lib/class-wp-rest-plugins-controller.php:118
+#: lib/class-wp-rest-plugins-controller.php:168
+#: lib/class-wp-rest-plugins-controller.php:385
+#: lib/class-wp-rest-plugins-controller.php:455
+msgid "Sorry, you are not allowed to manage plugins for this site."
+msgstr "Sorry, you are not allowed to manage plugins for this site."
+
+#: lib/class-wp-rest-plugins-controller.php:61
+#: lib/class-wp-rest-plugins-controller.php:842
+msgid "The plugin activation status."
+msgstr "The plugin activation status."
+
+#: lib/class-wp-rest-plugins-controller.php:57
+msgid "WordPress.org plugin directory slug."
+msgstr "WordPress.org plugin directory slug."
+
+#: lib/class-wp-rest-block-types-controller.php:495
+msgid "Block example."
+msgstr "Block example."
+
+#: lib/class-wp-rest-block-types-controller.php:485
+msgid "Block keywords."
+msgstr "Block keywords."
+
+#: lib/class-wp-rest-block-types-controller.php:475
+msgid "Parent blocks."
+msgstr "Parent blocks."
+
+#: lib/class-wp-rest-block-types-controller.php:468
+msgid "Public text domain."
+msgstr "Public text domain."
+
+#: lib/class-wp-rest-block-types-controller.php:457
+msgid "Block style variations."
+msgstr "Block style variations."
+
+#: lib/class-wp-rest-block-types-controller.php:450
+msgid "Public facing style handle."
+msgstr "Public facing style handle."
+
+#: lib/class-wp-rest-block-types-controller.php:443
+msgid "Editor style handle."
+msgstr "Editor style handle."
+
+#: lib/class-wp-rest-block-types-controller.php:436
+msgid "Public facing script handle."
+msgstr "Public facing script handle."
+
+#: lib/class-wp-rest-block-types-controller.php:429
+msgid "Editor script handle."
+msgstr "Editor script handle."
+
+#: lib/class-wp-rest-block-types-controller.php:422
+msgid "Is the block dynamically rendered."
+msgstr "Is the block dynamically rendered."
+
+#: lib/class-wp-rest-block-types-controller.php:415
+msgid "Block category."
+msgstr "Block category."
+
+#: lib/class-wp-rest-block-types-controller.php:407
+msgid "Block supports."
+msgstr "Block supports."
+
+#: lib/class-wp-rest-block-types-controller.php:397
+msgid "Context values inherited by blocks of this type."
+msgstr "Context values inherited by blocks of this type."
+
+#: lib/class-wp-rest-block-types-controller.php:386
+msgid "Context provided by blocks of this type."
+msgstr "Context provided by blocks of this type."
+
+#: lib/class-wp-rest-block-types-controller.php:375
+msgid "Block attributes."
+msgstr "Block attributes."
+
+#: lib/class-wp-rest-block-types-controller.php:368
+msgid "Icon of block type."
+msgstr "Icon of block type."
+
+#: lib/class-wp-rest-block-types-controller.php:361
+msgid "Description of block type."
+msgstr "Description of block type."
+
+#: lib/class-wp-rest-block-types-controller.php:354
+msgid "Unique name identifying the block type."
+msgstr "Unique name identifying the block type."
+
+#: lib/class-wp-rest-block-types-controller.php:347
+msgid "Title of block type."
+msgstr "Title of block type."
+
+#: lib/class-wp-rest-block-types-controller.php:199
+msgid "Invalid block type."
+msgstr "Invalid block type."
+
+#: lib/class-wp-rest-block-types-controller.php:187
+msgid "Sorry, you are not allowed to manage block types."
+msgstr "Sorry, you are not allowed to manage block types."
+
+#: lib/class-wp-rest-block-types-controller.php:90
+#: lib/class-wp-rest-block-types-controller.php:522
+msgid "Block namespace."
+msgstr "Block namespace."
+
+#: lib/class-wp-rest-block-types-controller.php:86
+msgid "Block name."
+msgstr "Block name."
+
+#: lib/class-wp-rest-block-directory-controller.php:326
+msgid "Limit result set to blocks matching the search term."
+msgstr "Limit result set to blocks matching the search term."
+
+#: lib/class-wp-rest-block-directory-controller.php:296
+msgid "An object representing the block CSS and JavaScript assets."
+msgstr "An object representing the block CSS and JavaScript assets."
+
+#: lib/class-wp-rest-block-directory-controller.php:291
+msgid "The date when the block was last updated, in fuzzy human readable format."
+msgstr "The date when the block was last updated, in fuzzy human readable format."
+
+#: lib/class-wp-rest-block-directory-controller.php:285
+msgid "The block icon."
+msgstr "The block icon."
+
+#: lib/class-wp-rest-block-directory-controller.php:280
+msgid "The WordPress.org username of the block author."
+msgstr "The WordPress.org username of the block author."
+
+#: lib/class-wp-rest-block-directory-controller.php:275
+msgid "The number of blocks published by the same author."
+msgstr "The number of blocks published by the same author."
+
+#: lib/class-wp-rest-block-directory-controller.php:270
+msgid "The average rating of blocks published by the same author."
+msgstr "The average rating of blocks published by the same author."
+
+#: lib/class-wp-rest-block-directory-controller.php:265
+msgid "The number sites that have activated this block."
+msgstr "The number of sites that have activated this block."
+
+#: lib/class-wp-rest-block-directory-controller.php:260
+msgid "The number of ratings."
+msgstr "The number of ratings."
+
+#: lib/class-wp-rest-block-directory-controller.php:255
+msgid "The star rating of the block."
+msgstr "The star rating of the block."
+
+#: lib/class-wp-rest-block-directory-controller.php:250
+msgid "The block slug."
+msgstr "The block slug."
+
+#: lib/class-wp-rest-block-directory-controller.php:245
+msgid "A short description of the block, in human readable format."
+msgstr "A short description of the block, in human readable format."
+
+#: lib/class-wp-rest-block-directory-controller.php:240
+msgid "The block title, in human readable format."
+msgstr "The block title, in human readable format."
+
+#: lib/class-wp-rest-block-directory-controller.php:235
+msgid "The block name, in namespace/block-name format."
+msgstr "The block name, in namespace/block-name format."
+
+#: lib/class-wp-rest-block-directory-controller.php:61
+msgid "Sorry, you are not allowed to browse the block directory."
+msgstr "Sorry, you are not allowed to browse the block directory."
+
+#: lib/compat.php:334 build/blocks/index.js:1
+msgid "Design"
+msgstr "Design"
+
+#: lib/compat.php:324 build/blocks/index.js:1
+msgid "Text"
+msgstr "Text"
+
+#. translators: %1: field name. %2: block name
+#: lib/compat.php:93
+msgid "The asset file for the \"%1$s\" defined in \"%2$s\" block definition is missing."
+msgstr "The asset file for the \"%1$s\" defined in the \"%2$s\" block definition is missing."
+
+#. translators: 1: Block name.
+#: lib/class-wp-block.php:125
+msgid "The \"providesContext\" parameter provided in block type \"%s\" is deprecated. Please use \"provides_context\"."
+msgstr "The \"providesContext\" parameter provided in block type \"%s\" is deprecated. Please use \"provides_context\"."
+
+#. translators: 1: Block name.
+#: lib/class-wp-block.php:116
+msgid "The \"context\" parameter provided in block type \"%s\" is deprecated. Please use \"uses_context\" instead."
+msgstr "The \"context\" parameter provided in block type \"%s\" is deprecated. Please use \"uses_context\" instead."
+
+#: lib/template-parts.php:152
+msgid "The template slug for the template that the template part is used by."
+msgstr "The template slug for the template that the template part is used by."
+
+#: lib/template-parts.php:148
+msgid "Whether to filter for resolved template parts."
+msgstr "Whether to filter for resolved template parts."
+
+#. translators: %s: the author.
+#. translators: byline. %s: current author.
+#: build/block-library/blocks/rss.php:60
+#: build/block-library/blocks/latest-posts.php:114
+#: build/block-library/index.js:40
+msgid "by %s"
+msgstr "by %s"
+
+#. translators: 1: Block pattern name.
+#: lib/class-wp-block-pattern-categories-registry.php:62
+msgid "Block pattern category \"%1$s\" not found."
+msgstr "Block pattern category \"%1$s\" not found."
+
+#: lib/class-wp-block-pattern-categories-registry.php:40
+msgid "Block pattern category name must be a string."
+msgstr "Block pattern category name must be a string."
+
+#: lib/block-patterns.php:63
+msgctxt "Block pattern category"
+msgid "Headers"
+msgstr "Headers"
+
+#: lib/block-patterns.php:62
+msgctxt "Block pattern category"
+msgid "Gallery"
+msgstr "Gallery"
+
+#: lib/block-patterns.php:60
+msgctxt "Block pattern category"
+msgid "Buttons"
+msgstr "Buttons"
+
+#: lib/block-patterns.php:61
+msgctxt "Block pattern category"
+msgid "Columns"
+msgstr "Columns"
+
+#: lib/block-patterns.php:64
+msgctxt "Block pattern category"
+msgid "Text"
+msgstr "Text"
+
+#: lib/templates.php:164
+msgid "Whether to filter for resolved templates"
+msgstr "Whether to filter for resolved templates"
+
+#: lib/patterns/two-images.php:9
+msgid "Two images side by side"
+msgstr "Two images side by side"
+
+#: lib/patterns/text-two-columns.php:9
+msgid "Two columns of text"
+msgstr "Two columns of text"
+
+#: lib/patterns/two-buttons.php:9
+msgid "Two buttons"
+msgstr "Two buttons"
+
+#: lib/template-parts.php:156
+msgid "The theme slug for the theme that created the template part."
+msgstr "The theme slug for the theme that created the template part."
+
+#. translators: accessibility text for the content landmark region.
+#: lib/navigation.php:338 build/edit-widgets/index.js:7
+#: build/edit-post/index.js:37 build/edit-site/index.js:8
+msgid "Content"
+msgstr "Content"
+
+#: lib/experiments-page.php:50
+msgid "Enable Navigation screen"
+msgstr "Enable Navigation screen"
+
+#: gutenberg.php:62 gutenberg.php:63
+msgid "Navigation (beta)"
+msgstr "Navigation (beta)"
+
+#: lib/class-wp-rest-menu-items-controller.php:1028
+msgid "Sort collection by object attribute."
+msgstr "Sort collection by object attribute."
+
+#: lib/class-wp-rest-menu-items-controller.php:1021
+msgid "Order sort attribute ascending or descending."
+msgstr "Order sort attribute ascending or descending."
+
+#: lib/class-wp-rest-menu-items-controller.php:1016
+msgid "Limit result set to posts with a specific menu_order value."
+msgstr "Limit result set to posts with a specific menu_order value."
+
+#. translators: %s: taxonomy name
+#: lib/class-wp-rest-menu-items-controller.php:982
+msgid "The terms assigned to the object in the %s taxonomy."
+msgstr "The terms assigned to the object in the %s taxonomy."
+
+#: lib/class-wp-rest-menu-items-controller.php:970
+msgid "Whether the menu item represents an object that no longer exists."
+msgstr "Whether the menu item represents an object that no longer exists ."
+
+#: lib/class-wp-rest-menu-items-controller.php:956
+msgid "The XFN relationship expressed in the link of this menu item."
+msgstr "The XFN relationship expressed in the link of this menu item."
+
+#: lib/class-wp-rest-menu-items-controller.php:949
+msgid "The URL to which this menu item points."
+msgstr "The URL to which this menu item points."
+
+#: lib/class-wp-rest-menu-items-controller.php:942
+msgid "The singular label used to describe this type of menu item."
+msgstr "The singular label used to describe this type of menu item."
+
+#: lib/class-wp-rest-menu-items-controller.php:932
+msgid "The target attribute of the link element for this menu item."
+msgstr "The target attribute of the link element for this menu item."
+
+#: lib/class-wp-rest-menu-items-controller.php:895
+msgid "The DB ID of the original object this menu item represents, e . g . ID for posts and term_id for categories."
+msgstr "The DB ID of the original object this menu item represents, e.g. ID for posts and term_id for categories."
+
+#: lib/class-wp-rest-menu-items-controller.php:889
+msgid "The type of object originally represented, such as \"category,\" \"post\", or \"attachment.\""
+msgstr "The type of object originally represented, such as \"category\", \"post\" or \"attachment\"."
+
+#: lib/class-wp-rest-menu-items-controller.php:882
+msgid "The DB ID of the nav_menu_item that is this item's menu parent, if any, otherwise 0."
+msgstr "The DB ID of the nav_menu_item that is this item's menu parent, if any, otherwise 0."
+
+#: lib/class-wp-rest-menu-items-controller.php:873
+msgid "The description of this menu item."
+msgstr "The description of this menu item."
+
+#: lib/class-wp-rest-menu-items-controller.php:859
+msgid "Class names for the link element of this menu item."
+msgstr "Class names for the link element of this menu item."
+
+#: lib/class-wp-rest-menu-items-controller.php:850
+msgid "Text for the title attribute of the link element for this menu item."
+msgstr "Text for the title attribute of the link element for this menu item."
+
+#: lib/class-wp-rest-menu-items-controller.php:834
+msgid "A named status for the object."
+msgstr "A named status for the object."
+
+#: lib/class-wp-rest-menu-items-controller.php:826
+msgid "The family of objects originally represented, such as \"post_type\" or \"taxonomy\"."
+msgstr "The family of objects originally represented, such as \"post_type\" or \"taxonomy\"."
+
+#: lib/class-wp-rest-menu-items-controller.php:819
+msgid "Name of type."
+msgstr "Name of type."
+
+#: lib/class-wp-rest-menu-items-controller.php:801
+msgid "HTML title for the object, transformed for display."
+msgstr "HTML title for the object, transformed for display."
+
+#: lib/class-wp-rest-menu-items-controller.php:796
+msgid "Title for the object, as it exists in the database."
+msgstr "Title for the object, as it exists in the database."
+
+#: lib/class-wp-rest-menu-items-controller.php:757
+msgid "Get linked object."
+msgstr "Get linked object."
+
+#: lib/class-wp-rest-menu-items-controller.php:529
+msgid "Invalid URL."
+msgstr "Invalid URL."
+
+#: lib/class-wp-rest-menu-items-controller.php:487
+#: lib/class-wp-rest-menu-items-controller.php:490
+msgid "Invalid menu item parent."
+msgstr "Invalid menu item parent."
+
+#: lib/class-wp-rest-menu-items-controller.php:479
+msgid "Invalid menu position."
+msgstr "Invalid menu position."
+
+#: lib/class-wp-rest-menu-items-controller.php:454
+msgid "Invalid menu ID."
+msgstr "Invalid menu ID."
+
+#: lib/class-wp-rest-menu-items-controller.php:439
+msgid "URL required if menu item of type custom."
+msgstr "URL required if menu item of custom type."
+
+#: lib/class-wp-rest-menu-items-controller.php:436
+msgid "Title required if menu item of type custom."
+msgstr "Title required if menu item of custom type."
+
+#: lib/class-wp-rest-menu-items-controller.php:429
+msgid "Invalid post type."
+msgstr "Invalid post type."
+
+#: lib/class-wp-rest-menu-items-controller.php:418
+msgid "Invalid post ID."
+msgstr "Invalid post ID."
+
+#: lib/class-wp-rest-menu-items-controller.php:271
+msgid "The post cannot be deleted."
+msgstr "The post cannot be deleted."
+
+#. translators: %s: force=true
+#: lib/class-wp-rest-menu-items-controller.php:263
+msgid "Menu items do not support trashing. Set '%s' to delete."
+msgstr "Menu items do not support binning. Set '%s' to delete."
+
+#: lib/class-wp-rest-menu-items-controller.php:97
+msgid "Cannot create existing post."
+msgstr "Cannot create existing post."
+
+#: lib/class-wp-rest-menu-items-controller.php:83
+msgid "Sorry, you cannot view these menu items, unless you have access to permission edit them. "
+msgstr "Sorry, you cannot view these menu items, unless you have permission to edit them."
+
+#: lib/class-wp-rest-customizer-nonces.php:52
+#: lib/class-wp-rest-menu-items-controller.php:81
+msgid "Sorry, you are not allowed to edit posts in this post type."
+msgstr "Sorry, you are not allowed to edit posts in this post type."
+
+#: lib/class-wp-rest-menu-items-controller.php:65
+msgid "Sorry, you cannot view this menu item, unless you have access to permission edit it. "
+msgstr "Sorry, you cannot view this menu item, unless you have permission to edit it."
+
+#: lib/class-wp-rest-menus-controller.php:580
+msgid "The locations assigned to the menu."
+msgstr "The locations assigned to the menu."
+
+#: lib/class-wp-rest-menus-controller.php:552
+msgid "Menu location does not exist."
+msgstr "Menu location does not exist."
+
+#: lib/class-wp-rest-menus-controller.php:458
+msgid "The term cannot be deleted."
+msgstr "The term cannot be deleted."
+
+#. translators: %s: force=true
+#: lib/class-wp-rest-menus-controller.php:448
+msgid "Terms do not support trashing. Set '%s' to delete."
+msgstr "Terms do not support binning. Set '%s' to delete."
+
+#: lib/class-wp-rest-menus-controller.php:268
+#: lib/class-wp-rest-menus-controller.php:377
+msgid "Parent term does not exist."
+msgstr "Parent term does not exist."
+
+#: lib/class-wp-rest-menus-controller.php:262
+#: lib/class-wp-rest-menus-controller.php:371
+msgid "Cannot set parent term, taxonomy is not hierarchical."
+msgstr "Cannot set parent term, taxonomy is not hierarchical."
+
+#: lib/class-wp-rest-menus-controller.php:139
+msgid "Sorry, you are not allowed to assign the provided locations."
+msgstr "Sorry, you are not allowed to assign the provided locations."
+
+#: lib/class-wp-rest-menus-controller.php:60
+msgid "Sorry, you cannot view this menu, unless you have access to permission edit it. "
+msgstr "Sorry, you cannot view this menu, unless you have permission to edit it."
+
+#: lib/class-wp-rest-menus-controller.php:58
+msgid "Sorry, you are not allowed to edit this term."
+msgstr "Sorry, you are not allowed to edit this term."
+
+#: lib/class-wp-rest-menus-controller.php:40
+msgid "Sorry, you cannot view these menus, unless you have access to permission edit them. "
+msgstr "Sorry, you cannot view these menus, unless you have permission to edit them. "
+
+#: lib/class-wp-rest-menus-controller.php:38
+msgid "Sorry, you are not allowed to edit terms in this taxonomy."
+msgstr "Sorry, you are not allowed to edit terms in this taxonomy."
+
+#: lib/class-wp-rest-menu-locations-controller.php:206
+msgid "The ID of the assigned menu."
+msgstr "The ID of the assigned menu."
+
+#: lib/class-wp-rest-menu-locations-controller.php:200
+msgid "The description of the menu location."
+msgstr "The description of the menu location."
+
+#: lib/class-wp-rest-menu-locations-controller.php:194
+msgid "The name of the menu location."
+msgstr "The name of the menu location."
+
+#: lib/class-wp-rest-menus-controller.php:146
+#: lib/class-wp-rest-menu-locations-controller.php:116
+#: lib/class-wp-rest-menu-locations-controller.php:132
+msgid "Invalid menu location."
+msgstr "Invalid menu location."
+
+#: lib/class-wp-rest-menu-locations-controller.php:76
+#: lib/class-wp-rest-menu-locations-controller.php:113
+msgid "Sorry, you are not allowed to view menu locations."
+msgstr "Sorry, you are not allowed to view menu locations."
+
+#: lib/class-wp-rest-menu-locations-controller.php:50
+msgid "An alphanumeric identifier for the menu location."
+msgstr "An alphanumeric identifier for the menu location."
+
+#: lib/global-styles.php:783 build/edit-site/index.js:4
+msgid "Global Styles"
+msgstr "Global Styles"
+
+#: lib/template-loader.php:95
+msgid "Empty template."
+msgstr "Empty template."
+
+#: lib/template-loader.php:103
+msgid "No matching template found."
+msgstr "No matching template found."
+
+#: lib/experiments-page.php:109
+msgid "The block editor includes experimental features that are useable while they're in development. Select the ones you'd like to enable. These features are likely to change, so avoid using them in production."
+msgstr "The block editor includes experimental features that are useable while they're in development. Select the ones you'd like to enable. These features are likely to change, so avoid using them in production."
+
+#: lib/experiments-page.php:61
+msgid "Enable Full Site Editing (Warning: this will replace your theme and cause potentially irreversible changes to your site. We recommend using this only in a development environment.)"
+msgstr "Enable Full Site Editing (Warning: this will replace your theme and cause potentially irreversible changes to your site. We recommend using this only in a development environment.)"
+
+#: gutenberg.php:71 gutenberg.php:72
+msgid "Site Editor (beta)"
+msgstr "Site Editor (beta)"
+
+#: build/block-library/blocks/query-pagination.php:33
+#: build/block-library/index.js:58 build/components/index.js:18
+msgid "Next"
+msgstr "Next"
+
+#: build/block-library/blocks/query-pagination.php:26
+#: build/block-library/index.js:58 build/components/index.js:18
+msgid "Previous"
+msgstr "Previous"
+
+#: lib/experiments-page.php:72
+msgid "Enable Full Site Editing demo templates"
+msgstr "Enable Full Site Editing demo templates"
+
+#: lib/experiments-page.php:67
+msgid "Full Site Editing Demo Templates"
+msgstr "Full Site Editing Demo Templates"
+
+#: lib/class-wp-rest-widget-utils-controller.php:47
+msgid "Current widget instance"
+msgstr "Current widget instance"
+
+#: lib/template-parts.php:36
+msgid "Template parts to include in your templates."
+msgstr "Template parts to include in your templates."
+
+#: lib/template-parts.php:31
+msgid "Template parts list"
+msgstr "Template parts list"
+
+#: lib/template-parts.php:30
+msgid "Template parts list navigation"
+msgstr "Template parts list navigation"
+
+#: lib/template-parts.php:29
+msgid "Filter template parts list"
+msgstr "Filter template parts list"
+
+#: lib/template-parts.php:28
+msgid "Uploaded to this template part"
+msgstr "Uploaded to this template part"
+
+#: lib/template-parts.php:27
+msgid "Insert into template part"
+msgstr "Insert into template part"
+
+#: lib/template-parts.php:26
+msgid "Template part archives"
+msgstr "Template part archives"
+
+#: lib/template-parts.php:25
+msgid "No template parts found in Trash."
+msgstr "No template parts found in Bin."
+
+#: lib/template-parts.php:24
+msgid "No template parts found."
+msgstr "No template parts found."
+
+#: lib/template-parts.php:23
+msgid "Parent Template Part:"
+msgstr "Parent Template Part:"
+
+#: lib/template-parts.php:22
+msgid "Search Template Parts"
+msgstr "Search Template Parts"
+
+#: lib/template-parts.php:21
+msgid "All Template Parts"
+msgstr "All Template Parts"
+
+#: lib/template-parts.php:20
+msgid "View Template Part"
+msgstr "View Template Part"
+
+#: lib/template-parts.php:19
+msgid "Edit Template Part"
+msgstr "Edit Template Part"
+
+#: lib/template-parts.php:18
+msgid "New Template Part"
+msgstr "New Template Part"
+
+#: lib/template-parts.php:17
+msgid "Add New Template Part"
+msgstr "Add New Template Part"
+
+#: lib/template-parts.php:16
+msgctxt "Template Part"
+msgid "Add New"
+msgstr "Add New"
+
+#: lib/template-parts.php:15
+msgctxt "Admin Menu text"
+msgid "Template Parts"
+msgstr "Template Parts"
+
+#. translators: %s: template part title.
+#: lib/template-parts.php:14 build/block-library/index.js:58
+msgid "Template Part"
+msgstr "Template Part"
+
+#: lib/template-parts.php:13 build/edit-site/index.js:4
+msgid "Template Parts"
+msgstr "Template Parts"
+
+#: lib/experiments-page.php:45 build/block-library/index.js:30
+#: build/edit-navigation/index.js:2
+msgid "Navigation"
+msgstr "Navigation"
+
+#: lib/templates.php:31
+msgid "Templates list"
+msgstr "Templates list"
+
+#: lib/templates.php:30
+msgid "Templates list navigation"
+msgstr "Templates list navigation"
+
+#: lib/templates.php:29
+msgid "Filter templates list"
+msgstr "Filter templates list"
+
+#: lib/templates.php:28
+msgid "Uploaded to this template"
+msgstr "Uploaded to this template"
+
+#: lib/templates.php:27
+msgid "Insert into template"
+msgstr "Insert into template"
+
+#: lib/templates.php:26
+msgid "Template archives"
+msgstr "Template archives"
+
+#: lib/templates.php:25
+msgid "No templates found in Trash."
+msgstr "No templates found in bin."
+
+#: lib/templates.php:24
+msgid "No templates found."
+msgstr "No templates found."
+
+#: lib/templates.php:23
+msgid "Parent Template:"
+msgstr "Parent template:"
+
+#: lib/templates.php:22
+msgid "Search Templates"
+msgstr "Search templates"
+
+#: lib/templates.php:21
+msgid "All Templates"
+msgstr "All templates"
+
+#: lib/templates.php:20
+msgid "View Template"
+msgstr "View template"
+
+#: lib/templates.php:19
+msgid "Edit Template"
+msgstr "Edit template"
+
+#: lib/templates.php:18
+msgid "New Template"
+msgstr "New template"
+
+#: lib/templates.php:17
+msgid "Add New Template"
+msgstr "Add new template"
+
+#: lib/templates.php:16
+msgctxt "Template"
+msgid "Add New"
+msgstr "Add new"
+
+#: lib/templates.php:15
+msgctxt "Admin Menu text"
+msgid "Templates"
+msgstr "Templates"
+
+#: lib/templates.php:14 build/edit-site/index.js:4
+msgid "Template"
+msgstr "Template"
+
+#: lib/template-loader.php:372
+msgid "No matching template found"
+msgstr "No matching template found"
+
+#: lib/experiments-page.php:56
+msgid "Full Site Editing"
+msgstr "Full site editing"
+
+#: lib/templates.php:36
+msgid "Templates to include in your theme."
+msgstr "Templates to include in your theme."
+
+#: lib/templates.php:13
+msgid "Templates"
+msgstr "Templates"
+
+#: lib/class-wp-rest-plugins-controller.php:337
+msgid "Unable to connect to the filesystem. Please confirm your credentials."
+msgstr "Unable to connect to the file system. Please confirm your credentials."
+
+#: gutenberg.php:100
+msgid "Experiments Settings"
+msgstr "Experiments Settings"
+
+#: lib/experiments-page.php:19
+msgid "Experimental settings"
+msgstr "Experimental settings"
+
+#: lib/class-wp-block-patterns-registry.php:40
+msgid "Block pattern name must be a string."
+msgstr "Block pattern name must be a string."
+
+#. translators: %s: taxonomy name
+#: build/block-library/blocks/tag-cloud.php:28
+msgid "Your site doesn&#8217;t have any %s, so there&#8217;s nothing to display here at the moment."
+msgstr "Your site doesn&#8217;t have any %s, so there&#8217;s nothing to display here at the moment."
+
+#: lib/widgets.php:249
+msgid "Block area updated."
+msgstr "Block area updated."
+
+#: lib/widgets.php:248
+msgid "Block area scheduled."
+msgstr "Block area scheduled."
+
+#: lib/widgets.php:245
+msgid "Block area published."
+msgstr "Block area published."
+
+#: lib/widgets.php:244
+msgid "Block areas list"
+msgstr "Block areas list"
+
+#: lib/widgets.php:243
+msgid "Block areas list navigation"
+msgstr "Block areas list navigation"
+
+#: lib/widgets.php:242
+msgid "Filter block areas list"
+msgstr "Filter block areas list"
+
+#: lib/widgets.php:240
+msgid "No block area found."
+msgstr "No block area found."
+
+#: lib/widgets.php:239
+msgid "Search Block Areas"
+msgstr "Search Block Areas"
+
+#: lib/widgets.php:238
+msgid "All Block Areas"
+msgstr "All Block Areas"
+
+#: lib/widgets.php:237
+msgid "View Block Area"
+msgstr "View Block Area"
+
+#: lib/widgets.php:236
+msgid "Edit Block Area"
+msgstr "Edit Block Area"
+
+#: lib/widgets.php:235
+msgid "New Block Area"
+msgstr "New Block Area"
+
+#: lib/widgets.php:234
+msgid "Add New Block Area"
+msgstr "Add New Block Area"
+
+#: lib/widgets.php:231
+msgctxt "admin menu"
+msgid "Block Areas"
+msgstr "Block Areas"
+
+#: lib/widgets.php:230
+msgctxt "post type singular name"
+msgid "Block Area (Experimental)"
+msgstr "Block Area (Experimental)"
+
+#: lib/widgets.php:229
+msgctxt "post type general name"
+msgid "Block Area (Experimental)"
+msgstr "Block Area (Experimental)"
+
+#: lib/widgets.php:227
+msgid "Experimental custom post type that will store block areas referenced by themes."
+msgstr "Experimental custom post type that will store block areas referenced by themes."
+
+#: lib/class-wp-rest-widget-utils-controller.php:74
+#: lib/class-wp-rest-sidebars-controller.php:109
+msgid "Sorry, you are not allowed to access widgets on this site."
+msgstr "Sorry, you are not allowed to access widgets on this site."
+
+#: lib/class-wp-rest-widget-utils-controller.php:41
+msgid "Class name of the widget."
+msgstr "Class name of the widget."
+
+#: build/block-library/blocks/rss.php:23
+msgid "An error has occurred, which probably means the feed is down. Try again later."
+msgstr "An error has occurred, which probably means the feed is down. Try again later."
+
+#: build/block-library/blocks/rss.php:19
+msgid "RSS Error:"
+msgstr "RSS error:"
+
+#: build/block-library/blocks/search.php:25
+#: build/block-library/blocks/search.php:26
+#: build/block-library/blocks/search.php:52 build/block-library/index.js:49
+#: build/block-library/index.js:58
+msgid "Search"
+msgstr "Search"
+
+#. translators: Use this to specify the CSS font family for the default font.
+#: lib/edit-site-page.php:53
+msgctxt "CSS Font Family for Editor Font"
+msgid "Noto Serif"
+msgstr "Noto Serif"
+
+#: lib/widgets.php:247
+msgid "Block area reverted to draft."
+msgstr "Block area reverted to draft."
+
+#: lib/widgets.php:246
+msgid "Block area published privately."
+msgstr "Block area published privately."
+
+#: lib/widgets.php:241
+msgid "No block areas found in Trash."
+msgstr "No block areas found in Bin."
+
+#: lib/widgets.php:233
+msgctxt "Block"
+msgid "Add New"
+msgstr "Add New"
+
+#: lib/widgets.php:232
+msgctxt "add new on admin bar"
+msgid "Block Area"
+msgstr "Block Area"
+
+#: lib/widgets-page.php:66 lib/edit-site-page.php:114
+#: lib/navigation-page.php:45 build/block-editor/index.js:25
+msgid "Thumbnail"
+msgstr "Thumbnail"
+
+#: lib/widgets-page.php:69 lib/edit-site-page.php:117
+#: lib/navigation-page.php:48 build/block-editor/index.js:25
+msgid "Full Size"
+msgstr "Full Size"
+
+#: lib/compat.php:329 build/block-editor/index.js:69 build/blocks/index.js:1
+#: build/core-data/index.js:1
+msgid "Media"
+msgstr "Media"
+
+#. translators: Abbreviated date/time format, see https://www.php.net/date
+#: lib/compat.php:292
+msgid "M j, Y g:i a"
+msgstr "M j, Y g:i a"
+
+#: lib/class-wp-rest-image-editor-controller.php:94
+msgid "Sorry, you are not allowed to edit images."
+msgstr "Sorry, you are not allowed to edit images."
+
+#: lib/widgets-page.php:67 lib/edit-site-page.php:115
+#: lib/navigation-page.php:46 build/block-editor/index.js:25
+#: build/components/index.js:6
+msgid "Medium"
+msgstr "Medium"
+
+#: build/block-library/blocks/archives.php:96
+msgid "No archives to show."
+msgstr "No archives to show."
+
+#: post-content.php:41
+msgid "Beautiful landscape"
+msgstr "Beautiful landscape"
+
+#: post-content.php:185
+msgid "Thanks for testing Gutenberg!"
+msgstr "Thanks for testing Gutenberg Editor!"
+
+#: post-content.php:177
+msgid "Help build Gutenberg"
+msgstr "Help build Gutenberg Editor"
+
+#. translators: %s: Gutenberg GitHub repository URL
+#: post-content.php:168
+msgid "If you want to learn more about how to build additional blocks, or if you are interested in helping with the project, head over to the <a href=\"%s\">GitHub repository</a>."
+msgstr "If you want to learn more about how to build additional blocks, or if you are interested in helping with the project, head over to the <a href=\"%s\">GitHub repository</a>."
+
+#: post-content.php:159
+msgid "The WordPress community"
+msgstr "The WordPress community"
+
+#: post-content.php:159 build/block-library/index.js:8
+msgid "Code is Poetry"
+msgstr "Code is Poetry"
+
+#: post-content.php:155
+msgid "You can build any block you like, static or dynamic, decorative or plain. Here&#8217;s a pullquote block:"
+msgstr "You can build any block you like, static or dynamic, decorative or plain. Here&#8217;s a pullquote block:"
+
+#: post-content.php:145
+msgid "Any block can opt into these alignments. The embed block has them also, and is responsive out of the box:"
+msgstr "Any block can opt into these alignments. The embed block has them also, and is responsive out of the box:"
+
+#: post-content.php:141
+msgid "The above is a gallery with just two images. It&#8217;s an easier way to create visually appealing layouts, without having to deal with floats. You can also easily convert the gallery back to individual images again, by using the block switcher."
+msgstr "The above is a gallery with just two images. It&#8217;s an easier way to create visually appealing layouts, without having to deal with floats. You can also easily convert the gallery back to individual images again, by using the block switcher."
+
+#: post-content.php:128
+msgid "Sure, the full-wide image can be pretty big. But sometimes the image is worth it."
+msgstr "Sure, the full-wide image can be pretty big. But sometimes the image is worth it."
+
+#: post-content.php:124
+msgid "Accessibility is important &mdash; don&#8217;t forget image alt attribute"
+msgstr "Accessibility is important &mdash; don&#8217;t forget image alt attribute"
+
+#: post-content.php:120
+msgid "If you combine the new <strong>wide</strong> and <strong>full-wide</strong> alignments with galleries, you can create a very media rich layout, very quickly:"
+msgstr "If you combine the new <strong>wide</strong> and <strong>full-wide</strong> alignments with galleries, you can create a very media rich layout, very quickly:"
+
+#: post-content.php:116
+msgid "Media Rich"
+msgstr "Media Rich"
+
+#: post-content.php:112
+msgid "You can change the amount of columns in your galleries by dragging a slider in the block inspector in the sidebar."
+msgstr "You can change the amount of columns in your galleries by dragging a slider in the block inspector in the sidebar."
+
+#: post-content.php:98
+msgid "Blocks can be anything you need. For instance, you may want to add a subdued quote as part of the composition of your text, or you may prefer to display a giant stylized one. All of these options are available in the inserter."
+msgstr "Blocks can be anything you need. For instance, you may want to add a subdued quote as part of the composition of your text, or you may prefer to display a giant stylised one. All of these options are available in the inserter."
+
+#: post-content.php:94
+msgid "The information corresponding to the source of the quote is a separate text field, similar to captions under images, so the structure of the quote is protected even if you select, modify, or remove the source. It&#8217;s always easy to add it back."
+msgstr "The information corresponding to the source of the quote is a separate text field, similar to captions under images, so the structure of the quote is protected even if you select, modify, or remove the source. It&#8217;s always easy to add it back."
+
+#: post-content.php:89
+msgid "Matt Mullenweg, 2017"
+msgstr "Matt Mullenweg, 2017"
+
+#: post-content.php:88
+msgid "The editor will endeavor to create a new page and post building experience that makes writing rich posts effortless, and has “blocks” to make it easy what today might take shortcodes, custom HTML, or “mystery meat” embed discovery."
+msgstr "The editor will endeavour to create a new page and post building experience that makes writing rich posts effortless, and has “blocks” to make it easy what today might take shortcodes, custom HTML, or “mystery meat” embed discovery."
+
+#: post-content.php:83
+msgid "A huge benefit of blocks is that you can edit them in place and manipulate your content directly. Instead of having fields for editing things like the source of a quote, or the text of a button, you can directly change the content. Try editing the following quote:"
+msgstr "A huge benefit of blocks is that you can edit them in place and manipulate your content directly. Instead of having fields for editing things like the source of a quote, or the text of a button, you can directly change the content. Try editing the following quote:"
+
+#: post-content.php:79
+msgid "Visual Editing"
+msgstr "Visual Editing"
+
+#: post-content.php:70
+msgid "And <em>Lists</em> like this one of course :)"
+msgstr "And <em>Lists</em> like this one of course :)"
+
+#: post-content.php:69
+msgid "Layout blocks, like Buttons, Hero Images, Separators, etc."
+msgstr "Layout blocks, like Buttons, Hero Images, Separators, etc."
+
+#: post-content.php:68
+msgid "Embeds, like YouTube, Tweets, or other WordPress posts."
+msgstr "Embeds, like YouTube, Tweets, or other WordPress posts."
+
+#: post-content.php:67
+msgid "Galleries"
+msgstr "Galleries"
+
+#: post-content.php:66
+msgid "Images &amp; Videos"
+msgstr "Images &amp; Videos"
+
+#: post-content.php:65
+msgid "Text &amp; Headings"
+msgstr "Text &amp; Headings"
+
+#: post-content.php:60
+msgid "Go give it a try, you may discover things WordPress can already add into your posts that you didn&#8217;t know about. Here&#8217;s a short list of what you can currently find there:"
+msgstr "Go give it a try, you may discover things WordPress can already add into your posts that you didn&#8217;t know about. Here&#8217;s a short list of what you can currently find there:"
+
+#: post-content.php:56
+msgid "Imagine everything that WordPress can do is available to you quickly and in the same place on the interface. No need to figure out HTML tags, classes, or remember complicated shortcode syntax. That&#8217;s the spirit behind the inserter—the <code>(+)</code> button you&#8217;ll see around the editor—which allows you to browse all available content blocks and add them into your post. Plugins and themes are able to register their own, opening up all sort of possibilities for rich editing and publishing."
+msgstr "Imagine everything that WordPress can do is available to you quickly and in the same place on the interface. No need to figure out HTML tags, classes, or remember complicated shortcode syntax. That&#8217;s the spirit behind the inserter—the <code>(+)</code> button you&#8217;ll see around the editor—which allows you to browse all available content blocks and add them into your post. Plugins and themes are able to register their own, opening up all sort of possibilities for rich editing and publishing."
+
+#: post-content.php:52
+msgid "The <em>Inserter</em> Tool"
+msgstr "The <em>Inserter</em> Tool"
+
+#: post-content.php:48
+msgid "Try selecting and removing or editing the caption, now you don&#8217;t have to be careful about selecting the image or other text by mistake and ruining the presentation."
+msgstr "Try selecting and removing or editing the caption, now you don&#8217;t have to be careful about selecting the image or other text by mistake and ruining the presentation."
+
+#: post-content.php:42
+msgid "If your theme supports it, you&#8217;ll see the \"wide\" button on the image toolbar. Give it a try."
+msgstr "If your theme supports it, you&#8217;ll see the \"wide\" button on the image toolbar. Give it a try."
+
+#: post-content.php:36
+msgid "Handling images and media with the utmost care is a primary focus of the new editor. Hopefully, you&#8217;ll find aspects of adding captions or going full-width with your pictures much easier and robust than before."
+msgstr "Handling images and media with the utmost care is a primary focus of the new editor. Hopefully, you&#8217;ll find aspects of adding captions or going full-width with your pictures much easier and robust than before."
+
+#: post-content.php:32
+msgid "A Picture is Worth a Thousand Words"
+msgstr "A Picture is Worth a Thousand Words"
+
+#: post-content.php:28
+msgid "Headings are separate blocks as well, which helps with the outline and organization of your content."
+msgstr "Headings are separate blocks as well, which helps with the outline and organisation of your content."
+
+#: post-content.php:24
+msgid "... like this one, which is right aligned."
+msgstr "... like this one, which is right aligned."
+
+#: post-content.php:20
+msgid "What you are reading now is a <strong>text block</strong> the most basic block of all. The text block has its own controls to be moved freely around the post..."
+msgstr "What you are reading now is a <strong>text block</strong> the most basic block of all. The text block has its own controls to be moved freely around the post..."
+
+#: post-content.php:16
+msgid "The goal of this new editor is to make adding rich content to WordPress simple and enjoyable. This whole post is composed of <em>pieces of content</em>—somewhat similar to LEGO bricks—that you can move around and interact with. Move your cursor around and you&#8217;ll notice the different blocks light up with outlines and arrows. Press the arrows to reposition blocks quickly, without fearing about losing things in the process of copying and pasting."
+msgstr "The goal of this new editor is to make adding rich content to WordPress simple and enjoyable. This whole post is composed of <em>pieces of content</em>—somewhat similar to LEGO bricks—that you can move around and interact with. Move your cursor around and you&#8217;ll notice the different blocks light up with outlines and arrows. Press the arrows to reposition blocks quickly, without fearing about losing things in the process of copying and pasting."
+
+#: post-content.php:11
+msgid "Of Mountains &amp; Printing Presses"
+msgstr "Of Mountains &amp; Printing Presses"
+
+#: lib/demo.php:59
+msgid "Welcome to the Gutenberg Editor"
+msgstr "Welcome to the Gutenberg Editor"
+
+#: lib/class-wp-rest-menu-items-controller.php:785
+msgid "The title for the object."
+msgstr "The title for the object."
+
+#: lib/class-wp-rest-menu-items-controller.php:810
+msgid "Unique identifier for the object."
+msgstr "Unique identifier for the object."
+
+#: gutenberg.php:87
+msgid "https://wordpress.org/support/plugin/gutenberg/"
+msgstr "https://wordpress.org/support/plugin/gutenberg/"
+
+#: gutenberg.php:84 gutenberg.php:85
+msgid "Support"
+msgstr "Support"
+
+#: build/block-library/blocks/latest-comments.php:141
+msgid "No comments to show."
+msgstr "No comments to show."
+
+#. translators: 1: author name (inside <a> or <span> tag, based on if they have
+#. a URL), 2: post title related to this comment
+#: build/block-library/blocks/latest-comments.php:99
+msgid "%1$s on %2$s"
+msgstr "%1$s on %2$s"
+
+#: build/block-library/blocks/archives.php:57
+msgid "Select Post"
+msgstr "Select Post"
+
+#: build/block-library/blocks/archives.php:54
+msgid "Select Week"
+msgstr "Select Week"
+
+#: build/block-library/blocks/archives.php:51
+msgid "Select Day"
+msgstr "Select Day"
+
+#: build/block-library/blocks/archives.php:48
+msgid "Select Month"
+msgstr "Select Month"
+
+#: build/block-library/blocks/archives.php:45
+msgid "Select Year"
+msgstr "Select Year"
+
+#: build/block-library/blocks/archives.php:27 build/block-library/index.js:16
+msgid "Archives"
+msgstr "Archives"
+
+#: lib/widgets-page.php:68 lib/edit-site-page.php:116
+#: lib/navigation-page.php:47 build/block-editor/index.js:25
+#: build/components/index.js:6
+msgid "Large"
+msgstr "Large"
+
+#: lib/class-wp-rest-menu-items-controller.php:410
+msgid "Invalid term ID."
+msgstr "Invalid term ID."
+
+#: lib/class-wp-rest-menu-items-controller.php:842
+msgid "The ID for the parent of the object."
+msgstr "The ID for the parent of the object."
+
+#: lib/rest-api.php:48
+msgid "Embed Handler"
+msgstr "Embed Handler"
+
+#: lib/client-assets.php:164 build/editor/index.js:13
+#: build/edit-post/index.js:7 build/edit-post/index.js:22
+msgid "Featured image"
+msgstr "Featured image"
+
+#. translators: ARIA label for the Block Settings Sidebar tab, not selected.
+#. translators: Text label for the Block Settings Sidebar tab.
+#: lib/class-wp-widget-block.php:40 lib/navigation.php:91 lib/navigation.php:96
+#: build/edit-widgets/index.js:1 build/edit-post/index.js:21
+#: build/edit-post/index.js:22
+msgid "Block"
+msgstr "Block"
+
+#: build/block-library/blocks/rss.php:31
+#: build/block-library/blocks/latest-comments.php:31
+#: build/block-library/blocks/latest-posts.php:102 build/editor/index.js:29
+#: build/editor/index.js:43 build/block-library/index.js:30
+#: build/block-library/index.js:38 build/edit-navigation/index.js:2
+#: build/edit-post/index.js:22 build/edit-site/index.js:4
+msgid "(no title)"
+msgstr "(no title)"
+
+#. translators: accessibility text. 1: heading level. 2: heading content.
+#: lib/patterns/quote.php:9 build/editor/index.js:13
+#: build/block-library/index.js:12
+msgid "Quote"
+msgstr "Quote"
+
+#: lib/patterns/large-header.php:10 lib/patterns/large-header-button.php:10
+#: build/block-library/index.js:26
+msgid "Write title…"
+msgstr "Write title…"
+
+#: gutenberg.php:101
+msgid "Experiments"
+msgstr "Experiments"
+
+#: gutenberg.php:49 gutenberg.php:50 build/blocks/index.js:1
+msgid "Widgets"
+msgstr "Widgets"
+
+#. Description of the plugin
+msgid "Printing since 1440. This is the development plugin for the new block editor in core."
+msgstr "Printing since 1440. This is the development plugin for the new block editor in core."
+
+#: lib/class-wp-rest-sidebars-controller.php:500
+msgid "Unique identifier for the widget."
+msgstr "Unique identifier for the widget."
+
+#: gutenberg.php:130
+msgid "Gutenberg development mode requires files to be built. Run <code>npm install</code> to install dependencies, <code>npm run build</code> to build the files or <code>npm run dev</code> to build the files and watch for changes. Read the <a href=\"https://github.com/WordPress/gutenberg/blob/master/docs/contributors/getting-started.md\">contributing</a> file for more information."
+msgstr "Gutenberg development mode requires files to be built. Run <code>npm install</code> to install dependencies, <code>npm run build</code> to build the files or <code>npm run dev</code> to build the files and watch for changes. Read the <a href=\"https://github.com/WordPress/gutenberg/blob/master/docs/contributors/getting-started.md\">contributing</a> file for more information."
+
+#. Author of the plugin
+msgid "Gutenberg Team"
+msgstr "Gutenberg Editor Team"
+
+#. Plugin URI of the plugin
+msgid "https://github.com/WordPress/gutenberg"
+msgstr "https://github.com/WordPress/gutenberg/"
+
+#. Plugin Name of the plugin
+msgid "Gutenberg"
+msgstr "Gutenberg"
+
+#. translators: button label text should, if possible, be under 16 characters.
+#: lib/templates.php:132 lib/template-parts.php:115 build/editor/index.js:33
+msgid "Slug"
+msgstr "Slug"
+
+#. translators: Date/Time format, see https://www.php.net/date
+#: lib/compat.php:290
+msgid "F j, Y g:i a"
+msgstr "F j, Y g:i a"
+
+#. translators: Date format, see https://www.php.net/date
+#: lib/compat.php:288
+msgid "F j, Y"
+msgstr "F j, Y"
+
+#. translators: Time format, see https://www.php.net/date
+#: lib/compat.php:286
+msgid "g:i a"
+msgstr "g:i a"
+
+#. translators: %s: Human-readable time difference.
+#. translators: %s: Duration.
+#: lib/class-wp-rest-block-directory-controller.php:138 lib/compat.php:281
+msgid "%s ago"
+msgstr "%s ago"
+
+#. translators: %s: Duration.
+#: lib/compat.php:279
+msgid "%s from now"
+msgstr "%s from now"
+
+#. translators: %s: Minimum required version
+#: gutenberg.php:117
+msgid "Gutenberg requires WordPress %s or later to function properly. Please upgrade WordPress before activating Gutenberg."
+msgstr "Gutenberg requires WordPress %s or later to function properly. Please upgrade WordPress before activating Gutenberg."
+
+#: gutenberg.php:91 gutenberg.php:92
+msgid "Documentation"
+msgstr "Documentation"
+
+#: gutenberg.php:41 gutenberg.php:42
+msgid "Demo"
+msgstr "Demo"
+
+#: build/block-library/blocks/categories.php:30
+msgid "Select Category"
+msgstr "Select Category"
