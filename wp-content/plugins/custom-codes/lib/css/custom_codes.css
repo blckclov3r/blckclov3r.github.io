@@ -1,0 +1,437 @@
+.css-output + .CodeMirror { z-index: -10; }
+.css-output:not(.theme-light) + .CodeMirror { background: #000000; }
+.css-output + .CodeMirror.shown { z-index: 999; }
+
+.code-editor.not-active + .CodeMirror, .code-editor.main-file + .CodeMirror { z-index: -10; }
+.code-editor.active + .CodeMirror { z-index: 999; }
+
+
+#cc-saving-overlay {
+    background-color: rgba(158,158,158,0.25);
+    position: fixed;
+    z-index: 999999;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: none;
+}
+
+#cc-saving-overlay.saving {
+    display: block;
+}
+
+#cc-saving-overlay span {
+    text-align: center;
+    width: 100%;
+    color: white;
+    font-size: 100px;
+    line-height: 150px;
+    display: block;
+    position: absolute;
+    top: 50%;
+    margin-top: -75px;
+}
+
+
+
+/* Tabs */
+.custom-tabs a {
+    display: inline-block;
+    background-color: #272822;
+    padding: 1px 7px;
+    text-decoration: none;
+    color: white;
+    font-size: 10px;
+    border-left: 1px solid;
+    border-left-color: #F1F1F1 !important;
+    line-height: 18px;
+    margin: 0 -2px;
+}
+
+.theme-light .custom-tabs a {
+    background-color: #8c8c8c;
+}
+
+.custom-tabs a:first-child {
+    margin-left: 0;
+}
+.custom-tabs a:last-child {
+    margin-right: 0;
+}
+
+.custom-tabs a,
+.custom-tabs a:focus,
+.custom-tabs a:active {
+    outline: 0 !important;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.custom-tabs a:hover {
+    border-color: #FD971F;
+}
+
+.custom-tabs a.active {
+    border-color: #1FBB32;
+}
+
+.custom-tabs a.unsaved:after {
+    content: "*";
+}
+
+.custom-tabs i {
+    font-size: 12px;
+}
+
+.custom-tabs i.rotate {
+	margin-right: 2px;
+}
+
+
+.top-tabs {
+    position: absolute;
+    top: 38px;
+    right: 0;
+}
+
+.top-tabs a {
+    border-top: 3px solid #0085BA;
+}
+
+.top-tabs a:last-child {
+    border-top-right-radius: 10px;
+}
+
+.top-tabs a:first-child {
+    border-top-left-radius: 10px;
+    border-left: none;
+}
+
+
+.bottom-tabs {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.bottom-tabs.js-side {
+    left: 0;
+}
+
+.bottom-tabs a {
+    border-bottom: 3px solid #0085BA;
+}
+
+.bottom-tabs a:last-child {
+    border-bottom-right-radius: 10px;
+}
+
+.bottom-tabs a:first-child {
+    border-bottom-left-radius: 10px;
+    border-left: none;
+}
+
+.sides.open .bottom-tabs {
+    width: 100%;
+    text-align: center;
+}
+/* Tabs End */
+
+
+
+.fixedthis {
+	position: fixed;
+    bottom: 0;
+    top: 0;
+    padding: 40px 0 10px 0;
+    right: 0px;
+    left: 180px;
+}
+
+body.folded .fixedthis {
+    left: 50px;
+}
+
+.sides {
+	position: relative;
+    height: 100%;
+}
+
+.sides > h2 {
+    margin: 35px 0 0 5px;
+}
+
+.switch-link {
+	position: absolute;
+    right: 10px;
+    z-index: 1;
+}
+
+.cc-custom-codesform {
+	height: 100%;
+}
+
+.css-side {
+	width: 50%;
+	float: left;
+	padding-right: 10px;
+    box-sizing: border-box;
+}
+
+.js-side {
+	width: 50%;
+	float: left;
+    box-sizing: border-box;
+}
+
+.css-side.open, .js-side.open { width: 100%; padding-right: 0; }
+.css-side.both-open, .js-side.both-open { width: 50%; }
+
+.saver-container {
+	position: fixed;
+    bottom: 0;
+    right: 0;
+    background-color: white;
+    padding: 5px;
+    z-index: 999999;
+    border: 1px solid #BBBBBB;
+    border-top-left-radius: 30px;
+    /*width: 165px;*/
+}
+
+#wpfooter { z-index: -1; }
+
+
+
+/* Tooltip */
+span.info-tooltip {
+    padding: 0 5px;
+    font-weight: bold;
+    cursor: help;
+    white-space: nowrap;
+    position: relative;
+    display: inline-block;
+}
+
+span.info-tooltip:hover {
+    cursor: help;
+}
+span.info-tooltip span {
+	border: #c0c0c0 1px dotted;
+    background-color: white;
+    padding: 10px;
+	visibility: hidden;
+    z-index: 100;
+    right: 0px;
+    margin: 10px;
+    position: absolute;
+    bottom: 10px;
+    text-decoration: none;
+    opacity: 0.9;
+    font-weight: normal;
+    border-radius: 5px;
+}
+span.info-tooltip:hover span {
+	visibility: visible;
+}
+/* Tooltip End */
+
+.responser {
+	width: 16px;
+	height: 16px;
+	margin-left: 5px;
+	margin-bottom: -3px;
+	display: none;
+}
+
+.responser.result {
+	display: inline;
+	margin-left: 0;
+}
+
+p.total-process {
+    text-align: center;
+    margin: 5px;
+}
+
+ul.custom-codes-info {
+	margin: 0;
+}
+
+ul.custom-codes-info li:last-child {
+	margin: 0;
+}
+
+span.hider {
+    font-size: 10px;
+}
+
+.show-both { display: none; }
+
+
+.CodeMirror {
+    max-width: none;
+    border: 1px solid #ddd;
+	position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 20px;
+    top: 60px;
+}
+
+.CodeMirror-fullscreen {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    height: auto !important;
+}
+
+.cm-s-monokai .CodeMirror-gutters {
+    border-right: 1px solid #353535 !important;
+}
+
+/* Break Points */
+.breakpoints {width: .8em;}
+.breakpoint { color: #822; }
+
+/* Match Highligter */
+.CodeMirror-focused .cm-matchhighlight {
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAFklEQVQI12NgYGBgkKzc8x9CMDAwAAAmhwSbidEoSQAAAABJRU5ErkJggg==);
+	background-position: bottom;
+	background-repeat: repeat-x;
+}
+
+/* Trailing Space */
+.cm-trailingspace {
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAYAAAB/qH1jAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QUXCToH00Y1UgAAACFJREFUCNdjPMDBUc/AwNDAAAFMTAwMDA0OP34wQgX/AQBYgwYEx4f9lQAAAABJRU5ErkJggg==);
+	background-position: bottom left;
+	background-repeat: repeat-x;
+}
+
+/* Full Screen */
+.CodeMirror-fullscreen {
+  z-index: 999998 !important;
+}
+
+.zerozindex {
+	z-index: 0 !important;
+}
+
+
+/* Bouncer */
+@-moz-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -moz-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -moz-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  60% {
+    -moz-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+@-webkit-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  60% {
+    -webkit-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -moz-transform: translateY(-30px);
+    -ms-transform: translateY(-30px);
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  60% {
+    -moz-transform: translateY(-15px);
+    -ms-transform: translateY(-15px);
+    -webkit-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+
+.bounce {
+	-moz-animation: bounce 2s infinite;
+	-webkit-animation: bounce 2s infinite;
+	animation: bounce 2s infinite;
+}
+
+
+/* Rotate */
+.rotate {
+	/* Safari */
+	-webkit-transform: rotate(-90deg);
+
+	/* Firefox */
+	-moz-transform: rotate(-90deg);
+
+	/* IE */
+	-ms-transform: rotate(-90deg);
+
+	/* Opera */
+	-o-transform: rotate(-90deg);
+
+	/* Internet Explorer */
+	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+}
+
+/* Footer Text */
+#wpfooter p {
+    font-size: 11px;
+}
+
+/* Page Notices */
+.notice, .updated {
+    top: -20px;
+    position: absolute !important;
+}
+
+.notice *, .updated * {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+
+/* Help */
+textarea#custom-codes-admin-notes {
+    width: 100%;
+    min-width: 800px;
+}
+
+#contextual-help-link-wrap, #screen-options-link-wrap {
+    float: left;
+    z-index: 1;
+}
+
+#screen-meta {
+    z-index: 1;
+}
+
+#wpbody-content {
+	position: fixed;
+    top: 32px;
+    width: auto;
+}
