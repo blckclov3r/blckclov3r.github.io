@@ -1,0 +1,3414 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-08-24 12:05+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/"
+
+#: app/Hooks/Common.php:98
+msgid "Accepted"
+msgstr ""
+
+#: app/Hooks/Common.php:288
+msgid "Every 5 minutes (FluentForm)"
+msgstr ""
+
+#: app/Hooks/Backend.php:70
+msgid "Fluent Forms Latest Form Submissions"
+msgstr ""
+
+#: app/Hooks/Backend.php:113
+msgid "-- Select a form --"
+msgstr ""
+
+#: app/Hooks/Backend.php:265 app/Services/FormBuilder/DefaultElements.php:144
+msgid "Email address need to be unique."
+msgstr ""
+
+#: app/Hooks/Backend.php:283
+msgid "This field value need to be unique."
+msgstr ""
+
+#: app/Hooks/Backend.php:294
+msgid "Fluent Forms PDF"
+msgstr ""
+
+#: app/Modules/EditorButtonModule.php:19
+msgid "Add Form"
+msgstr ""
+
+#: app/Modules/Activator.php:137
+msgid "Every 5 Minutes (FluentForm)"
+msgstr ""
+
+#: app/Modules/DocumentationModule.php:21
+msgid "Adding a new form"
+msgstr ""
+
+#: app/Modules/DocumentationModule.php:25
+msgid "Setting up form submission confirmation"
+msgstr ""
+
+#: app/Modules/DocumentationModule.php:29
+msgid "Form layout settings"
+msgstr ""
+
+#: app/Modules/DocumentationModule.php:33
+msgid "Conditional logics"
+msgstr ""
+
+#: app/Modules/DocumentationModule.php:37
+msgid "Managing form submissions"
+msgstr ""
+
+#: app/Modules/DocumentationModule.php:41
+msgid "Setting up email notifications"
+msgstr ""
+
+#: app/Modules/DocumentationModule.php:45
+msgid "MailChimp integration"
+msgstr ""
+
+#: app/Modules/DocumentationModule.php:49
+msgid "Slack integration"
+msgstr ""
+
+#: app/Modules/DocumentationModule.php:53
+msgid "Form restrictions and scheduling"
+msgstr ""
+
+#: app/Modules/DocumentationModule.php:57
+msgid "Setup conditional confirmation messages"
+msgstr ""
+
+#: app/Modules/DocumentationModule.php:61
+msgid "Predefined form fields"
+msgstr ""
+
+#: app/Modules/Settings/Settings.php:78
+msgid "Your reCaptcha settings are deleted."
+msgstr ""
+
+#: app/Modules/Settings/Settings.php:109
+msgid "Your reCaptcha is valid and saved."
+msgstr ""
+
+#: app/Modules/Settings/Settings.php:113
+msgid "Sorry, Your reCaptcha is not valid, Please try again"
+msgstr ""
+
+#: app/Modules/Settings/Settings.php:116
+msgid "Please validate your reCaptcha first and then hit save."
+msgstr ""
+
+#: app/Modules/Settings/Settings.php:122
+msgid "Your reCaptcha details are already valid, So no need to save again."
+msgstr ""
+
+#: app/Modules/Settings/Settings.php:163
+msgid "Your settings has been updated"
+msgstr ""
+
+#: app/Modules/Settings/Settings.php:192
+#: app/Services/Integrations/MailChimp/MailChimpIntegration.php:119
+msgid "Your mailchimp api key has been verfied and successfully set"
+msgstr ""
+
+#: app/Modules/Form/FormDataParser.php:140
+#: app/Modules/Form/FormDataParser.php:191
+msgid "...."
+msgstr ""
+
+#: app/Modules/Form/Transfer.php:81 app/Modules/Form/Transfer.php:152
+msgid "You have a faulty JSON file, please export the Fluent Forms again."
+msgstr ""
+
+#: app/Modules/Form/Transfer.php:145
+msgid "You form has been successfully imported."
+msgstr ""
+
+#: app/Modules/Form/FormHandler.php:356
+msgid "Nonce verification failed, please try again."
+msgstr ""
+
+#: app/Modules/Form/FormHandler.php:372
+msgid "Submission marked as spammed. Please try again"
+msgstr ""
+
+#: app/Modules/Form/FormHandler.php:406
+msgid "reCaptcha verification failed, please try again."
+msgstr ""
+
+#: app/Modules/Form/Form.php:215
+msgid "Successfully created a form."
+msgstr ""
+
+#: app/Modules/Form/Form.php:224
+msgid "Thank you for your message. We will get in touch with you shortly"
+msgstr ""
+
+#: app/Modules/Form/Form.php:240
+msgid "Form submission is not started yet."
+msgstr ""
+
+#: app/Modules/Form/Form.php:241
+msgid "Form submission is now closed."
+msgstr ""
+
+#: app/Modules/Form/Form.php:249
+msgid "Sorry, you cannot submit an empty form. Let's hear what you wanna say."
+msgstr ""
+
+#: app/Modules/Form/Form.php:404
+msgid "The form is successfully updated."
+msgstr ""
+
+#: app/Modules/Form/Form.php:461
+msgid "Successfully deleted the form."
+msgstr ""
+
+#: app/Modules/Form/Form.php:516
+msgid "Form has been successfully duplicated."
+msgstr ""
+
+#: app/Modules/Entries/Entries.php:162
+msgid ""
+"Sorry! No entries found. All your entries will be shown here once you start "
+"getting form submissions"
+msgstr ""
+
+#: app/Modules/Entries/Entries.php:413
+msgid "Fluent Forms Bot"
+msgstr ""
+
+#: app/Modules/Entries/Entries.php:457
+msgid "Note has been successfully added"
+msgstr ""
+
+#: app/Modules/Entries/Entries.php:489
+msgid "Item Successfully deleted"
+msgstr ""
+
+#: app/Modules/Entries/Entries.php:603
+msgid "Item has been added to favorites"
+msgstr ""
+
+#: app/Modules/Entries/Entries.php:605
+msgid "Item has been removed from favorites"
+msgstr ""
+
+#: app/Modules/Entries/Entries.php:630
+msgid "Please select entries first"
+msgstr ""
+
+#: app/Modules/Entries/Entries.php:656
+msgid "Selected entries successfully deleted"
+msgstr ""
+
+#: app/Modules/Entries/Entries.php:662
+msgid "Selected entries successfully marked as Favorite"
+msgstr ""
+
+#: app/Modules/Entries/Entries.php:667
+msgid "Selected entries successfully remove from favorite"
+msgstr ""
+
+#: app/Modules/Logger/DataLogger.php:242 app/Modules/Logger/DataLogger.php:263
+msgid "Selected logs successfully deleted"
+msgstr ""
+
+#: app/Modules/Registerer/Menu.php:262
+msgid "Fluent Forms Pro"
+msgstr ""
+
+#. Name of the plugin
+#: app/Modules/Registerer/Menu.php:264 resources/views/admin/global_menu.php:6
+msgid "Fluent Forms"
+msgstr ""
+
+#: app/Modules/Registerer/Menu.php:280 app/Modules/Registerer/Menu.php:281
+#: resources/views/admin/global_menu.php:9
+msgid "All Forms"
+msgstr ""
+
+#: app/Modules/Registerer/Menu.php:290 app/Modules/Registerer/Menu.php:291
+msgid "New Form"
+msgstr ""
+
+#: app/Modules/Registerer/Menu.php:297 app/Modules/Registerer/Menu.php:421
+#: resources/views/email/report/body.php:148
+msgid "Entries"
+msgstr ""
+
+#: app/Modules/Registerer/Menu.php:321 app/Modules/Registerer/Menu.php:322
+#: resources/views/admin/global_menu.php:17
+#: resources/views/admin/global_menu.php:29
+#: resources/views/email/report/body.php:168
+msgid "Payments"
+msgstr ""
+
+#: app/Modules/Registerer/Menu.php:335 app/Modules/Registerer/Menu.php:336
+msgid "Integration Modules"
+msgstr ""
+
+#: app/Modules/Registerer/Menu.php:346 app/Modules/Registerer/Menu.php:347
+#: resources/views/admin/global_menu.php:22
+msgid "Global Settings"
+msgstr ""
+
+#: app/Modules/Registerer/Menu.php:356 app/Modules/Registerer/Menu.php:357
+#: resources/views/admin/transfer/index.php:6
+msgid "Tools"
+msgstr ""
+
+#: app/Modules/Registerer/Menu.php:368 app/Modules/Registerer/Menu.php:369
+msgid "Get Help"
+msgstr ""
+
+#: app/Modules/Registerer/Menu.php:408
+msgid "Editor"
+msgstr ""
+
+#: app/Modules/Registerer/Menu.php:414
+msgid "Settings & Integrations"
+msgstr ""
+
+#: app/Modules/Registerer/Menu.php:431
+msgid "<h2>No form found</h2>"
+msgstr ""
+
+#: app/Modules/Registerer/Menu.php:447
+msgid "Form Settings"
+msgstr ""
+
+#: app/Modules/Registerer/Menu.php:453
+msgid "Email Notifications"
+msgstr ""
+
+#: app/Modules/Registerer/Menu.php:459
+msgid "Other Confirmations"
+msgstr ""
+
+#: app/Modules/Registerer/Menu.php:465
+msgid "Marketing & CRM Integrations"
+msgstr ""
+
+#: app/Modules/Registerer/Menu.php:473
+msgid "Slack"
+msgstr ""
+
+#: app/Modules/Registerer/Menu.php:491
+msgid "Custom CSS/JS"
+msgstr ""
+
+#: app/Modules/Component/Component.php:279
+msgid "Sorry, You do not have permission to view this form"
+msgstr ""
+
+#: app/Modules/Component/Component.php:448
+#, php-format
+msgid "The form can be filled in the actual <a href=\"%s\">website url</a>."
+msgstr ""
+
+#: app/Modules/Component/Component.php:506
+msgid "Step %activeStep% of %totalStep% - %stepTitle%"
+msgstr ""
+
+#: app/Modules/Component/Component.php:518
+msgid "100% Completed"
+msgstr ""
+
+#: app/Modules/Component/Component.php:519
+msgid "0% Completed"
+msgstr ""
+
+#: app/Modules/Component/Component.php:520
+msgid "Uploading"
+msgstr ""
+
+#: app/Modules/Component/Component.php:522
+msgid "No results found"
+msgstr ""
+
+#: app/Modules/Component/Component.php:523
+msgid "Loading..."
+msgstr ""
+
+#: app/Modules/Component/Component.php:524
+msgid "No choices to choose from"
+msgstr ""
+
+#: app/Modules/Component/Component.php:525
+msgid "Press to select"
+msgstr ""
+
+#: app/Modules/Component/Component.php:876
+msgid "Previous Month"
+msgstr ""
+
+#: app/Modules/Component/Component.php:877
+msgid "Next Month"
+msgstr ""
+
+#: app/Modules/Component/Component.php:880
+msgid "Jan"
+msgstr ""
+
+#: app/Modules/Component/Component.php:881
+msgid "Feb"
+msgstr ""
+
+#: app/Modules/Component/Component.php:882
+msgid "Mar"
+msgstr ""
+
+#: app/Modules/Component/Component.php:883
+msgid "Apr"
+msgstr ""
+
+#: app/Modules/Component/Component.php:884
+#: app/Modules/Component/Component.php:898
+msgid "May"
+msgstr ""
+
+#: app/Modules/Component/Component.php:885
+msgid "Jun"
+msgstr ""
+
+#: app/Modules/Component/Component.php:886
+msgid "Jul"
+msgstr ""
+
+#: app/Modules/Component/Component.php:887
+msgid "Aug"
+msgstr ""
+
+#: app/Modules/Component/Component.php:888
+msgid "Sep"
+msgstr ""
+
+#: app/Modules/Component/Component.php:889
+msgid "Oct"
+msgstr ""
+
+#: app/Modules/Component/Component.php:890
+msgid "Nov"
+msgstr ""
+
+#: app/Modules/Component/Component.php:891
+msgid "Dec"
+msgstr ""
+
+#: app/Modules/Component/Component.php:894
+msgid "January"
+msgstr ""
+
+#: app/Modules/Component/Component.php:895
+msgid "February"
+msgstr ""
+
+#: app/Modules/Component/Component.php:896
+msgid "March"
+msgstr ""
+
+#: app/Modules/Component/Component.php:897
+msgid "April"
+msgstr ""
+
+#: app/Modules/Component/Component.php:899
+msgid "June"
+msgstr ""
+
+#: app/Modules/Component/Component.php:900
+msgid "July"
+msgstr ""
+
+#: app/Modules/Component/Component.php:901
+msgid "August"
+msgstr ""
+
+#: app/Modules/Component/Component.php:902
+msgid "September"
+msgstr ""
+
+#: app/Modules/Component/Component.php:903
+msgid "October"
+msgstr ""
+
+#: app/Modules/Component/Component.php:904
+msgid "November"
+msgstr ""
+
+#: app/Modules/Component/Component.php:905
+msgid "December"
+msgstr ""
+
+#: app/Modules/Component/Component.php:910
+msgid "Sunday"
+msgstr ""
+
+#: app/Modules/Component/Component.php:911
+msgid "Monday"
+msgstr ""
+
+#: app/Modules/Component/Component.php:912
+msgid "Tuesday"
+msgstr ""
+
+#: app/Modules/Component/Component.php:913
+msgid "Wednesday"
+msgstr ""
+
+#: app/Modules/Component/Component.php:914
+msgid "Thursday"
+msgstr ""
+
+#: app/Modules/Component/Component.php:915
+msgid "Friday"
+msgstr ""
+
+#: app/Modules/Component/Component.php:916
+msgid "Saturday"
+msgstr ""
+
+#: app/Modules/Component/Component.php:919
+msgid "Sun"
+msgstr ""
+
+#: app/Modules/Component/Component.php:920
+msgid "Mon"
+msgstr ""
+
+#: app/Modules/Component/Component.php:921
+msgid "Tue"
+msgstr ""
+
+#: app/Modules/Component/Component.php:922
+msgid "Wed"
+msgstr ""
+
+#: app/Modules/Component/Component.php:923
+msgid "Thu"
+msgstr ""
+
+#: app/Modules/Component/Component.php:924
+msgid "Fri"
+msgstr ""
+
+#: app/Modules/Component/Component.php:925
+msgid "Sat"
+msgstr ""
+
+#: app/Modules/Component/Component.php:942
+msgid " to "
+msgstr ""
+
+#: app/Modules/Component/Component.php:943
+msgid "Wk"
+msgstr ""
+
+#: app/Modules/Component/Component.php:944
+msgid "Scroll to increment"
+msgstr ""
+
+#: app/Modules/Component/Component.php:945
+msgid "Click to toggle"
+msgstr ""
+
+#: app/Modules/Component/Component.php:947
+msgid "AM"
+msgstr ""
+
+#: app/Modules/Component/Component.php:948
+msgid "PM"
+msgstr ""
+
+#: app/Modules/Component/Component.php:950
+msgid "Year"
+msgstr ""
+
+#: app/Modules/Acl/RoleManager.php:46
+msgid "Successfully saved the role(s)."
+msgstr ""
+
+#: app/Modules/Acl/RoleManager.php:50
+msgid ""
+"Sorry, You can not update permissions. Only administrators can update "
+"permissions"
+msgstr ""
+
+#: app/Modules/Widgets/SidebarWidgets.php:11
+msgid "WP Fluent Forms Widget"
+msgstr ""
+
+#: app/Modules/Widgets/SidebarWidgets.php:12
+msgid "Add your form by WP Fluent Forms"
+msgstr ""
+
+#: app/Modules/Widgets/FluentFormWidget.php:22
+#: app/Modules/Widgets/FluentFormWidget.php:80
+#: app/Modules/Widgets/FluentFormWidget.php:88
+msgid "Fluent Form"
+msgstr ""
+
+#: app/Modules/Widgets/FluentFormWidget.php:99
+msgid "Custom Title & Description"
+msgstr ""
+
+#: app/Modules/Widgets/FluentFormWidget.php:101
+#: app/Modules/Widgets/FluentFormWidget.php:887
+#: app/Services/FormBuilder/ElementCustomization.php:234
+#: app/Services/FormBuilder/ElementCustomization.php:529
+#: app/Services/FormBuilder/ValidationRuleSettings.php:65
+msgid "Yes"
+msgstr ""
+
+#: app/Modules/Widgets/FluentFormWidget.php:102
+#: app/Modules/Widgets/FluentFormWidget.php:888
+#: app/Services/FormBuilder/ElementCustomization.php:238
+#: app/Services/FormBuilder/ElementCustomization.php:533
+#: app/Services/FormBuilder/ValidationRuleSettings.php:69
+msgid "No"
+msgstr ""
+
+#: app/Modules/Widgets/FluentFormWidget.php:110
+#: app/Modules/Widgets/FluentFormWidget.php:227
+msgid "Title"
+msgstr ""
+
+#: app/Modules/Widgets/FluentFormWidget.php:123
+#: app/Modules/Widgets/FluentFormWidget.php:301
+#: app/Modules/Widgets/FluentFormWidget.php:1177
+#: app/Services/FormBuilder/ElementCustomization.php:190
+#: app/Services/FormBuilder/ElementSettingsPlacement.php:462
+msgid "Description"
+msgstr ""
+
+#: app/Modules/Widgets/FluentFormWidget.php:135
+#: app/Modules/Widgets/FluentFormWidget.php:523
+msgid "Labels"
+msgstr ""
+
+#: app/Modules/Widgets/FluentFormWidget.php:138
+#: app/Modules/Widgets/FluentFormWidget.php:150
+#: app/Modules/Widgets/FluentFormWidget.php:173
+#: app/Modules/Widgets/FluentFormWidget.php:1636
+#: app/Modules/Widgets/FluentFormWidget.php:1704
+msgid "Show"
+msgstr ""
+
+#: app/Modules/Widgets/FluentFormWidget.php:139
+#: app/Modules/Widgets/FluentFormWidget.php:151
+#: app/Modules/Widgets/FluentFormWidget.php:174
+#: app/Modules/Widgets/FluentFormWidget.php:1637
+#: app/Modules/Widgets/FluentFormWidget.php:1705
+msgid "Hide"
+msgstr ""
+
+#: app/Modules/Widgets/FluentFormWidget.php:147
+#: app/Modules/Widgets/FluentFormWidget.php:847
+#: app/Services/FormBuilder/ElementCustomization.php:105
+msgid "Placeholder"
+msgstr ""
+
+#: app/Modules/Widgets/FluentFormWidget.php:163
+msgid "Errors"
+msgstr ""
+
+#: app/Modules/Widgets/FluentFormWidget.php:170
+msgid "Error Messages"
+msgstr ""
+
+#: app/Modules/Widgets/FluentFormWidget.php:186
+msgid "Title & Description"
+msgstr ""
+
+#: app/Modules/Widgets/FluentFormWidget.php:197
+#: app/Modules/Widgets/FluentFormWidget.php:435
+#: app/Modules/Widgets/FluentFormWidget.php:564
+#: app/Modules/Widgets/FluentFormWidget.php:1232
+#: app/Modules/Widgets/FluentFormWidget.php:2002
+msgid "Alignment"
+msgstr ""
+
+#: app/Modules/Widgets/FluentFormWidget.php:201
+#: app/Modules/Widgets/FluentFormWidget.php:444
+#: app/Modules/Widgets/FluentFormWidget.php:568
+#: app/Modules/Widgets/FluentFormWidget.php:1236
+#: app/Modules/Widgets/FluentFormWidget.php:2006
+#: app/Services/FormBuilder/ElementCustomization.php:71
+#: app/Services/FormBuilder/ElementCustomization.php:210
+msgid "Left"
+msgstr ""
+
+#: app/Modules/Widgets/FluentFormWidget.php:205
+#: app/Modules/Widgets/FluentFormWidget.php:448
+#: app/Modules/Widgets/FluentFormWidget.php:572
+#: app/Modules/Widgets/FluentFormWidget.php:1240
+#: app/Modules/Widgets/FluentFormWidget.php:2010
+#: app/Services/FormBuilder/ElementCustomization.php:214
+msgid "Center"
+msgstr ""
+
+#: app/Modules/Widgets/FluentFormWidget.php:209
+#: app/Modules/Widgets/FluentFormWidget.php:452
+#: app/Modules/Widgets/FluentFormWidget.php:576
+#: app/Modules/Widgets/FluentFormWidget.php:1244
+#: app/Modules/Widgets/FluentFormWidget.php:2014
+#: app/Services/FormBuilder/ElementCustomization.php:63
+#: app/Services/FormBuilder/ElementCustomization.php:218
+msgid "Right"
+msgstr ""
+
+#: app/Modules/Widgets/FluentFormWidget.php:239
+#: app/Modules/Widgets/FluentFormWidget.php:313
+#: app/Modules/Widgets/FluentFormWidget.php:1131
+#: app/Modules/Widgets/FluentFormWidget.php:1186
+#: app/Modules/Widgets/FluentFormWidget.php:1277
+#: app/Modules/Widgets/FluentFormWidget.php:1361
+#: app/Modules/Widgets/FluentFormWidget.php:1867
+#: app/Modules/Widgets/FluentFormWidget.php:1940
+#: app/Modules/Widgets/FluentFormWidget.php:2287
+msgid "Color"
+msgstr ""
+
+#: app/Modules/Widgets/FluentFormWidget.php:255
+#: app/Modules/Widgets/FluentFormWidget.php:329
+#: app/Modules/Widgets/FluentFormWidget.php:543
+#: app/Modules/Widgets/FluentFormWidget.php:780
+#: app/Modules/Widgets/FluentFormWidget.php:1144
+#: app/Modules/Widgets/FluentFormWidget.php:1199
+#: app/Modules/Widgets/FluentFormWidget.php:1302
+#: app/Modules/Widgets/FluentFormWidget.php:1398
+#: app/Modules/Widgets/FluentFormWidget.php:1472
+#: app/Modules/Widgets/FluentFormWidget.php:1548
+#: app/Modules/Widgets/FluentFormWidget.php:1666
+#: app/Modules/Widgets/FluentFormWidget.php:1879
+#: app/Modules/Widgets/FluentFormWidget.php:2153
+#: app/Modules/Widgets/FluentFormWidget.php:2267
+#: app/Modules/Widgets/FluentFormWidget.php:2300
+msgid "Typography"
+msgstr ""
+
+#: app/Modules/Widgets/FluentFormWidget.php:266
+#: app/Modules/Widgets/FluentFormWidget.php:342
+#: app/Modules/Widgets/FluentFormWidget.php:463
+#: app/Modules/Widgets/FluentFormWidget.php:1165
+#: app/Modules/Widgets/FluentFormWidget.php:1220
+#: app/Modules/Widgets/FluentFormWidget.php:2320
+msgid "Margin"
+msgstr ""
+
+#: app/Modules/Widgets/FluentFormWidget.php:288
+#: app/Modules/Widgets/FluentFormWidget.php:364
+#: app/Modules/Widgets/FluentFormWidget.php:475
+#: app/Modules/Widgets/FluentFormWidget.php:748
+#: app/Modules/Widgets/FluentFormWidget.php:1153
+#: app/Modules/Widgets/FluentFormWidget.php:1208
+#: app/Modules/Widgets/FluentFormWidget.php:1340
+#: app/Modules/Widgets/FluentFormWidget.php:1435
+#: app/Modules/Widgets/FluentFormWidget.php:1535
+#: app/Modules/Widgets/FluentFormWidget.php:1919
+#: app/Modules/Widgets/FluentFormWidget.php:2121
+#: app/Modules/Widgets/FluentFormWidget.php:2308
+msgid "Padding"
+msgstr ""
+
+#: app/Modules/Widgets/FluentFormWidget.php:381
+msgid "Form Container"
+msgstr ""
+
+#: app/Modules/Widgets/FluentFormWidget.php:391
+#: app/Modules/Widgets/FluentFormWidget.php:1728
+#: app/Modules/Widgets/FluentFormWidget.php:1823
+#: app/Modules/Widgets/FluentFormWidget.php:1889
+#: app/Modules/Widgets/FluentFormWidget.php:1952
+msgid "Background"
+msgstr ""
+
+#: app/Modules/Widgets/FluentFormWidget.php:401
+msgid "Link Color"
+msgstr ""
+
+#: app/Modules/Widgets/FluentFormWidget.php:413
+msgid "Max Width"
+msgstr ""
+
+#: app/Modules/Widgets/FluentFormWidget.php:440
+#: app/Services/FormBuilder/ElementCustomization.php:55
+#: app/Services/FormBuilder/ElementCustomization.php:554
+msgid "Default"
+msgstr ""
+
+#: app/Modules/Widgets/FluentFormWidget.php:496
+#: app/Modules/Widgets/FluentFormWidget.php:635
+#: app/Modules/Widgets/FluentFormWidget.php:1024
+#: app/Modules/Widgets/FluentFormWidget.php:1050
+#: app/Modules/Widgets/FluentFormWidget.php:1523
+#: app/Modules/Widgets/FluentFormWidget.php:1795
+#: app/Modules/Widgets/FluentFormWidget.php:1907
+#: app/Modules/Widgets/FluentFormWidget.php:1972
+#: app/Modules/Widgets/FluentFormWidget.php:2109
+msgid "Border Radius"
+msgstr ""
+
+#: app/Modules/Widgets/FluentFormWidget.php:531
+#: app/Modules/Widgets/FluentFormWidget.php:611
+#: app/Modules/Widgets/FluentFormWidget.php:858
+#: app/Modules/Widgets/FluentFormWidget.php:1585
+#: app/Modules/Widgets/FluentFormWidget.php:1743
+#: app/Modules/Widgets/FluentFormWidget.php:2086
+#: app/Modules/Widgets/FluentFormWidget.php:2192
+#: app/Modules/Widgets/FluentFormWidget.php:2244
+msgid "Text Color"
+msgstr ""
+
+#: app/Modules/Widgets/FluentFormWidget.php:556
+msgid "Input & Textarea"
+msgstr ""
+
+#: app/Modules/Widgets/FluentFormWidget.php:592
+#: app/Modules/Widgets/FluentFormWidget.php:951
+#: app/Modules/Widgets/FluentFormWidget.php:1494
+#: app/Modules/Widgets/FluentFormWidget.php:1717
+#: app/Modules/Widgets/FluentFormWidget.php:1859
+#: app/Modules/Widgets/FluentFormWidget.php:2067
+msgid "Normal"
+msgstr ""
+
+#: app/Modules/Widgets/FluentFormWidget.php:599
+#: app/Modules/Widgets/FluentFormWidget.php:807
+#: app/Modules/Widgets/FluentFormWidget.php:961
+#: app/Modules/Widgets/FluentFormWidget.php:1077
+#: app/Modules/Widgets/FluentFormWidget.php:1289
+#: app/Modules/Widgets/FluentFormWidget.php:1373
+#: app/Modules/Widgets/FluentFormWidget.php:1501
+#: app/Modules/Widgets/FluentFormWidget.php:1573
+#: app/Modules/Widgets/FluentFormWidget.php:2074
+#: app/Modules/Widgets/FluentFormWidget.php:2180
+#: app/Modules/Widgets/FluentFormWidget.php:2233
+#: app/Services/FormBuilder/ElementCustomization.php:380
+msgid "Background Color"
+msgstr ""
+
+#: app/Modules/Widgets/FluentFormWidget.php:624
+#: app/Modules/Widgets/FluentFormWidget.php:820
+#: app/Modules/Widgets/FluentFormWidget.php:1331
+#: app/Modules/Widgets/FluentFormWidget.php:1426
+#: app/Modules/Widgets/FluentFormWidget.php:1514
+#: app/Modules/Widgets/FluentFormWidget.php:1784
+#: app/Modules/Widgets/FluentFormWidget.php:1899
+#: app/Modules/Widgets/FluentFormWidget.php:2099
+#: app/Modules/Widgets/FluentFormWidget.php:2256
+msgid "Border"
+msgstr ""
+
+#: app/Modules/Widgets/FluentFormWidget.php:647
+#: app/Modules/Widgets/FluentFormWidget.php:922
+msgid "Text Indent"
+msgstr ""
+
+#: app/Modules/Widgets/FluentFormWidget.php:672
+msgid "Input Width"
+msgstr ""
+
+#: app/Modules/Widgets/FluentFormWidget.php:691
+msgid "Input Height"
+msgstr ""
+
+#: app/Modules/Widgets/FluentFormWidget.php:710
+msgid "Textarea Width"
+msgstr ""
+
+#: app/Modules/Widgets/FluentFormWidget.php:729
+msgid "Textarea Height"
+msgstr ""
+
+#: app/Modules/Widgets/FluentFormWidget.php:760
+#: app/Modules/Widgets/FluentFormWidget.php:1678
+msgid "Spacing"
+msgstr ""
+
+#: app/Modules/Widgets/FluentFormWidget.php:800
+msgid "Focus"
+msgstr ""
+
+#: app/Modules/Widgets/FluentFormWidget.php:877
+msgid "Radio & Checkbox"
+msgstr ""
+
+#: app/Modules/Widgets/FluentFormWidget.php:885
+msgid "Custom Styles"
+msgstr ""
+
+#: app/Modules/Widgets/FluentFormWidget.php:896
+msgid "Size"
+msgstr ""
+
+#: app/Modules/Widgets/FluentFormWidget.php:976
+msgid "Border Width"
+msgstr ""
+
+#: app/Modules/Widgets/FluentFormWidget.php:998
+#: app/Modules/Widgets/FluentFormWidget.php:1092
+#: app/Modules/Widgets/FluentFormWidget.php:1597
+#: app/Modules/Widgets/FluentFormWidget.php:1961
+#: app/Modules/Widgets/FluentFormWidget.php:2204
+msgid "Border Color"
+msgstr ""
+
+#: app/Modules/Widgets/FluentFormWidget.php:1013
+#: app/Services/FormBuilder/ElementCustomization.php:470
+msgid "Checkbox"
+msgstr ""
+
+#: app/Modules/Widgets/FluentFormWidget.php:1039
+msgid "Radio Buttons"
+msgstr ""
+
+#: app/Modules/Widgets/FluentFormWidget.php:1067
+msgid "Checked"
+msgstr ""
+
+#: app/Modules/Widgets/FluentFormWidget.php:1115
+#: app/Services/FormBuilder/DefaultElements.php:1020
+#: app/Services/FormBuilder/DefaultElements.php:1026
+msgid "Section Break"
+msgstr ""
+
+#: app/Modules/Widgets/FluentFormWidget.php:1123
+msgid "Label"
+msgstr ""
+
+#: app/Modules/Widgets/FluentFormWidget.php:1260
+#: app/Services/FormBuilder/DefaultElements.php:986
+msgid "Checkbox Grid"
+msgstr ""
+
+#: app/Modules/Widgets/FluentFormWidget.php:1268
+msgid "Grid Table Head"
+msgstr ""
+
+#: app/Modules/Widgets/FluentFormWidget.php:1311
+#: app/Modules/Widgets/FluentFormWidget.php:1406
+#: app/Modules/Widgets/FluentFormWidget.php:1761
+msgid "Height"
+msgstr ""
+
+#: app/Modules/Widgets/FluentFormWidget.php:1352
+msgid "Grid Table Item"
+msgstr ""
+
+#: app/Modules/Widgets/FluentFormWidget.php:1385
+msgid "Odd Item Background Color"
+msgstr ""
+
+#: app/Modules/Widgets/FluentFormWidget.php:1451
+msgid "Address Line"
+msgstr ""
+
+#: app/Modules/Widgets/FluentFormWidget.php:1459
+#: app/Modules/Widgets/FluentFormWidget.php:1647
+msgid "Label Color"
+msgstr ""
+
+#: app/Modules/Widgets/FluentFormWidget.php:1484
+#: app/Services/FormBuilder/DefaultElements.php:791
+#: app/Services/FormBuilder/DefaultElements.php:818
+msgid "Image Upload"
+msgstr ""
+
+#: app/Modules/Widgets/FluentFormWidget.php:1566
+#: app/Modules/Widgets/FluentFormWidget.php:1933
+#: app/Modules/Widgets/FluentFormWidget.php:2173
+msgid "Hover"
+msgstr ""
+
+#: app/Modules/Widgets/FluentFormWidget.php:1618
+msgid "Pagination"
+msgstr ""
+
+#: app/Modules/Widgets/FluentFormWidget.php:1626
+msgid "Progressbar Label"
+msgstr ""
+
+#: app/Modules/Widgets/FluentFormWidget.php:1634
+msgid "Show Label"
+msgstr ""
+
+#: app/Modules/Widgets/FluentFormWidget.php:1694
+msgid "Progressbar"
+msgstr ""
+
+#: app/Modules/Widgets/FluentFormWidget.php:1702
+msgid "Show Progressbar"
+msgstr ""
+
+#: app/Modules/Widgets/FluentFormWidget.php:1812
+msgid "Filled"
+msgstr ""
+
+#: app/Modules/Widgets/FluentFormWidget.php:1845
+msgid "Button"
+msgstr ""
+
+#: app/Modules/Widgets/FluentFormWidget.php:1994
+#: app/Services/FormBuilder/ElementCustomization.php:200
+msgid "Submit Button"
+msgstr ""
+
+#: app/Modules/Widgets/FluentFormWidget.php:2029
+#: app/Modules/Widgets/FluentFormWidget.php:2043
+msgid "Width"
+msgstr ""
+
+#: app/Modules/Widgets/FluentFormWidget.php:2033
+msgid "Full Width"
+msgstr ""
+
+#: app/Modules/Widgets/FluentFormWidget.php:2034
+#: app/Services/FormBuilder/ElementCustomization.php:449
+msgid "Custom"
+msgstr ""
+
+#: app/Modules/Widgets/FluentFormWidget.php:2133
+msgid "Margin Top"
+msgstr ""
+
+#: app/Modules/Widgets/FluentFormWidget.php:2225
+msgid "Success Message"
+msgstr ""
+
+#: app/Modules/Widgets/FluentFormWidget.php:2279
+msgid "Error Message"
+msgstr ""
+
+#: app/Modules/Widgets/ElementorWidget.php:47
+msgid "Select a Fluent Form"
+msgstr ""
+
+#: app/Modules/Widgets/ElementorWidget.php:52
+msgid "Create a Form First"
+msgstr ""
+
+#: app/Services/FormBuilder/EditorShortCode.php:14
+msgid "Admin Email"
+msgstr ""
+
+#: app/Services/FormBuilder/EditorShortCode.php:15
+msgid "Site URL"
+msgstr ""
+
+#: app/Services/FormBuilder/EditorShortCode.php:16
+msgid "Site Title"
+msgstr ""
+
+#: app/Services/FormBuilder/EditorShortCode.php:17
+msgid "IP Address"
+msgstr ""
+
+#: app/Services/FormBuilder/EditorShortCode.php:18
+msgid "Date (mm/dd/yyyy)"
+msgstr ""
+
+#: app/Services/FormBuilder/EditorShortCode.php:19
+msgid "Date (dd/mm/yyyy)"
+msgstr ""
+
+#: app/Services/FormBuilder/EditorShortCode.php:20
+msgid "Embedded Post/Page ID"
+msgstr ""
+
+#: app/Services/FormBuilder/EditorShortCode.php:21
+msgid "Embedded Post/Page Title"
+msgstr ""
+
+#: app/Services/FormBuilder/EditorShortCode.php:22
+msgid "Embedded URL"
+msgstr ""
+
+#: app/Services/FormBuilder/EditorShortCode.php:23
+msgid "HTTP Referer URL"
+msgstr ""
+
+#: app/Services/FormBuilder/EditorShortCode.php:24
+msgid "User ID"
+msgstr ""
+
+#: app/Services/FormBuilder/EditorShortCode.php:25
+msgid "User Display Name"
+msgstr ""
+
+#: app/Services/FormBuilder/EditorShortCode.php:26
+msgid "User First Name"
+msgstr ""
+
+#: app/Services/FormBuilder/EditorShortCode.php:27
+msgid "User Last Name"
+msgstr ""
+
+#: app/Services/FormBuilder/EditorShortCode.php:28
+msgid "User Email"
+msgstr ""
+
+#: app/Services/FormBuilder/EditorShortCode.php:29
+msgid "User Username"
+msgstr ""
+
+#: app/Services/FormBuilder/EditorShortCode.php:30
+msgid "User Browser Client"
+msgstr ""
+
+#: app/Services/FormBuilder/EditorShortCode.php:31
+msgid "User Operating System"
+msgstr ""
+
+#: app/Services/FormBuilder/EditorShortCode.php:60
+msgid "Submission ID"
+msgstr ""
+
+#: app/Services/FormBuilder/EditorShortCode.php:61
+msgid "Submission Serial Number"
+msgstr ""
+
+#: app/Services/FormBuilder/EditorShortCode.php:62
+msgid "Source URL"
+msgstr ""
+
+#: app/Services/FormBuilder/EditorShortCode.php:63
+msgid "User Id"
+msgstr ""
+
+#: app/Services/FormBuilder/EditorShortCode.php:64
+msgid "Submitter Browser"
+msgstr ""
+
+#: app/Services/FormBuilder/EditorShortCode.php:65
+msgid "Submitter Device"
+msgstr ""
+
+#: app/Services/FormBuilder/EditorShortCode.php:66
+msgid "Submission Status"
+msgstr ""
+
+#: app/Services/FormBuilder/EditorShortCode.php:67
+msgid "Submission Create Date"
+msgstr ""
+
+#: app/Services/FormBuilder/EditorShortCode.php:68
+msgid "Submission Admin View URL"
+msgstr ""
+
+#: app/Services/FormBuilder/EditorShortCode.php:74
+msgid "Currency"
+msgstr ""
+
+#: app/Services/FormBuilder/EditorShortCode.php:75
+#: app/Services/FormBuilder/EditorShortCode.php:98
+msgid "Payment Method"
+msgstr ""
+
+#: app/Services/FormBuilder/EditorShortCode.php:76
+#: app/Services/FormBuilder/EditorShortCode.php:96
+msgid "Payment Status"
+msgstr ""
+
+#: app/Services/FormBuilder/EditorShortCode.php:77
+msgid "Paid Total Amount"
+msgstr ""
+
+#: app/Services/FormBuilder/EditorShortCode.php:78
+msgid "Payment Amount"
+msgstr ""
+
+#: app/Services/FormBuilder/EditorShortCode.php:93
+msgid "Payment Receipt"
+msgstr ""
+
+#: app/Services/FormBuilder/EditorShortCode.php:94
+msgid "Payment Summary"
+msgstr ""
+
+#: app/Services/FormBuilder/EditorShortCode.php:95
+msgid "Order Items Table"
+msgstr ""
+
+#: app/Services/FormBuilder/EditorShortCode.php:97
+#: resources/views/email/report/body.php:173
+msgid "Payment Total"
+msgstr ""
+
+#: app/Services/FormBuilder/ShortCodeParser.php:260
+msgid "Offline"
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:22
+#: app/Services/FormBuilder/ElementCustomization.php:23
+msgid "Advanced Date Configuration"
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:29
+msgid ""
+"You can write your own date configaration as JS object. Please write valid "
+"configaration as per flatpickr config."
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:40
+msgid "Name Attribute"
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:41
+msgid ""
+"This is the field name attributes which is used to submit form data, name "
+"attribute must be unique."
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:45
+msgid "Element Label"
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:46
+msgid "This is the field title the user will see when filling out the form."
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:50
+msgid "Label Placement"
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:51
+msgid ""
+"Determine the position of label title where the user will see this. By "
+"choosing \"Default\", global label placement setting will be applied."
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:59
+msgid "Top"
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:67
+msgid "Bottom"
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:75
+msgid "Hide Label"
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:81
+msgid "Button Style"
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:82
+msgid "Select a button style from the dropdown"
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:86
+msgid "Button Size"
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:87
+msgid "Define a size of the button"
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:91
+msgid "Small"
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:95
+msgid "Medium"
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:99
+msgid "Large"
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:106
+msgid ""
+"This is the field placeholder, the user will see this if the input field is "
+"empty."
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:110
+msgid "Date Format"
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:113
+msgid "Select Date Format"
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:114
+msgid ""
+"Select any date format from the dropdown. The user will be able to choose a "
+"date in this given format."
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:120
+msgid "Rows"
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:121
+msgid ""
+"How many rows will textarea take in a form. It's an HTML attributes for "
+"browser support."
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:125
+msgid "Columns"
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:126
+msgid ""
+"How many cols will textarea take in a form. It's an HTML attributes for "
+"browser support."
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:130
+#: app/Services/FormBuilder/ElementCustomization.php:135
+#: app/Services/FormBuilder/ElementCustomization.php:366
+msgid "Options"
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:131
+msgid "Create options for the field and checkmark them for default selection."
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:136
+msgid ""
+"Create visual options for the field and checkmark them for default selection."
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:140
+msgid "Enable Searchable Smart Options"
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:141
+msgid ""
+"If you enable this then options will be searchable by select2 js library"
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:145
+msgid "Payment Items"
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:146
+msgid "Set your product type and corresponding prices"
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:150
+msgid "Validation Rules"
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:155
+msgid "Required Validation Message"
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:160
+#: app/Services/FormBuilder/DefaultElements.php:1110
+msgid "Terms & Conditions"
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:161
+msgid "Write HTML content for terms & condition checkbox"
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:167
+msgid "Hook Name"
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:168
+msgid "WordPress Hook name to hook something in this place."
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:175
+msgid "Show Checkbox"
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:183
+msgid "HTML Code"
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:184
+msgid "Your valid HTML code will be shown to the user as normal content."
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:191
+msgid "Description will be shown to the user as normal text content."
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:195
+#: app/Services/FormBuilder/ElementSettingsPlacement.php:393
+msgid "Button Text"
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:196
+msgid "This will be visible as button text for upload file."
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:201
+msgid "This is form submission button."
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:205
+msgid "Content Alignment"
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:206
+msgid "How the content will be aligned."
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:224
+#: app/Services/FormBuilder/DefaultElements.php:1173
+msgid "Shortcode"
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:225
+msgid "Your shortcode to render desired content in current place."
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:229
+msgid "Apply Styles"
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:230
+msgid "Apply styles provided here"
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:244
+msgid "Step Title"
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:245
+#: app/Services/FormBuilder/ElementCustomization.php:294
+msgid "Form step titles, user will see each title in each step."
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:249
+msgid "Disable auto focus when changing each page"
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:250
+msgid ""
+"If you enable this then on page transition automatic scrolling will be "
+"disabled"
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:254
+msgid "Enable auto page change for single radio field"
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:255
+msgid ""
+"If you enable this then for last radio item field will trigger next page "
+"change"
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:259
+msgid "Enable Per step data save (Save and Continue)"
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:260
+msgid ""
+"If you enable this then on each step change the data current step data will "
+"be persisted in a step form<br />Your users can resume the form where they "
+"left"
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:264
+msgid "Resume Step from last form session"
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:265
+msgid ""
+"If you enable this then users will see the form as step page where it has "
+"been left"
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:274
+msgid "Progress Indicator"
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:275
+msgid ""
+"Select any of them below, user will see progress of form steps according to "
+"your choice."
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:279
+msgid "Progress Bar"
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:283
+msgid "Steps"
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:287
+#: app/Services/FormBuilder/ElementCustomization.php:425
+msgid "None"
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:293
+msgid "Step Titles"
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:298
+msgid "Previous Button"
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:299
+msgid "Multi-step form's previous button"
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:303
+msgid "Next Button"
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:304
+msgid "Multi-step form's next button"
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:308
+#: app/Services/FormBuilder/DefaultElements.php:454
+msgid "Address Fields"
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:312
+msgid "Name Fields"
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:319
+msgid "Enable Multiple Columns"
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:325
+msgid "Repeat Fields"
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:326
+msgid "This is a form field which a user will be able to repeat."
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:330
+msgid "Admin Field Label"
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:331
+msgid ""
+"Admin field label is field title which will be used for admin field title."
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:335
+msgid "Max text length"
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:336
+msgid "The maximum number of characters the input should accept"
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:340
+msgid "Default Value"
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:341
+#: app/Services/FormBuilder/ElementCustomization.php:347
+msgid "If you would like to pre-populate the value of a field, enter it here."
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:346
+msgid "Dynamic Default Value"
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:351
+msgid "Container Class"
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:352
+msgid "Class for the field wrapper. This can be used to style current element."
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:356
+msgid "Element Class"
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:357
+msgid "Class for the field. This can be used to style current element."
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:361
+#: app/Services/FormBuilder/DefaultElements.php:900
+msgid "Country List"
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:370
+msgid "Help Message"
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:371
+msgid ""
+"Help message will be shown as tooltip next to sidebar or below the field."
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:375
+msgid "Conditional Logic"
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:376
+msgid ""
+"Create rules to dynamically display or hide this field based on values from "
+"another field."
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:381
+msgid "The Background color of the element"
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:385
+msgid "Font Color"
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:386
+msgid "Font color of the element"
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:390
+msgid "Custom Mask"
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:391
+#: app/Services/FormBuilder/ElementCustomization.php:456
+#: app/Services/FormBuilder/ElementCustomization.php:461
+msgid "Write your own mask for this input"
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:400
+msgid "Activating a reversible mask"
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:401
+msgid "If you enable this then it the mask will work as reverse"
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:410
+msgid "Clear if not match"
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:411
+msgid "Clear value if not match the mask"
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:420
+#: app/Services/FormBuilder/DefaultElements.php:198
+#: app/Services/FormBuilder/DefaultElements.php:214
+msgid "Mask Input"
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:421
+msgid "Select a mask for the input field"
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:437
+msgid "23/03/2018"
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:441
+msgid "23:59:59"
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:445
+msgid "23/03/2018 23:59:59"
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:455
+msgid "Grid Columns"
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:460
+msgid "Grid Rows"
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:465
+#: app/Services/FormBuilder/ElementCustomization.php:466
+msgid "Field Type"
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:474
+msgid "Radio"
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:480
+msgid "Max Repeat inputs"
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:481
+msgid ""
+"Please provide max number of rows the user can fill up for this repeat field."
+" Keep blank/0 for unlimited numbers"
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:494
+#: app/Services/FormBuilder/ValidationRuleSettings.php:77
+msgid "Min Value"
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:495
+msgid "Please provide minimum value"
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:499
+#: app/Services/FormBuilder/ValidationRuleSettings.php:84
+msgid "Max Value"
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:500
+msgid "Please provide Maximum value"
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:504
+msgid "Step"
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:505
+msgid ""
+"Please provide step attribute for this field. Give value \"any\" for "
+"floating value"
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:509
+msgid "Prefix Label"
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:510
+msgid ""
+"Provide Input Prefix Label. It will show in the input field as prefix label"
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:514
+msgid "Suffix Label"
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:515
+msgid ""
+"Provide Input Suffix Label. It will show in the input field as suffix label"
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:519
+msgid "Validate as Unique"
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:520
+msgid ""
+"If you make it unique then it will validate as unique from previous "
+"submissions of this form"
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:524
+msgid "Show Text"
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:525
+msgid "Show Text value on selection"
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:539
+msgid "Validation Message for Duplicate"
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:540
+msgid "If validation failed then it will show this message"
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:549
+msgid "Layout"
+msgstr ""
+
+#: app/Services/FormBuilder/ElementCustomization.php:550
+msgid "Select the Layout for checkable items"
+msgstr ""
+
+#: app/Services/FormBuilder/ElementSettingsPlacement.php:394
+msgid "Form submission button text."
+msgstr ""
+
+#: app/Services/FormBuilder/ElementSettingsPlacement.php:463
+msgid "Write HTML content for GDPR agreement checkbox"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:18
+msgid "Afghanistan"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:19
+msgid "Åland Islands"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:20
+msgid "Albania"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:21
+msgid "Algeria"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:22
+msgid "American Samoa"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:23
+msgid "Andorra"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:24
+msgid "Angola"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:25
+msgid "Anguilla"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:26
+msgid "Antarctica"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:27
+msgid "Antigua and Barbuda"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:28
+msgid "Argentina"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:29
+msgid "Armenia"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:30
+msgid "Aruba"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:31
+msgid "Australia"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:32
+msgid "Austria"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:33
+msgid "Azerbaijan"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:34
+msgid "Bahamas"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:35
+msgid "Bahrain"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:36
+msgid "Bangladesh"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:37
+msgid "Barbados"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:38
+msgid "Belarus"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:39
+msgid "Belgium"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:40
+msgid "Belau"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:41
+msgid "Belize"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:42
+msgid "Benin"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:43
+msgid "Bermuda"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:44
+msgid "Bhutan"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:45
+msgid "Bolivia"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:46
+msgid "Bonaire, Saint Eustatius and Saba"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:47
+msgid "Bosnia and Herzegovina"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:48
+msgid "Botswana"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:49
+msgid "Bouvet Island"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:50
+msgid "Brazil"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:51
+msgid "British Indian Ocean Territory"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:52
+msgid "British Virgin Islands"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:53
+msgid "Brunei"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:54
+msgid "Bulgaria"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:55
+msgid "Burkina Faso"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:56
+msgid "Burundi"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:57
+msgid "Cambodia"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:58
+msgid "Cameroon"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:59
+msgid "Canada"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:60
+msgid "Cape Verde"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:61
+msgid "Cayman Islands"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:62
+msgid "Central African Republic"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:63
+msgid "Chad"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:64
+msgid "Chile"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:65
+msgid "China"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:66
+msgid "Christmas Island"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:67
+msgid "Cocos (Keeling) Islands"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:68
+msgid "Colombia"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:69
+msgid "Comoros"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:70
+msgid "Congo (Brazzaville)"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:71
+msgid "Congo (Kinshasa)"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:72
+msgid "Cook Islands"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:73
+msgid "Costa Rica"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:74
+msgid "Croatia"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:75
+msgid "Cuba"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:76
+msgid "Cura&ccedil;ao"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:77
+msgid "Cyprus"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:78
+msgid "Czech Republic"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:79
+msgid "Denmark"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:80
+msgid "Djibouti"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:81
+msgid "Dominica"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:82
+msgid "Dominican Republic"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:83
+msgid "Ecuador"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:84
+msgid "Egypt"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:85
+msgid "El Salvador"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:86
+msgid "Equatorial Guinea"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:87
+msgid "Eritrea"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:88
+msgid "Estonia"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:89
+msgid "Ethiopia"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:90
+msgid "Falkland Islands"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:91
+msgid "Faroe Islands"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:92
+msgid "Fiji"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:93
+msgid "Finland"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:94
+msgid "France"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:95
+msgid "French Guiana"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:96
+msgid "French Polynesia"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:97
+msgid "French Southern Territories"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:98
+msgid "Gabon"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:99
+msgid "Gambia"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:100
+msgid "Georgia"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:101
+msgid "Germany"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:102
+msgid "Ghana"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:103
+msgid "Gibraltar"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:104
+msgid "Greece"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:105
+msgid "Greenland"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:106
+msgid "Grenada"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:107
+msgid "Guadeloupe"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:108
+msgid "Guam"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:109
+msgid "Guatemala"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:110
+msgid "Guernsey"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:111
+msgid "Guinea"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:112
+msgid "Guinea-Bissau"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:113
+msgid "Guyana"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:114
+msgid "Haiti"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:115
+msgid "Heard Island and McDonald Islands"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:116
+msgid "Honduras"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:117
+msgid "Hong Kong"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:118
+msgid "Hungary"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:119
+msgid "Iceland"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:120
+msgid "India"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:121
+msgid "Indonesia"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:122
+msgid "Iran"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:123
+msgid "Iraq"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:124
+msgid "Ireland"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:125
+msgid "Isle of Man"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:126
+msgid "Israel"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:127
+msgid "Italy"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:128
+msgid "Ivory Coast"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:129
+msgid "Jamaica"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:130
+msgid "Japan"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:131
+msgid "Jersey"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:132
+msgid "Jordan"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:133
+msgid "Kazakhstan"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:134
+msgid "Kenya"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:135
+msgid "Kiribati"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:136
+msgid "Kosovo"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:137
+msgid "Kuwait"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:138
+msgid "Kyrgyzstan"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:139
+msgid "Laos"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:140
+msgid "Latvia"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:141
+msgid "Lebanon"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:142
+msgid "Lesotho"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:143
+msgid "Liberia"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:144
+msgid "Libya"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:145
+msgid "Liechtenstein"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:146
+msgid "Lithuania"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:147
+msgid "Luxembourg"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:148
+msgid "Macao S.A.R., China"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:149
+msgid "Macedonia"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:150
+msgid "Madagascar"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:151
+msgid "Malawi"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:152
+msgid "Malaysia"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:153
+msgid "Maldives"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:154
+msgid "Mali"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:155
+msgid "Malta"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:156
+msgid "Marshall Islands"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:157
+msgid "Martinique"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:158
+msgid "Mauritania"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:159
+msgid "Mauritius"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:160
+msgid "Mayotte"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:161
+msgid "Mexico"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:162
+msgid "Micronesia"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:163
+msgid "Moldova"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:164
+msgid "Monaco"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:165
+msgid "Mongolia"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:166
+msgid "Montenegro"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:167
+msgid "Montserrat"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:168
+msgid "Morocco"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:169
+msgid "Mozambique"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:170
+msgid "Myanmar"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:171
+msgid "Namibia"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:172
+msgid "Nauru"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:173
+msgid "Nepal"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:174
+msgid "Netherlands"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:175
+msgid "New Caledonia"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:176
+msgid "New Zealand"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:177
+msgid "Nicaragua"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:178
+msgid "Niger"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:179
+msgid "Nigeria"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:180
+msgid "Niue"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:181
+msgid "Norfolk Island"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:182
+msgid "Northern Mariana Islands"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:183
+msgid "North Korea"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:184
+msgid "Norway"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:185
+msgid "Oman"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:186
+msgid "Pakistan"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:187
+msgid "Palestinian Territory"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:188
+msgid "Panama"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:189
+msgid "Papua New Guinea"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:190
+msgid "Paraguay"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:191
+msgid "Peru"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:192
+msgid "Philippines"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:193
+msgid "Pitcairn"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:194
+msgid "Poland"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:195
+msgid "Portugal"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:196
+msgid "Puerto Rico"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:197
+msgid "Qatar"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:198
+msgid "Reunion"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:199
+msgid "Romania"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:200
+msgid "Russia"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:201
+msgid "Rwanda"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:202
+msgid "Saint Barth&eacute;lemy"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:203
+msgid "Saint Helena"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:204
+msgid "Saint Kitts and Nevis"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:205
+msgid "Saint Lucia"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:206
+msgid "Saint Martin (French part)"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:207
+msgid "Saint Martin (Dutch part)"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:208
+msgid "Saint Pierre and Miquelon"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:209
+msgid "Saint Vincent and the Grenadines"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:210
+msgid "San Marino"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:211
+msgid "S&atilde;o Tom&eacute; and Pr&iacute;ncipe"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:212
+msgid "Saudi Arabia"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:213
+msgid "Senegal"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:214
+msgid "Serbia"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:215
+msgid "Seychelles"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:216
+msgid "Sierra Leone"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:217
+msgid "Singapore"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:218
+msgid "Slovakia"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:219
+msgid "Slovenia"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:220
+msgid "Solomon Islands"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:221
+msgid "Somalia"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:222
+msgid "South Africa"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:223
+msgid "South Georgia/Sandwich Islands"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:224
+msgid "South Korea"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:225
+msgid "South Sudan"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:226
+msgid "Spain"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:227
+msgid "Sri Lanka"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:228
+msgid "Sudan"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:229
+msgid "Suriname"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:230
+msgid "Svalbard and Jan Mayen"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:231
+msgid "Swaziland"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:232
+msgid "Sweden"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:233
+msgid "Switzerland"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:234
+msgid "Syria"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:235
+msgid "Taiwan"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:236
+msgid "Tajikistan"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:237
+msgid "Tanzania"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:238
+msgid "Thailand"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:239
+msgid "Timor-Leste"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:240
+msgid "Togo"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:241
+msgid "Tokelau"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:242
+msgid "Tonga"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:243
+msgid "Trinidad and Tobago"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:244
+msgid "Tunisia"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:245
+msgid "Turkey"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:246
+msgid "Turkmenistan"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:247
+msgid "Turks and Caicos Islands"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:248
+msgid "Tuvalu"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:249
+msgid "Uganda"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:250
+msgid "Ukraine"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:251
+msgid "United Arab Emirates"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:252
+msgid "United Kingdom (UK)"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:253
+msgid "United States (US)"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:254
+msgid "United States (US) Minor Outlying Islands"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:255
+msgid "United States (US) Virgin Islands"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:256
+msgid "Uruguay"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:257
+msgid "Uzbekistan"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:258
+msgid "Vanuatu"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:259
+msgid "Vatican"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:260
+msgid "Venezuela"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:261
+msgid "Vietnam"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:262
+msgid "Wallis and Futuna"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:263
+msgid "Western Sahara"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:264
+msgid "Samoa"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:265
+msgid "Yemen"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:266
+msgid "Zambia"
+msgstr ""
+
+#: app/Services/FormBuilder/CountryNames.php:267
+msgid "Zimbabwe"
+msgstr ""
+
+#: app/Services/FormBuilder/ValidationRuleSettings.php:20
+msgid "Images (jpg, jpeg, gif, png, bmp)"
+msgstr ""
+
+#: app/Services/FormBuilder/ValidationRuleSettings.php:24
+msgid "Audio (mp3, wav, ogg, oga, wma, mka, m4a, ra, mid, midi)"
+msgstr ""
+
+#: app/Services/FormBuilder/ValidationRuleSettings.php:28
+msgid "Video (avi, divx, flv, mov, ogv, mkv, mp4, m4v, divx, mpg, mpeg, mpe)"
+msgstr ""
+
+#: app/Services/FormBuilder/ValidationRuleSettings.php:32
+msgid "PDF (pdf)"
+msgstr ""
+
+#: app/Services/FormBuilder/ValidationRuleSettings.php:36
+msgid ""
+"Docs (doc, ppt, pps, xls, mdb, docx, xlsx, pptx, odt, odp, ods, odg, odc, "
+"odb, odf, rtf, txt)"
+msgstr ""
+
+#: app/Services/FormBuilder/ValidationRuleSettings.php:40
+msgid "Zip Archives (zip, gz, gzip, rar, 7z)"
+msgstr ""
+
+#: app/Services/FormBuilder/ValidationRuleSettings.php:44
+msgid "Executable Files (exe)"
+msgstr ""
+
+#: app/Services/FormBuilder/ValidationRuleSettings.php:48
+msgid "CSV (csv)"
+msgstr ""
+
+#: app/Services/FormBuilder/ValidationRuleSettings.php:59
+msgid "Required"
+msgstr ""
+
+#: app/Services/FormBuilder/ValidationRuleSettings.php:60
+msgid "Select whether this field is a required field for the form or not."
+msgstr ""
+
+#: app/Services/FormBuilder/ValidationRuleSettings.php:78
+msgid "Minimum value for the input field."
+msgstr ""
+
+#: app/Services/FormBuilder/ValidationRuleSettings.php:85
+msgid "Maximum value for the input field."
+msgstr ""
+
+#: app/Services/FormBuilder/ValidationRuleSettings.php:90
+msgid "Max File Size"
+msgstr ""
+
+#: app/Services/FormBuilder/ValidationRuleSettings.php:91
+msgid "The file size limit uploaded by the user."
+msgstr ""
+
+#: app/Services/FormBuilder/ValidationRuleSettings.php:97
+msgid "Max Files Count"
+msgstr ""
+
+#: app/Services/FormBuilder/ValidationRuleSettings.php:98
+msgid "Maximum user file upload number."
+msgstr ""
+
+#: app/Services/FormBuilder/ValidationRuleSettings.php:103
+#: app/Services/FormBuilder/ValidationRuleSettings.php:104
+msgid "Allowed Files"
+msgstr ""
+
+#: app/Services/FormBuilder/ValidationRuleSettings.php:107
+msgid "Images"
+msgstr ""
+
+#: app/Services/FormBuilder/ValidationRuleSettings.php:111
+msgid "Audio"
+msgstr ""
+
+#: app/Services/FormBuilder/ValidationRuleSettings.php:115
+msgid "Video"
+msgstr ""
+
+#: app/Services/FormBuilder/ValidationRuleSettings.php:132
+msgid "PDF"
+msgstr ""
+
+#: app/Services/FormBuilder/ValidationRuleSettings.php:136
+msgid "Docs"
+msgstr ""
+
+#: app/Services/FormBuilder/ValidationRuleSettings.php:158
+msgid "Zip Archives"
+msgstr ""
+
+#: app/Services/FormBuilder/ValidationRuleSettings.php:162
+msgid "Executable Files"
+msgstr ""
+
+#: app/Services/FormBuilder/ValidationRuleSettings.php:167
+msgid "CSV"
+msgstr ""
+
+#: app/Services/FormBuilder/ValidationRuleSettings.php:176
+#: app/Services/FormBuilder/ValidationRuleSettings.php:177
+msgid "Allowed Images"
+msgstr ""
+
+#: app/Services/FormBuilder/ValidationRuleSettings.php:181
+#: app/Services/FormBuilder/ValidationRuleSettings.php:195
+msgid "JPG"
+msgstr ""
+
+#: app/Services/FormBuilder/ValidationRuleSettings.php:185
+#: app/Services/FormBuilder/ValidationRuleSettings.php:199
+msgid "PNG"
+msgstr ""
+
+#: app/Services/FormBuilder/ValidationRuleSettings.php:189
+#: app/Services/FormBuilder/ValidationRuleSettings.php:203
+msgid "GIF"
+msgstr ""
+
+#: app/Services/FormBuilder/DefaultElements.php:27
+#: app/Services/FormBuilder/DefaultElements.php:32
+msgid "First Name"
+msgstr ""
+
+#: app/Services/FormBuilder/DefaultElements.php:38
+#: app/Services/FormBuilder/DefaultElements.php:68
+#: app/Services/FormBuilder/DefaultElements.php:98
+#: app/Services/FormBuilder/DefaultElements.php:135
+#: app/Services/FormBuilder/DefaultElements.php:172
+#: app/Services/FormBuilder/DefaultElements.php:208
+#: app/Services/FormBuilder/DefaultElements.php:241
+#: app/Services/FormBuilder/DefaultElements.php:286
+#: app/Services/FormBuilder/DefaultElements.php:314
+#: app/Services/FormBuilder/DefaultElements.php:343
+#: app/Services/FormBuilder/DefaultElements.php:372
+#: app/Services/FormBuilder/DefaultElements.php:402
+#: app/Services/FormBuilder/DefaultElements.php:431
+#: app/Services/FormBuilder/DefaultElements.php:483
+#: app/Services/FormBuilder/DefaultElements.php:545
+#: app/Services/FormBuilder/DefaultElements.php:592
+#: app/Services/FormBuilder/DefaultElements.php:648
+#: app/Services/FormBuilder/DefaultElements.php:698
+#: app/Services/FormBuilder/DefaultElements.php:729
+#: app/Services/FormBuilder/DefaultElements.php:767
+#: app/Services/FormBuilder/DefaultElements.php:799
+#: app/Services/FormBuilder/DefaultElements.php:843
+#: app/Services/FormBuilder/DefaultElements.php:886
+#: app/Services/FormBuilder/DefaultElements.php:942
+#: app/Services/FormBuilder/DefaultElements.php:993
+#: app/Services/FormBuilder/DefaultElements.php:1051
+#: app/Services/FormBuilder/DefaultElements.php:1104
+#: app/Services/FormBuilder/DefaultElements.php:1133
+msgid "This field is required"
+msgstr ""
+
+#: app/Services/FormBuilder/DefaultElements.php:55
+#: app/Services/FormBuilder/DefaultElements.php:61
+msgid "Middle Name"
+msgstr ""
+
+#: app/Services/FormBuilder/DefaultElements.php:85
+#: app/Services/FormBuilder/DefaultElements.php:91
+msgid "Last Name"
+msgstr ""
+
+#: app/Services/FormBuilder/DefaultElements.php:128
+msgid "Email"
+msgstr ""
+
+#: app/Services/FormBuilder/DefaultElements.php:139
+msgid "This field must contain a valid email"
+msgstr ""
+
+#: app/Services/FormBuilder/DefaultElements.php:147
+msgid "Email Address"
+msgstr ""
+
+#: app/Services/FormBuilder/DefaultElements.php:165
+msgid "Text Input"
+msgstr ""
+
+#: app/Services/FormBuilder/DefaultElements.php:177
+msgid "This value need to be unique."
+msgstr ""
+
+#: app/Services/FormBuilder/DefaultElements.php:180
+msgid "Simple Text"
+msgstr ""
+
+#: app/Services/FormBuilder/DefaultElements.php:234
+msgid "Textarea"
+msgstr ""
+
+#: app/Services/FormBuilder/DefaultElements.php:247
+msgid "Text Area"
+msgstr ""
+
+#: app/Services/FormBuilder/DefaultElements.php:262
+msgid "Address"
+msgstr ""
+
+#: app/Services/FormBuilder/DefaultElements.php:275
+#: app/Services/FormBuilder/DefaultElements.php:279
+msgid "Address Line 1"
+msgstr ""
+
+#: app/Services/FormBuilder/DefaultElements.php:303
+#: app/Services/FormBuilder/DefaultElements.php:307
+msgid "Address Line 2"
+msgstr ""
+
+#: app/Services/FormBuilder/DefaultElements.php:331
+#: app/Services/FormBuilder/DefaultElements.php:335
+msgid "City"
+msgstr ""
+
+#: app/Services/FormBuilder/DefaultElements.php:360
+#: app/Services/FormBuilder/DefaultElements.php:364
+msgid "State"
+msgstr ""
+
+#: app/Services/FormBuilder/DefaultElements.php:389
+msgid "Zip"
+msgstr ""
+
+#: app/Services/FormBuilder/DefaultElements.php:394
+msgid "Zip Code"
+msgstr ""
+
+#: app/Services/FormBuilder/DefaultElements.php:418
+#: app/Services/FormBuilder/DefaultElements.php:875
+msgid "Select Country"
+msgstr ""
+
+#: app/Services/FormBuilder/DefaultElements.php:423
+#: app/Services/FormBuilder/DefaultElements.php:879
+msgid "Country"
+msgstr ""
+
+#: app/Services/FormBuilder/DefaultElements.php:473
+#: app/Services/FormBuilder/DefaultElements.php:505
+msgid "Numeric Field"
+msgstr ""
+
+#: app/Services/FormBuilder/DefaultElements.php:487
+msgid "This field must contain numeric value"
+msgstr ""
+
+#: app/Services/FormBuilder/DefaultElements.php:491
+msgid "Minimum value is "
+msgstr ""
+
+#: app/Services/FormBuilder/DefaultElements.php:495
+msgid "Maximum value is "
+msgstr ""
+
+#: app/Services/FormBuilder/DefaultElements.php:521
+#: app/Services/FormBuilder/DefaultElements.php:551
+msgid "Dropdown"
+msgstr ""
+
+#: app/Services/FormBuilder/DefaultElements.php:568
+#: app/Services/FormBuilder/DefaultElements.php:599
+msgid "Radio Field"
+msgstr ""
+
+#: app/Services/FormBuilder/DefaultElements.php:616
+msgid "Checkbox Field"
+msgstr ""
+
+#: app/Services/FormBuilder/DefaultElements.php:655
+msgid "Check Box"
+msgstr ""
+
+#: app/Services/FormBuilder/DefaultElements.php:675
+msgid "Multiselect"
+msgstr ""
+
+#: app/Services/FormBuilder/DefaultElements.php:704
+msgid "Multiple Choice"
+msgstr ""
+
+#: app/Services/FormBuilder/DefaultElements.php:722
+msgid "URL"
+msgstr ""
+
+#: app/Services/FormBuilder/DefaultElements.php:733
+msgid "This field must contain a valid url"
+msgstr ""
+
+#: app/Services/FormBuilder/DefaultElements.php:739
+msgid "Website URL"
+msgstr ""
+
+#: app/Services/FormBuilder/DefaultElements.php:757
+msgid "Date / Time"
+msgstr ""
+
+#: app/Services/FormBuilder/DefaultElements.php:773
+msgid "Time & Date"
+msgstr ""
+
+#: app/Services/FormBuilder/DefaultElements.php:804
+#: app/Services/FormBuilder/DefaultElements.php:848
+msgid "Maximum file size limit is 1MB"
+msgstr ""
+
+#: app/Services/FormBuilder/DefaultElements.php:808
+msgid "You can upload maximum 1 image"
+msgstr ""
+
+#: app/Services/FormBuilder/DefaultElements.php:812
+msgid "Allowed image types does not match"
+msgstr ""
+
+#: app/Services/FormBuilder/DefaultElements.php:835
+#: app/Services/FormBuilder/DefaultElements.php:862
+msgid "File Upload"
+msgstr ""
+
+#: app/Services/FormBuilder/DefaultElements.php:852
+msgid "You can upload maximum 1 file"
+msgstr ""
+
+#: app/Services/FormBuilder/DefaultElements.php:856
+msgid "Invalid file type"
+msgstr ""
+
+#: app/Services/FormBuilder/DefaultElements.php:916
+msgid "Custom HTML"
+msgstr ""
+
+#: app/Services/FormBuilder/DefaultElements.php:932
+#: app/Services/FormBuilder/DefaultElements.php:954
+msgid "Ratings"
+msgstr ""
+
+#: app/Services/FormBuilder/DefaultElements.php:947
+msgid "Nice"
+msgstr ""
+
+#: app/Services/FormBuilder/DefaultElements.php:948
+msgid "Good"
+msgstr ""
+
+#: app/Services/FormBuilder/DefaultElements.php:949
+msgid "Very Good"
+msgstr ""
+
+#: app/Services/FormBuilder/DefaultElements.php:950
+msgid "Awesome"
+msgstr ""
+
+#: app/Services/FormBuilder/DefaultElements.php:951
+msgid "Amazing"
+msgstr ""
+
+#: app/Services/FormBuilder/DefaultElements.php:971
+msgid "Hidden Field"
+msgstr ""
+
+#: app/Services/FormBuilder/DefaultElements.php:1007
+msgid "Checkable Grid"
+msgstr ""
+
+#: app/Services/FormBuilder/DefaultElements.php:1021
+msgid "Some description about this section"
+msgstr ""
+
+#: app/Services/FormBuilder/DefaultElements.php:1044
+msgid "Password"
+msgstr ""
+
+#: app/Services/FormBuilder/DefaultElements.php:1057
+msgid "Password Field"
+msgstr ""
+
+#: app/Services/FormBuilder/DefaultElements.php:1072
+msgid "Previous"
+msgstr ""
+
+#: app/Services/FormBuilder/DefaultElements.php:1077
+msgid "Next"
+msgstr ""
+
+#: app/Services/FormBuilder/DefaultElements.php:1082
+msgid "Form Step"
+msgstr ""
+
+#: app/Services/FormBuilder/DefaultElements.php:1099
+msgid "Terms and Conditions"
+msgstr ""
+
+#: app/Services/FormBuilder/DefaultElements.php:1125
+#: app/Services/FormBuilder/DefaultElements.php:1127
+#: app/Services/FormBuilder/DefaultElements.php:1140
+msgid "GDPR Agreement"
+msgstr ""
+
+#: app/Services/FormBuilder/DefaultElements.php:1126
+msgid ""
+"I consent to having this website store my submitted information so they can "
+"respond to my inquiry"
+msgstr ""
+
+#: app/Services/FormBuilder/DefaultElements.php:1155
+msgid "reCaptcha"
+msgstr ""
+
+#: app/Services/FormBuilder/DefaultElements.php:1190
+msgid "Action Hook"
+msgstr ""
+
+#: app/Services/FormBuilder/DefaultElements.php:1210
+msgid "One Column Container"
+msgstr ""
+
+#: app/Services/FormBuilder/DefaultElements.php:1228
+msgid "Two Column Container"
+msgstr ""
+
+#: app/Services/FormBuilder/DefaultElements.php:1246
+msgid "Three Column Container"
+msgstr ""
+
+#: app/Services/FormBuilder/DefaultElements.php:1265
+msgid "Four Column Container"
+msgstr ""
+
+#: app/Services/FormBuilder/DefaultElements.php:1285
+msgid "Five Column Container"
+msgstr ""
+
+#: app/Services/FormBuilder/DefaultElements.php:1306
+msgid "Six Column Container"
+msgstr ""
+
+#: app/Services/FormBuilder/DefaultElements.php:1397
+msgid "Payment Field"
+msgstr ""
+
+#: app/Services/FormBuilder/DefaultElements.php:1409
+msgid "Custom Payment Amount"
+msgstr ""
+
+#: app/Services/FormBuilder/DefaultElements.php:1420
+msgid "Item Quantity"
+msgstr ""
+
+#: app/Services/Integrations/GlobalNotificationManager.php:181
+msgid "(truncated)"
+msgstr ""
+
+#: app/Services/Integrations/GlobalIntegrationManager.php:28
+msgid "Sorry! No integration failed found with: "
+msgstr ""
+
+#: app/Services/Integrations/GlobalIntegrationManager.php:33
+#: app/Services/Integrations/MailChimp/MailChimpIntegration.php:46
+msgid "Save Settings"
+msgstr ""
+
+#: app/Services/Integrations/GlobalIntegrationManager.php:37
+msgid "Your API Key is valid"
+msgstr ""
+
+#: app/Services/Integrations/GlobalIntegrationManager.php:41
+msgid "Your API Key is not valid"
+msgstr ""
+
+#: app/Services/Integrations/GlobalIntegrationManager.php:145
+msgid "Integration successfully updated"
+msgstr ""
+
+#: app/Services/Integrations/GlobalIntegrationManager.php:253
+msgid "Integration successfully saved"
+msgstr ""
+
+#: app/Services/Integrations/GlobalIntegrationManager.php:271
+msgid "Selected integration feed successfully deleted"
+msgstr ""
+
+#: app/Services/Integrations/BaseIntegration.php:102
+msgid "Feed Name is required"
+msgstr ""
+
+#: app/Services/Integrations/BaseIntegration.php:103
+msgid " List is required"
+msgstr ""
+
+#: app/Services/Integrations/BaseIntegration.php:110
+msgid "Please fix the errors"
+msgstr ""
+
+#: resources/views/admin/global_menu.php:12
+msgid "All Entries"
+msgstr ""
+
+#: resources/views/admin/global_menu.php:25
+msgid "Integrations"
+msgstr ""
+
+#: resources/views/admin/global_menu.php:33
+msgid "Support"
+msgstr ""
+
+#: resources/views/admin/global_menu.php:37
+msgid "Upgrade to Pro"
+msgstr ""
+
+#: resources/views/frameless/edit-entry.php:8
+#: resources/views/frameless/show_review.php:8
+msgid "Preview Form"
+msgstr ""
+
+#: app/Modules/Form/Settings/FormCssJs.php:117
+msgid "Custom CSS and JS successfully updated"
+msgstr ""
+
+#: app/Modules/Form/Settings/FormSettings.php:107
+#: app/Modules/Form/Settings/FormSettings.php:156
+msgid "Settings has been saved."
+msgstr ""
+
+#: app/Modules/Form/Settings/ExtraSettings.php:43
+msgid "Web Hooks"
+msgstr ""
+
+#: app/Modules/Form/Settings/ExtraSettings.php:49
+msgid "Trello"
+msgstr ""
+
+#: app/Services/Integrations/MailChimp/MailChimpIntegration.php:42
+msgid "Mailchimp Settings"
+msgstr ""
+
+#: app/Services/Integrations/MailChimp/MailChimpIntegration.php:43
+msgid ""
+"Mailchimp is a marketing platform for small businesses. Send beautiful "
+"emails, connect your e-commerce store, advertise, and build your brand. Use "
+"Fluent Form to collect customer information and automatically add it to your "
+"Mailchimp campaign list. If you don't have a Mailchimp account, you can <a "
+"href=\"http://www.mailchimp.com/\" target=\"_blank\">sign up for one here."
+"</a>"
+msgstr ""
+
+#: app/Services/Integrations/MailChimp/MailChimpIntegration.php:44
+msgid "Your Mailchimp API Key is valid"
+msgstr ""
+
+#: app/Services/Integrations/MailChimp/MailChimpIntegration.php:45
+msgid "Your Mailchimp API Key is not valid"
+msgstr ""
+
+#: app/Services/Integrations/MailChimp/MailChimpIntegration.php:50
+msgid ""
+"Enter your Mailchimp API Key, if you do not have <br>Please login to your "
+"MailChimp account and go to<br>Profile -> Extras -> Api Keys"
+msgstr ""
+
+#: app/Services/Integrations/MailChimp/MailChimpIntegration.php:51
+msgid "Mailchimp API Key"
+msgstr ""
+
+#: app/Services/Integrations/MailChimp/MailChimpIntegration.php:90
+msgid "Your settings has been updated and disconnected"
+msgstr ""
+
+#: app/Services/Integrations/MailChimp/MailChimpIntegration.php:127
+msgid "Mailchimp Feed"
+msgstr ""
+
+#: app/Services/Integrations/MailChimp/MailChimpIntegration.php:130
+msgid "Configuration required!"
+msgstr ""
+
+#: app/Services/Integrations/MailChimp/MailChimpIntegration.php:132
+msgid ""
+"Mailchimp is not configured yet! Please configure your mailchimp api first"
+msgstr ""
+
+#: app/Services/Integrations/MailChimp/MailChimpIntegration.php:133
+msgid "Set Mailchimp API"
+msgstr ""
+
+#: resources/views/admin/settings/index.php:11
+msgid "Fluent Forms Global Settings"
+msgstr ""
+
+#: resources/views/admin/transfer/index.php:18
+msgid "Export Forms"
+msgstr ""
+
+#: resources/views/admin/transfer/index.php:25
+msgid "Import Forms"
+msgstr ""
+
+#: resources/views/admin/transfer/index.php:32
+msgid "Activity Logs"
+msgstr ""
+
+#: resources/views/admin/docs/index.php:4
+msgid "Help & Documentation"
+msgstr ""
+
+#: resources/views/email/report/body.php:123
+msgid "Weekly Email Summary of Your Forms"
+msgstr ""
+
+#: resources/views/email/report/body.php:136
+msgid "Hello There,"
+msgstr ""
+
+#: resources/views/email/report/body.php:137
+#, php-format
+msgid "Let's see how your forms performed in the last %d days."
+msgstr ""
+
+#: resources/views/email/report/body.php:147
+#: resources/views/email/report/body.php:172
+msgid "Form"
+msgstr ""
+
+#: resources/views/email/report/body.php:195
+#, php-format
+msgid "This email has been generated from Fluent Forms at %1$s%2s%3$s."
+msgstr ""
+
+#: resources/views/email/report/body.php:219
+#, php-format
+msgid ""
+"This email has been sent from %1$syour website%2$s via Fluent Forms. You can "
+"disable this email %3$syour website%4$s"
+msgstr ""
+
+#: app/Modules/Form/Settings/Validator/Confirmations.php:51
+msgid "The Confirmation Type field is required."
+msgstr ""
+
+#: app/Modules/Form/Settings/Validator/Confirmations.php:52
+msgid "The Page field is required when Confirmation Type is Page."
+msgstr ""
+
+#: app/Modules/Form/Settings/Validator/Confirmations.php:53
+msgid "The Redirect URL field is required when Confirmation Type is Redirect."
+msgstr ""
+
+#: app/Modules/Form/Settings/Validator/Confirmations.php:54
+msgid "The Redirect URL format is invalid."
+msgstr ""
+
+#. Description of the plugin
+msgid ""
+"Contact Form By Fluent Forms is the advanced Contact form plugin with drag "
+"and drop, multi column supported form builder plugin"
+msgstr ""
+
+#. URI of the plugin
+msgid "https://wpmanageninja.com/wp-fluent-form/"
+msgstr ""
+
+#. Author of the plugin
+msgid "Contact Form - WPManageNinja LLC"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://wpfluentforms.com"
+msgstr ""

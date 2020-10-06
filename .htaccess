@@ -11,6 +11,7 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule . /blckclov3r/index.php [L]
 </IfModule>
+
 # END WordPress
 # BEGIN FRedirect_ErrorDocument
 # The directives (lines) between "BEGIN FRedirect_ErrorDocument" and "END FRedirect_ErrorDocument" are
