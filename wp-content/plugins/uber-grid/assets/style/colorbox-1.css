@@ -1,0 +1,55 @@
+#pcolorbox, #pcboxOverlay, #pcboxWrapper{position:absolute; top:0; left:0; z-index:9999; overflow:hidden;}
+#pcboxWrapper {max-width:none;}
+#pcboxOverlay{position:fixed; width:100%; height:100%;}
+#pcboxMiddleLeft, #pcboxBottomLeft{clear:left;}
+#pcboxContent{position:relative;}
+#pcboxLoadedContent{overflow:auto; -webkit-overflow-scrolling: touch;}
+#pcboxTitle{margin:0;}
+#pcboxLoadingOverlay, #pcboxLoadingGraphic{position:absolute; top:0; left:0; width:100%; height:100%;}
+#pcboxPrevious, #pcboxNext, #pcboxClose, #pcboxSlideshow{cursor:pointer;}
+.pcboxPhoto{float:left; margin:auto; border:0; display:block; max-width:none; -ms-interpolation-mode:bicubic;}
+.pcboxIframe{width:100%; height:100%; display:block; border:0; padding:0; margin:0;}
+#pcolorbox, #pcboxContent, #pcboxLoadedContent{box-sizing:content-box; -moz-box-sizing:content-box; -webkit-box-sizing:content-box;}
+
+#pcboxOverlay{background:url(../images/admin/overlay.png) repeat 0 0;}
+#pcolorbox{outline:0;}
+    #pcboxTopLeft{width:21px; height:21px; background:url(../images/admin/controls.png) no-repeat -101px 0;}
+    #pcboxTopRight{width:21px; height:21px; background:url(../images/admin/controls.png) no-repeat -130px 0;}
+    #pcboxBottomLeft{width:21px; height:21px; background:url(../images/admin/controls.png) no-repeat -101px -29px;}
+    #pcboxBottomRight{width:21px; height:21px; background:url(../images/admin/controls.png) no-repeat -130px -29px;}
+    #pcboxMiddleLeft{width:21px; background:url(../images/admin/controls.png) left top repeat-y;}
+    #pcboxMiddleRight{width:21px; background:url(../images/admin/controls.png) right top repeat-y;}
+    #pcboxTopCenter{height:21px; background:url(../images/admin/border.png) 0 0 repeat-x;}
+    #pcboxBottomCenter{height:21px; background:url(../images/admin/border.png) 0 -29px repeat-x;}
+    #pcboxContent{background:#fff; overflow:hidden;}
+        .pcboxIframe{background:#fff;}
+        #pcboxError{padding:50px; border:1px solid #ccc;}
+        #pcboxLoadedContent{margin-bottom:28px;}
+        #pcboxTitle{position:absolute; bottom:4px; left:0; text-align:center; width:100%; color:#949494;}
+        #pcboxCurrent{position:absolute; bottom:4px; left:58px; color:#949494;}
+        #pcboxLoadingOverlay{background:url(../images/admin/loading_background.png) no-repeat center center;}
+        #pcboxLoadingGraphic{background:url(../images/admin/loading.gif) no-repeat center center;}
+
+        #pcboxPrevious, #pcboxNext, #pcboxSlideshow, #pcboxClose {border:0; padding:0; margin:0; overflow:visible; width:auto; background:none; }
+        
+        #pcboxPrevious:active, #pcboxNext:active, #pcboxSlideshow:active, #pcboxClose:active {outline:0;}
+
+        #pcboxSlideshow{position:absolute; bottom:4px; right:30px; color:#0092ef;}
+        #pcboxPrevious{position:absolute; bottom:0; left:0; background:url(../images/admin/controls.png) no-repeat -75px 0; width:25px; height:25px; text-indent:-9999px;}
+        #pcboxPrevious:hover{background-position:-75px -25px;}
+        #pcboxNext{position:absolute; bottom:0; left:27px; background:url(../images/admin/controls.png) no-repeat -50px 0; width:25px; height:25px; text-indent:-9999px;}
+        #pcboxNext:hover{background-position:-50px -25px;}
+        #pcboxClose{position:absolute; bottom:0; right:0; background:url(../images/admin/controls.png) no-repeat -25px 0; width:25px; height:25px; text-indent:-9999px;}
+        #pcboxClose:hover{background-position:-25px -25px;}
+
+
+.pcboxIE #pcboxTopLeft,
+.pcboxIE #pcboxTopCenter,
+.pcboxIE #pcboxTopRight,
+.pcboxIE #pcboxBottomLeft,
+.pcboxIE #pcboxBottomCenter,
+.pcboxIE #pcboxBottomRight,
+.pcboxIE #pcboxMiddleLeft,
+.pcboxIE #pcboxMiddleRight {
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF,endColorstr=#00FFFFFF);
+}

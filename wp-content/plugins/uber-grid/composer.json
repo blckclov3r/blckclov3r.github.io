@@ -1,0 +1,10 @@
+{
+  "config": {
+    "vendor-dir": "lib"
+  },
+  "autoload": {
+    "psr-4": {
+      "PfhubPortfolio\\": ["src/"]
+    }
+  }
+}

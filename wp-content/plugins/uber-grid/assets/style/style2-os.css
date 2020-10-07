@@ -1,0 +1,23 @@
+#pfhub_portfolio_container {
+  padding: 5px;
+  margin-bottom: 20px;
+}
+
+#pfhub_portfolio_container .open-close {
+	width:20px;
+	height:20px;
+	display:block;
+	background:#000;
+}
+
+
+#pfhub_portfolio_options h3 {
+  margin-bottom: 0.2em;
+  font-size: 15px;
+}
+
+#pfhub_portfolio_options h4 {
+  font-weight: bold;
+}
+
+
