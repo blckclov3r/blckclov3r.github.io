@@ -104,7 +104,7 @@ class Component implements Component_Interface {
 	 */
 	public function learndash_styles() {
 		wp_enqueue_style( 'kadence-learndash', get_theme_file_uri( '/assets/css/learndash.min.css' ), array(), KADENCE_VERSION );
-		if ( class_exists( 'LearnDash_Settings_Section' ) ) {
+		if ( class_exists( 'LearnDash_Settings_Section' ) && apply_filters( 'kadence_learndash_colors', true ) && ! defined( 'LDX_DESIGN_UPGRADE_PRO_LEARNDASH_VERSION' ) ) {
 			$colors = array(
 				'primary'   => \LearnDash_Settings_Section::get_section_setting( 'LearnDash_Settings_Theme_LD30', 'color_primary' ),
 				'secondary' => \LearnDash_Settings_Section::get_section_setting( 'LearnDash_Settings_Theme_LD30', 'color_secondary' ),

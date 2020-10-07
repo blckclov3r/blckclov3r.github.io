@@ -136,6 +136,7 @@ class KadenceThemeLayout extends Component {
 				'name': __( 'Disable', 'kadence' ),
 			},
 		}
+		//console.log( kadenceMetaParams );
 		const icon = <svg width="20px" height="20px"
 		xmlns="http://www.w3.org/2000/svg"
 		fillRule="evenodd"
@@ -189,13 +190,13 @@ class KadenceThemeLayout extends Component {
 					target="theme-meta-panel"
 					icon={ icon }
 				>
-					{ capitalizeFirstLetter( kadenceMetaParams.post_type ) + ' ' + __( 'Settings', 'kadence' ) }
+					{ kadenceMetaParams.post_type_name + ' ' + __( 'Settings', 'kadence' ) }
 				</PluginSidebarMoreMenuItem>
 				<PluginSidebar
 					isPinnable={ true }
 					icon={ icon }
 					name="theme-meta-panel"
-					title={ capitalizeFirstLetter( kadenceMetaParams.post_type ) + ' ' + __( 'Settings', 'kadence' ) }
+					title={ kadenceMetaParams.post_type_name + ' ' + __( 'Settings', 'kadence' ) }
 				>
 					<div className="kadence-sidebar-container components-panel__body is-opened">
 						<RadioIconComponent
@@ -208,7 +209,7 @@ class KadenceThemeLayout extends Component {
 							} }
 						/>
 						<RadioIconComponent
-							label={ capitalizeFirstLetter( kadenceMetaParams.post_type ) + ' ' + __( 'Title' ) }
+							label={ kadenceMetaParams.post_type_name + ' ' + __( 'Title' ) }
 							customClass="three-col-short"
 							value={ ( undefined !== this.props.meta && undefined !== this.props.meta._kad_post_title && '' !== this.props.meta._kad_post_title ? this.props.meta._kad_post_title : 'default' ) }
 							options={ newTitleOptions }
@@ -227,7 +228,7 @@ class KadenceThemeLayout extends Component {
 							} }
 						/>
 						<RadioIconComponent
-							label={ capitalizeFirstLetter( kadenceMetaParams.post_type ) + ' ' + __( 'Layout' ) }
+							label={ kadenceMetaParams.post_type_name + ' ' + __( 'Layout' ) }
 							customClass="three-col-square"
 							value={ ( undefined !== this.props.meta && undefined !== this.props.meta._kad_post_layout && '' !== this.props.meta._kad_post_layout ? this.props.meta._kad_post_layout : 'default' ) }
 							options={ sidebarOptions }

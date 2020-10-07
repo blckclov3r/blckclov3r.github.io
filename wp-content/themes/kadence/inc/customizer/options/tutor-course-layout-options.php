@@ -199,7 +199,7 @@ $settings = array(
 				'px'  => 800,
 				'em'  => 12,
 				'rem' => 12,
-				'vh'  => 40,
+				'vh'  => 100,
 			),
 			'step'    => array(
 				'px'  => 1,

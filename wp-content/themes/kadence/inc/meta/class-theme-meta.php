@@ -548,7 +548,13 @@ class Theme_Meta {
 	 * Enqueue Script for Meta options
 	 */
 	public function script_enqueue() {
-		$post_type        = get_post_type();
+		$post_type = get_post_type();
+		$post_type_object = get_post_type_object( get_post_type() );
+		if ( is_object( $post_type_object ) ) {
+			$post_type_name = $post_type_object->labels->singular_name;
+		} else {
+			$post_type_name = $post_type;
+		}
 		if ( 'kadence_element' === $post_type ) {
 			return;
 		}
@@ -612,6 +618,7 @@ class Theme_Meta {
 			'kadenceMetaParams',
 			array(
 				'post_type'        => $post_type,
+				'post_type_name'   => $post_type_name,
 				'layout'           => $layout,
 				'boxed'            => $boxed,
 				'title'            => $title,

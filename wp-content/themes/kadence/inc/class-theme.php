@@ -311,6 +311,9 @@ class Theme {
 		if ( class_exists( 'Estatik' ) ) {
 			$components[] = new Estatik\Component();
 		}
+		if ( class_exists( 'BBPress' ) ) {
+			$components[] = new BBPress\Component();
+		}
 
 		return $components;
 	}

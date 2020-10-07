@@ -1112,7 +1112,7 @@ foreach ( $all_post_types as $post_type_item ) {
 						'px'  => 800,
 						'em'  => 12,
 						'rem' => 12,
-						'vh'  => 40,
+						'vh'  => 100,
 					),
 					'step'    => array(
 						'px'  => 1,

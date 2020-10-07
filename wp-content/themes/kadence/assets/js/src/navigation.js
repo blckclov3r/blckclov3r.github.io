@@ -471,6 +471,7 @@ if ( window.NodeList && ! NodeList.prototype.forEach ) {
 				mobileSticky  = document.querySelector( '#mobile-header .kadence-sticky-header' ),
 				wrapper = document.getElementById( 'wrapper' ),
 				proSticky = document.querySelectorAll( '.kadence-pro-fixed-above' ),
+				proElements = document.querySelectorAll( '.kadence-before-wrapper-item' ),
 				activeSize = 'mobile',
 				activeOffsetTop = 0;
 				if ( kadenceConfig.breakPoints.desktop <= window.innerWidth ) {
@@ -493,6 +494,13 @@ if ( window.NodeList && ! NodeList.prototype.forEach ) {
 					if ( document.body.classList.toString().includes( 'boom_bar-static-top' ) ) {
 						var boomBar = document.querySelector( '.boom_bar' );
 						offsetTop = window.kadence.getOffset( wrapper ).top - boomBar.offsetHeight;
+					}
+					if ( proElements.length ) {
+						var proElementOffset = 0;
+						for ( let i = 0; i < proElements.length; i++ ) {
+							proElementOffset = proElementOffset + proElements[ i ].offsetHeight;
+						}
+						offsetTop = window.kadence.getOffset( wrapper ).top - proElementOffset;
 					}
 					if ( proSticky.length ) {
 						var proOffset = 0;
@@ -614,8 +622,8 @@ if ( window.NodeList && ! NodeList.prototype.forEach ) {
 			if ( kadenceConfig.breakPoints.desktop <= window.innerWidth ) {
 				if ( activeScrollSize === 'mobile' ) {
 					if ( desktopSticky ) {
-						var shrink =  desktopSticky.getAttribute( 'data-shrink' );
-						if ( 'true' === shrink ) {
+						var shrink = desktopSticky.getAttribute( 'data-shrink' );
+						if ( 'true' === shrink && ! desktopSticky.classList.contains( 'site-header-inner-wrap' ) ) {
 							activeScrollOffsetTop = Math.floor( desktopSticky.getAttribute( 'data-shrink-height' ) );
 						} else {
 							activeScrollOffsetTop = Math.floor( desktopSticky.offsetHeight );

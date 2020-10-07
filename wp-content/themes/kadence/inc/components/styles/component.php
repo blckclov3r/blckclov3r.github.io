@@ -3089,7 +3089,7 @@ class Component implements Component_Interface, Templating_Component_Interface {
 			$sidebar_neg = $sidebar_size . kadence()->sub_option( 'sidebar_width', 'unit' );
 		}
 		$css->set_selector( '.block-editor-page.post-content-style-boxed.post-content-sidebar-right .editor-styles-wrapper:before, .block-editor-page.post-content-style-boxed.post-content-sidebar-left .editor-styles-wrapper:before' );
-		$css->add_property( 'max-width', 'calc(' . kadence()->sub_option( 'content_width', 'size' ) . kadence()->sub_option( 'content_width', 'unit' ) . ' - ' . $sidebar_neg . ' - 3.5em - 3rem )' );
+		$css->add_property( 'max-width', 'calc(' . kadence()->sub_option( 'content_width', 'size' ) . kadence()->sub_option( 'content_width', 'unit' ) . ' - ' . $sidebar_neg . ' - 3.5rem - 3rem )' );
 		// Full Width.
 		$css->set_selector( '.block-editor-page.post-content-style-boxed.post-content-width-fullwidth .editor-styles-wrapper:before' );
 		$css->add_property( 'max-width', '100%' );
@@ -3107,10 +3107,10 @@ class Component implements Component_Interface, Templating_Component_Interface {
 		$css->add_property( 'max-width', 'calc(' . kadence()->sub_option( 'content_narrow_width', 'size' ) . kadence()->sub_option( 'content_narrow_width', 'unit' ) . ' - 3rem - 4rem)' );
 		// Sidebar Content Editor Width.
 		$css->set_selector( 'body.block-editor-page.post-content-sidebar-right .block-editor-block-list__layout .wp-block, body.block-editor-page.post-content-sidebar-left .block-editor-block-list__layout .wp-block, body.block-editor-page.post-content-sidebar-right .editor-post-title__block, body.block-editor-page.post-content-sidebar-left .editor-post-title__block' );
-		$css->add_property( 'max-width', 'calc(' . kadence()->sub_option( 'content_width', 'size' ) . kadence()->sub_option( 'content_width', 'unit' ) . ' - ' . $sidebar_neg . ' - 3.5em - 3rem )' );
+		$css->add_property( 'max-width', 'calc(' . kadence()->sub_option( 'content_width', 'size' ) . kadence()->sub_option( 'content_width', 'unit' ) . ' - ' . $sidebar_neg . ' - 3.5rem - 3rem )' );
 		// Boxed Sidebar Content Editor Width.
 		$css->set_selector( 'body.block-editor-page.post-content-style-boxed.post-content-sidebar-right .block-editor-block-list__layout .wp-block, body.block-editor-page.post-content-style-boxed.post-content-sidebar-left .block-editor-block-list__layout .wp-block, body.post-content-style-boxed.block-editor-page.post-content-sidebar-right .editor-post-title__block, body.post-content-style-boxed.block-editor-page.post-content-sidebar-left .editor-post-title__block' );
-		$css->add_property( 'max-width', 'calc(' . kadence()->sub_option( 'content_width', 'size' ) . kadence()->sub_option( 'content_width', 'unit' ) . ' - ' . $sidebar_neg . ' - 3.5em - 3rem - 4rem )' );
+		$css->add_property( 'max-width', 'calc(' . kadence()->sub_option( 'content_width', 'size' ) . kadence()->sub_option( 'content_width', 'unit' ) . ' - ' . $sidebar_neg . ' - 3.5rem - 3rem - 4rem )' );
 		// Fullwidth Content Editor Width.
 		$css->set_selector( 'body.block-editor-page.post-content-width-fullwidth .block-editor-block-list__layout .wp-block, body.block-editor-page.post-content-width-fullwidth .editor-post-title__block' );
 		$css->add_property( 'max-width', 'none' );

@@ -4,7 +4,7 @@ Tags: accessibility-ready, translation-ready, two-columns, right-sidebar, left-s
 Requires at least: 5.2
 Tested up to: 5.5.0
 Requires PHP: 7.0
-Stable tag: 0.8.14
+Stable tag: 0.8.15
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -18,6 +18,16 @@ Kadence is released under GNU General Public License v3.0 (or later)
 
 
 = Changelog =
+
+== 0.8.15 | 25th September 2020 ==
+* Add: Initial bbpress support.
+* Update: Title height vh max setting.
+* Update: Issue editor with css issue.
+* Update: Smarter sticky header with interacting with other elements.
+* Update: Create workaround for Design Upgrade Pro for LearnDash.
+* Fix: Bug in safari with header builder.
+* Fix: Learndash comment avatar bug.
+* Fix: Remove invalid css.
 
 == 0.8.14 | 21st September 2020 ==
 * Fix: Third level dropdown not showing with fade animation.

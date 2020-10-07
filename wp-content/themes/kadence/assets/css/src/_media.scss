@@ -41,20 +41,6 @@ object {
 	margin: 0.8075em 0;
 }
 
-@media ($tablet-plus-query) {
-
-	.wp-caption.alignright,
-	.wp-block-image.alignright {
-		margin-right: calc((100% - $content-width) / 2);
-	}
-
-	.wp-caption.alignleft,
-	.wp-block-image.alignleft {
-		margin-left: calc((100% - $content-width) / 2);
-	}
-
-}
-
 /*--------------------------------------------------------------
 ## Galleries (Legacy)
 --------------------------------------------------------------*/

@@ -1,0 +1,45 @@
+/*
+    pcolorbox Core Style:
+    The following CSS is consistent between example themes and should not be altered.
+*/
+#pcolorbox, #pcboxOverlay, #pcboxWrapper{position:absolute; top:0; left:0; z-index:9999; overflow:hidden;}
+#pcboxWrapper {max-width:none;}
+#pcboxOverlay{position:fixed; width:100%; height:100%;}
+#pcboxMiddleLeft, #pcboxBottomLeft{clear:left;}
+#pcboxContent{position:relative;}
+#pcboxLoadedContent{overflow:auto; -webkit-overflow-scrolling: touch;}
+#pcboxTitle{margin:0;}
+#pcboxLoadingOverlay, #pcboxLoadingGraphic{position:absolute; top:0; left:0; width:100%; height:100%;}
+#pcboxPrevious, #pcboxNext, #pcboxClose, #pcboxSlideshow{cursor:pointer;}
+.pcboxPhoto{float:left; margin:auto; border:0; display:block; max-width:none; -ms-interpolation-mode:bicubic;}
+.pcboxIframe{width:100%; height:100%; display:block; border:0; padding:0; margin:0;}
+#pcolorbox, #pcboxContent, #pcboxLoadedContent{box-sizing:content-box; -moz-box-sizing:content-box; -webkit-box-sizing:content-box;}
+
+/* 
+    User Style:
+    Change the following styles to modify the appearance of pcolorbox.  They are
+    ordered & tabbed in a way that represents the nesting of the generated HTML.
+*/
+#pcboxOverlay{background:#000;}
+#pcolorbox{outline:0;}
+    #pcboxContent{margin-top:20px;background:#000;}
+        .pcboxIframe{background:#fff;}
+        #pcboxError{padding:50px; border:1px solid #ccc;}
+        #pcboxLoadedContent{border:5px solid #000; background:#fff;}
+        #pcboxTitle{position:absolute; top:-20px; left:0; color:#ccc;}
+        #pcboxCurrent{position:absolute; top:-20px; right:0px; color:#ccc;}
+        #pcboxLoadingGraphic{background:url(../images/3/loading.gif) no-repeat center center;}
+
+        /* these elements are buttons, and may need to have additional styles reset to avoid unwanted base styles */
+        #pcboxPrevious, #pcboxNext, #pcboxSlideshow, #pcboxClose {border:0; padding:0; margin:0; overflow:visible; width:auto; background:none; }
+
+        /* avoid outlines on :active (mouseclick), but preserve outlines on :focus (tabbed navigating) */
+        #pcboxPrevious:active, #pcboxNext:active, #pcboxSlideshow:active, #pcboxClose:active {outline:0;}
+
+        #pcboxSlideshow{position:absolute; top:-20px; right:140px; color:#fff;}
+        #pcboxPrevious{position:absolute; top:50%; left:5px; margin-top:-32px; background:url(../images/3/controls.png) no-repeat top left; width:28px; height:65px; text-indent:-9999px;}
+        #pcboxPrevious:hover{background-position:bottom left;}
+        #pcboxNext{position:absolute; top:50%; right:5px; margin-top:-32px; background:url(../images/3/controls.png) no-repeat top right; width:28px; height:65px; text-indent:-9999px;}
+        #pcboxNext:hover{background-position:bottom right;}
+        #pcboxClose{position:absolute; top:5px; right:5px; display:block; background:url(../images/3/controls.png) no-repeat top center; width:38px; height:19px; text-indent:-9999px;}
+        #pcboxClose:hover{background-position:bottom center;}
