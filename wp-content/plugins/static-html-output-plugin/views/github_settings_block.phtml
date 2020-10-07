@@ -1,0 +1,58 @@
+<div class="github_settings_block" style="display:none;">
+  <table class="form-table">
+    <tbody>
+      <tr>
+        <th scope="row">
+          <label for="baseUrl-github">Destination URL</label>
+        </th>
+        <td>
+          <?php $tpl->displayTextfield($this, 'baseUrl-github', 'http://mystaticsite.com', '', ''); ?><br>
+
+          <p><i>Set this to the URL you intend to host your static exported site on, ie http://mystaticsite.com. Do not set this to the same URL as the WordPress site you're currently using (the address in your browser above). This plugin will rewrite all URLs in the exported static html from your current WordPress URL to what you set here. Supports http and https URI schemes.</i></p> 
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">
+          <label for="ghToken">Personl Access Token</label>
+        </th>
+        <td>
+          <?php $tpl->displayTextfield($this, 'ghToken', 'GitHub Personal Access Token', '<a href="https://github.com/settings/tokens/new" target="_blank">How do I get this?</a>', 'password'); ?>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">
+          <label for="ghRepo">Account &amp; Repository Name</label>
+        </th>
+        <td>
+          <?php $tpl->displayTextfield($this, 'ghRepo', 'Account / Repository Name', 'ie, leonstafford/statichtmloutput'); ?><br>
+
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">
+          <label for="ghBranch">Branch</label>
+        </th>
+        <td>
+          <?php $tpl->displayTextfield($this, 'ghBranch', 'Branch', 'usually \'master\' or \'gh-pages\''); ?>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">
+          <label for="ghCommitMessage">Commit message</label>
+        </th>
+        <td>
+          <?php $tpl->displayTextfield($this, 'ghCommitMessage', 'StaticHTMLOutput %ACTION% %FILENAME%', 'Anything you like, with special vars %ACTION% and %FILENAME% available'); ?>
+
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">
+          <label for="gh_test">Test GitHub Settings</label>
+        </th>
+        <td>
+          <button id="github-test-button" type="button" class="btn-primary button">Test GitHub Settings</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

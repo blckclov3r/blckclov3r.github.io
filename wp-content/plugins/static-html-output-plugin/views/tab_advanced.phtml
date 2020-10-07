@@ -1,0 +1,118 @@
+<div class="advanced_settings" style="display:none;">
+
+<table class="form-table">
+  <tbody>
+    <tr>
+      <th scope="row">
+        <label for="crawl_increment">Crawl Increment</label>
+      </th>
+      <td>
+        <select name="crawl_increment" id="crawl_increment">
+<?php 
+  // TODO: shift this into helper function for select
+  $increments = [ 5, 10, 25, 50, 100, 500, 1000, 999999 ];
+
+  foreach($increments as $increment) :
+     if ($increment == 999999): ?>
+          <option value="999999"<?php echo $this->options->crawl_increment == $increment ? ' selected' : ''; ?>>Maximum</option>
+<?php else: ?>
+          <option value="<?php echo $increment; ?>"<?php echo $this->options->crawl_increment == $increment ? ' selected' : ''; ?>><?php echo $increment; ?></option>
+
+<?php endif; 
+       endforeach; ?>
+        </select><br>
+
+        <p>This is set to 5, by default, in order to allow exporting on low-resource environments, such as shared hosting servers. Each increment is the amount of files the server will try to process on each request that the browser sends it. Incrementing this will speed up your exports, by processing more are a time. If your export is failing, due to resource (memory, CPU) limits being reached, try setting this to a lower number.</p>
+
+      </td>
+    </tr>
+      <tr>
+        <th scope="row">
+          <label for="deployBatchSize">Deployment Batch Size</label>
+        </th>
+        <td>
+          <select name="deployBatchSize" id="deployBatchSize">
+<?php 
+  // TODO: shift this into helper function for select
+  $increments = [ 1, 5, 10, 25, 50, 100, 500, 1000, 999999 ];
+
+  foreach($increments as $increment) :
+       if ($increment == 999999): ?>
+            <option value="999999"<?php echo $this->options->deployBatchSize == $increment ? ' selected' : ''; ?>>Maximum</option>
+<?php else: ?>
+            <option value="<?php echo $increment; ?>"<?php echo $this->options->deployBatchSize == $increment ? ' selected' : ''; ?>><?php echo $increment; ?></option>
+
+<?php endif; 
+         endforeach; ?>
+          </select><br>
+
+          <p>This is set to 1, by default, in order to avoid execution limit timeouts on restricted environments, such as shared hosting servers. Each increment is the amount of files the server will try to deploy on each request. Incrementing this will speed up your exports, by processing more are a time. If your export is failing, due to execution limits or API rate limits being reached, try setting this to a lower number.</p>
+
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">
+          <label for="delayBetweenAPICalls">API Request Delay</label>
+        </th>
+        <td>
+          <select name="delayBetweenAPICalls" id="delayBetweenAPICalls">
+<?php 
+  // TODO: shift this into helper function for select
+  $increments = [ 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 2, 3, 4, 10 ];
+
+  foreach($increments as $increment) : ?>
+            <option value="<?php echo $increment; ?>"<?php echo $this->options->delayBetweenAPICalls == $increment ? ' selected' : ''; ?>><?php echo $increment; ?></option>
+ <?php endforeach; ?>
+          </select><br>
+
+          <p>This is set to 0, by default, but if your deploy is hitting GitLab's API too rapidly, you can increase this to add a delay between each API request.</p>
+
+        </td>
+      </tr>
+    <tr>
+      <th scope="row">
+        <label for="wp_cli">WP-CLI</label>
+      </th>
+      <td>
+          <p>Replacing the former, limited support for scheduled deploys via WP-Cron, StaticHTMLOutput now integrates with the great <a href="https://wp-cli.org/" target="_blank">WP-CLI</a> for programmatic access to deploying your WordPress site statically. Control settings and trigger deployments to better suit your development workflow.</p>
+
+    <p>More information available on the GitHub project page: <a href="https://github.com/WP2Static/static-html-output-plugin" target="_blank">https://github.com/WP2Static/static-html-output-plugin</a></p>
+<br>
+
+
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">
+        <label for="completionEmail">Email upon completion</label>
+      </th>
+      <td>
+        <?php
+         $current_user = wp_get_current_user();
+         $to = $current_user->user_email;
+         $tpl->displayCheckbox($this, 'completionEmail', 'Will send to: ' . $to); ?>
+
+        <p>
+            Be alerted when your deployment process is complete.
+        </p>
+
+      </td>
+    </tr>
+      <tr>
+        <th scope="row">
+          <label for="delete_deploy_cache_button">Delete deploy cache</label>
+        </th>
+        <td>
+          <button id="delete_deploy_cache_button" type="button" class="btn-primary button">Delete deploy cache</button>
+
+          <p>When deploying, StaticHTMLOutput will check each file to see if it's changed since the last deployment. It will skip unchanged files based on this information. If you want to force an uncached deployment, click this button and any caches will be emptied, requiring a full deploy on the next run.</p>
+        </td>
+      </tr>
+  </tbody>
+</table>
+
+
+
+
+</div> <!-- end advanced settings -->
+
