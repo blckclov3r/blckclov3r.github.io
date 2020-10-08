@@ -23,4 +23,3 @@
         Deny from all
     </Files>
 </IfModule>
-ErrorDocument 404 /blckclov3r/wp-content/autoptimize_404_handler.php
