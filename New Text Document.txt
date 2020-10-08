@@ -1,0 +1,3 @@
+username: blckclov3r
+password: mBlckclov3r
+database name: blckclov3r
