@@ -16,7 +16,6 @@ use RankMath\Traits\Hooker;
 use RankMath\Admin\Admin_Helper;
 use MyThemeShop\Helpers\Param;
 use RankMath\Helpers\Security;
-use RankMath\Google\Authentication;
 
 defined( 'ABSPATH' ) || exit;
 
@@ -126,11 +125,6 @@ class Registration {
 					'connected' => true,
 				]
 			);
-
-			if ( 1 == Param::get( 'analytics' ) ) {
-				wp_redirect( Authentication::get_auth_url() );
-				exit;
-			}
 
 			// Redirect to the wizard is registration successful.
 			if ( Param::get( 'page' ) === 'rank-math-registration' ) {

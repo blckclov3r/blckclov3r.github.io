@@ -1,0 +1,1582 @@
+# Copyright (C) 2020 Feataholic
+# This file is distributed under the same license as the MAZ Loader plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: MAZ Loader 1.1.2\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/maz-loader\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2020-05-18T18:24:49+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.4.0\n"
+"X-Domain: maz-loader\n"
+
+#. Plugin Name of the plugin
+msgid "MAZ Loader"
+msgstr ""
+
+#. Plugin URI of the plugin
+#. Author URI of the plugin
+msgid "https://www.feataholic.com/"
+msgstr ""
+
+#. Description of the plugin
+msgid "MAZ Loader is a powerful and easy to use Preloader builder that makes your visitors a delight to wait for your website to finish loading."
+msgstr ""
+
+#. Author of the plugin
+msgid "Feataholic"
+msgstr ""
+
+#: admin/class-maz-loader-admin-settings.php:45
+#: admin/partials/pages/dashboard.php:109
+#: releases/maz-loader/admin/class-maz-loader-admin-settings.php:43
+#: releases/maz-loader/admin/partials/pages/dashboard.php:109
+msgid "Impressions"
+msgstr ""
+
+#: admin/class-maz-loader-admin-settings.php:59
+#: releases/maz-loader/admin/class-maz-loader-admin-settings.php:57
+msgid "Display the last published Loader on all pages?"
+msgstr ""
+
+#: admin/class-maz-loader-admin-settings.php:73
+#: releases/maz-loader/admin/class-maz-loader-admin-settings.php:71
+msgid "Keep data during update?"
+msgstr ""
+
+#: admin/class-maz-loader-admin-settings.php:87
+msgid "License Key"
+msgstr ""
+
+#: admin/class-maz-loader-admin-settings.php:108
+#: admin/class-maz-loader-admin-settings.php:132
+#: releases/maz-loader/admin/class-maz-loader-admin-settings.php:93
+#: releases/maz-loader/admin/class-maz-loader-admin-settings.php:117
+msgid "Enable"
+msgstr ""
+
+#: admin/class-maz-loader-admin-settings.php:111
+#: admin/class-maz-loader-admin-settings.php:129
+#: releases/maz-loader/admin/class-maz-loader-admin-settings.php:96
+#: releases/maz-loader/admin/class-maz-loader-admin-settings.php:114
+msgid "Disable"
+msgstr ""
+
+#: admin/class-maz-loader-admin-settings.php:115
+#: releases/maz-loader/admin/class-maz-loader-admin-settings.php:100
+msgid "Set whether to track impression for each Loader. Once you are on <em>View Loaders</em> page, you will be able to view the impressions for each loader."
+msgstr ""
+
+#: admin/class-maz-loader-admin-settings.php:136
+#: releases/maz-loader/admin/class-maz-loader-admin-settings.php:121
+msgid "Enable to display the last published loader on all pages. Disable to add a loader to each page using it's shortcode."
+msgstr ""
+
+#: admin/class-maz-loader-admin-settings.php:159
+#: releases/maz-loader/admin/class-maz-loader-admin-settings.php:144
+msgid "Check to keep data after uninstalling the plugin. This is helpful whenever you update so you don't lose any data."
+msgstr ""
+
+#: admin/class-maz-loader-admin-settings.php:182
+msgid "Enter your license key here and get automatic updates."
+msgstr ""
+
+#: admin/class-maz-loader-admin-settings.php:185
+msgid "Status:"
+msgstr ""
+
+#: admin/class-maz-loader-admin-settings.php:187
+msgid "Activated!"
+msgstr ""
+
+#: admin/class-maz-loader-admin-settings.php:189
+msgid "Deactivate License"
+msgstr ""
+
+#: admin/class-maz-loader-admin-settings.php:192
+#: admin/partials/pages/new.php:51
+#: admin/partials/pages/new.php:57
+#: admin/partials/pages/new.php:97
+#: admin/partials/pages/new.php:102
+#: admin/partials/pages/new.php:107
+#: includes/class-maz-loader-helper.php:121
+#: releases/maz-loader/admin/partials/pages/new.php:40
+#: releases/maz-loader/admin/partials/pages/new.php:46
+#: releases/maz-loader/admin/partials/pages/new.php:73
+#: releases/maz-loader/admin/partials/pages/new.php:78
+#: releases/maz-loader/admin/partials/pages/new.php:83
+#: releases/maz-loader/includes/class-maz-loader-helper.php:121
+msgid "Pro"
+msgstr ""
+
+#: admin/class-maz-loader-admin-settings.php:192
+#: includes/class-maz-loader-helper.php:121
+#: releases/maz-loader/includes/class-maz-loader-helper.php:121
+msgid "Free"
+msgstr ""
+
+#: admin/class-maz-loader-admin-settings.php:192
+msgid " &mdash; Not Activated"
+msgstr ""
+
+#: admin/class-maz-loader-admin-settings.php:193
+msgid "Activate License"
+msgstr ""
+
+#: admin/class-maz-loader-admin.php:107
+#: releases/maz-loader/admin/class-maz-loader-admin.php:107
+msgid "Loader has been deleted."
+msgstr ""
+
+#: admin/class-maz-loader-admin.php:110
+#: releases/maz-loader/admin/class-maz-loader-admin.php:110
+msgid "Loader couldn't be deleted."
+msgstr ""
+
+#: admin/class-maz-loader-admin.php:124
+#: releases/maz-loader/admin/class-maz-loader-admin.php:124
+msgid "Loader does not exist!"
+msgstr ""
+
+#: admin/class-maz-loader-admin.php:151
+#: releases/maz-loader/admin/class-maz-loader-admin.php:151
+msgid "Loader has been updated!"
+msgstr ""
+
+#: admin/class-maz-loader-admin.php:154
+#: releases/maz-loader/admin/class-maz-loader-admin.php:154
+msgid "Loader couldn't be updated!"
+msgstr ""
+
+#: admin/class-maz-loader-admin.php:188
+#: releases/maz-loader/admin/class-maz-loader-admin.php:186
+msgid "MAZ Loader - Dashboard"
+msgstr ""
+
+#: admin/class-maz-loader-admin.php:189
+#: admin/partials/pages/dashboard.php:141
+#: admin/partials/static/footer.php:14
+#: includes/blocks/class-maz-loader-block.php:67
+#: releases/maz-loader/admin/class-maz-loader-admin.php:187
+#: releases/maz-loader/admin/partials/pages/dashboard.php:141
+#: releases/maz-loader/admin/partials/static/footer.php:14
+#: releases/maz-loader/includes/blocks/class-maz-loader-block.php:67
+#: media/admin/js/src/mazloader/mazloader-admin/blocks/mazloader-loader-block.js:21
+#: media/admin/new-js/free-js/js/src/mazloader/mazloader-admin/blocks/mazloader-loader-block.js:21
+#: media/admin/new-js/pro-js/js/src/mazloader/mazloader-admin/blocks/mazloader-loader-block.js:21
+#: releases/maz-loader/media/admin/js/src/mazloader/mazloader-admin/blocks/mazloader-loader-block.js:21
+msgid "MAZ Loader"
+msgstr ""
+
+#: admin/class-maz-loader-admin.php:197
+#: admin/tables/class-mzldr-list-table.php:168
+#: releases/maz-loader/admin/class-maz-loader-admin.php:195
+#: releases/maz-loader/admin/tables/class-mzldr-list-table.php:168
+msgid "Edit Loader"
+msgstr ""
+
+#: admin/class-maz-loader-admin.php:197
+#: admin/class-maz-loader-admin.php:202
+#: releases/maz-loader/admin/class-maz-loader-admin.php:195
+#: releases/maz-loader/admin/class-maz-loader-admin.php:200
+msgid "Create New Loader"
+msgstr ""
+
+#: admin/class-maz-loader-admin.php:210
+#: admin/class-maz-loader-admin.php:211
+#: admin/partials/pages/dashboard.php:28
+#: releases/maz-loader/admin/class-maz-loader-admin.php:208
+#: releases/maz-loader/admin/class-maz-loader-admin.php:209
+#: releases/maz-loader/admin/partials/pages/dashboard.php:28
+msgid "View Loaders"
+msgstr ""
+
+#: admin/class-maz-loader-admin.php:219
+#: admin/class-maz-loader-admin.php:220
+#: admin/partials/pages/dashboard.php:33
+#: admin/partials/pages/new.php:29
+#: admin/partials/pages/new.php:160
+#: admin/partials/static/header.php:20
+#: releases/maz-loader/admin/class-maz-loader-admin.php:217
+#: releases/maz-loader/admin/class-maz-loader-admin.php:218
+#: releases/maz-loader/admin/partials/pages/dashboard.php:33
+#: releases/maz-loader/admin/partials/pages/new.php:29
+#: releases/maz-loader/admin/partials/pages/new.php:136
+#: releases/maz-loader/admin/partials/static/header.php:18
+msgid "Settings"
+msgstr ""
+
+#: admin/class-maz-loader-admin.php:302
+#: releases/maz-loader/admin/class-maz-loader-admin.php:292
+msgid "You are about to duplicate this item. Proceed?"
+msgstr ""
+
+#: admin/class-maz-loader-admin.php:303
+#: releases/maz-loader/admin/class-maz-loader-admin.php:293
+msgid "You are about to delete this item. Proceed?"
+msgstr ""
+
+#: admin/class-maz-loader-admin.php:304
+#: admin/class-maz-loader-admin.php:305
+#: releases/maz-loader/admin/class-maz-loader-admin.php:294
+#: releases/maz-loader/admin/class-maz-loader-admin.php:295
+msgid "Choose Image"
+msgstr ""
+
+#: admin/class-maz-loader-admin.php:306
+#: releases/maz-loader/admin/class-maz-loader-admin.php:296
+msgid "Running..."
+msgstr ""
+
+#: admin/class-maz-loader-admin.php:307
+#: releases/maz-loader/admin/class-maz-loader-admin.php:297
+msgid "The Loader's shortcode has been copied to your clipboard."
+msgstr ""
+
+#: admin/controllers/class-maz-loader-form-controller.php:61
+#: releases/maz-loader/admin/controllers/class-maz-loader-form-controller.php:55
+msgid "Loader has been saved but appears to be empty. Try adding some fields below."
+msgstr ""
+
+#: admin/controllers/class-maz-loader-form-controller.php:65
+#: releases/maz-loader/admin/controllers/class-maz-loader-form-controller.php:59
+msgid "Loader has been added successfully."
+msgstr ""
+
+#: admin/controllers/class-maz-loader-form-controller.php:70
+#: releases/maz-loader/admin/controllers/class-maz-loader-form-controller.php:64
+msgid "Loader couldn't be saved."
+msgstr ""
+
+#: admin/controllers/class-maz-loader-form-controller.php:99
+#: releases/maz-loader/admin/controllers/class-maz-loader-form-controller.php:90
+msgid "Loader has been updated but appears to be empty. Try adding some fields below."
+msgstr ""
+
+#: admin/controllers/class-maz-loader-form-controller.php:103
+#: releases/maz-loader/admin/controllers/class-maz-loader-form-controller.php:94
+msgid "Loader has been updated successfully."
+msgstr ""
+
+#: admin/controllers/class-maz-loader-form-controller.php:108
+#: releases/maz-loader/admin/controllers/class-maz-loader-form-controller.php:99
+msgid "Loader couldn't be updated."
+msgstr ""
+
+#: admin/controllers/class-maz-loader-form-controller.php:117
+#: releases/maz-loader/admin/controllers/class-maz-loader-form-controller.php:108
+msgid "Cannot submit loader. Error validating request"
+msgstr ""
+
+#: admin/controllers/class-maz-loader-form-controller.php:302
+#: releases/maz-loader/admin/controllers/class-maz-loader-form-controller.php:287
+msgid "Loader cannot be loaded."
+msgstr ""
+
+#: admin/controllers/class-maz-loader-form-controller.php:302
+#: releases/maz-loader/admin/controllers/class-maz-loader-form-controller.php:287
+msgid "Error validating request."
+msgstr ""
+
+#: admin/models/fields/custom_html.php:51
+#: admin/partials/pages/new.php:88
+#: admin/partials/pages/new.php:90
+#: admin/partials/pages/new.php:104
+#: admin/partials/pages/new.php:106
+#: releases/maz-loader/admin/partials/pages/new.php:80
+#: releases/maz-loader/admin/partials/pages/new.php:82
+msgid "Custom HTML"
+msgstr ""
+
+#: admin/models/fields/custom_html.php:54
+msgid "Enter your Custom HTML here. It will automatically be rendered on the Preview."
+msgstr ""
+
+#: admin/models/fields/custom_html.php:71
+#: admin/partials/pages/forms/custom_code_settings.php:12
+#: admin/partials/pages/forms/custom_code_settings.php:42
+#: releases/maz-loader/admin/partials/pages/forms/custom_code_settings.php:10
+msgid "Custom CSS"
+msgstr ""
+
+#: admin/models/fields/custom_html.php:74
+msgid "Enter your Custom CSS here. It will automatically be rendered on the Preview. You don't need to enter the &lt;style&gt;&lt;/style&gt; tags."
+msgstr ""
+
+#: admin/models/fields/custom_html.php:91
+#: admin/partials/pages/forms/custom_code_settings.php:31
+msgid "Custom JavaScript"
+msgstr ""
+
+#: admin/models/fields/custom_html.php:94
+msgid "Enter your Custom JavaScript here. It will automatically be rendered on the Preview.<br><strong>Note:</strong> Custom JS will appear only on the front-end. You don't need to enter the &lt;script&gt;&lt;/script&gt; tags."
+msgstr ""
+
+#: admin/models/fields/custom_html.php:112
+#: admin/models/fields/icon.php:182
+#: admin/models/fields/image.php:278
+#: admin/models/fields/percentage_counter.php:240
+#: admin/models/fields/progress_bar.php:324
+#: admin/models/fields/text.php:227
+msgid "Animation"
+msgstr ""
+
+#: admin/models/fields/custom_html.php:113
+#: admin/models/fields/icon.php:183
+#: admin/models/fields/image.php:279
+#: admin/models/fields/percentage_counter.php:241
+#: admin/models/fields/progress_bar.php:325
+#: admin/models/fields/text.php:228
+msgid "Select an animation to run on this field when the Loader appears."
+msgstr ""
+
+#: admin/models/fields/icon.php:61
+#: admin/partials/pages/new.php:75
+#: admin/partials/pages/new.php:77
+#: releases/maz-loader/admin/models/fields/icon.php:59
+#: releases/maz-loader/admin/partials/pages/new.php:64
+#: releases/maz-loader/admin/partials/pages/new.php:66
+msgid "Icon"
+msgstr ""
+
+#: admin/models/fields/icon.php:77
+#: admin/models/fields/image.php:148
+#: admin/models/fields/percentage_counter.php:118
+#: admin/models/fields/progress_bar.php:200
+#: admin/models/fields/text.php:105
+#: admin/partials/pages/forms/loader_appearance.php:20
+#: releases/maz-loader/admin/models/fields/icon.php:75
+#: releases/maz-loader/admin/models/fields/image.php:146
+#: releases/maz-loader/admin/models/fields/text.php:103
+#: releases/maz-loader/admin/partials/pages/forms/loader_appearance.php:20
+msgid "Background Color"
+msgstr ""
+
+#: admin/models/fields/icon.php:80
+#: admin/models/fields/image.php:151
+#: releases/maz-loader/admin/models/fields/icon.php:78
+#: releases/maz-loader/admin/models/fields/image.php:149
+msgid "Set the background color"
+msgstr ""
+
+#: admin/models/fields/icon.php:108
+#: admin/models/fields/image.php:204
+#: admin/models/fields/percentage_counter.php:166
+#: admin/models/fields/progress_bar.php:249
+#: admin/models/fields/text.php:153
+#: releases/maz-loader/admin/models/fields/icon.php:106
+#: releases/maz-loader/admin/models/fields/image.php:202
+#: releases/maz-loader/admin/models/fields/text.php:151
+msgid "Padding"
+msgstr ""
+
+#: admin/models/fields/icon.php:122
+#: admin/models/fields/image.php:218
+#: admin/models/fields/percentage_counter.php:180
+#: admin/models/fields/progress_bar.php:263
+#: admin/models/fields/text.php:167
+#: releases/maz-loader/admin/models/fields/icon.php:120
+#: releases/maz-loader/admin/models/fields/image.php:216
+#: releases/maz-loader/admin/models/fields/text.php:165
+msgid "Set the padding.<br><strong>Note:</strong> Enter only numbers, the px, em or % is added automatically.<br><strong>Example:</strong> 5, 15 or 30."
+msgstr ""
+
+#: admin/models/fields/icon.php:142
+#: admin/models/fields/image.php:238
+#: admin/models/fields/percentage_counter.php:200
+#: admin/models/fields/progress_bar.php:284
+#: admin/models/fields/text.php:187
+#: releases/maz-loader/admin/models/fields/icon.php:140
+#: releases/maz-loader/admin/models/fields/image.php:236
+#: releases/maz-loader/admin/models/fields/text.php:185
+msgid "Margin"
+msgstr ""
+
+#: admin/models/fields/icon.php:156
+#: admin/models/fields/image.php:252
+#: admin/models/fields/percentage_counter.php:214
+#: admin/models/fields/progress_bar.php:298
+#: admin/models/fields/text.php:201
+#: releases/maz-loader/admin/models/fields/icon.php:154
+#: releases/maz-loader/admin/models/fields/image.php:250
+#: releases/maz-loader/admin/models/fields/text.php:199
+msgid "Set the margin.<br><strong>Note:</strong> Enter only numbers, the px, em or % is added automatically.<br><strong>Example:</strong> 5, 15 or 30."
+msgstr ""
+
+#: admin/models/fields/image.php:62
+#: admin/partials/pages/new.php:71
+#: admin/partials/pages/new.php:73
+#: releases/maz-loader/admin/models/fields/image.php:60
+#: releases/maz-loader/admin/partials/pages/new.php:60
+#: releases/maz-loader/admin/partials/pages/new.php:62
+msgid "Image"
+msgstr ""
+
+#: admin/models/fields/image.php:78
+#: releases/maz-loader/admin/models/fields/image.php:76
+msgid "Custom Image URL"
+msgstr ""
+
+#: admin/models/fields/image.php:82
+#: releases/maz-loader/admin/models/fields/image.php:80
+msgid "Enter a custom URL for the image. This will override the image selected above."
+msgstr ""
+
+#: admin/models/fields/image.php:105
+#: releases/maz-loader/admin/models/fields/image.php:103
+msgid "Width"
+msgstr ""
+
+#: admin/models/fields/image.php:108
+#: releases/maz-loader/admin/models/fields/image.php:106
+msgid "Enter the width of the image"
+msgstr ""
+
+#: admin/models/fields/image.php:122
+#: releases/maz-loader/admin/models/fields/image.php:120
+msgid "Height"
+msgstr ""
+
+#: admin/models/fields/image.php:125
+#: releases/maz-loader/admin/models/fields/image.php:123
+msgid "Enter the height of the image"
+msgstr ""
+
+#: admin/models/fields/image.php:167
+#: releases/maz-loader/admin/models/fields/image.php:165
+msgid "Border Radius"
+msgstr ""
+
+#: admin/models/fields/image.php:170
+#: releases/maz-loader/admin/models/fields/image.php:168
+msgid "Set the border radius of the image."
+msgstr ""
+
+#: admin/models/fields/percentage_counter.php:57
+msgid "Text Before Counter"
+msgstr ""
+
+#: admin/models/fields/percentage_counter.php:59
+msgid "Enter text to appear before the counter"
+msgstr ""
+
+#: admin/models/fields/percentage_counter.php:72
+msgid "Text After Counter"
+msgstr ""
+
+#: admin/models/fields/percentage_counter.php:74
+msgid "Enter text to appear after the counter"
+msgstr ""
+
+#: admin/models/fields/percentage_counter.php:87
+#: admin/models/fields/progress_bar.php:151
+#: admin/models/fields/text.php:73
+#: releases/maz-loader/admin/models/fields/text.php:71
+msgid "Font Size"
+msgstr ""
+
+#: admin/models/fields/percentage_counter.php:89
+#: admin/models/fields/progress_bar.php:153
+#: admin/models/fields/text.php:76
+#: releases/maz-loader/admin/models/fields/text.php:74
+msgid "Set the font size of the text."
+msgstr ""
+
+#: admin/models/fields/percentage_counter.php:121
+#: admin/models/fields/progress_bar.php:203
+#: admin/models/fields/text.php:108
+#: releases/maz-loader/admin/models/fields/text.php:106
+msgid "Set the background color."
+msgstr ""
+
+#: admin/models/fields/percentage_counter.php:135
+#: admin/models/fields/progress_bar.php:218
+#: admin/models/fields/text.php:122
+#: releases/maz-loader/admin/models/fields/text.php:120
+msgid "Text Color"
+msgstr ""
+
+#: admin/models/fields/percentage_counter.php:138
+#: admin/models/fields/progress_bar.php:221
+#: admin/models/fields/text.php:125
+#: releases/maz-loader/admin/models/fields/text.php:123
+msgid "Set the text color."
+msgstr ""
+
+#: admin/models/fields/progress_bar.php:61
+msgid "Position"
+msgstr ""
+
+#: admin/models/fields/progress_bar.php:63
+msgid "Select the position of the progress bar."
+msgstr ""
+
+#: admin/models/fields/progress_bar.php:65
+msgid "Default"
+msgstr ""
+
+#: admin/models/fields/progress_bar.php:66
+#: admin/partials/pages/forms/loader_appearance.php:147
+#: releases/maz-loader/admin/partials/pages/forms/loader_appearance.php:147
+msgid "Top"
+msgstr ""
+
+#: admin/models/fields/progress_bar.php:67
+#: admin/partials/pages/forms/loader_appearance.php:153
+#: releases/maz-loader/admin/partials/pages/forms/loader_appearance.php:153
+msgid "Bottom"
+msgstr ""
+
+#: admin/models/fields/progress_bar.php:83
+msgid "Show Percentage"
+msgstr ""
+
+#: admin/models/fields/progress_bar.php:85
+msgid "Select whether to display a percentage counter."
+msgstr ""
+
+#: admin/models/fields/progress_bar.php:87
+msgid "Don't Show"
+msgstr ""
+
+#: admin/models/fields/progress_bar.php:88
+msgid "Show"
+msgstr ""
+
+#: admin/models/fields/progress_bar.php:104
+msgid "Progress Bar Width"
+msgstr ""
+
+#: admin/models/fields/progress_bar.php:106
+msgid "Set the progress bar width."
+msgstr ""
+
+#: admin/models/fields/progress_bar.php:128
+msgid "Progress Bar Height"
+msgstr ""
+
+#: admin/models/fields/progress_bar.php:130
+msgid "Set the progress bar height."
+msgstr ""
+
+#: admin/models/fields/progress_bar.php:182
+msgid "Progress Bar Color"
+msgstr ""
+
+#: admin/models/fields/progress_bar.php:185
+msgid "Set the progress bar color."
+msgstr ""
+
+#: admin/models/fields/text.php:28
+#: admin/models/fields/text.php:29
+#: admin/models/fields/text.php:59
+#: admin/partials/pages/new.php:67
+#: admin/partials/pages/new.php:69
+#: releases/maz-loader/admin/models/fields/text.php:28
+#: releases/maz-loader/admin/models/fields/text.php:29
+#: releases/maz-loader/admin/models/fields/text.php:57
+#: releases/maz-loader/admin/partials/pages/new.php:56
+#: releases/maz-loader/admin/partials/pages/new.php:58
+msgid "Text"
+msgstr ""
+
+#: admin/models/fields/text.php:60
+#: admin/models/fields/text.php:61
+#: admin/models/fields/text.php:255
+#: admin/models/fields/text.php:256
+#: releases/maz-loader/admin/models/fields/text.php:58
+#: releases/maz-loader/admin/models/fields/text.php:59
+#: releases/maz-loader/admin/models/fields/text.php:219
+#: releases/maz-loader/admin/models/fields/text.php:220
+msgid "Loading..."
+msgstr ""
+
+#: admin/models/fields/text.php:257
+#: releases/maz-loader/admin/models/fields/text.php:221
+msgid "15"
+msgstr ""
+
+#: admin/partials/forms/fields/animation.php:24
+#: releases/maz-loader/admin/partials/forms/fields/animation.php:24
+msgid "None"
+msgstr ""
+
+#: admin/partials/forms/fields/device_control.php:30
+#: releases/maz-loader/admin/partials/forms/fields/device_control.php:30
+msgid "Show/Hide on Desktop"
+msgstr ""
+
+#: admin/partials/forms/fields/device_control.php:31
+#: releases/maz-loader/admin/partials/forms/fields/device_control.php:31
+msgid "Show/Hide on Tablet"
+msgstr ""
+
+#: admin/partials/forms/fields/device_control.php:32
+#: releases/maz-loader/admin/partials/forms/fields/device_control.php:32
+msgid "Show/Hide on Mobile"
+msgstr ""
+
+#: admin/partials/forms/fields/icon.php:11
+#: releases/maz-loader/admin/partials/forms/fields/icon.php:11
+msgid "SVG"
+msgstr ""
+
+#: admin/partials/forms/fields/icon.php:12
+#: releases/maz-loader/admin/partials/forms/fields/icon.php:12
+msgid "GIFs"
+msgstr ""
+
+#: admin/partials/forms/fields/icon.php:13
+#: releases/maz-loader/admin/partials/forms/fields/icon.php:13
+msgid "CSS & Other"
+msgstr ""
+
+#: admin/partials/forms/fields/icon.php:21
+#: admin/partials/forms/fields/icon.php:32
+#: admin/partials/forms/fields/icon.php:50
+#: releases/maz-loader/admin/partials/forms/fields/icon.php:21
+#: releases/maz-loader/admin/partials/forms/fields/icon.php:32
+#: releases/maz-loader/admin/partials/forms/fields/icon.php:50
+msgid "loading icon"
+msgstr ""
+
+#: admin/partials/forms/fields/image.php:13
+#: releases/maz-loader/admin/partials/forms/fields/image.php:13
+msgid "Update Image"
+msgstr ""
+
+#: admin/partials/forms/fields/image.php:14
+#: releases/maz-loader/admin/partials/forms/fields/image.php:14
+msgid "Reset"
+msgstr ""
+
+#: admin/partials/forms/fields/margin_padding.php:18
+#: releases/maz-loader/admin/partials/forms/fields/margin_padding.php:18
+msgid "TOP"
+msgstr ""
+
+#: admin/partials/forms/fields/margin_padding.php:22
+#: releases/maz-loader/admin/partials/forms/fields/margin_padding.php:22
+msgid "RIGHT"
+msgstr ""
+
+#: admin/partials/forms/fields/margin_padding.php:26
+#: releases/maz-loader/admin/partials/forms/fields/margin_padding.php:26
+msgid "BOTTOM"
+msgstr ""
+
+#: admin/partials/forms/fields/margin_padding.php:30
+#: releases/maz-loader/admin/partials/forms/fields/margin_padding.php:30
+msgid "LEFT"
+msgstr ""
+
+#: admin/partials/forms/fields/margin_padding.php:37
+#: releases/maz-loader/admin/partials/forms/fields/margin_padding.php:37
+msgid "PX"
+msgstr ""
+
+#: admin/partials/forms/fields/margin_padding.php:38
+#: releases/maz-loader/admin/partials/forms/fields/margin_padding.php:38
+msgid "EM"
+msgstr ""
+
+#: admin/partials/forms/fields/margin_padding.php:39
+#: releases/maz-loader/admin/partials/forms/fields/margin_padding.php:39
+msgid "%"
+msgstr ""
+
+#: admin/partials/forms/fields/publishing_rules.php:28
+#: admin/partials/forms/fields/publishing_rules.php:82
+msgid "INCLUDE"
+msgstr ""
+
+#: admin/partials/forms/fields/publishing_rules.php:29
+#: admin/partials/forms/fields/publishing_rules.php:83
+msgid "EXCLUDE"
+msgstr ""
+
+#: admin/partials/forms/fields/publishing_rules.php:36
+#: admin/partials/forms/fields/publishing_rules.php:90
+#: admin/partials/pages/settings.php:16
+#: releases/maz-loader/admin/partials/pages/settings.php:16
+msgid "General"
+msgstr ""
+
+#: admin/partials/forms/fields/publishing_rules.php:37
+#: admin/partials/forms/fields/publishing_rules.php:91
+msgid "Entire Site"
+msgstr ""
+
+#: admin/partials/forms/fields/publishing_rules.php:38
+#: admin/partials/forms/fields/publishing_rules.php:92
+msgid "Only on Homepage"
+msgstr ""
+
+#: admin/partials/forms/fields/publishing_rules.php:40
+#: admin/partials/forms/fields/publishing_rules.php:94
+msgid "Post Specific"
+msgstr ""
+
+#: admin/partials/forms/fields/publishing_rules.php:41
+#: admin/partials/forms/fields/publishing_rules.php:95
+msgid "Posts"
+msgstr ""
+
+#: admin/partials/forms/fields/publishing_rules.php:42
+#: admin/partials/forms/fields/publishing_rules.php:96
+msgid "Pages"
+msgstr ""
+
+#: admin/partials/forms/fields/publishing_rules.php:43
+#: admin/partials/forms/fields/publishing_rules.php:97
+msgid "Categories"
+msgstr ""
+
+#: admin/partials/forms/fields/publishing_rules.php:44
+#: admin/partials/forms/fields/publishing_rules.php:98
+msgid "Tags"
+msgstr ""
+
+#: admin/partials/forms/fields/publishing_rules.php:45
+#: admin/partials/forms/fields/publishing_rules.php:99
+msgid "Custom Post Types"
+msgstr ""
+
+#: admin/partials/forms/fields/publishing_rules.php:55
+#: admin/partials/forms/fields/publishing_rules.php:109
+msgid "Remove selected item"
+msgstr ""
+
+#: admin/partials/forms/fields/publishing_rules.php:63
+#: admin/partials/forms/fields/publishing_rules.php:117
+msgid "Type to search..."
+msgstr ""
+
+#: admin/partials/forms/fields/publishing_rules.php:73
+msgid "Add Condition"
+msgstr ""
+
+#: admin/partials/forms/fields/settings/start.php:8
+#: admin/partials/pages/new.php:65
+#: releases/maz-loader/admin/partials/forms/fields/settings/start.php:8
+#: releases/maz-loader/admin/partials/pages/new.php:54
+msgid "Field"
+msgstr ""
+
+#: admin/partials/forms/fields/submit_button.php:6
+#: releases/maz-loader/admin/partials/forms/fields/submit_button.php:6
+msgid "Save Loader"
+msgstr ""
+
+#: admin/partials/loader/fields/icon.php:74
+#: admin/partials/loader/fields/icon.php:84
+#: public/partials/fields/icon.php:82
+#: public/partials/fields/icon.php:92
+#: releases/maz-loader/admin/partials/loader/fields/icon.php:74
+#: releases/maz-loader/admin/partials/loader/fields/icon.php:84
+#: releases/maz-loader/public/partials/fields/icon.php:82
+#: releases/maz-loader/public/partials/fields/icon.php:92
+msgid "preloader image"
+msgstr ""
+
+#: admin/partials/pages/dashboard.php:23
+#: releases/maz-loader/admin/partials/pages/dashboard.php:23
+msgid "New Loader"
+msgstr ""
+
+#: admin/partials/pages/dashboard.php:41
+#: releases/maz-loader/admin/partials/pages/dashboard.php:41
+msgid "Analytics"
+msgstr ""
+
+#: admin/partials/pages/dashboard.php:46
+#: admin/partials/pages/list.php:15
+#: releases/maz-loader/admin/partials/pages/dashboard.php:46
+#: releases/maz-loader/admin/partials/pages/list.php:15
+msgid "Loaders"
+msgstr ""
+
+#: admin/partials/pages/dashboard.php:52
+#: releases/maz-loader/admin/partials/pages/dashboard.php:52
+msgid "Loaders enabled"
+msgstr ""
+
+#: admin/partials/pages/dashboard.php:58
+#: releases/maz-loader/admin/partials/pages/dashboard.php:58
+msgid "Seen by visitors"
+msgstr ""
+
+#: admin/partials/pages/dashboard.php:64
+#: releases/maz-loader/admin/partials/pages/dashboard.php:64
+msgid "Total fields used in Loaders"
+msgstr ""
+
+#: admin/partials/pages/dashboard.php:70
+#: releases/maz-loader/admin/partials/pages/dashboard.php:70
+msgid "Total impressions"
+msgstr ""
+
+#: admin/partials/pages/dashboard.php:76
+#: releases/maz-loader/admin/partials/pages/dashboard.php:76
+msgid "Average impressions per Loader"
+msgstr ""
+
+#: admin/partials/pages/dashboard.php:82
+#: releases/maz-loader/admin/partials/pages/dashboard.php:82
+msgid "Impressions yesterday"
+msgstr ""
+
+#: admin/partials/pages/dashboard.php:88
+#: releases/maz-loader/admin/partials/pages/dashboard.php:88
+msgid "Impressions today"
+msgstr ""
+
+#: admin/partials/pages/dashboard.php:94
+#: releases/maz-loader/admin/partials/pages/dashboard.php:94
+msgid "Current Month Impressions Projection"
+msgstr ""
+
+#: admin/partials/pages/dashboard.php:102
+#: releases/maz-loader/admin/partials/pages/dashboard.php:102
+msgid "Recent Loaders"
+msgstr ""
+
+#: admin/partials/pages/dashboard.php:107
+#: releases/maz-loader/admin/partials/pages/dashboard.php:107
+msgid "ID"
+msgstr ""
+
+#: admin/partials/pages/dashboard.php:108
+#: releases/maz-loader/admin/partials/pages/dashboard.php:108
+msgid "Loader"
+msgstr ""
+
+#: admin/partials/pages/dashboard.php:110
+#: releases/maz-loader/admin/partials/pages/dashboard.php:110
+msgid "Created at"
+msgstr ""
+
+#: admin/partials/pages/dashboard.php:142
+#: releases/maz-loader/admin/partials/pages/dashboard.php:142
+msgid "Installed version: "
+msgstr ""
+
+#: admin/partials/pages/dashboard.php:146
+#: admin/partials/pro/forms/fields/pro.php:6
+#: admin/partials/pro/popup.php:18
+#: releases/maz-loader/admin/partials/pages/dashboard.php:146
+#: releases/maz-loader/admin/partials/pro/forms/fields/pro.php:6
+#: releases/maz-loader/admin/partials/pro/popup.php:18
+msgid "Upgrade to PRO"
+msgstr ""
+
+#: admin/partials/pages/dashboard.php:149
+#: releases/maz-loader/admin/partials/pages/dashboard.php:149
+msgid "Percentage Counter Field"
+msgstr ""
+
+#: admin/partials/pages/dashboard.php:150
+#: releases/maz-loader/admin/partials/pages/dashboard.php:150
+msgid "Progress Bar Field"
+msgstr ""
+
+#: admin/partials/pages/dashboard.php:151
+#: releases/maz-loader/admin/partials/pages/dashboard.php:151
+msgid "Custom HTML/CSS/JavaScript Field"
+msgstr ""
+
+#: admin/partials/pages/dashboard.php:152
+#: admin/partials/pages/forms/publish_settings.php:19
+#: releases/maz-loader/admin/partials/pages/dashboard.php:152
+msgid "Publishing Rules"
+msgstr ""
+
+#: admin/partials/pages/dashboard.php:153
+#: admin/partials/pages/forms/loader_settings.php:54
+#: admin/partials/pages/forms/loader_settings.php:65
+#: releases/maz-loader/admin/partials/pages/dashboard.php:153
+#: releases/maz-loader/admin/partials/pages/forms/loader_settings.php:53
+msgid "Device Control"
+msgstr ""
+
+#: admin/partials/pages/dashboard.php:154
+#: releases/maz-loader/admin/partials/pages/dashboard.php:154
+msgid "Animations"
+msgstr ""
+
+#: admin/partials/pages/dashboard.php:155
+#: releases/maz-loader/admin/partials/pages/dashboard.php:155
+msgid "Transitions"
+msgstr ""
+
+#: admin/partials/pages/dashboard.php:156
+#: releases/maz-loader/admin/partials/pages/dashboard.php:156
+msgid "Events"
+msgstr ""
+
+#: admin/partials/pages/dashboard.php:157
+#: releases/maz-loader/admin/partials/pages/dashboard.php:157
+msgid "Email Support"
+msgstr ""
+
+#: admin/partials/pages/dashboard.php:158
+#: releases/maz-loader/admin/partials/pages/dashboard.php:158
+msgid "And More!"
+msgstr ""
+
+#: admin/partials/pages/dashboard.php:161
+#: releases/maz-loader/admin/partials/pages/dashboard.php:161
+msgid "Get MAZ Loader PRO"
+msgstr ""
+
+#: admin/partials/pages/dashboard.php:163
+#: releases/maz-loader/admin/partials/pages/dashboard.php:163
+msgid "More Information"
+msgstr ""
+
+#: admin/partials/pages/dashboard.php:168
+#: releases/maz-loader/admin/partials/pages/dashboard.php:168
+msgid "Enjoy MAZ Loader?"
+msgstr ""
+
+#: admin/partials/pages/dashboard.php:170
+#: releases/maz-loader/admin/partials/pages/dashboard.php:170
+msgid "Spare 1 minute and write a review on the WordPress Plugin repository to help me spread the word!"
+msgstr ""
+
+#: admin/partials/pages/dashboard.php:177
+#: releases/maz-loader/admin/partials/pages/dashboard.php:177
+msgid "Write a review"
+msgstr ""
+
+#: admin/partials/pages/forms/custom_code_settings.php:14
+#: admin/partials/pages/forms/custom_code_settings.php:43
+#: releases/maz-loader/admin/partials/pages/forms/custom_code_settings.php:11
+msgid "Enter your Custom CSS here. You don't need to enter the &lt;style&gt;&lt;/style&gt; tags."
+msgstr ""
+
+#: admin/partials/pages/forms/custom_code_settings.php:33
+#: admin/partials/pages/forms/custom_code_settings.php:50
+#: releases/maz-loader/admin/partials/pages/forms/custom_code_settings.php:18
+msgid "Enter your Custom JavaScript here. You don't need to enter the &lt;script&gt;&lt;/script&gt; tags."
+msgstr ""
+
+#: admin/partials/pages/forms/custom_code_settings.php:49
+#: releases/maz-loader/admin/partials/pages/forms/custom_code_settings.php:17
+msgid "Custom JS"
+msgstr ""
+
+#: admin/partials/pages/forms/loader_appearance.php:22
+#: releases/maz-loader/admin/partials/pages/forms/loader_appearance.php:22
+msgid "Select a background color for your loader.<br><strong>Note:</strong> Your Loader must contain at least 1 field for the background color to appear."
+msgstr ""
+
+#: admin/partials/pages/forms/loader_appearance.php:37
+#: releases/maz-loader/admin/partials/pages/forms/loader_appearance.php:37
+msgid "Background"
+msgstr ""
+
+#: admin/partials/pages/forms/loader_appearance.php:38
+#: releases/maz-loader/admin/partials/pages/forms/loader_appearance.php:38
+msgid "Set a background image for your loader. Set it either as a cover or make it a background pattern."
+msgstr ""
+
+#: admin/partials/pages/forms/loader_appearance.php:53
+#: releases/maz-loader/admin/partials/pages/forms/loader_appearance.php:53
+msgid "Cover"
+msgstr ""
+
+#: admin/partials/pages/forms/loader_appearance.php:54
+#: releases/maz-loader/admin/partials/pages/forms/loader_appearance.php:54
+msgid "Repeat"
+msgstr ""
+
+#: admin/partials/pages/forms/loader_appearance.php:55
+#: releases/maz-loader/admin/partials/pages/forms/loader_appearance.php:55
+msgid "Repeat X"
+msgstr ""
+
+#: admin/partials/pages/forms/loader_appearance.php:56
+#: releases/maz-loader/admin/partials/pages/forms/loader_appearance.php:56
+msgid "Repeat Y"
+msgstr ""
+
+#: admin/partials/pages/forms/loader_appearance.php:58
+#: releases/maz-loader/admin/partials/pages/forms/loader_appearance.php:58
+msgid "Background Image Type"
+msgstr ""
+
+#: admin/partials/pages/forms/loader_appearance.php:59
+#: releases/maz-loader/admin/partials/pages/forms/loader_appearance.php:59
+msgid "Set the background image type.<br><strong>Default:</strong> cover."
+msgstr ""
+
+#: admin/partials/pages/forms/loader_appearance.php:77
+#: releases/maz-loader/admin/partials/pages/forms/loader_appearance.php:77
+msgid "Left Top"
+msgstr ""
+
+#: admin/partials/pages/forms/loader_appearance.php:78
+#: releases/maz-loader/admin/partials/pages/forms/loader_appearance.php:78
+msgid "Left Center"
+msgstr ""
+
+#: admin/partials/pages/forms/loader_appearance.php:79
+#: releases/maz-loader/admin/partials/pages/forms/loader_appearance.php:79
+msgid "Left Bottom"
+msgstr ""
+
+#: admin/partials/pages/forms/loader_appearance.php:80
+#: releases/maz-loader/admin/partials/pages/forms/loader_appearance.php:80
+msgid "Right Top"
+msgstr ""
+
+#: admin/partials/pages/forms/loader_appearance.php:81
+#: releases/maz-loader/admin/partials/pages/forms/loader_appearance.php:81
+msgid "Right Center"
+msgstr ""
+
+#: admin/partials/pages/forms/loader_appearance.php:82
+#: releases/maz-loader/admin/partials/pages/forms/loader_appearance.php:82
+msgid "Right Bottom"
+msgstr ""
+
+#: admin/partials/pages/forms/loader_appearance.php:83
+#: releases/maz-loader/admin/partials/pages/forms/loader_appearance.php:83
+msgid "Center Top"
+msgstr ""
+
+#: admin/partials/pages/forms/loader_appearance.php:84
+#: releases/maz-loader/admin/partials/pages/forms/loader_appearance.php:84
+msgid "Center Center"
+msgstr ""
+
+#: admin/partials/pages/forms/loader_appearance.php:85
+#: releases/maz-loader/admin/partials/pages/forms/loader_appearance.php:85
+msgid "Center Bottom"
+msgstr ""
+
+#: admin/partials/pages/forms/loader_appearance.php:87
+#: releases/maz-loader/admin/partials/pages/forms/loader_appearance.php:87
+msgid "Background Image Position"
+msgstr ""
+
+#: admin/partials/pages/forms/loader_appearance.php:88
+#: releases/maz-loader/admin/partials/pages/forms/loader_appearance.php:88
+msgid "Set the background image type.<br><strong>Default:</strong> center center."
+msgstr ""
+
+#: admin/partials/pages/forms/loader_appearance.php:114
+#: releases/maz-loader/admin/partials/pages/forms/loader_appearance.php:114
+msgid "Background Color Overlay"
+msgstr ""
+
+#: admin/partials/pages/forms/loader_appearance.php:116
+#: releases/maz-loader/admin/partials/pages/forms/loader_appearance.php:116
+msgid "Select a color for your loader's overlay."
+msgstr ""
+
+#: admin/partials/pages/forms/loader_appearance.php:146
+#: releases/maz-loader/admin/partials/pages/forms/loader_appearance.php:146
+msgid "Top Left"
+msgstr ""
+
+#: admin/partials/pages/forms/loader_appearance.php:148
+#: releases/maz-loader/admin/partials/pages/forms/loader_appearance.php:148
+msgid "Top Right"
+msgstr ""
+
+#: admin/partials/pages/forms/loader_appearance.php:149
+#: releases/maz-loader/admin/partials/pages/forms/loader_appearance.php:149
+msgid "Center Left"
+msgstr ""
+
+#: admin/partials/pages/forms/loader_appearance.php:150
+#: releases/maz-loader/admin/partials/pages/forms/loader_appearance.php:150
+msgid "Center"
+msgstr ""
+
+#: admin/partials/pages/forms/loader_appearance.php:151
+#: releases/maz-loader/admin/partials/pages/forms/loader_appearance.php:151
+msgid "Center Right"
+msgstr ""
+
+#: admin/partials/pages/forms/loader_appearance.php:152
+#: releases/maz-loader/admin/partials/pages/forms/loader_appearance.php:152
+msgid "Bottom Left"
+msgstr ""
+
+#: admin/partials/pages/forms/loader_appearance.php:154
+#: releases/maz-loader/admin/partials/pages/forms/loader_appearance.php:154
+msgid "Bottom Right"
+msgstr ""
+
+#: admin/partials/pages/forms/loader_appearance.php:156
+#: releases/maz-loader/admin/partials/pages/forms/loader_appearance.php:156
+msgid "Loader Content Position"
+msgstr ""
+
+#: admin/partials/pages/forms/loader_appearance.php:157
+#: releases/maz-loader/admin/partials/pages/forms/loader_appearance.php:157
+msgid "Set the where your loader's content will appear.<br><strong>Default:</strong> Center."
+msgstr ""
+
+#: admin/partials/pages/forms/loader_appearance.php:175
+#: releases/maz-loader/admin/partials/pages/forms/loader_appearance.php:175
+msgid "Side by Side Loader Items"
+msgstr ""
+
+#: admin/partials/pages/forms/loader_appearance.php:176
+#: releases/maz-loader/admin/partials/pages/forms/loader_appearance.php:176
+msgid "Make the loader items appear side by side instead of one below another."
+msgstr ""
+
+#: admin/partials/pages/forms/loader_appearance.php:196
+#: admin/partials/pages/forms/loader_appearance.php:333
+#: releases/maz-loader/admin/partials/pages/forms/loader_appearance.php:194
+msgid "Display Close Button"
+msgstr ""
+
+#: admin/partials/pages/forms/loader_appearance.php:197
+#: admin/partials/pages/forms/loader_appearance.php:334
+#: releases/maz-loader/admin/partials/pages/forms/loader_appearance.php:195
+msgid "Enable to display a close button on your Loader."
+msgstr ""
+
+#: admin/partials/pages/forms/loader_appearance.php:216
+msgid "Light"
+msgstr ""
+
+#: admin/partials/pages/forms/loader_appearance.php:217
+msgid "Dark"
+msgstr ""
+
+#: admin/partials/pages/forms/loader_appearance.php:219
+msgid "Close Button Style"
+msgstr ""
+
+#: admin/partials/pages/forms/loader_appearance.php:220
+msgid "Select the Close button style."
+msgstr ""
+
+#: admin/partials/pages/forms/loader_appearance.php:245
+#: admin/partials/pages/forms/loader_appearance.php:340
+#: releases/maz-loader/admin/partials/pages/forms/loader_appearance.php:201
+msgid "Display Transition"
+msgstr ""
+
+#: admin/partials/pages/forms/loader_appearance.php:246
+#: admin/partials/pages/forms/loader_appearance.php:341
+#: releases/maz-loader/admin/partials/pages/forms/loader_appearance.php:202
+msgid "Enable to set a transition for your Loader. The transition runs after the Loader finishes loading."
+msgstr ""
+
+#: admin/partials/pages/forms/loader_appearance.php:264
+msgid "Split Horizontally"
+msgstr ""
+
+#: admin/partials/pages/forms/loader_appearance.php:265
+msgid "Split Vertically"
+msgstr ""
+
+#: admin/partials/pages/forms/loader_appearance.php:266
+msgid "Slide Up"
+msgstr ""
+
+#: admin/partials/pages/forms/loader_appearance.php:267
+msgid "Slide Down"
+msgstr ""
+
+#: admin/partials/pages/forms/loader_appearance.php:268
+msgid "Slide Left"
+msgstr ""
+
+#: admin/partials/pages/forms/loader_appearance.php:269
+msgid "Slide Right"
+msgstr ""
+
+#: admin/partials/pages/forms/loader_appearance.php:270
+msgid "Shrink"
+msgstr ""
+
+#: admin/partials/pages/forms/loader_appearance.php:271
+msgid "Scale out Bottom Left"
+msgstr ""
+
+#: admin/partials/pages/forms/loader_appearance.php:272
+msgid "Scale out Vertical"
+msgstr ""
+
+#: admin/partials/pages/forms/loader_appearance.php:273
+msgid "Scale out Top"
+msgstr ""
+
+#: admin/partials/pages/forms/loader_appearance.php:274
+msgid "Scale out Left"
+msgstr ""
+
+#: admin/partials/pages/forms/loader_appearance.php:275
+msgid "Scale out Top Right"
+msgstr ""
+
+#: admin/partials/pages/forms/loader_appearance.php:276
+msgid "Scale out Top Left"
+msgstr ""
+
+#: admin/partials/pages/forms/loader_appearance.php:277
+msgid "Scale out Right"
+msgstr ""
+
+#: admin/partials/pages/forms/loader_appearance.php:278
+msgid "Scale out Horizontal"
+msgstr ""
+
+#: admin/partials/pages/forms/loader_appearance.php:279
+msgid "Scale out Bottom Right"
+msgstr ""
+
+#: admin/partials/pages/forms/loader_appearance.php:280
+msgid "Scale out Bottom"
+msgstr ""
+
+#: admin/partials/pages/forms/loader_appearance.php:281
+msgid "Flip out Horizontal Top"
+msgstr ""
+
+#: admin/partials/pages/forms/loader_appearance.php:282
+msgid "Flip out Horizontal Bottom"
+msgstr ""
+
+#: admin/partials/pages/forms/loader_appearance.php:283
+msgid "Flip out Vertical Left"
+msgstr ""
+
+#: admin/partials/pages/forms/loader_appearance.php:284
+msgid "Flip out Vertical Right"
+msgstr ""
+
+#: admin/partials/pages/forms/loader_appearance.php:286
+msgid "Transition Style"
+msgstr ""
+
+#: admin/partials/pages/forms/loader_appearance.php:287
+msgid "Select a Transition style."
+msgstr ""
+
+#: admin/partials/pages/forms/loader_appearance.php:310
+msgid "Transition Color"
+msgstr ""
+
+#: admin/partials/pages/forms/loader_appearance.php:312
+msgid "Select a color for your Loader's transition."
+msgstr ""
+
+#: admin/partials/pages/forms/loader_appearance.php:361
+#: releases/maz-loader/admin/partials/pages/forms/loader_appearance.php:222
+msgid "Disable Page Scroll"
+msgstr ""
+
+#: admin/partials/pages/forms/loader_appearance.php:362
+#: releases/maz-loader/admin/partials/pages/forms/loader_appearance.php:223
+msgid "Disable page scrolling until the loader finishes."
+msgstr ""
+
+#: admin/partials/pages/forms/loader_settings.php:11
+#: releases/maz-loader/admin/partials/pages/forms/loader_settings.php:11
+msgid "Minimum Loading Time"
+msgstr ""
+
+#: admin/partials/pages/forms/loader_settings.php:13
+#: releases/maz-loader/admin/partials/pages/forms/loader_settings.php:13
+msgid "Set the minimum loading time in milliseconds.<br><strong>Example:</strong> 1000 for 1 second or 2500 for 2,5 seconds."
+msgstr ""
+
+#: admin/partials/pages/forms/loader_settings.php:22
+#: releases/maz-loader/admin/partials/pages/forms/loader_settings.php:22
+msgid "Duration"
+msgstr ""
+
+#: admin/partials/pages/forms/loader_settings.php:24
+#: releases/maz-loader/admin/partials/pages/forms/loader_settings.php:24
+msgid "Set the duration of the loader in milliseconds.<br><strong>Note:</strong> The total loading time consists of the <em>Minimum Loading Time</em> + <em>Duration</em><br><strong>Example:</strong> 1000 for 1 second or 2500 for 2,5 seconds."
+msgstr ""
+
+#: admin/partials/pages/forms/loader_settings.php:33
+#: releases/maz-loader/admin/partials/pages/forms/loader_settings.php:33
+msgid "Delay"
+msgstr ""
+
+#: admin/partials/pages/forms/loader_settings.php:35
+#: releases/maz-loader/admin/partials/pages/forms/loader_settings.php:35
+msgid "Delay the loader before showing it in milliseconds.<br><strong>Example:</strong> 1000 for 1 second or 2500 for 2,5 seconds."
+msgstr ""
+
+#: admin/partials/pages/forms/loader_settings.php:55
+msgid "Set whether to display the Loader on all devices, desktop, tablet or mobile devices."
+msgstr ""
+
+#: admin/partials/pages/forms/loader_settings.php:66
+#: releases/maz-loader/admin/partials/pages/forms/loader_settings.php:54
+msgid "Set whether to display the Loader on all devices, on mobile or hide it on mobile devices."
+msgstr ""
+
+#: admin/partials/pages/forms/loader_settings.php:85
+#: releases/maz-loader/admin/partials/pages/forms/loader_settings.php:73
+msgid "Show on Homepage"
+msgstr ""
+
+#: admin/partials/pages/forms/loader_settings.php:86
+#: releases/maz-loader/admin/partials/pages/forms/loader_settings.php:74
+msgid "Enable to show the loader only on the homepage. (You need to have the \"<strong>Display the last published Loader on all pages?</strong>\" option enabled under the Settings page."
+msgstr ""
+
+#: admin/partials/pages/forms/publish_settings.php:9
+#: admin/partials/pages/new.php:41
+#: admin/partials/pages/new.php:55
+#: admin/partials/pages/new.php:176
+#: releases/maz-loader/admin/partials/pages/forms/publish_settings.php:9
+#: releases/maz-loader/admin/partials/pages/new.php:44
+#: releases/maz-loader/admin/partials/pages/new.php:152
+msgid "Publish Settings"
+msgstr ""
+
+#: admin/partials/pages/forms/publish_settings.php:9
+#: releases/maz-loader/admin/partials/pages/forms/publish_settings.php:9
+msgid "Upgrade to Pro"
+msgstr ""
+
+#: admin/partials/pages/forms/publish_settings.php:20
+msgid "Set conditions that determine where your Loader will appear across your site. To display the Loader site-wide you can choose the <em>Entire Site</em> option."
+msgstr ""
+
+#: admin/partials/pages/list.php:16
+#: releases/maz-loader/admin/partials/pages/list.php:16
+msgid "Add new"
+msgstr ""
+
+#: admin/partials/pages/new.php:19
+#: admin/partials/pages/new.php:120
+#: releases/maz-loader/admin/partials/pages/new.php:19
+#: releases/maz-loader/admin/partials/pages/new.php:96
+msgid "Fields List"
+msgstr ""
+
+#: admin/partials/pages/new.php:24
+#: admin/partials/pages/new.php:152
+#: releases/maz-loader/admin/partials/pages/new.php:24
+#: releases/maz-loader/admin/partials/pages/new.php:128
+msgid "Appearance"
+msgstr ""
+
+#: admin/partials/pages/new.php:36
+#: admin/partials/pages/new.php:49
+#: admin/partials/pages/new.php:168
+#: releases/maz-loader/admin/partials/pages/new.php:38
+#: releases/maz-loader/admin/partials/pages/new.php:144
+msgid "Custom Code"
+msgstr ""
+
+#: admin/partials/pages/new.php:80
+#: admin/partials/pages/new.php:82
+#: admin/partials/pages/new.php:94
+#: admin/partials/pages/new.php:96
+#: releases/maz-loader/admin/partials/pages/new.php:70
+#: releases/maz-loader/admin/partials/pages/new.php:72
+msgid "Progress Bar"
+msgstr ""
+
+#: admin/partials/pages/new.php:84
+#: admin/partials/pages/new.php:99
+#: releases/maz-loader/admin/partials/pages/new.php:75
+msgid "Percentage Counter"
+msgstr ""
+
+#: admin/partials/pages/new.php:86
+#: admin/partials/pages/new.php:101
+#: releases/maz-loader/admin/partials/pages/new.php:77
+msgid "Percentage counter"
+msgstr ""
+
+#: admin/partials/pages/new.php:123
+#: releases/maz-loader/admin/partials/pages/new.php:99
+msgid "Start adding fields by hovering over the "
+msgstr ""
+
+#: admin/partials/pages/new.php:123
+#: releases/maz-loader/admin/partials/pages/new.php:99
+msgid " button above."
+msgstr ""
+
+#: admin/partials/pages/new.php:238
+#: releases/maz-loader/admin/partials/pages/new.php:214
+msgid "Live Preview"
+msgstr ""
+
+#: admin/partials/pages/new.php:249
+#: releases/maz-loader/admin/partials/pages/new.php:225
+msgid "Run Loader"
+msgstr ""
+
+#: admin/partials/pages/new.php:298
+#: releases/maz-loader/admin/partials/pages/new.php:274
+msgid "Loading your Loader..."
+msgstr ""
+
+#: admin/partials/pages/settings.php:24
+#: releases/maz-loader/admin/partials/pages/settings.php:24
+msgid "Settings Saved"
+msgstr ""
+
+#: admin/partials/pages/settings.php:33
+#: releases/maz-loader/admin/partials/pages/settings.php:33
+msgid "Save Settings"
+msgstr ""
+
+#: admin/partials/pro/popup.php:11
+#: releases/maz-loader/admin/partials/pro/popup.php:11
+msgid "Unlock PRO Features"
+msgstr ""
+
+#: admin/partials/pro/popup.php:14
+#: releases/maz-loader/admin/partials/pro/popup.php:14
+msgid "is a PRO feature."
+msgstr ""
+
+#: admin/partials/pro/popup.php:15
+#: releases/maz-loader/admin/partials/pro/popup.php:15
+msgid "Upgrade to PRO and unlock this feature alongside others to elevate your Preloaders!"
+msgstr ""
+
+#: admin/partials/pro/popup.php:21
+#: releases/maz-loader/admin/partials/pro/popup.php:21
+msgid "By upgrading to"
+msgstr ""
+
+#: admin/partials/pro/popup.php:21
+#: releases/maz-loader/admin/partials/pro/popup.php:21
+msgid "PRO"
+msgstr ""
+
+#: admin/partials/pro/popup.php:21
+#: releases/maz-loader/admin/partials/pro/popup.php:21
+msgid "you automatically get "
+msgstr ""
+
+#: admin/partials/pro/popup.php:21
+#: releases/maz-loader/admin/partials/pro/popup.php:21
+msgid "30% OFF"
+msgstr ""
+
+#: admin/partials/pro/popup.php:24
+#: releases/maz-loader/admin/partials/pro/popup.php:24
+msgid "PRO Features"
+msgstr ""
+
+#: admin/partials/pro/popup.php:24
+#: releases/maz-loader/admin/partials/pro/popup.php:24
+msgid "Have a question?"
+msgstr ""
+
+#: admin/partials/static/footer.php:15
+#: releases/maz-loader/admin/partials/static/footer.php:15
+msgid " All Rights Reserved"
+msgstr ""
+
+#: admin/partials/static/footer.php:16
+#: releases/maz-loader/admin/partials/static/footer.php:16
+msgid "version"
+msgstr ""
+
+#: admin/partials/static/footer.php:28
+msgid "Support us by rating <strong>MAZ Loader</strong>"
+msgstr ""
+
+#: admin/partials/static/footer.php:28
+msgid "on"
+msgstr ""
+
+#: admin/partials/static/footer.php:28
+msgid "to help us spread the word. A thank you from the Feataholic team!"
+msgstr ""
+
+#: admin/partials/static/header.php:13
+#: releases/maz-loader/admin/partials/static/header.php:12
+msgid "EDITING"
+msgstr ""
+
+#: admin/partials/static/header.php:15
+#: releases/maz-loader/admin/partials/static/header.php:14
+msgid "Your Loader's ID"
+msgstr ""
+
+#: admin/partials/static/header.php:18
+#: releases/maz-loader/admin/partials/static/header.php:16
+msgid "Documentation"
+msgstr ""
+
+#: admin/tables/class-mzldr-list-table.php:126
+#: releases/maz-loader/admin/tables/class-mzldr-list-table.php:126
+msgid "Total number of people who have seen this loader"
+msgstr ""
+
+#: admin/tables/class-mzldr-list-table.php:167
+#: releases/maz-loader/admin/tables/class-mzldr-list-table.php:167
+msgid "Get the shortcode for the loader"
+msgstr ""
+
+#: admin/tables/class-mzldr-list-table.php:167
+#: releases/maz-loader/admin/tables/class-mzldr-list-table.php:167
+msgid "<span class=\"dashicons dashicons-admin-page\"></span>"
+msgstr ""
+
+#: admin/tables/class-mzldr-list-table.php:168
+#: releases/maz-loader/admin/tables/class-mzldr-list-table.php:168
+msgid "<span class=\"dashicons dashicons-edit\"></span>"
+msgstr ""
+
+#: admin/tables/class-mzldr-list-table.php:169
+#: releases/maz-loader/admin/tables/class-mzldr-list-table.php:169
+msgid "Delete Loader"
+msgstr ""
+
+#: admin/tables/class-mzldr-list-table.php:169
+#: releases/maz-loader/admin/tables/class-mzldr-list-table.php:169
+msgid "Are you sure you want to delete this loader? You can't undo this."
+msgstr ""
+
+#: admin/tables/class-mzldr-list-table.php:169
+#: releases/maz-loader/admin/tables/class-mzldr-list-table.php:169
+msgid "<span class=\"dashicons dashicons-dismiss\"></span>"
+msgstr ""
+
+#: media/admin/js/src/mazloader/mazloader-admin/blocks/mazloader-loader-block.js:22
+#: media/admin/new-js/free-js/js/src/mazloader/mazloader-admin/blocks/mazloader-loader-block.js:22
+#: media/admin/new-js/pro-js/js/src/mazloader/mazloader-admin/blocks/mazloader-loader-block.js:22
+#: releases/maz-loader/media/admin/js/src/mazloader/mazloader-admin/blocks/mazloader-loader-block.js:22
+msgid "Choose a Loader"
+msgstr ""
+
+#: media/admin/js/src/mazloader/mazloader-admin/blocks/mazloader-loader-block.js:84
+#: media/admin/new-js/free-js/js/src/mazloader/mazloader-admin/blocks/mazloader-loader-block.js:84
+#: media/admin/new-js/pro-js/js/src/mazloader/mazloader-admin/blocks/mazloader-loader-block.js:84
+#: releases/maz-loader/media/admin/js/src/mazloader/mazloader-admin/blocks/mazloader-loader-block.js:84
+msgid "Loading MAZ Loaders"
+msgstr ""
+
+#: media/admin/js/src/mazloader/mazloader-admin/blocks/mazloader-loader-block.js:92
+#: media/admin/new-js/free-js/js/src/mazloader/mazloader-admin/blocks/mazloader-loader-block.js:92
+#: media/admin/new-js/pro-js/js/src/mazloader/mazloader-admin/blocks/mazloader-loader-block.js:92
+#: releases/maz-loader/media/admin/js/src/mazloader/mazloader-admin/blocks/mazloader-loader-block.js:92
+msgid "No Loaders found"
+msgstr ""
+
+#: media/admin/js/src/mazloader/mazloader-admin/blocks/mazloader-loader-block.js:112
+#: media/admin/new-js/free-js/js/src/mazloader/mazloader-admin/blocks/mazloader-loader-block.js:112
+#: media/admin/new-js/pro-js/js/src/mazloader/mazloader-admin/blocks/mazloader-loader-block.js:112
+#: releases/maz-loader/media/admin/js/src/mazloader/mazloader-admin/blocks/mazloader-loader-block.js:112
+msgid "Select MAZ Loader"
+msgstr ""

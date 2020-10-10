@@ -33,7 +33,7 @@ class Auto_Updater {
 	}
 
 	/**
-	 * Don't auto-update if it's a beta version.
+	 * Auto update the plugin.
 	 *
 	 * @param bool  $update Whether to update the plugin or not.
 	 * @param array $item  The update plugin object.
@@ -41,13 +41,13 @@ class Auto_Updater {
 	 * @return bool
 	 */
 	public function auto_update_plugin( $update, $item ) {
-		// Show auto-updates control on Plugins page.
-		if ( did_action( 'load-plugins.php' ) ) {
-			return $update;
-		}
+		if ( $this->is_rm_update( $item ) ) {
+			// Never update to beta automatically.
+			if ( $this->is_beta_update( $item->new_version ) ) {
+				return false;
+			}
 
-		if ( $this->is_rm_update( $item ) && $this->is_beta_update( $item ) ) {
-			return false;
+			return Helper::get_auto_update_setting();
 		}
 
 		return $update;
@@ -71,8 +71,8 @@ class Auto_Updater {
 	 * @param string $version Version number.
 	 * @return boolean
 	 */
-	public function is_beta_update( $item ) {
-		return ( is_object( $item ) && isset( $item->new_version ) && false !== stripos( $item->new_version, 'beta' ) );
+	public function is_beta_update( $version ) {
+		return false !== stripos( $version, 'beta' );
 	}
 
 	/**

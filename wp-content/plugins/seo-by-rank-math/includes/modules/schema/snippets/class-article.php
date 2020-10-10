@@ -11,7 +11,6 @@
 namespace RankMath\Schema;
 
 use RankMath\Helper;
-use RankMath\Traits\Hooker;
 
 defined( 'ABSPATH' ) || exit;
 
@@ -19,8 +18,6 @@ defined( 'ABSPATH' ) || exit;
  * Article class.
  */
 class Article implements Snippet {
-
-	use Hooker;
 
 	/**
 	 * Article rich snippet.
@@ -32,7 +29,7 @@ class Article implements Snippet {
 	 */
 	public function process( $data, $jsonld ) {
 		if ( ! $type = Helper::get_post_meta( 'snippet_article_type' ) ) { // phpcs:ignore
-			$type = Helper::get_default_schema_type( $jsonld->post->post_type );
+			$type = Helper::get_settings( "titles.pt_{$jsonld->post->post_type}_default_article_type" );
 		}
 
 		$entity = [

@@ -43,9 +43,6 @@ class Admin implements Runner {
 		$this->ajax( 'is_keyword_new', 'is_keyword_new' );
 		$this->ajax( 'save_checklist_layout', 'save_checklist_layout' );
 		$this->ajax( 'deactivate_plugins', 'deactivate_plugins' );
-
-		// POST.
-		$this->action( 'admin_init', 'process_oauth' );
 	}
 
 	/**
@@ -56,22 +53,6 @@ class Admin implements Runner {
 			flush_rewrite_rules();
 			delete_option( 'rank_math_flush_rewrite' );
 		}
-	}
-
-	/**
-	 * OAuth reply back
-	 */
-	public function process_oauth() {
-		if ( ! isset( $_GET['process_oauth'] ) ) {
-			return;
-		}
-
-		if ( ! wp_verify_nonce( $_GET['security'], 'rank_math_oauth_token' ) ) {
-			wp_nonce_ays( 'rank_math_oauth_token' );
-			die();
-		}
-
-		\RankMath\Google\Authentication::get_tokens_from_server();
 	}
 
 	/**
@@ -353,7 +334,6 @@ class Admin implements Runner {
 		if ( 0 !== strpos( $cmb_id, 'rank_math' ) && 0 !== strpos( $cmb_id, 'rank-math' ) ) {
 			return;
 		}
-
 		Helper::is_configured( true );
 	}
 

@@ -273,6 +273,7 @@ class Database_Tools {
 			];
 		}
 
-		return $this->do_filter( 'database/tools', $tools );
+		return $tools;
 	}
+
 }

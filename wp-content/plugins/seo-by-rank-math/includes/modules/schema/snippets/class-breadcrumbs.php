@@ -60,12 +60,8 @@ class Breadcrumbs implements Snippet {
 			$position++;
 		}
 
-		$entity = apply_filters( 'rank_math/snippet/breadcrumb', $entity );
-		if ( empty( $entity['itemListElement'] ) ) {
-			return $data;
-		}
+		$data['BreadcrumbList'] = apply_filters( 'rank_math/snippet/breadcrumb', $entity );
 
-		$data['BreadcrumbList'] = $entity;
 		return $data;
 	}
 }
