@@ -1,4 +1,4 @@
-/*! elementor - v3.0.11 - 30-09-2020 */
+/*! elementor - v3.0.12 - 20-10-2020 */
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -8768,6 +8768,10 @@ ControlsCSSParser = elementorModules.ViewModule.extend({
 
       propertyName = propertyName.replace('_', '-');
       value = "var( --e-global-".concat(control.groupType, "-").concat(id, "-").concat(propertyName, " )");
+
+      if (elementor.config.ui.defaultGenericFonts && control.groupPrefix + 'font_family' === control.name) {
+        value += ", ".concat(elementor.config.ui.defaultGenericFonts);
+      }
     } else {
       value = "var( --e-global-".concat(control.type, "-").concat(id, " )");
     }

@@ -1,4 +1,4 @@
-/*! elementor - v3.0.11 - 30-09-2020 */
+/*! elementor - v3.0.12 - 20-10-2020 */
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -4403,9 +4403,13 @@ ControlsStack = Marionette.CompositeView.extend({
     var sectionControls = self.collection.filter(function (controlModel) {
       return 'section' === controlModel.get('type') && self.isVisibleSectionControl(controlModel);
     });
+    var sectionToActivate;
 
     if (!sectionControls[0]) {
-      return;
+      self.activeSection = null;
+      sectionToActivate = null;
+    } else {
+      sectionToActivate = sectionControls[0].get('name');
     }
 
     var preActivatedSection = sectionControls.filter(function (controlModel) {
@@ -4416,7 +4420,7 @@ ControlsStack = Marionette.CompositeView.extend({
       return;
     }
 
-    self.activateSection(sectionControls[0].get('name'));
+    self.activateSection(sectionToActivate);
     return this;
   },
   getChildView: function getChildView(item) {
