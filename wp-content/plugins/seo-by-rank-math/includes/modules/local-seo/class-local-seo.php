@@ -145,7 +145,7 @@ class Local_Seo {
 		$entity['name']  = $name ? $name : get_bloginfo( 'name' );
 
 		if ( is_singular() && 'Organization' !== $type ) {
-			$entity['@type'] = \array_values( array_filter( [ $type, 'Organization' ] ) );
+			$entity['@type'] = [ $type, 'Organization' ];
 		}
 
 		$this->add_contact_points( $entity );
@@ -184,10 +184,7 @@ class Local_Seo {
 
 		if ( isset( $entity['logo'] ) ) {
 			$entity['image'] = $entity['logo'];
-
-			if ( ! is_singular() ) {
-				unset( $entity['logo'] );
-			}
+			unset( $entity['logo'] );
 		}
 
 		return $entity;

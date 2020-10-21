@@ -14,7 +14,7 @@ use RankMath\Google\Authentication;
 
 // Header.
 rank_math()->admin->display_admin_header();
-$path = rank_math()->admin_dir() . 'wizard/views/'; // phpcs:ignore
+$path = rank_math()->admin_dir() . 'wizard/views/';
 ?>
 <div class="wrap rank-math-wrap analytics">
 

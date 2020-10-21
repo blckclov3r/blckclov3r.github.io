@@ -310,9 +310,13 @@ class Widget_Social_Icons extends Widget_Base {
 						'icon' => 'eicon-text-align-right',
 					],
 				],
+				'selectors_dictionary' => [
+					'left' => 'flex-' . $start,
+					'right' => 'flex-' . $end,
+				],
 				'default' => 'center',
 				'selectors' => [
-					'{{WRAPPER}} .elementor-widget-container' => 'text-align: {{VALUE}}',
+					'{{WRAPPER}} .elementor-widget-container' => 'justify-content: {{VALUE}};',
 				],
 			]
 		);
@@ -390,7 +394,7 @@ class Widget_Social_Icons extends Widget_Base {
 					],
 				],
 				'selectors' => [
-					'{{WRAPPER}}' => '--icon-size: {{SIZE}}{{UNIT}}',
+					'{{WRAPPER}} .elementor-social-icon' => 'font-size: {{SIZE}}{{UNIT}};',
 				],
 			]
 		);
@@ -401,7 +405,7 @@ class Widget_Social_Icons extends Widget_Base {
 				'label' => __( 'Padding', 'elementor' ),
 				'type' => Controls_Manager::SLIDER,
 				'selectors' => [
-					'{{WRAPPER}} .elementor-social-icon' => '--icon-padding: {{SIZE}}{{UNIT}}',
+					'{{WRAPPER}} .elementor-social-icon' => 'padding: {{SIZE}}{{UNIT}};',
 				],
 				'default' => [
 					'unit' => 'em',
@@ -436,7 +440,7 @@ class Widget_Social_Icons extends Widget_Base {
 					'size' => 5,
 				],
 				'selectors' => [
-					'{{WRAPPER}}' => '--grid-column-gap: {{SIZE}}{{UNIT}}',
+					'{{WRAPPER}}' => '--grid-column-gap: {{SIZE}}{{UNIT}}; --grid-side-margin: {{SIZE}}{{UNIT}}',
 				],
 			]
 		);
@@ -450,7 +454,7 @@ class Widget_Social_Icons extends Widget_Base {
 					'size' => 0,
 				],
 				'selectors' => [
-					'{{WRAPPER}}' => '--grid-row-gap: {{SIZE}}{{UNIT}}',
+					'{{WRAPPER}}' => '--grid-row-gap: {{SIZE}}{{UNIT}}; --grid-bottom-margin: {{SIZE}}{{UNIT}}',
 				],
 			]
 		);

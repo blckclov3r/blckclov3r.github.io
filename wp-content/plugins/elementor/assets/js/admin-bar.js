@@ -1,4 +1,4 @@
-/*! elementor - v3.0.12 - 20-10-2020 */
+/*! elementor - v3.0.11 - 30-09-2020 */
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -2189,7 +2189,9 @@ var AdminBar = /*#__PURE__*/function (_elementorModules$Vie) {
   return AdminBar;
 }(elementorModules.ViewModule);
 
-new AdminBar();
+jQuery(function () {
+  return new AdminBar();
+});
 
 /***/ }),
 

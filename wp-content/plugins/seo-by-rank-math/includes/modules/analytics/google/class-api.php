@@ -2,7 +2,7 @@
 /**
  * Minimal Google API wrapper.
  *
- * @since      1.0.49
+ * @since      1.0.34
  * @package    RankMath
  * @subpackage RankMath\modules
  * @author     Rank Math <support@rankmath.com>
@@ -39,6 +39,7 @@ class Api extends Console {
 		if ( is_null( $instance ) && ! ( $instance instanceof Api ) ) {
 			$instance = new Api();
 			$instance->setup();
+			$instance->refresh_token_on_login();
 		}
 
 		return $instance;
@@ -68,7 +69,6 @@ class Api extends Console {
 		$tokens = Authentication::tokens();
 		if ( empty( $tokens['refresh_token'] ) ) {
 			Authentication::tokens( false );
-			return;
 		}
 
 		$response = wp_remote_get( Authentication::get_auth_app_url() . '/refresh.php?code=' . $tokens['refresh_token'] );
@@ -112,7 +112,7 @@ class Api extends Console {
 	 *
 	 * @return int
 	 */
-	public function get_row_limit() {
+	protected function get_row_limit() {
 		return apply_filters( 'rank_math/analytics/row_limit', 5000 );
 	}
 }

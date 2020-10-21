@@ -179,8 +179,7 @@ class Admin extends Base {
 			wp_enqueue_script( 'rank-math-schema', rank_math()->plugin_url() . 'includes/modules/schema/assets/js/schema-gutenberg.js', null, rank_math()->version, true );
 		}
 
-		$screen = get_current_screen();
-		if ( ! $is_gutenberg && ! $is_elementor && 'rank_math_schema' !== $screen->post_type ) {
+		if ( ! $is_gutenberg && ! $is_elementor ) {
 			wp_enqueue_script( 'rank-math-schema-classic', rank_math()->plugin_url() . 'includes/modules/schema/assets/js/schema-classic.js', [ 'rank-math-metabox', 'clipboard' ], rank_math()->version, true );
 		}
 	}

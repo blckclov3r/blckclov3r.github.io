@@ -237,7 +237,6 @@ class Form {
 			exit;
 		}
 
-		$this->do_action( 'redirection/saved', $redirection );
 		wp_safe_redirect( Helper::get_admin_url( 'redirections' ) );
 		exit;
 	}

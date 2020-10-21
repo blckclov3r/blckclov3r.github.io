@@ -2,7 +2,7 @@
 /**
  * The Analytics Module
  *
- * @since      1.0.49
+ * @since      0.9.0
  * @package    RankMath
  * @subpackage RankMath\modules
  * @author     Rank Math <support@rankmath.com>
@@ -21,7 +21,7 @@ defined( 'ABSPATH' ) || exit;
 /**
  * Objects class.
  */
-class Objects extends Summary {
+class Objects extends Links {
 
 	/**
 	 * Get objects for pages.

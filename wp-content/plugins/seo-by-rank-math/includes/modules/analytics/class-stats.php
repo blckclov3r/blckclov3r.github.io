@@ -2,7 +2,7 @@
 /**
  * The Analytics Module
  *
- * @since      1.0.49
+ * @since      0.9.0
  * @package    RankMath
  * @subpackage RankMath\modules
  * @author     Rank Math <support@rankmath.com>
@@ -15,7 +15,6 @@ use RankMath\Helper;
 use RankMath\Google\Api;
 use RankMath\Traits\Hooker;
 use MyThemeShop\Helpers\Param;
-use RankMathPro\Analytics\Pageviews;
 
 defined( 'ABSPATH' ) || exit;
 
@@ -31,35 +30,35 @@ class Stats extends Keywords {
 	 *
 	 * @var string
 	 */
-	public $start_date = '';
+	protected $start_date = '';
 
 	/**
 	 * End date.
 	 *
 	 * @var string
 	 */
-	public $end_date = '';
+	protected $end_date = '';
 
 	/**
 	 * Compare Start date.
 	 *
 	 * @var string
 	 */
-	public $compare_start_date = '';
+	protected $compare_start_date = '';
 
 	/**
 	 * Compare End date.
 	 *
 	 * @var string
 	 */
-	public $compare_end_date = '';
+	protected $compare_end_date = '';
 
 	/**
 	 * Number of days.
 	 *
 	 * @var int
 	 */
-	public $days = 0;
+	protected $days = 0;
 
 	/**
 	 * Main instance
@@ -113,7 +112,7 @@ class Stats extends Keywords {
 	 *
 	 * @return string
 	 */
-	public function get_sql_range( $column = 'date' ) {
+	protected function get_sql_range( $column = 'date' ) {
 		$range    = $this->get_date_from_cookie( 'date_range', '-30 days' );
 		$interval = [
 			'-30 days'  => 'WEEK(' . $column . ')',
@@ -130,7 +129,7 @@ class Stats extends Keywords {
 	 *
 	 * @return array
 	 */
-	public function get_intervals() {
+	protected function get_intervals() {
 		$range    = $this->get_date_from_cookie( 'date_range', '-30 days' );
 		$interval = [
 			'-7 days'   => '0 days',
@@ -213,7 +212,7 @@ class Stats extends Keywords {
 	 * @param  array $default Default value.
 	 * @return array
 	 */
-	public function get_date_array( $dates, $default ) {
+	protected function get_date_array( $dates, $default ) {
 		$data = [];
 		foreach ( $dates as $date => $d ) {
 			$data[ $date ]                  = $default;
@@ -230,7 +229,7 @@ class Stats extends Keywords {
 	 * @param  array $row Row to normalize.
 	 * @return array
 	 */
-	public function normalize_graph_rows( $row ) {
+	protected function normalize_graph_rows( $row ) {
 		foreach ( $row as $col => $val ) {
 			if ( in_array( $col, [ 'query', 'page', 'date', 'created', 'dateFormatted' ], true ) ) {
 				continue;
@@ -255,7 +254,7 @@ class Stats extends Keywords {
 	 * @param  array $map  Interval map.
 	 * @return array
 	 */
-	public function get_merge_data_graph( $rows, $data, $map ) {
+	protected function get_merge_data_graph( $rows, $data, $map ) {
 		foreach ( $rows as $row ) {
 			if ( ! isset( $map[ $row->date ] ) ) {
 				continue;
@@ -281,7 +280,7 @@ class Stats extends Keywords {
 	 * @param  array $rows Graph data.
 	 * @return array
 	 */
-	public function get_graph_data_flat( $rows ) {
+	protected function get_graph_data_flat( $rows ) {
 		foreach ( $rows as &$row ) {
 			if ( isset( $row['clicks'] ) ) {
 				$row['clicks'] = \array_sum( $row['clicks'] );
@@ -319,7 +318,7 @@ class Stats extends Keywords {
 	 *
 	 * @return mixed
 	 */
-	public function get_date_from_cookie( $filter, $default ) {
+	protected function get_date_from_cookie( $filter, $default ) {
 		$cookie_key = 'rank_math_analytics_' . $filter;
 		$new_value  = sanitize_title( Param::post( $filter ) );
 		if ( $new_value ) {
@@ -340,7 +339,7 @@ class Stats extends Keywords {
 	 * @param  array $args Array of arguments.
 	 * @return array
 	 */
-	public function get_analytics_data( $args = [] ) {
+	protected function get_analytics_data( $args = [] ) {
 		global $wpdb;
 
 		$args = wp_parse_args(
@@ -401,7 +400,7 @@ class Stats extends Keywords {
 
 		$pageviews = [];
 		if ( $args['pageview'] && ! empty( $page_urls ) ) {
-			$pageviews = Pageviews::get_pageviews( [ 'pages' => $page_urls ] );
+			$pageviews = $this->get_pageviews( [ 'pages' => $page_urls ] );
 			$pageviews = $pageviews['rows'];
 		}
 
@@ -476,7 +475,7 @@ class Stats extends Keywords {
 	 * @param array $data Rows to process.
 	 * @return array
 	 */
-	public function set_page_as_key( $data ) {
+	protected function set_page_as_key( $data ) {
 		$rows = [];
 		foreach ( $data as $row ) {
 			$page          = $this->get_relative_url( $row['page'] );
@@ -492,7 +491,7 @@ class Stats extends Keywords {
 	 * @param array $data Rows to process.
 	 * @return array
 	 */
-	public function set_query_as_key( $data ) {
+	protected function set_query_as_key( $data ) {
 		$rows = [];
 		foreach ( $data as $row ) {
 			$rows[ $row['query'] ] = $row;
@@ -509,7 +508,7 @@ class Stats extends Keywords {
 	 *
 	 * @return array
 	 */
-	public function set_query_position( $data, $history ) {
+	protected function set_query_position( $data, $history ) {
 		foreach ( $history as $row ) {
 			if ( ! isset( $data[ $row->query ]['graph'] ) ) {
 				$data[ $row->query ]['graph'] = [];
@@ -529,7 +528,7 @@ class Stats extends Keywords {
 	 *
 	 * @return array
 	 */
-	public function set_page_position_graph( $data, $history ) {
+	protected function set_page_position_graph( $data, $history ) {
 		foreach ( $history as $row ) {
 			if ( ! isset( $data[ $row->page ]['graph'] ) ) {
 				$data[ $row->page ]['graph'] = [];
@@ -549,7 +548,7 @@ class Stats extends Keywords {
 	 *
 	 * @return string
 	 */
-	public function get_cache_key( $what, $args = [] ) {
+	protected function get_cache_key( $what, $args = [] ) {
 		$key = 'rank_math_' . $what;
 
 		if ( ! empty( $args ) ) {

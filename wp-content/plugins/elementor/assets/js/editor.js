@@ -1,4 +1,4 @@
-/*! elementor - v3.0.12 - 20-10-2020 */
+/*! elementor - v3.0.11 - 30-09-2020 */
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -9411,10 +9411,6 @@ ControlsCSSParser = elementorModules.ViewModule.extend({
 
       propertyName = propertyName.replace('_', '-');
       value = "var( --e-global-".concat(control.groupType, "-").concat(id, "-").concat(propertyName, " )");
-
-      if (elementor.config.ui.defaultGenericFonts && control.groupPrefix + 'font_family' === control.name) {
-        value += ", ".concat(elementor.config.ui.defaultGenericFonts);
-      }
     } else {
       value = "var( --e-global-".concat(control.type, "-").concat(id, " )");
     }
@@ -14367,13 +14363,9 @@ ControlsStack = Marionette.CompositeView.extend({
     var sectionControls = self.collection.filter(function (controlModel) {
       return 'section' === controlModel.get('type') && self.isVisibleSectionControl(controlModel);
     });
-    var sectionToActivate;
 
     if (!sectionControls[0]) {
-      self.activeSection = null;
-      sectionToActivate = null;
-    } else {
-      sectionToActivate = sectionControls[0].get('name');
+      return;
     }
 
     var preActivatedSection = sectionControls.filter(function (controlModel) {
@@ -14384,7 +14376,7 @@ ControlsStack = Marionette.CompositeView.extend({
       return;
     }
 
-    self.activateSection(sectionToActivate);
+    self.activateSection(sectionControls[0].get('name'));
     return this;
   },
   getChildView: function getChildView(item) {
@@ -17940,9 +17932,7 @@ module.exports = Marionette.Behavior.extend({
   renderTools: function renderTools() {
     var _this = this;
 
-    // If the user has Elementor Pro and the current control has no dynamic tags available, don't generate the dynamic switcher.
-    // If the user has the core version only, we do display the dynamic switcher for the promotion.
-    if (this.getOption('dynamicSettings').default || elementor.helpers.hasPro() && !this.getOption('tags').length) {
+    if (this.getOption('dynamicSettings').default) {
       return;
     }
 
@@ -25741,7 +25731,7 @@ var _default = /*#__PURE__*/function (_RepeaterRow) {
 
       if (isColor) {
         this.$colorValue = jQuery('<div>', {
-          class: 'e-global-colors__color-value elementor-control-unit-3'
+          class: 'e-global-colors__color-value'
         });
         childView.$el.find('.elementor-control-input-wrapper').prepend(this.getRemoveButton(), this.$colorValue);
         globalType = 'color';
@@ -25852,6 +25842,13 @@ var GlobalControlSelect = /*#__PURE__*/function (_Marionette$Behavior) {
   }
 
   (0, _createClass2.default)(GlobalControlSelect, [{
+    key: "ui",
+    value: function ui() {
+      return {
+        controlContent: '.elementor-control-content'
+      };
+    }
+  }, {
     key: "getClassNames",
     value: function getClassNames() {
       return {
@@ -26172,10 +26169,9 @@ var GlobalControlSelect = /*#__PURE__*/function (_Marionette$Behavior) {
           onOutsideClick: false
         },
         position: {
-          my: "right top",
-          at: "right bottom+5",
-          of: this.ui.globalPopoverToggle,
-          collision: 'fit flip',
+          my: "center top",
+          at: "center bottom+5",
+          of: this.ui.controlContent,
           autoRefresh: true
         }
       }); // Add Popover elements to the this.ui object and register click events.
@@ -32637,16 +32633,12 @@ ControlMediaItemView = ControlMultipleBaseItemView.extend({
 
     this.ui.controlMedia.toggleClass('elementor-media-empty', !url);
   },
-  openFrame: function openFrame(e) {
-    var _e$target,
-        _e$target$dataset,
-        _this = this;
+  openFrame: function openFrame() {
+    var _this = this;
 
-    var mediaType = (e === null || e === void 0 ? void 0 : (_e$target = e.target) === null || _e$target === void 0 ? void 0 : (_e$target$dataset = _e$target.dataset) === null || _e$target$dataset === void 0 ? void 0 : _e$target$dataset.mediaType) || this.getMediaType();
-
-    if (!_filesUploadHandler.default.isUploadEnabled(mediaType)) {
+    if (!_filesUploadHandler.default.isUploadEnabled(this.getMediaType())) {
       _filesUploadHandler.default.getUnfilteredFilesNotEnabledDialog(function () {
-        return _this.openFrame(e);
+        return _this.openFrame();
       }).show();
 
       return false;

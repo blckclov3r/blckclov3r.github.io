@@ -1,0 +1,29 @@
+{
+  "name": "wp-asset-clean-up",
+  "type": "library",
+  "description": "Front-end optimization plugin for WordPress",
+  "keywords": ["minify", "minifier", "css", "js", "javascript", "dequeue", "speed"],
+  "homepage": "https://wordpress.org/plugins/wp-asset-clean-up/",
+  "license": "GPL-2.0+",
+  "authors": [
+    {
+      "name": "Gabriel Livan",
+      "homepage": "https://wordpress.org/plugins/wp-asset-clean-up/",
+      "role": "WordPress Developer"
+    }
+  ],
+  "require": {
+    "php": ">=5.4.0",
+    "ext-pcre": "*",
+    "psr/cache": "*",
+    "matthiasmullie/minify": "^1.3.63"
+  },
+  "suggest": {
+    "psr/cache-implementation": "Cache implementation to use with Minify::cache"
+  },
+  "autoload": {
+    "psr-4": {
+      "MatthiasMullie\\Minify\\": "src/"
+    }
+  }
+}
