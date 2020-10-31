@@ -1,0 +1,17 @@
+{
+    "name"          : "nsp-code/wp-hide",
+    "description"   : "Hide and increase Security for your WordPress website instance using smart techniques. No files are changed on your server.",
+    "keywords"      : ["wordpress hide", "hide", "security", "improve security", "hacking", "wp hide", "custom login", "wp-loging.php", "wp-admin", "admin hide"],
+    "homepage"      : "https://www.wp-hide.com/",
+    "authors"       : [
+                        {
+                          "name": "Nsp Code",
+                          "email": "contact@nsp-code.com",
+                          "homepage": "http://www.nsp-code.com/"
+                        }
+                      ],
+    "type"          : "wordpress-plugin",
+    "require"       : {
+                            "composer/installers": "~1.0"
+                        }
+}
