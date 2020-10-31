@@ -1,22 +1,70 @@
 # BEGIN LSCACHE
 ## LITESPEED WP CACHE PLUGIN - Do not edit the contents of this block! ##
+<IfModule LiteSpeed>
+RewriteEngine on
+CacheLookup on
+RewriteRule .* - [E=Cache-Control:no-autoflush]
+
+### marker CACHE RESOURCE start ###
+RewriteRule wp-content/.*/[^/]*(responsive|css|js|dynamic|loader|fonts)\.php - [E=cache-control:max-age=3600]
+### marker CACHE RESOURCE end ###
+
+### marker DROPQS start ###
+CacheKeyModify -qs:fbclid
+CacheKeyModify -qs:gclid
+CacheKeyModify -qs:utm*
+CacheKeyModify -qs:_ga
+### marker DROPQS end ###
+
+</IfModule>
 ## LITESPEED WP CACHE PLUGIN - Do not edit the contents of this block! ##
 # END LSCACHE
 # BEGIN NON_LSCACHE
 ## LITESPEED WP CACHE PLUGIN - Do not edit the contents of this block! ##
+### marker BROWSER CACHE start ###
+<IfModule mod_expires.c>
+ExpiresActive on
+ExpiresByType application/pdf A31557600
+ExpiresByType image/x-icon A31557600
+ExpiresByType image/vnd.microsoft.icon A31557600
+ExpiresByType image/svg+xml A31557600
+
+ExpiresByType image/jpg A31557600
+ExpiresByType image/jpeg A31557600
+ExpiresByType image/png A31557600
+ExpiresByType image/gif A31557600
+ExpiresByType image/webp A31557600
+
+ExpiresByType video/ogg A31557600
+ExpiresByType audio/ogg A31557600
+ExpiresByType video/mp4 A31557600
+ExpiresByType video/webm A31557600
+
+ExpiresByType text/css A31557600
+ExpiresByType text/javascript A31557600
+ExpiresByType application/javascript A31557600
+ExpiresByType application/x-javascript A31557600
+
+ExpiresByType application/x-font-ttf A31557600
+ExpiresByType application/x-font-woff A31557600
+ExpiresByType application/font-woff A31557600
+ExpiresByType application/font-woff2 A31557600
+ExpiresByType application/vnd.ms-fontobject A31557600
+ExpiresByType font/ttf A31557600
+ExpiresByType font/woff A31557600
+ExpiresByType font/woff2 A31557600
+
+</IfModule>
+### marker BROWSER CACHE end ###
+
 ## LITESPEED WP CACHE PLUGIN - Do not edit the contents of this block! ##
 # END NON_LSCACHE
 # BEGIN WP Hide & Security Enhancer
 <IfModule mod_rewrite.c> 
 RewriteEngine On 
 RewriteBase /blckclov3r/ 
-#WriteCheckString:1604179570_58261
+#WriteCheckString:1604182242_68332
 RewriteRule .* - [E=HTTP_MOD_REWRITE:On]
-
-RewriteCond "%{DOCUMENT_ROOT}/blckclov3r/wp-content/cache/wph/%{HTTP_HOST}%{REQUEST_URI}" -f
-RewriteRule .* "/blckclov3r/wp-content/cache/wph/%{HTTP_HOST}%{REQUEST_URI}" [L]
-
-RewriteRule ^http://localhost/blckclov3r/wp-contenthttps://localhost/blckclov3r/wp-content/themes/kadence/style.css /blckclov3r/wp-content/plugins/wp-hide-security-enhancer/router/file-process.php?action=style-clean&file_path=/blckclov3r/wp-content/themes/kadence/style.css&replacement_path=/http://localhost/blckclov3r/wp-contenthttps://localhost/blckclov3r/wp-content/themes/kadence/style.css [L,QSA]
 </IfModule> 
 
 # END WP Hide & Security Enhancer

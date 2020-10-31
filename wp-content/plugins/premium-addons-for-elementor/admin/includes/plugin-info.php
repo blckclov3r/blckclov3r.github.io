@@ -56,7 +56,7 @@ class Plugin_Info {
                           <div class="pa-text-container">
                              <h4><?php echo __('What is Premium Addons?', 'premium-addons-for-elementor'); ?></h4>
                              <p><?php echo __('Premium Addons for Elementor extends Elementor Page Builder capabilities with many fully customizable widgets and addons that help you to build impressive websites with no coding required.', 'premium-addons-for-elementor'); ?></p>
-                             <?php if( ! defined('PREMIUM_PRO_ADDONS_VERSION') ) : ?>
+                             <?php if( ! Helper_Functions::check_papro_version() ) : ?>
                                 <p><?php echo __('Get more widgets and addons with ', 'premium-addons-for-elementor'); ?><strong><?php echo __('Premium Addons Pro', 'premium-addons-for-elementor'); ?></strong> <a href="<?php echo esc_url( $url ); ?>" target="_blank" ><?php echo __('Click Here', 'premium-addons-for-elementor'); ?></a><?php echo __(' to know more.', 'premium-addons-for-elementor'); ?></p>
                              <?php endif; ?>
                           </div>

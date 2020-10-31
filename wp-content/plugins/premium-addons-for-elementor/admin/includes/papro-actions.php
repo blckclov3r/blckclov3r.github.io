@@ -60,7 +60,7 @@ class Papro_Actions {
 
         add_action( 'admin_init', [ $this, 'on_admin_init' ] );
 
-        if( ! defined('PREMIUM_PRO_ADDONS_VERSION') )
+        if( ! Helper_Functions::check_papro_version() )
             add_action( 'admin_menu', array ( $this,'create_pro_menus' ), 100 );
 
 		add_action( 'admin_menu', array ( $this, 'change_admin_menu_name'), 100 );

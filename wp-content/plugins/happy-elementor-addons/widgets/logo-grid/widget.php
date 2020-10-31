@@ -63,7 +63,7 @@ class Logo_Grid extends Base {
         $repeater->add_control(
             'image',
             [
-                'label' => __('Logo', 'happy-elementor-addons'),
+                'label' => __( 'Logo', 'happy-elementor-addons' ),
                 'type' => Controls_Manager::MEDIA,
                 'default' => [
                     'url' => Utils::get_placeholder_image_src(),
@@ -77,22 +77,26 @@ class Logo_Grid extends Base {
         $repeater->add_control(
             'link',
             [
-                'label' => __('Website Url', 'happy-elementor-addons'),
+                'label' => __( 'Website Url', 'happy-elementor-addons' ),
                 'type' => Controls_Manager::URL,
-                'show_external' => false,
-                'label_block' => false,
+                'label_block' => true,
                 'dynamic' => [
                     'active' => true,
-                ]
+				],
+				'default' => [
+					'url'         => '#',
+					'is_external' => true,
+					'nofollow'    => true,
+				]
             ]
         );
 
         $repeater->add_control(
             'name',
             [
-                'label' => __('Brand Name', 'happy-elementor-addons'),
+                'label' => __( 'Brand Name', 'happy-elementor-addons' ),
                 'type' => Controls_Manager::TEXT,
-                'default' => __('Brand Name', 'happy-elementor-addons'),
+                'default' => __( 'Brand Name', 'happy-elementor-addons' ),
             ]
         );
 
@@ -104,14 +108,86 @@ class Logo_Grid extends Base {
                 'fields' => $repeater->get_controls(),
                 'title_field' => '{{{ name }}}',
                 'default' => [
-                    ['image' => ['url' => Utils::get_placeholder_image_src()]],
-                    ['image' => ['url' => Utils::get_placeholder_image_src()]],
-                    ['image' => ['url' => Utils::get_placeholder_image_src()]],
-                    ['image' => ['url' => Utils::get_placeholder_image_src()]],
-                    ['image' => ['url' => Utils::get_placeholder_image_src()]],
-                    ['image' => ['url' => Utils::get_placeholder_image_src()]],
-                    ['image' => ['url' => Utils::get_placeholder_image_src()]],
-                    ['image' => ['url' => Utils::get_placeholder_image_src()]],
+                    [
+						'image' => [
+							'url' => Utils::get_placeholder_image_src()
+						],
+						'link' => [
+							'url'         => '#',
+							'is_external' => true,
+							'nofollow'    => true,
+						],
+					],
+                    [
+						'image' => [
+							'url' => Utils::get_placeholder_image_src()
+						],
+						'link' => [
+							'url'         => '#',
+							'is_external' => true,
+							'nofollow'    => true,
+						],
+					],
+					[
+						'image' => [
+							'url' => Utils::get_placeholder_image_src()
+						],
+						'link' => [
+							'url'         => '#',
+							'is_external' => true,
+							'nofollow'    => true,
+						],
+					],
+					[
+						'image' => [
+							'url' => Utils::get_placeholder_image_src()
+						],
+						'link' => [
+							'url'         => '#',
+							'is_external' => true,
+							'nofollow'    => true,
+						],
+					],
+					[
+						'image' => [
+							'url' => Utils::get_placeholder_image_src()
+						],
+						'link' => [
+							'url'         => '#',
+							'is_external' => true,
+							'nofollow'    => true,
+						],
+					],
+					[
+						'image' => [
+							'url' => Utils::get_placeholder_image_src()
+						],
+						'link' => [
+							'url'         => '#',
+							'is_external' => true,
+							'nofollow'    => true,
+						],
+					],
+					[
+						'image' => [
+							'url' => Utils::get_placeholder_image_src()
+						],
+						'link' => [
+							'url'         => '#',
+							'is_external' => true,
+							'nofollow'    => true,
+						],
+					],
+					[
+						'image' => [
+							'url' => Utils::get_placeholder_image_src()
+						],
+						'link' => [
+							'url'         => '#',
+							'is_external' => true,
+							'nofollow'    => true,
+						],
+					],
                 ]
             ]
         );
@@ -537,10 +613,7 @@ class Logo_Grid extends Base {
                 if ( $item['link']['url'] ) {
                     $tag = 'a';
 					$this->add_render_attribute( $repeater_key, 'class', 'ha-logo-grid-link' );
-
-                    $this->add_render_attribute( $repeater_key, 'target', '_blank' );
-                    $this->add_render_attribute( $repeater_key, 'rel', 'noopener' );
-                    $this->add_render_attribute( $repeater_key, 'href', $item['link']['url'] );
+					$this->add_link_attributes( $repeater_key, $item['link'] );
                 }
                 ?>
                 <<?php echo $tag; ?> <?php $this->print_render_attribute_string( $repeater_key ); ?>>

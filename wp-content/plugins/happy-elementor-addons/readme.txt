@@ -1,6 +1,6 @@
 === Happy Addons for Elementor ===
 Plugin Name: Happy Addons for Elementor
-Version: 2.14.2
+Version: 2.14.3
 Author: weDevs
 Author URI: https://happyaddons.com/
 Contributors: thehappymonster, happyaddons, hasinhayder, mosaddek73, tareq1988, sourav926, wedevs, iqbalrony, mrokon, obiplabon
@@ -258,6 +258,17 @@ For a more detailed explanation check out the following documentation
 
 
 == Changelog ==
+
+= 2.14.3 - 12 October 2020 =
+
+- Tweak: Added Calendy pro feature notice
+- Tweak: Added Calendy default username "happyaddons"
+- Tweak: Common cached files are loaded once as internal css
+- Fix: Card widget badge dynamic tag issue
+- Fix: Happy templates popup button auto duplicate issue
+- Fix: Removed duplicate On demand assets cache file enqueue
+- Fix: Removed broken Review widget schema data
+- Fix: Team member widget email envelope icon issue
 
 = 2.14.2 - 20 September 2020 =
 

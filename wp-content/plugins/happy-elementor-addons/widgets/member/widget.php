@@ -1236,14 +1236,16 @@ class Member extends Base {
 						$icon = $profile['name'];
 						$url = $profile['link']['url'];
 
-						if ($profile['name'] === 'website') {
-							$icon = 'globe';
-						} elseif ($profile['name'] === 'email') {
-							$icon = 'envelope';
+						if ( $profile['name'] === 'website' ) {
+							$icon = 'globe far';
+						} elseif ( $profile['name'] === 'email' ) {
+							$icon = 'envelope far';
 							$url = 'mailto:' . antispambot( $profile['email'] );
+						} else {
+							$icon .= ' fab';
 						}
 
-						printf( '<a target="_blank" rel="noopener" href="%s" class="elementor-repeater-item-%s"><i class="fa fab fa-%s" aria-hidden="true"></i></a>',
+						printf( '<a target="_blank" rel="noopener" href="%s" class="elementor-repeater-item-%s"><i class="fa fa-%s" aria-hidden="true"></i></a>',
 							$url,
 							esc_attr( $profile['_id'] ),
 							esc_attr( $icon )

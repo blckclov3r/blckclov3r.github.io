@@ -323,28 +323,28 @@ class Premium_Grid extends Widget_Base {
         );
         
         $this->add_control('premium_gallery_cats_content',
-           [
-               'label'              => __( 'Categories', 'premium-addons-for-elementor' ),
-               'type'               => Controls_Manager::REPEATER,
-               'default'            => [
-                   [
-                       'premium_gallery_img_cat'   => 'Category 1',
-                   ],
-                   [
-                       'premium_gallery_img_cat'   => 'Category 2',
-                   ],
-               ],
-               'fields'             => $repeater->get_controls(),
-               'title_field'        => '{{{ premium_gallery_img_cat }}}',
-               'condition'          => $condition
-           ]
-       );
+            [
+                'label'              => __( 'Categories', 'premium-addons-for-elementor' ),
+                'type'               => Controls_Manager::REPEATER,
+                'default'            => [
+                    [
+                        'premium_gallery_img_cat'   => 'Category 1',
+                    ],
+                    [
+                        'premium_gallery_img_cat'   => 'Category 2',
+                    ],
+                ],
+                'fields'             => $repeater->get_controls(),
+                'title_field'        => '{{{ premium_gallery_img_cat }}}',
+                'condition'          => $condition
+            ]
+        );
         
         $this->add_control('premium_gallery_active_cat',
             [
                 'label'             => __('Active Category Index', 'premium-addons-for-elementor'),
                 'type'              => Controls_Manager::NUMBER,
-                'default'           => 1,
+                'default'           => 0,
                 'min'               => 0,
                 'condition'         => $condition
                 
@@ -2025,9 +2025,9 @@ class Premium_Grid extends Widget_Base {
         }
 
         $cat_filtered = str_replace( ', ', ',', $cat_filtered );
-		$cat_filtered = preg_replace( "/[\s_]/", "-", $cat_filtered );
+		$cat_filtered = preg_replace( "/[\s_&@!#%]/", "-", $cat_filtered );
         $cat_filtered = str_replace( ',', ' ', $cat_filtered );
-        
+
 		return $cat_filtered;
 	}
     

@@ -5,7 +5,7 @@ Donate Link: https://premiumaddons.com/?utm_source=wp-repo&utm_medium=link&utm_c
 Requires at least: 5.0
 Tested Up To: 5.5.1
 Requires PHP: 5.4
-Stable Tag: 3.21.4
+Stable Tag: 3.21.6
 License: GPL v3.0
 License URI: https://opensource.org/licenses/GPL-3.0
 
@@ -45,7 +45,7 @@ Each widget and addon has been tested on different screen sizes, mobile devices,
 * [**Blog Widget**](https://premiumaddons.com/blog-widget-for-elementor-page-builder/?utm_source=wp-repo&utm_medium=link&utm_campaign=readme) *(FREE)*: Blog Posts Widget comes with a modern style, advanced posts filtering options, and also it allows you to create posts carousel.
 * [**Google Maps Widget**](https://premiumaddons.com/google-maps-widget-for-elementor-page-builder/?utm_source=wp-repo&utm_medium=link&utm_campaign=readme) *(FREE)*: Advanced Google Maps Widget comes with features like adding multiple markers, custom skins, and much more options.
 * [**Team Members Widget**](https://premiumaddons.com/persons-widget-for-elementor-page-builder/?utm_source=wp-repo&utm_medium=link&utm_campaign=readme) *(FREE)*: Very good Elementor Widget to list team members, co-workers, etc. Team Members Widget for Elementor comes with many customization options.
-* [**Tabs Widget**](https://premiumaddons.com/tabs-widget-for-elementor-page-builder-2/?utm_source=wp-repo&utm_medium=link&utm_campaign=readme) *(PRO)*: Create both Vertical and Horizontal tabs inside Elementor with tons of styling features. You can also use Elementor Templates as tabs content.
+* [**Tabs Widget**](https://premiumaddons.com/elementor-tabs-widget/?utm_source=wp-repo&utm_medium=link&utm_campaign=readme) *(PRO)*: Create both Vertical and Horizontal tabs inside Elementor with tons of styling features. You can also use Elementor Templates as tabs content.
 * [**Content Switcher**](https://premiumaddons.com/content-switcher-widget-for-elementor-page-builder/?utm_source=wp-repo&utm_medium=link&utm_campaign=readme) *(PRO)*: Present multiple content in a smart way using Content Switcher Widget for Elementor. This widget is ideal for to present pricing plans. It works with simple text editor or Elementor templates.
 * [**Fancy Text Widget**](https://premiumaddons.com/fancy-text-widget-for-elementor-page-builder/?utm_source=wp-repo&utm_medium=link&utm_campaign=readme) *(FREE)*: The animated Fancy Text Widget comes with very useful options to help you create attractive marketing messages.
 * [**Heading Widget**](https://premiumaddons.com/heading-widget-for-elementor-page-builder/?utm_source=wp-repo&utm_medium=link&utm_campaign=readme) *(FREE)*: Elementor Heading Widget has many customization options and ready-made heading styles.
@@ -177,6 +177,19 @@ Premium Addons for Elementor is 100% Ads Free, Ads can only be detected from You
 14. Premium Progress Bar Widget for Elementor
 
 == Changelog ==
+
+= 3.21.6 =
+
+- Tweak: Added responsive controls for play icon and video description horizontal/vertical position options in Video Box widget.
+- Tweak: Unnecessary code removed for better performance.
+
+= 3.21.5 =
+
+- Tweak: Added `Trigger on Viewport` option in Lottie Animations widget.
+- Tweak: Media Grid widget images loading with Lazyload Images plugins.
+- Fixed: Filter by categories with special characters not working in Media Grid widget.
+- Fixed: Filter by tabs option not working when `All` category is removed in Blog widget.
+- Fixed: Font Awesome icons not showing in Carousel, Media Grid and Testimonials widgets.
 
 = 3.21.4 =
 

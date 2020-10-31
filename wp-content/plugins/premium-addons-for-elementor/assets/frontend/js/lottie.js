@@ -15064,6 +15064,7 @@
                 trigger = $lottie.data("lottie-hover"),
                 speed = $lottie.data("lottie-speed"),
                 scroll = $lottie.data("lottie-scroll"),
+                viewPort = $lottie.data("lottie-viewport"),
                 renderer = $lottie.data("lottie-render");
 
             var animItem = lottie.loadAnimation({
@@ -15084,7 +15085,7 @@
 
             animItem.addEventListener('DOMLoaded', function () {
 
-                if (scroll) {
+                if (scroll || viewPort) {
 
                     var animateInstance = null,
                         scrollSpeed = $lottie.data("scroll-speed"),
@@ -15096,7 +15097,7 @@
                     var animateSettings = {
                         elType: 'SECTION',
                         animate: {
-                            speed: scrollSpeed,
+                            speed: viewPort ? "viewport" : scrollSpeed,
                             range: {
                                 start: scrollStart,
                                 end: scrollEnd
@@ -15223,6 +15224,7 @@
                 heightOffset = initialPageHeight * offsetStart / 100,
                 pageRange = initialPageHeight + heightOffset + initialPageHeight * offsetEnd / 100,
                 scrollPos = document.documentElement.scrollTop + document.body.scrollTop + heightOffset;
+
             return scrollPos / pageRange * 100;
 
         };
@@ -15245,7 +15247,6 @@
         };
 
         self.getStep = function (percents, options) {
-
             return -(percents - 50) * options.speed;
 
         };
@@ -15268,8 +15269,16 @@
 
             var currframe = ((percents) / 100) * (stopFrame);
 
-            lottieInstance.goToAndStop(currframe, true);
-
+            //Check if element is visible
+            if (data.speed === "viewport") {
+                if (data.range.start !== percents && data.range.end !== percents) {
+                    lottieInstance.play();
+                } else {
+                    lottieInstance.pause();
+                }
+            } else {
+                lottieInstance.goToAndStop(currframe, true);
+            }
 
         };
 

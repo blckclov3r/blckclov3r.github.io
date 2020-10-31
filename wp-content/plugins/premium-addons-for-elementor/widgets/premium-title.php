@@ -1051,7 +1051,7 @@ class Premium_Title extends Widget_Base {
             <?php endif; ?>
             <?php if( $selected_style !== 'style9' ) :?>
             <span <?php echo $this->get_render_attribute_string('premium_title_text'); ?> >
-                <?php echo esc_html( $settings['premium_title_text'] ); ?>
+                <?php echo $settings['premium_title_text']; ?>
             </span>
             <?php else: 
                      $letters_html = '<span class="premium-letters-container"'.$this->get_render_attribute_string('premium_title_text').'>';   

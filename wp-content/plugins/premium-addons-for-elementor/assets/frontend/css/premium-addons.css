@@ -4920,6 +4920,7 @@ ul.premium-person-social-list {
 
 .premium-img-gallery-filter .premium-gallery-cats-container li a.category,
 .premium-blog-filter .premium-blog-cats-container li a.category {
+  outline: none;
   text-decoration: none;
   -webkit-border-radius: 75px;
           border-radius: 75px;

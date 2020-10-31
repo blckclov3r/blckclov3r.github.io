@@ -1105,7 +1105,7 @@ class Card extends Base {
 			<figure class="ha-card-figure">
 				<?php echo Group_Control_Image_Size::get_attachment_image_html( $settings, 'thumbnail', 'image' ); ?>
 				<?php if ( $settings['badge_text'] ) : ?>
-					<span <?php echo $this->get_render_attribute_string( 'badge_text' ); ?>><?php echo esc_html( $settings['badge_text'] ); ?></span>
+					<div <?php echo $this->get_render_attribute_string( 'badge_text' ); ?>><?php echo ha_kses_intermediate( $settings['badge_text'] ); ?></div>
 				<?php endif; ?>
 			</figure>
 		<?php endif; ?>
@@ -1162,7 +1162,7 @@ class Card extends Base {
 			<figure class="ha-card-figure">
 				<img class="elementor-animation-{{settings.hover_animation}}" src="{{ image_url }}">
 				<# if (settings.badge_text) { #>
-					<span {{{ view.getRenderAttributeString( 'badge_text' ) }}}>{{ settings.badge_text }}</span>
+					<div {{{ view.getRenderAttributeString( 'badge_text' ) }}}>{{{ settings.badge_text }}}</div>
 				<# } #>
 			</figure>
 		<# } #>

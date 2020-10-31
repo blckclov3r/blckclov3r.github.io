@@ -132,16 +132,6 @@ class Review extends Base {
 			]
 		);
 
-		$this->add_control(
-			'review_for',
-			[
-				'label' => __( 'Review For', 'happy-elementor-addons' ),
-				'type' => Controls_Manager::TEXT,
-				'placeholder' => __( 'Movie, Games, Software name etc.', 'happy-elementor-addons' ),
-				'description' => __( '[This field is only for structured data (schema.org) purpose] Obviously this review belongs to something like Movie, Games, Software or Service. So type the name of that thing.', 'happy-elementor-addons' ),
-			]
-		);
-
 		$this->end_controls_section();
 
 		$this->start_controls_section(
@@ -688,35 +678,23 @@ class Review extends Base {
 	protected function render() {
 		$settings = $this->get_settings_for_display();
 
-		$this->add_render_attribute( '_wrapper', 'itemscope' );
-		$this->add_render_attribute( '_wrapper', 'itemtype', 'https://schema.org/Review' );
-
 		$this->add_inline_editing_attributes( 'title', 'basic' );
 		$this->add_render_attribute( 'title', 'class', 'ha-review-reviewer' );
-		$this->add_render_attribute( 'title', 'itemprop', 'author' );
-		$this->add_render_attribute( 'title', 'itemscope', '' );
-		$this->add_render_attribute( 'title', 'itemtype', 'https://schema.org/Person' );
 
 		$this->add_inline_editing_attributes( 'job_title', 'basic' );
 		$this->add_render_attribute( 'job_title', 'class', 'ha-review-position' );
 
 		$this->add_inline_editing_attributes( 'review', 'intermediate' );
 		$this->add_render_attribute( 'review', 'class', 'ha-review-desc' );
-		$this->add_render_attribute( 'review', 'itemprop', 'reviewBody' );
 
 		$this->add_render_attribute( 'ratting', 'class', [
-				'ha-review-ratting',
-				'ha-review-ratting--' . $settings['ratting_style']
-			] );
-
-		$this->add_render_attribute( 'ratting', 'itemprop', 'reviewRating' );
-		$this->add_render_attribute( 'ratting', 'itemscope' );
-		$this->add_render_attribute( 'ratting', 'itemtype', 'https://schema.org/Rating' );
+			'ha-review-ratting',
+			'ha-review-ratting--' . $settings['ratting_style']
+		] );
 
 		$ratting = max( 0, $settings['ratting']['size'] );
-		?>
 
-		<?php if ( $settings['image']['url'] || $settings['image']['id'] ) :
+		if ( $settings['image']['url'] || $settings['image']['id'] ) :
 			$settings['hover_animation'] = 'disable-animation'; // hack to prevent image hover animation
 			?>
 			<figure class="ha-review-figure">
@@ -745,8 +723,6 @@ class Review extends Base {
 				<?php endif; ?>
 
 				<div <?php $this->print_render_attribute_string( 'ratting' ); ?>>
-					<meta itemprop="ratingValue" content="<?php echo esc_attr( $ratting ); ?>">
-
 					<?php if ( $settings['ratting_style'] === 'num' ) : ?>
 						<?php echo esc_html( $ratting ); ?> <i class="fas fa-star" aria-hidden="true"></i>
 					<?php else :
@@ -767,10 +743,6 @@ class Review extends Base {
 				</div>
 			<?php endif; ?>
 		</div>
-
-		<span class="ha-screen-reader-text" itemprop="itemReviewed" itemscope itemtype="https://schema.org/Thing">
-			<span itemprop="name"><?php echo esc_html( $settings['review_for'] ); ?></span>
-		</span>
 		<?php
 	}
 

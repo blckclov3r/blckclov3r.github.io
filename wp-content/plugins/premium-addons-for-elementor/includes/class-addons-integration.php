@@ -23,7 +23,7 @@ class Addons_Integration {
     //Maps Keys
     private static $maps = null;
     
-    	/**
+    /**
 	 * Cross-Site CDN URL.
 	 *
 	 * @since  1.24.1
@@ -117,6 +117,13 @@ class Addons_Integration {
 		$suffix = Helper_Functions::get_assets_suffix();
         
         $is_rtl = is_rtl() ? '-rtl' : '';
+
+        wp_register_style(
+            'font-awesome-5-all',
+            ELEMENTOR_ASSETS_URL . 'lib/font-awesome/css/all.min.css',
+            false,
+            PREMIUM_ADDONS_VERSION
+        );
         
         wp_register_style(
             'pa-prettyphoto',

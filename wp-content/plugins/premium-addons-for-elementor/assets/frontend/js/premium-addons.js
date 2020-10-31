@@ -284,7 +284,7 @@
 
                 setMetroLayout();
 
-                $galleryElement.isotope({
+                $isotopeGallery.isotope({
                     itemSelector: ".premium-gallery-item",
                     masonry: {
                         columnWidth: columnWidth
@@ -294,22 +294,29 @@
             });
         }
 
-        $galleryElement.imagesLoaded(function () { }).done(function () {
-            $galleryElement.isotope({
-                itemSelector: ".premium-gallery-item",
-                percentPosition: true,
-                animationOptions: {
-                    duration: 750,
-                    easing: "linear"
-                },
-                filter: settings.active_cat,
-                layoutMode: layout,
-                originLeft: ltrMode,
-                masonry: {
-                    columnWidth: columnWidth
-                },
-                sortBy: settings.sort_by
-            });
+
+        var $isotopeGallery = $galleryElement.isotope({
+            itemSelector: ".premium-gallery-item",
+            percentPosition: true,
+            animationOptions: {
+                duration: 750,
+                easing: "linear"
+            },
+            filter: settings.active_cat,
+            layoutMode: layout,
+            originLeft: ltrMode,
+            masonry: {
+                columnWidth: columnWidth
+            },
+            sortBy: settings.sort_by
+        });
+
+        $isotopeGallery.imagesLoaded().progress(function () {
+            $isotopeGallery.isotope("layout");
+        });
+
+        $(window).on("load", function () {
+            $isotopeGallery.isotope("layout");
         });
 
         if (loadMore) {
@@ -334,7 +341,7 @@
                             return item.element;
                         });
                     $(itemsToHide).addClass("premium-gallery-item-hidden");
-                    $galleryElement.isotope("layout");
+                    $isotopeGallery.isotope("layout");
                     if (0 == itemsToHide) {
                         $galleryElement.parent().find(".premium-gallery-load-more").addClass(
                             "premium-gallery-item-hidden");
@@ -413,11 +420,11 @@
             $(this).addClass("active");
 
             filter = $(this).attr("data-filter");
-            $galleryElement.isotope({
+            $isotopeGallery.isotope({
                 filter: filter
             });
 
-            if (shuffle) $galleryElement.isotope("shuffle");
+            if (shuffle) $isotopeGallery.isotope("shuffle");
 
             if (loadMore) appendItems(minimum);
 
@@ -945,11 +952,13 @@
         });
 
         if ("masonry" === layout && !carousel) {
+            var activeCategory = $scope.find(".category.active").data("filter");
 
             $blogElement.imagesLoaded(function () {
                 $blogElement.isotope({
                     itemSelector: ".premium-blog-post-outer-container",
                     percentPosition: true,
+                    filter: activeCategory,
                     animationOptions: {
                         duration: 750,
                         easing: "linear",

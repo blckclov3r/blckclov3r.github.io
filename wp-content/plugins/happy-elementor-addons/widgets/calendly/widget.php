@@ -63,7 +63,7 @@ class Calendly extends Base {
 			[
 				'label'       => __( 'Username', 'happy-elementor-addons' ),
 				'type'        => Controls_Manager::TEXT,
-				'default'     => __( '', 'happy-elementor-addons' ),
+				'default'     => 'happyaddons',
 				'placeholder' => __( 'Type calendly username here', 'happy-elementor-addons' ),
 			]
 		);
@@ -135,6 +135,19 @@ class Calendly extends Base {
 			[
 				'label' => __( 'Calendly', 'happy-elementor-addons' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
+			]
+		);
+
+		$this->add_control(
+			'_calendly_pro_notice',
+			[
+				'type' => Controls_Manager::RAW_HTML,
+				'raw' => sprintf(
+					__( 'The following color customization controls only work with %s. Basic and Premium plan users cannot customize colors as per Calendy pricing plan. For more information please %s.', 'happy-elementor-addons' ),
+					'<a href="https://calendly.com/pages/pricing" target="_blank">Calendly Pro plan</a>',
+					'<a href="https://calendly.com/pages/pricing" target="_blank">click here</a>'
+				),
+				'content_classes' => 'elementor-panel-alert elementor-panel-alert-info',
 			]
 		);
 

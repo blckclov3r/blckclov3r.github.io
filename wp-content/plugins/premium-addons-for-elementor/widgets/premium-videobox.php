@@ -479,36 +479,40 @@ class Premium_Videobox extends Widget_Base {
             ]
         );
         
-        $this->add_control('premium_video_box_icon_hor_position', 
+        $this->add_responsive_control('premium_video_box_icon_hor_position', 
             [
                 'label'         => __('Horizontal Position (%)', 'premium-addons-for-elementor'),
                 'type'          => Controls_Manager::SLIDER,
+                'size_units'    => ['%'],
                 'label_block'   => true,
                 'default'       => [
                     'size' => 50,
+                    'unit' => '%'
                 ],
                 'condition'     => [
                     'premium_video_box_play_icon_switcher'  => 'yes',
                 ],
                 'selectors'     => [
-                    '{{WRAPPER}} .premium-video-box-play-icon-container' => 'left: {{SIZE}}%;',
+                    '{{WRAPPER}} .premium-video-box-play-icon-container' => 'left: {{SIZE}}{{UNIT}};',
                 ]
             ]
         );
         
-        $this->add_control('premium_video_box_icon_ver_position', 
+        $this->add_responsive_control('premium_video_box_icon_ver_position', 
             [
                 'label'         => __('Vertical Position (%)', 'premium-addons-for-elementor'),
                 'type'          => Controls_Manager::SLIDER,
                 'label_block'   => true,
+                'size_units'    => ['%'],
                 'default'       => [
                     'size' => 50,
+                    'unit' => '%'
                 ],
                 'condition'     => [
                     'premium_video_box_play_icon_switcher'  => 'yes',
                 ],
                 'selectors'     => [
-                    '{{WRAPPER}} .premium-video-box-play-icon-container' => 'top: {{SIZE}}%;',
+                    '{{WRAPPER}} .premium-video-box-play-icon-container' => 'top: {{SIZE}}{{UNIT}};',
                 ]
             ]
         );
@@ -541,37 +545,41 @@ class Premium_Videobox extends Widget_Base {
                 'label_block'   => true,
             ]
         );
-        
-        $this->add_control('premium_video_box_description_ver_position', 
-            [
-                'label'         => __('Vertical Position (%)', 'premium-addons-for-elementor'),
-                'type'          => Controls_Manager::SLIDER,
-                'label_block'   => true,
-                'default'       => [
-                    'size' => 60,
-                ],
-                'condition'     => [
-                    'premium_video_box_video_text_switcher' => 'yes'
-                ],
-                'selectors'     => [
-                    '{{WRAPPER}} .premium-video-box-description-container' => 'top: {{SIZE}}%;',
-                ]
-            ]
-        );
-        
-         $this->add_control('premium_video_box_description_hor_position', 
+
+        $this->add_responsive_control('premium_video_box_description_hor_position', 
             [
                 'label'         => __('Horizontal Position (%)', 'premium-addons-for-elementor'),
                 'type'          => Controls_Manager::SLIDER,
                 'label_block'   => true,
+                'size_units'    => ['%'],
                 'default'       => [
                     'size' => 50,
-                    ],
+                    'unit' => '%'
+                ],
                 'condition'     => [
                     'premium_video_box_video_text_switcher' => 'yes'
                 ],
                 'selectors'     => [
-                    '{{WRAPPER}} .premium-video-box-description-container' => 'left: {{SIZE}}%;',
+                    '{{WRAPPER}} .premium-video-box-description-container' => 'left: {{SIZE}}{{UNIT}};',
+                ]
+            ]
+        );
+        
+        $this->add_responsive_control('premium_video_box_description_ver_position', 
+            [
+                'label'         => __('Vertical Position (%)', 'premium-addons-for-elementor'),
+                'type'          => Controls_Manager::SLIDER,
+                'label_block'   => true,
+                'size_units'    => ['%'],
+                'default'       => [
+                    'size' => 60,
+                    'unit' => '%'
+                ],
+                'condition'     => [
+                    'premium_video_box_video_text_switcher' => 'yes'
+                ],
+                'selectors'     => [
+                    '{{WRAPPER}} .premium-video-box-description-container' => 'top: {{SIZE}}{{UNIT}};',
                 ]
             ]
         );

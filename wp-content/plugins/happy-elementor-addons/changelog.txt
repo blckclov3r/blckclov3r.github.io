@@ -1,3 +1,16 @@
+= 2.14.3 - 2.14.3 October 2020 =
+
+- Update: Appsero client updated to `v1.2.0`
+- Tweak: Added Calendy pro feature notice
+- Tweak: Added Calendy default username "happyaddons"
+- Tweak: Common cached files are loaded once as internal css
+- Fix: Card widget badge dynamic tag issue
+- Fix: Happy templates popup button auto duplicate issue
+- Fix: Removed duplicate On demand assets cache file enqueue
+- Fix: Removed broken Review widget schema data
+- Fix: Team member widget email envelope icon issue
+- Fix: Removed forced open in new window for Logo grid widget
+
 = 2.14.2 - 20 September 2020 =
 
 - Fix: JS loading issue for non logged in users

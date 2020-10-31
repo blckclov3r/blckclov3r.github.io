@@ -42,11 +42,12 @@ class Premium_Carousel extends Widget_Base {
 	}
     
     public function is_reload_preview_required() {
-       return true;
+        return true;
     }
     
     public function get_style_depends() {
         return [
+            'font-awesome-5-all',
             'premium-addons'
         ];
     }

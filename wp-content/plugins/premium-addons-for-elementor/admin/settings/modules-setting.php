@@ -110,7 +110,7 @@ class Modules_Settings {
         
         $plugin_name = 'Premium Addons for Elementor';
         
-        if( defined( 'PREMIUM_PRO_ADDONS_VERSION' ) ) {
+        if( Helper_Functions::check_papro_version() ) {
             if( isset( get_option( 'pa_wht_lbl_save_settings' )['premium-wht-lbl-plugin-name'] ) ) {
                 $name = get_option( 'pa_wht_lbl_save_settings' )['premium-wht-lbl-plugin-name'];
                 if( '' !== $name )
@@ -402,7 +402,7 @@ class Modules_Settings {
                                 
                             </tr>
 
-                            <?php if( ! defined( 'PREMIUM_PRO_ADDONS_VERSION' ) ) : ?> 
+                            <?php if( ! Helper_Functions::check_papro_version() ) : ?> 
                             <tr class="pa-sec-elems-tr"><th><h1>PRO Elements</h1></th></tr>
 
                             <tr>

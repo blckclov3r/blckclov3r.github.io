@@ -127,14 +127,6 @@ class Premium_Lottie extends Widget_Base {
             ]
         );
 
-        $this->add_control('lottie_hover',
-            [
-                'label'         => __('Only Play on Hover','premium-addons-for-elementor'),
-                'type'          => Controls_Manager::SWITCHER,
-                'return_value'  => 'true',
-            ]
-        );
-
         $this->add_control('lottie_speed',
 			[
                 'label'         => __( 'Animation Speed', 'premium-addons-for-elementor' ),
@@ -146,15 +138,33 @@ class Premium_Lottie extends Widget_Base {
 			]
         );
 
+        $this->add_control('trigger',
+			[
+				'label' => __( 'Trigger', 'elementor-pro' ),
+				'type' => Controls_Manager::SELECT,
+				'options' => [
+                    'none' => __( 'None', 'elementor-pro' ),
+					'viewport' => __( 'Viewport', 'elementor-pro' ),
+					'hover' => __( 'Hover', 'elementor-pro' ),
+					'scroll' => __( 'Scroll', 'elementor-pro' ),
+				],
+				'frontend_available' => true,
+			]
+		);
+
+        $this->add_control('lottie_hover',
+            [
+                'label'         => __('Play on Hover','premium-addons-for-elementor'),
+                'type'          => Controls_Manager::HIDDEN,
+                'return_value'  => 'true',
+            ]
+        );
+
         $this->add_control('animate_on_scroll',
             [
-                'label'         => __('Animate On Scroll','premium-addons-for-elementor'),
-                'type'          => Controls_Manager::SWITCHER,
+                'label'         => __('Play On Scroll','premium-addons-for-elementor'),
+                'type'          => Controls_Manager::HIDDEN,
                 'return_value'  => 'true',
-                'condition'     => [
-                    'lottie_hover!'  => 'true',
-                    'lottie_reverse!'   => 'true'
-                ]
             ]
         );
 
@@ -172,8 +182,7 @@ class Premium_Lottie extends Widget_Base {
                     ],
                 ],
 				'condition'     => [
-                    'lottie_hover!'  => 'true',
-                    'animate_on_scroll' => 'true',
+                    'trigger'  => 'scroll',
                     'lottie_reverse!'   => 'true'
 				],
 			]
@@ -197,8 +206,7 @@ class Premium_Lottie extends Widget_Base {
                 'scales' => 1,
                 'handles' => 'range',
                 'condition'     => [
-                    'lottie_hover!'  => 'true',
-                    'animate_on_scroll' => 'true',
+                    'trigger'  => [ 'scroll', 'viewport' ],
                     'lottie_reverse!'   => 'true'
 				],
 			]
@@ -226,7 +234,7 @@ class Premium_Lottie extends Widget_Base {
                 'render_type'   => 'template',
                 'separator'     => 'before',
                 'selectors'     => [
-                    '{{WRAPPER}}.premium-lottie-canvas .premium-lottie-animation, {{WRAPPER}}.premium-lottie-svg svg'    => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}}'
+                    '{{WRAPPER}}.premium-lottie-canvas .premium-lottie-animation, {{WRAPPER}}.premium-lottie-svg svg'    => 'width: {{SIZE}}{{UNIT}} !important; height: {{SIZE}}{{UNIT}} !important'
                 ]
             ]
         );
@@ -522,7 +530,7 @@ class Premium_Lottie extends Widget_Base {
         $this->end_controls_section();
         
     }
-   
+
     /**
 	 * Render Lottie Animations output on the frontend.
 	 *
@@ -538,7 +546,12 @@ class Premium_Lottie extends Widget_Base {
         $anim_url = 'url' === $settings['source'] ? $settings['lottie_url'] : $settings['lottie_file']['url'];
 
         if( empty( $anim_url ) )
-            return; 
+            return;
+
+        if( '' !== $settings['trigger'] ) {
+            $settings['lottie_hover'] = false;
+            $settings['animate_on_scroll'] = false;
+        }
 
         $this->add_render_attribute( 'lottie', [
             'class' => [
@@ -547,21 +560,27 @@ class Premium_Lottie extends Widget_Base {
             'data-lottie-url' => $anim_url,
             'data-lottie-loop' => $settings['lottie_loop'],
             'data-lottie-reverse' => $settings['lottie_reverse'],
-            'data-lottie-hover' => $settings['lottie_hover'],
+            'data-lottie-hover' => $settings['lottie_hover'] || 'hover' === $settings['trigger'],
             'data-lottie-speed' => $settings['lottie_speed'],
             'data-lottie-render' => $settings['lottie_renderer'],
         ]);
 
-        if( $settings['animate_on_scroll'] ) {
+        if( $settings['animate_on_scroll'] || 'scroll' === $settings['trigger'] ) {
 
             $this->add_render_attribute( 'lottie', [
                 'class' => 'premium-lottie-scroll',
                 'data-lottie-scroll' => 'true',
-                'data-scroll-start' => $settings['animate_view']['sizes']['start'],
-                'data-scroll-end' => $settings['animate_view']['sizes']['end'],
+                'data-scroll-start' => isset ( $settings['animate_view']['sizes']['start'] ) ? $settings['animate_view']['sizes']['start'] : '0',
+                'data-scroll-end' => isset( $settings['animate_view']['sizes']['end'] ) ? $settings['animate_view']['sizes']['end'] : '100',
                 'data-scroll-speed' => $settings['animate_speed']['size'],
             ]);
 
+        } elseif( 'viewport' === $settings['trigger'] ) {
+            $this->add_render_attribute( 'lottie', [
+                'data-lottie-viewport' => 'true',
+                'data-scroll-start' => $settings['animate_view']['sizes']['start'],
+                'data-scroll-end' => $settings['animate_view']['sizes']['end'],
+            ]);
         }
 
         if( 'yes' === $settings['link_switcher'] ) {
@@ -613,21 +632,26 @@ class Premium_Lottie extends Widget_Base {
         var anim_url = 'url' === settings.source ? settings.lottie_url : settings.lottie_file.url;
 
         if( '' === anim_url )
-            return; 
+            return;
 
-            view.addRenderAttribute( 'lottie', {
+        if( '' !== settings.trigger ) {
+            settings.lottie_hover = false;
+            settings.animate_on_scroll = false;
+        }
+
+        view.addRenderAttribute( 'lottie', {
             'class': [
                 'premium-lottie-animation',
             ],
             'data-lottie-url': anim_url,
             'data-lottie-loop': settings.lottie_loop,
             'data-lottie-reverse': settings.lottie_reverse,
-            'data-lottie-hover': settings.lottie_hover,
+            'data-lottie-hover': settings.lottie_hover || 'hover' === settings.trigger,
             'data-lottie-speed': settings.lottie_speed,
             'data-lottie-render': settings.lottie_renderer
         });
 
-        if( settings.animate_on_scroll ) {
+        if( settings.animate_on_scroll || 'scroll' === settings.trigger ) {
 
             view.addRenderAttribute( 'lottie', {
                 'class': 'premium-lottie-scroll',
@@ -635,6 +659,14 @@ class Premium_Lottie extends Widget_Base {
                 'data-scroll-start': settings.animate_view.sizes.start,
                 'data-scroll-end': settings.animate_view.sizes.end,
                 'data-scroll-speed': settings.animate_speed.size,
+            });
+
+        } else if( 'viewport' === settings.trigger ) {
+
+            view.addRenderAttribute( 'lottie', {
+                'data-lottie-viewport': 'true',
+                'data-scroll-start': settings.animate_view.sizes.start,
+                'data-scroll-end': settings.animate_view.sizes.end,
             });
 
         }

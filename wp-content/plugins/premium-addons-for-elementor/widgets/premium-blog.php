@@ -40,7 +40,7 @@ class Premium_Blog extends Widget_Base {
     
     public function get_style_depends() {
         return [
-            // 'font-awesome',
+            'font-awesome-5-all',
             'premium-addons'
         ];
     }

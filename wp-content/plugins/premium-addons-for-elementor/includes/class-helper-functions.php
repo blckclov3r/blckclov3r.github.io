@@ -60,7 +60,7 @@ class Helper_Functions {
      */
     public static function is_hide_rate(){
         
-        if( defined('PREMIUM_PRO_ADDONS_VERSION') ) {
+        if( self::check_papro_version() ) {
             if( isset(get_option('pa_wht_lbl_save_settings')['premium-wht-lbl-rate'] ) ) {
                 $hide_rate = get_option('pa_wht_lbl_save_settings')['premium-wht-lbl-rate'];
             }
@@ -79,7 +79,7 @@ class Helper_Functions {
      */
     public static function is_hide_about(){
         
-        if( defined('PREMIUM_PRO_ADDONS_VERSION') ) {
+        if( self::check_papro_version() ) {
             if(isset(get_option('pa_wht_lbl_save_settings')['premium-wht-lbl-about'])){
                 $hide_about = get_option('pa_wht_lbl_save_settings')['premium-wht-lbl-about'];
             }
@@ -98,7 +98,7 @@ class Helper_Functions {
      */
     public static function is_hide_version_control(){
         
-        if( defined('PREMIUM_PRO_ADDONS_VERSION') ) {
+        if( self::check_papro_version() ) {
             if(isset(get_option('pa_wht_lbl_save_settings')['premium-wht-lbl-version'])){
                 $hide_version_tab = get_option('pa_wht_lbl_save_settings')['premium-wht-lbl-version'];
             }
@@ -117,7 +117,7 @@ class Helper_Functions {
      */
     public static function author(){
         
-        if( defined('PREMIUM_PRO_ADDONS_VERSION') ) {
+        if( self::check_papro_version() ) {
             if(isset(get_option('pa_wht_lbl_save_settings')['premium-wht-lbl-name'])){
                 $author_free = get_option('pa_wht_lbl_save_settings')['premium-wht-lbl-name'];
             }
@@ -136,7 +136,7 @@ class Helper_Functions {
      */
     public static function name() {
         
-        if( defined('PREMIUM_PRO_ADDONS_VERSION') ) {
+        if( self::check_papro_version() ) {
             if(isset(get_option('pa_wht_lbl_save_settings')['premium-wht-lbl-plugin-name'])){
                 $name_free = get_option('pa_wht_lbl_save_settings')['premium-wht-lbl-plugin-name'];
             }
@@ -154,7 +154,7 @@ class Helper_Functions {
      */
     public static function is_hide_row_meta() {
         
-        if( defined('PREMIUM_PRO_ADDONS_VERSION') ) {
+        if( self::check_papro_version() ) {
             if( isset( get_option('pa_wht_lbl_save_settings')['premium-wht-lbl-row'] ) ){
                 $hide_meta = get_option('pa_wht_lbl_save_settings')['premium-wht-lbl-row'];
             }
@@ -173,7 +173,7 @@ class Helper_Functions {
      */
     public static function is_hide_logo(){
         
-        if( defined('PREMIUM_PRO_ADDONS_VERSION') ) {
+        if( self::check_papro_version() ) {
             if(isset(get_option('pa_wht_lbl_save_settings')['premium-wht-lbl-logo'])){
                 $hide_logo = get_option('pa_wht_lbl_save_settings')['premium-wht-lbl-logo'];
             }
@@ -192,7 +192,7 @@ class Helper_Functions {
      */
     public static function get_category(){
         
-        if( defined('PREMIUM_PRO_ADDONS_VERSION') ) {
+        if( self::check_papro_version() ) {
             if(isset(get_option('pa_wht_lbl_save_settings')['premium-wht-lbl-short-name'])){
                 $category = get_option('pa_wht_lbl_save_settings')['premium-wht-lbl-short-name'];
             }
@@ -212,7 +212,7 @@ class Helper_Functions {
      */
     public static function get_prefix(){
         
-        if( defined('PREMIUM_PRO_ADDONS_VERSION') ) {
+        if( self::check_papro_version() ) {
             if(isset(get_option('pa_wht_lbl_save_settings')['premium-wht-lbl-prefix'])){
                 $prefix = get_option('pa_wht_lbl_save_settings')['premium-wht-lbl-prefix'];
             }
@@ -231,7 +231,7 @@ class Helper_Functions {
      */
     public static function get_badge() {
         
-        if( defined('PREMIUM_PRO_ADDONS_VERSION') ) {
+        if( self::check_papro_version() ) {
             if(isset(get_option('pa_wht_lbl_save_settings')['premium-wht-lbl-badge'])){
                 $badge = get_option('pa_wht_lbl_save_settings')['premium-wht-lbl-badge'];
             }
@@ -551,6 +551,28 @@ class Helper_Functions {
         $theme = SettingsManager::get_settings_managers( 'editorPreferences' )->get_model()->get_settings( 'ui_theme' );
 
         return $theme;
+
+    }
+
+    /**
+     * Check PAPRO Version
+     * 
+     * Check if PAPRO version is updated
+     * 
+     * @since 3.21.6
+     * @access public
+     * 
+     * @return boolen $is_updated
+     */
+    public static function check_papro_version() {
+
+        if( ! defined ( 'PREMIUM_PRO_ADDONS_VERSION' ) ) {
+            return false;
+        }
+
+        $is_updated = get_option( 'papro_updated', true );
+
+        return $is_updated;
 
     }
 }
