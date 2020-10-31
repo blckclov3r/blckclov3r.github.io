@@ -1,11 +1,3 @@
-# BEGIN LSCACHE
-## LITESPEED WP CACHE PLUGIN - Do not edit the contents of this block! ##
-## LITESPEED WP CACHE PLUGIN - Do not edit the contents of this block! ##
-# END LSCACHE
-# BEGIN NON_LSCACHE
-## LITESPEED WP CACHE PLUGIN - Do not edit the contents of this block! ##
-## LITESPEED WP CACHE PLUGIN - Do not edit the contents of this block! ##
-# END NON_LSCACHE
 # BEGIN WP Hide & Security Enhancer
 <IfModule mod_rewrite.c> 
 RewriteEngine On 
