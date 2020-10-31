@@ -10,22 +10,13 @@
 <IfModule mod_rewrite.c> 
 RewriteEngine On 
 RewriteBase /blckclov3r/ 
-#WriteCheckString:1604178458_25399
+#WriteCheckString:1604179570_58261
 RewriteRule .* - [E=HTTP_MOD_REWRITE:On]
 
-RewriteRule ^atoolsor-template/atoolsor-skin.css /blckclov3r/wp-content/themes/kadence/style.css [L,QSA]
+RewriteCond "%{DOCUMENT_ROOT}/blckclov3r/wp-content/cache/wph/%{HTTP_HOST}%{REQUEST_URI}" -f
+RewriteRule .* "/blckclov3r/wp-content/cache/wph/%{HTTP_HOST}%{REQUEST_URI}" [L]
 
-RewriteRule ^atoolsor-template/(.+) /blckclov3r/wp-content/themes/kadence/$1 [L,QSA]
-
-RewriteRule ^eheedsum/(.+) /blckclov3r/wp-content/plugins/$1 [L,QSA]
-
-RewriteRule ^ookraree/(.+) /blckclov3r/wp-includes/$1 [L,QSA]
-
-RewriteRule ^mycmoomt/(.+) /blckclov3r/wp-content/uploads/$1 [L,QSA]
-
-RewriteRule ^ptongoop.php /blckclov3r/wp-comments-post.php [L,QSA]
-
-RewriteRule ^thehavoa/(.+) /blckclov3r/wp-content/$1 [L,QSA]
+RewriteRule ^http://localhost/blckclov3r/wp-contenthttps://localhost/blckclov3r/wp-content/themes/kadence/style.css /blckclov3r/wp-content/plugins/wp-hide-security-enhancer/router/file-process.php?action=style-clean&file_path=/blckclov3r/wp-content/themes/kadence/style.css&replacement_path=/http://localhost/blckclov3r/wp-contenthttps://localhost/blckclov3r/wp-content/themes/kadence/style.css [L,QSA]
 </IfModule> 
 
 # END WP Hide & Security Enhancer
