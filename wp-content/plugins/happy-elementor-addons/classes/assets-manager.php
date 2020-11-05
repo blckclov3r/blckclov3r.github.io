@@ -236,6 +236,15 @@ class Assets_Manager {
 			HAPPY_ADDONS_VERSION
 		);
 
+		// Sharer JS
+		wp_register_script(
+			'sharer-js',
+			HAPPY_ADDONS_ASSETS . 'vendor/sharer-js/sharer.min.js',
+			['jquery'],
+			HAPPY_ADDONS_VERSION,
+			true
+		);
+
 		// Main assets
 		wp_register_style(
 			'happy-elementor-addons',

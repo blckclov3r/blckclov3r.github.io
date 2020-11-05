@@ -3185,7 +3185,11 @@ button.swiper-pagination-bullet {
   left: 0;
   width: 100%;
   line-height: 0;
-  direction: ltr; }
+  direction: ltr;
+  /*
+	 * @TODO: The `z-index: -1` rules below are temporary fixes for Chrome 85 issue.
+	 *   It will be removed in a future version of Chrome.
+	 */ }
   .elementor-shape-top {
     top: -1px; }
     .elementor-shape-top:not([data-negative="false"]) svg {
