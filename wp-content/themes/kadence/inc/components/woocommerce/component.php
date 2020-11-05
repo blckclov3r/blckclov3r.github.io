@@ -57,8 +57,8 @@ class Component implements Component_Interface {
 		// Remove default Woo archive title meta.
 		remove_action( 'woocommerce_before_shop_loop', 'woocommerce_result_count', 20 );
 		remove_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30 );
-		// Remove default descrption output.
-		remove_action( 'woocommerce_archive_description', 'woocommerce_taxonomy_archive_description' );
+		// Remove default description output.
+		add_action( 'woocommerce_before_main_content', array( $this, 'action_remove_normal_archive_description' ) );
 		// Remove Breadcrumbs.
 		remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20, 0 );
 		// Add Product Above Area Breadcrumb.
@@ -142,6 +142,12 @@ class Component implements Component_Interface {
 		// Change related products columns.
 		add_filter( 'woocommerce_output_related_products_args', array( $this, 'related_products_columns' ), 20 );
 
+	}
+	/**
+	 * Remove the normal archive description.
+	 */
+	public function action_remove_normal_archive_description() {
+		remove_action( 'woocommerce_archive_description', 'woocommerce_taxonomy_archive_description' );
 	}
 	/**
 	 * Sets columns for related columns.
@@ -596,8 +602,19 @@ class Component implements Component_Interface {
 		if ( kadence()->is_amp() ) {
 			return;
 		}
-
-		// Enqueue the slide script.
+		if ( kadence()->option( 'custom_quantity' ) ) {
+			// Enqueue the quantity script.
+			wp_enqueue_script(
+				'kadence-shop-spinner',
+				get_theme_file_uri( '/assets/js/shop-spinner.min.js' ),
+				array( 'jquery' ),
+				KADENCE_VERSION,
+				true
+			);
+			wp_script_add_data( 'kadence-shop-spinner', 'async', true );
+			wp_script_add_data( 'kadence-shop-spinner', 'precache', true );
+		}
+		// Enqueue the toggle script.
 		wp_register_script(
 			'kadence-shop-toggle',
 			get_theme_file_uri( '/assets/js/shop-toggle.min.js' ),

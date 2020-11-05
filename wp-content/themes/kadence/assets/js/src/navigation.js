@@ -130,26 +130,26 @@ if ( window.NodeList && ! NodeList.prototype.forEach ) {
 				// If no dropdown, create one.
 				if ( dropdown ) {
 					// Toggle the submenu when we click the dropdown button.
-					dropdown.addEventListener( 'click', ( e ) => {
+					dropdown.addEventListener( 'click', function( e ) {
 						e.preventDefault();
 						window.kadence.toggleSubMenu( e.target.parentNode.parentNode.parentNode.parentNode );
 					} );
 					// Add tabindex.
 					dropdown.tabIndex = 0;
 					// Toggle the submenu when we press enter on the dropdown button.
-					dropdown.addEventListener( 'keypress', ( e ) => {
+					dropdown.addEventListener( 'keypress', function( e ) {
 						if ( e.key === 'Enter' ) {
 							window.kadence.toggleSubMenu( e.target.parentNode.parentNode.parentNode );
 						}
 					} );
 		
 					// Clean up the toggle if a mouse takes over from keyboard.
-					parentMenuItem.addEventListener( 'mouseleave', ( e ) => {
+					parentMenuItem.addEventListener( 'mouseleave', function( e ) {
 						window.kadence.toggleSubMenu( e.target, false );
 					} );
 		
 					// When we focus on a menu link, make sure all siblings are closed.
-					parentMenuItem.querySelector( 'a' ).addEventListener( 'focus', ( e ) => {
+					parentMenuItem.querySelector( 'a' ).addEventListener( 'focus', function( e ) {
 						var parentMenuItemsToggled = e.target.parentNode.parentNode.querySelectorAll( 'li.menu-item--toggled-on' );
 						for ( let j = 0; j < parentMenuItemsToggled.length; j++ ) {
 							window.kadence.toggleSubMenu( parentMenuItemsToggled[ j ], false );
@@ -157,7 +157,7 @@ if ( window.NodeList && ! NodeList.prototype.forEach ) {
 					} );
 		
 					// Handle keyboard accessibility for traversing menu.
-					SUBMENUS[ i ].addEventListener( 'keydown', ( e ) => {
+					SUBMENUS[ i ].addEventListener( 'keydown', function( e ) {
 						// These specific selectors help us only select items that are visible.
 						var focusSelector = 'ul.toggle-show > li > a, ul.toggle-show > li > a .dropdown-nav-toggle';
 		
@@ -261,7 +261,8 @@ if ( window.NodeList && ! NodeList.prototype.forEach ) {
 		/**
 		 * Initiate the script to process all drawer toggles.
 		 */
-		toggleDrawer: function( element, changeFocus = true ) {
+		toggleDrawer: function( element, changeFocus ) {
+			changeFocus = (typeof changeFocus !== 'undefined') ?  changeFocus : true;
 			var toggle = element;
 			var target = document.querySelector( toggle.dataset.toggleTarget );
 			var _doc   = document;
@@ -473,6 +474,7 @@ if ( window.NodeList && ! NodeList.prototype.forEach ) {
 				proSticky = document.querySelectorAll( '.kadence-pro-fixed-above' ),
 				proElements = document.querySelectorAll( '.kadence-before-wrapper-item' ),
 				activeSize = 'mobile',
+				lastScrollTop = 0,
 				activeOffsetTop = 0;
 				if ( kadenceConfig.breakPoints.desktop <= window.innerWidth ) {
 					activeSize = 'desktop';
@@ -530,14 +532,24 @@ if ( window.NodeList && ! NodeList.prototype.forEach ) {
 					}
 					var parent = activeHeader.parentNode;
 					var shrink = activeHeader.getAttribute( 'data-shrink' );
+					var revealScroll = activeHeader.getAttribute( 'data-reveal-scroll-up' );
 					var startHeight = activeHeader.getAttribute( 'data-start-height' );
-					if ( ! startHeight ) {
+					if ( ! startHeight || ( e && undefined !== e.type && ( 'orientationchange' === e.type ) ) ) {
 						activeHeader.setAttribute( 'data-start-height', activeHeader.offsetHeight );
 						startHeight = activeHeader.offsetHeight;
 						if ( parent.classList.contains( 'site-header-upper-inner-wrap' ) ) {
 							parent.style.height = null;
-							parent.style.height = parent.offsetHeight + 'px';
-							//setTimeout(function(){ parent.style.height = parent.offsetHeight + 'px'; }, 0);
+							if ( e && undefined !== e.type && ( 'orientationchange' === e.type ) ) {
+								if ( activeHeader.classList.contains( 'item-is-fixed' ) ) {
+									setTimeout(function(){
+										parent.style.height = Math.floor( parent.offsetHeight + activeHeader.offsetHeight ) + 'px';
+									}, 21);
+								} else {
+									setTimeout(function(){ parent.style.height = parent.offsetHeight + 'px'; }, 21);
+								}
+							} else {
+								parent.style.height = parent.offsetHeight + 'px';
+							}
 						} else if ( parent.classList.contains( 'site-header-inner-wrap' ) ) {
 							parent.style.height = null;
 							parent.style.height = parent.offsetHeight + 'px';
@@ -548,6 +560,15 @@ if ( window.NodeList && ! NodeList.prototype.forEach ) {
 					if ( 'true' === shrink ) {
 						var shrinkHeight = activeHeader.getAttribute( 'data-shrink-height' );
 						if ( shrinkHeight ) {
+							if ( 'true' === revealScroll ) {
+								if ( window.scrollY  > lastScrollTop ) {
+									var totalOffsetDelay = Math.floor( ( Math.floor( activeOffsetTop ) - Math.floor( offsetTop ) ) + Math.floor( startHeight ) );
+								} else {
+									var totalOffsetDelay = Math.floor( activeOffsetTop - offsetTop );
+								}
+							} else {
+								var totalOffsetDelay = Math.floor( activeOffsetTop - offsetTop );
+							}
 							var shrinkHeader = activeHeader.querySelector( '.site-main-header-inner-wrap' );
 							var shrinkLogo = shrinkHeader.querySelector( '.custom-logo' );
 							var customShrinkLogo = shrinkHeader.querySelector( '.kadence-sticky-logo' );
@@ -556,7 +577,7 @@ if ( window.NodeList && ! NodeList.prototype.forEach ) {
 								shrinkHeader.setAttribute( 'data-start-height', shrinkHeader.offsetHeight );
 								shrinkStartHeight = shrinkHeader.offsetHeight;
 							}
-							if ( window.scrollY <= ( activeOffsetTop - offsetTop ) ) {
+							if ( window.scrollY <= totalOffsetDelay ) {
 								shrinkHeader.style.height = shrinkStartHeight + 'px';
 								shrinkHeader.style.minHeight = shrinkStartHeight + 'px';
 								shrinkHeader.style.maxHeight = shrinkStartHeight + 'px';
@@ -566,7 +587,7 @@ if ( window.NodeList && ! NodeList.prototype.forEach ) {
 								if ( customShrinkLogo ) {
 									customShrinkLogo.style.maxHeight = '100%';
 								}
-							} else if ( window.scrollY > ( activeOffsetTop - offsetTop ) ) {
+							} else if ( window.scrollY > totalOffsetDelay ) {
 								var shrinkingHeight = Math.max( shrinkHeight, shrinkStartHeight - ( window.scrollY - ( activeOffsetTop - offsetTop ) ) );
 								shrinkHeader.style.height = shrinkingHeight + 'px';
 								shrinkHeader.style.minHeight = shrinkingHeight + 'px';
@@ -580,14 +601,40 @@ if ( window.NodeList && ! NodeList.prototype.forEach ) {
 							}
 						}
 					}
-					if ( window.scrollY == ( activeOffsetTop - offsetTop ) ) {
+					if ( 'true' === revealScroll ) {
+						var totalOffset = Math.floor( activeOffsetTop - offsetTop );
+						var currScrollTop = window.scrollY;
+						var elHeight		= activeHeader.offsetHeight;
+						var wScrollDiff		= lastScrollTop - currScrollTop;
+						var elTop			= window.getComputedStyle( activeHeader ).getPropertyValue( 'transform' ).match(/(-?[0-9\.]+)/g);
+						if ( elTop && undefined !== elTop[5] && elTop[5] ) {
+							var elTopOff = parseInt( elTop[5] ) + wScrollDiff;
+						} else {
+							var elTopOff = 0;
+						}
+						var isScrollingDown = currScrollTop > lastScrollTop;
+						if ( currScrollTop <= totalOffset ) {
+							activeHeader.style.transform = 'translateY(0px)';
+						} else if ( isScrollingDown ) {
+							activeHeader.classList.add('item-hidden-above');
+							activeHeader.style.transform = 'translateY(' + ( Math.abs( elTopOff ) > elHeight ? -elHeight : elTopOff ) + 'px)';
+						} else {
+							var totalOffset = Math.floor( activeOffsetTop - offsetTop );
+							activeHeader.style.transform = 'translateY(' + ( elTopOff > 0 ? 0 : elTopOff ) + 'px)';
+							activeHeader.classList.remove('item-hidden-above');
+						}
+						lastScrollTop = currScrollTop;
+					} else {
+						var totalOffset = Math.floor( activeOffsetTop - offsetTop );
+					}
+					if ( window.scrollY == totalOffset ) {
 						activeHeader.style.top = offsetTop + 'px';
 						activeHeader.classList.add('item-is-fixed');
 						activeHeader.classList.add('item-at-start');
 						activeHeader.classList.remove('item-is-stuck');
 						parent.classList.add('child-is-fixed');
 						document.body.classList.add('header-is-fixed');
-					} else if ( window.scrollY > ( activeOffsetTop - offsetTop ) ) {
+					} else if ( window.scrollY > totalOffset ) {
 						activeHeader.style.top = offsetTop + 'px';
 						activeHeader.classList.add('item-is-fixed');
 						activeHeader.classList.add('item-is-stuck');
@@ -610,10 +657,11 @@ if ( window.NodeList && ! NodeList.prototype.forEach ) {
 					window.addEventListener( 'resize', updateSticky, false );
 					window.addEventListener( 'scroll', updateSticky, false );
 					window.addEventListener( 'load', updateSticky, false );
+					window.addEventListener( 'orientationchange', updateSticky, false );
 					updateSticky();
 				}
 		},
-		getTopOffset() {
+		getTopOffset: function() {
 			var desktopSticky = document.querySelector( '#main-header .kadence-sticky-header' ),
 				mobileSticky  = document.querySelector( '#mobile-header .kadence-sticky-header' ),
 				activeScrollSize = 'mobile',
@@ -654,8 +702,8 @@ if ( window.NodeList && ! NodeList.prototype.forEach ) {
 			}
 			return Math.floor( activeScrollOffsetTop + activeScrollAdminOffsetTop );
 		},
-		scrollToElement( element, history = true ) {
-			
+		scrollToElement: function( element, history ) {
+			history = (typeof history !== 'undefined') ?  history : true;
 			var offsetSticky = window.kadence.getTopOffset();
 			var originalTop = Math.floor( element.getBoundingClientRect().top ) - offsetSticky;
 			window.scrollBy( { top: originalTop, left: 0, behavior: 'smooth' } );
@@ -671,7 +719,8 @@ if ( window.NodeList && ! NodeList.prototype.forEach ) {
 				}
 			}, 100 );
 		},
-		anchorScrollToCheck: function( e, respond = null ) {
+		anchorScrollToCheck: function( e, respond ) {
+			respond = (typeof respond !== 'undefined') ?  respond : null;
 			if ( e.target.getAttribute('href') ) {
 				var targetLink = e.target;
 			} else {
@@ -682,6 +731,9 @@ if ( window.NodeList && ! NodeList.prototype.forEach ) {
 				if ( ! targetLink.getAttribute('href') ) {
 					return;
 				}
+			}
+			if ( targetLink.parentNode && targetLink.parentNode.hasAttribute('role') && targetLink.parentNode.getAttribute('role') === 'tab' ) {
+				return;
 			}
 			var targetID;
 			if ( respond ) {
@@ -731,9 +783,14 @@ if ( window.NodeList && ! NodeList.prototype.forEach ) {
 				}
 			}
 			var foundLinks = document.querySelectorAll( 'a[href*=\\#]:not([href=\\#]):not(.scroll-ignore):not([data-tab]):not([data-toggle])' );
-			foundLinks.forEach( each => ( each.onclick = window.kadence.anchorScrollToCheck ) );
-			// var links = document.querySelectorAll( '.scroll' );
-			// links.forEach( each => ( each.onclick = window.kadence.anchorScrollTo ) );
+			if ( ! foundLinks.length ) {
+				return;
+			}
+			foundLinks.forEach( function( element ) {
+				element.addEventListener( 'click', function( e ) {
+					window.kadence.anchorScrollToCheck( e );
+				} );
+			} );
 		},
 		/**
 		 * Initiate the scroll to top.
@@ -748,10 +805,10 @@ if ( window.NodeList && ! NodeList.prototype.forEach ) {
 						scrollBtn.classList.remove( 'scroll-visible' );;
 					}
 				}
-				window.onscroll = function() { checkScrollVisiblity() };
+				window.addEventListener( 'scroll', checkScrollVisiblity );
 				checkScrollVisiblity();
 				// Toggle the Scroll to top on click.
-				scrollBtn.addEventListener( 'click', ( e ) => {
+				scrollBtn.addEventListener( 'click', function( e ) {
 					e.preventDefault();
 					//window.scrollBy( { top: 0, left: 0, behavior: 'smooth' } );
 					window.scrollTo({top: 0, behavior: 'smooth'});

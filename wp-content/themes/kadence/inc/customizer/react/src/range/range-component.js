@@ -3,11 +3,12 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
 import ResponsiveControl from '../common/responsive.js';
+import KadenceRange from '../common/range.js';
 import Icons from '../common/icons.js';
 
 const { __ } = wp.i18n;
 
-const { RangeControl, Dashicon, Tooltip, Button, Toolbar } = wp.components;
+const { RangeControl, Dashicon, Tooltip, Button, ToolbarGroup } = wp.components;
 
 const { Component, Fragment } = wp.element;
 class RangeComponent extends Component {
@@ -145,7 +146,7 @@ class RangeComponent extends Component {
 						onChange={ ( currentDevice) => this.setState( { currentDevice } ) }
 						controlLabel={ responsiveControlLabel }
 					>
-						<RangeControl
+						<KadenceRange
 								initialPosition={ ( ! this.state.size[this.state.currentDevice] ? this.defaultValue.size[this.state.currentDevice] : undefined ) }
 								value={ ( undefined !== this.state.size[this.state.currentDevice] ? this.state.size[this.state.currentDevice] : undefined ) }
 								onChange={ (val) => {
@@ -188,7 +189,7 @@ class RangeComponent extends Component {
 							<span className="customize-control-title">{ controlLabel }</span>
 						</div>
 						<div className="kadence-responsive-controls-content">
-							<RangeControl
+							<KadenceRange
 								initialPosition={ ( ! this.state.size ? this.defaultValue.size : undefined ) }
 								value={this.state.size}
 								onChange={ (val) => {
@@ -222,7 +223,7 @@ class RangeComponent extends Component {
 					disabled
 			>{ ( '%' === self.state.unit ? Icons.percent : Icons[ self.state.unit ] ) }</Button> );
 		}
-		return <Toolbar
+		return <ToolbarGroup
 					isCollapsed={ true }
 					icon={ ( '%' === self.state.unit ? Icons.percent : Icons[ self.state.unit ] ) }
 					label={ __( 'Unit', 'kadence' ) }
@@ -280,7 +281,7 @@ class RangeComponent extends Component {
 					disabled
 			>{ ( '%' === self.state.unit[ self.state.currentDevice ] ? Icons.percent : Icons[ self.state.unit[ self.state.currentDevice ] ] ) }</Button> );
 		}
-		return <Toolbar
+		return <ToolbarGroup
 					isCollapsed={ true }
 					icon={ ( '%' === self.state.unit[ self.state.currentDevice ] ? Icons.percent : Icons[ self.state.unit[ self.state.currentDevice ] ] ) }
 					label={ __( 'Unit', 'kadence' ) }

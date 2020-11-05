@@ -391,6 +391,36 @@ Theme_Customizer::add_settings(
 				'options' => 'no-color',
 			),
 		),
+		'header_button_shadow' => array(
+			'control_type' => 'kadence_shadow_control',
+			'section'      => 'header_button_design',
+			'label'        => esc_html__( 'Button Shadow', 'kadence' ),
+			'live_method'     => array(
+				array(
+					'type'     => 'css_boxshadow',
+					'selector' => '#main-header .header-button',
+					'property' => 'box-shadow',
+					'pattern'  => '$',
+					'key'      => '',
+				),
+			),
+			'default'      => kadence()->default( 'header_button_shadow' ),
+		),
+		'header_button_shadow_hover' => array(
+			'control_type' => 'kadence_shadow_control',
+			'section'      => 'header_button_design',
+			'label'        => esc_html__( 'Button Hover State Shadow', 'kadence' ),
+			'live_method'     => array(
+				array(
+					'type'     => 'css_boxshadow',
+					'selector' => '#main-header .header-button',
+					'property' => 'box-shadow',
+					'pattern'  => '$',
+					'key'      => '',
+				),
+			),
+			'default'      => kadence()->default( 'header_button_shadow_hover' ),
+		),
 		'header_button_margin' => array(
 			'control_type' => 'kadence_measure_control',
 			'section'      => 'header_button_design',

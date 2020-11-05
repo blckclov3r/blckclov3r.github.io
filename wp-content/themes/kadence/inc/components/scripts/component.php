@@ -76,10 +76,14 @@ class Component implements Component_Interface {
 			return;
 		}
 
+		$breakpoint = 1024;
+		if ( kadence()->sub_option( 'header_mobile_switch', 'size' ) ) {
+			$breakpoint = kadence()->sub_option( 'header_mobile_switch', 'size' );
+		}
 		// Enqueue the slide script.
 		wp_register_script(
 			'kadence-slide',
-			get_theme_file_uri( '/assets/js/src/tiny-slider.js' ),
+			get_theme_file_uri( '/assets/js/tiny-slider.min.js' ),
 			array(),
 			KADENCE_VERSION,
 			true
@@ -96,6 +100,28 @@ class Component implements Component_Interface {
 		);
 		wp_script_add_data( 'kadence-slide-init', 'async', true );
 		wp_script_add_data( 'kadence-slide-init', 'precache', true );
+		if ( kadence()->option( 'lightbox' ) ) {
+			// Enqueue the lightbox script.
+			wp_enqueue_script(
+				'kadence-simplelightbox',
+				get_theme_file_uri( '/assets/js/simplelightbox.min.js' ),
+				array(),
+				KADENCE_VERSION,
+				true
+			);
+			wp_script_add_data( 'kadence-simplelightbox', 'async', true );
+			wp_script_add_data( 'kadence-simplelightbox', 'precache', true );
+			// Enqueue the slide script.
+			wp_enqueue_script(
+				'kadence-lightbox-init',
+				get_theme_file_uri( '/assets/js/lightbox-init.min.js' ),
+				array( 'kadence-simplelightbox' ),
+				KADENCE_VERSION,
+				true
+			);
+			wp_script_add_data( 'kadence-lightbox-init', 'async', true );
+			wp_script_add_data( 'kadence-lightbox-init', 'precache', true );
+		}
 		// Main js file.
 		wp_enqueue_script(
 			'kadence-navigation',
@@ -115,7 +141,7 @@ class Component implements Component_Interface {
 					'collapse' => __( 'Collapse child menu', 'kadence' ),
 				),
 				'breakPoints' => array(
-					'desktop' => 1024,
+					'desktop' => esc_attr( $breakpoint ),
 					'tablet' => 768,
 				),
 			)

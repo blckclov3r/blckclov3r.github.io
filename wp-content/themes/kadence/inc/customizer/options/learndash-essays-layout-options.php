@@ -646,7 +646,7 @@ $settings = array(
 					'name' => __( '1:1', 'kadence' ),
 				),
 				'3-4' => array(
-					'name' => __( '4:2', 'kadence' ),
+					'name' => __( '4:3', 'kadence' ),
 				),
 				'2-3' => array(
 					'name' => __( '3:2', 'kadence' ),

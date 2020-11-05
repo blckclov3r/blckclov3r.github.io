@@ -89,6 +89,10 @@ select:focus {
 	background-color: var(--global-palette9);
 	box-shadow: 0px 5px 15px -7px rgba(0,0,0,0.1);
 	outline: 0;
+	// Fix for firefox if the color palette is dark.
+	option {
+		color: #333;
+	}
 }
 
 .search-form {
@@ -110,6 +114,7 @@ select:focus {
 		padding: 8px 12px 7px;
 		border-radius: 0;
 		box-shadow: none;
+		overflow: hidden;
 		&:hover, &:focus {
 			color: transparent;
 			background: transparent;
@@ -142,6 +147,9 @@ fieldset {
 	padding: 0.625em 1.425em 0.625em;
 	border: 1px solid var(--global-gray-500);
 	margin-top: 1.2em;
+}
+.affwp-form fieldset {
+    padding: 0;
 }
 legend {
     font-weight: bold;

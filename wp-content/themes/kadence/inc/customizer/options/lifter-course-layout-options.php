@@ -776,6 +776,15 @@ $settings = array(
 			'class' => 'kadence-three-col-short',
 		),
 	),
+	'course_comments' => array(
+		'control_type' => 'kadence_switch_control',
+		'sanitize'     => 'kadence_sanitize_toggle',
+		'section'      => 'course_layout',
+		'priority'     => 20,
+		'default'      => kadence()->default( 'course_comments' ),
+		'label'        => esc_html__( 'Show Comments?', 'kadence' ),
+		'transport'    => 'refresh',
+	),
 	'course_background' => array(
 		'control_type' => 'kadence_background_control',
 		'section'      => 'course_layout_design',

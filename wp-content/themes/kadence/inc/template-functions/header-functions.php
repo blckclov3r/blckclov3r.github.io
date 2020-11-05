@@ -489,7 +489,7 @@ function navigation_popup_toggle() {
 			<?php
 		}
 		?>
-		<button id="mobile-toggle" class="menu-toggle-open drawer-toggle menu-toggle-style-<?php echo esc_attr( kadence()->option( 'mobile_trigger_style' ) ); ?>" aria-label="<?php esc_attr_e( 'Open menu', 'kadence' ); ?>" data-toggle-target="#mobile-drawer" data-toggle-body-class="showing-popup-drawer" aria-expanded="false" data-set-focus=".menu-toggle-close"
+		<button id="mobile-toggle" class="menu-toggle-open drawer-toggle menu-toggle-style-<?php echo esc_attr( kadence()->option( 'mobile_trigger_style' ) ); ?>" aria-label="<?php esc_attr_e( 'Open menu', 'kadence' ); ?>" data-toggle-target="#mobile-drawer" data-toggle-body-class="showing-popup-drawer-from-<?php echo esc_attr( 'sidepanel' === kadence()->option( 'header_popup_layout' ) ? kadence()->option( 'header_popup_side' ) : 'full' ); ?>" aria-expanded="false" data-set-focus=".menu-toggle-close"
 			<?php
 			if ( kadence()->is_amp() ) {
 				?>
@@ -526,7 +526,7 @@ function popup_toggle() {
  */
 function navigation_popup() {
 	?>
-	<div id="mobile-drawer" class="popup-drawer popup-drawer-layout-<?php echo esc_attr( kadence()->option( 'header_popup_layout' ) ); ?> popup-drawer-side-<?php echo esc_attr( kadence()->option( 'header_popup_side' ) ); ?>" data-drawer-target-string="#mobile-drawer"
+	<div id="mobile-drawer" class="popup-drawer popup-drawer-layout-<?php echo esc_attr( kadence()->option( 'header_popup_layout' ) ); ?> popup-drawer-animation-<?php echo esc_attr( kadence()->option( 'header_popup_animation' ) ); ?> popup-drawer-side-<?php echo esc_attr( kadence()->option( 'header_popup_side' ) ); ?>" data-drawer-target-string="#mobile-drawer"
 		<?php
 		if ( kadence()->is_amp() ) {
 			?>
@@ -537,8 +537,13 @@ function navigation_popup() {
 	>
 		<div class="drawer-overlay" data-drawer-target-string="#mobile-drawer"></div>
 		<div class="drawer-inner">
+			<?php
+			if ( 'fullwidth' === kadence()->option( 'header_popup_layout' ) && 'slice' === kadence()->option( 'header_popup_animation' ) ) {
+				echo '<div class="pop-slice-background"><div class="pop-portion-bg"></div><div class="pop-portion-bg"></div><div class="pop-portion-bg"></div></div>';
+			}
+			?>
 			<div class="drawer-header">
-				<button class="menu-toggle-close drawer-toggle" aria-label="<?php esc_attr_e( 'Close menu', 'kadence' ); ?>"  data-toggle-target="#mobile-drawer" data-toggle-body-class="showing-popup-drawer" aria-expanded="false" data-set-focus=".menu-toggle-open"
+				<button class="menu-toggle-close drawer-toggle" aria-label="<?php esc_attr_e( 'Close menu', 'kadence' ); ?>"  data-toggle-target="#mobile-drawer" data-toggle-body-class="showing-popup-drawer-from-<?php echo esc_attr( 'sidepanel' === kadence()->option( 'header_popup_layout' ) ? kadence()->option( 'header_popup_side' ) : 'full' ); ?>" aria-expanded="false" data-set-focus=".menu-toggle-open"
 				<?php
 					if ( kadence()->is_amp() ) {
 						?>
@@ -548,10 +553,11 @@ function navigation_popup() {
 					}
 				?>
 			>
-					<?php kadence()->print_icon( 'close', '', false ); ?>
+					<span class="toggle-close-bar"></span>
+					<span class="toggle-close-bar"></span>
 				</button>
 			</div>
-			<div class="drawer-content">
+			<div class="drawer-content mobile-drawer-content content-align-<?php echo esc_attr( kadence()->option( 'header_popup_content_align' ) ); ?> content-valign-<?php echo esc_attr( kadence()->option( 'header_popup_vertical_align' ) ); ?>">
 				<?php do_action( 'kadence_before_mobile_navigation_popup' ); ?>
 				<?php kadence()->render_header( 'popup', 'content', 'mobile' ); ?>
 				<?php do_action( 'kadence_after_mobile_navigation_popup' ); ?>
@@ -739,7 +745,7 @@ function header_cart() {
 			echo '</a>';
 		} elseif ( 'slide' === kadence()->option( 'header_cart_style' ) ) {
 			add_action( 'wp_footer', 'Kadence\cart_popup', 5 );
-			echo '<button data-toggle-target="#cart-drawer"' . ( ! empty( $label ) ? '' : ' aria-label="' . esc_attr__( 'Shopping Cart', 'kadence' ) . '"' ) . ' class="drawer-toggle header-cart-button" data-toggle-body-class="showing-popup-drawer" aria-expanded="false" data-set-focus=".cart-toggle-close">';
+			echo '<button data-toggle-target="#cart-drawer"' . ( ! empty( $label ) ? '' : ' aria-label="' . esc_attr__( 'Shopping Cart', 'kadence' ) . '"' ) . ' class="drawer-toggle header-cart-button" data-toggle-body-class="showing-popup-drawer-from-' . esc_attr( kadence()->option( 'header_mobile_cart_popup_side' ) ) . '" aria-expanded="false" data-set-focus=".cart-toggle-close">';
 			if ( ! empty( $label ) || is_customize_preview() ) {
 				?>
 				<span class="header-cart-label"><?php echo esc_html( $label ); ?></span>
@@ -789,7 +795,7 @@ function cart_popup() {
 		<div class="drawer-inner">
 			<div class="drawer-header">
 				<h2 class="side-cart-header"><?php esc_html_e( 'Review Cart', 'kadence' ); ?></h2>
-				<button class="cart-toggle-close drawer-toggle" aria-label="<?php esc_attr_e( 'Close Cart', 'kadence' ); ?>"  data-toggle-target="#cart-drawer" data-toggle-body-class="showing-popup-drawer" aria-expanded="false" data-set-focus=".header-cart-button">
+				<button class="cart-toggle-close drawer-toggle" aria-label="<?php esc_attr_e( 'Close Cart', 'kadence' ); ?>"  data-toggle-target="#cart-drawer" data-toggle-body-class="showing-popup-drawer-from-<?php echo esc_attr( kadence()->option( 'header_mobile_cart_popup_side' ) ); ?>" aria-expanded="false" data-set-focus=".header-cart-button">
 					<?php kadence()->print_icon( 'close', '', false ); ?>
 				</button>
 			</div>
@@ -830,7 +836,7 @@ function mobile_cart() {
 			echo '</a>';
 		} elseif ( 'slide' === kadence()->option( 'header_mobile_cart_style' ) ) {
 			add_action( 'wp_footer', 'Kadence\cart_popup', 5 );
-			echo '<button data-toggle-target="#cart-drawer"' . ( ! empty( $label ) ? '' : ' aria-label="' . esc_attr__( 'Shopping Cart', 'kadence' ) . '"' ) . ' class="drawer-toggle header-cart-button" data-toggle-body-class="showing-popup-drawer" aria-expanded="false" data-set-focus=".cart-toggle-close">';
+			echo '<button data-toggle-target="#cart-drawer"' . ( ! empty( $label ) ? '' : ' aria-label="' . esc_attr__( 'Shopping Cart', 'kadence' ) . '"' ) . ' class="drawer-toggle header-cart-button" data-toggle-body-class="showing-popup-drawer-from-' . esc_attr( kadence()->option( 'header_mobile_cart_popup_side' ) ) . '" aria-expanded="false" data-set-focus=".cart-toggle-close">';
 			if ( ! empty( $label ) || is_customize_preview() ) {
 				?>
 				<span class="header-cart-label"><?php echo esc_html( $label ); ?></span>
@@ -964,7 +970,7 @@ function header_search() {
 			<?php
 		}
 		?>
-		<button class="search-toggle-open drawer-toggle search-toggle-style-<?php echo esc_attr( kadence()->option( 'header_search_style' ) ); ?>" aria-label="<?php esc_attr_e( 'View Search Form', 'kadence' ); ?>" data-toggle-target="#search-drawer" data-toggle-body-class="showing-popup-drawer" aria-expanded="false" data-set-focus="#search-drawer .search-field"
+		<button class="search-toggle-open drawer-toggle search-toggle-style-<?php echo esc_attr( kadence()->option( 'header_search_style' ) ); ?>" aria-label="<?php esc_attr_e( 'View Search Form', 'kadence' ); ?>" data-toggle-target="#search-drawer" data-toggle-body-class="showing-popup-drawer-from-full" aria-expanded="false" data-set-focus="#search-drawer .search-field"
 			<?php
 			if ( kadence()->is_amp() ) {
 				?>
@@ -1013,7 +1019,7 @@ function search_modal() {
 		<div class="drawer-overlay" data-drawer-target-string="#search-drawer"></div>
 		<div class="drawer-inner">
 			<div class="drawer-header">
-				<button class="search-toggle-close drawer-toggle" aria-label="<?php esc_attr_e( 'Close search', 'kadence' ); ?>"  data-toggle-target="#search-drawer" data-toggle-body-class="showing-popup-drawer" aria-expanded="false" data-set-focus=".search-toggle-open"
+				<button class="search-toggle-close drawer-toggle" aria-label="<?php esc_attr_e( 'Close search', 'kadence' ); ?>"  data-toggle-target="#search-drawer" data-toggle-body-class="showing-popup-drawer-from-full" aria-expanded="false" data-set-focus=".search-toggle-open"
 				<?php
 				if ( kadence()->is_amp() ) {
 					?>

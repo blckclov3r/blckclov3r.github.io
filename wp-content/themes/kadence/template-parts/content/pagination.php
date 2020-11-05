@@ -8,10 +8,13 @@
 namespace Kadence;
 
 the_posts_pagination(
-	array(
-		'mid_size'           => 2,
-		'prev_text'          => kadence()->get_icon( 'arrow-left', _x( 'Previous', 'previous set of archive results', 'kadence' ) ),
-		'next_text'          => kadence()->get_icon( 'arrow-right', _x( 'Next', 'next set of archive results', 'kadence' ) ),
-		'screen_reader_text' => __( 'Page navigation', 'kadence' ),
+	apply_filters(
+		'kadence_pagination_args',
+		array(
+			'mid_size'           => 2,
+			'prev_text'          => kadence()->get_icon( 'arrow-left', _x( 'Previous', 'previous set of archive results', 'kadence' ) ),
+			'next_text'          => kadence()->get_icon( 'arrow-right', _x( 'Next', 'next set of archive results', 'kadence' ) ),
+			'screen_reader_text' => __( 'Page navigation', 'kadence' ),
+		)
 	)
 );

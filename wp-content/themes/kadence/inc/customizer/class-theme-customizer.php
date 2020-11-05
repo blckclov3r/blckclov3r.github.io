@@ -286,6 +286,11 @@ class Theme_Customizer {
 		if ( class_exists( 'TUTOR\Tutor' ) ) {
 			require_once get_template_directory() . '/inc/customizer/options/tutor-course-layout-options.php'; // phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
 		}
+		if ( class_exists( 'BBPress' ) ) {
+			require_once get_template_directory() . '/inc/customizer/options/forum-archive-layout-options.php'; // phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
+			require_once get_template_directory() . '/inc/customizer/options/forum-layout-options.php'; // phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
+			require_once get_template_directory() . '/inc/customizer/options/topic-layout-options.php'; // phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
+		}
 	}
 	/**
 	 * Overide default settings
@@ -473,6 +478,16 @@ class Theme_Customizer {
 				$panels = array_merge(
 					$panels,
 					$extra_lifter
+				);
+			}
+			if ( class_exists( 'BBPress' ) ) {
+				$extra_bbpress['bbpress'] = array(
+					'title'    => __( 'bbPress', 'kadence' ),
+					'priority' => 25,
+				);
+				$panels = array_merge(
+					$panels,
+					$extra_bbpress
 				);
 			}
 			if ( class_exists( 'TUTOR\Tutor' ) ) {
@@ -943,6 +958,46 @@ class Theme_Customizer {
 					$extra_learn
 				);
 			}
+			if ( class_exists( 'BBPress' ) ) {
+				$extra_bbpress = array();
+				$extra_bbpress['topic_layout'] = array(
+					'title'    => __( 'Topic Layout', 'kadence' ),
+					'panel'    => 'bbpress',
+					'priority' => 10,
+				);
+				$extra_bbpress['topic_layout_design'] = array(
+					'title'    => __( 'Topic Layout', 'kadence' ),
+					'panel'    => 'bbpress',
+					'priority' => 10,
+					'type'     => 'design-hidden',
+				);
+				$extra_bbpress['forum_layout'] = array(
+					'title'    => __( 'Forum Layout', 'kadence' ),
+					'panel'    => 'bbpress',
+					'priority' => 10,
+				);
+				$extra_bbpress['forum_layout_design'] = array(
+					'title'    => __( 'Forum Layout', 'kadence' ),
+					'panel'    => 'bbpress',
+					'priority' => 10,
+					'type'     => 'design-hidden',
+				);
+				$extra_bbpress['forum_archive'] = array(
+					'title'    => __( 'Forum Archive', 'kadence' ),
+					'panel'    => 'bbpress',
+					'priority' => 10,
+				);
+				$extra_bbpress['forum_archive_design'] = array(
+					'title'    => __( 'Forum Archive', 'kadence' ),
+					'panel'    => 'bbpress',
+					'priority' => 10,
+					'type'     => 'design-hidden',
+				);
+				$sections = array_merge(
+					$sections,
+					$extra_bbpress
+				);
+			}
 			if ( class_exists( 'LifterLMS' ) ) {
 				$extra_lifter['course_layout'] = array(
 					'title'    => __( 'Course Layout', 'kadence' ),
@@ -1038,6 +1093,7 @@ class Theme_Customizer {
 						'title'    => $post_type_label . ' ' . __( 'Layout', 'kadence' ),
 						'panel'    => 'custom_post',
 						'priority' => 10,
+						'type'     => 'design-hidden',
 					);
 					$extras_post_types[ $post_type_name . '_archive' ] = array(
 						'title'    => $post_type_label . ' ' . __( 'Archive', 'kadence' ),
@@ -1048,6 +1104,7 @@ class Theme_Customizer {
 						'title'    => $post_type_label . ' ' . __( 'Archive', 'kadence' ),
 						'panel'    => 'custom_post',
 						'priority' => 10,
+						'type'     => 'design-hidden',
 					);
 				}
 			}
@@ -1175,6 +1232,7 @@ class Theme_Customizer {
 				$section_config = array(
 					'title'    => $section['title'],
 					'priority' => ( isset( $section['priority'] ) ? $section['priority'] : 10 ),
+					'type'     => ( isset( $section['type'] ) ? $section['type'] : 'default' ),
 				);
 
 				// Description.
@@ -1460,6 +1518,10 @@ class Theme_Customizer {
 	 * @return void
 	 */
 	public function enqueue_customizer_scripts() {
+		// Make it possible to prevent gutenberg from loading in the customizer for plugins that are using the customizer for other purposes.
+		if ( isset( $_GET['wpum_email_customizer'] ) || apply_filters( 'prevent_kadence_customizer_scripts', false ) ) {
+			return;
+		}
 		$palette_presets = '{"basic":[{"color":"#2B6CB0"},{"color":"#265E9A"},{"color":"#222222"},{"color":"#3B3B3B"},{"color":"#515151"},{"color":"#626262"},{"color":"#E1E1E1"},{"color":"#F7F7F7"},{"color":"#ffffff"}],"palette":[{"color":"#255FDD"},{"color":"#00F2FF"},{"color":"#1A202C"},{"color":"#2D3748"},{"color":"#4A5568"},{"color":"#718096"},{"color":"#EDF2F7"},{"color":"#F7FAFC"},{"color":"#ffffff"}],"first-palette":[{"color":"#3296ff"},{"color":"#003174"},{"color":"#ffffff"},{"color":"#f7fafc"},{"color":"#edf2f7"},{"color":"#cbd2d9"},{"color":"#2d3748"},{"color":"#252c39"},{"color":"#1a202c"}],"orange":[{"color":"#e47b02"},{"color":"#ed8f0c"},{"color":"#1f2933"},{"color":"#3e4c59"},{"color":"#52606d"},{"color":"#7b8794"},{"color":"#f3f4f7"},{"color":"#f9f9fb"},{"color":"#ffffff"}],"third-palette":[{"color":"#E21E51"},{"color":"#4d40ff"},{"color":"#040037"},{"color":"#032075"},{"color":"#514d7c"},{"color":"#666699"},{"color":"#deddeb"},{"color":"#efeff5"},{"color":"#f8f9fa"}],"forth-palette":[{"color":"#E21E51"},{"color":"#4d40ff"},{"color":"#f8f9fa"},{"color":"#efeff5"},{"color":"#deddeb"},{"color":"#c3c2d6"},{"color":"#514d7c"},{"color":"#221e5b"},{"color":"#040037"}],"fifth-palette":[{"color":"#049f82"},{"color":"#008f72"},{"color":"#222222"},{"color":"#353535"},{"color":"#454545"},{"color":"#676767"},{"color":"#eeeeee"},{"color":"#f7f7f7"},{"color":"#ffffff"}],"sixth-palette":[{"color":"#dd6b20"},{"color":"#cf3033"},{"color":"#27241d"},{"color":"#423d33"},{"color":"#504a40"},{"color":"#625d52"},{"color":"#e8e6e1"},{"color":"#faf9f7"},{"color":"#ffffff"}]}';
 		$path     = get_template_directory_uri() . '/inc/customizer/';
 		$dir_path = get_template_directory() . '/inc/customizer/';

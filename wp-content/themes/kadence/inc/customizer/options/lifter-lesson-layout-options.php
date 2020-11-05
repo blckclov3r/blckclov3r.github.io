@@ -662,6 +662,15 @@ $settings = array(
 			'class' => 'kadence-three-col-short',
 		),
 	),
+	'lesson_comments' => array(
+		'control_type' => 'kadence_switch_control',
+		'sanitize'     => 'kadence_sanitize_toggle',
+		'section'      => 'lesson_layout',
+		'priority'     => 20,
+		'default'      => kadence()->default( 'lesson_comments' ),
+		'label'        => esc_html__( 'Show Comments?', 'kadence' ),
+		'transport'    => 'refresh',
+	),
 	'lesson_background' => array(
 		'control_type' => 'kadence_background_control',
 		'section'      => 'lesson_layout_design',

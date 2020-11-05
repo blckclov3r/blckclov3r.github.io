@@ -308,6 +308,9 @@ class Theme {
 		if ( class_exists( 'Essential_Real_Estate' ) ) {
 			$components[] = new Essential_Real_Estate\Component();
 		}
+		if ( class_exists( 'Restrict_Content_Pro' ) ) {
+			$components[] = new Restrict_Content_Pro\Component();
+		}
 		if ( class_exists( 'Estatik' ) ) {
 			$components[] = new Estatik\Component();
 		}

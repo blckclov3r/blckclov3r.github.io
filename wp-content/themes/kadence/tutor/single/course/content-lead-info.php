@@ -1,5 +1,6 @@
 <?php
 /**
+ * NOTE: This template is from the TutorLMS plugin is is overridden in Kadence Theme for better theme support of TutorLMS.
  * Template for displaying in content lead info
  *
  * @package TutorLMS/Templates

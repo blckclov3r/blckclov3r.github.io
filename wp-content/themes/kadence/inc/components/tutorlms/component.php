@@ -331,7 +331,7 @@ class Component implements Component_Interface {
 	public function dynamic_css( $css ) {
 		$generated_css = $this->generate_tutor_css();
 		if ( ! empty( $generated_css ) ) {
-			$css .= "\n/* Kadence Pro Header CSS */\n" . $generated_css;
+			$css .= "\n/* Kadence Tutor CSS */\n" . $generated_css;
 		}
 		return $css;
 	}

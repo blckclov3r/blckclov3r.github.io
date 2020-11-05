@@ -81,9 +81,64 @@ class Kadence_Dashboard_Settings {
 			array(
 				'adminURL' => esc_url( admin_url() ),
 				'settings' => esc_attr( get_option( 'kadence_theme_config' ) ),
+				'changelog' => $this->get_changelog(),
 			)
 		);
 	}
+	/**
+	 * Get Changelog ( Largely Borrowed From Neve Theme )
+	 */
+	public function get_changelog() {
+		$changelog      = array();
+		$changelog_path = get_template_directory() . '/changelog.txt';
+		if ( ! is_file( $changelog_path ) ) {
+			return $changelog;
+		}
+		global $wp_filesystem;
+		if ( ! is_object( $wp_filesystem ) ) {
+			require_once ABSPATH . '/wp-admin/includes/file.php';
+			WP_Filesystem();
+		}
+
+		$changelog_string = $wp_filesystem->get_contents( $changelog_path );
+		if ( is_wp_error( $changelog_string ) ) {
+			return $changelog;
+		}
+		$changelog = explode( PHP_EOL, $changelog_string );
+		$releases  = [];
+		foreach ( $changelog as $changelog_line ) {
+			if ( empty( $changelog_line ) ) {
+				continue;
+			}
+			if ( substr( ltrim( $changelog_line ), 0, 2 ) === '==' ) {
+				if ( isset( $release ) ) {
+					$releases[] = $release;
+				}
+				$changelog_line = trim( str_replace( '=', '', $changelog_line ) );
+				$release = array(
+					'head'    => $changelog_line,
+				);
+			} else {
+				if ( preg_match( '/[*|-]?\s?(\[fix]|\[Fix]|fix|Fix)[:]?\s?\b/', $changelog_line ) ) {
+					//$changelog_line     = preg_replace( '/[*|-]?\s?(\[fix]|\[Fix]|fix|Fix)[:]?\s?\b/', '', $changelog_line );
+					$changelog_line = trim( str_replace( [ '*', '-' ], '', $changelog_line ) );
+					$release['fix'][] = $changelog_line;
+					continue;
+				}
+
+				if ( preg_match( '/[*|-]?\s?(\[add]|\[Add]|add|Add)[:]?\s?\b/', $changelog_line ) ) {
+					//$changelog_line        = preg_replace( '/[*|-]?\s?(\[add]|\[Add]|add|Add)[:]?\s?\b/', '', $changelog_line );
+					$changelog_line = trim( str_replace( [ '*', '-' ], '', $changelog_line ) );
+					$release['add'][] = $changelog_line;
+					continue;
+				}
+				$changelog_line = trim( str_replace( [ '*', '-' ], '', $changelog_line ) );
+				$release['update'][] = $changelog_line;
+			}
+		}
+		return $releases;
+	}
+
 	/**
 	 * Register settings
 	 */

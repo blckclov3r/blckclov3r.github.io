@@ -594,7 +594,7 @@ class Component implements Component_Interface, Templating_Component_Interface {
 					$sidebar = 'enable';
 				}
 			}
-		} elseif ( is_archive() || is_search() || is_home() ) {
+		} elseif ( is_archive() || is_search() || is_home() || is_404() ) {
 			if ( is_home() && is_front_page() ) {
 				$archive_type = 'post_archive';
 				$trans_type   = 'archive';
@@ -721,6 +721,9 @@ class Component implements Component_Interface, Templating_Component_Interface {
 					$title = 'hide';
 				}
 			}
+			if ( is_404() ) {
+				$title = 'normal';
+			}
 			// Archive Feature.
 			if ( isset( $archivefeature ) && ( 'show' === $archivefeature || 'hide' === $archivefeature ) ) {
 				$feature = $archivefeature;
@@ -746,11 +749,8 @@ class Component implements Component_Interface, Templating_Component_Interface {
 				$vpadding = $archivevpadding;
 			} else {
 				$option_vpadding = kadence()->option( $archive_type . '_vertical_padding' );
-				if ( empty( $option_vpadding ) ) {
-					$option_vpadding = kadence()->option( 'post_archive_vertical_padding' );
-				}
-				if ( $option_vpadding ) {
-					$vpadding = 'hide';
+				if ( $option_vpadding && ( 'show' === $option_vpadding || 'hide' === $option_vpadding ) ) {
+					$vpadding = $option_vpadding;
 				}
 			}
 			// Archive Layout.

@@ -81,6 +81,36 @@ $settings = array(
 			'units'   => array( 'px', 'em', 'rem', 'vw', '%' ),
 		),
 	),
+	'info_transparent_logo_in_use' => array(
+		'control_type' => 'kadence_title_control',
+		'section'      => 'title_tagline',
+		'priority'     => 5,
+		'description'        => esc_html__( '*NOTICE Custom transparent logo will show on pages that have the transparent header enabled. Change that in your transparent header settings.', 'kadence' ),
+		'settings'     => false,
+		'context'      => array(
+			array(
+				'setting' => '__current_tab',
+				'value'   => 'general',
+			),
+			array(
+				'setting'    => 'logo_layout',
+				'operator'   => 'sub_object_contains',
+				'sub_key'    => 'include',
+				'responsive' => true,
+				'value'      => 'logo',
+			),
+			array(
+				'setting'  => 'transparent_header_enable',
+				'operator' => '=',
+				'value'    => true,
+			),
+			array(
+				'setting'  => 'transparent_header_custom_logo',
+				'operator' => '=',
+				'value'    => true,
+			),
+		),
+	),
 	'use_mobile_logo' => array(
 		'control_type' => 'kadence_switch_control',
 		'sanitize'     => 'kadence_sanitize_toggle',
