@@ -171,14 +171,14 @@ $settings        = array(
 		'live_method'     => array(
 			array(
 				'type'     => 'css',
-				'selector' => '#colophon .site-footer-row-container .site-footer-row .footer-html a',
+				'selector' => '#colophon .footer-html a',
 				'property' => 'color',
 				'pattern'  => '$',
 				'key'      => 'color',
 			),
 			array(
 				'type'     => 'css',
-				'selector' => '#colophon .site-footer-row-container .site-footer-row .footer-html a:hover',
+				'selector' => '#colophon .footer-html a:hover',
 				'property' => 'color',
 				'pattern'  => '$',
 				'key'      => 'hover',

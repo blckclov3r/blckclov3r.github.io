@@ -27,9 +27,6 @@ div.bbp-template-notice, #bbpress-forums li.bbp-header, #bbpress-forums li.bbp-f
 	border: 0;
     border-radius: 50%;
 }
-div.bbp-template-notice.error, div.bbp-template-notice.warning {
-    display: block;
-}
 // Author.
 #bbpress-forums div.bbp-reply-content .bbp-head-area .reply-author-displayname a, #bbpress-forums div.bbp-topic-content .bbp-head-area .topic-author-displayname a {
 	text-decoration: none;
@@ -234,7 +231,7 @@ li.bbp-body li.bbp-topic-freshness, li.bbp-body li.bbp-topic-freshness a {
 	font-size: inherit;
 }
 // Replies and Topics.
-.bbpress-topic-meta {
+.site .bbpress-topic-meta {
 	color: var(--global-palette6);
 	a {
 		color: var(--global-palette6);
@@ -243,9 +240,6 @@ li.bbp-body li.bbp-topic-freshness, li.bbp-body li.bbp-topic-freshness a {
 			color: var(--global-palette3);
 		}
 	}
-}
-.topic.type-topic>.entry-content-wrap {
-    padding: 0;
 }
 .site .bbp-pagination-count {
     font-size: 80%;
@@ -319,50 +313,4 @@ li.bbp-body li.bbp-topic-freshness, li.bbp-body li.bbp-topic-freshness a {
 .bbpress-admin-settings-container:hover .bbp-admin-links {
     opacity: 1;
 }
-#bbpress-forums hr {
-    margin-top: var(--global-md-spacing);
-    margin-bottom: 0;
-}
-#bbpress-forums .bbp-user-section {
-    margin-top: 1em;
-}
-#bbpress-forums .bbp-user-section div.bbp-reply-content, .content-style-unboxed #bbpress-forums div.bbp-reply-content {
-    border: 1px solid var(--global-gray-400);
-    box-shadow: none;
-}
 .bbpress-admin-settings-container .bbp-admin-links {padding-bottom: 0.3em;opacity: 0;transition: all 0.2s ease;}
-// Search.
-.bbp-search #bbpress-forums .bbp-search-item-header h3 {
-	font-size: 110%;
-	color: var(--global-palette6);
-	text-transform: uppercase;
-}
-.bbp-search #bbpress-forums .bbp-search-item-header {
-	padding: 1em 0;
-	margin-top: 1em;
-	font-size: 80%;
-	text-transform: uppercase;
-	border-top: 1px solid var(--global-gray-400);
-	color: var(--global-palette6);
-	a {
-		color: var(--global-palette6);
-		text-decoration: underline;
-	}
-}
-// Style Pack Support.
-#bbpress-forums ul.bbp-forums.bsp-template1 > .bbp-header {
-    display: block;
-    background: var(--global-palette7);
-    border: 0;
-}
-#bbpress-forums ul.bbp-forums.bsp-template1 > .bbp-header li.bbp-forum-info, #bbpress-forums ul.bbp-forums.bsp-template1 .bbp-forum-info {
-    width:55%;
-}
-a.bsp-forum-name {
-    color:inherit;
-    text-decoration: none;
-}
-a.bsp-forum-name:hover {
-    color:var(--global-palette-highlight);
-    text-decoration: none;
-}

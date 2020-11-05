@@ -639,15 +639,6 @@ $settings = array(
 			'sortable' => false,
 		),
 	),
-	'custom_quantity' => array(
-		'control_type' => 'kadence_switch_control',
-		'sanitize'     => 'kadence_sanitize_toggle',
-		'section'      => 'product_layout',
-		'priority'     => 10,
-		'default'      => kadence()->default( 'custom_quantity' ),
-		'label'        => esc_html__( 'Use Custom Quantity Plus and Minus', 'kadence' ),
-		'transport'    => 'refresh',
-	),
 	'product_additional_weight_dimensions' => array(
 		'control_type' => 'kadence_switch_control',
 		'sanitize'     => 'kadence_sanitize_toggle',

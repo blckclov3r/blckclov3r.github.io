@@ -8,6 +8,7 @@
 	 * All handlers need to be inside the 'ready' state.
 	 */
 	wp.customize.bind( 'ready', function() {
+
 		wp.customize.state.create( 'kadenceTab' );
 		wp.customize.state( 'kadenceTab' ).set( 'general' );
 
@@ -269,11 +270,8 @@
 				resizePreviewer();
 			}, 250 );
 		});
-		var reloadPreviewer = function() {
-			$( wp.customize.previewer.container ).find( 'iframe' ).css( 'position', 'static' );
-			$( wp.customize.previewer.container ).find( 'iframe' ).css( 'position', 'absolute' );
-		}
-		wp.customize.previewer.bind( 'ready', reloadPreviewer );
+		
+
 		/**
 		 * Init Header & Footer Builder
 		 */
@@ -298,8 +296,6 @@
 					if ( isExpanded ) {
 						$body.addClass( 'kadence-builder-is-active' );
 						$section.addClass( 'kadence-builder-active' );
-						$section.css('display', 'none').height();
-						$section.css('display', 'block');
 					} else {
 						$body.removeClass( 'kadence-builder-is-active' );
 						$section.removeClass( 'kadence-builder-active' );
@@ -350,8 +346,6 @@
 					if ( isExpanded ) {
 						$body.addClass( 'kadence-footer-builder-is-active' );
 						$section.addClass( 'kadence-footer-builder-active' );
-						$section.css('display', 'none').height();
-						$section.css('display', 'block');
 					} else {
 						$body.removeClass( 'kadence-footer-builder-is-active' );
 						$section.removeClass( 'kadence-footer-builder-active' );

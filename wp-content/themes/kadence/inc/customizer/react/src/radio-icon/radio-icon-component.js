@@ -216,11 +216,6 @@ class RadioIconComponent extends Component {
 															{ Icons[ this.controlParams.layout[ item ].icon ] }
 														</span>
 													) }
-													{ this.controlParams.layout[ item ].dashicon && (
-														<span className="kadence-radio-icon kadence-radio-dashicon">
-															<Dashicon icon={ this.controlParams.layout[ item ].dashicon } />
-														</span>
-													) }
 													{ this.controlParams.layout[ item ].name && (
 															this.controlParams.layout[ item ].name
 													) }
@@ -243,11 +238,6 @@ class RadioIconComponent extends Component {
 												{ this.controlParams.layout[ item ].icon && (
 														<span className="kadence-radio-icon">
 															{ Icons[ this.controlParams.layout[ item ].icon ] }
-														</span>
-													) }
-													{ this.controlParams.layout[ item ].dashicon && (
-														<span className="kadence-radio-icon kadence-radio-dashicon">
-															<Dashicon icon={ this.controlParams.layout[ item ].dashicon } />
 														</span>
 													) }
 													{ this.controlParams.layout[ item ].name && (

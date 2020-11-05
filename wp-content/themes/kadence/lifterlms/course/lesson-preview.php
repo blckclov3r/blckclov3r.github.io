@@ -31,7 +31,7 @@ $data_msg     = $restrictions['is_restricted'] ? ' data-tooltip-msg="' . esc_htm
 					<div class="llms-lesson-thumbnail-wrap">
 						<div class="llms-lesson-thumbnail post-thumbnail kadence-thumbnail-ratio-<?php echo esc_attr( kadence()->option( 'course_syllabus_thumbs_ratio', '2-3' ) ); ?>">
 							<div class="post-thumbnail-inner">
-								<?php echo wp_kses_post( get_the_post_thumbnail( $lesson->get( 'id' ) ) ); ?>
+								<?php echo get_the_post_thumbnail( $lesson->get( 'id' ) ); ?>
 							</div>
 						</div><!-- .llms-lesson-thumbnail -->
 					</div>

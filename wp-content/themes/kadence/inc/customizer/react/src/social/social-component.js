@@ -94,8 +94,6 @@ class SocialComponent extends Component {
 				{ value: 'imdb', label: __( 'IMDB', 'kadence' ) },
 				{ value: 'soundcloud', label: __( 'SoundCloud', 'kadence' ) },
 				{ value: 'tumblr', label: __( 'Tumblr', 'kadence' ) },
-				{ value: 'discord', label: __( 'Discord', 'kadence' ) },
-				{ value: 'tiktok', label: __( 'TikTok', 'kadence' ) },
 			],
 		};
 		this.controlParams = this.props.control.params.input_attrs ? {

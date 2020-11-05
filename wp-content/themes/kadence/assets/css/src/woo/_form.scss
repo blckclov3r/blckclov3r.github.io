@@ -23,8 +23,7 @@
 		border: 0;
 		padding: 8px 12px 7px;
 		box-shadow: none;
-        border-radius: 0;
-        overflow:hidden;
+		border-radius: 0;
     }
     input[type="search"] {
         padding-right: 60px;
@@ -124,6 +123,14 @@
             padding:0.4em 24px 0.4em 0.5em;
         }
 
+        .required {
+            color: red;
+            font-weight: 700;
+            border: 0 !important;
+            text-decoration: none;
+            visibility: hidden; // Only show optional by default.
+        }
+
         .optional {
             visibility: visible;
         }
@@ -190,15 +197,6 @@
 
         :-ms-input-placeholder {
             line-height: normal;
-        }
-    }
-    form {
-        .required {
-            color: red;
-            font-weight: 700;
-            border: 0 !important;
-            text-decoration: none;
-            visibility: hidden; // Only show optional by default.
         }
     }
 

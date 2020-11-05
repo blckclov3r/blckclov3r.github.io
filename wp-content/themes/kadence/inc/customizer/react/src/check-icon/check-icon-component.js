@@ -38,7 +38,10 @@ class CheckIconComponent extends Component {
 			'tablet': true,
 			'desktop': true,
 		};
-		this.defaultValue = this.props.control.params.default ? this.props.control.params.default : baseDefault;
+		this.defaultValue = this.props.control.params.default ? {
+			...baseDefault,
+			...this.props.control.params.default
+		} : baseDefault;
 		value = value ? {
 			...JSON.parse( JSON.stringify( this.defaultValue ) ),
 			...value
@@ -53,7 +56,7 @@ class CheckIconComponent extends Component {
 				<Tooltip text={ __( 'Reset Values', 'kadence' ) }>
 					<Button
 						className="reset kadence-reset"
-						disabled={ ( this.state.value == this.defaultValue ) }
+						disabled={ ( this.state.value === this.defaultValue ) }
 						onClick={ () => {
 							let value = this.defaultValue;
 							this.setState( { value: this.defaultValue } );

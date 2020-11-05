@@ -91,21 +91,21 @@ $settings = array(
 		'live_method'     => array(
 			array(
 				'type'     => 'css',
-				'selector' => '#colophon .site-footer-wrap .footer-social-wrap .social-button',
+				'selector' => '.footer-social-wrap a.social-button',
 				'property' => 'margin-top',
 				'pattern'  => '$',
 				'key'      => 'size',
 			),
 			array(
 				'type'     => 'css',
-				'selector' => '#colophon .site-footer-wrap .footer-social-wrap .social-button',
+				'selector' => '.footer-social-wrap a.social-button',
 				'property' => 'margin-left',
 				'pattern'  => 'calc($ / 2)',
 				'key'      => 'size',
 			),
 			array(
 				'type'     => 'css',
-				'selector' => '#colophon .site-footer-wrap .footer-social-wrap .social-button',
+				'selector' => '.footer-social-wrap a.social-button',
 				'property' => 'margin-right',
 				'pattern'  => 'calc($ / 2)',
 				'key'      => 'size',

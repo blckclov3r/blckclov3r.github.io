@@ -650,20 +650,20 @@ $kadence_post_settings = array(
 		'control_type' => 'kadence_title_control',
 		'section'      => 'post_layout',
 		'priority'     => 10,
-		'label'        => esc_html__( 'Default Post Layout', 'kadence' ),
+		'label'        => esc_html__( 'Post Layout', 'kadence' ),
 		'settings'     => false,
 	),
 	'info_post_layout_design' => array(
 		'control_type' => 'kadence_title_control',
 		'section'      => 'post_layout_design',
 		'priority'     => 10,
-		'label'        => esc_html__( 'Default Post Layout', 'kadence' ),
+		'label'        => esc_html__( 'Post Layout', 'kadence' ),
 		'settings'     => false,
 	),
 	'post_layout' => array(
 		'control_type' => 'kadence_radio_icon_control',
 		'section'      => 'post_layout',
-		'label'        => esc_html__( 'Default Post Layout', 'kadence' ),
+		'label'        => esc_html__( 'Post Layout', 'kadence' ),
 		'transport'    => 'refresh',
 		'priority'     => 10,
 		'default'      => kadence()->default( 'post_layout' ),
@@ -953,35 +953,6 @@ $kadence_post_settings = array(
 		'label'        => esc_html__( 'Show Related Posts?', 'kadence' ),
 		'transport'    => 'refresh',
 	),
-	'post_related_columns' => array(
-		'control_type' => 'kadence_radio_icon_control',
-		'section'      => 'post_layout',
-		'priority'     => 20,
-		'label'        => esc_html__( 'Related Posts Columns', 'kadence' ),
-		'transport'    => 'refresh',
-		'default'      => kadence()->default( 'post_related_columns' ),
-		'context'      => array(
-			array(
-				'setting'    => 'post_related',
-				'operator'   => '=',
-				'value'      => true,
-			),
-		),
-		'input_attrs'  => array(
-			'layout' => array(
-				'2' => array(
-					'name' => __( '2', 'kadence' ),
-				),
-				'3' => array(
-					'name' => __( '3', 'kadence' ),
-				),
-				'4' => array(
-					'name' => __( '4', 'kadence' ),
-				),
-			),
-			'responsive' => false,
-		),
-	),
 	'post_comments' => array(
 		'control_type' => 'kadence_switch_control',
 		'sanitize'     => 'kadence_sanitize_toggle',
@@ -1041,69 +1012,6 @@ $kadence_post_settings = array(
 		),
 		'input_attrs'  => array(
 			'tooltip' => __( 'Post Content Background', 'kadence' ),
-		),
-	),
-	'info_post_related_design' => array(
-		'control_type' => 'kadence_title_control',
-		'section'      => 'post_layout_design',
-		'label'        => esc_html__( 'Related Posts Section', 'kadence' ),
-		'settings'     => false,
-		'context'      => array(
-			array(
-				'setting'    => 'post_related',
-				'operator'   => '=',
-				'value'      => true,
-			),
-		),
-	),
-	'post_related_title_font' => array(
-		'control_type' => 'kadence_typography_control',
-		'section'      => 'post_layout_design',
-		'label'        => esc_html__( 'Related Posts Section Title Font', 'kadence' ),
-		'default'      => kadence()->default( 'post_related_title_font' ),
-		'live_method'     => array(
-			array(
-				'type'     => 'css_typography',
-				'selector' => '.site .entry-related h2.entry-related-title',
-				'property' => 'font',
-				'key'      => 'typography',
-			),
-		),
-		'input_attrs'  => array(
-			'id'             => 'post_related_title_font',
-			'headingInherit' => true,
-		),
-		'context'      => array(
-			array(
-				'setting'    => 'post_related',
-				'operator'   => '=',
-				'value'      => true,
-			),
-		),
-	),
-	'post_related_background' => array(
-		'control_type' => 'kadence_background_control',
-		'section'      => 'post_layout_design',
-		'label'        => esc_html__( 'Related Posts Section Background', 'kadence' ),
-		'default'      => kadence()->default( 'post_related_background' ),
-		'live_method'     => array(
-			array(
-				'type'     => 'css_background',
-				'selector' => 'body.single .entry-related',
-				'property' => 'background',
-				'pattern'  => '$',
-				'key'      => 'base',
-			),
-		),
-		'context'      => array(
-			array(
-				'setting'    => 'post_related',
-				'operator'   => '=',
-				'value'      => true,
-			),
-		),
-		'input_attrs'  => array(
-			'tooltip' => __( 'Related Posts Background', 'kadence' ),
 		),
 	),
 );

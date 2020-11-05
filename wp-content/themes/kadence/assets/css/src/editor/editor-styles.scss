@@ -104,7 +104,7 @@ hr {
 	margin-bottom:0;
 }
 ul, ol {
-	margin: 0 0 var(--global-md-spacing);
+	margin: var(--global-md-spacing) 0 0;
 	padding-left: 2em;
 }
 li>ol, li>ul {

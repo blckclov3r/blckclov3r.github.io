@@ -205,20 +205,6 @@ $settings = array(
 		'default'      => kadence()->default( 'tumblr_link' ),
 		'label'        => esc_html__( 'Tumblr', 'kadence' ),
 	),
-	'tiktok_link' => array(
-		'control_type' => 'kadence_text_control',
-		'section'      => 'general_social',
-		'sanitize'     => 'esc_url_raw',
-		'default'      => kadence()->default( 'tiktok_link' ),
-		'label'        => esc_html__( 'Tiktok', 'kadence' ),
-	),
-	'discord_link' => array(
-		'control_type' => 'kadence_text_control',
-		'section'      => 'general_social',
-		'sanitize'     => 'esc_url_raw',
-		'default'      => kadence()->default( 'discord_link' ),
-		'label'        => esc_html__( 'Discord', 'kadence' ),
-	),
 	'email_link' => array(
 		'control_type' => 'kadence_text_control',
 		'section'      => 'general_social',

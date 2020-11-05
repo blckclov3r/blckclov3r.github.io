@@ -1,6 +1,5 @@
 <?php
 /**
- * NOTE: This template is from the TutorLMS plugin is is overridden in Kadence Theme for better theme support of TutorLMS.
  * Template for displaying above lead info
  *
  * @package TutorLMS/Templates
@@ -54,7 +53,7 @@ $profile_url = tutor_utils()->profile_url( $authordata->ID );
 					</div>
 					<div class="tutor-single-course-author-name">
 						<span><?php esc_html_e( 'by', 'kadence' ); ?></span>
-						<a href="<?php echo esc_url( tutor_utils()->profile_url( $authordata->ID ) ); ?>"><?php echo wp_kses_post( get_the_author() ); ?></a>
+						<a href="<?php echo esc_url( tutor_utils()->profile_url( $authordata->ID ) ); ?>"><?php echo get_the_author(); ?></a>
 					</div>
 				</li>
 			<?php } ?>

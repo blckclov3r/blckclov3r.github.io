@@ -1,9 +1,9 @@
 <?php
 /**
- * NOTE: This template is from the TutorLMS plugin is is overridden in Kadence Theme for better theme support of TutorLMS.
  * Template for displaying courses
  *
- * Edited by Kadence Theme, Original Author:
+ * @since v.1.0.0
+ *
  * @author Themeum
  * @url https://themeum.com
  *

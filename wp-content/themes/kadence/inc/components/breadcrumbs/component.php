@@ -23,8 +23,6 @@ use function wp_localize_script;
 use function rank_math_the_breadcrumbs;
 use function yoast_breadcrumb;
 use function seopress_display_breadcrumbs;
-use function is_bbpress;
-use function bbp_breadcrumb;
 
 /**
  * Class for adding custom header support.
@@ -125,13 +123,7 @@ class Component implements Component_Interface, Templating_Component_Interface {
 				echo '</div>';
 			}
 		} else {
-			if ( function_exists( 'is_bbpress' ) && is_bbpress() && function_exists( 'bbp_breadcrumb' ) ) {
-				echo '<div class="kadence-breadcrumbs bbpress-topic-meta">';
-				bbp_breadcrumb();
-				echo '</div>';
-			} else {
-				echo kadence()->get_breadcrumb( $args );
-			}
+			echo wp_kses_post( kadence()->get_breadcrumb( $args ) );
 		}
 	}
 	/**
@@ -164,7 +156,6 @@ class Component implements Component_Interface, Templating_Component_Interface {
 			apply_filters( 'kadence_breadcrumb_args', array() ),
 			array(
 				'home'             => true,
-				'home_icon'        => kadence()->option( 'breadcrumb_home_icon' ),
 				'before'           => '<span class="kadence-bread-current">',
 				'after'            => '</span>',
 				'home_link'        => home_url( '/' ),
@@ -351,12 +342,7 @@ class Component implements Component_Interface, Templating_Component_Interface {
 	 * Get Home Breadcrumb
 	 */
 	private function get_crumbs_frontpage() {
-		if ( $this->settings['home_icon'] ) {
-			$output = $this->settings['link_before'] . '<a href="' . esc_url( $this->settings['home_link'] ) . '" itemprop="url" class="kadence-bc-home" ' . ( $this->args['color_style'] ? 'style="' . esc_attr( $this->args['color_style'] ) . '"' : '' ) . '>' . $this->settings['link_in_before'] . kadence()->get_icon( 'home' ) . $this->settings['link_in_after'] . '</a>' . $this->settings['link_after'];
-		} else {
-			$output = $this->settings['link_before'] . '<a href="' . esc_url( $this->settings['home_link'] ) . '" itemprop="url" class="kadence-bc-home" ' . ( $this->args['color_style'] ? 'style="' . esc_attr( $this->args['color_style'] ) . '"' : '' ) . '>' . $this->settings['link_in_before'] . esc_html( $this->args['home_title'] ) . $this->settings['link_in_after'] . '</a>' . $this->settings['link_after'];
-		}
-		return $output;
+		return $this->settings['link_before'] . '<a href="' . esc_url( $this->settings['home_link'] ) . '" itemprop="url" class="kadence-bc-home" ' . ( $this->args['color_style'] ? 'style="' . esc_attr( $this->args['color_style'] ) . '"' : '' ) . '>' . $this->settings['link_in_before'] . esc_html( $this->args['home_title'] ) . $this->settings['link_in_after'] . '</a>' . $this->settings['link_after'];
 	}
 
 	/**
@@ -458,36 +444,7 @@ class Component implements Component_Interface, Templating_Component_Interface {
 		}
 		return $html . $this->settings['before'] . $this->get_breadcrumb_term_title( get_queried_object() ) . $this->settings['after'];
 	}
-	/**
-	 * Check if has post archive.
-	 *
-	 * @param string $post_type the post type.
-	 */
-	private function check_has_archive( $post_type ) {
-		if ( ! isset( $post_type ) ) {
-			return false;
-		}
-		// find custom post types with archives.
-		$args = array(
-			'has_archive' => true,
-			'_builtin'    => false,
-		);
-		$output = 'names';
-		$archived_custom_post_types = get_post_types( $args, $output );
 
-		// if there are no custom post types, then the current post can't be one.
-		if ( empty( $archived_custom_post_types ) ) {
-			return false;
-		}
-		// check if post type is a supports archives.
-		if ( in_array( $post_type, $archived_custom_post_types ) ) {
-			return true;
-		} else {
-			return false;
-		}
-		// if all else fails, return false.
-		return false;
-	}
 	/**
 	 * Get archive Breadcrumb
 	 *
@@ -514,10 +471,6 @@ class Component implements Component_Interface, Templating_Component_Interface {
 			// Check if url.
 			$parent_title = ( ! empty( $archive_label ) ? $archive_label : 'Archive' );
 			$html        .= sprintf( $this->get_link(), $archive_page, $parent_title ) . $this->get_sep();
-		} elseif ( $this->check_has_archive( get_post_type() ) ) {
-			$post_type_obj = get_post_type_object( get_post_type() );
-			$parent_title  = apply_filters( 'post_type_archive_title', $post_type_obj->labels->name, get_post_type() );
-			$html        .= sprintf( $this->get_link(), get_post_type_archive_link( get_post_type() ), $parent_title ) . $this->get_sep();
 		}
 		return $html;
 	}
@@ -754,9 +707,6 @@ class Component implements Component_Interface, Templating_Component_Interface {
 			if ( isset( $this->post_types[ $post_type ]['custom'] ) ) {
 				$html .= $this->get_custom_crumb( $this->post_types[ $post_type ]['custom'] );
 			}
-		} else {
-			// Archive Page.
-			$html .= $this->get_archive_crumb( '', '' );
 		}
 		$title = ( $this->args['show_title'] ? $this->settings['before'] . get_the_title() . $this->settings['after'] : '' );
 		return $html . $title;

@@ -11,10 +11,6 @@ const {
 	ColorIndicator,
 	Tooltip,
 } = wp.components;
-// /**
-//  * WordPress dependencies
-//  */
-// import { site, Icon } from '@wordpress/icons';
 
 export const SwatchesControl = ( { colors, isPalette, onClick = () => {}, circleSize, circleSpacing } ) => {  
 	const handleClick = ( color, swatch ) => {
@@ -58,10 +54,6 @@ export const SwatchesControl = ( { colors, isPalette, onClick = () => {}, circle
 						onClick={ () => handleClick( c.color, c.slug ) }
 						tabIndex={ 0 }
 						>
-							{/* <Icon
-								className="dashicon"
-								icon={ site }
-							/> */}
 							<Dashicon icon="admin-site" />
 					</Button>
 				</div>

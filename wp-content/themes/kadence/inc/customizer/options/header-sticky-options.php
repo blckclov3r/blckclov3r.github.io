@@ -75,21 +75,6 @@ $settings = array(
 			),
 		),
 	),
-	'header_reveal_scroll_up' => array(
-		'control_type' => 'kadence_switch_control',
-		'sanitize'     => 'kadence_sanitize_toggle',
-		'section'      => 'header_sticky',
-		'default'      => kadence()->default( 'header_reveal_scroll_up' ),
-		'label'        => esc_html__( 'Enable Reveal Sticky on Scroll up (*experimental)', 'kadence' ),
-		'transport'    => 'refresh',
-		'context'      => array(
-			array(
-				'setting'  => 'header_sticky',
-				'operator' => '!=',
-				'value'    => 'no',
-			),
-		),
-	),
 	'header_sticky_shrink' => array(
 		'control_type' => 'kadence_switch_control',
 		'sanitize'     => 'kadence_sanitize_toggle',

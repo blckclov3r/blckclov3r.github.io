@@ -89,15 +89,3 @@ body.rtl {
 		text-align: left;
 	}
 }
-// Woo Header.
-.rtl {
-	.header-cart-button {
-		.header-cart-label {
-			padding-left: 5px;
-			padding-right: 0px;
-		}
-		.header-cart-label:empty {
-			padding-left: 0px;
-		}
-	}
-}

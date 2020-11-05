@@ -32,7 +32,7 @@ export const CustomizerLinks = () => {
 		{
 			title: __( 'Sticky Header', 'kadence' ),
 			description: __( 'Set header to stick to top of screen while scrolling.', 'kadence' ),
-			focus: 'kadence_customizer_header_sticky',
+			focus: 'kadence_customizer_sticky_header',
 			type: 'section',
 			setting: false
 		},

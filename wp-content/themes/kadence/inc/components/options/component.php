@@ -15,7 +15,6 @@ use function get_option;
 use function is_null;
 use function wp_parse_args;
 use function add_filter;
-use function add_action;
 
 /**
  * Class for managing stylesheets.
@@ -82,13 +81,6 @@ class Component implements Component_Interface, Templating_Component_Interface {
 	protected static $default_palette = null;
 
 	/**
-	 * Holds default theme option values for cpt
-	 *
-	 * @var default values of the theme.
-	 */
-	protected static $cpt_options = null;
-
-	/**
 	 * Gets the unique identifier for the theme component.
 	 *
 	 * @return string Component slug.
@@ -101,8 +93,7 @@ class Component implements Component_Interface, Templating_Component_Interface {
 	 * Adds the action and filter hooks to integrate with WordPress.
 	 */
 	public function initialize() {
-		add_action( 'wp_loaded', array( $this, 'add_default_options' ) );
-		add_action( 'customize_register', array( $this, 'add_default_options' ), 5 );
+		// add_filter( 'kadence_theme_options_defaults', [ $this, 'add_post_type_options' ] );
 	}
 
 	/**
@@ -123,6 +114,22 @@ class Component implements Component_Interface, Templating_Component_Interface {
 			'palette_option'  => array( $this, 'palette_option' ),
 			'get_palette'     => array( $this, 'get_palette' ),
 		);
+	}
+	/**
+	 * Get all public post types, well be adding defaults for each.
+	 *
+	 * @param array $defaults the theme defaults.
+	 * @return default values of the theme.
+	 */
+	public static function add_post_type_options( $defaults ) {
+		$args       = array(
+			'public' => true,
+		);
+		$output     = 'names'; // names or objects, note names is the default.
+		$operator   = 'and'; // 'and' or 'or'.
+		$post_types = get_post_types( $args, $output, $operator );
+
+		return $defaults;
 	}
 
 	/**
@@ -443,26 +450,8 @@ class Component implements Component_Interface, Templating_Component_Interface {
 							'desktop' => false,
 						),
 					),
-					'buttons_shadow' => array(
-						'color'   => 'rgba(0,0,0,0)',
-						'hOffset' => 0,
-						'vOffset' => 0,
-						'blur'    => 0,
-						'spread'  => -7,
-						'inset'   => false,
-					),
-					'buttons_shadow_hover' => array(
-						'color'   => 'rgba(0,0,0,0.1)',
-						'hOffset' => 0,
-						'vOffset' => 15,
-						'blur'    => 25,
-						'spread'  => -7,
-						'inset'   => false,
-					),
 					'enable_footer_on_bottom' => true,
 					'enable_scroll_to_id'     => true,
-					'lightbox' => false,
-					'enable_popup_body_animate' => true,
 					// Typography.
 					'base_font' => array(
 						'size' => array(
@@ -477,8 +466,7 @@ class Component implements Component_Interface, Templating_Component_Interface {
 						'variant' => 'regular',
 						'color'   => 'palette4',
 					),
-					'google_subsets'      => array(),
-					'load_fonts_local'    => false,
+					'google_font_subsets' => array(),
 					'heading_font'        => array(
 						'family' => 'inherit',
 					),
@@ -604,10 +592,6 @@ class Component implements Component_Interface, Templating_Component_Interface {
 						'korean' => false,
 						'thai' => false,
 						'telugu' => false,
-					),
-					'header_mobile_switch'            => array(
-						'size' => '',
-						'unit' => 'px',
 					),
 					// Header.
 					'header_desktop_items'       => array(
@@ -996,11 +980,8 @@ class Component implements Component_Interface, Templating_Component_Interface {
 						'variant' => '',
 					),
 					// Header Popup.
-					'header_popup_side'           => 'right',
-					'header_popup_layout'         => 'sidepanel',
-					'header_popup_animation'      => 'fade',
-					'header_popup_vertical_align' => 'top',
-					'header_popup_content_align'  => 'left',
+					'header_popup_side'       => 'right',
+					'header_popup_layout'     => 'sidepanel',
 					'header_popup_background' => array(
 						'desktop' => array(
 							'color' => '',
@@ -1075,22 +1056,6 @@ class Component implements Component_Interface, Templating_Component_Interface {
 						'width' => 2,
 						'unit'  => 'px',
 						'style' => 'none',
-					),
-					'header_button_shadow' => array(
-						'color'   => 'rgba(0,0,0,0)',
-						'hOffset' => 0,
-						'vOffset' => 0,
-						'blur'    => 0,
-						'spread'  => -7,
-						'inset'   => false,
-					),
-					'header_button_shadow_hover' => array(
-						'color'   => 'rgba(0,0,0,0.1)',
-						'hOffset' => 0,
-						'vOffset' => 15,
-						'blur'    => 25,
-						'spread'  => -7,
-						'inset'   => false,
 					),
 					'header_button_margin' => array(
 						'size'   => array( '', '', '', '' ),
@@ -1473,7 +1438,6 @@ class Component implements Component_Interface, Templating_Component_Interface {
 					'transparent_header_bottom_border'   => array(),
 					// Sticky Header.
 					'header_sticky'             => 'no',
-					'header_reveal_scroll_up'   => false,
 					'header_sticky_shrink'      => false,
 					'header_sticky_main_shrink' => array(
 						'size' => 60,
@@ -2226,21 +2190,6 @@ class Component implements Component_Interface, Templating_Component_Interface {
 					'post_navigation'         => true,
 					'post_related'            => true,
 					'post_related_style'      => 'wide',
-					'post_related_columns'    => '',
-					'post_related_title_font' => array(
-						'size' => array(
-							'desktop' => '',
-						),
-						'lineHeight' => array(
-							'desktop' => '',
-						),
-						'family'  => 'inherit',
-						'google'  => false,
-						'weight'  => '',
-						'variant' => '',
-						'color'   => '',
-					),
-					'post_related_background' => '',
 					'post_tags'               => true,
 					'post_author_box'         => false,
 					'post_author_box_style'   => 'normal',
@@ -2400,7 +2349,6 @@ class Component implements Component_Interface, Templating_Component_Interface {
 					// enable_preload css style sheets.
 					'enable_preload' => false,
 					'breadcrumb_engine' => '',
-					'breadcrumb_home_icon' => false,
 					// Post Archive.
 					'post_archive_title'              => true,
 					'post_archive_home_title'         => false,
@@ -2769,7 +2717,6 @@ class Component implements Component_Interface, Templating_Component_Interface {
 						'color'   => '',
 					),
 					// Product Controls.
-					'custom_quantity'                => false,
 					'product_archive_mobile_columns' => 'default',
 					'product_layout'             => 'normal',
 					'product_content_style'      => 'unboxed',
@@ -3066,7 +3013,6 @@ class Component implements Component_Interface, Templating_Component_Interface {
 					'course_feature'            => false,
 					'course_feature_position'   => 'behind',
 					'course_feature_ratio'      => '2-3',
-					'course_comments'            => false,
 					'course_background'         => '',
 					'course_content_background' => '',
 					'course_title'              => true,
@@ -3143,7 +3089,6 @@ class Component implements Component_Interface, Templating_Component_Interface {
 					'lesson_vertical_padding'   => 'show',
 					'lesson_sidebar_id'         => 'llms_lesson_widgets_side',
 					'lesson_feature'            => false,
-					'lesson_comments'            => false,
 					'lesson_feature_position'   => 'behind',
 					'lesson_feature_ratio'      => '2-3',
 					'lesson_background'         => '',
@@ -3784,259 +3729,6 @@ class Component implements Component_Interface, Templating_Component_Interface {
 	}
 
 	/**
-	 * Add Custom Post type Defaults later in WordPress Load.
-	 */
-	public function add_default_options() {
-		if ( is_null( self::$cpt_options ) ) {
-			$add_options = array();
-			$all_post_types    = kadence()->get_post_types_objects();
-			$extras_post_types = array();
-			$add_extras        = false;
-			foreach ( $all_post_types as $post_type_item ) {
-				$post_type_name  = $post_type_item->name;
-				$post_type_label = $post_type_item->label;
-				$ignore_type     = kadence()->get_post_types_to_ignore();
-				if ( ! in_array( $post_type_name, $ignore_type, true ) ) {
-					// Single Items.
-					$add_options[ $post_type_name . '_feature' ] = false;
-					$add_options[ $post_type_name . '_feature_position' ] = 'behind';
-					$add_options[ $post_type_name . '_feature_ratio' ] = '2-3';
-					$add_options[ $post_type_name . '_background' ] = '';
-					$add_options[ $post_type_name . '_content_background' ] = '';
-					$add_options[ $post_type_name . '_title' ] = true;
-					$add_options[ $post_type_name . '_title_layout' ] = 'normal';
-					$add_options[ $post_type_name . '_title_height' ] = array(
-						'size' => array(
-							'mobile'  => '',
-							'tablet'  => '',
-							'desktop' => '',
-						),
-						'unit' => array(
-							'mobile'  => 'px',
-							'tablet'  => 'px',
-							'desktop' => 'px',
-						),
-					);
-					$add_options[ $post_type_name . '_title_inner_layout' ] = 'standard';
-					$add_options[ $post_type_name . '_title_background' ] = array(
-						'desktop' => array(
-							'color' => '',
-						),
-					);
-					$add_options[ $post_type_name . '_title_featured_image' ] = false;
-					$add_options[ $post_type_name . '_title_overlay_color' ] = array(
-						'color' => '',
-					);
-					$add_options[ $post_type_name . '_title_top_border' ] = array();
-					$add_options[ $post_type_name . '_title_bottom_border' ] = array();
-					$add_options[ $post_type_name . '_title_align' ] = array(
-						'mobile'  => '',
-						'tablet'  => '',
-						'desktop' => '',
-					);
-					$add_options[ $post_type_name . '_title_font' ] = array(
-						'size' => array(
-							'desktop' => '',
-						),
-						'lineHeight' => array(
-							'desktop' => '',
-						),
-						'family'  => 'inherit',
-						'google'  => false,
-						'weight'  => '',
-						'variant' => '',
-						'color'   => '',
-					);
-					$add_options[ $post_type_name . '_title_breadcrumb_color' ] = array(
-						'color' => '',
-						'hover' => '',
-					);
-					$add_options[ $post_type_name . '_title_breadcrumb_font' ] = array(
-						'size' => array(
-							'desktop' => '',
-						),
-						'lineHeight' => array(
-							'desktop' => '',
-						),
-						'family'  => 'inherit',
-						'google'  => false,
-						'weight'  => '',
-						'variant' => '',
-					);
-					$add_options[ $post_type_name . '_title_meta_color' ] = array(
-						'color' => '',
-						'hover' => '',
-					);
-					$add_options[ $post_type_name . '_title_meta_font' ] = array(
-						'size' => array(
-							'desktop' => '',
-						),
-						'lineHeight' => array(
-							'desktop' => '',
-						),
-						'family'  => 'inherit',
-						'google'  => false,
-						'weight'  => '',
-						'variant' => '',
-					);
-					$add_options[ $post_type_name . '_title_elements' ] = array( 'title', 'breadcrumb', 'meta' );
-					$add_options[ $post_type_name . '_title_element_title' ] = array(
-						'enabled' => true,
-					);
-					$add_options[ $post_type_name . '_title_element_breadcrumb' ] = array(
-						'enabled'    => false,
-						'show_title' => true,
-					);
-					$add_options[ $post_type_name . '_title_element_meta' ] = array(
-						'id'                     => 'meta',
-						'enabled'                => false,
-						'divider'                => 'dot',
-						'author'                 => true,
-						'authorImage'            => true,
-						'authorEnableLabel'      => true,
-						'authorLabel'            => '',
-						'date'                   => true,
-						'dateEnableLabel'        => false,
-						'dateLabel'              => '',
-						'dateUpdated'            => false,
-						'dateUpdatedEnableLabel' => false,
-						'dateUpdatedLabel'       => '',
-						'comments'               => false,
-					);
-					$add_options[ $post_type_name . '_archive_title_height' ] = array(
-						'size' => array(
-							'mobile'  => '',
-							'tablet'  => '',
-							'desktop' => '',
-						),
-						'unit' => array(
-							'mobile'  => 'px',
-							'tablet'  => 'px',
-							'desktop' => 'px',
-						),
-					);
-					$add_options[ $post_type_name . '_archive_title_elements' ] = array( 'breadcrumb', 'title', 'description' );
-					$add_options[ $post_type_name . '_archive_title_element_title' ] = array(
-						'enabled' => true,
-					);
-					$add_options[ $post_type_name . '_archive_title_element_breadcrumb' ] = array(
-						'enabled' => false,
-						'show_title' => true,
-					);
-					$add_options[ $post_type_name . '_archive_title_element_description' ] = array(
-						'enabled' => true,
-					);
-					$add_options[ $post_type_name . '_archive_title_background' ] = array(
-						'desktop' => array(
-							'color' => '',
-						),
-					);
-					$add_options[ $post_type_name . '_archive_title_align' ] = array(
-						'mobile'  => '',
-						'tablet'  => '',
-						'desktop' => '',
-					);
-					$add_options[ $post_type_name . '_archive_title_overlay_color' ] = array(
-						'color' => '',
-					);
-					$add_options[ $post_type_name . '_archive_title_breadcrumb_color' ] = array(
-						'color' => '',
-						'hover' => '',
-					);
-					$add_options[ $post_type_name . '_archive_title_color' ] = array(
-						'color' => '',
-					);
-					$add_options[ $post_type_name . '_archive_description_color' ] = array(
-						'color' => '',
-						'hover' => '',
-					);
-					$add_options[ $post_type_name . '_archive_layout' ] = 'normal';
-					$add_options[ $post_type_name . '_archive_content_style' ] = 'boxed';
-					$add_options[ $post_type_name . '_archive_columns' ] = '3';
-					$add_options[ $post_type_name . '_archive_item_image_placement' ] = 'above';
-					$add_options[ $post_type_name . '_archive_sidebar_id' ] = 'sidebar-primary';
-					$add_options[ $post_type_name . '_archive_elements' ] = array( 'feature', 'categories', 'title', 'meta', 'excerpt', 'readmore' );
-					$add_options[ $post_type_name . '_archive_element_categories' ] = array(
-						'enabled' => true,
-						'style'   => 'normal',
-						'divider' => 'vline',
-					);
-					$add_options[ $post_type_name . '_archive_element_title' ] = array(
-						'enabled' => true,
-					);
-					$add_options[ $post_type_name . '_archive_element_meta' ] = array(
-						'id'                     => 'meta',
-						'enabled'                => false,
-						'divider'                => 'dot',
-						'author'                 => true,
-						'authorLink'             => true,
-						'authorImage'            => true,
-						'authorImageSize'        => 25,
-						'authorEnableLabel'      => true,
-						'authorLabel'            => '',
-						'date'                   => true,
-						'dateEnableLabel'        => false,
-						'dateLabel'              => '',
-						'dateUpdated'            => false,
-						'dateUpdatedEnableLabel' => false,
-						'dateUpdatedLabel'       => '',
-						'categories'             => false,
-						'categoriesEnableLabel'  => false,
-						'categoriesLabel'        => '',
-						'comments'               => false,
-					);
-					$add_options[ $post_type_name . '_archive_element_feature' ] = array(
-						'enabled' => true,
-						'ratio'   => '2-3',
-						'size'    => 'medium_large',
-					);
-					$add_options[ $post_type_name . '_archive_element_excerpt' ] = array(
-						'enabled'     => true,
-						'words'       => 55,
-						'fullContent' => false,
-					);
-					$add_options[ $post_type_name . '_archive_element_readmore' ] = array(
-						'enabled' => true,
-					);
-					$add_options[ $post_type_name . '_archive_item_title_font' ] = array(
-						'size' => array(
-							'desktop' => '',
-						),
-						'lineHeight' => array(
-							'desktop' => '',
-						),
-						'family'  => '',
-						'google'  => false,
-						'weight'  => '',
-						'variant' => '',
-					);
-					$add_options[ $post_type_name . '_archive_item_meta_color' ] = array(
-						'color' => '',
-						'hover' => '',
-					);
-					$add_options[ $post_type_name . '_archive_item_meta_font' ] = array(
-						'size' => array(
-							'desktop' => '',
-						),
-						'lineHeight' => array(
-							'desktop' => '',
-						),
-						'family'  => 'inherit',
-						'google'  => false,
-						'weight'  => '',
-						'variant' => '',
-					);
-					$add_options[ $post_type_name . '_archive_background' ] = '';
-					$add_options[ $post_type_name . '_archive_content_background' ] = '';
-				}
-			}
-			self::$cpt_options = $add_options;
-			self::$options = wp_parse_args( self::get_options(), self::$cpt_options );
-			self::$default_options = wp_parse_args( self::defaults(), self::$cpt_options );
-		}
-	}
-
-	/**
 	 * Get Default for option.
 	 *
 	 * @param string $key option key.
@@ -4045,7 +3737,7 @@ class Component implements Component_Interface, Templating_Component_Interface {
 
 		$defaults = self::defaults();
 		$value    = ( isset( $defaults[ $key ] ) && '' !== $defaults[ $key ] ) ? $defaults[ $key ] : null;
-		if ( is_null( $value ) ) {
+		if ( is_null ( $value ) ) {
 			$value = $backup;
 		}
 

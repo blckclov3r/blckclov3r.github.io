@@ -17,6 +17,7 @@
  @import "woo/_account.scss";
  @import "woo/_checkout.scss";
  @import "woo/_blocks.scss";
+ @import "woo/_small_screen.scss";
 
 .kadence-header-cart .header-cart-button {
     color: inherit;
@@ -1410,4 +1411,3 @@
      margin: 0.5em 0 0;
      display: block;
  }
- @import "woo/_small_screen.scss";

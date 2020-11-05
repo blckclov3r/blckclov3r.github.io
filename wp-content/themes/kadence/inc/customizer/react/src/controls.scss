@@ -1,52 +1,6 @@
 @import "variables.scss";
 @import "builder-controls.scss";
 @import "icon-controls.scss";
-.components-custom-gradient-picker__gradient-bar:before {
-    content: '';
-    background-image: linear-gradient(45deg, #ddd 25%, transparent 0),linear-gradient(-45deg, #ddd 25%, transparent 0),linear-gradient(45deg, transparent 75%, #ddd 0),linear-gradient(-45deg, transparent 75%, #ddd 0);
-    background-size: 10px 10px;
-    background-position: 0 0,0 5px,5px -5px,-5px 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    position: absolute;
-    z-index: -1;
-    border-radius: 24px;
-}
-.components-custom-gradient-picker__gradient-bar {
-    position: relative;
-}
-.components-custom-gradient-picker__gradient-bar .components-custom-gradient-picker__control-point-button {
-    box-shadow: 0px 0px 0px 2px rgba(0,0,0,.8);
-}
-// Kadence Range CSS
-.kadence-range-control-inner {
-    box-sizing: border-box;
-    align-items: flex-start;
-    display: inline-flex;
-    -webkit-box-pack: start;
-    justify-content: flex-start;
-    padding: 0px;
-    position: relative;
-    width: 100%;
-}
-.kadence-range-control-inner .components-range-control.kadence-range-control-range {
-    flex-grow: 1;
-    margin-bottom: 0;
-}
-.kadence-range-control {
-    width: 100%;
-}
-.kadence-range-control-inner .components-base-control.kt-range-number-input{
-margin-left: 16px;
-margin-bottom: 0;
-flex: 0 1 65px;
-}
-.kadence-control-field button.components-button.kadence-reset span.dashicon {
-    height: auto;
-    width: auto;
-    font-size: 12px;
-}
 #customize-theme-controls .customize-pane-child.accordion-section-content {
 	padding: 12px 24px;
 	.customize-section-title {
@@ -331,7 +285,7 @@ flex: 0 1 65px;
 		border: 0;
 		top:0;
 	}
-	> .dashicon {
+	> svg.dashicon {
 		position: absolute;
 		transform: translate(-50%, -50%);
 		left: 50%;
@@ -425,7 +379,7 @@ flex: 0 1 65px;
 		}
 	}
 }
-.components-button.kadence-color-icon-indicate > .dashicon {
+.components-button.kadence-color-icon-indicate > svg.dashicon {
     position: absolute;
     transform: translate(-50%, -50%);
     left: 50%;
@@ -1263,7 +1217,7 @@ span.border-icon svg {
 }
 
 // Fake Tabs
-#accordion-section-kadence_customizer_sidebar_design, #accordion-section-kadence_customizer_cart_design, #accordion-section-kadence_customizer_product_layout_design, #accordion-section-kadence_customizer_course_layout_design, #accordion-section-kadence_customizer_lesson_layout_design, #accordion-section-kadence_customizer_course_archive_design, #accordion-section-kadence_customizer_header_popup_design, #accordion-section-kadence_customizer_llms_membership_archive_design, #accordion-section-woocommerce_product_catalog_design, #accordion-section-kadence_customizer_post_archive_design, #accordion-section-kadence_customizer_sfwd_courses_layout_design, #accordion-section-kadence_customizer_post_layout_design,#accordion-section-kadence_customizer_header_transparent_design, #accordion-section-woocommerce_store_notice_design, #accordion-section-kadence_customizer_scroll_up_design, li#accordion-section-kadence_customizer_courses_layout_design, #accordion-section-kadence_customizer_sfwd_groups_layout_design, #accordion-section-kadence_customizer_sfwd_essays_layout_design, #accordion-section-kadence_customizer_search_design, #accordion-section-kadence_customizer_sfwd_lesson_layout_design, #accordion-section-kadence_customizer_sfwd_topic_layout_design, #accordion-section-kadence_customizer_sfwd_grid_layout_design, li.accordion-section.control-section-design-hidden {
+#accordion-section-kadence_customizer_sidebar_design, #accordion-section-kadence_customizer_cart_design, #accordion-section-kadence_customizer_product_layout_design, #accordion-section-kadence_customizer_course_layout_design, #accordion-section-kadence_customizer_lesson_layout_design, #accordion-section-kadence_customizer_course_archive_design, #accordion-section-kadence_customizer_header_popup_design, #accordion-section-kadence_customizer_llms_membership_archive_design, #accordion-section-woocommerce_product_catalog_design, #accordion-section-kadence_customizer_post_archive_design, #accordion-section-kadence_customizer_sfwd_courses_layout_design, #accordion-section-kadence_customizer_post_layout_design,#accordion-section-kadence_customizer_header_transparent_design, #accordion-section-woocommerce_store_notice_design, #accordion-section-kadence_customizer_scroll_up_design, li#accordion-section-kadence_customizer_courses_layout_design, #accordion-section-kadence_customizer_sfwd_groups_layout_design, #accordion-section-kadence_customizer_sfwd_essays_layout_design, #accordion-section-kadence_customizer_search_design, #accordion-section-kadence_customizer_sfwd_lesson_layout_design, #accordion-section-kadence_customizer_sfwd_topic_layout_design, #accordion-section-kadence_customizer_sfwd_grid_layout_design {
     display: none !important;
 }
 .kadence-prevent-transition {
@@ -1275,7 +1229,7 @@ span.border-icon svg {
     z-index: 10000000;
 }
 .kadence-popover-color .components-circular-option-picker .components-popover.components-custom-gradient-picker__color-picker-popover {
-    top:40px !important;
+    top:-0px !important;
     left:30px !important;
     bottom:auto !important;
 }
@@ -1433,43 +1387,3 @@ p.kt-box-shadow-title {
 	}
 }
  @keyframes kadence-animate__appear-animation{0%{opacity:0;transform:scaleY(0) scaleX(1)}to{opacity:1;transform:translateY(0) scaleY(1) scaleX(1)}}
- .rtl .kadence-color-picker-wrap .components-popover.kadence-popover-color.is-from-right, .rtl .kadence-color-picker-wrap .components-popover.kadence-popover-color.is-from-left, .rtl .kadence-background-picker-wrap .components-popover.kadence-popover-color.is-from-left, .rtl .kadence-background-picker-wrap .components-popover.kadence-popover-color.is-from-right {
-    left: auto !important;
-}
-.kadence-builder-areas {
-    padding-left: 20px;
-}
-.kadence-builder-areas.popup-vertical-group {
-	padding-left: 0;
-	padding-top: 26px;
-}
-.kadence-builder-areas.popup-vertical-group button.components-button.kadence-row-actions {
-    top:0;
-    opacity: 1;
-    width:calc( 100% - 20px );
-}
-.kadence-builder-areas button.components-button.kadence-row-actions {
-    left: 0;
-}
-.kadence-builder-areas button.components-button.kadence-row-left-actions {
-    position: absolute;
-    left: 0;
-    height: 100%;
-    min-width: 0;
-    width: 20px;
-    padding: 0;
-    color: #c8dbe4;
-    box-shadow: none !important;
-    background: #007cba;
-    border-radius: 0;
-	font-size: 10px;
-	&:hover {
-		color: white;
-	}
-}
-.kadence-builder-areas.popup-vertical-group button.components-button.kadence-row-left-actions {
-    display: none;
-}
-.kadence-builder-areas button.components-button.kadence-row-left-actions .dashicon {
-    width: 12px;
-}

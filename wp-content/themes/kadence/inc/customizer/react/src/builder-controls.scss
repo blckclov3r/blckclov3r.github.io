@@ -149,7 +149,7 @@
 	max-height: 60%;
 	overflow: auto;
 	transform: translateY(100%);
-	transition: transform 0.1s ease;
+	transition: all 0.2s;
 	backface-visibility: hidden;
 }
 @media ( min-width: 1660px ) {
@@ -160,7 +160,7 @@
 #customize-theme-controls #sub-accordion-section-kadence_customizer_header_builder.kadence-builder-active, #customize-theme-controls #sub-accordion-section-kadence_customizer_footer_builder.kadence-footer-builder-active {
 	transform: translateY(0%);
 	visibility: visible;
-	overflow: visible;
+	overflow: auto;
 }
 #customize-theme-controls #sub-accordion-section-kadence_customizer_header_builder.kadence-builder-active.kadence-builder-hide, #customize-theme-controls #sub-accordion-section-kadence_customizer_footer_builder.kadence-footer-builder-active.kadence-builder-hide {
 	transform: translateY(100%) !important;
