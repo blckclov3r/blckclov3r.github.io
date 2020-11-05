@@ -20,10 +20,8 @@ class Library_Source extends Source_Base {
 
 	/**
 	 * Template info api url
-	 *
-	 * Updated api to v2 in version 2.15.0
 	 */
-	const API_TEMPLATES_INFO_URL = 'https://templates.happyaddons.com/wp-json/ha/v2/templates-info';
+	const API_TEMPLATES_INFO_URL = 'https://templates.happyaddons.com/wp-json/ha/v1/templates-info';
 
 	/**
 	 * Template data api url
@@ -74,12 +72,6 @@ class Library_Source extends Source_Base {
 		$library_data = self::get_library_data();
 
 		return ( ! empty( $library_data['tags'] ) ? $library_data['tags'] : [] );
-	}
-
-	public function get_type_tags() {
-		$library_data = self::get_library_data();
-
-		return ( ! empty( $library_data['type_tags'] ) ? $library_data['type_tags'] : [] );
 	}
 
 	/**

@@ -324,21 +324,6 @@ class Data_Table extends Base {
 		);
 
 		$repeater->add_control(
-			'cell_link',
-			[
-				'label' => __( 'Link', 'happy-elementor-addons' ),
-				'type' => Controls_Manager::URL,
-				'placeholder' => 'https://example.com',
-				'dynamic' => [
-					'active' => true,
-				],
-				'condition' => [
-					'row_column_type' => 'column'
-				],
-			]
-		);
-
-		$repeater->add_control(
 			'row_column_span',
 			[
 				'label' => __( 'Col Span', 'happy-elementor-addons' ),
@@ -861,17 +846,6 @@ class Data_Table extends Base {
 			]
 		);
 
-		$this->add_control(
-			'row_text_link_color',
-			[
-				'label' => __( 'Link Color', 'happy-elementor-addons' ),
-				'type' => Controls_Manager::COLOR,
-				'selectors' => [
-					'{{WRAPPER}} .ha-table__body .ha-table__body-row-cell-text a' => 'color: {{VALUE}}',
-				],
-			]
-		);
-
 		$this->end_controls_tab();
 
 		$this->start_controls_tab(
@@ -931,17 +905,6 @@ class Data_Table extends Base {
 					'(desktop){{WRAPPER}} .ha-table__body .ha-table__body-row:nth-child(odd):hover .ha-table__body-row-cell-wrap' => 'color: {{VALUE}}',
 					'(tablet){{WRAPPER}} .ha-table__body .ha-table__body-row:nth-child(odd):hover .ha-table__body-row-cell-wrap' => 'color: {{VALUE}}',
 					'(mobile){{WRAPPER}} .ha-table__body .ha-table__body-row-cell:nth-child(odd):hover .ha-table__body-row-cell-wrap' => 'color: {{VALUE}}'
-				],
-			]
-		);
-
-		$this->add_control(
-			'row_text_link_hover_color',
-			[
-				'label' => __( 'Link Color', 'happy-elementor-addons' ),
-				'type' => Controls_Manager::COLOR,
-				'selectors' => [
-					'{{WRAPPER}} .ha-table__body .ha-table__body-row-cell-text a:hover' => 'color: {{VALUE}}',
 				],
 			]
 		);
@@ -1069,7 +1032,6 @@ class Data_Table extends Base {
 					'row_icon_show' => ! empty( $row['row_icon_show'] ) ? $row['row_icon_show'] : '',
 					'row_image' => array_key_exists( 'row_image', $row ) ? $row['row_image'] : '',
 					'row_thumbnail_size' => !empty( $row['row_thumbnail_size'] ) ? $row['row_thumbnail_size'] : '',
-					'cell_link' => !empty( $row['cell_link']['url'] ) ? $row['cell_link'] : '',
 				];
 			}
 
@@ -1128,27 +1090,10 @@ class Data_Table extends Base {
 								if ( ! empty( $table_cell[$j]['row_span'] ) ) {
 									$this->add_render_attribute( $row_span_repeater_key, 'rowspan', $table_cell[$j]['row_span'] );
 								}
-
-								 // link
-								 if ( ! empty( $table_cell[$j]['cell_link']['url'] ) ) {
-									$row_link_key = $this->get_repeater_setting_key( 'cell_link', 'rows_data', $table_cell[$j]['row_id'].$i.$j );
-									$this->add_link_attributes( $row_link_key, $table_cell[$j]['cell_link'] );
-								}
 							?>
 								<td <?php echo $this->get_render_attribute_string( $row_span_repeater_key ); ?>>
 									<div class="ha-table__body-row-cell-wrap">
-										<div class="ha-table__body-row-cell-text">
-											<?php 
-											if ( ! empty( $table_cell[$j]['cell_link']['url'] ) ) :
-												?>
-												 <a <?php $this->print_render_attribute_string( $row_link_key ); ?>>
-												 	<?php echo esc_html( $table_cell[$j]['title'] );  ?>
-												</a>
-												<?php
-												else: echo esc_html( $table_cell[$j]['title'] ); 
-											endif;
-											?>
-										</div>
+										<div class="ha-table__body-row-cell-text"><?php echo esc_html( $table_cell[$j]['title'] ); ?></div>
 
 										<?php if ( ! empty( $table_cell[$j]['row_icons'] ) ) : ?>
 											<div class="ha-table__body-row-cell-icon">

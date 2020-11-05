@@ -105,15 +105,6 @@ class Library_Manager {
 		return $data;
 	}
 
-	/**
-	 * Get library data from cache or remote
-	 *
-	 * type_tags has been added in version 2.15.0
-	 *
-	 * @param array $args
-	 *
-	 * @return array
-	 */
 	public static function get_library_data( array $args ) {
 		$source = self::get_source();
 
@@ -123,8 +114,7 @@ class Library_Manager {
 
 		return [
 			'templates' => $source->get_items(),
-			'tags'      => $source->get_tags(),
-			'type_tags' => $source->get_type_tags(),
+			'tags' => $source->get_tags(),
 		];
 	}
 }

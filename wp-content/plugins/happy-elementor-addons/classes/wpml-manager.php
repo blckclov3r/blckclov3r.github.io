@@ -10,27 +10,6 @@ class WPML_Manager {
 
 	public static function init() {
 		add_filter( 'wpml_elementor_widgets_to_translate', [ __CLASS__, 'add_widgets_to_translate' ] );
-		add_action( 'wpml_translation_job_saved', [ __CLASS__, 'on_translation_job_saved' ], 10, 3 );
-	}
-
-	/**
-	 * Recreate HappyAddons widgets usage on transtion save
-	 *
-	 * @param int $new_post_id
-	 * @param array $fields
-	 * @param object $job
-	 *
-	 * @return void
-	 */
-	public static function on_translation_job_saved( $new_post_id, $fields, $job ) {
-		$elements_data = get_post_meta( $job->original_doc_id, Widgets_Cache::META_KEY, true );
-
-		if ( ! empty( $elements_data ) ) {
-			update_post_meta( $new_post_id, Widgets_Cache::META_KEY, $elements_data );
-
-			$assets_cache = new Assets_Cache( $new_post_id );
-			$assets_cache->delete();
-		}
 	}
 
 	public static function load_integration_files() {

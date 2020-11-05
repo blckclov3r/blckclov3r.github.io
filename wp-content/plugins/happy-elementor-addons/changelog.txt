@@ -1,18 +1,4 @@
-= 2.15.0 - 4 November 2020 =
-
-- New: Ready made page templates (Happy Templates)
-- New: Horizontal TimeLine widget
-- New: Social Share widget
-- New: Happy Icons v4 (44 new icons)
-- Tweak: Data Table row-cell text link option 
-- Fix: On Demand Assets Loading compatibility with WPML
-- Fix: Post Tab widget compatibility with WPML
-- Fix: News Ticker widget compatibility with WPML
-- Fix: Pricing Table long feature text breaks into 2nd line issue
-- Fix: Pricing Table default style and content issue
-- Fix: Text domain inconsistency
-
-= 2.14.3 - 12 October 2020 =
+= 2.14.3 - 2.14.3 October 2020 =
 
 - Update: Appsero client updated to `v1.2.0`
 - Tweak: Added Calendy pro feature notice

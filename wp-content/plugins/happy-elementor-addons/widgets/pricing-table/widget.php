@@ -289,10 +289,7 @@ class Pricing_Table extends Base {
                 'placeholder' => 'https://example.com',
                 'dynamic' => [
                     'active' => true,
-				],
-				'default' => [
-					'url' => '#'
-				]
+                ],
             ]
         );
 

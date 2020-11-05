@@ -831,11 +831,10 @@ class Post_Tab extends Base {
 		$filter_list = get_terms( $terms_args );
 
 		$post_args = [
-			'post_status'      => 'publish',
-			'post_type'        => $settings['post_type'],
-			'posts_per_page'   => $settings['item_limit'],
-			'suppress_filters' => false,
-			'tax_query'        => array(
+			'post_status' => 'publish',
+			'post_type' => $settings['post_type'],
+			'posts_per_page' => $settings['item_limit'],
+			'tax_query' => array(
 				array(
 					'taxonomy' => $taxonomy,
 					'field' => 'term_id',
@@ -843,7 +842,6 @@ class Post_Tab extends Base {
 				),
 			),
 		];
-
 		$posts = get_posts( $post_args );
 
 		$query_settings = [

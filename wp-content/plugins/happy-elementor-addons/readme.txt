@@ -1,6 +1,6 @@
 === Happy Addons for Elementor ===
 Plugin Name: Happy Addons for Elementor
-Version: 2.15.0
+Version: 2.14.3
 Author: weDevs
 Author URI: https://happyaddons.com/
 Contributors: thehappymonster, happyaddons, hasinhayder, mosaddek73, tareq1988, sourav926, wedevs, iqbalrony, mrokon, obiplabon
@@ -24,49 +24,46 @@ This Elementor based plugin is the latest addition in the list of [weDevs](https
 
 Officially recommended by Elementor Page Builder! We are now listed on their [official addons page](https://elementor.com/addons/).
 
-### **39+ FREE PREMIUM-LIKE WIDGETS AND MORE ON ITS WAY**
+### **35+ FREE PREMIUM-LIKE WIDGETS AND MORE ON ITS WAY**
 
 Unlike most other Elementor addons, Happy Addons offers itself with many robust free widgets. These free yet important widgets would surely give you a feel of premium widgets making you wonder how come these widgets are free. Let's explore all the magical free widgets of Happy Addons:
 
 - [**Card**](https://demo.happyaddons.com/elementor-card-widget-demo/) – Incredibly powerful widget to demonstrate your products, articles, news, creative posts using a beautiful combination of texts, links, badge, and image. Using built-in positioning and offset feature you can create eye-candy designs in a twist.
+- [**Gradient Heading**](https://demo.happyaddons.com/elementor-gradient-heading-widget-demo/) – Another gem to create eye candy headings for your websites. You can apply different gradient styles, angles, opacity, and positions to make them look even better across different device screens.
 - [**Info Box**](https://demo.happyaddons.com/elementor-info-box-widget-demo/) – Create beautiful information boxes using icons, links, and texts, and make them slick using the built-in positioning features.
 - [**Icon Box**](https://demo.happyaddons.com/elementor-icon-box-widget-demo/) – A simplified version of Infobox but comes with powerful display features. Perfect for showcasing interesting information to your users in various styles.
-- [**Skill Bars**](https://demo.happyaddons.com/elementor-skill-bars-widget-demo/) – An essential building block to showcase user skills, task percentage, required tools, and other progressive information in different ways. It comes with incredible customizing options to suit your needs.
-- [**Review**](https://demo.happyaddons.com/elementor-review-widget-demo/) – Showcase your user feedback, reviews, and rating easily than ever using our review widget. Display user photos, texts and star ratings. Make them stand out using built-in offsets and positioning features.
 - [**Image Compare**](https://demo.happyaddons.com/elementor-image-compare-widget-demo/) – Are you a photo-editor, agency or product designer who often needs to showcase their beautiful works in a form of before and after slider? This widget is perfect for this job. And built-in styling options, vertical and horizontal orientation features can help you design these before-after sections with more creativity.
-- [**Gradient Heading**](https://demo.happyaddons.com/elementor-gradient-heading-widget-demo/) – Another gem to create eye candy headings for your websites. You can apply different gradient styles, angles, opacity, and positions to make them look even better across different device screens.
 - [**Team Member**](https://demo.happyaddons.com/elementor-team-member-widget-demo/) – A perfect widget to showcase your beautiful team in various styles using texts, images, and social links. And just like our other widgets, you will find powerful styling options to make them stand out quite easily.
-- [**Dual Button**](https://demo.happyaddons.com/elementor-dual-button-widget-demo/) – DualButton widget allows you to add two flexible and trendy action buttons in your sections, in different styles.
-- [**Number**](https://demo.happyaddons.com/elementor-number-widget-demo/) – Simply beautiful, this widget can help you create stunning number blocks with various styles, look-n-feels that's literally going to blow your mind.
-- [**Justified Grid**](https://demo.happyaddons.com/elementor-justified-grid-widget-demo/) – Another pro-grade widget that can help you to create the beautiful justified grid. It comes packed with tons of options to make it stand out from the crowd.
-- [**Testimonial**](https://demo.happyaddons.com/elementor-testimonial-widget-demo/) – Create beautiful testimonial sections with different look-n-feels using HappyAddons Testimonial widget.
-- [**Logo Grid**](https://demo.happyaddons.com/elementor-logo-grid-widget-demo) – Showcase your clients or products using our logo grid widget, and display these items with styles.
-- [**Slider**](https://demo.happyaddons.com/elementor-slider-widget-demo/) – Now you can create sliders with beautiful animations and effects using our Slider widget. And just like our other widgets, there are lots of customization options for you.
-- [**Carousel**](https://demo.happyaddons.com/elementor-carousel-widget-demo/) – Create interesting image and text carousels using our carousel widget which comes with a lot of options.
-- [**Image Grid**](https://demo.happyaddons.com/elementor-image-grid-widget-demo/) – Simply beautiful, this widget can help you create stunning number blocks with various styles, look-n-feels that's literally going to blow your mind.
-- [**Step Flow**](https://demo.happyaddons.com/elementor-step-flow-widget-demo/) – Create an excellent step by step visual diagram and instructions using this smart widget. Change directions, counters and make them look amazing with icons, texts, and colors.
-- [**Fun Factor**](https://demo.happyaddons.com/elementor-fun-factor-widget-demo/) - Another power packed widget that can help you create incredible accordions in styles
-- [**Calendly**](https://demo.happyaddons.com/elementor-calendly-widget-demo/) – Schedule meetings without the back-and-forth emails through Calendly. We are happy to integrate this important application in our HappyAddons.
-- [**News Ticker**](https://demo.happyaddons.com/elementor-news-ticker-widget-demo/) – Want to show updates, popular content or messages on your website? With the Happy Elementor Addons Content Ticker widget, you can do this at your disposal with great customizability.
-- [**Social Icon**](https://demo.happyaddons.com/elementor-social-icon-widget-demo/) – Beautifully insert and display your social links onto your webpage using this widget to easily connect with your site visitor.
-- [**Twitter Feed**](https://demo.happyaddons.com/elementor-twitter-feed-widget-demo/) – Showcase your awesome team decorating in the Twitter feed mode applying various styles, texts, images, and social links.
-- [**Bar Chart**](https://demo.happyaddons.com/elementor-bar-chart-widget-demo/) – Display charts in an animated and customizable bar form essentially in case of imaging different data and other relevant statistical visualizations.
-- [**360° Rotation**](https://demo.happyaddons.com/elementor-360-rotation-widget-demo/) - Create 360 Degree rotated images for your Products with this widget. Flexibility to add auto-rotate or click to the rotation functionality. Also, you can add Magnify Button to Zoom-in your pictures.
-- [**Data Table**](https://demo.happyaddons.com/elementor-datatable-widget-demo/) Using a data table on the website is a difficult task if you don't have any coding ideas or knowledge. However, the data table widget of Happy Elementor Addons will solve this problem.
-- [**Pricing Table Lite**](https://demo.happyaddons.com/elementor-pricing-table-widget-demo/) – Create beautiful pricing tables with lots of customizations and sleek look-n-feel using this widget.
-- [**Flip Box Lite**](https://demo.happyaddons.com/elementor-flip-box-widget-demo/) – FlipBox helps you to deliver messages in a beautiful way with before and after-effects.
-- [**Post Tab**](https://demo.happyaddons.com/elementor-post-tab-widget-demo/) – Enable users to present your post in multiple workable tabs ideally useful for grouped and related content.
-- [**Post List**](https://demo.happyaddons.com/elementor-post-list-widget-demo/) – List any post elegantly using this widget displaying them in a creative and innovative manner with multiple options to play with.
-- [**Taxonomy List**](https://demo.happyaddons.com/elementor-taxonomy-widget-demo/) - This widget will help you to create a list of posts by sorting categories, tags, post formats.
-- [**Horizontal TimeLine**]
-- [**Social Share**]
+- [**Review**](https://demo.happyaddons.com/elementor-review-widget-demo/) – Showcase your user feedback, reviews, and rating easily than ever using our review widget. Display user photos, texts and star ratings. Make them stand out using built-in offsets and positioning features.
+- [**Skill Bars**](https://demo.happyaddons.com/elementor-skill-bars-widget-demo/) – An essential building block to showcase user skills, task percentage, required tools, and other progressive information in different ways. It comes with incredible customizing options to suit your needs.
 - [**Contact Form 7**](https://demo.happyaddons.com/elementor-contact-form-7-widget-demo/) – This utility widget helps you to integrate existing forms built using CF7 plugin across your web pages without spending too much time.
 - [**Caldera Forms**](https://demo.happyaddons.com/elementor-caldera-forms-widget-demo/) – This widget can help you to display your caldera forms to display on your web pages designed with Elementor.
 - [**weForms**](https://demo.happyaddons.com/elementor-we-forms-widget-demo/) – Designed forms using weForms plugin and looking for a way to display those on your Elementor powered pages? This is the answer to that.
 - [**Ninja Forms**](https://demo.happyaddons.com/elementor-ninja-form-widget-demo/) – Use this widget to embed forms created using Ninja Forms to display seamlessly on your web pages. Various styling options will help you to look at them even better.
 - [**WPForms**](https://demo.happyaddons.com/elementor-wpform-widget-demo/) – Use this widget to embed forms created using WPForms to display seamlessly on your web pages. Various styling options will help you to look at them even better.
+- [**Dual Button**](https://demo.happyaddons.com/elementor-dual-button-widget-demo/) – DualButton widget allows you to add two flexible and trendy action buttons in your sections, in different styles.
+- [**Testimonial**](https://demo.happyaddons.com/elementor-testimonial-widget-demo/) – Create beautiful testimonial sections with different look-n-feels using HappyAddons Testimonial widget.
+- [**Justified Grid**](https://demo.happyaddons.com/elementor-justified-grid-widget-demo/) – Another pro-grade widget that can help you to create the beautiful justified grid. It comes packed with tons of options to make it stand out from the crowd.
+- [**Number**](https://demo.happyaddons.com/elementor-number-widget-demo/) – Simply beautiful, this widget can help you create stunning number blocks with various styles, look-n-feels that's literally going to blow your mind.
+- [**Logo Grid**](https://demo.happyaddons.com/elementor-logo-grid-widget-demo) – Showcase your clients or products using our logo grid widget, and display these items with styles.
+- [**Carousel**](https://demo.happyaddons.com/elementor-carousel-widget-demo/) – Create interesting image and text carousels using our carousel widget which comes with a lot of options.
+- [**Slider**](https://demo.happyaddons.com/elementor-slider-widget-demo/) – Now you can create sliders with beautiful animations and effects using our Slider widget. And just like our other widgets, there are lots of customization options for you.
+- [**Step Flow**](https://demo.happyaddons.com/elementor-step-flow-widget-demo/) – Create an excellent step by step visual diagram and instructions using this smart widget. Change directions, counters and make them look amazing with icons, texts, and colors.
+- [**Calendly**](https://demo.happyaddons.com/elementor-calendly-widget-demo/) – Schedule meetings without the back-and-forth emails through Calendly. We are happy to integrate this important application in our HappyAddons.
+- [**Flip Box**](https://demo.happyaddons.com/elementor-flip-box-widget-demo/) – FlipBox helps you to deliver messages in a beautiful way with before and after-effects.
+- [**Pricing Table**](https://demo.happyaddons.com/elementor-pricing-table-widget-demo/) – Create beautiful pricing tables with lots of customizations and sleek look-n-feel using this widget.
+- [**Image Grid**](https://demo.happyaddons.com/elementor-image-grid-widget-demo/) – Simply beautiful, this widget can help you create stunning number blocks with various styles, look-n-feels that's literally going to blow your mind.
 - [**Gravity Forms**](https://demo.happyaddons.com/elementor-gravity-form-widget-demo/) – While using Gravity forms, you may want to change the appearance of the form fields. With the Happy Addons, you can spruce up your Gravity forms like a pro.
+- [**News Ticker**](https://demo.happyaddons.com/elementor-news-ticker-widget-demo/) – Want to show updates, popular content or messages on your website? With the Happy Elementor Addons Content Ticker widget, you can do this at your disposal with great customizability.
+- [**Twitter Fee**](https://demo.happyaddons.com/elementor-twitter-feed-widget-demo/) – Showcase your awesome team decorating in the Twitter feed mode applying various styles, texts, images, and social links.
+- [**Bar Chart**](https://demo.happyaddons.com/elementor-bar-chart-widget-demo/) – Display charts in an animated and customizable bar form essentially in case of imaging different data and other relevant statistical visualizations.
+- [**Social Icon**](https://demo.happyaddons.com/elementor-social-icon-widget-demo/) – Beautifully insert and display your social links onto your webpage using this widget to easily connect with your site visitor.
+- [**Post Tab**](https://demo.happyaddons.com/elementor-post-tab-widget-demo/) – Enable users to present your post in multiple workable tabs ideally useful for grouped and related content.
+- [**Post List**](https://demo.happyaddons.com/elementor-post-list-widget-demo/) – List any post elegantly using this widget displaying them in a creative and innovative manner with multiple options to play with.
+- [**360° Rotation**](https://demo.happyaddons.com/elementor-360-rotation-widget-demo/) - Create 360 Degree rotated images for your Products with this widget. Flexibility to add auto-rotate or click to the rotation functionality. Also, you can add Magnify Button to Zoom-in your pictures.
+- [**Taxonomy List**](https://demo.happyaddons.com/elementor-taxonomy-widget-demo/) - This widget will help you to create a list of posts by sorting categories, tags, post formats.
 - [**WP Fluent Forms**](https://demo.happyaddons.com/elementor-fluent-form-widget-demo/) - Easliy customize and use Fluent Forms using this super intuitive widget.
+- [**Data Table**](https://demo.happyaddons.com/elementor-datatable-widget-demo/) Using a data table on the website is a difficult task if you don't have any coding ideas or knowledge. However, the data table widget of Happy Elementor Addons will solve this problem.
 
 New free widgets or features are added every month. With all these awesome free widgets, this nifty plugin, not just aims to the trendy and sophisticated WordPress website design philosophy but also effortlessly aligns with any Elementor powered WordPress website design requirements.
 
@@ -116,42 +113,25 @@ _INTRODUCING HAPPY ADDONS PRO_
 
 If you are still craving for more widgets, then the following premium widgets are there to quench your thirst. The best part is that you can copy and paste the design source code so you won't have to make any design from scratch. Let's explore the world of Happy Addons Pro Widgets:
 
-- [**Feature List**](https://demo.happyaddons.com/elementor-feature-list-widget-demo/) – You can display your product features using different styles using this widget. As a bonus, you can also customize each and every predefined design.
 - [**Pricing Table**](https://demo.happyaddons.com/elementor-pricing-table-widget-demo/) – This one of a kind widget will allow you to create any kind of pricing table under the sun. As a surprise, you can use gradient background, oval-shaped button, font awesome icons, background fill color, different heights, dark mood and so on.
 - [**Flip Box**](https://demo.happyaddons.com/elementor-flip-box-widget-demo-2/) – This exquisite widget will help you show different messages or texts at the time before and after a user hover on a certain element. Just like the other widgets, you can customize this with background image, gutter and circular arrow navigation on both sides.
 - [**Advanced Heading**](https://demo.happyaddons.com/elementor-advanced-heading-widget-demo/) – With this useful widget you can create beautiful heading design for your text. Like the other widgets, you will get a bunch of free customization options for different sections of the texts.
-- [**Hover Box**](https://demo.happyaddons.com/elementor-image-hover-box-widget-demo/) – Give boring images lives by adding dynamic animated texts with this nifty little tool. You can display texts with this tool right after a user hovers an image.
-- [**Team Carousel**](https://demo.happyaddons.com/elementor-team-carousel-widget-demo/) – Present your team members with beautiful carousels that include social profile buttons, arrow icons, and great customizability.
+- [**Animated Text**](https://demo.happyaddons.com/elementor-animated-text-widget-demo/) – This widget is pretty useful to make your text stand apart from the crowd applying smart animations. You can customize the cool animation effects with a variety of flexible styles.
 - [**Scrolling Image**](https://demo.happyaddons.com/elementor-scrolling-image-widget-demo/) – Using this widget, you can show your products or services in a way that slides horizontally or vertically. You can also create a stunning photo gallery with this awesome widget.
+- [**Image Hover Box**](https://demo.happyaddons.com/elementor-image-hover-box-widget-demo/) – Give boring images lives by adding dynamic animated texts with this nifty little tool. You can display texts with this tool right after a user hovers an image.
+- [**Team Carousel**](https://demo.happyaddons.com/elementor-team-carousel-widget-demo/) – Present your team members with beautiful carousels that include social profile buttons, arrow icons, and great customizability.
+- [**Timeline**](https://demo.happyaddons.com/elementor-timeline-widget-demo/) – Tell your story in the precise and the smartest way using this gorgeous tool. Your visitors will get to know everything about the history of your product or company through a bird's eye view.
 - [**Advanced Tab**](https://demo.happyaddons.com/elementor-advanced-tab-widget-demo/) – This Elementor widget will enable you to show your content by creating advanced tabbed content sections using full-controlled customizations. You can also use other widgets inside the tab.
 - [**Advanced Accordion**](https://demo.happyaddons.com/elementor-advanced-accordion-widget-demo/) – Just like the Advanced Tab widget, if you want to provide your user with extra information using a collapsing effect in different directions, then this is the widget to you should go for.
 - [**Testimonial Carousel**](https://demo.happyaddons.com/elementor-testimonial-carousel-widget-demo/) – This widget will provide you with a great way to showcase the recommendations of your customers. You can also control the carousel's movement using various flexible styles.
 - [**Logo Carousel**](https://demo.happyaddons.com/elementor-logo-carousel-widget-demo/) – Unleash your design creativity with this beautiful logo carousel widget and showcase your partners and products using vertical or horizontal motion.
-- [**Animated Text**](https://demo.happyaddons.com/elementor-animated-text-widget-demo/) – This widget is pretty useful to make your text stand apart from the crowd applying smart animations. You can customize the cool animation effects with a variety of flexible styles.
-- [**Timeline**](https://demo.happyaddons.com/elementor-timeline-widget-demo/) – Tell your story in the precise and the smartest way using this gorgeous tool. Your visitors will get to know everything about the history of your product or company through a bird's eye view.
+- [**Countdown**](https://demo.happyaddons.com/elementor-countdown-widget-demo/) – This eye-catching widget will let you set a countdown clock which you can use to show the launch time of your website or prod the customers to take a particular action showing remaining time.
+- [**Business Hour**](https://demo.happyaddons.com/elementor-business-hour-widget-demo/) – This widget will help you show the business hours in a tabular form. Your customers will get to know when your business is open or closed.
 - [**Instagram Feed**](https://demo.happyaddons.com/elementor-instagram-feed-widget-demo/) – This widget will pave you the way to dynamically show you your beautiful Instagram photos seamlessly on your website page. Users can interact with your photos and leave a comment.
 - [**Advanced Toggle**](https://demo.happyaddons.com/elementor-advanced-toggle-widget-demo/) – Similar to the Accordion widget, this will allow you to create a collapsible container area that will enable the user to show and hide items provided that the user clicks on it.
 - [**List Group**](https://demo.happyaddons.com/elementor-list-group-widget-demo/) – With this incredibly handy widget, you can craft beautiful lists. You can also apply advanced styles to give the appearance of the items just like the way you want it.
-- [**Countdown**](https://demo.happyaddons.com/elementor-countdown-widget-demo/) – This eye-catching widget will let you set a countdown clock which you can use to show the launch time of your website or prod the customers to take a particular action showing remaining time.
+- [**Feature List**](https://demo.happyaddons.com/elementor-feature-list-widget-demo/) – You can display your product features using different styles using this widget. As a bonus, you can also customize each and every predefined design.
 - [**Source Code**](https://demo.happyaddons.com/elementor-source-code-widget-demo/) – While writing docs or tutorial posts, you can use this widget to skillfully show codes to your visitors so that they can copy and paste them anywhere on the page at their disposal.
-- [**Promo Box**](https://demo.happyaddons.com/elementor-promo-box-widget-demo/) - Promote anything in a more lucrative way with the promo box widget of HappyAddons. And clearly stay ahead in the competition
-- [**Hot Spot**](https://demo.happyaddons.com/elementor-hot-spot-widgets-demo/) - Another power packed widget that can help you create incredible accordions in styles
-- [**Price Menu**](https://demo.happyaddons.com/elementor-price-menu-widget-demo/) - Display your food menu list with or without price in a decent and creative way with this full flexible widget
-- [**Business Hour**](https://demo.happyaddons.com/elementor-business-hour-widget-demo/) – This widget will help you show the business hours in a tabular form. Your customers will get to know when your business is open or closed.
-- [**Line Chart**](https://demo.happyaddons.com/elementor-line-chart-widget-demo/) - Visualize your data in different ways; each of them animated and customisable
-- [**Pie & Doughnut Chart**](https://demo.happyaddons.com/elementor-pie-doughnut-chart-widget-demo/) - Visualize your data in different ways; each of them animated and customisable
-- [**Polar Area Chart**](https://demo.happyaddons.com/elementor-polar-area-chart-widget-demo/) - Visualize your data in different ways; each of them animated and customisable
-- [**Radar Chart**](https://demo.happyaddons.com/elementor-radar-chart-widget-demo/) - Visualize your data in different ways; each of them animated and customisable
-- [**Facebook Feed**](https://demo.happyaddons.com/elementor-facebook-feed-widget-demo/) - Show the feed of you facebook page in your website in different and creative way through happyaddons and elementor
-- [**Twitter Feed Carousel**](https://demo.happyaddons.com/elementor-twitter-feed-carousel-widget-demo/) - Showcase your awesome team decorating in the Twitter feed mode applying various styles, texts, images, and social links
-- [**Breadcrumbs**](https://demo.happyaddons.com/elementor-breadcrumb-widget-demo/) - Visualize your breadcrumbs in different ways; each of them customisable
-- [**Sticky Video**](https://demo.happyaddons.com/elementor-sticky-video-widget-demo/) - From now, you can set sticky videos with the HappyAddons sticky video widget. Also, you will get plenty of options to manage your videos in an advanced way
-- [**Post Grid**](https://demo.happyaddons.com/elementor-post-grid-widget-demo/) - Scale your blog archive page with the HappyAddons Post Grid widget. It comes with predefined skins, so you spend less time designing your blog page
-- [**Post Tiles**](https://demo.happyaddons.com/elementor-post-tiles-widget-demo/) - Now you can showcase your most desirable blog posts exclusively with the Post Tiles widget of Happy Elementor Addons. It’s available with predefined tiles set to achieve an elegant look
-- [**Smart Post List**](https://demo.happyaddons.com/elementor-smart-post-list-widget-demo/) - Are you looking for a magnificent listing facility with the highlighted option for your sticky featured article? HappyAddons Smart Post list widget will handle all of your desirable styles smartly, like featuring the sticky post, filterable post list, and more
-- [**Post Carousel**](https://demo.happyaddons.com/elementor-post-carousel-widget-demo/) - The Post carousel feature is now trendy in News Portals or other blogging sites to grab visitors’ attention. Now you can create a stunning post carousel for your site with the HappyAddons Post Carousel widget
-- [**Author List**](https://demo.happyaddons.com/elementor-author-list-widget-demo/) - Decently showcase your creative writers with the HappyAddons Author List widget. It will help you to display all of your authors in one place
-
 
 ### **UNIQUE PRO FEATURES OF HAPPY ADDONS TO WATCH OUT FOR**
 
@@ -278,20 +258,6 @@ For a more detailed explanation check out the following documentation
 
 
 == Changelog ==
-
-= 2.15.0 - 4 November 2020 =
-
-- New: Ready made page templates (Happy Templates)
-- New: Horizontal TimeLine widget
-- New: Social Share widget
-- New: Happy Icons v4 (44 new icons)
-- Tweak: Data Table row-cell text link option 
-- Fix: On Demand Assets Loading compatibility with WPML
-- Fix: Post Tab widget compatibility with WPML
-- Fix: News Ticker widget compatibility with WPML
-- Fix: Pricing Table long feature text breaks into 2nd line issue
-- Fix: Pricing Table default style and content issue
-- Fix: Text domain inconsistency
 
 = 2.14.3 - 12 October 2020 =
 

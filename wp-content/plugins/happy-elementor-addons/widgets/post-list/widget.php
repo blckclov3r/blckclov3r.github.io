@@ -1024,35 +1024,29 @@ class Post_List extends Base {
 	protected function render () {
 
 		$settings = $this->get_settings_for_display();
-
+		
 		if ( ! $settings['post_type'] ){
 			return;
 		}
-
 		$args = [
-			'post_status'      => 'publish',
-			'post_type'        => $settings['post_type'],
-			'suppress_filters' => false,
+			'post_status' => 'publish',
+			'post_type' => $settings['post_type'],
 		];
-
 		if ( 'recent' === $settings['show_post_by'] ) {
 			$args['posts_per_page'] = $settings['posts_per_page'];
 		}
 
 		$customize_title = [];
 		$ids = [];
-
 		if ( 'selected' === $settings['show_post_by'] ) {
 			$args['posts_per_page'] = -1;
 			$lists = $settings['selected_list_' . $settings['post_type']];
-
 			if ( ! empty( $lists ) ) {
 				foreach ( $lists as $index => $value ) {
 					$ids[] = $value['post_id'];
 					if ( $value['title'] ) $customize_title[$value['post_id']] = $value['title'];
 				}
 			}
-
 			$args['post__in'] = (array) $ids;
 			$args['orderby'] = 'post__in';
 		}

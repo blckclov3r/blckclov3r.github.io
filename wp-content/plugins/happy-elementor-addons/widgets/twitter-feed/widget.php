@@ -134,7 +134,7 @@ class Twitter_Feed extends Base {
 		$this->add_control(
 			'remove_cache',
 			[
-				'label' => __('Remove Cache', 'happy-elementor-addons'),
+				'label' => __('Remove Cache', 'happy-addons-pro'),
 				'type' => Controls_Manager::SWITCHER,
 				'return_value' => 'yes',
 				'default' => 'no',
@@ -1216,13 +1216,13 @@ class Twitter_Feed extends Base {
 
 		$messages = [];
 		$user_name = trim($settings['user_name']);
-
+		
 		if ( empty( $user_name ) ) {
-			$messages[] = __( 'Add user Name', 'happy-elementor-addons' );
+			$messages[] = __( 'Add user Name', 'happy-addons-pro' );
 		} elseif ( empty( $settings['consumer_key'] ) ) {
-			$messages[] = __( 'Add Consumer Key', 'happy-elementor-addons' );
+			$messages[] = __( 'Add Consumer Key', 'happy-addons-pro' );
 		} elseif ( empty( $settings['consumer_secret'] ) ) {
-			$messages[] = __( 'Add Consumer Secret Key', 'happy-elementor-addons' );
+			$messages[] = __( 'Add Consumer Secret Key', 'happy-addons-pro' );
 		}
 
 		if ( !empty( $messages ) ) {
@@ -1249,7 +1249,7 @@ class Twitter_Feed extends Base {
 				) );
 
 			$body = json_decode( wp_remote_retrieve_body( $auth_response ) );
-
+			
 			if ( !empty( $body ) ) {
 				$token = $body->access_token;
 

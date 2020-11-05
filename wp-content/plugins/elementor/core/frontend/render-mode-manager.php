@@ -76,22 +76,11 @@ class Render_Mode_Manager {
 	}
 
 	/**
-	 * @param Render_Mode_Base $render_mode
-	 *
-	 * @return $this
-	 */
-	private function set_current( Render_Mode_Base $render_mode ) {
-		$this->current = $render_mode;
-
-		return $this;
-	}
-
-	/**
 	 * Set render mode.
 	 *
 	 * @return $this
 	 */
-	private function choose_render_mode() {
+	private function set_current_render_mode() {
 		$post_id = null;
 		$key = null;
 		$nonce = null;
@@ -115,9 +104,9 @@ class Render_Mode_Manager {
 			$key &&
 			array_key_exists( $key, $this->render_modes )
 		) {
-			$this->set_current( new $this->render_modes[ $key ]( $post_id ) );
+			$this->current = new $this->render_modes[ $key ]( $post_id );
 		} else {
-			$this->set_current( new Render_Mode_Normal( $post_id ) );
+			$this->current = new Render_Mode_Normal( $post_id );
 		}
 
 		return $this;
@@ -147,7 +136,7 @@ class Render_Mode_Manager {
 
 		do_action( 'elementor/frontend/render_mode/register', $this );
 
-		$this->choose_render_mode();
+		$this->set_current_render_mode();
 		$this->add_current_actions();
 	}
 }
