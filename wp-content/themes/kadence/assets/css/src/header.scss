@@ -316,9 +316,9 @@ a.social-button.has-custom-image {
     align-self: flex-start;
     flex-grow: 1;
 }
-.kadence-sticky-header[data-shrink="true"] {
-    transition: all .2s ease-in-out;
-}
+// .kadence-sticky-header[data-shrink="true"] .site-main-header-inner-wrap.site-header-row {
+//     transition: all .1s ease-in-out;
+// }
 .item-is-fixed {
     position: fixed;
     left: 0;

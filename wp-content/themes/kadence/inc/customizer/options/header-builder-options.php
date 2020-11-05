@@ -283,6 +283,32 @@ $settings = array(
 			'tooltip'  => __( 'Header Background', 'kadence' ),
 		),
 	),
+	'header_mobile_switch' => array(
+		'control_type' => 'kadence_range_control',
+		'section'      => 'header_layout',
+		'transport'    => 'refresh',
+		'label'        => esc_html__( 'Screen size to switch to mobile header', 'kadence' ),
+		'context'      => array(
+			array(
+				'setting' => '__current_tab',
+				'value'   => 'design',
+			),
+		),
+		'default'      => kadence()->default( 'header_mobile_switch' ),
+		'input_attrs'  => array(
+			'min'        => array(
+				'px'  => 0,
+			),
+			'max'        => array(
+				'px'  => 2000,
+			),
+			'step'       => array(
+				'px'  => 1,
+			),
+			'units'      => array( 'px' ),
+			'responsive' => false,
+		),
+	),
 );
 
 Theme_Customizer::add_settings( $settings );

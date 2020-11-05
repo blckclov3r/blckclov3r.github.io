@@ -99,7 +99,7 @@ article.sticky {
 }
 .single-content {
 	margin: var(--global-md-spacing) 0 0;
-	address, figure, hr, p, table, pre, form, .wp-block-buttons, .wp-block-button, .wp-block-kadence-advancedbtn, .wp-block-media-text, .wp-block-image, .wp-block-cover, .entry-content-asset, .wp-block-kadence-form, .wp-block-group, .wp-block-yoast-faq-block, .wp-block-yoast-how-to-block, .schema-faq-section {
+	address, figure, hr, p, table, pre, form, .wp-block-buttons, .wp-block-button, .wp-block-kadence-advancedbtn, .wp-block-media-text, .wp-block-image, .wp-block-cover, .entry-content-asset, .wp-block-kadence-form, .wp-block-group, .wp-block-yoast-faq-block, .wp-block-yoast-how-to-block, .schema-faq-section, .wp-block-kadence-tableofcontents, .enlighter-default {
 		margin-top: var(--global-md-spacing);
 		margin-bottom:0;
 	}
@@ -136,7 +136,7 @@ article.sticky {
 	> .more-link {
 		display: block;
 	}
-	address, figure, hr, p, table, pre, form, .wp-block-buttons, .wp-block-button, .wp-block-kadence-advancedbtn, .wp-block-media-text, .wp-block-image, .wp-block-cover, .entry-content-asset, .wp-block-kadence-form, .wp-block-group, .wp-block-yoast-faq-block, .wp-block-yoast-how-to-block, .schema-faq-section, h1, h2, h3, h4, h5, h6, ul, ol {
+	address, figure, hr, p, table, pre, form, .wp-block-buttons, .wp-block-button, .wp-block-kadence-advancedbtn, .wp-block-media-text, .wp-block-image, .wp-block-cover, .entry-content-asset, .wp-block-kadence-form, .wp-block-group, .wp-block-yoast-faq-block, .wp-block-yoast-how-to-block, .schema-faq-section, .wp-block-kadence-tableofcontents, .enlighter-default, h1, h2, h3, h4, h5, h6, ul, ol {
 		&:first-child {
 			margin-top: 0;
 			// > figure {
@@ -244,6 +244,9 @@ article.sticky {
 		display: inline-flex;
 		align-items: center;
 		flex-wrap: wrap;
+		time {
+			white-space: nowrap;
+		}
 	}
 	a {
 		color: inherit;
@@ -258,6 +261,13 @@ article.sticky {
 		margin-right: .5rem;
 		position: relative;
 		display: inline-block;
+		a.author-image {
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+		}
 		.image-size-ratio {
 			padding-bottom: 100%;
 			display: block;
@@ -316,9 +326,6 @@ article.sticky {
 }
 .updated-on .updated:not(.published) {
     display: inline-block;
-}
-.updated-on .published {
-    display: none;
 }
 
 .entry-summary {

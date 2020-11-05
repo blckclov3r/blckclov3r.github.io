@@ -22,7 +22,7 @@ kadence()->print_styles( 'kadence-author-box' );
 		<div class="entry-author-avatar">
 			<?php echo get_avatar( get_the_author_meta( 'ID' ), 80 ); ?>
 		</div>
-		<b class="entry-author-name author-name fn"><?php echo ( kadence()->option( 'post_author_box_link' ) ? get_the_author_posts_link() : get_the_author() ); ?></b>
+		<b class="entry-author-name author-name fn"><?php echo wp_kses_post( kadence()->option( 'post_author_box_link' ) ? get_the_author_posts_link() : get_the_author() ); ?></b>
 		<?php if ( get_the_author_meta( 'occupation' ) ) { ?>
 			<p class="entry-author-occupation author-occupation"><?php the_author_meta( 'occupation' ); ?></p>
 		<?php } ?>

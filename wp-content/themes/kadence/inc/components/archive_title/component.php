@@ -83,7 +83,11 @@ class Component implements Component_Interface, Templating_Component_Interface {
 			$title = $term->name;
 		} elseif ( function_exists( 'is_bbpress' ) ) {
 			if ( is_bbpress() ) {
-				$title = bbp_title();
+				if ( bbp_is_forum_archive() ) {
+					$title = bbp_get_forum_archive_title();
+				} else {
+					$title = bbp_title();
+				}
 			}
 		} elseif ( function_exists( 'tribe_is_month' ) && ( tribe_is_month() || tribe_is_past() || tribe_is_upcoming() || tribe_is_day() ) ) {
 			$title = tribe_get_event_label_plural();

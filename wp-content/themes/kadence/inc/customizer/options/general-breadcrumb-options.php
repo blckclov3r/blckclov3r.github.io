@@ -35,5 +35,20 @@ Theme_Customizer::add_settings(
 				),
 			),
 		),
+		'breadcrumb_home_icon' => array(
+			'control_type' => 'kadence_switch_control',
+			'sanitize'     => 'kadence_sanitize_toggle',
+			'section'      => 'breadcrumbs',
+			'default'      => kadence()->default( 'breadcrumb_home_icon' ),
+			'label'        => esc_html__( 'Use icon for home?', 'kadence' ),
+			'transport'    => 'refresh',
+			'context'      => array(
+				array(
+					'setting'    => 'breadcrumb_engine',
+					'operator'   => '=',
+					'value'      => '',
+				),
+			),
+		),
 	)
 );

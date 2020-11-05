@@ -1,23 +1,114 @@
 === Kadence ===
 Contributors: britner
-Tags: accessibility-ready, translation-ready, two-columns, right-sidebar, left-sidebar, footer-widgets, blog, custom-logo, custom-background, custom-menu, rtl-language-support, editor-style, threaded-comments, custom-colors, featured-images, wide-blocks, full-width-template, theme-options, e-commerce.
+Tags: translation-ready, two-columns, right-sidebar, left-sidebar, footer-widgets, blog, custom-logo, custom-background, custom-menu, rtl-language-support, editor-style, threaded-comments, custom-colors, featured-images, wide-blocks, full-width-template, theme-options, e-commerce.
 Requires at least: 5.2
-Tested up to: 5.5.0
+Tested up to: 5.5
 Requires PHP: 7.0
-Stable tag: 0.8.15
+Stable tag: 0.9.9
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
 A progressive theme optimized and integrated with Gutenberg.
 
 == Description ==
-Kadence is a lightweight progressive theme optimized for fast loading and accessibility. Kadence has a complete header and footer builder so you can create the perfect header and footer for you site. It’s built for the modern era of WordPress and is tightly integrated with the WordPress core block editor. It also works great with any page builder and has custom support for Elementor, Beaver Builder and others.
+Kadence Theme is a lightweight yet full featured WordPress theme for creating beautiful fast loading and accessible websites, easier than ever. It features an easy to use drag and drop header and footer builder to build any type of header in minutes. It features a full library of gorgeous starter temples that are easy to modify with our intelligent global font and color controls. With extensive integration with the most popular 3rd party plugins, you can quickly build impressive ecommerce websites, course websites, business websites, and more.
 
 == License ==
 Kadence is released under GNU General Public License v3.0 (or later)
 
 
 = Changelog =
+
+== 0.9.9 | 31th October 2020 ==
+* Fix: Sticky header resize issue.
+
+== 0.9.8 | 30th October 2020 ==
+* Update: Getting started video in admin.
+* Update: Screenshot.
+* Fix: Customizer preview of footer social spacing
+
+== 0.9.7 | 29th October 2020 ==
+* Add: French Translation, Thanks Eric!
+* Update: Screenshot.
+* Update: For now remove accessibility-ready tag so theme can be approved.
+* Fix: Customizer Gradient picker when transparent colors are used.
+* Fix: Issue with product description in elementor.
+* Fix: Dropdown menu vertical spacing, allow 0.
+* Fix: Issue with author image focus.
+
+== 0.9.6 | 23rd October 2020 ==
+* Fix: Link Color Issue with elementor.
+
+== 0.9.5 | 23rd October 2020 ==
+* Add: Mobile OffCanvas align controls.
+* Add: Related post controls.
+* Update: Mobile Navigation Slide in Animation.
+* Update: Add animation options to fullwidth mobile navigation.
+* Update: Make builder row settings easier to see in customizer.
+* Fix: Google Fonts subsets loading incorrectly.
+* Fix: Transparent colors effecting mobile when set to not transparent.
+* Fix: Muli name change issue in font selection.
+* Fix: Cart header Padding Issue.
+
+== 0.9.4 | 20th October 2020 ==
+* Fix: Google Fonts Loading in footer.
+* Fix: Sticky Header Background.
+* Fix: Mobile orientation switch sticky header issue (topbar sticky).
+
+== 0.9.3 | 20th October 2020 ==
+* Add: Local Hosted Google Fonts Option.
+* Add: Option for custom quantity plus and minus.
+* Add: TikTok and Discord to social.
+* Add: Option for scroll up sticky behavior.
+* Add: Notice to not use Gutenberg Plugin.
+* Add: Option to use an icon for home in breadcrumbs.
+* Update: Support for social branding inside of the mobile off canvas area.
+* Update: Basic support for Restrict Content Pro Registration.
+* Fix: Elementor overriding above header title colors.
+* Fix: Transparent header on 404 page.
+* Fix: Flash with sticky header.
+* Fix: Mobile orientation switch sticky header issue.
+* Fix: Range controls in customizer.
+* Fix: RTL issues in customizer.
+
+== 0.9.2 | 13th October 2020 ==
+* Add: Option to enable comments for lifter lessons and courses.
+* Update: Google Fonts, re-pull in all available.
+* Update: Footer alignment css for two widgets.
+* Update: CPT Breadcrumbs for better archive support.
+* Fix: Issue with some older gutenberg markup.
+* Fix: Possible issue with sticky and changing device orientation.
+* Fix: Issue with WPUM.
+
+== 0.9.1 | 12th October 2020 ==
+* Add: Option to enable Lightbox for images.
+* Update: Underline for navigation items match text width.
+* Fix: Extra title use h1 if product title is turned off.
+* Fix: Issue with post date and google schema.
+* Fix: Footer Navigation Align issue.
+* Fix: Footer html colors being overridden by footer row colors.
+* Fix: Sticky Header issues when custom breakpoint for header set.
+* Fix: Font issues with custom breakpoint for header set.
+
+== 0.9.0 | 8th October 2020 ==
+* Add: Button Shadow settings.
+* Add: Option to set switch to mobile header screen size.
+* Add: CPT breadcrumbs, meta support.
+* Add: CPT design controls.
+* Add: Changelog in admin.
+* Update: BBPress Support.
+* Fix: Safari Customizer Bug.
+* Fix: Menu toggle css issue.
+* Fix: Footer Navigation stretched setting.
+* Fix: Issue with mobile line height.
+* Fix: Editor list style css.
+* Fix: Spacing issue with table of contents
+
+== 0.8.16 | 2nd October 2020 ==
+* Fix: Escaping a few get_the_author() calls.
+* Fix: Spacing in the admin.
+* Fix: Issue with conditional Disqus and scroll to top.
+* Fix: Some dark color palette styling for Woocommerce.
 
 == 0.8.15 | 25th September 2020 ==
 * Add: Initial bbpress support.
@@ -472,14 +563,8 @@ Kadence is released under GNU General Public License v3.0 (or later)
 == Copyright, Credits & Resources ==
 
 = Credit =
-The Kadence Theme is Based from the Rig Starter Theme:
+The Kadence Theme is based from the Rig Starter Theme:
 https://wprig.io/
-
-The Kadence Theme borrowed heavily and was highly influence from the UI Designs and code of the following GPL themes:
-Blosky: https://creativethemes.com/blocksy/
-Suki: https://sukiwp.com/
-Neve: https://themeisle.com/themes/neve/
-Astra: https://wpastra.com/
 
 The theme uses the following third-party resources:
 
@@ -503,10 +588,17 @@ Source: https://icomoon.io/#icons-icomoon
 FontAwesome licensed under the SIL OFL 1.1 
 Source: https://github.com/FortAwesome/Font-Awesome
 
-* Photo in screenshot from https://stocksnap.io/ under license Creative Commons Zero https://stocksnap.io/license
-** Computer : https://stocksnap.io/photo/coding-programming-PBTF1NEBCG
+* Photos in screenshot from https://stocksnap.io/ under license Creative Commons Zero https://stocksnap.io/license and from https://pexels.com under license Creative Commons Zero https://www.pexels.com/creative-commons-images/ and from https://www.kadencewp.com/alogo/ under license Creative Commons Zero https://creativecommons.org/publicdomain/zero/1.0/
+** Mountains : https://stocksnap.io/photo/man-sun-I0CDZXUIR0
+** Fashion Hat : https://www.pexels.com/photo/adult-attractive-beautiful-blur-346255/
+** Jean Jacket : https://stocksnap.io/photo/people-girl-VDJI24CX1X
+** UC Sunglasses : https://stocksnap.io/photo/stairs-stairway-0FEC8ON5D1
+** Mock Logo 1 : https://www.kadencewp.com/alogo/
+** Mock Logo 2 : https://www.kadencewp.com/alogo/
+** Mock Logo 3 : https://www.kadencewp.com/alogo/
+** Mock Logo 4 : https://www.kadencewp.com/alogo/
+** Mock Logo 5 : https://www.kadencewp.com/alogo/
+** Mock Logo 6 : https://www.kadencewp.com/alogo/
 
 == Notes ==
 This theme does not support legacy browsers.
-
-

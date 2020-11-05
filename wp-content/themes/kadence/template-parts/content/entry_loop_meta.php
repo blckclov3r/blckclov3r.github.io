@@ -91,6 +91,7 @@ $post_type_obj = get_post_type_object( get_post_type() );
 ?>
 <div class="entry-meta entry-meta-divider-<?php echo esc_attr( $meta_divider ); ?>">
 	<?php
+	do_action( 'kadence_before_loop_entry_meta' );
 	foreach ( $title_meta as $title_meta_item ) {
 		switch ( $title_meta_item ) {
 			case 'author':
@@ -169,9 +170,7 @@ $post_type_obj = get_post_type_object( get_post_type() );
 				break;
 			case 'dateUpdated':
 				$time_string = sprintf(
-					'<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>',
-					esc_attr( get_the_date( 'c' ) ),
-					esc_html( get_the_date() ),
+					'<time class="entry-date published updated" datetime="%1$s">%2$s</time>',
 					esc_attr( get_the_modified_date( 'c' ) ),
 					esc_html( get_the_modified_date() )
 				);
@@ -226,6 +225,7 @@ $post_type_obj = get_post_type_object( get_post_type() );
 				break;
 		}
 	}
+	do_action( 'kadence_after_loop_entry_meta' );
 	?>
 </div><!-- .entry-meta -->
 <?php

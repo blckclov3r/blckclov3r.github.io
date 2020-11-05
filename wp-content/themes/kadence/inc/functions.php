@@ -30,6 +30,8 @@ function kadence() : Template_Tags {
 
 // Load the CSS class.
 require get_template_directory() . '/inc/class-kadence-css.php';
+// Load the Local Font class.
+require get_template_directory() . '/inc/class-local-gfonts.php';
 
 // Load the Customizer class.
 require get_template_directory() . '/inc/customizer/class-theme-customizer.php';

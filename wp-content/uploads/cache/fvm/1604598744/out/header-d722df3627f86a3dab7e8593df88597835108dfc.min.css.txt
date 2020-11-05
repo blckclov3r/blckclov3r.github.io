@@ -1,0 +1,16 @@
+PROCESSED on Thu, 05 Nov 2020 17:53:52 +0000
+/wp-includes/css/dist/block-library/style.min.css
+/wp-content/themes/kadence/assets/css/global.min.css
+/wp-content/themes/kadence/assets/css/header.min.css
+/wp-content/themes/kadence/assets/css/content.min.css
+/wp-content/themes/kadence/assets/css/footer.min.css
+/wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css
+/wp-content/plugins/elementor/assets/lib/animations/animations.min.css
+/wp-content/plugins/elementor/assets/css/frontend-legacy.min.css
+/wp-content/plugins/elementor/assets/css/frontend.min.css
+/wp-content/uploads/elementor/css/post-10.css
+/wp-content/uploads/elementor/css/global.css
+/wp-content/uploads/elementor/css/post-6.css
+/wp-content/plugins/happy-elementor-addons/assets/fonts/style.min.css
+/wp-content/uploads/happyaddons/cache/happy-6.css
+PROCESSED from http://localhost/blckclov3r/blckclov3r/

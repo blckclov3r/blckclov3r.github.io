@@ -95,7 +95,9 @@ class Component implements Component_Interface, Templating_Component_Interface {
 		add_action( 'after_setup_theme', array( $this, 'action_essential_theme_support' ) );
 		add_action( 'admin_enqueue_scripts', array( $this, 'install_starter_script' ) );
 		add_action( 'admin_notices', array( $this, 'kadence_starter_templates_notice' ) );
+		add_action( 'admin_notices', array( $this, 'kadence_turn_off_gutenberg_plugin_notice' ) );
 		add_action( 'wp_ajax_kadence_dismiss_notice', array( $this, 'ajax_dismiss_starter_notice' ) );
+		add_action( 'wp_ajax_kadence_dismiss_gutenberg_notice', array( $this, 'ajax_dismiss_gutenberg_notice' ) );
 		add_action( 'wp_ajax_kadence_install_starter', array( $this, 'install_plugin_ajax_callback' ) );
 		add_action( 'wp_head', array( $this, 'action_add_pingback_header' ) );
 		add_action( 'wp_head', array( $this, 'action_add_no_js_remove_script' ), 2 );
@@ -148,6 +150,49 @@ class Component implements Component_Interface, Templating_Component_Interface {
 		);
 	}
 	/**
+	 * Add Notice for to not use the Gutenberg Plugin
+	 */
+	public function kadence_turn_off_gutenberg_plugin_notice() {
+		if ( ! defined( 'GUTENBERG_VERSION' ) || get_option( 'kadence_disable_gutenberg_notice' ) || ! current_user_can( 'install_plugins' ) ) {
+			return;
+		}
+		?>
+		<div id="kadence-notice-gutenberg-plugin" class="notice is-dismissible notice-warning">
+			<h2 class="notice-title"><?php echo esc_html__( 'Gutenberg Plugin Detected', 'kadence' ); ?></h2>
+			<p class="kadence-notice-description"><?php /* translators: %s: <a> */ printf( esc_html__( 'The %1$sGutenberg plugin%2$s is not recommended for use in a production site. Many things may be broken by using this plugin. Please deactivate.', 'kadence' ), '<a href="https://wordpress.org/plugins/gutenberg/" target="_blank">', '</a>' ); ?></p>
+		</div>
+		<?php
+		wp_enqueue_script( 'kadence-gutenberg-deactivate' );
+		wp_localize_script(
+			'kadence-gutenberg-deactivate',
+			'kadenceGutenbergDeactivate',
+			array(
+				'ajax_url'   => admin_url( 'admin-ajax.php' ),
+				'ajax_nonce' => wp_create_nonce( 'kadence-ajax-verification' ),
+			)
+		);
+	}
+	/**
+	 * Run check to see if we need to dismiss the notice.
+	 * If all tests are successful then call the dismiss_notice() method.
+	 *
+	 * @access public
+	 * @since 1.0
+	 * @return void
+	 */
+	public function ajax_dismiss_gutenberg_notice() {
+
+		// Sanity check: Early exit if we're not on a wptrt_dismiss_notice action.
+		if ( ! isset( $_POST['action'] ) || 'kadence_dismiss_gutenberg_notice' !== $_POST['action'] ) {
+			return;
+		}
+		// Security check: Make sure nonce is OK.
+		check_ajax_referer( 'kadence-ajax-verification', 'security', true );
+
+		// If we got this far, we need to dismiss the notice.
+		update_option( 'kadence_disable_gutenberg_notice', true, false );
+	}
+	/**
 	 * Run check to see if we need to dismiss the notice.
 	 * If all tests are successful then call the dismiss_notice() method.
 	 *
@@ -173,6 +218,7 @@ class Component implements Component_Interface, Templating_Component_Interface {
 	 */
 	public function install_starter_script() {
 		wp_register_script( 'kadence-starter-install', get_template_directory_uri() . '/assets/js/admin-activate.min.js', array( 'jquery' ), KADENCE_VERSION, false );
+		wp_register_script( 'kadence-gutenberg-deactivate', get_template_directory_uri() . '/assets/js/gutenberg-notice.min.js', array( 'jquery' ), KADENCE_VERSION, false );
 	}
 	/**
 	 * Active Plugin Check
@@ -411,6 +457,9 @@ class Component implements Component_Interface, Templating_Component_Interface {
 				'tutor_assignments',
 				'courses',
 				'groups',
+				'forum',
+				'topic',
+				'reply',
 			);
 			self::$ignore_post_types = apply_filters( 'kadence_customizer_post_type_ignore_array', $ignore_post_types );
 		}
@@ -491,6 +540,7 @@ class Component implements Component_Interface, Templating_Component_Interface {
 				'llms_my_certificate',
 				'sfwd-certificates',
 				'sfwd-transactions',
+				'reply',
 			);
 			self::$public_ignore_post_types = apply_filters( 'kadence_public_post_type_ignore_array', $public_ignore_post_types );
 		}
@@ -641,6 +691,12 @@ class Component implements Component_Interface, Templating_Component_Interface {
 		}
 		if ( kadence()->option( 'enable_footer_on_bottom' ) ) {
 			$classes[] = 'footer-on-bottom';
+		}
+		if ( kadence()->option( 'enable_popup_body_animate' ) ) {
+			$classes[] = 'animate-body-popup';
+		}
+		if ( '' !== kadence()->option( 'header_social_brand' ) || '' !== kadence()->option( 'header_mobile_social_brand' ) || '' !== kadence()->option( 'footer_social_brand' ) ) {
+			$classes[] = 'social-brand-colors';
 		}
 		$classes[] = 'hide-focus-outline';
 		$classes[] = 'link-style-' . kadence()->sub_option( 'link_color', 'style' );

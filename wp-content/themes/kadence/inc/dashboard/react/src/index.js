@@ -2,6 +2,7 @@
  * Internal dependencies
  */
 import HelpTab from './help';
+import ChangelogTab from './changelog';
 import ProSettings from './pro-extension';
 import RecommendedTab from './recomended';
 import StarterTab from './starter';
@@ -28,8 +29,13 @@ class KadenceDashboard extends Component {
 			},
 			{
 				name: 'help',
-				title: __( 'Help / Tutorials', 'kadence' ),
+				title: __( 'Getting Started', 'kadence' ),
 				className: 'kadence-help-tab',
+			},
+			{
+				name: 'changelog',
+				title: __( 'Changelog', 'kadence' ),
+				className: 'kadence-changelog-tab',
 			},
 			// {
 			// 	name: 'recommended',
@@ -75,6 +81,16 @@ class KadenceDashboard extends Component {
 											opened={ true }
 										>
 											<HelpTab />
+										</PanelBody>
+									</Panel>
+								);
+							case 'changelog':
+								return (
+									<Panel className="changelog-section tab-section">
+										<PanelBody
+											opened={ true }
+										>
+											<ChangelogTab />
 										</PanelBody>
 									</Panel>
 								);

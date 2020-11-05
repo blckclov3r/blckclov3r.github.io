@@ -91,7 +91,36 @@ function get_related_posts_args( $post_id ) {
  * @return array column args.
  */
 function get_related_posts_columns() {
-	if ( kadence()->has_sidebar() ) {
+	if ( kadence()->option( 'post_related_columns' ) ) {
+		if ( kadence()->option( 'post_related_columns' ) == 2 ) {
+			$cols = array(
+				'xxl' => 2,
+				'xl'  => 2,
+				'md'  => 2,
+				'sm'  => 2,
+				'xs'  => 2,
+				'ss'  => 1,
+			);
+		} else if ( kadence()->option( 'post_related_columns' ) == 4 ) {
+			$cols = array(
+				'xxl' => 4,
+				'xl'  => 4,
+				'md'  => 4,
+				'sm'  => 3,
+				'xs'  => 2,
+				'ss'  => 2,
+			);
+		} else {
+			$cols = array(
+				'xxl' => 3,
+				'xl'  => 3,
+				'md'  => 3,
+				'sm'  => 2,
+				'xs'  => 2,
+				'ss'  => 1,
+			);
+		}
+	} else if ( kadence()->has_sidebar() ) {
 		$cols = array(
 			'xxl' => 2,
 			'xl'  => 2,

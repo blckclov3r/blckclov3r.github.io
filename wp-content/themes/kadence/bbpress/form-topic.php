@@ -36,13 +36,13 @@ if ( ! bbp_is_single_forum() ) : ?>
 			<?php
 				if ( bbp_is_topic_edit() ) :
 					echo '<h2 class="ktbb-reply-head-title">';
-					printf( __( 'Now Editing %s', 'kadence' ), '<strong>' . bbp_get_topic_title() . '</strong>' );
+					printf( __( 'Now Editing %s', 'kadence' ), '<strong>' . esc_html( bbp_get_topic_title() ) . '</strong>' );
 					echo '</h2>';
 				else :
 					if ( bbp_is_single_forum() && bbp_get_forum_title() ) {
 						echo '<div class="bbpress-reply-head-abovetitle">' . __( 'Create New Topic in:', 'kadence' ) . '</div>';
 						echo '<h2 class="bbpress-reply-head-title">';
-						echo bbp_get_topic_title();
+						echo esc_html( bbp_get_topic_title() );
 						echo '</h2>';
 					} else {
 						echo '<h2 class="bbpress-reply-head-title">';

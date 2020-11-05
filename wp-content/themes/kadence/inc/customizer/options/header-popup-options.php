@@ -114,6 +114,112 @@ $settings = array(
 			'responsive' => false,
 		),
 	),
+	'header_popup_animation' => array(
+		'control_type' => 'kadence_radio_icon_control',
+		'section'      => 'header_popup',
+		'priority'     => 4,
+		'default'      => kadence()->default( 'header_popup_animation' ),
+		'label'        => esc_html__( 'Animation', 'kadence' ),
+		'context'      => array(
+			array(
+				'setting'    => 'header_popup_layout',
+				'operator'   => 'sub_object_contains',
+				'sub_key'    => 'layout',
+				'responsive' => false,
+				'value'      => 'fullwidth',
+			),
+		),
+		'live_method'     => array(
+			array(
+				'type'     => 'class',
+				'selector' => '#mobile-drawer',
+				'pattern'  => 'popup-drawer-animation-$',
+				'key'      => '',
+			),
+		),
+		'input_attrs'  => array(
+			'layout' => array(
+				'fade' => array(
+					'tooltip' => __( 'Fade In', 'kadence' ),
+					'name'    => __( 'Fade', 'kadence' ),
+					'icon'    => '',
+				),
+				'scale' => array(
+					'tooltip' => __( 'Scale into view', 'kadence' ),
+					'name'    => __( 'Scale', 'kadence' ),
+					'icon'    => '',
+				),
+				'slice' => array(
+					'tooltip' => __( 'Slice into view', 'kadence' ),
+					'name'    => __( 'Slice', 'kadence' ),
+					'icon'    => '',
+				),
+			),
+			'responsive' => false,
+		),
+	),
+	'header_popup_content_align' => array(
+		'control_type' => 'kadence_radio_icon_control',
+		'section'      => 'header_popup',
+		'label'        => esc_html__( 'Content Align', 'kadence' ),
+		'default'      => kadence()->default( 'header_popup_content_align' ),
+		'live_method'     => array(
+			array(
+				'type'     => 'class',
+				'selector' => '.mobile-drawer-content',
+				'pattern'  => 'content-align-$',
+				'key'      => '',
+			),
+		),
+		'input_attrs'  => array(
+			'layout' => array(
+				'left'   => array(
+					'tooltip'  => __( 'Left Align', 'kadence' ),
+					'dashicon' => 'editor-alignleft',
+				),
+				'center' => array(
+					'tooltip'  => __( 'Center Align', 'kadence' ),
+					'dashicon' => 'editor-aligncenter',
+				),
+				'right'  => array(
+					'tooltip'  => __( 'Right Align', 'kadence' ),
+					'dashicon' => 'editor-alignright',
+				),
+			),
+			'responsive' => false,
+		),
+	),
+	'header_popup_vertical_align' => array(
+		'control_type' => 'kadence_radio_icon_control',
+		'section'      => 'header_popup',
+		'label'        => esc_html__( 'Content Vertical Align', 'kadence' ),
+		'default'      => kadence()->default( 'header_popup_vertical_align' ),
+		'live_method'  => array(
+			array(
+				'type'     => 'class',
+				'selector' => '.mobile-drawer-content',
+				'pattern'  => 'content-valign-$',
+				'key'      => '',
+			),
+		),
+		'input_attrs'  => array(
+			'layout' => array(
+				'top' => array(
+					'tooltip' => __( 'Top Align', 'kadence' ),
+					'icon'    => 'aligntop',
+				),
+				'middle' => array(
+					'tooltip' => __( 'Middle Align', 'kadence' ),
+					'icon'    => 'alignmiddle',
+				),
+				'bottom' => array(
+					'tooltip' => __( 'Bottom Align', 'kadence' ),
+					'icon'    => 'alignbottom',
+				),
+			),
+			'responsive' => false,
+		),
+	),
 	'header_popup_background' => array(
 		'control_type' => 'kadence_background_control',
 		'section'      => 'header_popup_design',
@@ -122,7 +228,7 @@ $settings = array(
 		'live_method'     => array(
 			array(
 				'type'     => 'css_background',
-				'selector' => '#mobile-drawer .drawer-inner',
+				'selector' => '#mobile-drawer .drawer-inner, #mobile-drawer.popup-drawer-layout-fullwidth.popup-drawer-animation-slice .pop-portion-bg',
 				'property' => 'background',
 				'pattern'  => '$',
 				'key'      => 'base',

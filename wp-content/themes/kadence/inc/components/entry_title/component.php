@@ -35,6 +35,7 @@ class Component implements Component_Interface, Templating_Component_Interface {
 	 * Adds the action and filter hooks to integrate with WordPress.
 	 */
 	public function initialize() {
+		//add_filter( 'kadence_title_elements_default', array( $this, 'maybe_add_defaults' ), 10, 2 );
 	}
 	/**
 	 * Gets template tags to expose as methods on the Template_Tags class instance, accessible through `kadence()`.
@@ -48,6 +49,7 @@ class Component implements Component_Interface, Templating_Component_Interface {
 			'render_title' => array( $this, 'render_title' ),
 		);
 	}
+
 	/**
 	 * Adds support to render header columns.
 	 *

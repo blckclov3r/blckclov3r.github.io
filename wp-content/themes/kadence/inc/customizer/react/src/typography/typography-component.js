@@ -670,7 +670,7 @@ class TypographyComponent extends Component {
 		};
 		const configVariants = {
 			google: {
-				families: [ this.state.value.family + ':' + ( this.state.value.google ? this.state.fontVars[ this.state.value.family ].v.toString() : '' ) ],
+				families: [ this.state.value.family + ':' + ( this.state.value.google && this.state.fontVars[ this.state.value.family ] && this.state.fontVars[ this.state.value.family ].v ? this.state.fontVars[ this.state.value.family ].v.toString() : '' ) ],
 			},
 			classes: false,
 			events: false,

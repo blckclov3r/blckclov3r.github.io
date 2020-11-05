@@ -30,6 +30,12 @@ class RowComponent extends Component {
 		return (
 			<div className={ `kadence-builder-areas ${ centerClass }` }>
 				<Button
+					className="kadence-row-left-actions"
+					onClick={ () => this.props.focusPanel( mode + '_' + this.props.row ) }
+					icon="admin-generic"
+				>
+				</Button>
+				<Button
 					className="kadence-row-actions"
 					onClick={ () => this.props.focusPanel( mode + '_' + this.props.row ) }
 				>
