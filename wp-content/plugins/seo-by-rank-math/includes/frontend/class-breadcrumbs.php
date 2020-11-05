@@ -7,8 +7,7 @@
  * @subpackage RankMath\Frontend
  * @author     Rank Math <support@rankmath.com>
  *
- * @copyright Copyright (C) 2015, WooCommerce
- * The following code is a derivative work of the code from the WooCommerce(https://github.com/woocommerce/woocommerce/), which is licensed under GPL v3.
+ * Forked from WooCommerce (https://github.com/woocommerce/woocommerce/)
  */
 
 namespace RankMath\Frontend;

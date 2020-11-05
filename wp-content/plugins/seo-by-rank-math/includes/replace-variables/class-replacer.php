@@ -7,8 +7,7 @@
  * @subpackage RankMath\Replace_Variables
  * @author     Rank Math <support@rankmath.com>
  *
- * @copyright Copyright (C) 2008-2019, Yoast BV
- * The following code is a derivative work of the code from the Yoast(https://github.com/Yoast/wordpress-seo/), which is licensed under GPL v3.
+ * Some functionality forked from Yoast (https://github.com/Yoast/wordpress-seo/)
  */
 
 namespace RankMath\Replace_Variables;

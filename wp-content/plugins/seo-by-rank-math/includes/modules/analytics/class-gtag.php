@@ -7,8 +7,10 @@
  * @subpackage RankMath\modules
  * @author     Rank Math <support@rankmath.com>
  *
+ * @credit forked from Google site kit.
  * @copyright 2019 Google LLC
- * The following code is a derivative work of the code from the Site Kit Plugin(https://sitekit.withgoogle.com), which is licensed under Apache License 2.0.
+ * @license   https://www.apache.org/licenses/LICENSE-2.0 Apache License 2.0
+ * @link      https://sitekit.withgoogle.com
  */
 
 namespace RankMath\Analytics;

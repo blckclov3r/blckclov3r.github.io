@@ -182,8 +182,7 @@ class Facebook extends OpenGraph {
 	/**
 	 * Outputs the SEO title as OpenGraph title.
 	 *
-	 * @copyright Copyright (C) 2008-2019, Yoast BV
-	 * The following code is a derivative work of the code from the Yoast(https://github.com/Yoast/wordpress-seo/), which is licensed under GPL v3.
+	 * Adapted from Yoast (https://github.com/Yoast/wordpress-seo/)
 	 *
 	 * @link https://developers.facebook.com/docs/reference/opengraph/object-type/article/
 	 *
@@ -218,8 +217,7 @@ class Facebook extends OpenGraph {
 	/**
 	 * Outputs the canonical URL as OpenGraph URL, which consolidates likes and shares.
 	 *
-	 * @copyright Copyright (C) 2008-2019, Yoast BV
-	 * The following code is a derivative work of the code from the Yoast(https://github.com/Yoast/wordpress-seo/), which is licensed under GPL v3.
+	 * Adapted from Yoast (https://github.com/Yoast/wordpress-seo/)
 	 *
 	 * @link https://developers.facebook.com/docs/reference/opengraph/object-type/article/
 	 */

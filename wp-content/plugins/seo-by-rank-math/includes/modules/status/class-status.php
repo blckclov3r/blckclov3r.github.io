@@ -81,16 +81,16 @@ class Status extends Base {
 	public function display_nav() {
 		$default_tab = $this->do_filter( 'tools/default_tab', 'status' );
 		?>
-		<div class="rank-math-tab-nav" role="tablist" aria-orientation="horizontal">
+		<h2 class="nav-tab-wrapper">
 			<?php
 			foreach ( $this->get_views() as $id => $link ) :
 				if ( isset( $link['cap'] ) && ! current_user_can( $link['cap'] ) ) {
 					continue;
 				}
 				?>
-			<a class="rank-math-tab<?php echo Param::get( 'view', $default_tab ) === sanitize_html_class( $id ) ? ' is-active' : ''; ?>" href="<?php echo esc_url( Helper::get_admin_url( $link['url'], $link['args'] ) ); ?>" title="<?php echo esc_attr( $link['title'] ); ?>"><?php echo esc_html( $link['title'] ); ?></a>
+			<a class="nav-tab<?php echo Param::get( 'view', $default_tab ) === sanitize_html_class( $id ) ? ' nav-tab-active' : ''; ?>" href="<?php echo esc_url( Helper::get_admin_url( $link['url'], $link['args'] ) ); ?>" title="<?php echo esc_attr( $link['title'] ); ?>"><?php echo esc_html( $link['title'] ); ?></a>
 			<?php endforeach; ?>
-		</div>
+		</h2>
 		<?php
 	}
 

@@ -85,13 +85,10 @@ class DB {
 	 */
 	public static function purge_cache() {
 		$table = Database::table( 'options' );
-		$table->whereLike( 'option_name', 'top_keywords' )->delete();
-		$table->whereLike( 'option_name', 'posts_summary' )->delete();
-		$table->whereLike( 'option_name', 'top_keywords_graph' )->delete();
-		$table->whereLike( 'option_name', 'dashboard_stats_widget' )->delete();
 		$table->whereLike( 'option_name', 'rank_math_analytics_data_info' )->delete();
-
-		do_action( 'rank_math/analytics/purge_cache', $table );
+		$table->whereLike( 'option_name', 'top_keywords' )->delete();
+		$table->whereLike( 'option_name', 'top_keywords_graph' )->delete();
+		$table->whereLike( 'option_name', 'posts_summary' )->delete();
 
 		wp_cache_flush();
 	}

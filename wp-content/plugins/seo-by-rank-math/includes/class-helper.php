@@ -36,8 +36,7 @@ class Helper {
 	 * @param array  $args    Context object, can be post, taxonomy or term.
 	 * @param array  $exclude Excluded variables won't be replaced.
 	 *
-	 * @copyright Copyright (C) 2008-2019, Yoast BV
-	 * The following code is a derivative work of the code from the Yoast(https://github.com/Yoast/wordpress-seo/), which is licensed under GPL v3.
+	 * Inspired from Yoast (https://github.com/Yoast/wordpress-seo/)
 	 *
 	 * @return string
 	 */
@@ -90,8 +89,7 @@ class Helper {
 	 * @param  string $part The URL part to retrieve.
 	 * @return string The extracted URL part.
 	 *
-	 * @copyright Copyright (C) 2008-2019, Yoast BV
-	 * The following code is a derivative work of the code from the Yoast(https://github.com/Yoast/wordpress-seo/), which is licensed under GPL v3.
+	 * Adapted from Yoast (https://github.com/Yoast/wordpress-seo/)
 	 */
 	public static function get_url_part( $url, $part ) {
 		$url_parts = wp_parse_url( $url );

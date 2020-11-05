@@ -7,8 +7,7 @@
  * @subpackage RankMath\Core
  * @author     Rank Math <support@rankmath.com>
  *
- * @copyright Copyright (C) 2008-2019, Yoast BV
- * The following code is a derivative work of the code from the Yoast(https://github.com/Yoast/wordpress-seo/), which is licensed under GPL v3.
+ * Some functionality forked from Yoast (https://github.com/Yoast/wordpress-seo/)
  */
 
 namespace RankMath;
@@ -173,6 +172,8 @@ class Rewrite {
 	/**
 	 * Remove the category base from the category link.
 	 *
+	 * Forked from Yoast (https://github.com/Yoast/wordpress-seo/)
+	 *
 	 * @param  string $link     Term link.
 	 * @param  object $term     Current Term Object.
 	 * @param  string $taxonomy Current Taxonomy.
@@ -232,6 +233,8 @@ class Rewrite {
 	/**
 	 * Adds required category rewrites rules.
 	 * 
+	 * Forked from Yoast (https://github.com/Yoast/wordpress-seo/)
+	 * 
 	 * @param array  $category_rewrite   The current set of rules.
 	 * @param string $category_nicename   Category nicename.
 	 * @param string $blog_prefix     Multisite blog prefix.
@@ -252,6 +255,8 @@ class Rewrite {
 	 * Walks through category nicename and convert encoded parts
 	 * into uppercase using $this->encode_to_upper().
 	 * 
+	 * Forked from Yoast (https://github.com/Yoast/wordpress-seo/)
+	 * 
 	 * @param string $name The encoded category URI string.
 	 *
 	 * @return string The convered URI string.
@@ -270,6 +275,8 @@ class Rewrite {
 
 	/**
 	 * Converts the encoded URI string to uppercase.
+	 * 
+	 * Forked from Yoast (https://github.com/Yoast/wordpress-seo/)
 	 * 
 	 * @param string $encoded The encoded string.
 	 *

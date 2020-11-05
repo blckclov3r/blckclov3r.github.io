@@ -41,9 +41,6 @@ class Publisher implements Snippet {
 
 		if ( 'person' === $type ) {
 			$data['publisher']['image'] = $data['publisher']['logo'];
-		}
-
-		if ( ! is_singular() ) {
 			unset( $data['publisher']['logo'] );
 		}
 

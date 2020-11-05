@@ -32,13 +32,13 @@ class Admin_Dashboard_Nav {
 			return;
 		}
 		?>
-		<div class="rank-math-tab-nav" role="tablist" aria-orientation="horizontal">
+		<h2 class="nav-tab-wrapper container">
 			<?php
 			foreach ( $nav_links as $id => $link ) {
 				$this->nav_link( $link );
 			}
 			?>
-		</div>
+		</h2>
 		<?php
 	}
 
@@ -74,7 +74,7 @@ class Admin_Dashboard_Nav {
 		$default_tab = is_network_admin() ? 'help' : 'modules';
 		?>
 		<a
-			class="rank-math-tab<?php echo Param::get( 'view', $default_tab ) === sanitize_html_class( $link['id'] ) ? ' is-active' : ''; ?>"
+			class="nav-tab<?php echo Param::get( 'view', $default_tab ) === sanitize_html_class( $link['id'] ) ? ' nav-tab-active' : ''; ?>"
 			href="<?php echo esc_url( $this->get_link_url( $link ) ); ?>"
 			title="<?php echo esc_attr( $link['title'] ); ?>">
 			<?php echo esc_html( $link['title'] ); ?>

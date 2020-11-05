@@ -5,27 +5,9 @@ RewriteEngine on
 CacheLookup on
 RewriteRule .* - [E=Cache-Control:no-autoflush]
 
-### marker MOBILE start ###
-RewriteCond %{HTTP_USER_AGENT} Mobile|Android|Silk/|Kindle|BlackBerry|Opera\ Mini|Opera\ Mobi [NC]
-RewriteRule .* - [E=Cache-Control:vary=ismobile]
-### marker MOBILE end ###
-
 ### marker CACHE RESOURCE start ###
 RewriteRule wp-content/.*/[^/]*(responsive|css|js|dynamic|loader|fonts)\.php - [E=cache-control:max-age=3600]
 ### marker CACHE RESOURCE end ###
-
-### marker FAVICON start ###
-RewriteRule favicon\.ico$ - [E=cache-control:max-age=86400]
-### marker FAVICON end ###
-
-### marker WEBP start ###
-RewriteCond %{HTTP_ACCEPT} "image/webp" [or]
-RewriteCond %{HTTP_USER_AGENT} "Page Speed"
-RewriteRule .* - [E=Cache-Control:vary=%{ENV:LSCACHE_VARY_VALUE}+webp]
-RewriteCond %{HTTP_USER_AGENT} iPhone.*Version/(\d{2}).*Safari
-RewriteCond %1 >13
-RewriteRule .* - [E=Cache-Control:vary=%{ENV:LSCACHE_VARY_VALUE}+webp]
-### marker WEBP end ###
 
 ### marker DROPQS start ###
 CacheKeyModify -qs:fbclid

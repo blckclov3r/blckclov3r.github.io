@@ -2,8 +2,8 @@
 Contributors: facebook
 Tags: Facebook, Messenger, Customer Care, Chat, Messaging, Chat Plugin
 Requires at least: 3.9
-Tested up to: 5.5.3
-Stable tag: 1.9
+Tested up to: 5.5.1
+Stable tag: 1.8
 Requires PHP: 5.2.4
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -11,16 +11,16 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 The Official Facebook Chat Plugin
 
 == Description ==
-The Facebook Chat Plugin is a free and easy to use tool to connect with customers on your website. With a few clicks, you can add the plugin to your website, enabling customers to message you while browsing your website. Chats started on your website can be continued in the customers' Messenger app, so you never lose connections with your customers. Even those without a Facebook Messenger account can chat with you in guest mode, so you can reach more customers than ever.
+The Facebook Chat Plugin is a free and easy to use tool to connect with customers on your website. With a few clicks, you can add the plugin to your website, enabling customers to message you while browsing your website. Chats started on your website can be continued in the customers' Messenger app, so you never lose connections with your customers. Even those without a Facebook Messenger account can chat with you in guest mode, so you can reach more customers than ever. 
 
 "Having an open line of communication with our customers gives them a sense of confidence from the browsing stage to final checkout," said Ryan Pamplin, CEO of BlendJet. "We noticed that customers who engage with us are three to four times more likely to checkout. With the Chat Plugin allowing us to reach more customers, we've tripled our sales since offering it as a customer engagement channel."
 
-Key features of the Chat Plugin:
+Key features of the Chat Plugin: 
 
-- No disconnection: Using the plugin creates a long-lived thread between you and your customers in Messenger. Customers can start a chat on your website and carry on in their mobile device with the Messenger app.
-- Chat transcripts are automatically created in the customer's Messenger account
+- No disconnection: Using the plugin creates a long-lived thread between you and your customers in Messenger. Customers can start a chat on your website and carry on in their mobile device with the Messenger app. 
+- Chat transcripts are automatically created in the customer's Messenger account 
 - The familiar, modern interface of Messenger builds trust and encourages your customers to engage with you
-- You can use the same Inboxes on desktop and mobile that you use to manage your Facebook page messaging
+- You can use the same Inboxes on desktop and mobile that you use to manage your Facebook page messaging 
 - You can set up hours of availability, auto replies and FAQ to serve customers when you're not available
 
 
@@ -75,7 +75,7 @@ You will need to have a published Facebook Page and be logged into Facebook on y
 The plugin is a snippet of JavaScript code that runs on your WordPress website. There will be a small Messenger chat bubble that loads with your website in the lower right corner. Your customers can click on it at anytime and message you. It works on both mobile and desktop.
 
 = Where can I see all my messages? =
-On the desktop, you can see all messages in your Page Inbox. Navigate to your Facebook Page on Facebook and click on 'Inbox' at the top. On mobile, you can download the Facebook Pages Manager app and navigate to Inbox. You can also link your Page account to your Messenger app and access all your messages there.
+On the desktop, you can see all messages in your Page Inbox. Navigate to your Facebook Page on Facebook and click on 'Inbox' at the top. On mobile, you can download the Facebook Pages Manager app and navigate to Inbox. You can also link your Page account to your Messenger app and access all your messages there. 
 
 = What permissions do I need on a Page to enable the Messenger customer chat feature? =
 You need be an administrator of the Page.
@@ -84,14 +84,9 @@ You need be an administrator of the Page.
 On the desktop, go to your Facebook page, and click on Insights on the Navigation bar. On the left hand side, click on Messaging to see your messaging analytics.
 
 = Where can I find support? =
-Please refer to our [troubleshooting guide](https://www.facebook.com/business/help/789975831794468) for the most common issues and how to resolve them.
 If you get stuck, or have any questions, you can ask for help in the [Messenger Platform Developer Community](https://www.facebook.com/groups/messengerplatform). If you would like to file a bug, please use the Facebook Bug tool found [here](https://developers.facebook.com/support/bugs/).
 
 == Changelog ==
-
-= 1.9 - Nov 3, 2020 =
-* Tested up to WordPress 5.5.3
-* Added troubleshooting links in plugin settings page and faq's
 
 = 1.8 - Sept 28, 2020 =
 * Tested up to WordPress 5.5.1
@@ -128,9 +123,6 @@ If you get stuck, or have any questions, you can ask for help in the [Messenger 
 * Plugin released for all users
 
 == Upgrade Notice ==
-
-= 1.9 =
-* Added troubleshooting links in plugin settings page and faq's. Tested up to WordPress 5.5.3
 
 = 1.8 =
 * Added instruction links in plugin install page. Tested up to WordPress 5.5.1
