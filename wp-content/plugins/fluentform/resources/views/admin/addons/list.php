@@ -1,1 +1,0 @@
-<div id="ff_add_ons_app"><fluent-add-ons></fluent-add-ons></div>
