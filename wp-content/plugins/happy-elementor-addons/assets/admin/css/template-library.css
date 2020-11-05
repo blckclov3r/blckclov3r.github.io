@@ -48,6 +48,10 @@
 	background-image:         linear-gradient(to bottom, #f1f3f5, #fff);
 }
 
+.haTemplateLibrary__header-menu .elementor-template-library-menu-item.elementor-active {
+	border-bottom-color: #562dd4;
+}
+
 #haTemplateLibrary__toolbar {
 	display: -webkit-box;
 	display: -webkit-flex;
@@ -80,9 +84,14 @@
 }
 
 .haTemplateLibrary__filter-btn {
-	display: block; 
+	display: block;
 	text-align: left;
+	text-transform: uppercase; 
 	cursor: pointer;
+}
+
+#haTemplateLibrary__toolbar-counter {
+	font-size: 12px;
 }
 
 #haTemplateLibrary__search {
@@ -94,8 +103,7 @@
 	padding: 8px 15px 8px 0; 
 	border-bottom: 1px solid #d5dadf;
 	border-radius: 0;
-	text-transform: uppercase;
-	font-size: 11px;
+	font-size: 12px;
 }
 
 #haTemplateLibrary__filter-tags {
@@ -165,10 +173,15 @@
 	position: relative;
 	overflow: hidden;
 	margin: 15px;
-	width: calc(33.333% - 30px);
 	border-radius: 2px; 
 	background-color: #fff;
 	box-shadow: 0 1px 20px 0 rgba(0, 0, 0, .07);
+}
+.haTemplateLibrary__templates--section .haTemplateLibrary__template {
+	width: calc(33.333% - 30px);
+}
+.haTemplateLibrary__templates--page .haTemplateLibrary__template {
+	width: calc(25% - 30px);
 }
 .haTemplateLibrary__template-body {
 	position: relative;

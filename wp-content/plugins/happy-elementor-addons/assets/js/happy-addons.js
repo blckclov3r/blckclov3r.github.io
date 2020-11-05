@@ -233,32 +233,37 @@
 			}
 		});
 
-		var Slick = EM.frontend.handlers.Base.extend({
+		var SliderBase = EM.frontend.handlers.Base.extend({
 			onInit: function () {
 				EM.frontend.handlers.Base.prototype.onInit.apply(this, arguments);
-				this.$container = this.$element.find('.hajs-slick');
 				this.run();
-			},
-
-			isCarousel: function() {
-				return this.$element.hasClass('ha-carousel');
 			},
 
 			getDefaultSettings: function() {
 				return {
-					arrows: false,
+					selectors: {
+						container: '.hajs-slick'
+					},
+					arrows: true,
 					dots: false,
 					checkVisible: false,
 					infinite: true,
-					slidesToShow: this.isCarousel() ? 3 : 1,
+					slidesToShow: 1,
 					rows: 0,
 					prevArrow: '<button type="button" class="slick-prev"><i class="fa fa-chevron-left"></i></button>',
 					nextArrow: '<button type="button" class="slick-next"><i class="fa fa-chevron-right"></i></button>',
 				}
 			},
 
+			getDefaultElements: function () {
+				var selectors = this.getSettings('selectors');
+				return {
+					$container: this.findElement(selectors.container)
+				};
+			},
+
 			onElementChange: function() {
-				this.$container.slick('unslick');
+				this.elements.$container.slick('unslick');
 				this.run();
 			},
 
@@ -286,29 +291,28 @@
 						break;
 				}
 
-				if (this.isCarousel()) {
-					settings.slidesToShow = this.getElementSettings('slides_to_show') || 3;
-					settings.responsive = [
-						{
-							breakpoint: EF.config.breakpoints.lg,
-							settings: {
-								slidesToShow: (this.getElementSettings('slides_to_show_tablet') || settings.slidesToShow),
-							}
-						},
-						{
-							breakpoint: EF.config.breakpoints.md,
-							settings: {
-								slidesToShow: (this.getElementSettings('slides_to_show_mobile') || this.getElementSettings('slides_to_show_tablet')) || settings.slidesToShow,
-							}
+				
+				settings.slidesToShow = this.getElementSettings('slides_to_show') || 1;
+				settings.responsive = [
+					{
+						breakpoint: EF.config.breakpoints.lg,
+						settings: {
+							slidesToShow: (this.getElementSettings('slides_to_show_tablet') || settings.slidesToShow),
 						}
-					];
-				}
+					},
+					{
+						breakpoint: EF.config.breakpoints.md,
+						settings: {
+							slidesToShow: (this.getElementSettings('slides_to_show_mobile') || this.getElementSettings('slides_to_show_tablet')) || settings.slidesToShow,
+						}
+					}
+				];
 
 				return $.extend({}, this.getDefaultSettings(), settings);
 			},
 
 			run: function() {
-				this.$container.slick(this.getReadySettings());
+				this.elements.$container.slick(this.getReadySettings());
 			}
 		});
 
@@ -655,6 +659,54 @@
 
 		};
 
+		// Slider
+		elementorFrontend.hooks.addAction(
+			'frontend/element_ready/ha-slider.default',
+			function ($scope) {
+				elementorFrontend.elementsHandler.addHandler(SliderBase, {
+					$element: $scope,
+					selectors: {
+						container: '.ha-slick--slider',
+					},
+					autoplay: true,
+					prevArrow: '<button type="button" class="slick-prev"><i class="hm hm-arrow-left"></i></button>',
+					nextArrow: '<button type="button" class="slick-next"><i class="hm hm-arrow-right"></i></button>'
+				});
+			}
+		);
+
+		// Carousel
+		elementorFrontend.hooks.addAction(
+			'frontend/element_ready/ha-carousel.default',
+			function ($scope) {
+				elementorFrontend.elementsHandler.addHandler(SliderBase, {
+					$element: $scope,
+					selectors: {
+						container: '.ha-slick--carousel',
+					},
+					autoplay: true,
+					prevArrow: '<button type="button" class="slick-prev"><i class="hm hm-arrow-left"></i></button>',
+					nextArrow: '<button type="button" class="slick-next"><i class="hm hm-arrow-right"></i></button>'
+				});
+			}
+		);
+
+		//Horizontal Timeline
+		elementorFrontend.hooks.addAction(
+			'frontend/element_ready/ha-horizontal-timeline.default',
+			function ($scope) {
+				elementorFrontend.elementsHandler.addHandler(SliderBase, {
+					$element: $scope,
+					selectors: {
+						container: '.ha-horizontal-timeline-wrapper',
+					},
+					autoplay: false,
+					prevArrow: '<button type="button" class="slick-prev"><i class="hm hm-arrow-left"></i></button>',
+					nextArrow: '<button type="button" class="slick-next"><i class="hm hm-arrow-right"></i></button>'
+				});
+			}
+		);
+
 		$('[data-ha-element-link]').each(function() {
 			var link = $(this).data('ha-element-link');
 			$(this).on('click.haElementOnClick', function() {
@@ -683,12 +735,12 @@
 		});
 
 		var handlersClassMap = {
-			'ha-slider.default': Slick,
-			'ha-carousel.default': Slick,
+			// 'ha-slider.default': Slick,
+			// 'ha-carousel.default': Slick,
 			'ha-image-grid.default': Isotope,
 			'ha-news-ticker.default': NewsTicker,
 			'ha-post-tab.default': PostTab,
-			'widget': ExtensionHandler
+			'widget': ExtensionHandler,
 		};
 
 		$.each( handlersClassMap, function( widgetName, handlerClass ) {

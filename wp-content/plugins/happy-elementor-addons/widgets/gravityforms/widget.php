@@ -230,11 +230,11 @@ class GravityForms extends Base {
 			Group_Control_Border::get_type(),
 			[
 				'name' => 'field_border',
-				'selector' => '{{WRAPPER}} .gfield .ginput_container:not(.ginput_container_fileupload) > input, 
-				{{WRAPPER}} .gfield .ginput_complex input, 
-				{{WRAPPER}} .gfield .ginput_container_address input, 
-				{{WRAPPER}} .gfield_list_cell input, 
-				{{WRAPPER}} .gfield .ginput_container select, 
+				'selector' => '{{WRAPPER}} .gfield .ginput_container:not(.ginput_container_fileupload) > input,
+				{{WRAPPER}} .gfield .ginput_complex input,
+				{{WRAPPER}} .gfield .ginput_container_address input,
+				{{WRAPPER}} .gfield_list_cell input,
+				{{WRAPPER}} .gfield .ginput_container select,
 				{{WRAPPER}} .gform_body .gfield textarea',
 			]
 		);
@@ -243,9 +243,9 @@ class GravityForms extends Base {
 			Group_Control_Box_Shadow::get_type(),
 			[
 				'name' => 'field_box_shadow',
-				'selector' => '{{WRAPPER}} .gfield .ginput_container:not(.ginput_container_fileupload) > input, 
+				'selector' => '{{WRAPPER}} .gfield .ginput_container:not(.ginput_container_fileupload) > input,
 				{{WRAPPER}} .gfield .ginput_complex input,
-				{{WRAPPER}} .gfield .ginput_container_address input, 
+				{{WRAPPER}} .gfield .ginput_container_address input,
 				{{WRAPPER}} .gform_body .gfield textarea',
 			]
 		);
@@ -279,10 +279,10 @@ class GravityForms extends Base {
 			Group_Control_Border::get_type(),
 			[
 				'name' => 'field_focus_border',
-				'selector' => '{{WRAPPER}} .gfield .ginput_container > input:focus, 
-				{{WRAPPER}} .gfield .ginput_complex input:focus, 
-				{{WRAPPER}} .gfield .ginput_container_address input:focus, 
-				{{WRAPPER}} .gfield_list_cell input:focus, 
+				'selector' => '{{WRAPPER}} .gfield .ginput_container > input:focus,
+				{{WRAPPER}} .gfield .ginput_complex input:focus,
+				{{WRAPPER}} .gfield .ginput_container_address input:focus,
+				{{WRAPPER}} .gfield_list_cell input:focus,
 				{{WRAPPER}} .gform_body .gfield textarea:focus'
 			]
 		);
@@ -291,9 +291,9 @@ class GravityForms extends Base {
 			Group_Control_Box_Shadow::get_type(),
 			[
 				'name' => 'field_focus_box_shadow',
-				'selector' => '{{WRAPPER}} .gfield .ginput_container > input:focus, 
-				{{WRAPPER}} .gfield .ginput_complex input:focus, 
-				{{WRAPPER}} .gfield .ginput_container_address input:focus, 
+				'selector' => '{{WRAPPER}} .gfield .ginput_container > input:focus,
+				{{WRAPPER}} .gfield .ginput_complex input:focus,
+				{{WRAPPER}} .gfield .ginput_container_address input:focus,
 				{{WRAPPER}} .gform_body .gfield textarea:focus',
 			]
 		);
@@ -653,7 +653,7 @@ class GravityForms extends Base {
 		$this->add_control(
 			'section_break',
 			[
-				'label' => __( 'Section Break', 'plugin-name' ),
+				'label' => __( 'Section Break', 'happy-elementor-addons' ),
 				'type' => Controls_Manager::HEADING,
 			]
 		);

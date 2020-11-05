@@ -59,18 +59,18 @@ class News_Ticker extends Base {
 	public function ha_get_posts () {
 		$posts = [];
 		$_posts = get_posts( [
-			'post_type' => 'post',
-			'post_status' => 'publish',
+			'post_type'      => 'post',
+			'post_status'    => 'publish',
 			'posts_per_page' => -1,
-			'orderby' => 'title',
-			'order' => 'ASC',
+			'orderby'        => 'title',
+			'order'          => 'ASC',
 		] );
 
 		if ( ! empty( $_posts ) ) {
 			$posts = wp_list_pluck( $_posts, 'post_title', 'ID' );
 		}
-		return $posts;
 
+		return $posts;
 	}
 
 	protected function register_content_controls () {
@@ -448,15 +448,18 @@ class News_Ticker extends Base {
 		if ( empty( $settings['selected_posts'] ) ) {
 			return;
 		}
+
 		$query_args = [
-			'post_type' => 'post',
-			'post_status' => 'publish',
+			'post_type'           => 'post',
+			'post_status'         => 'publish',
 			'ignore_sticky_posts' => 1,
-			'post__in' => (array) $settings['selected_posts'],
+			'post__in'            => (array) $settings['selected_posts'],
+			'suppress_filters'    => false,
 		];
 
 		$news_posts = [];
 		$the_query = get_posts( $query_args );
+
 		if ( ! empty( $the_query ) ) {
 			$news_posts = wp_list_pluck( $the_query, 'post_title', 'ID' );
 		}

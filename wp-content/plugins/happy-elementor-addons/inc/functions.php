@@ -564,10 +564,11 @@ function ha_post_tab () {
 		$term_id = $_POST['term_id'];
 
 		$args = [
-			'post_status' => 'publish',
-			'post_type' => $post_type,
-			'posts_per_page' => $item_limit,
-			'tax_query' => array(
+			'post_status'      => 'publish',
+			'post_type'        => $post_type,
+			'posts_per_page'   => $item_limit,
+			'suppress_filters' => false,
+			'tax_query'        => array(
 				array(
 					'taxonomy' => $taxonomy,
 					'field' => 'term_id',
@@ -575,7 +576,9 @@ function ha_post_tab () {
 				),
 			),
 		];
+
 		$posts = get_posts( $args );
+
 		if ( count( $posts ) !== 0 ):
 			?>
 			<div class="ha-post-tab-item-wrapper active" data-term="<?php echo esc_attr( $term_id ); ?>">

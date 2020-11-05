@@ -77,20 +77,20 @@ class Widgets_Extended {
             'ha_align_x',
             [
                 'type' => Controls_Manager::CHOOSE,
-                'label' => __( 'Horizontal Align', 'happy-addons-pro' ),
+                'label' => __( 'Horizontal Align', 'happy-elementor-addons' ),
                 'default' => 'center',
                 'toggle' => false,
                 'options' => [
                     'left' => [
-                        'title' =>  __( 'Left', 'happy-addons-pro' ),
+                        'title' =>  __( 'Left', 'happy-elementor-addons' ),
                         'icon' => 'eicon-h-align-left',
                     ],
                     'center' => [
-                        'title' =>  __( 'Center', 'happy-addons-pro' ),
+                        'title' =>  __( 'Center', 'happy-elementor-addons' ),
                         'icon' => 'eicon-h-align-center',
                     ],
                     'right' => [
-                        'title' =>  __( 'Right', 'happy-addons-pro' ),
+                        'title' =>  __( 'Right', 'happy-elementor-addons' ),
                         'icon' => 'eicon-h-align-right',
                     ],
                 ],
@@ -112,20 +112,20 @@ class Widgets_Extended {
             'ha_align_y',
             [
                 'type' => Controls_Manager::CHOOSE,
-                'label' => __( 'Vertical Align', 'happy-addons-pro' ),
+                'label' => __( 'Vertical Align', 'happy-elementor-addons' ),
                 'default' => 'center',
                 'toggle' => false,
                 'options' => [
                     'top' => [
-                        'title' =>  __( 'Top', 'happy-addons-pro' ),
+                        'title' =>  __( 'Top', 'happy-elementor-addons' ),
                         'icon' => 'eicon-v-align-top',
                     ],
                     'center' => [
-                        'title' =>  __( 'Center', 'happy-addons-pro' ),
+                        'title' =>  __( 'Center', 'happy-elementor-addons' ),
                         'icon' => 'eicon-v-align-middle',
                     ],
                     'bottom' => [
-                        'title' =>  __( 'Right', 'happy-addons-pro' ),
+                        'title' =>  __( 'Right', 'happy-elementor-addons' ),
                         'icon' => 'eicon-v-align-bottom',
                     ],
                 ],

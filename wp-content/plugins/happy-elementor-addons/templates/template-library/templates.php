@@ -87,7 +87,7 @@ defined( 'ABSPATH' ) || exit;
 <script type="text/template" id="tmpl-haTemplateLibrary__templates">
 	<div id="haTemplateLibrary__toolbar">
 		<div id="haTemplateLibrary__toolbar-filter" class="haTemplateLibrary__toolbar-filter">
-			<# if ( ha.library.getTags() ) { var selectedTag = ha.library.getFilter( 'tags' ); #>
+			<# if (ha.library.getTypeTags()) { var selectedTag = ha.library.getFilter( 'tags' ); #>
 				<# if ( selectedTag ) { #>
 				<span class="haTemplateLibrary__filter-btn">{{{ ha.library.getTags()[selectedTag] }}} <i class="eicon-caret-right"></i></span>
 				<# } else { #>
@@ -95,15 +95,15 @@ defined( 'ABSPATH' ) || exit;
 				<# } #>
 				<ul id="haTemplateLibrary__filter-tags" class="haTemplateLibrary__filter-tags">
 					<li data-tag="">All</li>
-					<# _.each( ha.library.getTags(), function( name, slug ) {
+					<# _.each(ha.library.getTypeTags(), function(slug) {
 						var selected = selectedTag === slug ? 'active' : '';
 						#>
-						<li data-tag="{{ slug }}" class="{{ selected }}">{{{ name }}}</li>
+						<li data-tag="{{ slug }}" class="{{ selected }}">{{{ ha.library.getTags()[slug] }}}</li>
 					<# } ); #>
 				</ul>
 			<# } #>
 		</div>
-
+		<div id="haTemplateLibrary__toolbar-counter"></div>
 		<div id="haTemplateLibrary__toolbar-search">
 			<label for="haTemplateLibrary__search" class="elementor-screen-only"><?php esc_html_e( 'Search Templates:', 'happy-elementor-addons' ); ?></label>
 			<input id="haTemplateLibrary__search" placeholder="<?php esc_attr_e( 'Search', 'happy-elementor-addons' ); ?>">
