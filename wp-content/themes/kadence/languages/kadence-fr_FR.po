@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Kadence\n"
 "Report-Msgid-Bugs-To: Kadence\n"
-"POT-Creation-Date: \n"
-"PO-Revision-Date: 2020-10-27 10:36-0600\n"
+"POT-Creation-Date: 2020-10-31 15:18+0000\n"
+"PO-Revision-Date: 2020-11-02 06:22-0700\n"
 "Last-Translator: \n"
 "Language-Team: Français\n"
 "Language: fr_FR\n"
@@ -19,7 +19,7 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Poedit 2.3.1\n"
-"X-Loco-Version: 2.4.3; wp-5.5.1\n"
+"X-Loco-Version: 2.4.4; wp-5.5.3\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
@@ -43,7 +43,7 @@ msgstr "Recherche"
 
 #: bbpress/form-reply.php:27 bbpress/form-reply.php:135
 msgid "Reply To:"
-msgstr ""
+msgstr "Répondre à :"
 
 #: bbpress/form-reply.php:44
 msgid ""
@@ -69,7 +69,7 @@ msgstr ""
 
 #: bbpress/form-reply.php:96
 msgid "Tags:"
-msgstr ""
+msgstr "Étiquettes :"
 
 #: bbpress/form-reply.php:114 bbpress/form-topic.php:180
 msgid "Notify the author of follow-up replies via email"
@@ -93,7 +93,7 @@ msgstr ""
 
 #: bbpress/form-reply.php:182 bbpress/form-topic.php:219
 msgid "Submit"
-msgstr ""
+msgstr "Envoyer"
 
 #: bbpress/form-reply.php:207
 #, php-format
@@ -148,11 +148,11 @@ msgstr ""
 
 #: bbpress/form-topic.php:130
 msgid "Forum:"
-msgstr ""
+msgstr "Forum :"
 
 #: bbpress/form-topic.php:133
 msgid "&mdash; No forum &mdash;"
-msgstr ""
+msgstr "&mdash; Pas de forum &mdash;"
 
 #: bbpress/form-topic.php:149
 msgid "Topic Type:"
@@ -172,7 +172,7 @@ msgstr ""
 
 #: bbpress/loop-search-reply.php:16 bbpress/loop-search-topic.php:22
 msgid "In forum:"
-msgstr ""
+msgstr "Dans le forum :"
 
 #: bbpress/loop-search-reply.php:20
 msgid "In reply to:"
@@ -187,10 +187,9 @@ msgid "Topic:"
 msgstr ""
 
 #: bbpress/loop-single-reply.php:40
-#, fuzzy, php-format
-#| msgid "Follow %1$s on %2$s"
+#, php-format
 msgid "%1$s at %2$s"
-msgstr "Suivre %1$s sur %2$s"
+msgstr "%1$s sur %2$s"
 
 #: bbpress/loop-single-topic.php:67
 #, php-format
@@ -200,11 +199,11 @@ msgstr ""
 #: bbpress/loop-single-topic.php:75
 #, php-format
 msgid "in: %1$s"
-msgstr ""
+msgstr "dans : %1$s"
 
 #: bbpress/loop-single-topic.php:83 inc/components/bbpress/component.php:154
 msgid "Replies"
-msgstr ""
+msgstr "Réponses"
 
 #: bbpress/loop-single-topic.php:84
 msgid "Posts"
@@ -287,7 +286,7 @@ msgstr ""
 
 #: inc/components/base_support/component.php:134
 msgid "Thanks for choosing the Kadence Theme!"
-msgstr ""
+msgstr "Merci d'avoir choisi le Thème Kadence !"
 
 #: inc/components/base_support/component.php:135
 #, php-format
@@ -343,11 +342,11 @@ msgstr ""
 #: inc/components/bbpress/component.php:69
 #: inc/components/icons/component.php:68
 msgid "Settings"
-msgstr ""
+msgstr "Réglages"
 
 #: inc/components/bbpress/component.php:153
 msgid "Back to:"
-msgstr ""
+msgstr "Retour à :"
 
 #: inc/components/breadcrumbs/component.php:149
 #: inc/components/icons/component.php:76
@@ -356,7 +355,7 @@ msgstr "Accueil"
 
 #: inc/components/breadcrumbs/component.php:150
 msgid "Error 404"
-msgstr ""
+msgstr "Erreur 404"
 
 #: inc/components/breadcrumbs/component.php:151
 msgid "Search results for"
@@ -441,11 +440,11 @@ msgstr ""
 
 #: inc/components/comments/component.php:154
 msgid "Name"
-msgstr ""
+msgstr "Nom"
 
 #: inc/components/comments/component.php:154
 msgid "John Dow"
-msgstr ""
+msgstr "John Dow"
 
 #: inc/components/comments/component.php:156
 #: inc/components/icons/component.php:358
@@ -457,7 +456,7 @@ msgstr "Email"
 
 #: inc/components/comments/component.php:156
 msgid "john@example.com"
-msgstr ""
+msgstr "john@example.com"
 
 #: inc/components/comments/component.php:160
 msgid "Website"
@@ -465,7 +464,7 @@ msgstr "Site Web"
 
 #: inc/components/comments/component.php:160
 msgid "https://www.example.com"
-msgstr ""
+msgstr "https://www.example.com"
 
 #: inc/components/comments/component.php:175
 msgid "Leave a comment..."
@@ -475,7 +474,7 @@ msgstr ""
 #: template-parts/content/entry_loop_meta.php:219
 #: template-parts/content/entry_meta.php:195 template-parts/title/meta.php:196
 msgid "Comment"
-msgstr ""
+msgstr "Commentaire"
 
 #: inc/components/editor/component.php:186
 #: inc/customizer/options/header-mobile-button-options.php:93
@@ -484,7 +483,7 @@ msgstr ""
 
 #: inc/components/editor/component.php:187
 msgid "S"
-msgstr ""
+msgstr "S"
 
 #: inc/components/editor/component.php:192
 #: inc/components/icons/component.php:326
@@ -494,7 +493,7 @@ msgstr ""
 
 #: inc/components/editor/component.php:193
 msgid "M"
-msgstr ""
+msgstr "M"
 
 #: inc/components/editor/component.php:198
 #: inc/customizer/options/header-mobile-button-options.php:100
@@ -503,7 +502,7 @@ msgstr ""
 
 #: inc/components/editor/component.php:199
 msgid "L"
-msgstr ""
+msgstr "L"
 
 #: inc/components/editor/component.php:204
 msgid "Larger"
@@ -511,7 +510,7 @@ msgstr ""
 
 #: inc/components/editor/component.php:205
 msgid "XL"
-msgstr ""
+msgstr "XL"
 
 #: inc/components/elementor/component.php:220
 #: inc/components/elementor/component.php:267
@@ -588,11 +587,11 @@ msgstr ""
 #: inc/customizer/options/transparent-header-options.php:760
 #: inc/customizer/options/transparent-header-options.php:816
 msgid "Color"
-msgstr ""
+msgstr "Couleur"
 
 #: inc/components/elementor_pro/component.php:59
 msgid "Kadence Theme"
-msgstr ""
+msgstr "Thème Kadence"
 
 #: inc/components/icons/component.php:100
 msgid "Zoom In"
@@ -617,12 +616,12 @@ msgstr "Twitter"
 
 #: inc/components/icons/component.php:156
 msgid "TikTok"
-msgstr ""
+msgstr "TikTok"
 
 #: inc/components/icons/component.php:164
 #: inc/customizer/options/general-social-options.php:220
 msgid "Discord"
-msgstr ""
+msgstr "Discord"
 
 #: inc/components/icons/component.php:173
 #: inc/components/icons/component.php:181
@@ -644,7 +643,7 @@ msgstr "YouTube"
 #: inc/components/icons/component.php:213
 #: inc/components/icons/component.php:221
 msgid "Github"
-msgstr ""
+msgstr "Github"
 
 #: inc/components/icons/component.php:229
 #: inc/components/icons/component.php:237
@@ -661,7 +660,7 @@ msgstr ""
 #: inc/components/icons/component.php:253
 #: inc/customizer/options/general-social-options.php:87
 msgid "Dribbble"
-msgstr ""
+msgstr "Dribbble"
 
 #: inc/components/icons/component.php:261
 #: inc/customizer/options/general-social-options.php:143
@@ -697,18 +696,18 @@ msgstr "Reddit"
 #: inc/components/icons/component.php:317
 #: inc/customizer/options/general-social-options.php:101
 msgid "Patreon"
-msgstr ""
+msgstr "Patreon"
 
 #: inc/components/icons/component.php:334
 #: inc/customizer/options/general-social-options.php:94
 msgid "Behance"
-msgstr ""
+msgstr "Behance"
 
 #: inc/components/icons/component.php:342
 #: inc/components/icons/component.php:350
 #: inc/customizer/options/general-social-options.php:199
 msgid "SoundCloud"
-msgstr ""
+msgstr "SoundCloud"
 
 #: inc/components/icons/component.php:381
 #: inc/components/icons/component.php:387
@@ -726,7 +725,7 @@ msgstr ""
 #: inc/components/icons/component.php:411
 #: inc/customizer/options/general-social-options.php:192
 msgid "Telegram"
-msgstr ""
+msgstr "Telegram"
 
 #: inc/components/icons/component.php:417
 #: inc/customizer/options/general-social-options.php:171
@@ -748,7 +747,7 @@ msgstr "Utilisateur"
 #: template-parts/content/entry_loop_meta.php:221
 #: template-parts/content/entry_meta.php:197 template-parts/title/meta.php:198
 msgid "Comments"
-msgstr ""
+msgstr "Commentaires"
 
 #: inc/components/icons/component.php:447
 #: tutor/single/course/content-lead-info.php:25
@@ -769,7 +768,7 @@ msgstr ""
 #: inc/components/icons/component.php:477
 #: inc/components/icons/component.php:483
 msgid "Account"
-msgstr ""
+msgstr "Mon compte"
 
 #: inc/components/icons/component.php:495
 #: inc/components/icons/component.php:501
@@ -789,7 +788,7 @@ msgstr ""
 #: inc/components/icons/component.php:519
 #: inc/components/icons/component.php:525
 msgid "Hours"
-msgstr ""
+msgstr "Heures"
 
 #: inc/components/icons/component.php:531
 #: inc/components/icons/component.php:537
@@ -824,7 +823,7 @@ msgstr "Suivant"
 
 #: inc/components/icons/component.php:585
 msgid "Continue"
-msgstr ""
+msgstr "Continuer"
 
 #: inc/components/icons/component.php:597
 msgid "Expand"
@@ -865,7 +864,7 @@ msgstr ""
 #: inc/components/icons/component.php:675
 #: inc/customizer/options/general-social-options.php:178
 msgid "IMDB"
-msgstr ""
+msgstr "IMDB"
 
 #: inc/components/icons/component.php:681
 msgid "Loading"
@@ -923,12 +922,12 @@ msgstr ""
 
 #: inc/components/learndash/course_list_template.php:42
 msgid "See more..."
-msgstr ""
+msgstr "Voir plus..."
 
 #: inc/components/learndash/course_list_template.php:78
 #: inc/components/learndash/course_list_template.php:110
 msgid "Free"
-msgstr ""
+msgstr "Gratuit"
 
 #: inc/components/learndash/course_list_template.php:121
 #: inc/components/learndash/course_list_template.php:130
@@ -938,7 +937,7 @@ msgstr ""
 #: inc/components/learndash/course_list_template.php:125
 #: inc/components/learndash/course_list_template.php:134
 msgid "Completed"
-msgstr ""
+msgstr "Complété"
 
 #: inc/components/nav_menus/component.php:84
 msgid "Primary"
@@ -978,11 +977,11 @@ msgstr ""
 
 #: inc/components/options/component.php:2798
 msgid "& Free Shipping"
-msgstr ""
+msgstr "& Livraison Gratuite"
 
 #: inc/components/options/component.php:2809
 msgid "Free shipping on orders over $50!"
-msgstr ""
+msgstr "Livraison gratuite à partir de 50€ !"
 
 #: inc/components/options/component.php:2810
 msgid "Satisfaction Guaranteed"
@@ -998,7 +997,7 @@ msgstr ""
 
 #: inc/components/options/component.php:2823
 msgid "GUARANTEED SAFE CHECKOUT"
-msgstr ""
+msgstr "PAIEMENT SÉCURISÉ GARANTI"
 
 #: inc/components/scripts/component.php:141
 msgid "Collapse child menu"
@@ -1177,17 +1176,15 @@ msgstr ""
 
 #: inc/customizer/class-theme-customizer.php:465
 msgid "LearnDash"
-msgstr ""
+msgstr "LearnDash"
 
 #: inc/customizer/class-theme-customizer.php:475
 msgid "LifterLMS"
 msgstr "LifterLMS"
 
 #: inc/customizer/class-theme-customizer.php:485
-#, fuzzy
-#| msgid "WordPress"
 msgid "bbPress"
-msgstr "WordPress"
+msgstr "bbPress"
 
 #: inc/customizer/class-theme-customizer.php:495
 msgid "TutorLMS"
@@ -1232,7 +1229,7 @@ msgstr ""
 #: inc/customizer/options/header-mobile-social-options.php:228
 #: inc/customizer/options/header-social-options.php:228
 msgid "Colors"
-msgstr ""
+msgstr "Couleurs"
 
 #: inc/customizer/class-theme-customizer.php:545
 msgid "Buttons"
@@ -1415,10 +1412,8 @@ msgstr ""
 
 #: inc/customizer/class-theme-customizer.php:825
 #: inc/customizer/class-theme-customizer.php:829
-#, fuzzy
-#| msgid "Search Results for: %s"
 msgid "Search Results"
-msgstr "Résultats de recherche pour : %s"
+msgstr "Résultats de recherche"
 
 #: inc/customizer/class-theme-customizer.php:833
 #: inc/customizer/class-theme-customizer.php:838
@@ -1853,7 +1848,7 @@ msgstr ""
 #: inc/customizer/options/topic-layout-options.php:131
 #: inc/customizer/options/tutor-course-layout-options.php:109
 msgid "Standard"
-msgstr ""
+msgstr "Standard"
 
 #: inc/customizer/options/custom-layout-options.php:142
 #: inc/customizer/options/custom-layout-options.php:1010
@@ -2121,7 +2116,6 @@ msgstr ""
 
 #: inc/customizer/options/custom-layout-options.php:303
 #, fuzzy
-#| msgid "Title"
 msgid "Title Font"
 msgstr "Titre"
 
@@ -2843,10 +2837,8 @@ msgstr "1:1"
 #: inc/customizer/options/lifter-lesson-layout-options.php:649
 #: inc/customizer/options/page-layout-options.php:790
 #: inc/customizer/options/post-layout-options.php:862
-#, fuzzy
-#| msgid "2:3"
 msgid "4:3"
-msgstr "2:3"
+msgstr "4:3"
 
 #: inc/customizer/options/custom-layout-options.php:856
 #: inc/customizer/options/learndash-course-layout-options.php:652
@@ -2859,10 +2851,8 @@ msgstr "2:3"
 #: inc/customizer/options/lifter-lesson-layout-options.php:652
 #: inc/customizer/options/page-layout-options.php:793
 #: inc/customizer/options/post-layout-options.php:865
-#, fuzzy
-#| msgid "3:4"
 msgid "3:2"
-msgstr "3:4"
+msgstr "3:2"
 
 #: inc/customizer/options/custom-layout-options.php:859
 #: inc/customizer/options/learndash-course-layout-options.php:655
@@ -2876,7 +2866,7 @@ msgstr "3:4"
 #: inc/customizer/options/page-layout-options.php:796
 #: inc/customizer/options/post-layout-options.php:868
 msgid "16:9"
-msgstr ""
+msgstr "16:9"
 
 #: inc/customizer/options/custom-layout-options.php:862
 msgid "1:2"
@@ -3103,7 +3093,7 @@ msgstr ""
 #: inc/customizer/options/footer-middle-options.php:79
 #: inc/customizer/options/footer-top-options.php:79
 msgid "Columns"
-msgstr ""
+msgstr "Colonnes"
 
 #: inc/customizer/options/footer-bottom-options.php:122
 #: inc/customizer/options/footer-middle-options.php:106
@@ -3165,7 +3155,7 @@ msgstr ""
 #: inc/customizer/options/footer-middle-options.php:219
 #: inc/customizer/options/footer-top-options.php:219
 msgid "Column"
-msgstr ""
+msgstr "Colonne"
 
 #: inc/customizer/options/footer-bottom-options.php:237
 #: inc/customizer/options/footer-middle-options.php:231
@@ -3336,7 +3326,7 @@ msgstr ""
 
 #: inc/customizer/options/footer-builder-options.php:65
 msgid "Copyright"
-msgstr ""
+msgstr "Copyright"
 
 #: inc/customizer/options/footer-builder-options.php:69
 msgid "Widget 1"
@@ -3568,7 +3558,7 @@ msgstr ""
 #: inc/customizer/options/header-social-options.php:425
 #: inc/customizer/options/topic-layout-options.php:473
 msgid "Margin"
-msgstr ""
+msgstr "Marge"
 
 #: inc/customizer/options/footer-middle-options.php:527
 #: inc/customizer/options/footer-middle-options.php:545
@@ -3745,7 +3735,7 @@ msgstr "Non"
 #: inc/customizer/options/header-mobile-social-options.php:214
 #: inc/customizer/options/header-social-options.php:214
 msgid "Yes"
-msgstr ""
+msgstr "Oui"
 
 #: inc/customizer/options/footer-social-options.php:302
 #: inc/customizer/options/header-mobile-social-options.php:217
@@ -3810,10 +3800,8 @@ msgstr ""
 #: inc/customizer/options/forum-archive-layout-options.php:280
 #: inc/customizer/options/forum-layout-options.php:293
 #: inc/customizer/options/topic-layout-options.php:293
-#, fuzzy
-#| msgid "Search For"
 msgid "Search Bar Width"
-msgstr "Rechercher"
+msgstr "Largeur de la barre de recherche"
 
 #: inc/customizer/options/forum-archive-layout-options.php:314
 #: inc/customizer/options/forum-layout-options.php:327
@@ -3862,10 +3850,8 @@ msgstr ""
 
 #: inc/customizer/options/forum-layout-options.php:53
 #: inc/customizer/options/forum-layout-options.php:60
-#, fuzzy
-#| msgid "Title"
 msgid "Forum Title"
-msgstr "Titre"
+msgstr "Titre du Forum"
 
 #: inc/customizer/options/forum-layout-options.php:69
 msgid "Show Forum Title?"
@@ -3956,11 +3942,11 @@ msgstr ""
 
 #: inc/customizer/options/general-breadcrumb-options.php:27
 msgid "RankMath (must have activated in plugin)"
-msgstr ""
+msgstr "RankMath (doit être activé dans extensions)"
 
 #: inc/customizer/options/general-breadcrumb-options.php:30
 msgid "Yoast (must have activated in plugin)"
-msgstr ""
+msgstr "Yoast (doit être activé dans extensions)"
 
 #: inc/customizer/options/general-breadcrumb-options.php:33
 msgid "SEOPress (must have activated in plugin)"
@@ -4120,7 +4106,7 @@ msgstr ""
 
 #: inc/customizer/options/general-scroll-to-top-options.php:260
 msgid "Visibility"
-msgstr ""
+msgstr "Visibilité"
 
 #: inc/customizer/options/general-scroll-to-top-options.php:280
 #: inc/customizer/options/header-search-options.php:83
@@ -4170,11 +4156,11 @@ msgstr ""
 
 #: inc/customizer/options/general-social-options.php:129
 msgid "GitHub"
-msgstr ""
+msgstr "GitHub"
 
 #: inc/customizer/options/general-social-options.php:213
 msgid "Tiktok"
-msgstr ""
+msgstr "Tiktok"
 
 #: inc/customizer/options/general-typography-options.php:18
 msgid "Base Font"
@@ -4250,11 +4236,11 @@ msgstr ""
 
 #: inc/customizer/options/general-typography-options.php:234
 msgid "Arabic"
-msgstr ""
+msgstr "Arabic"
 
 #: inc/customizer/options/general-typography-options.php:237
 msgid "Khmer"
-msgstr ""
+msgstr "Khmer"
 
 #: inc/customizer/options/general-typography-options.php:240
 msgid "Chinese"
@@ -4306,7 +4292,7 @@ msgstr "Logo"
 #: inc/customizer/options/header-builder-options.php:88
 #: inc/customizer/options/header-builder-options.php:189
 msgid "HTML"
-msgstr ""
+msgstr "HTML"
 
 #: inc/customizer/options/header-builder-options.php:97
 #: inc/customizer/options/header-builder-options.php:101
@@ -4478,17 +4464,15 @@ msgstr ""
 
 #: inc/customizer/options/header-button-options.php:180
 msgid "Sm"
-msgstr ""
+msgstr "Sm"
 
 #: inc/customizer/options/header-button-options.php:183
 msgid "Md"
-msgstr ""
+msgstr "Md"
 
 #: inc/customizer/options/header-button-options.php:187
-#, fuzzy
-#| msgid "Logo"
 msgid "Lg"
-msgstr "Logo"
+msgstr "Lg"
 
 #: inc/customizer/options/header-button-options.php:191
 msgid "Custom"
@@ -4607,7 +4591,7 @@ msgstr ""
 
 #: inc/customizer/options/header-dropdown-options.php:217
 msgid "None"
-msgstr ""
+msgstr "Aucun"
 
 #: inc/customizer/options/header-dropdown-options.php:220
 #: inc/customizer/options/header-popup-options.php:144
@@ -4699,7 +4683,7 @@ msgstr ""
 
 #: inc/customizer/options/header-mobile-social-options.php:324
 msgid " Color"
-msgstr ""
+msgstr "Couleur"
 
 #: inc/customizer/options/header-navigation-options.php:127
 #: inc/customizer/options/header-secondary-navigation-options.php:127
@@ -5060,10 +5044,8 @@ msgstr ""
 #: inc/customizer/options/lifter-lesson-layout-options.php:658
 #: inc/customizer/options/page-layout-options.php:799
 #: inc/customizer/options/post-layout-options.php:871
-#, fuzzy
-#| msgid "1:1"
 msgid "2:1"
-msgstr "1:1"
+msgstr "2:1"
 
 #: inc/customizer/options/learndash-course-layout-options.php:681
 #: inc/customizer/options/lifter-course-layout-options.php:804
@@ -5080,7 +5062,6 @@ msgstr ""
 #: inc/customizer/options/learndash-essays-layout-options.php:52
 #: inc/customizer/options/learndash-essays-layout-options.php:59
 #, fuzzy
-#| msgid "Title"
 msgid "Essay Title"
 msgstr "Titre"
 
@@ -5119,7 +5100,6 @@ msgstr ""
 #: inc/customizer/options/learndash-focus-options.php:52
 #: inc/customizer/options/learndash-focus-options.php:59
 #, fuzzy
-#| msgid "Title"
 msgid "Focus Title"
 msgstr "Titre"
 
@@ -5143,10 +5123,8 @@ msgstr ""
 
 #: inc/customizer/options/learndash-groups-layout-options.php:52
 #: inc/customizer/options/learndash-groups-layout-options.php:59
-#, fuzzy
-#| msgid "Title"
 msgid "Group Title"
-msgstr "Titre"
+msgstr "Titre du Groupe"
 
 #: inc/customizer/options/learndash-groups-layout-options.php:68
 msgid "Show Group Title?"
@@ -5238,7 +5216,6 @@ msgstr ""
 #: inc/customizer/options/topic-layout-options.php:53
 #: inc/customizer/options/topic-layout-options.php:60
 #, fuzzy
-#| msgid "Title"
 msgid "Topic Title"
 msgstr "Titre"
 
@@ -5303,10 +5280,8 @@ msgid "Two Column Tiles"
 msgstr ""
 
 #: inc/customizer/options/lifter-course-layout-options.php:717
-#, fuzzy
-#| msgid "One Comment"
 msgid "One Column Center"
-msgstr "Un Commentaire"
+msgstr "Une colonne centré"
 
 #: inc/customizer/options/lifter-course-layout-options.php:730
 msgid "Show Lesson Thumbnail in Syllabus?"
@@ -5665,10 +5640,8 @@ msgid "Mobile Columns Layout"
 msgstr ""
 
 #: inc/customizer/options/product-archive-layout-options.php:634
-#, fuzzy
-#| msgid "One Comment"
 msgid "One Column"
-msgstr "Un Commentaire"
+msgstr "Une colonne"
 
 #: inc/customizer/options/product-archive-layout-options.php:638
 msgid "Two Columns"
@@ -5787,32 +5760,25 @@ msgstr ""
 
 #: inc/customizer/options/search-layout-options.php:52
 #: inc/customizer/options/search-layout-options.php:59
-#, fuzzy
-#| msgid "Search Results for: %s"
 msgid "Search Results Title"
-msgstr "Résultats de recherche pour : %s"
+msgstr "Titre des Résultats de recherche"
 
 #: inc/customizer/options/search-layout-options.php:68
-#, fuzzy
-#| msgid "Search Results for: %s"
 msgid "Show Search Results Title?"
-msgstr "Résultats de recherche pour : %s"
+msgstr "Afficher le Titre des Résultats de recherche"
 
 #: inc/customizer/options/search-layout-options.php:74
 #, fuzzy
-#| msgid "Search Results for: %s"
 msgid "Search Results Title Layout"
 msgstr "Résultats de recherche pour : %s"
 
 #: inc/customizer/options/search-layout-options.php:150
 #, fuzzy
-#| msgid "Search Results for: %s"
 msgid "Search Results Title Align"
 msgstr "Résultats de recherche pour : %s"
 
 #: inc/customizer/options/search-layout-options.php:464
 #, fuzzy
-#| msgid "Search Results for: %s"
 msgid "Search Result Columns"
 msgstr "Résultats de recherche pour : %s"
 
@@ -5830,13 +5796,11 @@ msgstr ""
 
 #: inc/customizer/options/search-layout-options.php:719
 #, fuzzy
-#| msgid "Search Results for: %s"
 msgid "Search Results Background"
 msgstr "Résultats de recherche pour : %s"
 
 #: inc/customizer/options/search-layout-options.php:737
 #, fuzzy
-#| msgid "Search Results for: %s"
 msgid "Search Results Content Background"
 msgstr "Résultats de recherche pour : %s"
 
@@ -5927,11 +5891,11 @@ msgstr ""
 
 #: inc/dashboard/class-theme-dashboard.php:68
 msgid "Kadence - Next Generation Theme"
-msgstr ""
+msgstr "Kadence - Thème Nouvelle Génération"
 
 #: inc/dashboard/class-theme-dashboard.php:68
 msgid "Kadence"
-msgstr ""
+msgstr "Kadence"
 
 #: inc/dashboard/class-theme-dashboard.php:152
 msgid "Config Kadence Modules"
@@ -5939,7 +5903,7 @@ msgstr ""
 
 #: inc/dashboard/class-theme-dashboard.php:172
 msgid "- Next Generation Theme"
-msgstr ""
+msgstr "- Theme Nouvelle Génération"
 
 #: inc/dashboard/class-theme-dashboard.php:193
 msgid "Web Creators Community"
@@ -5957,7 +5921,7 @@ msgstr ""
 
 #: inc/dashboard/class-theme-dashboard.php:200
 msgid "Support"
-msgstr ""
+msgstr "Support"
 
 #: inc/dashboard/class-theme-dashboard.php:201
 msgid ""
@@ -5966,13 +5930,11 @@ msgstr ""
 
 #: inc/dashboard/class-theme-dashboard.php:202
 msgid "Submit a Ticket"
-msgstr ""
+msgstr "Envoyer un Ticket"
 
 #: inc/meta/class-theme-meta.php:94 inc/meta/class-theme-meta.php:110
-#, fuzzy
-#| msgid "Posted in"
 msgid "Post Settings"
-msgstr "Posté dans"
+msgstr "Réglages de l'Article"
 
 #: inc/meta/class-theme-meta.php:219 inc/meta/class-theme-meta.php:361
 msgid "Sidebar Left"
@@ -5989,12 +5951,12 @@ msgstr ""
 #: inc/template-functions/footer-functions.php:72
 msgctxt "copyright date format; check date() on php.net"
 msgid "Y"
-msgstr ""
+msgstr "Y"
 
 #: inc/template-functions/footer-functions.php:75
 #, php-format
 msgid "- WordPress Theme by %s"
-msgstr ""
+msgstr "- Theme WordPress par %s"
 
 #: inc/template-functions/footer-functions.php:159
 #: inc/template-functions/footer-functions.php:160
@@ -6077,7 +6039,7 @@ msgstr[1] "%1$s Commentaires"
 
 #: template-parts/content/comments-list.php:38
 msgid "Comments are closed."
-msgstr ""
+msgstr "Les commentaires sont fermés."
 
 #: template-parts/content/entry-attachment.php:33
 msgid "Previous:"
@@ -6103,7 +6065,7 @@ msgstr "Suivre %1$s sur %2$s"
 #: template-parts/content/entry_content.php:20
 #, php-format
 msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
-msgstr ""
+msgstr "Continuer de lire<span class=\"screen-reader-text\"> \"%s\"</span>"
 
 #: template-parts/content/entry_content.php:33
 msgid "Pages:"
@@ -6163,7 +6125,7 @@ msgstr "A lire également"
 #: template-parts/content/entry_summary.php:25
 #, php-format
 msgid "Read More<span class=\"screen-reader-text\"> \"%s\"</span>"
-msgstr ""
+msgstr "Lire la suite<span class=\"screen-reader-text\"> \"%s\"</span>"
 
 #: template-parts/content/entry_tags.php:18
 msgid "Post Tags:"
@@ -6218,7 +6180,7 @@ msgstr ""
 #: tutor/single/course/above-lead-info.php:56
 #: tutor/single/course/enrolled/above-lead-info.php:56
 msgid "by"
-msgstr ""
+msgstr "par"
 
 #: tutor/single/course/above-lead-info.php:64
 #: tutor/single/course/enrolled/above-lead-info.php:64
@@ -6228,12 +6190,12 @@ msgstr ""
 #: tutor/single/course/above-lead-info.php:71
 #: tutor/single/course/enrolled/above-lead-info.php:71
 msgid "Share:"
-msgstr ""
+msgstr "Partager"
 
 #: tutor/single/course/content-lead-info.php:45
 #: tutor/single/course/enrolled/content-lead-info.php:45
 msgid "Duration"
-msgstr ""
+msgstr "Durée"
 
 #: tutor/single/course/content-lead-info.php:54
 #: tutor/single/course/enrolled/content-lead-info.php:54
@@ -6249,6 +6211,3 @@ msgstr ""
 #: tutor/single/course/enrolled/content-lead-info.php:83
 msgid "About Course"
 msgstr ""
-
-#~ msgid "9:16"
-#~ msgstr "9:16"

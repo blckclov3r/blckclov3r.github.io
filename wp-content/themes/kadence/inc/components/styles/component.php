@@ -385,8 +385,21 @@ class Component implements Component_Interface, Templating_Component_Interface {
 		$css->add_property( '--global-palette-btn', $this->render_color( kadence()->sub_option( 'buttons_color', 'color' ) ) );
 		$css->add_property( '--global-palette-btn-hover', $this->render_color( kadence()->sub_option( 'buttons_color', 'hover' ) ) );
 
+		$css->add_property( '--global-body-font-family', $css->render_font_family( kadence()->option( 'base_font' ), '' ) );
+		$css->add_property( '--global-heading-font-family', $css->render_font_family( kadence()->option( 'heading_font' ) ) );
+		//$css->add_property( '--global-h1-font-family', $css->render_font_family( kadence()->option( 'h1_font' ) ) );
+		//$css->add_property( '--global-h2-font-family', $css->render_font_family( kadence()->option( 'h2_font' ) ) );
+		//$css->add_property( '--global-h3-font-family', $css->render_font_family( kadence()->option( 'h3_font' ) ) );
+		//$css->add_property( '--global-h4-font-family', $css->render_font_family( kadence()->option( 'h4_font' ) ) );
+		//$css->add_property( '--global-h5-font-family', $css->render_font_family( kadence()->option( 'h5_font' ) ) );
+		$css->add_property( '--global-primary-nav-font-family', $css->render_font_family( kadence()->option( 'primary_navigation_typography' ), '' ) );
+		//$css->add_property( '--global-secondary-nav-font-family', $css->render_font_family( kadence()->option( 'secondary_navigation_typography' ) ) );
+		//$css->add_property( '--global-site-title-font-family', $css->render_font_family( kadence()->option( 'brand_typography' ) ) );
+		//$css->add_property( '--global-site-tag-font-family', $css->render_font_family( kadence()->option( 'brand_tag_typography' ) ) );
+		//$css->add_property( '--global-button-font-family', $css->render_font_family( kadence()->option( 'buttons_typography' ) ) );
+
 		if ( class_exists( '\Elementor\Plugin' ) ) {
-			$css->set_selector( ':root body.theme-kadence' );
+			$css->set_selector( ':root body.kadence-elementor-colors' );
 			$css->add_property( '--e-global-color-kadence1', 'var(--global-palette1)' );
 			$css->add_property( '--e-global-color-kadence2', 'var(--global-palette2)' );
 			$css->add_property( '--e-global-color-kadence3', 'var(--global-palette3)' );
@@ -471,6 +484,10 @@ class Component implements Component_Interface, Templating_Component_Interface {
 		$css->stop_media_query();
 		// Header to Mobile Switch.
 		if ( kadence()->sub_option( 'header_mobile_switch', 'size' ) ) {
+			$css->set_selector( '.site #mobile-header' );
+			$css->add_property( 'display', 'block' );
+			$css->set_selector( '.site #main-header' );
+			$css->add_property( 'display', 'none' );
 			$css->start_media_query( '(min-width: ' . kadence()->sub_option( 'header_mobile_switch', 'size' ) . 'px)' );
 			$css->set_selector( '.site #mobile-header' );
 			$css->add_property( 'display', 'none' );
@@ -480,7 +497,7 @@ class Component implements Component_Interface, Templating_Component_Interface {
 		}
 		// Heading Fonts.
 		$css->set_selector( 'h1,h2,h3,h4,h5,h6' );
-		$css->add_property( 'font-family', $css->render_font_family( kadence()->option( 'heading_font' ) ) );
+		$css->add_property( 'font-family', 'var(--global-heading-font-family)' );
 		$css->set_selector( 'h1' );
 		$css->render_font( kadence()->option( 'h1_font' ), $css );
 		$css->set_selector( 'h2' );
@@ -1070,7 +1087,7 @@ class Component implements Component_Interface, Templating_Component_Interface {
 		$css->add_property( 'color', $this->render_color( kadence()->sub_option( 'primary_navigation_color', 'color' ) ) );
 		$css->add_property( 'background', $this->render_color( kadence()->sub_option( 'primary_navigation_background', 'color' ) ) );
 		$css->set_selector( '.main-navigation .primary-menu-container > ul li a' );
-		$css->render_font( kadence()->option( 'primary_navigation_typography' ), $css );
+		$css->render_font( kadence()->option( 'primary_navigation_typography' ), $css, 'primary_nav' );
 		$css->set_selector( '.main-navigation .primary-menu-container > ul > li > a:hover' );
 		$css->add_property( 'color', $this->render_color( kadence()->sub_option( 'primary_navigation_color', 'hover' ) ) );
 		$css->add_property( 'background', $this->render_color( kadence()->sub_option( 'primary_navigation_background', 'hover' ) ) );
@@ -2223,6 +2240,10 @@ class Component implements Component_Interface, Templating_Component_Interface {
 		$css->add_property( 'letter-spacing', $this->render_font_spacing( kadence()->option( 'search_archive_item_meta_font' ), 'mobile' ) );
 		$css->stop_media_query();
 		if ( class_exists( 'woocommerce' ) ) {
+			if ( kadence()->option( 'custom_quantity' ) ) {
+				$css->set_selector( '.woocommerce table.shop_table td.product-quantity' );
+				$css->add_property( 'min-width', '130px' );
+			}
 			// Shop Notice.
 			$css->set_selector( '.woocommerce-demo-store .woocommerce-store-notice' );
 			$css->add_property( 'background', $this->render_color( kadence()->sub_option( 'woo_store_notice_background', 'color' ) ) );

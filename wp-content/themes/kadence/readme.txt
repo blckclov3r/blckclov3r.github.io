@@ -4,7 +4,7 @@ Tags: translation-ready, two-columns, right-sidebar, left-sidebar, footer-widget
 Requires at least: 5.2
 Tested up to: 5.5
 Requires PHP: 7.0
-Stable tag: 0.9.9
+Stable tag: 1.0.1
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -19,7 +19,20 @@ Kadence is released under GNU General Public License v3.0 (or later)
 
 = Changelog =
 
-== 0.9.9 | 31th October 2020 ==
+== 1.0.1 | 4th November 2020 ==
+* Add: Global Colors into elementor.
+* Update: Small comment css change.
+* Update: WooCommerce product single page product added css update.
+* Update: Small CSS update for icon list.
+* Fix: Changelog date.
+* Fix: Scroll to ID and tabs not triggering to open.
+
+== 1.0.0 | 1st November 2020 ==
+* Update: Remove updater, live in WP.org!
+* Fix: Mobile header screen size switch setting.
+* Fix: Cart with long titles.
+
+== 0.9.9 | 31st October 2020 ==
 * Fix: Sticky header resize issue.
 
 == 0.9.8 | 30th October 2020 ==

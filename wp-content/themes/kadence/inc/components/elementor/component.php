@@ -43,6 +43,7 @@ class Component implements Component_Interface {
 	public function initialize() {
 		// Add support for Header and Footer Plugin.
 		add_action( 'after_setup_theme', array( $this, 'init_header_footer_support' ), 30 );
+		add_filter( 'body_class', array( $this, 'add_body_class' ) );
 		//add_action( 'init', array( $this, 'elementor_add_theme_colors' ), 1 );
 		add_action( 'elementor/editor/init', array( $this, 'elementor_add_theme_colors' ) );
 		//add_action( 'elementor/element/kit/section_global_colors/before_section_start', array( $this, 'elementor_remove_theme_colors' ) );
@@ -56,6 +57,17 @@ class Component implements Component_Interface {
 		add_action( 'elementor/document/before_save', array( $this, 'elementor_before_save' ), 10, 2 );
 		add_action( 'elementor/document/after_save', array( $this, 'elementor_after_save' ), 10, 2 );
 		add_filter( 'body_class', array( $this, 'filter_body_classes_add_editing_class' ) );
+	}
+	/**
+	 * Adds a link style class to the array of body classes.
+	 *
+	 * @param array $classes Classes for the body element.
+	 * @return array Filtered body classes.
+	 */
+	public function add_body_class( $classes ) {
+		$classes[] = 'kadence-elementor-colors';
+
+		return $classes;
 	}
 	/**
 	 * Adds a 'el-is-editing' class to the array of body classes for when we are in elementor editing.
@@ -75,7 +87,7 @@ class Component implements Component_Interface {
 	}
 	public function elementor_after_save( $object, $data ) {
 		//error_log( print_r( $data, true ) );
-		if ( apply_filters( 'kadence_add_global_colors_to_elementor', false ) ) {
+		if ( apply_filters( 'kadence_add_global_colors_to_elementor', true ) ) {
 			if ( $data && isset( $data['settings'] ) && is_array( $data['settings'] ) && isset( $data['settings']['kadence_colors'] ) && is_array( $data['settings']['kadence_colors'] ) ) {
 				$palette = json_decode( get_option( 'kadence_global_palette' ), true );
 				if ( isset( $palette['active'] ) && ! empty( $palette['active'] ) ) {
@@ -205,7 +217,7 @@ class Component implements Component_Interface {
 	 * Add some css styles for elementor admin.
 	 */
 	public function elementor_add_scripts() {
-		if ( apply_filters( 'kadence_add_global_colors_to_elementor', false ) ) {
+		if ( apply_filters( 'kadence_add_global_colors_to_elementor', true ) ) {
 			wp_enqueue_style( 'kadence-elementor-admin', get_theme_file_uri( '/assets/css/elementor-admin.min.css' ), array(), KADENCE_VERSION );
 		}
 	}
@@ -213,7 +225,7 @@ class Component implements Component_Interface {
 	 * Add some css styles for Restrict Content Pro
 	 */
 	public function elementor_add_theme_colors() {
-		if ( apply_filters( 'kadence_add_global_colors_to_elementor', false ) ) {
+		if ( apply_filters( 'kadence_add_global_colors_to_elementor', true ) ) {
 			$theme_colors = array(
 				array(
 					'_id' => 'kadence1',
@@ -399,6 +411,19 @@ class Component implements Component_Interface {
 				}
 				if ( $kadence_add ) {
 					$custom_colors = array_merge( $theme_colors, $custom_colors );
+				} else {
+					$i       = 0;
+					$new_add = array();
+					foreach ( $kadence_add_array as $key => $value ) {
+						if ( $value ) {
+							$new_add[] = $theme_colors[ $i ];
+						}
+						$i++;
+					}
+					// Somehow colors were removed so we need to add them back in.
+					if ( ! empty( $new_add ) ) {
+						$custom_colors = array_merge( $new_add, $custom_colors );
+					}
 				}
 				\Elementor\Plugin::$instance->kits_manager->update_kit_settings_based_on_option( 'custom_colors', $custom_colors );
 				\Elementor\Plugin::$instance->kits_manager->update_kit_settings_based_on_option( 'kadence_colors', $theme_placeholder_colors );
@@ -414,7 +439,7 @@ class Component implements Component_Interface {
 	 * Add in new Custom Controls for Theme Colors.
 	 */
 	public function elementor_add_theme_color_controls( $tab, $args ) {
-		if ( apply_filters( 'kadence_add_global_colors_to_elementor', false ) ) {
+		if ( apply_filters( 'kadence_add_global_colors_to_elementor', true ) ) {
 			$tab->start_controls_section(
 				'section_theme_global_colors',
 				array(

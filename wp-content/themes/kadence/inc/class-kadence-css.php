@@ -480,7 +480,11 @@ class Kadence_CSS {
 		}
 		$family = ( isset( $font['family'] ) && ! empty( $font['family'] ) && 'inherit' !== $font['family'] ? $font['family'] : '' );
 		if ( ! empty( $family ) ) {
-			if ( strpos( $family, '"') === false && strpos( $family, ',') === false && strpos( $family, ' ' ) !== false ) {
+			if ( ! empty( $inherit ) && 'body' === $inherit ) {
+				$family = 'var(--global-body-font-family)';
+			} elseif ( ! empty( $inherit ) && 'primary_nav' === $inherit ) {
+				$family = 'var(--global-primary-nav-font-family)';
+			} elseif ( strpos( $family, '"') === false && strpos( $family, ',') === false && strpos( $family, ' ' ) !== false ) {
 				$family = "'" . $family . "'";
 			}
 			$css->add_property( 'font-family', apply_filters( 'kadence_theme_font_family_string', $family ) );
@@ -966,7 +970,7 @@ class Kadence_CSS {
 		} else if ( ! empty( $full ) && 'body' === $full && 'inherit' !== kadence()->sub_option( 'heading_font', 'family' ) ) {
 			$new_variant = array( $font['variant'], '700' );
 		}
-				// Check if the font has been added yet.
+		// Check if the font has been added yet.
 		if ( ! array_key_exists( $font['family'], self::$google_fonts ) ) {
 			if ( ! empty( $full ) && 'headers' === $full ) {
 				$add_font = array(

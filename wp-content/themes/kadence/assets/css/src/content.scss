@@ -99,7 +99,7 @@ article.sticky {
 }
 .single-content {
 	margin: var(--global-md-spacing) 0 0;
-	address, figure, hr, p, table, pre, form, .wp-block-buttons, .wp-block-button, .wp-block-kadence-advancedbtn, .wp-block-media-text, .wp-block-image, .wp-block-cover, .entry-content-asset, .wp-block-kadence-form, .wp-block-group, .wp-block-yoast-faq-block, .wp-block-yoast-how-to-block, .schema-faq-section, .wp-block-kadence-tableofcontents, .enlighter-default {
+	address, figure, hr, p, table, pre, form, .wp-block-buttons, .wp-block-button, .wp-block-kadence-advancedbtn, .wp-block-media-text, .wp-block-image, .wp-block-cover, .entry-content-asset, .wp-block-kadence-form, .wp-block-group, .wp-block-yoast-faq-block, .wp-block-yoast-how-to-block, .schema-faq-section, .wp-block-kadence-tableofcontents, .enlighter-default, .wp-block-kadence-iconlist {
 		margin-top: var(--global-md-spacing);
 		margin-bottom:0;
 	}
@@ -115,7 +115,7 @@ article.sticky {
 			margin-top: 0;
 		}
 		&+ {
-			.wp-block-buttons, .wp-block-button, .wp-block-kadence-advancedbtn, .wp-block-media-text, .wp-block-image, .wp-block-cover, .entry-content-asset, .wp-block-kadence-form {
+			.wp-block-buttons, .wp-block-button, .wp-block-kadence-advancedbtn, .wp-block-media-text, .wp-block-image, .wp-block-cover, .entry-content-asset, .wp-block-kadence-form, .wp-block-kadence-iconlist {
 				margin-top: 0;
 			}
 
@@ -136,7 +136,7 @@ article.sticky {
 	> .more-link {
 		display: block;
 	}
-	address, figure, hr, p, table, pre, form, .wp-block-buttons, .wp-block-button, .wp-block-kadence-advancedbtn, .wp-block-media-text, .wp-block-image, .wp-block-cover, .entry-content-asset, .wp-block-kadence-form, .wp-block-group, .wp-block-yoast-faq-block, .wp-block-yoast-how-to-block, .schema-faq-section, .wp-block-kadence-tableofcontents, .enlighter-default, h1, h2, h3, h4, h5, h6, ul, ol {
+	address, figure, hr, p, table, pre, form, .wp-block-buttons, .wp-block-button, .wp-block-kadence-advancedbtn, .wp-block-media-text, .wp-block-image, .wp-block-cover, .entry-content-asset, .wp-block-kadence-form, .wp-block-group, .wp-block-yoast-faq-block, .wp-block-yoast-how-to-block, .schema-faq-section, .wp-block-kadence-tableofcontents, .enlighter-default, .wp-block-kadence-iconlist, h1, h2, h3, h4, h5, h6, ul, ol {
 		&:first-child {
 			margin-top: 0;
 			// > figure {

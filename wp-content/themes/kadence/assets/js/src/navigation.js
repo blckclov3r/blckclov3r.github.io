@@ -712,6 +712,9 @@ if ( window.NodeList && ! NodeList.prototype.forEach ) {
 				if ( ( Math.floor( element.getBoundingClientRect().top ) - offsetSticky === 0 ) || atBottom ) {
 					//element.tabIndex = '-1';
 					element.focus();
+					if ( element.classList.contains( 'kt-title-item' ) ) {
+						element.firstElementChild.click();
+					}
 					if ( history ) {
 						window.history.pushState('', '', '#' + element.id );
 					}

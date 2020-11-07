@@ -9,7 +9,7 @@
  * @package kadence
  */
 
-define( 'KADENCE_VERSION', '0.9.9' );
+define( 'KADENCE_VERSION', '1.0.1' );
 define( 'KADENCE_MINIMUM_WP_VERSION', '5.2' );
 define( 'KADENCE_MINIMUM_PHP_VERSION', '7.0' );
 
@@ -30,9 +30,3 @@ require get_template_directory() . '/inc/functions.php';
 
 // Initialize the theme.
 call_user_func( 'Kadence\kadence' );
-
-require 'theme_update_check.php';
-$kadence_theme_updater = new ThemeUpdateChecker(
-	'kadence',
-	'https://kernl.us/api/v1/theme-updates/5e6bc9ee9c7bfc366d501241/'
-);
