@@ -18,6 +18,28 @@ class Utils {
 	const DEPRECATION_RANGE = 0.4;
 
 	/**
+	 * A list of safe tage for `validate_html_tag` method.
+	 */
+	const ALLOWED_HTML_WRAPPER_TAGS = [
+		'article',
+		'aside',
+		'div',
+		'footer',
+		'h1',
+		'h2',
+		'h3',
+		'h4',
+		'h5',
+		'h6',
+		'header',
+		'main',
+		'nav',
+		'p',
+		'section',
+		'span',
+	];
+
+	/**
 	 * Is ajax.
 	 *
 	 * Whether the current request is a WordPress ajax request.
@@ -33,6 +55,15 @@ class Utils {
 		 _deprecated_function( __METHOD__, '2.6.0', 'wp_doing_ajax()' );
 
 		return wp_doing_ajax();
+	}
+
+	/**
+	 * Is WP CLI.
+	 *
+	 * @return bool
+	 */
+	public static function is_wp_cli() {
+		return defined( 'WP_CLI' ) && WP_CLI;
 	}
 
 	/**
@@ -320,14 +351,21 @@ class Utils {
 	 * @static
 	 *
 	 * @param string $post_type Optional. Post type slug. Default is 'page'.
+	 * @param string|null $template_type Optional. Query arg 'template_type'. Default is null.
 	 *
 	 * @return string A URL for creating new post using Elementor.
 	 */
-	public static function get_create_new_post_url( $post_type = 'page' ) {
-		$new_post_url = add_query_arg( [
+	public static function get_create_new_post_url( $post_type = 'page', $template_type = null ) {
+		$query_args = [
 			'action' => 'elementor_new_post',
 			'post_type' => $post_type,
-		], admin_url( 'edit.php' ) );
+		];
+
+		if ( $template_type ) {
+			$query_args['template_type'] = $template_type;
+		}
+
+		$new_post_url = add_query_arg( $query_args, admin_url( 'edit.php' ) );
 
 		$new_post_url = add_query_arg( '_wpnonce', wp_create_nonce( 'elementor_action_new_post' ), $new_post_url );
 
@@ -583,5 +621,39 @@ class Utils {
 		}
 
 		return false;
+	}
+
+	/**
+	 * Change Submenu First Item Label
+	 *
+	 * Overwrite the label of the first submenu item of an admin menu item.
+	 *
+	 * Fired by `admin_menu` action.
+	 *
+	 * @since 3.1.0
+	 *
+	 * @param $menu_slug
+	 * @param $new_label
+	 * @access public
+	 */
+	public static function change_submenu_first_item_label( $menu_slug, $new_label ) {
+		global $submenu;
+
+		if ( isset( $submenu[ $menu_slug ] ) ) {
+			// @codingStandardsIgnoreStart
+			$submenu[ $menu_slug ][0][0] = $new_label;
+			// @codingStandardsIgnoreEnd
+		}
+	}
+
+	/**
+	 * Validate an HTML tag against a safe allowed list.
+	 *
+	 * @param string $tag
+	 *
+	 * @return string
+	 */
+	public static function validate_html_tag( $tag ) {
+		return in_array( strtolower( $tag ), self::ALLOWED_HTML_WRAPPER_TAGS ) ? $tag : 'div';
 	}
 }

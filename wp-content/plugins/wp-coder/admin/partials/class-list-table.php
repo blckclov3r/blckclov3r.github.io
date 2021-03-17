@@ -85,6 +85,7 @@
 				'cb'         => '<input type="checkbox" />', 
 				'title'      => 'Title',
 				'code'       => 'Shortcode',
+				'code-alt'   => 'Alternative Shortcode',
 				'edit'       => 'Edit',
 				'delete'     => 'Delete',
 				'duplicate'  => 'Duplicate',
@@ -223,10 +224,11 @@
 					$data[] = array(
 						'ID'        => $value->id,	
 						'title'     => '<a href="admin.php?page=' . $this->pluginname . '&tab=add_new&act=update&id=' . $value->id . '">' . $title . '</a>',
-						'code'      => '[' . $this->shortcode . ' id="' . $value->id . '"]',					
+						'code'      => '[' . $this->shortcode . ' id="' . $value->id . '"]',
+						'code-alt'  => '[' . $this->shortcode . ' title="' . $title . '"]',
 						'edit'      => '<a href="admin.php?page=' . $this->pluginname . '&tab=add_new&act=update&id=' . $value->id . '">edit</a>',
 						'delete'    => '<a href="admin.php?page=' . $this->pluginname . '&info=del&did=' . $value->id . '" style="color:red;">delete</a>',
-						'duplicate' => '<a href="admin.php?page=' . $this->pluginname . '&tab=add_new&act=duplicate&id=' . $value->id . '" style="color:green;">duplicate</a>',					
+						'duplicate' => '<a href="admin.php?page=' . $this->pluginname . '&tab=add_new&act=duplicate&id=' . $value->id . '" style="color:green;">duplicate</a>',
 					);				
 				}	
 			}

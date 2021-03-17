@@ -30,12 +30,6 @@ CacheKeyModify -qs:_ga
 ## LITESPEED WP CACHE PLUGIN - Do not edit the contents of this block! ##
 # END NON_LSCACHE
 # BEGIN WP Hide & Security Enhancer
-<IfModule mod_rewrite.c> 
-RewriteEngine On 
-RewriteBase /blckclov3r/ 
-#WriteCheckString:1604182242_68332
-RewriteRule .* - [E=HTTP_MOD_REWRITE:On]
-</IfModule> 
 
 # END WP Hide & Security Enhancer
 

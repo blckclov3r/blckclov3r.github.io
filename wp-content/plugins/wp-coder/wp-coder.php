@@ -3,7 +3,7 @@
  * Plugin Name:       WP Coder
  * Plugin URI:        https://wordpress.org/plugins/wp-coder/
  * Description:       Add custom CSS, HTML, JavaScript on your website page
- * Version:           2.4.1
+ * Version:           2.5
  * Author:            Wow-Company
  * Author URI:        https://wow-estore.com/
  * License:           GPL-2.0+
@@ -34,7 +34,7 @@ if ( ! class_exists( 'Wow_Plugin_Class' ) ) {
 					'plugin_name'     => 'WP Coder',
 					'plugin_menu'     => 'WP Coder',
 					'plugin_home_url' => 'https://wordpress.org/plugins/wp-coder/',
-					'plugin_version'  => '2.4.1',
+					'plugin_version'  => '2.5',
 					'plugin_file'     => basename( __FILE__ ),
 					'plugin_slug'     => dirname( plugin_basename( __FILE__ ) ),
 					'plugin_dir'      => plugin_dir_path( __FILE__ ),

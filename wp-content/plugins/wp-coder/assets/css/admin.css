@@ -344,3 +344,7 @@ Plugin custom style
 	cursor: pointer;
 	text-decoration: underline;
 }
+table.wp-list-table {
+	table-layout: auto;
+}
+

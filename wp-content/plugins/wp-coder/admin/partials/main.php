@@ -19,7 +19,7 @@ $current_tab = ( isset( $_REQUEST["tab"] ) ) ? sanitize_text_field( $_REQUEST["t
 $tabs = apply_filters( 'wp_coder_menu', array(
 	'list'      => __( 'List', 'wpcoder' ),
 	'add_new'   => __( 'Add new', 'wpcoder' ),
-	'items'     => __( 'Items', 'wpcoder' ),
+	'items'     => __( 'CSS & JS Items', 'wpcoder' ),
 	'extension' => __( 'Extension', 'wpcoder' ),
 	'support'   => __( 'Support', 'wpcoder' ),
 ) );

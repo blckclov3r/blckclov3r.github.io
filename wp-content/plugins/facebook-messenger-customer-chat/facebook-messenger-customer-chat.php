@@ -1,11 +1,15 @@
 <?php
 /*
 Plugin Name: The Official Facebook Chat Plugin
-Description: With a few clicks, you can add the Facebook Chat Plugin to your website, enabling customers to message you while browsing your website. To see and reply to those messages, simply use the same messaging tools you use for your Facebook messaging, on desktop at facebook.com, Facebook Page Manager App (available on iOS and Android), or by adding your page account to Messenger. It's free, easy to install and comes with a user interface your customers are already familiar with. 
+Description: With a few clicks, you can add the Facebook Chat Plugin to your website, enabling customers to message you while browsing your website. To see and reply to those messages, simply use the same messaging tools you use for your Facebook messaging, on desktop at facebook.com, Facebook Page Manager App (available on iOS and Android), or by adding your page account to Messenger. It's free, easy to install and comes with a user interface your customers are already familiar with.
 Author: Facebook
 Author URI: https://developers.facebook.com
-Version: 1.9
+Version: 2.0
+Text Domain: facebook-messenger-customer-chat
+Domain Path: /languages/
+*/
 
+/*
 * Copyright (C) 2017-present, Facebook, Inc.
 *
 * This program is free software; you can redistribute it and/or modify
@@ -22,38 +26,53 @@ class Facebook_Messenger_Customer_Chat {
   function __construct() {
     include( plugin_dir_path( __FILE__ ) . 'options.php' );
     add_action( 'wp_footer', array( $this, 'fbmcc_inject_messenger' ) );
-    add_filter( 'plugin_action_links', 
-                array( $this, 'fbmcc_plugin_action_links'), 10, 2 );
-    add_filter( 'plugin_row_meta', 
-                array( $this, 'fbmcc_register_plugin_links'), 10, 2 );
+    add_filter( 'plugin_action_links',
+      array( $this, 'fbmcc_plugin_action_links'), 10, 2 );
+    add_filter( 'plugin_row_meta',
+      array( $this, 'fbmcc_register_plugin_links'), 10, 2 );
+    add_action( 'plugins_loaded', 'load_plugin_textdomain' );
   }
 
   function fbmcc_plugin_action_links( $links, $file ) {
+    $settings_url = 'admin.php?page=messenger-customer-chat-plugin';
     if ( current_user_can( 'manage_options' ) ) {
       $base = plugin_basename(__FILE__);
       if ( $file == $base ) {
-        $settings_link = '<a href="admin.php?
-          page=messenger-customer-chat-plugin">Settings</a>';
+        $settings_link = sprintf(
+          '<a href="%s">%s</a>',
+          $settings_url,
+          esc_html__( 'Settings', 'facebook-messenger-customer-chat' )
+        );
         array_unshift( $links, $settings_link );
+
       }
     }
     return $links;
   }
 
   function fbmcc_register_plugin_links( $links, $file ) {
+    $settings_url = 'admin.php?page=messenger-customer-chat-plugin';
     $base = plugin_basename(__FILE__);
     if ( $file == $base ) {
       if ( current_user_can( 'manage_options' ) ) {
-        $links[] = '<a href="admin.php?page=messenger-customer-chat-plugin">
-          Settings</a>';
+        $links[] = sprintf(
+          '<a href="%s">%s</a>',
+          $settings_url,
+          esc_html__( 'Settings', 'facebook-messenger-customer-chat' )
+        );
       }
-      $links[] = 
-        '<a href=
-          "https://wordpress.org/plugins/facebook-messenger-customer-chat/#faq"
-          target="_blank">FAQ</a>';
-      $links[] = 
-        '<a href="https://wordpress.org/support/plugin/facebook-messenger-customer-chat/" 
-        target="_blank">Support</a>';
+      $links[] =
+        sprintf(
+          '<a href="%s">%s</a>',
+          esc_url( 'https://wordpress.org/plugins/facebook-messenger-customer-chat/#faq' ),
+          esc_html__( 'FAQ', 'facebook-messenger-customer-chat' )
+        );
+      $links[] =
+        sprintf(
+          '<a href="%s">%s</a>',
+          esc_url( 'https://wordpress.org/support/plugin/facebook-messenger-customer-chat/' ),
+          esc_html__( 'Support', 'facebook-messenger-customer-chat' )
+        );
     }
     return $links;
   }
@@ -78,6 +97,10 @@ class Facebook_Messenger_Customer_Chat {
         ";
       _e($genCode);
     }
+  }
+
+  function load_plugin_textdomain() {
+    load_plugin_textdomain( 'facebook-messenger-customer-chat', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
   }
 }
 

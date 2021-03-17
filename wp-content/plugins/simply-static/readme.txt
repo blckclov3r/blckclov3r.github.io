@@ -1,9 +1,10 @@
 === Simply Static ===
-Contributors: codeofconduct
+Contributors: patrickposner
 Tags: html, static website generator, static site, secure, fast
-Requires at least: 4.0
-Tested up to: 4.9
-Stable tag: 2.1.0
+Requires at least: 5.4
+Tested up to: 5.6
+Requires PHP: 7.2.5
+Stable tag: 2.1.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -30,14 +31,6 @@ Every time you visit a WordPress page it needs to perform database queries to fe
 With Simply Static, you’re creating a static copy of all of your WordPress pages. That time to create each page is incurred once, when Simply Static runs. When someone visits your static site they can instantly receive the page because Simply Static already did the work of creating it.
 
 Depending on the complexity of your site, theme, and plugins, using a static site can easily increase the performance of your site by 10x.
-
-= Other Similar Plugins =
-
-In the event that Simply Static doesn't meet your needs, give this plugin a try:
-
-- [WP Static HTML Output](https://wordpress.org/plugins/static-html-output-plugin/)
-
-It's updated regularly and the author is responsive to support requests.
 
 == Installation ==
 
@@ -100,6 +93,40 @@ No. We haven't done any testing on Windows and, based on user feedback, it seems
 3. On the Include/Exclude page, you can select additional URLs, files, or directories to include in your static site. And you can also choose URLs (or URL patterns) to exclude from your static site.
 
 == Changelog ==
+
+= 2.1.3 =
+
+* dispatch execution to cron for larger exports
+* fixed download URL for zip files
+* added support for custom head tags added in wp_head hook
+* parsing Rankmath sitemap if added to additional files
+* removing uploads folder from additional files setting
+
+= 2.1.2.1, February 04, 2021 =
+
+* increased min PHP version to 7.2.5
+* wp_die() if lower PHP version is available
+* increases min version in diagnostics
+
+= 2.1.2, February 04, 2021 =
+
+* added composer support
+* updated dependencies
+* more fail-safe bootup
+* added sorting by status code
+* removed wp_mail_content_type filter
+* fixed PHP notices for PHP 7.4 support
+* new composer package for simplehtmldom with Symfony Finder
++ improved doc blocks for models and tasks
+* auto exclude wp-json and wp-login.php from export
+* trailingslash / untrailingslash check pages
+
+= 2.1.1, December 20, 2020 =
+
+* fixed PHP Dom parser for later PHP versions
+* removed PHP faker due to end of development
+* little color modifications in admin areas
+* new plugin header and readme
 
 = 2.1.0, May 12, 2017 =
 

@@ -14,18 +14,26 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-extract( shortcode_atts( array( 'id' => "" ), $atts ) );
+extract( shortcode_atts( array( 'id' => "", 'title' => '', ), $atts ) );
+
+if ( ! empty( $atts['id'] ) ) {
+	$id = absint( $atts['id'] );
+}
+
 global $wpdb;
-$table  = $wpdb->prefix . 'wow_' . $this->plugin_pref;
-$sSQL   = $wpdb->prepare( "select * from $table WHERE id = %d", $id );
+$table = $wpdb->prefix . 'wow_' . $this->plugin_pref;
+if ( ! empty( $id ) ) {
+	$sSQL = $wpdb->prepare( "select * from $table WHERE id = %d", $id );
+} elseif ( ! empty( $atts['title'] ) ) {
+	$sSQL = $wpdb->prepare( "select * from $table WHERE title = %s", $atts['title'] );
+} else {
+	return false;
+}
 $result = $wpdb->get_results( $sSQL );
 if ( count( $result ) > 0 ) {
 	foreach ( $result as $key => $val ) {
-		$param = unserialize( $val->param );
-		ob_start();
-		include( 'partials/public.php' );
-		$content = ob_get_contents();
-		ob_end_clean();
+		$param       = unserialize( $val->param );
+		$content     = do_shortcode( $param['content_html'] );
 		$path_style  = $this->basedir . 'style-' . $val->id . '.css';
 		$path_script = $this->basedir . 'script-' . $val->id . '.js';
 		$file_style  = $this->plugin_dir . 'admin/partials/generator/style.php';

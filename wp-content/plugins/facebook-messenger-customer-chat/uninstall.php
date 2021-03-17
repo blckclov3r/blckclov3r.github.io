@@ -16,9 +16,9 @@
 
 // if uninstall.php is not called by WordPress, die
 if (!defined('WP_UNINSTALL_PLUGIN')) {
-    die;
+  die;
 }
- 
+
 delete_option('fbmcc_pageID');
 delete_option('fbmcc_locale');
 delete_option('fbmcc_generatedCode');

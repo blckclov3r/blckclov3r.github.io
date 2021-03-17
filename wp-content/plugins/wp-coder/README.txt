@@ -3,7 +3,7 @@ Contributors: Wpcalc
 Donate link: https://wow-estore.com/item/wp-coder-extension/
 Tags: custom css, custom js, add css, add js, add code
 Requires at least: 3.2
-Tested up to: 5.5
+Tested up to: 5.7
 Requires PHP: 5.3
 Stable tag: trunk
 License: GPLv2 or later
@@ -25,6 +25,7 @@ For example, you can easily install a pop-up window script or notifications scri
 * Connecting third-party libraries
 * Uploading to the site and connecting scripts and styles
 * Easy plugin, not overloading the website
+* Inserted shortcodes into HTML code.
 
 = Video =
 
@@ -47,8 +48,6 @@ Try our new [WordPress popup plugin](https://wordpress.org/plugins/popup-box/)
 * [Float menu – awesome floating side menu](https://wordpress.org/plugins/float-menu/)
 * [Modal Window – create modal window](https://wordpress.org/plugins/modal-window/)
 * [Wow Skype Buttons](https://wordpress.org/plugins/mwp-skype/)
-* [Border Menu](https://wordpress.org/plugins/border-menu/)
-* [Slide Menu](https://wordpress.org/plugins/slide-menu/)
 
 == Screenshots ==
 
@@ -57,6 +56,9 @@ Try our new [WordPress popup plugin](https://wordpress.org/plugins/popup-box/)
 
 
 == Changelog ==
+= 2.5. =
+Added: alternative shortcode.
+Added: processing shortcodes inserted into the HTML code
 
 = 2.4 =
 * Fixed: Adding tag <textarea> in HTML code

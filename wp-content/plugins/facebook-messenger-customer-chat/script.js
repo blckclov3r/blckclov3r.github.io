@@ -16,9 +16,9 @@ function fbmcc_setupCustomerChat() {
   var baseURL = "https://www.facebook.com/customer_chat/dialog/?domain=";
   var urlParam = encodeURI(
     window.location.protocol
-      + '//'
-      + window.location.hostname
-      + (window.location.port ? ':' + window.location.port : '')
+    + '//'
+    + window.location.hostname
+    + (window.location.port ? ':' + window.location.port : '')
   );
   var customerWindow = window.open(
     baseURL + urlParam,
