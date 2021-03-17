@@ -34,15 +34,25 @@
                                                                     
                     return $this->module_settings;   
                 }
+            
                 
             function _init_remove_oembed($saved_field_data)
                 {
                     if(empty($saved_field_data) ||  $saved_field_data   ==  'no')
                         return FALSE;
                         
-                    remove_action( 'wp_head',                'wp_oembed_add_discovery_links'         );
-                    remove_action( 'wp_head',                'wp_oembed_add_host_js'                 );
+                    add_filter('wp'                     , array ( $this, '_run'  ) );
                     
+                }
+
+                
+            function _run()
+                {
+                    if ( apply_filters ('wph/components/wp_oembed_add_discovery_links', TRUE ) !== FALSE )
+                        remove_action( 'wp_head',                'wp_oembed_add_discovery_links'         );
+                    
+                    if ( apply_filters ('wph/components/wp_oembed_add_host_js', TRUE ) !== FALSE )    
+                        remove_action( 'wp_head',                'wp_oembed_add_host_js'                 );
                 }
 
         }

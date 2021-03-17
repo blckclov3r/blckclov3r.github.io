@@ -56,6 +56,8 @@
                         }
                    
                     $this->_load_interface_data();
+                    
+                    $this->_do_pasive_actions();
    
                     $this->_generate_interface_html();
                     
@@ -66,6 +68,16 @@
                     $this->module_settings  =   $this->functions->filter_settings(   $this->module->get_module_settings($this->tab_slug ));
                         
                     $this->interface_data   =   $this->module->get_interface_data();                      
+                }
+            
+            
+            function _do_pasive_actions()
+                {
+                    
+                    if ( isset ( $_GET['wph_environment'] ) && $_GET['wph_environment'] == 'ignore-rewrite-test' )
+                        update_option( 'wph-environment-ignore-rewrite-test', 'false' );
+                    
+                    
                 }
                   
             function _generate_interface_html()
@@ -79,51 +91,90 @@
                                 
                                 echo $this->functions->get_ad_banner();
                                 
-                                $this->show_recovery();
+                                                                
+                                $results    =   $this->functions->check_server_environment();
+                                
+                                if ( $results['found_issues'] !==  FALSE )
+                                    {
+                            
+                                        ?>
+                                        <div class="start-container title test">
+                                            <h2><?php _e( "Checking your environment ..", 'wp-hide-security-enhancer' ) ?></h2>
+                                        </div>
+                                        <div class="container-description environment-notices">
+                                        <?php
+                                        
+                                        if ( $results['found_issues'] !==  FALSE )
+                                            {    
+                                                echo $results['errors'];
+                                            }
+                                        
+                                        if ( $results['critical_issues'] ===  TRUE )
+                                            {    
+                                                ?>
+                                                <p class="framed"><span class="dashicons dashicons-warning error"></span> <?php _e('Critical issues were identified on your site, please fix them before proceeding with customizations.', 'wp-hide-security-enhancer') ?></p>
+                                                <?php
+                                            }
+                                        
+                                        if ( $results['found_issues'] ===  FALSE )
+                                            {    
+                                                ?>
+                                                <p><span class="dashicons dashicons-plugins-checked"></span> <?php _e('No problems have been found on your server environment.', 'wp-hide-security-enhancer') ?></p>
+                                                <?php
+                                            }
+                                        ?></div><?php
+                                    }
+
+                            ?>
+                            
+                            <div class="content<?php if( $results['critical_issues'] ) {echo (' disabled');} ?>">
+                            
+                                <?php
                                 
                                 if( $this->module->use_tabs  === true )
                                     $this->_generate_interface_tabs();
+                                    
+                                ?>
                             
-                            ?>
-                                                     
-                            <div id="poststuff">
-                                
-                                <?php if(!empty($this->interface_data['handle_title'])) { ?>
-                                <div class="postbox">
-                                    <h3 class="handle"><?php echo $this->interface_data['handle_title'] ?></h3>
-                                </div>
-                                <?php } ?>
-                                
-                                    <div class="inside">
-                                           
-                                        <form method="post" action="">
-                                        <?php wp_nonce_field( 'wph/interface_fields', 'wph-interface-nonce' ); ?>
-                                        
-                                        <div class="options">
-                                            <?php
-                                                                                            
-                                                foreach($this->module_settings  as  $module_setting)
-                                                    {
-                                                        $this->_generate_module_html( $module_setting );    
-                                                    }
-                                            
-                                            ?>
-                                        </div>    
-                                               
-                                                <table class="wph_submit widefat">
-                                                    <tbody>
-                                                        <tr class="submit">
-                                                            <td class="label">&nbsp;</td>
-                                                            <td class="label">
-                                                                <input type="submit" value="<?php _e('Save',    'wp-hide-security-enhancer') ?>" class="button-primary alignright"> 
-                                                            </td>    
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                        </form> 
+                                <div id="poststuff">
+                                    
+                                    <?php if(!empty($this->interface_data['handle_title'])) { ?>
+                                    <div class="postbox">
+                                        <h3 class="handle"><?php echo $this->interface_data['handle_title'] ?></h3>
                                     </div>
-                              
-                            </div>
+                                    <?php } ?>
+                                    
+                                        <div class="inside">
+                                               
+                                            <form method="post" action="">
+                                            <?php wp_nonce_field( 'wph/interface_fields', 'wph-interface-nonce' ); ?>
+                                            
+                                            <div class="options">
+                                                <?php
+                                                                                                
+                                                    foreach($this->module_settings  as  $module_setting)
+                                                        {
+                                                            $this->_generate_module_html( $module_setting );    
+                                                        }
+                                                
+                                                ?>
+                                            </div>    
+                                                   
+                                                    <table class="wph_submit widefat">
+                                                        <tbody>
+                                                            <tr class="submit">
+                                                                <td class="label">&nbsp;</td>
+                                                                <td class="label">
+                                                                    <input type="submit" value="<?php _e('Save',    'wp-hide-security-enhancer') ?>" class="button-primary alignright"> 
+                                                                </td>    
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                            </form> 
+                                        </div>
+                                  
+                                </div>
+                            </div>                         
                         </div>
                   
                 <?php   
@@ -296,25 +347,15 @@
                     <?php   
                     
                 }
-            
-            
-            function show_recovery()
-                {
-                    ?>
-                        <div class="wph-notice">
-                            <p class="important"><span class="dashicons dashicons-warning important" alt="f534"></span><?php _e('Copy the following link to a safe place. You can use later to reset all plugin options, if something go wrong.',    'wp-hide-security-enhancer') ?> <span id="wph-recovery-link" onClick="WPH.selectText( 'wph-recovery-link' )"><?php echo site_url() ?>?wph-recovery=<?php  echo $this->functions->get_recovery_code() ?></span></p>
-                        </div>
-                    <?php   
-                    
-                    
-                }
-                
+                        
                 
             function _generate_interface_tabs()
                 {
                     
                     ?> 
-                    <h2 class="nav-tab-wrapper">
+                    <h2 class="nav-tab-wrapper<?php
+                                if($this->wph->server_htaccess_config    === FALSE && $this->wph->server_web_config   === FALSE) {echo (' disabled');}
+                            ?>">
                         <?php
                             
                             //output all module components as tabs
@@ -334,7 +375,9 @@
                         
                         ?>
                     </h2>
-                    <form id="reset_settings_form" action="<?php echo esc_url(admin_url( 'admin.php?page=wp-hide')) ?>" method="post">
+                    <form id="reset_settings_form" action="<?php echo esc_url(admin_url( 'admin.php?page=wp-hide')) ?>" method="post" <?php
+                                if($this->wph->server_htaccess_config    === FALSE && $this->wph->server_web_config   === FALSE) {echo (' class="disabled"');}
+                            ?>>
                         <input type="hidden" name="reset-settings" value="true" />
                         <?php wp_nonce_field( 'wp-hide-reset-settings', '_wpnonce' ); ?>
                         

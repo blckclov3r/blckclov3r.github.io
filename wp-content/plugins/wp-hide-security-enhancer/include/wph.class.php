@@ -143,29 +143,33 @@
                     //create the static file which contain different environment variables which will be used on router
                     add_action('admin_init',            array($this,    'environment_check'), 999);
                     
-                    add_action('admin_init',            array($this,    'mu_loader_check'), 999);
+                    add_action('admin_init',                        array($this,    'mu_loader_check'), 999);
                                                                       
                     //apache
                     //add_filter('mod_rewrite_rules',         array($this,    'mod_rewrite_rules'), 999);
    
                     if($this->server_htaccess_config    === TRUE)                    
-                        add_filter('flush_rewrite_rules_hard',  array($this,    'flush_rewrite_rules_hard'), 999);
+                        add_filter('flush_rewrite_rules_hard',      array($this,    'flush_rewrite_rules_hard'), 999);
                     
                     //IIS7 server
-                    add_filter('iis7_url_rewrite_rules',        array($this,    'iis7_url_rewrite_rules'), 999);
+                    add_filter('iis7_url_rewrite_rules',            array($this,    'iis7_url_rewrite_rules'), 999);
                                            
                     //on switch theme
-                    add_action('switch_theme',                  array($this,    'switch_theme'));
+                    add_action('switch_theme',                      array($this,    'switch_theme'));
                     
                     //admin notices
-                    add_action( 'admin_notices',                array(&$this,   'admin_notices'));
-                    add_action( 'network_admin_notices',        array(&$this,   'admin_notices'));
+                    add_action( 'admin_notices',                    array(&$this,   'admin_notices'));
+                    add_action( 'network_admin_notices',            array(&$this,   'admin_notices'));
                     
                     //ensure the media urls are being saved using default WordPress urls
-                    add_action( 'save_post', array($this,    'save_post'), 999 );
+                    add_action( 'save_post',                        array($this,    'save_post'), 999 );
+                    //ensure meta data is being saved using default WordPress urls
+                    add_action( 'update_post_metadata',             array($this,    'update_post_metadata'), 999, 5 );
+                    //revert any urls back to original before save
+                    add_filter( 'pre_update_option',                array($this,    'pre_update_option'), 99, 3);
                     
                     //restart the buffering if already outputed. This is usefull for plugin / theme update iframe
-                    add_action('admin_print_footer_scripts',    array($this, 'admin_print_footer_scripts'), -1);
+                    add_action('admin_print_footer_scripts',        array($this, 'admin_print_footer_scripts'), -1);
                     
                     //prevent the buffer processing if not filterable available
                     add_filter( 'wp-hide/ignore_ob_start_callback', array($this, 'ignore_ob_start_callback'), 999 );
@@ -268,6 +272,9 @@
                                 }   
                         
                         }
+                        
+                        
+                    do_action( 'wp-hide/modules_components_run/completed' );
                     
                 }
                 
@@ -277,11 +284,11 @@
             * Retrieve the rewrite results from component
             * 
             */
-            private function _run_component_callback( $_callback, $_callback_arguments, $_class_instance, $saved_field_value)
+            private function _run_component_callback( $_callback, $_callback_arguments, $_class_instance, $saved_field_value = '' )
                 {
                     
                     if ( ! empty($_callback_arguments)  &&  is_array($_callback_arguments) &&   count($_callback_arguments) >   0 )
-                        $module_processing_data   =   call_user_func_array( array($_class_instance, $_callback), array_merge( array( 'field_value'    =>  $saved_field_value), $_callback_arguments));
+                        $module_processing_data   =   call_user_func_array( array($_class_instance, $_callback), array_values ( array_merge( array( 'field_value'    =>  $saved_field_value), $_callback_arguments) ) );
                         else
                         $module_processing_data   =   call_user_func(array($_class_instance, $_callback), $saved_field_value);
                                             
@@ -349,17 +356,24 @@
             
                     $this->admin_interface =    new WPH_interface(); 
                     
+                    $system_warning =   FALSE;
+                    if( ( $this->server_htaccess_config    === FALSE && $this->server_web_config   === FALSE)
+                        ||  is_multisite()
+                        )
+                        $system_warning =   TRUE;
+                    
                     $first_view =   get_option('wph-first-view');
                     if ( isset ( $_GET['page'] )    &&  $_GET['page']   ==  'wp-hide' )
                         $first_view =   'false'; 
                     
                     $menu_title =   'WP Hide';
-                    if  ( empty ( $first_view ) )
+                    if  ( empty ( $first_view ) ||  $system_warning )
                         $menu_title .= ' <span class="update-plugins count-1"><span class="plugin-count">!</span></span>';                      
                     $hookID   =   add_menu_page('WP Hide', $menu_title, 'manage_options', 'wp-hide');
                     
+                                        
                     $menu_title =   'Setup';
-                    if  ( empty ( $first_view ) )
+                    if  ( empty ( $first_view ) ||  $system_warning )
                         $menu_title .= ' <span class="update-plugins count-1"><span class="plugin-count">!</span></span>';
                     
                     $setup_interface    =   new WPH_setup_interface();
@@ -387,67 +401,64 @@
 
                     do_action('wp-hide/admin_notices');
                     
-                    if (    getenv('IS_WPE')    ==  "1"   ||  getenv('IS_WPE_SNAPSHOT')    == "1" ) 
-                        {
-                            echo "<div class='error'><p><b>WP Hide</b> ". __("Your server run on WPEngine which works on Nginx rewrite rules, please check with WP Hide PRO version at", 'wp-hide-security-enhancer') .' <a target="_blank" href="https://www.wp-hide.com/wp-hide-pro-now-available/">WP-Hide PRO</a></p></div>';    
-                        }
+                    $screen =   get_current_screen();
                     
-                    if ( is_multisite() )
+                    if ( $screen->parent_base   != 'wp-hide' )
                         {
-                            echo "<div class='error'><p><b>WP Hide</b> ". __("This plugin version can't handle MultiSite environment, please check with WP Hide PRO version at", 'wp-hide-security-enhancer')  . ' <a target="_blank" href="https://www.wp-hide.com/wp-hide-pro-now-available/">WP-Hide PRO</a></p></div>';
-                        }
-                    
-                    if(! $this->functions->is_muloader())
-                        {
-                            echo "<div class='error'><p><b>WP Hide</b> ". __('Unable to launch WP Hide through mu-plugins/wp-hide-loader.php<br /> Please make sure this location is writable so the plugin create the required file.', 'wp-hide-security-enhancer')  ."</p></div>";
-                        }
-                        
-                    //check if mu loader is up to date
-                    if( $this->functions->is_muloader() &&  defined( 'WPH_MULOADER_VERSION' )  &&  version_compare( WPH_MULOADER_VERSION, '1.3.5', '<' ) &&    !isset($this->maintenances['mu_loader']) )
-                        {
-                            echo "<div class='error'><p><b>WP Hide</b> ". __('Unable to update the /mu-plugins/wp-hide-loader.php<br /> Please make sure the file is writable so the plugin create the required file.', 'wp-hide-security-enhancer')  ."</p></div>";
-                        }
-                        
-                    //check if the MU loader was succesfully updated
-                    if( $this->functions->is_muloader() &&  defined( 'WPH_MULOADER_VERSION' )  &&  version_compare( WPH_MULOADER_VERSION, '1.3.5', '<' ))
-                        {
-                            //attempt to copy the new version 
-                            $status =   WPH_functions::copy_mu_loader();
-                            if ( $status    === FALSE )
-                                echo "<div class='error'><p><b>WP Hide</b> ". __('Unable to update the <b>mu-plugins/wp-hide-loader.php</b><br /> Please manually copy the file from', 'wp-hide-security-enhancer')  ." " . WPH_PATH . 'router/wp-hide-loader.php ' . __('to', 'wp-hide-security-enhancer') . " " . WPMU_PLUGIN_DIR ."/</p></div>";
-                        }
-                    
-                    //check for permalinks enabled
-                    if (!$this->functions->is_permalink_enabled())
-                        {
-                            echo "<div class='error'><p><b>WP Hide</b> ". __('Permalink is required to be turned ON for WP Hide & Security Enhancer to work', 'wp-hide-security-enhancer')  ."</p></div>";
-                        }
-
-                    if($this->server_htaccess_config    === FALSE && $this->server_web_config   === FALSE)
-                        {
-                            echo "<div class='error'><p>". __("<b>WP Hide</b> This plugin version can't handle this server type, please check with PRO version at", 'wp-hide-security-enhancer')  . ' <a target="_blank" href="https://www.wp-hide.com/wp-hide-pro-now-available/">WP-Hide PRO</a></p></div>';
-                        }
-                    
-                       
-                    //check if the htaccess file is not writable
-                    if(isset($this->settings['write_check_string']) &&  !empty($this->settings['write_check_string']))
-                        {                            
-                            $_write_check_string =   $this->functions->get_write_check_string();
-                            if(empty($_write_check_string)  ||  $_write_check_string    !=  $this->settings['write_check_string'])
+                            
+                            if( $this->server_htaccess_config    === FALSE && $this->server_web_config   === FALSE)
                                 {
-                                    if($this->server_htaccess_config    === TRUE)
-                                        echo "<div class='error'><p><b>WP Hide</b> ". __('Unable to write custom rules to your .htaccess. Is this file writable? <br />No changes are being applied.', 'wp-hide-security-enhancer')  ."</p></div>";
-                                    
-                                    if($this->server_web_config     === TRUE)
-                                        echo "<div class='error'><p><b>WP Hide</b> ". __('Unable to write custom rules to your web.config. Is this file writable? <br />No changes are being applied.', 'wp-hide-security-enhancer')  ."</p></div>";
+                                    ?><div class='error'><?php include ( WPH_PATH . 'include/admin-interfaces/notice-server-not-supported.php' );?></div><?php
                                 }
-                        }
-                        
-                    
-                    //check if the cache dir is available
-                    if(! is_writable( WPH_CACHE_PATH ))
-                        {
-                            echo "<div class='error'><p><b>WP Hide</b> ". __('Unable to create cache folder. Is the wp-content writable? <br />No cache data will be available.', 'wp-hide-security-enhancer')  ."</p></div>";
+                            
+                            if ( is_multisite() )
+                                {
+                                    ?><div class='error'><?php include ( WPH_PATH . 'include/admin-interfaces/notice-is_multisite.php' );?></div><?php
+                                }
+                                                                                                    
+                            if (  ! $this->functions->is_permalink_enabled())
+                                {
+                                    ?><div class='error'><?php include ( WPH_PATH . 'include/admin-interfaces/notice-no-permalinks.php' );?></div><?php
+                                }
+                
+                            
+                            if( ! $this->functions->rewrite_rules_applied() && ( $this->server_htaccess_config    === TRUE || $this->server_web_config   === TRUE ) )
+                                {                            
+                                    $results['found_issues']   =   TRUE;
+                                    $results['critical_issues']    =   TRUE;
+                                    $rewrite_file_type = '';
+                                    if( $this->server_htaccess_config    === TRUE )
+                                        $rewrite_file_type  =   '.htaccess';
+                                    
+                                    if( $this->server_web_config     === TRUE )
+                                        $rewrite_file_type  =   'web.config';
+                                    
+                                    ?><div class='error'><?php include ( WPH_PATH . 'include/admin-interfaces/notice-write-check.php' ); ?></div><?php
+                                }
+                            
+                            if (    getenv('IS_WPE')    ==  "1"   ||  getenv('IS_WPE_SNAPSHOT')    == "1" ) 
+                                {
+                                    $results['found_issues']   =   TRUE;
+                                    ?><div class='error'><?php include ( WPH_PATH . 'include/admin-interfaces/notice-is-wpengine.php' );?></div><?php
+                                }
+                 
+                            if( ! $this->functions->is_muloader())
+                                {
+                                    $results['found_issues']   =   TRUE;
+                                    ?><div class='error'><?php include ( WPH_PATH . 'include/admin-interfaces/notice-mu-loader.php' );?></div><?php
+                                }
+                            if( $this->functions->is_muloader() &&  defined( 'WPH_MULOADER_VERSION' )  &&  version_compare( WPH_MULOADER_VERSION, '1.3.5', '<' ) &&    ! isset( $this->maintenances['mu_loader'] ) )
+                                {
+                                    $results['found_issues']   =   TRUE;
+                                    ?><div class='error'><?php include ( WPH_PATH . 'include/admin-interfaces/notice-mu-loader-update.php' );?></div><?php
+                                }
+                                
+                            if( ! is_writable( WPH_CACHE_PATH ))
+                                {
+                                    $results['found_issues']   =   TRUE;
+                                    ?><div class='error'><?php include ( WPH_PATH . 'include/admin-interfaces/notice-cache-path.php' );?></div><?php
+                                }
+          
                         }
                     
                     if(isset($_GET['reset_settings']))
@@ -617,7 +628,7 @@
                     $headers_content_type   =   array();
                     if  ( ! is_null ( $this->functions ) )
                         $headers_content_type    =   $this->functions->get_headers_list_content_type();
-                    if ( in_array( $headers_content_type , array( 'text/xml' ) )    &&  ! is_null ( $this->functions ) )
+                    if ( in_array( $headers_content_type , array( 'text/xml', 'application/rss+xml' ) )    &&  ! is_null ( $this->functions ) )
                         {
 
                             //do only url replacements
@@ -760,6 +771,8 @@
             */  
             function activated_plugin($plugin, $network_wide)
                 {
+                    return;
+                    
                     if($network_wide)
                         {
                             $active_plugins = get_site_option( 'active_sitewide_plugins', array() );
@@ -911,10 +924,17 @@
                     if($this->uninstall === TRUE)
                         return $rules;
                         
-                    $write_check_string =   isset($this->settings['write_check_string']) ? $this->settings['write_check_string']    :   '';
+                    $write_check_string =   isset( $this->settings['write_check_string'] ) ? $this->settings['write_check_string']    :   '';
                     
                     if ( empty ( $write_check_string ) )
-                        return $rules;
+                        {
+                            //generate a new write_check_string
+                            $write_check_string  =   time() . '_' . mt_rand(100, 99999);
+                            $this->settings['write_check_string']   =   $write_check_string;
+                                                                                           
+                            //update the settings
+                            $this->functions->update_settings( $this->settings );   
+                        }
                     
                     $processing_data    =   $this->get_components_rules();
                                            
@@ -933,7 +953,12 @@
                         }
                     
                     $rules  .=  "#WriteCheckString:" . $write_check_string . "\n";
-                    $rules  .=  "RewriteRule .* - [E=HTTP_MOD_REWRITE:On]";
+                    $rules  .=  "RewriteRule .* - [E=HTTP_MOD_REWRITE:On]" . "\n";
+                    
+                    $plugin_path        =   $this->functions->get_url_path( WP_PLUGIN_URL );
+                    $rewrite_to         =   $this->functions->get_rewrite_to_base( trailingslashit( $plugin_path ) . 'wp-hide-security-enhancer/include/rewrite-confirm.php', TRUE, FALSE );
+                    
+                    $rules  .=  "RewriteRule ^rewrite_test_" .$write_check_string ."/? ". $rewrite_to ." [L,QSA]";
                     
                     if(count($_rewrite_data)   >   0)
                         {
@@ -1000,7 +1025,7 @@
                             return;
                         }
                         
-                    if  ( $this->functions->is_muloader() &&  version_compare( WPH_MULOADER_VERSION, '1.3.5', '<' ) )
+                    if  ( $this->functions->is_muloader() &&  ( !defined( 'WPH_MULOADER_VERSION' ) ||   version_compare( WPH_MULOADER_VERSION, '1.3.5', '<' ) ) )
                         {
                             $status =   $this->functions->copy_mu_loader( TRUE );
                             if  ( $status )
@@ -1023,11 +1048,14 @@
                     $rules          =   $this->get_rewrite_rules();
                     
                     //check if there's a  # BEGIN WordPress    and   # END WordPress    markers or create those to ensude plugin rules are put on top of Wordpress ones   
-                    $file_content = file( $htaccess_file );
-                        
-                    if( count( preg_grep("/.*# BEGIN WordPress.*/i", $file_content) )   <   1 &&  count( preg_grep("/.*# END WordPress.*/i", $file_content) )   <   1 )
-                        {
-                            $this->functions->insert_with_markers_on_top( $htaccess_file, 'WordPress', '' );
+                    $file_content = @file( $htaccess_file );
+                    
+                    if ( $file_content ) 
+                        {    
+                            if( count( preg_grep("/.*# BEGIN WordPress.*/i", $file_content) )   <   1 &&  count( preg_grep("/.*# END WordPress.*/i", $file_content) )   <   1 )
+                                {
+                                    $this->functions->insert_with_markers_on_top( $htaccess_file, 'WordPress', '' );
+                                }
                         }
                     
                     
@@ -1107,15 +1135,22 @@
                                 $_page_refresh  =   TRUE;
                         }
                     
-                    $write_check_string  =   time() . '_' . mt_rand(100, 99999);
-                    $this->settings['write_check_string']   =   $write_check_string;
-                    $this->functions->update_settings($this->settings);
+                    $write_check_string =   isset( $this->settings['write_check_string'] ) ? $this->settings['write_check_string']    :   '';
+                    
+                    $plugin_path        =   $this->functions->get_url_path( WP_PLUGIN_URL );
+                    $rewrite_to         =   $this->functions->get_rewrite_to_base( trailingslashit( $plugin_path ) . 'wp-hide-security-enhancer/include/rewrite-confirm.php' );
                                 
                     //add a write stricng
                     $_writestring_rule  =   '
                         <rule name="wph-CheckString">
                             <!-- WriteCheckString:'. $write_check_string  .' -->
-                        </rule>';
+                        </rule>
+                        <rule name="wph-RewriteTest" stopProcessing="true">
+                            <match url="^rewrite_test_'.  $write_check_string   .'/?"  />
+                            <action type="Rewrite" url="'.  $rewrite_to .'{R:1}" />
+                        </rule>
+                        
+                        ';
                     array_unshift($_rewrite_data, $_writestring_rule);
                                
                     $this->iis7_add_rewrite_rule( $_rewrite_data, $web_config_file );
@@ -1460,6 +1495,234 @@
                         }
                     
                 }
+                
+                
+                
+            /**
+            * Revert back the files urls to default WordPress
+            * 
+            * @param mixed $check
+            * @param mixed $object_id
+            * @param mixed $meta_key
+            * @param mixed $meta_value
+            * @param mixed $prev_value
+            */
+            function update_post_metadata ( $check, $object_id, $meta_key, $meta_value, $prev_value)
+                {
+                    global $wpdb;
+
+                    $meta_type      =   'post';
+                    
+                    $table          = _get_meta_table( $meta_type );
+                    $column         = sanitize_key( $meta_type . '_id' );
+                    $id_column      = 'user' == $meta_type ? 'umeta_id' : 'meta_id';
+                    
+                    $_meta_value     =   $meta_value;
+                    
+                    $replacement_list   =   $this->functions->get_replacement_list();
+                    //reverse the list
+                    $replacement_list   =   array_flip($replacement_list);
+                    //replace the urls
+                    if ( is_array ( $meta_value ) )
+                        {
+                            if ( count ( $meta_value ) > 0 )
+                                {
+                                    foreach ( $meta_value   as  $key  => $value )
+                                        {
+                                            if ( is_string( $meta_value) )
+                                                $meta_value[$key]         =   $this->functions->content_urls_replacement( $value,  $replacement_list );
+                                        }
+                                }
+                        }
+                        else
+                        {
+                            if ( is_string( $meta_value) )
+                                $meta_value         =   $this->functions->content_urls_replacement( $meta_value,  $replacement_list );
+                        }
+                    
+                    $raw_meta_key   = $meta_key;
+                    $passed_value   = wp_slash($meta_value);
+                       
+                    // Compare existing value to new value if no prev value given and the key exists only once.
+                    if ( empty( $prev_value ) ) {
+                        $old_value = get_metadata( $meta_type, $object_id, $meta_key );
+                        if ( count( $old_value ) == 1 ) {
+                            if ( $old_value[0] === $meta_value ) {
+                                return false;
+                            }
+                        }
+                    }
+
+                    
+                    $meta_ids = $wpdb->get_col( $wpdb->prepare( "SELECT $id_column FROM $table WHERE meta_key = %s AND $column = %d", $meta_key, $object_id ) );
+                    if ( empty( $meta_ids ) ) {
+                        return add_metadata( $meta_type, $object_id, $raw_meta_key, $passed_value );
+                    }
+           
+
+                    $_meta_value = $meta_value;
+                    $meta_value  = maybe_serialize( $meta_value );
+
+                    $data  = compact( 'meta_value' );
+                    $where = array(
+                        $column    => $object_id,
+                        'meta_key' => $meta_key,
+                    );
+
+                    if ( ! empty( $prev_value ) ) {
+                        $prev_value          = maybe_serialize( $prev_value );
+                        $where['meta_value'] = $prev_value;
+                    }
+
+                    foreach ( $meta_ids as $meta_id ) {
+                        /**
+                         * Fires immediately before updating metadata of a specific type.
+                         *
+                         * The dynamic portion of the hook, `$meta_type`, refers to the meta
+                         * object type (comment, post, term, or user).
+                         *
+                         * @since 2.9.0
+                         *
+                         * @param int    $meta_id     ID of the metadata entry to update.
+                         * @param int    $object_id   Object ID.
+                         * @param string $meta_key    Meta key.
+                         * @param mixed  $_meta_value Meta value.
+                         */
+                        do_action( "update_{$meta_type}_meta", $meta_id, $object_id, $meta_key, $_meta_value );
+
+                        if ( 'post' == $meta_type ) {
+                            /**
+                             * Fires immediately before updating a post's metadata.
+                             *
+                             * @since 2.9.0
+                             *
+                             * @param int    $meta_id    ID of metadata entry to update.
+                             * @param int    $object_id  Post ID.
+                             * @param string $meta_key   Meta key.
+                             * @param mixed  $meta_value Meta value. This will be a PHP-serialized string representation of the value if
+                             *                           the value is an array, an object, or itself a PHP-serialized string.
+                             */
+                            do_action( 'update_postmeta', $meta_id, $object_id, $meta_key, $meta_value );
+                        }
+                    }
+
+                    $result = $wpdb->update( $table, $data, $where );
+                    if ( ! $result ) {
+                        return false;
+                    }
+
+                    wp_cache_delete( $object_id, $meta_type . '_meta' );
+
+                    foreach ( $meta_ids as $meta_id ) {
+                        /**
+                         * Fires immediately after updating metadata of a specific type.
+                         *
+                         * The dynamic portion of the hook, `$meta_type`, refers to the meta
+                         * object type (comment, post, term, or user).
+                         *
+                         * @since 2.9.0
+                         *
+                         * @param int    $meta_id     ID of updated metadata entry.
+                         * @param int    $object_id   Object ID.
+                         * @param string $meta_key    Meta key.
+                         * @param mixed  $_meta_value Meta value.
+                         */
+                        do_action( "updated_{$meta_type}_meta", $meta_id, $object_id, $meta_key, $_meta_value );
+
+                        if ( 'post' == $meta_type ) {
+                            /**
+                             * Fires immediately after updating a post's metadata.
+                             *
+                             * @since 2.9.0
+                             *
+                             * @param int    $meta_id    ID of updated metadata entry.
+                             * @param int    $object_id  Post ID.
+                             * @param string $meta_key   Meta key.
+                             * @param mixed  $meta_value Meta value. This will be a PHP-serialized string representation of the value if
+                             *                           the value is an array, an object, or itself a PHP-serialized string.
+                             */
+                            do_action( 'updated_postmeta', $meta_id, $object_id, $meta_key, $meta_value );
+                        }
+                    }
+
+                    return true;   
+                    
+                }
+                
+                
+                
+            /**
+            * Revert the option value before saving
+            *     
+            * @param mixed $query
+            */
+            function pre_update_option( $value, $option, $old_value )
+                {
+                    
+                    if ( $value === $old_value || maybe_serialize( $value ) === maybe_serialize( $old_value ) ) 
+                        return $value;
+                    
+                    //ignore specific options
+                    if ( apply_filters('wph/reverse_urls/pre_update_option', $option, FALSE ) )
+                        return $value;
+                    
+                    $replacement_list   =   $this->functions->get_replacement_list();
+                    if ( count ( $replacement_list ) < 1 )
+                        return $value;
+                    
+                    $replacement_list   =   array_flip($replacement_list);
+                    
+                    $value  =   $this->option_block_revert( $value, $replacement_list );
+                                            
+                    return $value;   
+                }
+                
+            
+            /**
+            * Ignore the plugin option when saving
+            * 
+            * @param mixed $option_name
+            * @param mixed $ignore_status
+            */
+            function reverse_urls_pre_update_option( $option_name, $ignore_status )
+                {
+                    
+                    if ( !in_array( $option_name, array ( 'wph_settings', 'wph-previous-options-list' )) )
+                        return $ignore_status;
+                    
+                    $ignore_status  =   TRUE;
+                    
+                    return $ignore_status;
+                }
+                
+                
+            function option_block_revert( $data, $replacement_list )
+                {
+                    switch (gettype($data))
+                        {
+                            case 'array':
+                                            foreach ($data as $key => $value)
+                                                {
+                                                    $data[$key] = $this->option_block_revert( $value, $replacement_list );
+                                                }
+                                            break;
+                                            
+                            case 'object':
+                                            foreach ($data as $key => $value)
+                                                {
+                                                    $data->$key = $this->option_block_revert( $value, $replacement_list );
+                                                }
+                                            break;
+                                            
+                            case 'string': 
+                                            $data = $this->functions->content_urls_replacement( $data,  $replacement_list ); 
+                                            
+                                            break;            
+                        }
+                    
+                    return $data;
+                }           
+                
                 
             
             /**

@@ -35,7 +35,9 @@
                     if (version_compare($version, WPH_CORE_VERSION, '<')) 
                         {
                             
-                            $_trigger_flush_rules   =   FALSE;
+                            $_trigger_flush_rules           =   FALSE;
+                            $_set_static_environment_file   =   FALSE;
+                            $_trigger_site_cache_flush      =   FALSE;
                             
                             if(version_compare($version, '1.1', '<'))
                                 {
@@ -248,14 +250,18 @@
                                 }    
                             
                             
+                            if ( $_set_static_environment_file === TRUE )        
+                                {
+                                    $this->wph->set_static_environment_file();
+                                }
                             
-                            //Always generate the environment file
-                            $this->wph->set_static_environment_file();
                             
                             //clear teh site cache
-                            $this->wph->functions->site_cache_clear();
-                            
-                            
+                            if ( $_trigger_site_cache_flush === TRUE )
+                                {
+                                    $this->wph->functions->site_cache_clear();
+                                }
+
                             //save the last code version
                             $this->wph->settings['version'] =   WPH_CORE_VERSION;
                             $this->wph->functions->update_settings($this->wph->settings);

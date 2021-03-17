@@ -17,8 +17,7 @@ class Crawler_Map extends Instance {
 	private $_tb;
 	private $__data;
 	private $_conf_map_timeout;
-
-	protected $_urls = array();
+	private $_urls = array();
 
 	/**
 	 * Instantiate the class
@@ -314,9 +313,14 @@ class Crawler_Map extends Instance {
 	 * @access public
 	 */
 	public function gen() {
-		$urls = $this->_gen();
+		$count = $this->_gen();
 
-		$msg = sprintf( __( 'Sitemap created successfully: %d items', 'litespeed-cache' ), $urls );
+		if ( ! $count ) {
+			Admin_Display::error( __( 'No valid sitemap parsed for crawler.', 'litespeed-cache' ) );
+			return;
+		}
+
+		$msg = sprintf( __( 'Sitemap created successfully: %d items', 'litespeed-cache' ), $count );
 		Admin_Display::succeed( $msg );
 	}
 
@@ -338,34 +342,30 @@ class Crawler_Map extends Instance {
 		}
 
 		// use custom sitemap
-		if ( $sitemap = Conf::val( Base::O_CRAWLER_SITEMAP ) ) {
-			$urls = array();
-			$offset = strlen( $this->_home_url );
-			$sitemap_urls = false;
-
-			try {
-				$sitemap_urls = $this->_parse( $sitemap );
-			} catch( \Exception $e ) {
-				Debug2::debug( '🐞🗺️ ❌ failed to prase custom sitemap: ' . $e->getMessage() );
-			}
-
-			if ( is_array( $sitemap_urls ) && ! empty( $sitemap_urls ) ) {
-				if ( Conf::val( Base::O_CRAWLER_DROP_DOMAIN ) ) {
-					foreach ( $sitemap_urls as $val ) {
-						if ( stripos( $val, $this->_home_url ) === 0 ) {
-							$urls[] = substr( $val, $offset );
-						}
-					}
-				}
-				else {
-					$urls = $sitemap_urls;
-				}
-
-				$urls = array_unique( $urls );
-			}
+		if ( ! $sitemap = Conf::val( Base::O_CRAWLER_SITEMAP ) ) {
+			return false;
 		}
-		else {
-			$urls = $this->_build();
+
+		$offset = strlen( $this->_home_url );
+
+		try {
+			$this->_parse( $sitemap );
+		} catch( \Exception $e ) {
+			Debug2::debug( '🐞🗺️ ❌ failed to parse custom sitemap: ' . $e->getMessage() );
+		}
+
+		if ( is_array( $this->_urls ) && ! empty( $this->_urls ) ) {
+			if ( Conf::val( Base::O_CRAWLER_DROP_DOMAIN ) ) {
+				foreach ( $this->_urls as $k => $v ) {
+					if ( stripos( $v, $this->_home_url ) !== 0 ) {
+						unset( $this->_urls[ $k ] );
+						continue;
+					}
+					$this->_urls[ $k ] = substr( $v, $offset );
+				}
+			}
+
+			$this->_urls = array_unique( $this->_urls );
 		}
 
 		Debug2::debug( '🐞🗺️ Truncate sitemap' );
@@ -395,7 +395,7 @@ class Crawler_Map extends Instance {
 		}
 
 		// Drop all blacklisted URLs
-		$urls = array_diff( $urls, $full_blacklisted );
+		$this->_urls = array_diff( $this->_urls, $full_blacklisted );
 
 		// Default res & reason
 		$crawler_count = count( Crawler::get_instance()->list_crawlers() );
@@ -403,7 +403,7 @@ class Crawler_Map extends Instance {
 		$default_reason = $crawler_count > 1 ? str_repeat( ',', $crawler_count - 1 ) : '';
 
 		$data = array();
-		foreach ( $urls as $url ) {
+		foreach ( $this->_urls as $url ) {
 			$data[] = $url;
 			$data[] = array_key_exists( $url, $partial_blacklisted ) ? $partial_blacklisted[ $url ][ 'res' ] : $default_res;
 			$data[] = array_key_exists( $url, $partial_blacklisted ) ? $partial_blacklisted[ $url ][ 'reason' ] : $default_reason;
@@ -416,7 +416,7 @@ class Crawler_Map extends Instance {
 		// Reset crawler
 		Crawler::get_instance()->reset_pos();
 
-		return count( $urls );
+		return count( $this->_urls );
 	}
 
 	/**
@@ -447,7 +447,7 @@ class Crawler_Map extends Instance {
 	 * @since    1.1.1
 	 * @access private
 	 */
-	private function _parse( $sitemap, $return_detail = true ) {
+	private function _parse( $sitemap ) {
 		/**
 		 * Read via wp func to avoid allow_url_fopen = off
 		 * @since  2.2.7
@@ -457,40 +457,33 @@ class Crawler_Map extends Instance {
 			$error_message = $response->get_error_message();
 			Debug2::debug( '🐞🗺️ failed to read sitemap: ' . $error_message );
 
-			throw new \Exception( 'Failed to remote read' );
+			throw new \Exception( 'Failed to remote read ' . $sitemap );
 		}
 
 		$xml_object = simplexml_load_string( $response[ 'body' ] );
 		if ( ! $xml_object ) {
-			throw new \Exception( 'Failed to parse xml' );
+			if ( $this->_urls ) {
+				return;
+			}
+
+			throw new \Exception( 'Failed to parse xml ' . $sitemap );
 		}
 
-		if ( ! $return_detail ) {
-			return true;
-		}
 		// start parsing
-		$_urls = array();
-
 		$xml_array = (array) $xml_object;
 		if ( ! empty( $xml_array[ 'sitemap' ] ) ) { // parse sitemap set
 			if ( is_object( $xml_array[ 'sitemap' ] ) ) {
 				$xml_array[ 'sitemap' ] = (array) $xml_array[ 'sitemap' ];
 			}
 			if ( ! empty( $xml_array[ 'sitemap' ][ 'loc' ] ) ) { // is single sitemap
-				$urls = $this->_parse( $xml_array[ 'sitemap' ][ 'loc' ] );
-				if ( is_array( $urls ) && ! empty( $urls ) ) {
-					$_urls = array_merge( $_urls, $urls );
-				}
+				$this->_parse( $xml_array[ 'sitemap' ][ 'loc' ] );
 			}
 			else {
 				// parse multiple sitemaps
 				foreach ( $xml_array[ 'sitemap' ] as $val ) {
 					$val = (array) $val;
 					if ( ! empty( $val[ 'loc' ] ) ) {
-						$urls = $this->_parse( $val[ 'loc' ] ); // recursive parse sitemap
-						if ( is_array( $urls ) && ! empty( $urls ) ) {
-							$_urls = array_merge( $_urls, $urls );
-						}
+						$this->_parse( $val[ 'loc' ] ); // recursive parse sitemap
 					}
 				}
 			}
@@ -501,113 +494,16 @@ class Crawler_Map extends Instance {
 			}
 			// if only 1 element
 			if ( ! empty( $xml_array[ 'url' ][ 'loc' ] ) ) {
-				$_urls[] = $xml_array[ 'url' ][ 'loc' ];
+				$this->_urls[] = $xml_array[ 'url' ][ 'loc' ];
 			}
 			else {
 				foreach ( $xml_array[ 'url' ] as $val ) {
 					$val = (array) $val;
 					if ( ! empty( $val[ 'loc' ] ) ) {
-						$_urls[] = $val[ 'loc' ];
+						$this->_urls[] = $val[ 'loc' ];
 					}
 				}
 			}
 		}
-
-		return $_urls;
-	}
-
-	/**
-	 * Generate all urls
-	 *
-	 * @since 1.1.0
-	 * @access private
-	 */
-	private function _build($blacklist = array()) {
-		global $wpdb;
-
-		$show_pages = Conf::val( Base::O_CRAWLER_PAGES );
-
-		$show_posts = Conf::val( Base::O_CRAWLER_POSTS );
-
-		$show_cats = Conf::val( Base::O_CRAWLER_CATS );
-
-		$show_tags = Conf::val( Base::O_CRAWLER_TAGS );
-
-		switch ( Conf::val( Base::O_CRAWLER_ORDER_LINKS ) ) {
-			case 1:
-				$orderBy = " ORDER BY post_date ASC";
-				break;
-
-			case 2:
-				$orderBy = " ORDER BY post_title DESC";
-				break;
-
-			case 3:
-				$orderBy = " ORDER BY post_title ASC";
-				break;
-
-			case 0:
-			default:
-				$orderBy = " ORDER BY post_date DESC";
-				break;
-		}
-
-		$post_type_array = array();
-		if ( isset($show_pages) && $show_pages == 1 ) {
-			$post_type_array[] = 'page';
-		}
-
-		if ( isset($show_posts) && $show_posts == 1 ) {
-			$post_type_array[] = 'post';
-		}
-
-		if ( $excludeCptArr = Conf::val( Base::O_CRAWLER_EXC_CPT ) ) {
-			$cptArr = get_post_types();
-			$cptArr = array_diff($cptArr, array('post', 'page'));
-			$cptArr = array_diff($cptArr, $excludeCptArr);
-			$post_type_array = array_merge($post_type_array, $cptArr);
-		}
-
-		if ( ! empty($post_type_array) ) {
-			Debug2::debug( '🐞🗺️ Crawler sitemap log: post_type is ' . implode( ',', $post_type_array ) );
-
-			$q = "SELECT ID, post_date FROM $wpdb->posts where post_type IN (" . implode( ',', array_fill( 0, count( $post_type_array ), '%s' ) ) . ") AND post_status='publish' $orderBy";
-			$results = $wpdb->get_results( $wpdb->prepare( $q, $post_type_array ) );
-
-			foreach ( $results as $result ){
-				$slug = str_replace( $this->_home_url, '', get_permalink( $result->ID ) );
-				if ( ! in_array($slug, $blacklist) ) {
-					$this->_urls[] = $slug;
-				}
-			}
-		}
-
-		//Generate Categories Link if option checked
-		if ( isset($show_cats) && $show_cats == 1 ) {
-			$cats = get_terms("category", array("hide_empty"=>true, "hierarchical"=>false));
-			if ( $cats && is_array($cats) && count($cats) > 0 ) {
-				foreach ( $cats as $cat ) {
-					$slug = str_replace( $this->_home_url, '', get_category_link( $cat->term_id ) );
-					if ( ! in_array($slug, $blacklist) ){
-						$this->_urls[] = $slug;//var_dump($slug);exit;//todo: check permalink
-					}
-				}
-			}
-		}
-
-		//Generate tags Link if option checked
-		if ( isset($show_tags) && $show_tags == 1 ) {
-			$tags = get_terms("post_tag", array("hide_empty"=>true, "hierarchical"=>false));
-			if ( $tags && is_array($tags) && count($tags) > 0 ) {
-				foreach ( $tags as $tag ) {
-					$slug = str_replace( $this->_home_url, '', get_tag_link( $tag->term_id ) );
-					if ( ! in_array($slug, $blacklist) ) {
-						$this->_urls[] = $slug;
-					}
-				}
-			}
-		}
-
-		return apply_filters('litespeed_crawler_sitemap', $this->_urls);
 	}
 }

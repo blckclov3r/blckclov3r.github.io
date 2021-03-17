@@ -225,7 +225,7 @@
                 }
                 
                 
-            function remove_html_comments($buffer)
+            static public function remove_html_comments($buffer)
                 {
                     //do not run when within admin
                     if(defined('WP_ADMIN'))
@@ -246,12 +246,15 @@
                 }
                 
                 
-            function _init_remove_html_new_lines($saved_field_data)
+            function _init_remove_html_new_lines ( $saved_field_data )
                 {
                     if(empty($saved_field_data) ||  $saved_field_data   ==  'no')
                         return FALSE;
                         
-                    
+                    //do not run when within admin or AJAX
+                    if( defined('WP_ADMIN') &&  ( !defined('DOING_AJAX') ||  ( defined('DOING_AJAX') && DOING_AJAX === TRUE )) && ! apply_filters('wph/components/force_run_on_admin', FALSE, 'remove_html_new_lines' ) )
+                        return;
+                        
                     add_filter('wp-hide/ob_start_callback', array($this, 'remove_html_new_lines'));
                     
                 }

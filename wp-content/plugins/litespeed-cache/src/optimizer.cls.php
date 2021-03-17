@@ -62,7 +62,7 @@ class Optimizer extends Instance {
 	}
 
 	/**
-	 * Run minify process and return final content
+	 * Run minify process and save content
 	 *
 	 * @since  1.9
 	 * @access public
@@ -70,6 +70,8 @@ class Optimizer extends Instance {
 	public function serve( $filename, $concat_only, $src_list = false, $page_url = false ) {
 		$__css = CSS::get_instance();
 		$ua = ! empty( $_SERVER[ 'HTTP_USER_AGENT' ] ) ? $_SERVER[ 'HTTP_USER_AGENT' ] : '';
+
+		$static_file = LITESPEED_STATIC_DIR . "/cssjs/$filename";
 
 		// Search src set in db based on the requested filename
 		if ( ! $src_list ) {
@@ -94,16 +96,15 @@ class Optimizer extends Instance {
 			$content = apply_filters( 'litespeed_css_serve', $content, $filename, $src_list, $page_url );
 			if ( $content ) {
 				Debug2::debug( '[Optmer] Content from filter `litespeed_css_serve` for [file] ' . $filename . ' [url] ' . $page_url );
-				return $content;
+				File::save( $static_file, $content, true ); // todo: UCSS CDN and CSS font display setting
+				return true;
 			}
 		}
 
 		// Clear if existed
-		$static_file = LITESPEED_STATIC_DIR . "/cssjs/$filename";
 		File::save( $static_file, '', true ); // TODO: need to lock file too
 
 		// Load content
-		$_rm_comment = Conf::val( Base::O_OPTM_RM_COMMENT );
 		$real_files = array();
 		foreach ( $src_list as $src_info ) {
 			$is_min = false;
@@ -122,10 +123,6 @@ class Optimizer extends Instance {
 				$is_min = $this->_is_min( $src );
 			}
 
-			if ( $_rm_comment ) {
-				$content = $this->_remove_comment( $content, $file_type );
-			}
-
 			// CSS related features
 			if ( $file_type == 'css' ) {
 				// Font optimize
@@ -142,6 +139,8 @@ class Optimizer extends Instance {
 				if ( ! $concat_only && ! $is_min ) {
 					$content = self::minify_css( $content );
 				}
+
+				$content = CDN::finalize( $content );
 			}
 			else {
 				if ( ! $concat_only && ! $is_min ) {
@@ -163,6 +162,7 @@ class Optimizer extends Instance {
 		}
 
 		Debug2::debug2( '[Optmer] Saved static file [path] ' . $static_file );
+		return true;
 	}
 
 	/**
@@ -237,40 +237,6 @@ class Optimizer extends Instance {
 		return false;
 	}
 
-	/**
-	 * Remove comment when minify
-	 *
-	 * @since  1.7.1
-	 * @since  1.9 Moved here from optiize.cls
-	 * @access private
-	 */
-	private function _remove_comment( $content, $type ) {
-		$_from = array(
-			'|\/\*.*\*\/|U',
-			'|\/\*.*\*\/|sU',
-			"|\n+|",
-			// "|;+\n*;+|",
-			// "|\n+;|",
-			// "|;\n+|"
-		);
-
-		$_to = array(
-			'',
-			"\n",
-			"\n",
-			// ';',
-			// ';',
-			// ';',
-		);
-
-		$content = preg_replace( $_from, $_to, $content );
-		if ( $type == 'css' ) {
-			$content = preg_replace( "|: *|", ':', $content );
-			$content = preg_replace( "| */ *|", '/', $content );
-		}
-		$content = trim( $content );
-		return $content;
-	}
 }
 
 

@@ -162,6 +162,9 @@
                                 }  
                             
                         }
+                        
+                    //clean the environment ignore errors
+                    delete_option( 'wph-environment-ignore-rewrite-test' );
                                             
                     $unique_require_updated_settings    =   array();
                     
@@ -553,13 +556,13 @@
             
             
             
-                        /**
+            /**
             * Set server type
             * 
             */
             function set_server_type()
                 {
-    
+     
                     //Allow to set server type through filter
                     if  ( !  empty ( apply_filters( 'wph/core/set_server_type' , '' ) ) )
                         return;
@@ -823,6 +826,113 @@
                 }
                 
                 
+                
+            /**
+            * Return a list of the issues found on the server
+            *     
+            */
+            function check_server_environment()
+                {
+                 
+                    $results    =   array(
+                                            'found_issues'      =>   FALSE,
+                                            'critical_issues'   =>   FALSE,
+                                            'errors'            =>   array(),
+                                            );   
+                    
+                    ob_start();
+                    
+                    if( $this->wph->server_htaccess_config    === FALSE && $this->wph->server_web_config   === FALSE)
+                        {
+                            $results['found_issues']   =   TRUE;
+                            $results['critical_issues']    =   TRUE;
+                            include ( WPH_PATH . 'include/admin-interfaces/notice-server-not-supported.php' );
+                        }
+                        
+                    if ( is_multisite() )
+                        {
+                            $results['found_issues']   =   TRUE;
+                            include ( WPH_PATH . 'include/admin-interfaces/notice-is_multisite.php' );
+                        }
+                                            
+                    if( $this->is_litespeed()    === TRUE )
+                        {
+                            $results['found_issues']   =   TRUE;
+                            include ( WPH_PATH . 'include/admin-interfaces/notice-is-litespeed.php' );
+                        }
+                                        
+                    if (  ! $this->is_permalink_enabled())
+                        {
+                            $results['found_issues']   =   TRUE;
+                            include ( WPH_PATH . 'include/admin-interfaces/notice-no-permalinks.php' );
+                        }
+                    
+                    if ( empty ( get_option ( 'wph-environment-ignore-rewrite-test' ) ) )
+                        {
+                            $result = $this->test_sample_rewrite( );    
+                            if ( $result    === FALSE  ||  ! is_bool( $result ) )
+                                {
+                                    $results['found_issues']   =   TRUE;
+                                    $results['critical_issues']    =   TRUE;
+                                    include ( WPH_PATH . 'include/admin-interfaces/notice-rewrite-test.php' );
+                                }
+                        }
+                    
+                    //check if the htaccess file is not writable
+                    if( ! $this->rewrite_rules_applied() && ( $this->wph->server_htaccess_config    === TRUE || $this->wph->server_web_config   === TRUE ) )
+                        {                            
+                            $results['found_issues']   =   TRUE;
+                            $results['critical_issues']    =   TRUE;
+                            $rewrite_file_type = '';
+                            if( $this->wph->server_htaccess_config    === TRUE )
+                                $rewrite_file_type  =   '.htaccess';
+                            
+                            if( $this->wph->server_web_config     === TRUE )
+                                $rewrite_file_type  =   'web.config';
+                            
+                            include ( WPH_PATH . 'include/admin-interfaces/notice-write-check.php' );
+                        }    
+                    
+                    if (    getenv('IS_WPE')    ==  "1"   ||  getenv('IS_WPE_SNAPSHOT')    == "1" ) 
+                        {
+                            $results['found_issues']   =   TRUE;
+                            include ( WPH_PATH . 'include/admin-interfaces/notice-is-wpengine.php' );
+                        }
+         
+                    if( ! $this->is_muloader())
+                        {
+                            $results['found_issues']   =   TRUE;
+                            include ( WPH_PATH . 'include/admin-interfaces/notice-mu-loader.php' );
+                        }
+                    if( $this->is_muloader() &&  defined( 'WPH_MULOADER_VERSION' )  &&  version_compare( WPH_MULOADER_VERSION, '1.3.5', '<' ) &&    ! isset( $this->wph->maintenances['mu_loader'] ) )
+                        {
+                            $results['found_issues']   =   TRUE;
+                            include ( WPH_PATH . 'include/admin-interfaces/notice-mu-loader-update.php' );
+                        }
+                        
+                    if( ! is_writable( WPH_CACHE_PATH ))
+                        {
+                            $results['found_issues']   =   TRUE;
+                            include ( WPH_PATH . 'include/admin-interfaces/notice-cache-path.php' );
+                        }    
+                    
+                    $errors   =   ob_get_clean();
+                    
+                    $results['errors']  =   $errors;
+                    
+                    return $results;
+                    
+                }
+                
+            
+            function show_recovery()
+                {
+                    ?>
+                            <p class="important framed"><span class="dashicons dashicons-warning important" alt="f534"></span> <?php _e('Copy the following link to a safe place. You can use it later to reset all plugin options if something goes wrong or lost the new login URL.',    'wp-hide-security-enhancer') ?> <b><span id="wph-recovery-link" onClick="WPH.selectText( 'wph-recovery-link' )"><?php echo site_url() ?>?wph-recovery=<?php  echo $this->get_recovery_code() ?></span></b></p>
+                    <?php   
+        
+                }
+                
             
             function get_write_check_string()
                 {
@@ -892,15 +1002,158 @@
                 {
                     $status = TRUE;
                     
-                    if(isset($this->wph->settings['write_check_string'])   && !empty($this->wph->settings['write_check_string']))
+                    if( isset($this->wph->settings['write_check_string'] )   && ! empty( $this->wph->settings['write_check_string'] ) )
                         {
                             $_write_check_string =   $this->get_write_check_string();
-                            if(empty($_write_check_string)  ||  $_write_check_string    !=  $this->wph->settings['write_check_string'])
+                            if( empty( $_write_check_string )  ||  $_write_check_string    !=  $this->wph->settings['write_check_string'])
                                 $status   =   FALSE;
                         }
                                    
                     return $status;
                 }
+                
+                
+            
+            /**
+            * Try to access a specific sample url to test the rewritea functinality
+            * 
+            */
+            function test_sample_rewrite( )
+                {
+                    
+                    if( ! isset( $this->wph->settings['write_check_string'] )   ||  empty( $this->wph->settings['write_check_string'] ) )
+                        return TRUE;
+                    
+                    $test_url   =   apply_filters( 'wp-hide/test_sample_rewrite/url', trailingslashit ( site_url() ) . 'rewrite_test_' . $this->wph->settings['write_check_string'] . '/' );   
+                    $response   =   wp_remote_get( $test_url );
+                                        
+                    $response_message       =   '';
+                    $messages['manual_check']     =  __( "Make a fix or manually check the ", 'wp-hide-security-enhancer' ) . '<b><a target="_blank" href="' . $test_url . '">' . __( "Test URL", 'wp-hide-security-enhancer' ) . '</a></b>, '.  __( "if the result is a JSON response (contains a name and description), the rewrites are working correctly on your site and you can", 'wp-hide-security-enhancer' ) .' <a href="' . $this->get_current_url()  . '&wph_environment=ignore-rewrite-test">' . __( "Ignore", 'wp-hide-security-enhancer' ) . '</a> ' . __( "this notification", 'wp-hide-security-enhancer' ) .'<br />';
+                    $messages['manual_check']     .=  __( "Sample result, can be different from a browser to another:", 'wp-hide-security-enhancer' ) . '<br /><img src="' . WPH_URL . '/assets/images/rewrite-test-json-response.jpg" /><br />';
+                    $messages['manual_check']     .=  __( "The Ignore action will be available until the next plugin options update.", 'wp-hide-security-enhancer' ) . '<br /><br />';
+                    $messages['manual_check']     .=  __( "If the Test URL is not functional, the plugin will fail to provide specific features. Check your Hosting provider for more details regarding rewrites and how to activate on your account.", 'wp-hide-security-enhancer' ) . '<br />';
+                            
+                    if ( is_array( $response ) ) 
+                        {
+                            
+                            if  ( ! isset( $response['response']['code'] ) )
+                                return __( "The wp_remote_get() returns invalid Response Code", 'wp-hide-security-enhancer' );
+                            
+                            if  ( $response['response']['code'] !=  200 )
+                                {
+                                    if ( $response['response']['code'] ==  404 )
+                                        {
+                                            $home_path      = $this->get_home_path();
+                                            
+                                            //check if the .htaccess file include the test rewrite
+                                            if ( $this->wph->server_htaccess_config === TRUE )
+                                                {
+                                                    $file_path = $home_path . DIRECTORY_SEPARATOR . '.htaccess';
+                                                    if( ! file_exists( $file_path ) )
+                                                        {
+                                                            return __( "The .htaccess file does not appears to exists on the server. To fix, go to Settings > Permalinks and save once.", 'wp-hide-security-enhancer' );
+                                                        }
+
+                                                    if ( ! $this->file_check_for_marker( $file_path, 'rewrite_test_' . $this->wph->settings['write_check_string'] ) )
+                                                        {
+                                                            $response_message   =   __( "The test rewrite does not exist.", 'wp-hide-security-enhancer' ) . ' ' . __("To fix go to Settings > Permalinks and save once, the core will attempt to update the required rewrites. If the problem persists, check with your host support on the correct .htaccess file write permission.", 'wp-hide-security-enhancer');
+                                                            
+                                                            return $response_message;
+                                                        }
+                                                }
+                                            
+                                            //check for web.config
+                                            if ( $this->wph->server_web_config  === TRUE )
+                                                {
+                                                    $file_path  =   $home_path . DIRECTORY_SEPARATOR . 'web.config';
+                                                    if( ! file_exists( $file_path ) )
+                                                        return __( "The wp_remote_get() returns a Not Found page, the web.config file does not appears to exists on the server. To fix, go to Settings > Permalinks and save once.", 'wp-hide-security-enhancer' );
+
+                                                    if ( ! $this->file_check_for_marker( $file_path, 'rewrite_test_' . $this->wph->settings['write_check_string'] ) )
+                                                        return __( "The wp_remote_get() returns a Not Found page, the test rewrite does not exist. To fix, go to Settings > Permalinks and save once. This can occour if you updated from an old plugin version. ", 'wp-hide-security-enhancer' );
+                                                        
+                                                }
+                                            
+                                            $response_message   =   __( "The wp_remote_get() returns a Not Found page, probably the Rewrites are not active on your server!", 'wp-hide-security-enhancer' );
+                                            $response_message    .=  '<br />' . $messages['manual_check'];
+                                            
+                                            return $response_message;
+                                        }
+                                    
+                                    if ( $response['response']['code'] ==  401 )
+                                        {
+                                            $response_message   =   __( "The wp_remote_get() returns a 401 error code, the request could not be authenticated. Does the site use an httpd password?", 'wp-hide-security-enhancer' );
+                                            $response_message    .=  '<br />' . $messages['manual_check'];
+                                            
+                                            return $response_message;
+                                        }
+                                        
+                                    if ( ! empty ( $response['response']['code'] ) )
+                                        {
+                                            $response_message    =   __( "The wp_remote_get() returns a", 'wp-hide-security-enhancer' ) . " " . $response['response']['code'] . " " . __( "error code", 'wp-hide-security-enhancer' );
+                                            if ( ! empty ($response['response']['message'] ) )
+                                                $response_message    .=  ":" . $response['response']['message'];
+                                            
+                                            $messages['server_check']     =  __( "A custom rewrite line has been inserted into your rewrite file for testing, the ", 'wp-hide-security-enhancer' ) . '<b><a target="_blank" href="' . $test_url . '">' . __( "Test URL", 'wp-hide-security-enhancer' ) . '</a></b> '.  __( "expected to return a JSON response (contains a name and description) The server instead replied a", 'wp-hide-security-enhancer' ) . ' <b class="highlight">' . $response['response']['code'] . '</b> ' . __( "error with the message", 'wp-hide-security-enhancer' ) . ' <b class="highlight">' . $response['response']['message'] . '</b><br />';
+                                            $messages['server_check']     .=  __( "You need to get in touch with your server support for a fix, the rewrite engine is either disabled for your account or their internal set-up does not allow such rewrites. ", 'wp-hide-security-enhancer' );
+                                                
+                                            $response_message    .=  '<br />' . $messages['server_check'];
+                                            
+                                            return $response_message;
+                                        }
+                                        
+                                    return __( "Unespected error code for wp_remote_get() call.", 'wp-hide-security-enhancer' );
+                                }
+                                
+                            $body       =   json_decode( $response['body'] );
+                            if ( $body  === null || !isset( $body->name ) )
+                                return __( "The wp_remote_get() returns an invalid JSON data, probably the server blocks custom rewrites.", 'wp-hide-security-enhancer' );
+                                
+                                
+                            return TRUE;
+                                
+                        }
+                        else if ( is_a( $response, 'WP_Error' ))
+                        {
+                            $response_message    =   $response->get_error_message();
+                            
+                            $response_message    .=  '<br />' . $messages['manual_check'];
+                            
+                            return $response_message;
+                        }
+                          
+                    return FALSE;
+                
+                }
+                
+                
+            
+            /**
+            * Check a file for a specific marker
+            * 
+            * @param mixed $file_path
+            * @param mixed $marker
+            */
+            function file_check_for_marker( $file_path, $marker )
+                {
+                    
+                    if ( ! file_exists ( $file_path ) )
+                        return FALSE;
+                    
+                    $markerdata = explode( "\n", implode( '', file( $file_path ) ) );
+                    
+                    if ( ! $markerdata );
+                        return FALSE; 
+                        
+                    foreach ( $markerdata as $markerline ) 
+                        {
+                            if (strpos($markerline, $marker) !== false)
+                                return TRUE;
+                        }
+                        
+                    return FALSE;
+                
+                }  
             
             
             /**
@@ -1829,45 +2082,7 @@
                     
                     die();
                 }
-            
-            
-            /**
-            * Check if filter / action exists for anonymous object
-            * 
-            * @param mixed $tag
-            * @param mixed $class
-            * @param mixed $method
-            */
-            function anonymous_object_filter_exists($tag, $class, $method)
-                {
-                    if ( !  isset( $GLOBALS['wp_filter'][$tag] ) )
-                        return FALSE;
-                    
-                    $filters = $GLOBALS['wp_filter'][$tag];
-                    
-                    if ( !  $filters )
-                        return FALSE;
                         
-                    foreach ( $filters as $priority => $filter ) 
-                        {
-                            foreach ( $filter as $identifier => $function ) 
-                                {
-                                    if ( ! is_array( $function ) )
-                                        continue;
-                                    
-                                    if ( ! $function['function'][0] instanceof $class )
-                                        continue;
-                                    
-                                    if ( $method == $function['function'][1] ) 
-                                        {
-                                            return TRUE;
-                                        }
-                                }
-                        }
-                        
-                    return FALSE;
-                }
-            
             /**
             * Replace a filter / action from anonymous object
             * 

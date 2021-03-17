@@ -17,7 +17,8 @@
                     $this->functions    =   new WPH_functions();
                     
                     add_action( 'admin_init',       array ( $this, 'run_sample_setup') );
-                    add_action( 'admin_notice',     array( $this, 'admin_notices' ) );  
+                    add_action( 'admin_init',       array ( $this, 'pasive_actions') );
+                    add_action( 'admin_notice',     array ( $this, 'admin_notices' ) );  
                     
                 }
                
@@ -62,6 +63,14 @@
                     
                 }
             
+            
+            function pasive_actions()
+                {
+                    
+                    if ( isset ( $_GET['wph_environment'] ) && $_GET['wph_environment'] == 'ignore-rewrite-test' )
+                        update_option( 'wph-environment-ignore-rewrite-test', 'false' );
+                            
+                }
             
             function run_sample_setup()
                 {   
@@ -140,35 +149,6 @@
                         
                         <?php
                         
-                            if($this->wph->server_htaccess_config    === FALSE && $this->wph->server_web_config   === FALSE)
-                                {
-                                    ?>
-                                        <div class="start-container title warning">
-                                            <h2><?php _e( "System notice !", 'wp-hide-security-enhancer' ) ?></h2>
-                                        </div>
-                                        <div class="container-description">
-                                            <p><?php _e( "Your site runs on a server type which the current version can't create the required rewrite data, please check with", 'wp-hide-security-enhancer' ) ?> <span class="wph-pro">PRO</span> <?php _e( "version at", 'wp-hide-security-enhancer' ) ?> <a target="_blank" href="https://www.wp-hide.com/wp-hide-pro-now-available/">WP-Hide PRO</a></p>
-                                            <p><?php _e( "This basic version can work with Apache, LiteSpeed, IIS, Nginx set as reverse proxy for Apache, your site runs", 'wp-hide-security-enhancer' ) ?> <b><?php echo $_SERVER['SERVER_SOFTWARE']  ?></b></p>
-                                        </div>
-                                    
-                                    
-                                    <?php
-                                }
-                                
-                                
-                            if( $this->wph->functions->is_litespeed()    === TRUE )
-                                {
-                                    ?>
-                                        <div class="start-container title warning">
-                                            <h2><?php _e( "System notice !", 'wp-hide-security-enhancer' ) ?></h2>
-                                        </div>
-                                        <div class="container-description">
-                                            <p><?php _e( "Your site runs on LiteSpeed ! Before starting, ensure your server is properly configured and it processes the .htaccess file properly, or there might be layout and functionality breaks.", 'wp-hide-security-enhancer' ) ?> <?php _e( "For more details check at", 'wp-hide-security-enhancer' ) ?> <a target="_blank" href="https://www.wp-hide.com/setup-wp-hide-on-litespeed/">Setup WP Hide on LiteSpeed</a></p>
-                                        </div>
-                                    <?php
-                                }
-                                
-                                
                             if( isset( $_GET['sample-setup-completed'] )    &&  $_GET['sample-setup-completed'] ==  'true' )
                                 {
                                     ?>
@@ -183,21 +163,56 @@
                                         <p><br /><br /><br /></p>
                                     <?php
                                 }
-                        
+                                          
+                            $results    =   $this->functions->check_server_environment();
+                            
+                            ?>
+                            <div class="start-container title test <?php if ( $found_issues ===  TRUE ) { echo ' warning';} ?>">
+                                <h2><?php _e( "Checking your environment ..", 'wp-hide-security-enhancer' ) ?></h2>
+                            </div>
+                            <div class="container-description environment-notices">
+                            <?php
+                            
+                            if ( $results['found_issues'] !==  FALSE )
+                                {    
+                                    echo $results['errors'];
+                                }
+                            
+                            if ( $results['critical_issues'] ===  TRUE )
+                                {    
+                                    ?>
+                                    <p class="framed"><span class="dashicons dashicons-warning error"></span> <?php _e('Critical issues were identified on your site, please fix them before proceeding with customizations.', 'wp-hide-security-enhancer') ?></p>
+                                    <?php
+                                }
+                            
+                            if ( $results['found_issues'] ===  FALSE )
+                                {    
+                                    ?>
+                                    <p><span class="dashicons dashicons-plugins-checked"></span> <?php _e('No problems have been found on your server environment.', 'wp-hide-security-enhancer') ?></p>
+                                    <?php
+                                }
                         ?>
-                        
+                            </div>               
                         <div class="start-container title">
                             <h2><?php _e( "Getting Started", 'wp-hide-security-enhancer' ) ?></h2>
                         </div>
                         <div class="container-description">
                             <p><b>WP Hide & Security Enhancer</b> <?php _e( "plugin helps to hide your WordPress, theme, and plugins", 'wp-hide-security-enhancer' ) ?>. <?php _e( "This improves the site security as hackers' boots can't exploit the vulnerabilities of your site, as not being aware of the user code", 'wp-hide-security-enhancer' ) ?>. <?php _e( "Daily, more vulnerabilities are found", 'wp-hide-security-enhancer' ) ?> <a href="https://wpvulndb.com/" target="_blank">WPVulndb.com/</a>, <?php _e( "but using WP Hide & Security Enhancer you will be perfectly safe", 'wp-hide-security-enhancer' ) ?> !</p>
 
-                        </div>    
-                        <div class="start-container title">
+                        </div> 
+                        
+                        <div class="start-container title help">
+                            <h2><?php _e( "Recovery", 'wp-hide-security-enhancer' ) ?></h2>
+                        </div> 
+                        <div class="container-description">
+                        <?php $this->functions->show_recovery() ?>
+                        </div>
+                                                   
+                        <div class="start-container title info">
                             <h2><?php _e( "Basic functionality", 'wp-hide-security-enhancer' ) ?></h2>
                         </div>
                         <div class="container-description">
-                            <p><?php _e( "The basic principle of the plugin is to change default assets URLs, remove or change specific HTML elements, and disable unused services. This isn't an automated process, so it needs to be done manually while getting feedback on the front side to ensure everything is still functional. No file and directory are being changed anywhere, everything is processed on the fly using output buffering and filters", 'wp-hide-security-enhancer' ) ?>..</p>
+                            <p><?php _e( "The basic principle of the plugin is to change default assets URLs, remove or change specific HTML elements, and disable unused services. This makes WordPress unrecognizable. The process isn't automated, so it needs to be done manually while getting feedback on the front side to ensure everything is still functional. No file and directory are being changed anywhere, everything is processed on the fly using output buffering and filters", 'wp-hide-security-enhancer' ) ?>..</p>
 
                             <p><?php _e( "A default directory structure for WordPress appears like this on outputted HTML", 'wp-hide-security-enhancer' ) ?>:<br />
                             https://--domain--<span class="highlight">/wp-includes/</span>css/dashicons.min.css  &nbsp;&nbsp;&nbsp;&nbsp;or &nbsp;&nbsp;&nbsp;&nbsp;  https://--domain--<span class="highlight">/wp-content/</span>themes/pub/wporg-plugins/css/style.css
@@ -211,7 +226,7 @@
                         
                         </div>
                         
-                        <div class="start-container title">
+                        <div class="start-container title setup">
                             <h2><?php _e( "Sample setup", 'wp-hide-security-enhancer' ) ?></h2>
                         </div>
                         <div class="container-description">
@@ -222,10 +237,9 @@
                                 <input type="hidden" name="wph-run-sample-setup" value="true" />
                                 <input type="hidden" name="wph-run-sample-setup-nonce" value="<?php echo wp_create_nonce( 'wph-run-sample-setup' ) ?>" />
                             </form>
-                        </div> 
+                        </div>
                         
-                        <p><br /></p>
-                        
+                                                
                         <div class="start-container">
                             <div class="text">
                          

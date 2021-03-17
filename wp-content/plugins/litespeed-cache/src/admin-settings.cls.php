@@ -124,7 +124,7 @@ class Admin_Settings extends Base
 						if ( $child == self::CDN_MAPPING_FILETYPE ) {
 							$v = Utility::sanitize_lines( $v );
 						}
-						elseif ( in_array( $v, array(
+						elseif ( in_array( $child, array(
 							self::CDN_MAPPING_INC_IMG,
 							self::CDN_MAPPING_INC_CSS,
 							self::CDN_MAPPING_INC_JS,
@@ -204,15 +204,6 @@ class Admin_Settings extends Base
 						$data2[] = $term->term_id;
 					}
 					$data = $data2;
-					break;
-
-				// `Sitemap Generation` -> `Exclude Custom Post Types`
-				case self::O_CRAWLER_EXC_CPT:
-					if ( $data ) {
-						$data = Utility::sanitize_lines( $data );
-						$ori = array_diff( get_post_types(), array( 'post', 'page' ) );
-						$data = array_intersect( $data, $ori );
-					}
 					break;
 
 				default:

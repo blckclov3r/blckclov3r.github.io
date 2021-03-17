@@ -120,7 +120,10 @@ var _litespeed_dots ;
 		/** Lets copy one more submit button **/
 		if ( $( 'input[name="LSCWP_CTRL"]' ).length > 0 ) {
 			var btn = $( 'input.litespeed-duplicate-float' ) ;
-			btn.clone().addClass( 'litespeed-float-submit' ).insertAfter( btn ) ;
+			btn.clone().addClass( 'litespeed-float-submit' ).removeAttr( 'id' ).insertAfter( btn ) ;
+		}
+		if ( $( 'input[id="LSCWP_NONCE"]' ).length > 0 ) {
+			$( 'input[id="LSCWP_NONCE"]' ).removeAttr( 'id' );
 		}
 
 		/** Promo banner **/
@@ -132,57 +135,6 @@ var _litespeed_dots ;
 			$( '.litespeed-banner-promo-full' ).slideUp() ;
 			$.get( litespeed_data.ajax_url_promo ) ;
 		} ) ;
-
-		/** CDN mapping **/
-		$( '#litespeed-cdn-mapping-add' ).click(function(event) {
-			var cloned_item = $( '[data-litespeed-cdn-mapping]:last' ).clone() ;
-			cloned_item.find( 'input[type=text]' ).val( '' ) ;
-			cloned_item.find( 'textarea' ).val( '' ) ;
-			cloned_item.find( 'input[type="hidden"]' ).val( 0 ) ;
-
-			var toggle_items = cloned_item.find( '[data-litespeed-toggle-on]' ) ;
-
-			var cls_off = 'litespeed-toggle-btn-' + toggle_items.data( 'litespeed-toggle-off' ) + ' litespeed-toggleoff' ;
-			var cls_on = 'litespeed-toggle-btn-' + toggle_items.data( 'litespeed-toggle-on' ) ;
-
-			toggle_items.removeClass( cls_on ).addClass( cls_off ) ;
-
-			cloned_item.insertAfter( '[data-litespeed-cdn-mapping]:last' ).hide().fadeIn() ;
-
-			litespeed_toggle() ;
-			litespeed_cdn_mapping_del_init() ;
-		});
-
-		/** toggle switch **/
-		litespeed_toggle() ;
-		litespeed_cdn_mapping_del_init() ;
-
-		function litespeed_cdn_mapping_del_init() {
-			$( '[data-litespeed-cdn-mapping-del]' ).off().click(function(event) {
-				if ( ! confirm( 'Are you sure?' ) ) {
-					return false;
-				}
-				$( this ).closest( '[data-litespeed-cdn-mapping]' ).fadeOut( 400, function(){
-					$( this ).remove() ;
-				} ) ;
-			});
-
-		}
-
-		function litespeed_toggle() {
-			$( '[data-litespeed-toggle-on]' ).off().click(function(event) {
-				var cls_off = 'litespeed-toggle-btn-' + $( this ).data( 'litespeed-toggle-off' ) + ' litespeed-toggleoff' ;
-				var cls_on = 'litespeed-toggle-btn-' + $( this ).data( 'litespeed-toggle-on' ) ;
-				if ( $( this ).children( 'input' ).val() * 1 ) {
-					$( this ).addClass( cls_off ).removeClass( cls_on ) ;
-					$( this ).children( 'input' ).val( 0 ) ;
-				}
-				else {
-					$( this ).removeClass( cls_off ).addClass( cls_on ) ;
-					$( this ).children( 'input' ).val( 1 ) ;
-				}
-			});
-		}
 
 		/**
 		 * Human readable time conversation
@@ -286,10 +238,6 @@ function litespeed_keycode( num ) {
 }
 
 function litespeed_display_tab(tab) {
-	// setting page -> display submit button
-	if ( jQuery('#litespeed-submit').length > 0 ){
-		jQuery('#litespeed-submit').toggle(tab != 'compatibilities') ;
-	}
 	jQuery('[data-litespeed-tab]').removeClass('nav-tab-active') ;
 	jQuery('[data-litespeed-tab="'+tab+'"]').addClass('nav-tab-active') ;
 	jQuery('[data-litespeed-layout]').hide() ;

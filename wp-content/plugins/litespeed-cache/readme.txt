@@ -2,8 +2,8 @@
 Contributors: LiteSpeedTech
 Tags: caching, optimize, performance, pagespeed, seo, speed, image optimize, compress, object cache, redis, memcached, database cleaner
 Requires at least: 4.0
-Tested up to: 5.5.1
-Stable tag: 3.5.2
+Tested up to: 5.7
+Stable tag: 3.6.4
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl.html
 
@@ -246,6 +246,61 @@ The vast majority of plugins and themes are compatible with LiteSpeed Cache. The
 
 
 == Changelog ==
+
+= 3.6.4 - Mar 15 2021 =
+* **Toolbox** Fixed Beta Test upgrade error when upgrading to v3.7+.
+
+= 3.6.3 - Mar 10 2021 =
+* **Core** Fixed potential upgrade failure when new versions have changes in activation related functions.
+* **Core** Upgrade process won't get deactivated anymore on Network setup.
+
+= 3.6.2 - Feb 1 2021 =
+* **Page Optimize** Fixed an issue where network purge CSS/JS caused 404 errors for subsites.
+* **Page Optimize** Fixed an issue where purge CSS/JS only caused 404 errors.
+* **Page Optimize** Added a notice for CSS/JS data detection and potential random string issue.
+* **Page Optimize** Limited localization resources to specified .js only. (@closte #292 @ormonk)
+* **JS** Data src may now be bypassed from JS Combine. (@ankit)
+* **CLI** Fixed a message typo in Purge. (@flixwatchsupport)
+* **Browser** Added font/otf to Browser Cache expire list. (@ruikai)
+* **Data** Updated data files to accept PR from dev branch only.
+* **3rd** Add data-view-breakpoint-pointer to js_excludes.txt for the Events Calendar plugin. (@therealgilles)
+* **Cloud** Bypassed invalid requests.
+* **Doc** CDN Mapping description improvement. (@mihai A.)
+
+= 3.6.1 - Dec 21 2020 =
+* **WP** Tested up to WP v5.6.
+* **WebP** Reverted WebP support on Safari Big Sur and Safari v14.0.1+ due to an inability to detect MacOS versions from UA. (@antomal)
+* **CDN** Dropped the option `Load JQuery Remotely`.
+* **CDN** Fixed CDN URL replacement issue in optimized CSS files. (@ankit)
+* **CDN** Fixed an issue where CDN CLI wouldn't set mapping image/CSS/JS to OFF when `false` was the value.
+* **CDN** Started using React for CDN Mapping settings.
+* **GUI** Secured Server IP setting from potential XSS issues. (@WonTae Jang)
+* **Toolbox** Supported both dev and master branches for Beta Test. Latest version updated to v3.6.1.
+* **Purge** Purge Pages now can purge non-archive pages too.
+* **Admin** Simplified the admin JS.
+* **Admin** Limited crawler-related react JS to crawler page only.
+
+= 3.6 - Dec 14 2020 =
+* 🌱**WebP** Added WebP support on Safari Big Sur or Safari v14.0.1+. (@ruikai)
+* 🐞**Config** Fixed an issue where new installations were not getting the correct default .htaccess content.
+* **Crawler** Will auto bypass empty sub-sitemap instead of throwing an exception. (@nanoprobes @Tobolo)
+* **Crawler** Now using React for Cookie Simulation settings instead of Vue.js. Dropped Vue.js.
+* **Crawler** Dropped `Sitemap Generation` (will only use 3rd party sitemap for crawler).
+* **CSS** Added `CSS Combine External and Inline` option for backward compatibility. (@lisa)
+* **Object** Forbid .object-cache.ini visits. (@Tarik)
+* **Page Optimize** Dropped `Remove Comments` option to avoid combine error.
+* **CSS** Added a predefined CSS exclude file `data/css_excludes.txt`.
+* **CSS** Excluded Flatsome theme random inline CSS from combine.
+* **CSS** Excluded WoodMart theme from combine. (@moemauphie)
+* **Page Optimize** Excluded tagDiv.com Newspaper theme dynamic CSS/JS from CSS/JS Combine.
+* **CSS** Added predefined JS defer excludes list. (@Shivam)
+* **JS** `data-no-defer` option now supports inline JS. (@rafaucau)
+* **Media** Lazyload inline library is now bypassed by JS Combine.
+* **Admin** Fixed WP-Admin console ID duplicate warnings.
+* **Cloud** Dropped QUIC.cloud sync options that have long been unused.
+* **CSS** Dropped `Unique CSS File` option (UCSS will always generate unique file, will use whitelist to group post type to one CSS).
+* **GUI** Dropped Help tab.
+* **Toolbox** Added 3.5.2 to version list.
 
 = 3.5.2 - Oct 27 2020 =
 * **CSS** `CSS Combine` is now compatible w/ inline noscript CSS. (@galbaras)

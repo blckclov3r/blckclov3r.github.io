@@ -71,8 +71,8 @@
                     add_action( 'template_redirect', array( $this, 'template_redirect' ), -1);
                     
                     //add default plugin path replacement
-                    $url            =   trailingslashit(    site_url()  ) .  'search';
-                    $replacement    =   trailingslashit(    home_url()  ) .  $saved_field_data;
+                    $url            =   trailingslashit(    site_url()  ) .  'search/';
+                    $replacement    =   trailingslashit(    home_url()  ) .  trailingslashit ( $saved_field_data );
                     $this->wph->functions->add_replacement( $url , $replacement );
                     
                     return TRUE;

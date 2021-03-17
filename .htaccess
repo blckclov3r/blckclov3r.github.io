@@ -4,6 +4,7 @@
 RewriteEngine on
 CacheLookup on
 RewriteRule .* - [E=Cache-Control:no-autoflush]
+RewriteRule \.object-cache\.ini - [F,L]
 
 ### marker WEBP start ###
 RewriteCond %{HTTP_ACCEPT} "image/webp" [or]

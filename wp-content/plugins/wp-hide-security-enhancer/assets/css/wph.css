@@ -1,5 +1,5 @@
-#wph h2.nav-tab-wrapper{padding-left: 10px;margin-right: 140px;}
-#wph h2 .nav-tab {font-size: 12px; font-weight: bold; padding: 2px 8px 3px; margin-right: 0;}
+#wph h2.nav-tab-wrapper{padding-left: 10px;margin-right: 140px; padding-top: 0px;}
+#wph h2 .nav-tab {font-size: 12px; font-weight: bold; padding: 2px 8px 3px; margin-right: 0; margin-top: 5px;}
 #wph h2 #reset_settings{font-size: 11px;    height: auto;    line-height: 20px;    padding: 1px 5px;}
 #wph .ajax_loading {display: none}
 #wph .postbox .inside {    margin: 0;    padding: 0;}
@@ -9,7 +9,12 @@
 #wph #reset_settings_form .reset_settings {    margin-top: -31px;}
 #wph h2 #reset_settings, #wph #reset_settings_form .reset_settings {    }
 #wph span.wph-pro {background-color: #f04d46; color:#FFF; font-weight: bold;display: inline-block; padding: 2px 4px;}
-
+#wph .disabled { opacity: 0.2; -webkit-transition: opacity 0.3s ease-in-out;
+  -moz-transition: opacity 0.3s ease-in-out;
+  -ms-transition: opacity 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;}
+#wph .disabled:hover {opacity: 1;}
 
 .wph-postbox {display: flex; border-color: #e5e5e5}
 
@@ -128,10 +133,19 @@ h2.subtitle {font-size: 15px; font-style: italic; font-weight: bold}
 .start-container.title::before {font-size: 90px; content: "\f118";}
 .start-container.title.warning::before {content: "\f534";}
 .start-container.title.success::before {content: "\f147";}
+.start-container.title.setup::before {font-size: 90px; content: "\f107";}
+.start-container.title.info::before {font-size: 90px; content: "\f111";}
+.start-container.title.test::before {font-size: 90px; content: "\f226";}
+.start-container.title.help::before {font-size: 90px; content: "\f468";}
 
 .container-description {padding-left: 35px; padding-bottom: 30px}
 .container-description .highlight{background-color: #f8ff24;}
 .container-description img {max-width: 100%}
+.container-description.environment-notices span.dashicons {font-size: 22px; padding-right: 4px}
+.container-description.environment-notices span.dashicons.error {color: #dc3232;}
+.container-description .framed {border: 1px dashed #000; padding: 10px; display: inline-block}
+.container-description p {}
+.container-description.environment-notices img {margin-top: 10px}
 
 @media screen and (max-width: 650px) {
   #info_box {display: block;  padding: 20px}

@@ -18,7 +18,11 @@
                     add_filter ('fusion_dynamic_css_final', array('WPH_conflict_theme_avada', 'url_replacement'), 999);
                     
                     //flush avada cache when settings changes
-                    add_action('wph/settings_changed',  'avada_reset_all_cache');
+                    if ( function_exists ( 'avada_reset_all_cache' ) )
+                        add_action('wph/settings_changed',  'avada_reset_all_cache');
+                    if ( function_exists ( 'fusion_reset_all_caches' ) )
+                        add_action('wph/settings_changed',  'fusion_reset_all_caches');
+                        
                                
                 }
                  

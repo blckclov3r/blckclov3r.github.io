@@ -71,7 +71,7 @@
                 
                 
                 
-            function _init_remove_admin_bar( $saved_field_data, $role )
+            function _init_remove_admin_bar( $saved_field_data )
                 {
                     if(empty($saved_field_data) ||  $saved_field_data   ==  'no')
                         return FALSE;

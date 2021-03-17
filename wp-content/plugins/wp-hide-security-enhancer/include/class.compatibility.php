@@ -130,6 +130,12 @@
                     //Hyper Cache
                     include_once(WPH_PATH . 'compatibility/hyper-cache.php');
                     
+                    include_once(WPH_PATH . 'compatibility/wp-asset-clean-up.php');
+                    
+                    include_once(WPH_PATH . 'compatibility/wepos.php');
+                    
+                    include_once(WPH_PATH . 'compatibility/oxygen.php');
+                    
                     /**
                     * Themes
                     */

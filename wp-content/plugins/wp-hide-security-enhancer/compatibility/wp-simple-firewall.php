@@ -43,11 +43,18 @@
             
             static public function on_plugins_loaded()
                 {
+                    
+                    if ( ! class_exists( 'FernleafSystems\Wordpress\Plugin\Shield\Controller\Controller' ) )
+                        return;
                             
                     $oICWP_Wpsf_Controller =   Shield\Controller\Controller::GetInstance( WP_PLUGIN_DIR . '/wp-simple-firewall/src/login_protect.php' );
                                                       
                     //check if custom login is active
-                    if( !   $oICWP_Wpsf_Controller->oFeatureHandlerLoginProtect->isCustomLoginPathEnabled())
+                    if( method_exists( $oICWP_Wpsf_Controller->oFeatureHandlerLoginProtect, 'isCustomLoginPathEnabled')  &&  $oICWP_Wpsf_Controller->oFeatureHandlerLoginProtect->isCustomLoginPathEnabled())
+                        return FALSE;
+                        else
+                    //version 10.0.3 and later 
+                    if( method_exists( $oICWP_Wpsf_Controller->oFeatureHandlerLoginProtect, 'getCustomLoginPath')  &&  $oICWP_Wpsf_Controller->oFeatureHandlerLoginProtect->getCustomLoginPath() != '' )
                         return FALSE;
                     
                     global $wph;

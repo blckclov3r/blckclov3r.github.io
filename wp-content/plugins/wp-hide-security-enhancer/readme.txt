@@ -3,11 +3,11 @@ Contributors: nsp-code, tdgu
 Donate link: https://www.nsp-code.com/
 Tags: wordpress hide, hide, security, improve security, hacking, wp hide, custom login, wp-loging.php, wp-admin, admin hide, login change, 
 Requires at least: 2.8
-Tested up to: 5.5.1
-Stable tag: 1.6.1.3
+Tested up to: 5.7
+Stable tag: 1.6.3.1
 License: GPLv2 or later
 
-Hide and increase Security for your WordPress site using smart techniques. No files are changed on your server. Change default admin and wp-login urls
+Hide WordPress default paths, wp-content, wp-includes, wp-admin, login URL, plugins, themes etc. Block the defaults for being still accessible. No files and data are changed on your server.
 
 == Description ==
 
@@ -267,6 +267,10 @@ There's no requirements on php knowledge. All plugin features and functionality 
 
 A demo instance can be found at <a target="_blank" href="https://demo.wp-hide.com/">https://demo.wp-hide.com/</a> or our own website <a target="_blank" href="https://www.wp-hide.com/">WP Hide and Security Enhancer</a>
 
+= Can I use the plugin on my Nginx server ?  =
+
+If the server runs full-stack Nginx, the free plugin can't generate the required format Nginx rewrite rules. It works with Apache, LiteSpeed, IIS, Nginx as a reverse proxy and compatible.
+
 = Can I still update WordPress, my plugins and themes?  =
 
 Everything works as before, no functionality is being broken. You can run updates at any time.
@@ -344,6 +348,50 @@ Please get in touch with us and we'll do our best to include it for a next versi
 2. Sample front html code.
 
 == Changelog ==
+
+= 1.6.3.1 =
+* Improved description for Test Rewrite procedure, when the server fails to provide a valid response,  rewrite engine is not active or the custom urls are not allowd.
+* Fixed Undefined Property Notice
+
+= 1.6.3 =
+* Server Environment Check to ensure there are no rewrite issues and the plugin can be safely deployed.
+* Interactive feedback with hints and explanations for environment issues.
+* Improved UI
+* Clear fusion cache when plugin options changed if avada active
+* Fix New Search Path replacement to include an end slash, to avoid catch wrong urls
+* Check and tag for WordPress 5.7
+
+= 1.6.2.5 =
+* Fix: Add slash for "New Search Path" to avoid wrong replacements with urls containing the new search slug.
+
+= 1.6.2.4 =
+* Reverse URLs when saving a options, to avoid custom urls to be writted within the database.
+* Check if string before making a replacement on metadata
+* Compatibility file for Oxigen editor, when using Signatures
+* Simple Firewall compatibility file update - check if FernleafSystems\Wordpress\Plugin\Shield\Controller\Controller class exists before apply
+                                                         
+= 1.6.2.0.4 =
+* Update Compatibility file with Oxygen editor, for image with link wrapper
+* WordPress 5.6 compatibility tag update
+
+= 1.6.2.0.3 =
+* Compatibility file with Oxygen editor
+
+= 1.6.2.0.2 =
+* Fix: Check the replacements for update_post_metadata method on text and array types.
+
+= 1.6.2 =
+* Reverse URLs when saving a meta data field, to avoid custom urls to be writted within the database.
+* Trigger a system notice when deployed on MultiSite, as not being compatible.
+* Don't run _init_remove_html_new_lines when AJAX call to avoid front side processing errors.
+* WP Rocket compatibility file updates, to works with combined CSS assets
+* Shield Security compatibility update, to works with version 10 and up.
+* Prevent nottices and errors when attempt to rite on .htaccess file.
+* New filter wph/components/wp_oembed_add_discovery_links to allow disabling the Remove Oembed - wp_oembed_add_discovery_links
+* New filter wph/components/wp_oembed_add_host_js to allow disabling the Remove Oembed - wp_oembed_add_host_js
+* New compatibility file for wePOS plugin
+* New compatibility file for Asset CleanUp Pro Page Speed Booster plugin
+
 
 = 1.6.1.3 =
 * Compatibility with Hyper Cache
