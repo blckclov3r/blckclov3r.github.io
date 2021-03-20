@@ -1,5 +1,0 @@
-PROCESSED on Thu, 05 Nov 2020 16:53:38 +0000
-//localhost/blckclov3r/wp-content/plugins/premium-addons-for-elementor/assets/frontend/min-css/premium-addons.min.css
-//localhost/blckclov3r/wp-includes/css/dashicons.min.css
-//localhost/blckclov3r/wp-content/plugins/ninja-forms/assets/css/display-opinions-light.css
-PROCESSED from http://localhost/blckclov3r/blckclov3r/
