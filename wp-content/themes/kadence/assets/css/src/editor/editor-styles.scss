@@ -1,0 +1,204 @@
+/**
+ * Styles for the WordPress post/page editor.
+ * Ensures a visual match between back- and front-end.
+ */
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Imports
+   # Custom properties
+   # Typography
+   # Elements
+   # Links
+# Adjustments for the editor
+
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Imports
+--------------------------------------------------------------*/
+
+@import "../_custom-properties.scss";
+@import "../_vars.scss";
+@import "../_typography.scss";
+@import "../_elements.scss";
+@import "../_links.scss";
+@import "../_media.scss";
+@import "../_blocks.scss";
+@import "../woo/_blocks.scss";
+
+/*--------------------------------------------------------------
+# Adjustments for the editor
+--------------------------------------------------------------*/
+button,
+select,
+option {
+	color: inherit;
+	font-family: inherit;
+	font-size: inherit;
+	line-height: inherit;
+	border-radius: inherit;
+}
+// Fix for old buttons.
+div[data-type="core/button"] {
+	&[data-align="right"],&[data-align="left"] {
+		display:block;
+	}
+}
+.block-editor-block-list__block.wp-block-columns {
+	margin-top: 28px;
+}
+.block-editor-block-list__block[data-type="kadence/advancedheading"] {
+    margin-bottom: 0;
+    margin-top: 0;
+}
+[data-type="kadence/advancedheading"] + [data-type="kadence/advancedheading"] {
+	h1, h2, h3, h4, h5, h6 {
+		margin-top: 0;
+	}
+}
+.wp-block-button__link {
+	border-radius: 3px;
+	background: var(--global-palette-btn-bg);
+	color: var(--global-palette-btn);
+	padding: 0.4em 1em;
+	border: 0;
+	display: inline-block;
+	cursor: pointer;
+	text-decoration: none;
+	transition: all 0.2s ease;
+	box-shadow: 0px 0px 0px -7px rgba(0,0,0,0.0);
+	&:hover, &:focus {
+		color: var(--global-palette-btn-hover);
+		background: var(--global-palette-btn-bg-hover);
+		box-shadow: 0px 15px 25px -7px rgba(0,0,0,0.1);
+	}
+}
+.is-style-outline .wp-block-button__link {
+	border: 2px solid currentColor;
+	background: transparent;
+	color: var(--global-palette-highlight);
+	&:hover, &:focus {
+		background: transparent;
+		color: var(--global-palette-highlight-alt);
+		box-shadow: 0px 0px 0px -7px rgba(0,0,0,0.0);
+	}
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 1.5em 0 .5em;
+}
+address, figure, hr, p, table, pre {
+	margin-top:0;
+	margin-bottom: 0;
+}
+p {
+	margin-bottom: var(--global-md-spacing);
+}
+pre {
+	margin-bottom: var(--global-md-spacing);
+}
+// Toolset issue.
+pre.CodeMirror-line {
+    line-height: inherit;
+    margin: 0;
+    overflow: visible;
+    font-size: inherit;
+    background: transparent;
+    max-width: unset;
+    padding: 0 4px;
+    font-family: inherit;
+}
+hr {
+	margin-top: var(--global-md-spacing);
+	margin-bottom:0;
+}
+ul, ol {
+	margin: 0 0 var(--global-md-spacing);
+	padding-left: 2em;
+}
+li>ol, li>ul {
+	margin: 0;
+}
+.alignleft {
+	float: left;
+	margin-right: var(--global-md-spacing);
+}
+.alignright {
+	float: right;
+	margin-left: var(--global-md-spacing);
+}
+.editor-post-title__input {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.gallery .gallery-item,
+.wp-block-freeform .gallery .gallery-item {
+	width: auto;
+}
+
+/* Width of "full-wide" blocks */
+.wp-block[data-align="full"] {
+	max-width: none;
+}
+
+.wp-block-cover h2,
+.wp-block-cover h3,
+.wp-block-cover h4 {
+	color: inherit;
+}
+
+.wp-block-cover .wp-block-cover-text {
+	font-size: 2em;
+	line-height: 1.25;
+}
+
+.wp-block-archives,
+.wp-block-categories__list,
+.wp-block-latest-posts,
+.wp-block-latest-comments {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.wp-block-latest-comments {
+	padding-left: 2.5em;
+	padding-right: 2.5em;
+}
+body:not(.mce-content-body):before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+.kt-post-grid-item .kt-blocks-post-excerpt p {
+	margin-bottom: 0;
+}
+.kadence-inner-column-inner > .block-editor-inner-blocks > .block-editor-block-list__layout > .wp-block[data-type="kadence/advancedheading"]:first-child .wp-block-kadence-advancedheading {
+    margin-top: 0;
+}
+.kt-tab-inner-content >.block-editor-inner-blocks > .block-editor-block-list__layout > .wp-block:first-child, .kt-accordion-panel-inner >.block-editor-inner-blocks > .block-editor-block-list__layout > .wp-block:first-child{
+	h1, h2, h3, h4, h5, h6 {
+		margin-top:0;
+	}
+}
+.wp-block-kadence-rowlayout .block-editor-block-list__layout ul {
+    padding-left: 2em;
+}
+.product-details.content-bg {
+	background: var( --global-palette9 );
+}
+.block-editor-block-toolbar {
+    color: #444;
+}
+.wp-block-image {
+	margin-bottom: var(--global-md-spacing);
+}
+.interface-interface-skeleton__editor {
+	max-width: 100%;
+}
