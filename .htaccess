@@ -149,6 +149,28 @@
     Header set Referrer-Policy "no-referrer-when-downgrade"
 </IfModule>
 # END W3TC Browser Cache
+# BEGIN W3TC Page Cache core
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /blckclov3r
+    RewriteCond %{HTTPS} =on
+    RewriteRule .* - [E=W3TC_SSL:_ssl]
+    RewriteCond %{SERVER_PORT} =443
+    RewriteRule .* - [E=W3TC_SSL:_ssl]
+    RewriteCond %{HTTP:X-Forwarded-Proto} =https [NC]
+    RewriteRule .* - [E=W3TC_SSL:_ssl]
+    RewriteCond %{HTTP:Accept-Encoding} gzip
+    RewriteRule .* - [E=W3TC_ENC:_gzip]
+    RewriteCond %{HTTP_COOKIE} w3tc_preview [NC]
+    RewriteRule .* - [E=W3TC_PREVIEW:_preview]
+    RewriteCond %{REQUEST_METHOD} !=POST
+    RewriteCond %{QUERY_STRING} =""
+    RewriteCond %{HTTP_COOKIE} !(comment_author|wp\-postpass|w3tc_logged_out|wordpress_logged_in|wptouch_switch_toggle) [NC]
+    RewriteCond %{REQUEST_URI} \/$
+    RewriteCond "%{DOCUMENT_ROOT}C:/xampp/htdocs/blckclov3r/wp-content/cache/page_enhanced/%{HTTP_HOST}/%{REQUEST_URI}/_index%{ENV:W3TC_SSL}%{ENV:W3TC_PREVIEW}.html%{ENV:W3TC_ENC}" -f
+    RewriteRule .* "C:/xampp/htdocs/blckclov3r/wp-content/cache/page_enhanced/%{HTTP_HOST}/%{REQUEST_URI}/_index%{ENV:W3TC_SSL}%{ENV:W3TC_PREVIEW}.html%{ENV:W3TC_ENC}" [L]
+</IfModule>
+# END W3TC Page Cache core
 # BEGIN WordPress
 # The directives (lines) between "BEGIN WordPress" and "END WordPress" are
 # dynamically generated, and should only be modified via WordPress filters.
