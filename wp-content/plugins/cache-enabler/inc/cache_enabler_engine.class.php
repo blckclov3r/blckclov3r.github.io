@@ -29,6 +29,7 @@ final class Cache_Enabler_Engine {
         return self::$started;
     }
 
+
     /**
      * engine status
      *
@@ -39,6 +40,18 @@ final class Cache_Enabler_Engine {
      */
 
     public static $started = false;
+
+
+    /**
+     * specific HTTP request headers from current request
+     *
+     * @since   1.7.0
+     * @change  1.7.0
+     *
+     * @var     array
+     */
+
+    public static $request_headers;
 
 
     /**
@@ -57,10 +70,13 @@ final class Cache_Enabler_Engine {
      * constructor
      *
      * @since   1.5.0
-     * @change  1.6.0
+     * @change  1.7.0
      */
 
     public function __construct() {
+
+        // get request headers
+        self::$request_headers = self::get_request_headers();
 
         // get settings from disk if directory index file
         if ( self::is_index() ) {
@@ -84,7 +100,7 @@ final class Cache_Enabler_Engine {
      * check if engine should start
      *
      * @since   1.5.2
-     * @change  1.5.4
+     * @change  1.7.0
      *
      * @return  boolean  true if engine should start, false otherwise
      */
@@ -108,11 +124,6 @@ final class Cache_Enabler_Engine {
 
         // check if XMLRPC request
         if ( defined( 'XMLRPC_REQUEST' ) && XMLRPC_REQUEST ) {
-            return false;
-        }
-
-        // check if Host request header is empty
-        if ( empty( $_SERVER['HTTP_HOST'] ) ) {
             return false;
         }
 
@@ -142,28 +153,49 @@ final class Cache_Enabler_Engine {
      * end output buffering and cache page if applicable
      *
      * @since   1.0.0
-     * @change  1.6.0
+     * @change  1.7.0
      *
-     * @param   string   $page_contents  contents of a page from the output buffer
-     * @param   integer  $phase          bitmask of PHP_OUTPUT_HANDLER_* constants
-     * @return  string   $page_contents  contents of a page from the output buffer
+     * @param   string   $contents  contents from the output buffer
+     * @param   integer  $phase     bitmask of PHP_OUTPUT_HANDLER_* constants
+     * @return  string   $contents  unchanged contents from the output buffer
      */
 
-    private static function end_buffering( $page_contents, $phase ) {
+    private static function end_buffering( $contents, $phase ) {
 
         if ( $phase & PHP_OUTPUT_HANDLER_FINAL || $phase & PHP_OUTPUT_HANDLER_END ) {
-            if ( ! self::is_cacheable( $page_contents ) || self::bypass_cache() ) {
-                return $page_contents;
+            if ( self::is_cacheable( $contents ) && ! self::bypass_cache() ) {
+                Cache_Enabler_Disk::cache_page( $contents );
             }
-
-            $page_contents = apply_filters( 'cache_enabler_page_contents_before_store', $page_contents );
-
-            $page_contents = apply_filters_deprecated( 'cache_enabler_before_store', array( $page_contents ), '1.6.0', 'cache_enabler_page_contents_before_store' );
-
-            Cache_Enabler_Disk::cache_page( $page_contents );
-
-            return $page_contents;
         }
+
+        return $contents;
+    }
+
+
+    /**
+     * get specific HTTP request headers from current request
+     *
+     * @since   1.7.0
+     * @change  1.7.0
+     *
+     * @return  array  $request_headers  specific HTTP request headers from current request
+     */
+
+    private static function get_request_headers() {
+
+        $request_headers = ( function_exists( 'apache_request_headers' ) ) ? apache_request_headers() : array();
+
+        $request_headers = array(
+            'Accept'             => ( isset( $request_headers['Accept'] ) ) ? $request_headers['Accept'] : ( ( isset( $_SERVER[ 'HTTP_ACCEPT' ] ) ) ? $_SERVER[ 'HTTP_ACCEPT' ] : '' ),
+            'Accept-Encoding'    => ( isset( $request_headers['Accept-Encoding'] ) ) ? $request_headers['Accept-Encoding'] : ( ( isset( $_SERVER[ 'HTTP_ACCEPT_ENCODING' ] ) ) ? $_SERVER[ 'HTTP_ACCEPT_ENCODING' ] : '' ),
+            'Host'               => ( isset( $request_headers['Host'] ) ) ? $request_headers['Host'] : ( ( isset( $_SERVER[ 'HTTP_HOST' ] ) ) ? $_SERVER[ 'HTTP_HOST' ] : '' ),
+            'If-Modified-Since'  => ( isset( $request_headers['If-Modified-Since'] ) ) ? $request_headers['If-Modified-Since'] : ( ( isset( $_SERVER[ 'HTTP_IF_MODIFIED_SINCE' ] ) ) ? $_SERVER[ 'HTTP_IF_MODIFIED_SINCE' ] : '' ),
+            'User-Agent'         => ( isset( $request_headers['User-Agent'] ) ) ? $request_headers['User-Agent'] : ( ( isset( $_SERVER[ 'HTTP_USER_AGENT' ] ) ) ? $_SERVER[ 'HTTP_USER_AGENT' ] : '' ),
+            'X-Forwarded-Proto'  => ( isset( $request_headers['X-Forwarded-Proto'] ) ) ? $request_headers['X-Forwarded-Proto'] : ( ( isset( $_SERVER[ 'HTTP_X_FORWARDED_PROTO' ] ) ) ? $_SERVER[ 'HTTP_X_FORWARDED_PROTO' ] : '' ),
+            'X-Forwarded-Scheme' => ( isset( $request_headers['X-Forwarded-Scheme'] ) ) ? $request_headers['X-Forwarded-Scheme'] : ( ( isset( $_SERVER[ 'HTTP_X_FORWARDED_SCHEME' ] ) ) ? $_SERVER[ 'HTTP_X_FORWARDED_SCHEME' ] : '' ),
+        );
+
+        return $request_headers;
     }
 
 
@@ -187,20 +219,20 @@ final class Cache_Enabler_Engine {
 
 
     /**
-     * check if page can be cached
+     * check if contents from the output buffer can be cached
      *
      * @since   1.5.0
-     * @change  1.5.0
+     * @change  1.7.0
      *
-     * @param   string   $page_contents  contents of a page from the output buffer
-     * @return  boolean                  true if page contents are cacheable, false otherwise
+     * @param   string   $contents  contents from the output buffer
+     * @return  boolean             true if contents from the output buffer are cacheable, false otherwise
      */
 
-    private static function is_cacheable( $page_contents ) {
+    private static function is_cacheable( $contents ) {
 
-        $has_html_tag       = ( stripos( $page_contents, '<html' ) !== false );
-        $has_html5_doctype  = preg_match( '/^<!DOCTYPE.+html>/i', ltrim( $page_contents ) );
-        $has_xsl_stylesheet = ( stripos( $page_contents, '<xsl:stylesheet' ) !== false || stripos( $page_contents, '<?xml-stylesheet' ) !== false );
+        $has_html_tag       = ( stripos( $contents, '<html' ) !== false );
+        $has_html5_doctype  = preg_match( '/^<!DOCTYPE.+html>/i', ltrim( $contents ) );
+        $has_xsl_stylesheet = ( stripos( $contents, '<xsl:stylesheet' ) !== false || stripos( $contents, '<?xml-stylesheet' ) !== false );
 
         if ( $has_html_tag && $has_html5_doctype && ! $has_xsl_stylesheet ) {
             return true;
@@ -248,7 +280,7 @@ final class Cache_Enabler_Engine {
      * check if page is excluded from cache
      *
      * @since   1.5.0
-     * @change  1.5.3
+     * @change  1.7.0
      *
      * @return  boolean  true if page is excluded from the cache, false otherwise
      */
@@ -257,7 +289,10 @@ final class Cache_Enabler_Engine {
 
         // if post ID excluded
         if ( ! empty( self::$settings['excluded_post_ids'] ) && function_exists( 'is_singular' ) && is_singular() ) {
-            if ( in_array( get_queried_object_id(), (array) explode( ',', self::$settings['excluded_post_ids'] ) ) ) {
+            $post_id = get_queried_object_id();
+            $excluded_post_ids = array_map( 'absint', (array) explode( ',', self::$settings['excluded_post_ids'] ) );
+
+            if ( in_array( $post_id, $excluded_post_ids, true ) ) {
                 return true;
             }
         }
@@ -296,7 +331,7 @@ final class Cache_Enabler_Engine {
                 $cookies_regex = '/^(wp-postpass|wordpress_logged_in|comment_author)_/';
             }
             // bypass cache if an excluded cookie is found
-            foreach ( $_COOKIE as $key => $value) {
+            foreach ( $_COOKIE as $key => $value ) {
                 if ( preg_match( $cookies_regex, $key ) ) {
                     return true;
                 }
@@ -327,25 +362,10 @@ final class Cache_Enabler_Engine {
 
 
     /**
-     * check if mobile template
-     *
-     * @since   1.0.0
-     * @change  1.0.0
-     *
-     * @return  boolean  true if mobile template, false otherwise
-     */
-
-    private static function is_mobile() {
-
-        return ( strpos( TEMPLATEPATH, 'wptouch' ) || strpos( TEMPLATEPATH, 'carrington' ) || strpos( TEMPLATEPATH, 'jetpack' ) || strpos( TEMPLATEPATH, 'handheld' ) );
-    }
-
-
-    /**
      * check if cache should be bypassed
      *
      * @since   1.0.0
-     * @change  1.6.0
+     * @change  1.7.0
      *
      * @return  boolean  true if cache should be bypassed, false otherwise
      */
@@ -384,7 +404,7 @@ final class Cache_Enabler_Engine {
 
         // check conditional tags when output buffering has ended
         if ( class_exists( 'WP' ) ) {
-            if ( is_admin() || self::is_search() || is_feed() || is_trackback() || is_robots() || is_preview() || post_password_required() || self::is_mobile() ) {
+            if ( is_admin() || self::is_search() || is_feed() || is_trackback() || is_robots() || is_preview() || post_password_required() ) {
                 return true;
             }
         }
@@ -397,15 +417,32 @@ final class Cache_Enabler_Engine {
      * deliver cache
      *
      * @since   1.5.0
-     * @change  1.6.0
+     * @change  1.7.0
      *
      * @return  boolean  false if cached page was not delivered
      */
 
     public static function deliver_cache() {
 
-        if ( Cache_Enabler_Disk::cache_exists() && ! Cache_Enabler_Disk::cache_expired() && ! self::bypass_cache()  ) {
-            readfile( Cache_Enabler_Disk::get_cache() );
+        $cache_file = Cache_Enabler_Disk::get_cache_file();
+
+        if ( Cache_Enabler_Disk::cache_exists( $cache_file ) && ! Cache_Enabler_Disk::cache_expired( $cache_file ) && ! self::bypass_cache()  ) {
+            // set X-Cache-Handler response header
+            header( 'X-Cache-Handler: cache-enabler-engine' );
+
+            // return 304 Not Modified with empty body if applicable
+            if ( strtotime( self::$request_headers['If-Modified-Since'] >= filemtime( $cache_file ) ) ) {
+                header( $_SERVER['SERVER_PROTOCOL'] . ' 304 Not Modified', true, 304 );
+                exit;
+            }
+
+            // set Content-Encoding response header if applicable
+            if ( strpos( basename( $cache_file ), 'gz' ) !== false ) {
+                header( 'Content-Encoding: gzip' );
+            }
+
+            // deliver cache
+            readfile( $cache_file );
             exit;
         }
 
