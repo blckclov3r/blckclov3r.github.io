@@ -1,0 +1,158 @@
+#wph h2.nav-tab-wrapper{padding-left: 10px;margin-right: 140px; padding-top: 0px;}
+#wph h2 .nav-tab {font-size: 12px; font-weight: bold; padding: 2px 8px 3px; margin-right: 0; margin-top: 5px;}
+#wph h2 #reset_settings{font-size: 11px;    height: auto;    line-height: 20px;    padding: 1px 5px;}
+#wph .ajax_loading {display: none}
+#wph .postbox .inside {    margin: 0;    padding: 0;}
+#wph h3.handle {border-bottom: 1px solid #e1e1e1; font-size: 14px;    line-height: 1.4;    margin: 0;    padding: 8px 12px;}
+#wph .postbox {margin-bottom: 10px}
+#wph .wph_input fieldset label { margin-bottom: 7px; display: inline-block; }
+#wph #reset_settings_form .reset_settings {    margin-top: -31px;}
+#wph h2 #reset_settings, #wph #reset_settings_form .reset_settings {    }
+#wph span.wph-pro {background-color: #f04d46; color:#FFF; font-weight: bold;display: inline-block; padding: 2px 4px;}
+#wph .something-wrong { opacity: 0.2; -webkit-transition: opacity 0.3s ease-in-out;
+  -moz-transition: opacity 0.3s ease-in-out;
+  -ms-transition: opacity 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;}
+#wph .something-wrong:hover {opacity: 1;}
+
+.wph-postbox {display: flex; border-color: #e5e5e5}
+
+#wph .section_title {font-size: 13px; font-weight: bold; padding: 5px 15px 5px; border: 1px solid #ccc; display: inline-block; margin-right: 0;border-bottom: 1px solid #f1f1f1; background:#FFF; color: #000;}
+
+table.wph_input {    border: 0 none;    background: #fff; width: 50%}
+table.wph_input tbody tr td {    padding: 10px 12px;    border-top: 1px solid #f5f5f5;    border-bottom: 0 none; width: 100%;box-sizing: border-box;}
+table.wph_input tbody tr td.np {padding: 0px}
+table.wph_input tbody tr:first-child td,
+table.wph_input tbody tr:first-child td.label {    border-top: 0 none;}
+table.wph_input tbody tr td.data {    padding-bottom: 20px;}
+table.wph_input tbody tr td.data p.description {font-size: 12px; margin-bottom: 15px;}
+table.wph_input .dashicons {overflow: hidden}
+table.wph_input .options {float: right; display: flex; margin: 0px; padding-top: 5px}
+table.wph_input .options ul {display: inline-block; }
+table.wph_input .options li {  padding: 0px 3px}
+table.wph_input .options li a:focus, table.wph_input .options li a:active { outline: 0; border: none;  -moz-outline-style: none; }
+table.wph_input .options li span {display:block;cursor: pointer; color: #797979; font-size: 17px;}
+table.wph_input .options li span:hover {color: #000}
+table.wph_input input[type=text],table.wph_input textarea,table.wph_input select{border-color:#dddddd; width: 100%; margin-left: 0px} 
+
+table.wph_input .advanced.hide {display: none}
+table.wph_input .advanced_notice {background-color: #FFF; border: 1px solid #cfcfd1; border-left: 5px solid #7d6591; margin: 10px 0 10px -16px; display: flex; justify-content: center; padding: 10px 0}
+table.wph_input .advanced_notice .icon {flex: 0 0 60px; text-align: center; margin-top: auto;  margin-bottom: auto;}
+table.wph_input .advanced_notice .icon img {max-width: 32px}
+table.wph_input .advanced_notice .text {width: 100%}
+table.wph_input .advanced_notice .text p {color:#4a4949; font-size: 13px;line-height: 17px;}
+table.wph_input .advanced_notice .actions {flex: 0 0 100px; text-align: center; vertical-align: middle; margin-top: auto;  margin-bottom: auto;}
+
+table.wph_input .options_text{padding: 10px 0; border-left: 4px solid #0073aa;margin-left: -13px;padding-left: 10px; display: flex}
+table.wph_input .options_text.text_pre {margin-bottom: 10px;}
+table.wph_input .options_text.text_post {margin-top: 10px;}
+table.wph_input .options_text .icon {flex: 0 0 60px; text-align: center; margin-top: auto;  margin-bottom: auto;}
+table.wph_input .options_text .icon img {max-width: 32px}
+table.wph_input .options_text .text {width: 100%}
+table.wph_input .options_text .text p {color:#4a4949; font-size: 13px;line-height: 17px;}
+table.wph_input .options_text .button {margin-left: 10px}
+
+.wph_help {width: 50%; background-color: #f9f9f9; padding: 0 20px; box-sizing: border-box; overflow: hidden; position:relative; border-left: 1px solid #f1f1f1}
+.wph_help::before {    color: #ececec;    content: "\f118";;     display: block;    font-family: dashicons;    font-size: 232px;    line-height: 1;    position: absolute;    right: 20px;    text-align: center;    top: 10%;    width: 1em; z-index: 1}
+.wph_help .text {max-width: 670px; position: relative; z-index: 1;}
+.wph_help .text p {font-size: 12px; color: #999;}
+.wph_help .text p br {content: "";  margin: 3px;  display: block;  font-size: 24%;}
+.wph_help .text p a {text-decoration: none}
+.wph_help .text p .important {color: #d54e21;}
+
+table.inner_table tbody tr td {padding-bottom: 12px}
+.inner_table .description {margin-bottom: 3px; font-style: normal;}
+table .submit .submitdelete {line-height: 25px;    text-align: left;    vertical-align: middle;border-bottom-color: red;    color: red; border-bottom-style: solid;    border-bottom-width: 1px;padding: 1px 2px;    text-decoration: none; margin-right: 20px}
+table .submit .submitdelete:hover {color:#FFF; background-color: red; border-color: red}
+table.wph_input tbody tr td.label {    width: 25%;    vertical-align: top;    background: #F9F9F9;    border-top: 1px solid #f0f0f0;    border-right: none}
+table.wph_input tbody tr td.label.advanced {border-left: 4px solid orange;}
+table.apto_rules tbody tr td{border-top: 0 none;}    
+table.wph_input img {vertical-align: middle;}
+table.even_table tr td {background-color:#FCFCFC}
+table.wph_input hr {border:1px dotted #E1E1E1; float: left;    margin-left: 15px;    width: 90%;    border-style:none none dotted;    color:#FFF;    background:#FFF;}
+table table.wph_input tr td{}
+table.wph_input tbody tr td.param {width: 50%}
+.conditional_rules table.wph_input td.param{width: 40%}
+.conditional_rules table.wph_input td.comparison{width: 12%}
+          
+table .select.multiple {height: 82px}
+table.wph_input tbody tr td h4 {margin: 0px; padding-bottom: 6px}
+table.wph_input tbody tr td h5 {font-size: 12px;    font-weight: normal;    margin: 0;    padding-bottom: 6px;    padding-top: 10px;}
+table.wph_input tbody tr td.label label{     font-size: 13px;    font-weight: bold;    padding: 0;    margin: 0;    color: #333;  cursor: default  }
+table.wph_input .label p, table.wph_input .label .description{    display: block;    font-size: 12px;    padding: 6px 0 !important;    margin: 0 !important;    font-style: normal;    line-height: 16px;    color: #999;}
+table.wph_input tbody tr td.label .description .important {color: #d54e21}
+table.wph_input tbody tr td.label .description .dashicons, table.wph_input tbody tr td.label .description span {display: inline-block}
+table.wph_input tbody tr td.label .description span {padding-left: 5px; line-height: 18px;}
+table.wph_input tbody tr td.label .description span a {display: block}
+table.wph_input tbody tr td.label .description span.important {color: #d54e21; padding-left: 0px }
+table.wph_input tbody tr td.label .description span.info {padding-left: 0px; color:#d54e21; font-style: italic;}
+table.wph_input tbody tr td.label .description .pointer {cursor:pointer}
+table.wph_input tbody tr td.label .description .notice-success, table.wph_input tbody tr td.label .description .notice-error {padding: 10px 12px; background-color: #fff;}
+table.wph_input tbody tr td.label .description a.button {display: inline-block; vertical-align: middle;}
+table.wph_input tbody tr.submit td { text-align: right}
+table.wph_input tbody tr.submit td.label {border-right: 1px solid #F9F9F9}
+table.wph_input select {    padding: 2px;}
+table.wph_input input[type=text]:focus,table.wph_input textarea:focus,table.wph_input select:focus {    border-color:#98B6CB;}
+
+.postbox h3 span {display: inline-block; vertical-align: middle}
+
+.wph-notice {background-color: #fff; border-left: 3px solid #0073aa; margin-bottom: 15px}
+.wph-notice p .dashicons { color: #d54e21;    float: left;    padding: 2px 10px;}
+.wph-notice p {display: inline-block }
+.wph-notice p span {font-weight: bold; cursor: text}
+
+
+#info_box {background-color: #FFF; display: flex; padding: 10px 20px 20px 0; margin-bottom: 20px}
+#info_box .image { max-width: 200px; padding: 10px 0px 0px 30px}
+#info_box .image img {max-width: 100%}
+#info_box .text {}
+#info_box .text h4, #info_box .text p {margin: 10px 0}
+#info_box .text h4 {text-transform: uppercase}
+#info_box .text a {text-decoration: none}
+#info_box .text span.split {line-height: 1px; font-size: 1px; height: 1px; border-bottom: 1px solid #e6e6e6; width: 50%; display: block}
+#info_box #social {display: flex; padding-top: 10px}
+#info_box #social .social-item:not(:first-child) {padding-left: 10px}
+
+
+                                                                                                                                                          
+h2.subtitle {font-size: 15px; font-style: italic; font-weight: bold}
+.wrap .example { color: #666666; font-size: 11px; font-weight: bold}
+
+.start-container {    background-color: #fff;    border-left: 3px solid #0073aa;    overflow: hidden;    padding: 25px 20px 20px 30px;    position: relative;}
+.start-container::before {    color: #eee2ec;    content: "\f111";    content: "\f332";    display: block;    font-family: dashicons;    font-size: 232px;    line-height: 1;    position: absolute;    right: 0;    text-align: center;    top: 0;    width: 1em; z-index: 1}
+.start-container.licence-key::before { content: "\f112"; }
+.start-container .text {position: relative;z-index: 2}
+.start-container h2, .start-container p {position: relative}
+.start-container input[type="text"] {width: 740px; max-width: 100%;}
+.start-container .warning {color: #ca4a1f}
+
+.start-container.title { padding: 0px 20px 0px 30px; }
+.start-container.title.warning {border-color: #dc3232; }
+.start-container.title.success {border-color: #0ead69}
+.start-container.title::before {font-size: 90px; content: "\f118";}
+.start-container.title.warning::before {content: "\f534";}
+.start-container.title.success::before {content: "\f147";}
+.start-container.title.setup::before {font-size: 90px; content: "\f107";}
+.start-container.title.info::before {font-size: 90px; content: "\f111";}
+.start-container.title.test::before {font-size: 90px; content: "\f226";}
+.start-container.title.help::before {font-size: 90px; content: "\f468";}
+
+.container-description {padding-left: 35px; padding-bottom: 30px}
+.container-description .highlight{background-color: #f8ff24;}
+.container-description img {max-width: 100%}
+.container-description.environment-notices span.dashicons {font-size: 22px; padding-right: 4px}
+.container-description.environment-notices span.dashicons.error {color: #dc3232;}
+.container-description .framed {border: 1px dashed #000; padding: 10px; display: inline-block; font-weight: bold}
+.container-description p {}
+.container-description.environment-notices img {margin-top: 10px}
+
+@media screen and (max-width: 650px) {
+  #info_box {display: block;  padding: 20px}
+  #info_box .image { text-align: center; width: 100%; max-width: 100%;}
+  #info_box .text span.split {width: 100%}
+  
+  .wph-postbox {display: block}
+  .wph_help, table.wph_input {width: 100%}
+  
+}
