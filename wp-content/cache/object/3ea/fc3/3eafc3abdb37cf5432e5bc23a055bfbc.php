@@ -1,0 +1,1 @@
+†1X`<?php exit; ?>a:1:{s:7:"content";s:295:"a:3:{s:49:"advanced-database-cleaner/advanced-db-cleaner.php";a:2:{i:0;s:24:"ADBC_Advanced_DB_Cleaner";i:1;s:14:"aDBc_uninstall";}s:23:"elementor/elementor.php";a:2:{i:0;s:21:"Elementor\Maintenance";i:1;s:9:"uninstall";}s:21:"wp-reset/wp-reset.php";a:2:{i:0;s:8:"WP_Reset";i:1;s:9:"uninstall";}}";}

@@ -1,0 +1,1 @@
+†1X`<?php exit; ?>a:1:{s:7:"content";s:175:"a:5:{s:9:"left_menu";s:1:"1";s:16:"menu_under_tools";s:1:"1";s:14:"plugin_version";s:5:"3.0.3";s:12:"installed_on";s:10:"2021/03/22";s:9:"keep_last";a:1:{s:8:"revision";i:0;}}";}
