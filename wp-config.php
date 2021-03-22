@@ -86,5 +86,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 	define( 'ABSPATH', __DIR__ . '/' );
 }
 
+/** Enables page caching for Cache Enabler. */
+if ( ! defined( 'WP_CACHE' ) ) {
+	define( 'WP_CACHE', true );
+}
+
 /** Sets up WordPress vars and included files. */
 require_once ABSPATH . 'wp-settings.php';

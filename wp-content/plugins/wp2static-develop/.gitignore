@@ -1,7 +1,0 @@
-/vendor/
-/vendor_prefixed/
-node_modules/
-coverage/
-admin/*.js*
-.phpunit.result.cache
-
