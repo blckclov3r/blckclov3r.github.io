@@ -263,8 +263,8 @@
     "stats.access_log.format": "%h %l %u %t \\\"%r\\\" %>s %O \\\"%{Referer}i\\\" \\\"%{User-Agent}i\\\"",
     "stats.access_log.webserver": "apache",
     "minify.configuration_overloaded": false,
-    "minify.enabled": false,
-    "minify.auto": true,
+    "minify.enabled": true,
+    "minify.auto": false,
     "minify.debug": false,
     "minify.engine": "file",
     "minify.error.notification": "",
@@ -309,13 +309,26 @@
     "minify.css.strip.crlf": false,
     "minify.css.embed": false,
     "minify.css.imports": "",
-    "minify.css.groups": [],
+    "minify.css.groups": {
+        "58e54": {
+            "default": {
+                "include": {
+                    "files": [
+                        "https:\/\/blckclov3r.github.io\/wp-content\/themes\/kadence\/assets\/css\/footer.min.css?ver=1.0.17",
+                        "https:\/\/blckclov3r.github.io\/wp-content\/plugins\/elementor\/assets\/css\/frontend.min.css?ver=3.1.4",
+                        "https:\/\/fonts.googleapis.com\/css?family=Roboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto+Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CPoppins%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CPassion+One%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&ver=5.7",
+                        "https:\/\/fonts.googleapis.com\/css?family=Lato:regular,700%7CJosefin%20Sans:600,700&display=swap"
+                    ]
+                }
+            }
+        }
+    },
     "minify.js.http2push": false,
     "minify.js.enable": true,
     "minify.js.engine": "js",
     "minify.js.method": "both",
     "minify.js.combine.header": false,
-    "minify.js.header.embed_type": "blocking",
+    "minify.js.header.embed_type": "nb-async",
     "minify.js.combine.body": false,
     "minify.js.body.embed_type": "blocking",
     "minify.js.combine.footer": false,
@@ -357,10 +370,18 @@
     "minify.htmltidy.options.hide-comments": true,
     "minify.htmltidy.options.wrap": 0,
     "minify.reject.logged": false,
-    "minify.reject.ua": [],
-    "minify.reject.uri": [],
-    "minify.reject.files.js": [],
-    "minify.reject.files.css": [],
+    "minify.reject.ua": [
+        ""
+    ],
+    "minify.reject.uri": [
+        ""
+    ],
+    "minify.reject.files.js": [
+        ""
+    ],
+    "minify.reject.files.css": [
+        ""
+    ],
     "minify.cache.files": [
         ""
     ],
@@ -536,7 +557,9 @@
     "varnish.configuration_overloaded": false,
     "varnish.enabled": false,
     "varnish.debug": false,
-    "varnish.servers": [],
+    "varnish.servers": [
+        ""
+    ],
     "browsercache.configuration_overloaded": false,
     "browsercache.enabled": true,
     "browsercache.rewrite": false,
@@ -894,5 +917,8 @@
     "extensions.active_dropin": [],
     "plugin.license_key": "",
     "plugin.type": "",
-    "jquerymigrate.disabled": false
+    "jquerymigrate.disabled": false,
+    "fragmentcache": {
+        "engine": ""
+    }
 }
