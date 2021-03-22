@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	>
+<channel>
+	<title>
+	Comments on: You don’t have to be great to start, but you have to start to be great.	</title>
+	<atom:link href="https://blckclov3r.github.io/2020/12/10/779/feed/" rel="self" type="application/rss+xml" />
+	<link>https://blckclov3r.github.io/2020/12/10/779/</link>
+	<description>Just another WordPress site</description>
+	<lastBuildDate>Sat, 20 Mar 2021 12:17:39 +0000</lastBuildDate>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.7</generator>
+</channel>
+</rss>
