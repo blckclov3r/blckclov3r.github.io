@@ -609,6 +609,7 @@ endif;
 	</td>
 </tr>
 <?php endif; ?>
+
 		<?php
 		/**
 		 * Filters the display of the password fields.
@@ -669,28 +670,6 @@ endif;
 	</td>
 </tr>
 	<?php endif; ?>
-
-		<?php
-		// Allow admins to send reset password link.
-		if ( ! IS_PROFILE_PAGE ) :
-			?>
-	<tr class="user-generate-reset-link-wrap hide-if-no-js">
-		<th><?php _e( 'Password Reset' ); ?></th>
-		<td>
-			<div class="generate-reset-link">
-				<button type="button" class="button button-secondary" id="generate-reset-link">
-					<?php _e( 'Send Reset Link' ); ?>
-				</button>
-			</div>
-			<p class="description">
-				<?php
-				/* translators: %s: User's display name. */
-				printf( __( 'Send %s a link to reset their password. This will not change their password, nor will it force a change.' ), esc_html( $profileuser->display_name ) );
-				?>
-			</p>
-		</td>
-	</tr>
-		<?php endif; ?>
 
 		<?php
 		if ( IS_PROFILE_PAGE && count( $sessions->get_all() ) === 1 ) :
@@ -760,7 +739,7 @@ endif;
 				}
 			}
 
-			if ( ! wp_is_site_protected_by_basic_auth( 'front' ) ) {
+			if ( empty( $_SERVER['PHP_AUTH_USER'] ) && empty( $_SERVER['PHP_AUTH_PW'] ) ) {
 				?>
 			<div class="create-application-password form-wrap">
 				<div class="form-field">
