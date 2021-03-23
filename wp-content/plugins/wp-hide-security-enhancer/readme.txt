@@ -4,7 +4,7 @@ Donate link: https://www.nsp-code.com/
 Tags: wordpress hide, hide, security, improve security, hacking, wp hide, custom login, wp-loging.php, wp-admin, admin hide, login change, 
 Requires at least: 2.8
 Tested up to: 5.7
-Stable tag: 1.6.3.2
+Stable tag: 1.6.3.3
 License: GPLv2 or later
 
 Hide WordPress default paths, wp-content, wp-includes, wp-admin, login URL, plugins, themes etc. Block the defaults for being still accessible. No files and data are changed on your server.
@@ -354,6 +354,10 @@ Please get in touch with us and we'll do our best to include it for a next versi
 2. Sample front html code.
 
 == Changelog ==
+
+= 1.6.3.3 =
+* Fix attachment_url_to_postid
+* Fix undefined get_metadata_raw
 
 = 1.6.3.2 =
 * Confirmation page for Recovery link

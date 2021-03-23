@@ -173,6 +173,8 @@
                     
                     //prevent the buffer processing if not filterable available
                     add_filter( 'wp-hide/ignore_ob_start_callback', array($this, 'ignore_ob_start_callback'), 999 );
+                    
+                    add_filter( 'attachment_url_to_postid',         array ( $this, 'attachment_url_to_postid' ) , 999, 2 );
                                         
                 }
             
@@ -1544,7 +1546,7 @@
                     $passed_value   = wp_slash($meta_value);
                        
                     // Compare existing value to new value if no prev value given and the key exists only once.
-                    if ( empty( $prev_value ) ) 
+                    if ( empty( $prev_value ) && function_exists( 'get_metadata_raw' ) ) 
                         {
                             $old_value = get_metadata_raw( $meta_type, $object_id, $meta_key );
                             if ( is_countable( $old_value ) && count( $old_value ) === 1 ) 
@@ -1725,6 +1727,60 @@
                     return $data;
                 }           
                 
+            
+            
+            function attachment_url_to_postid ( $post_id, $url )
+                {
+                    
+                    if ( $post_id > 0 )
+                        return $post_id;
+                        
+                        
+                    global $wpdb, $wph;
+
+                    $url    =   $wph->functions->content_urls_replacement( $url,  array_flip ( $wph->functions->get_replacement_list() )  );
+                    
+                    $dir  = wp_get_upload_dir();
+                    $path = $url;
+
+                    $site_url   = parse_url( $dir['url'] );
+                    $image_path = parse_url( $path );
+
+                    // Force the protocols to match if needed.
+                    if ( isset( $image_path['scheme'] ) && ( $image_path['scheme'] !== $site_url['scheme'] ) ) {
+                        $path = str_replace( $image_path['scheme'], $site_url['scheme'], $path );
+                    }
+                    
+                    if ( 0 === strpos( $path, $dir['baseurl'] . '/' ) ) {
+                        $path = substr( $path, strlen( $dir['baseurl'] . '/' ) );
+                    }
+
+                    $sql = $wpdb->prepare(
+                        "SELECT post_id, meta_value FROM $wpdb->postmeta WHERE meta_key = '_wp_attached_file' AND meta_value = %s",
+                        $path
+                    );
+
+                    $results = $wpdb->get_results( $sql );
+                    $post_id = null;
+
+                    if ( $results ) {
+                        // Use the first available result, but prefer a case-sensitive match, if exists.
+                        $post_id = reset( $results )->post_id;
+
+                        if ( count( $results ) > 1 ) {
+                            foreach ( $results as $result ) {
+                                if ( $path === $result->meta_value ) {
+                                    $post_id = $result->post_id;
+                                    break;
+                                }
+                            }
+                        }
+                    }
+                    
+                    return $post_id;   
+                    
+                }
+            
                 
             
             /**
