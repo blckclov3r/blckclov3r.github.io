@@ -5,7 +5,7 @@
  * @since      1.5.0
  * @change     1.5.0
  *
- * @generated  Tue, 23 Mar 2021 19:10:10 GMT
+ * @generated  Tue, 23 Mar 2021 19:33:35 GMT
  */
 
 return array (
@@ -16,8 +16,8 @@ return array (
   'clear_site_cache_on_saved_post' => 1,
   'clear_site_cache_on_saved_comment' => 1,
   'clear_site_cache_on_changed_plugin' => 1,
-  'convert_image_urls_to_webp' => 1,
-  'mobile_cache' => 1,
+  'convert_image_urls_to_webp' => 0,
+  'mobile_cache' => 0,
   'compress_cache' => 1,
   'minify_html' => 1,
   'minify_inline_css_js' => 0,
