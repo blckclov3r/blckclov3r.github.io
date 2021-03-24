@@ -1,34 +1,11 @@
 # BEGIN W3TC Minify cache
-FileETag MTime Size
-<IfModule mod_mime.c>
-    AddType text/css .css_gzip
-    AddEncoding gzip .css_gzip
-    AddType application/x-javascript .js_gzip
-    AddEncoding gzip .js_gzip
-</IfModule>
-<IfModule mod_deflate.c>
-    <IfModule mod_setenvif.c>
-        SetEnvIfNoCase Request_URI \.css_gzip$ no-gzip
-        SetEnvIfNoCase Request_URI \.js_gzip$ no-gzip
-    </IfModule>
-</IfModule>
-<IfModule mod_expires.c>
-    ExpiresActive On
-    ExpiresByType text/css A31536000
-    ExpiresByType application/x-javascript A31536000
-</IfModule>
-<IfModule mod_headers.c>
-    Header set Vary "Accept-Encoding"
-</IfModule>
 # END W3TC Minify cache
+
 # BEGIN W3TC Minify core
 <IfModule mod_rewrite.c>
     RewriteEngine On
     RewriteBase /blckclov3r/aljun_content/cache/minify/
-    RewriteCond %{HTTP:Accept-Encoding} gzip
-    RewriteRule .* - [E=APPEND_EXT:_gzip]
-    RewriteCond %{REQUEST_FILENAME}%{ENV:APPEND_EXT} -f
-    RewriteRule (.*) $1%{ENV:APPEND_EXT} [L]
+    RewriteCond %{REQUEST_FILENAME} !-f
     RewriteRule ^(.+\.(css|js))$ /blckclov3r/index.php [L]
 </IfModule>
 # END W3TC Minify core

@@ -133,7 +133,7 @@
     "objectcache.lifetime": 180,
     "objectcache.purge.all": false,
     "pgcache.configuration_overloaded": false,
-    "pgcache.enabled": true,
+    "pgcache.enabled": false,
     "pgcache.comment_cookie_ttl": 1800,
     "pgcache.debug": false,
     "pgcache.debug_purge": false,
@@ -548,7 +548,7 @@
         ""
     ],
     "browsercache.configuration_overloaded": false,
-    "browsercache.enabled": true,
+    "browsercache.enabled": false,
     "browsercache.rewrite": false,
     "browsercache.no404wp": false,
     "browsercache.no404wp.exceptions": [
@@ -897,9 +897,7 @@
     "timelimit.minify_recommendations": 600,
     "common.instance_id": 1384804012,
     "common.force_master": true,
-    "extensions.active": {
-        "fragmentcache": "w3-total-cache\/Extension_FragmentCache_Plugin.php"
-    },
+    "extensions.active": [],
     "extensions.active_frontend": [],
     "extensions.active_dropin": [],
     "plugin.license_key": "",
