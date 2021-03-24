@@ -1,36 +1,36 @@
 # BEGIN WP Hide & Security Enhancer
-<IfModule mod_rewrite.c> 
-RewriteEngine On 
-RewriteBase /blckclov3r/ 
+<IfModule mod_rewrite.c>
+	RewriteEngine On
+	RewriteBase /blckclov3r/
 #WriteCheckString:1616437781_20796
-RewriteRule .* - [E=HTTP_MOD_REWRITE:On]
-RewriteRule ^rewrite_test_1616437781_20796/? /blckclov3r/wp-content/plugins/wp-hide-security-enhancer/include/rewrite-confirm.php [L,QSA]
-
-RewriteCond "%{DOCUMENT_ROOT}/blckclov3r/wp-content/cache/wph/%{HTTP_HOST}%{REQUEST_URI}" -f
-RewriteRule .* "/blckclov3r/wp-content/cache/wph/%{HTTP_HOST}%{REQUEST_URI}" [L]
-
-RewriteRule ^aljun_template/aljun_style.css /blckclov3r/wp-content/plugins/wp-hide-security-enhancer/router/file-process.php?action=style-clean&file_path=/blckclov3r/wp-content/themes/kadence/style.css&replacement_path=/aljun_template/aljun_style.css [L,QSA]
-
-RewriteRule ^aljun_template/aljun_style.css /blckclov3r/wp-content/themes/kadence/style.css [L,QSA]
-
-RewriteRule ^aljun_template/(.+) /blckclov3r/wp-content/themes/kadence/$1 [L,QSA]
-
-RewriteRule ^aljun_plugins/(.+) /blckclov3r/wp-content/plugins/$1 [L,QSA]
-RewriteCond %{ENV:REDIRECT_STATUS} ^$
-RewriteRule ^wp-content/plugins(.+) /blckclov3r/index.php?wph-throw-404 [L]
-RewriteCond %{ENV:REDIRECT_STATUS} ^$
-RewriteCond %{HTTP_COOKIE} !^.*wordpress_logged_in.*$ [NC]
-RewriteRule ^wp-includes(.*) /blckclov3r/index.php?wph-throw-404 [L]
-
-RewriteRule ^aljun_includes/(.+) /blckclov3r/wp-includes/$1 [L,QSA]
-
-RewriteRule ^aljun_uploads/(.+) /blckclov3r/wp-content/uploads/$1 [L,QSA]
-
-RewriteRule ^aljun_content/(.+) /blckclov3r/wp-content/$1 [L,QSA]
-RewriteCond %{ENV:REDIRECT_STATUS} ^$
-RewriteCond %{HTTP_COOKIE} !^.*wordpress_logged_in.*$ [NC]
-RewriteRule ^wp-content(.+) /blckclov3r/index.php?wph-throw-404 [L]
-</IfModule> 
+	RewriteRule .* - [E=HTTP_MOD_REWRITE:On]
+	RewriteRule ^rewrite_test_1616437781_20796/? /blckclov3r/wp-content/plugins/wp-hide-security-enhancer/include/rewrite-confirm.php [L,QSA]
+	
+	RewriteCond "%{DOCUMENT_ROOT}/blckclov3r/wp-content/cache/wph/%{HTTP_HOST}%{REQUEST_URI}" -f
+	RewriteRule .* "/blckclov3r/wp-content/cache/wph/%{HTTP_HOST}%{REQUEST_URI}" [L]
+	
+	RewriteRule ^aljun_template/aljun_style.css /blckclov3r/wp-content/plugins/wp-hide-security-enhancer/router/file-process.php?action=style-clean&file_path=/blckclov3r/wp-content/themes/kadence/style.css&replacement_path=/aljun_template/aljun_style.css [L,QSA]
+	
+	RewriteRule ^aljun_template/aljun_style.css /blckclov3r/wp-content/themes/kadence/style.css [L,QSA]
+	
+	RewriteRule ^aljun_template/(.+) /blckclov3r/wp-content/themes/kadence/$1 [L,QSA]
+	
+	RewriteRule ^aljun_plugins/(.+) /blckclov3r/wp-content/plugins/$1 [L,QSA]
+	RewriteCond %{ENV:REDIRECT_STATUS} ^$
+	RewriteRule ^wp-content/plugins(.+) /blckclov3r/index.php?wph-throw-404 [L]
+	RewriteCond %{ENV:REDIRECT_STATUS} ^$
+	RewriteCond %{HTTP_COOKIE} !^.*wordpress_logged_in.*$ [NC]
+	RewriteRule ^wp-includes(.*) /blckclov3r/index.php?wph-throw-404 [L]
+	
+	RewriteRule ^aljun_includes/(.+) /blckclov3r/wp-includes/$1 [L,QSA]
+	
+	RewriteRule ^aljun_uploads/(.+) /blckclov3r/wp-content/uploads/$1 [L,QSA]
+	
+	RewriteRule ^aljun_content/(.+) /blckclov3r/wp-content/$1 [L,QSA]
+	RewriteCond %{ENV:REDIRECT_STATUS} ^$
+	RewriteCond %{HTTP_COOKIE} !^.*wordpress_logged_in.*$ [NC]
+	RewriteRule ^wp-content(.+) /blckclov3r/index.php?wph-throw-404 [L]
+</IfModule>
 
 # END WP Hide & Security Enhancer
 
@@ -39,13 +39,13 @@ RewriteRule ^wp-content(.+) /blckclov3r/index.php?wph-throw-404 [L]
 # dynamically generated, and should only be modified via WordPress filters.
 # Any changes to the directives between these markers will be overwritten.
 <IfModule mod_rewrite.c>
-RewriteEngine On
-RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
-RewriteBase /blckclov3r/
-RewriteRule ^index\.php$ - [L]
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . /blckclov3r/index.php [L]
+	RewriteEngine On
+	RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+	RewriteBase /blckclov3r/
+	RewriteRule ^index\.php$ - [L]
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteCond %{REQUEST_FILENAME} !-d
+	RewriteRule . /blckclov3r/index.php [L]
 </IfModule>
 
 # END WordPress
