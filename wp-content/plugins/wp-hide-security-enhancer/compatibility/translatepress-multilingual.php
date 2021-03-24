@@ -38,7 +38,7 @@
             
             function trp_is_admin_link( $is_admin_link, $url, $admin_url, $wp_login_url )
                 {
-                    $new_wp_login_php       =   $new_login  =   $wph->functions->get_module_item_setting('new_wp_login_php');
+                    $new_wp_login_php       =   $new_login  =   $this->wph->functions->get_module_item_setting('new_wp_login_php');
                     $login_url              =   home_url( $new_wp_login_php, 'login' );
                     
                     $default_login_url      =   site_url( 'wp-login', 'login');

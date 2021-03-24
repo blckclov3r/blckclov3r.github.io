@@ -58,7 +58,7 @@
         "\\bsql_calc_found_rows\\b",
         "\\bfound_rows\\(\\)"
     ],
-    "lazyload.enabled": false,
+    "lazyload.enabled": true,
     "lazyload.process_img": true,
     "lazyload.process_background": true,
     "lazyload.googlemaps.google_maps_easy": false,
@@ -133,7 +133,7 @@
     "objectcache.lifetime": 180,
     "objectcache.purge.all": false,
     "pgcache.configuration_overloaded": false,
-    "pgcache.enabled": false,
+    "pgcache.enabled": true,
     "pgcache.comment_cookie_ttl": 1800,
     "pgcache.debug": false,
     "pgcache.debug_purge": false,
@@ -290,11 +290,11 @@
     "minify.symlinks": [],
     "minify.lifetime": 86400,
     "minify.upload": true,
-    "minify.html.enable": false,
+    "minify.html.enable": true,
     "minify.html.engine": "html",
     "minify.html.reject.feed": false,
-    "minify.html.inline.css": false,
-    "minify.html.inline.js": false,
+    "minify.html.inline.css": true,
+    "minify.html.inline.js": true,
     "minify.html.strip.crlf": false,
     "minify.html.comments.ignore": [
         "google_ad_",
@@ -309,24 +309,7 @@
     "minify.css.strip.crlf": false,
     "minify.css.embed": false,
     "minify.css.imports": "process",
-    "minify.css.groups": {
-        "58e54": {
-            "default": {
-                "include": {
-                    "files": [
-                        "https:\/\/blckclov3r.github.io\/wp-content\/themes\/kadence\/assets\/css\/footer.min.css?ver=1.0.17",
-                        "https:\/\/blckclov3r.github.io\/wp-content\/plugins\/elementor\/assets\/css\/frontend.min.css?ver=3.1.4",
-                        "https:\/\/fonts.googleapis.com\/css?family=Roboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto+Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CPoppins%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CPassion+One%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&ver=5.7",
-                        "https:\/\/fonts.googleapis.com\/css?family=Lato:regular,700%7CJosefin%20Sans:600,700&display=swap",
-                        "https:\/\/blckclov3r.github.io\/wp-includes\/css\/dist\/block-library\/style.min.css?ver=5.7",
-                        "https:\/\/blckclov3r.github.io\/wp-content\/themes\/kadence\/assets\/css\/global.min.css?ver=1.0.17",
-                        "https:\/\/blckclov3r.github.io\/wp-content\/themes\/kadence\/assets\/css\/content.min.css?ver=1.0.17",
-                        "https:\/\/blckclov3r.github.io\/wp-content\/plugins\/elementor\/assets\/lib\/animations\/animations.min.css?ver=3.1.4"
-                    ]
-                }
-            }
-        }
-    },
+    "minify.css.groups": [],
     "minify.js.http2push": false,
     "minify.js.enable": true,
     "minify.js.engine": "js",
@@ -334,9 +317,9 @@
     "minify.js.combine.header": false,
     "minify.js.header.embed_type": "nb-async",
     "minify.js.combine.body": false,
-    "minify.js.body.embed_type": "blocking",
+    "minify.js.body.embed_type": "nb-defer",
     "minify.js.combine.footer": false,
-    "minify.js.footer.embed_type": "blocking",
+    "minify.js.footer.embed_type": "nb-defer",
     "minify.js.strip.comments": false,
     "minify.js.strip.crlf": false,
     "minify.js.groups": [],

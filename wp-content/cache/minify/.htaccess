@@ -24,7 +24,7 @@ FileETag MTime Size
 # BEGIN W3TC Minify core
 <IfModule mod_rewrite.c>
     RewriteEngine On
-    RewriteBase /blckclov3r/wp-content/cache/minify/
+    RewriteBase /blckclov3r/aljun_content/cache/minify/
     RewriteCond %{HTTP:Accept-Encoding} gzip
     RewriteRule .* - [E=APPEND_EXT:_gzip]
     RewriteCond %{REQUEST_FILENAME}%{ENV:APPEND_EXT} -f
