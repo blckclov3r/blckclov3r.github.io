@@ -5,7 +5,7 @@
  * @since      1.5.0
  * @change     1.5.0
  *
- * @generated  Tue, 23 Mar 2021 19:33:35 GMT
+ * @generated  Wed, 24 Mar 2021 03:39:09 GMT
  */
 
 return array (
@@ -19,7 +19,7 @@ return array (
   'convert_image_urls_to_webp' => 0,
   'mobile_cache' => 0,
   'compress_cache' => 1,
-  'minify_html' => 1,
+  'minify_html' => 0,
   'minify_inline_css_js' => 0,
   'excluded_post_ids' => '',
   'excluded_page_paths' => '',
