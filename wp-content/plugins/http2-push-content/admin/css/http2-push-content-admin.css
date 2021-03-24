@@ -1,0 +1,137 @@
+/**
+ * All of the CSS for your admin-specific functionality should be
+ * included in this file.
+ */
+.pisol_grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 20px;
+  padding: 10px;
+}
+
+.pisol-main-wrap-area {
+  display: flex;
+}
+
+.pisol-form-container {
+  width: 70%;
+}
+
+.pisol-msg-container {
+  width: 30%;
+}
+
+.pisol-msg-container .postbox {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.pisol-heading {
+  font-size: 14px;
+  padding: 8px 12px;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.pisol-cover {
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc(100% - 10px);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+
+.pisol-cover div {
+  background: rgba(255, 255, 255, 0.6);
+  padding: 10px;
+  color: #000;
+}
+
+.pisol-offer {
+  background: green !important;
+  color: #fff;
+}
+
+.pisol-offer .pisol-heading {
+  color: #fff;
+}
+
+.pisol_grid small {
+  color: #bbb;
+}
+
+.pisol_grid textarea {
+  width: 100%;
+}
+
+.w100 {
+  padding: 10px;
+}
+
+.w100 input {
+  width: 100%;
+}
+
+.pi-icon {
+  text-decoration: none;
+  vertical-align: middle;
+}
+
+.pi-block {
+  display: block;
+  width: 100%;
+}
+
+#version-list {
+  width: 100%;
+}
+
+#version-list input {
+  max-width: 100%;
+}
+
+#version-list tr {
+  padding: 10px 0;
+  display: block;
+}
+
+.file-name {
+  max-width: 80px;
+}
+
+.file-version {
+  max-width: 60px;
+}
+
+.pisol_grid2 {
+  display: flex;
+}
+
+#license_key {
+  -webkit-touch-callout: all; /* iOS Safari */
+  -webkit-user-select: all; /* Safari */
+  -khtml-user-select: all; /* Konqueror HTML */
+  -moz-user-select: all; /* Firefox */
+  -ms-user-select: all; /* Internet Explorer/Edge */
+  user-select: all; /* Chrome and Opera */
+}
+
+.flex {
+  display: flex;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.url {
+  width: 50%;
+}
+
+.pisol-ids{
+  width:200px;
+}

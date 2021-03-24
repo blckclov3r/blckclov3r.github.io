@@ -1,0 +1,98 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Language: \n"
+"POT-Creation-Date: 2020-06-17 11:50+0000\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: Loco https://localise.biz/"
+
+#: http2-push-content.php:41
+msgid ""
+"You have the PRO version of this plugin active, Free version and PRO version "
+"cant be active same time"
+msgstr ""
+
+#: admin/class-http2-push-content-general-option.php:29
+msgid "Push/Preload all style"
+msgstr ""
+
+#: admin/class-http2-push-content-general-option.php:29
+#: admin/class-http2-push-content-general-option.php:30
+msgid "Do Nothing"
+msgstr ""
+
+#: admin/class-http2-push-content-general-option.php:29
+#: admin/class-http2-push-content-general-option.php:30
+msgid "Push"
+msgstr ""
+
+#: admin/class-http2-push-content-general-option.php:29
+#: admin/class-http2-push-content-general-option.php:30
+msgid "Preload"
+msgstr ""
+
+#: admin/class-http2-push-content-general-option.php:29
+#: admin/class-http2-push-content-general-option.php:30
+msgid "Push Preload"
+msgstr ""
+
+#: admin/class-http2-push-content-general-option.php:29
+msgid "This push and preload all the style sheet added using enque method"
+msgstr ""
+
+#: admin/class-http2-push-content-general-option.php:30
+msgid "Push/Preload all script"
+msgstr ""
+
+#: admin/class-http2-push-content-general-option.php:30
+msgid "This push and preload all the script added using enque method"
+msgstr ""
+
+#: admin/class-http2-push-content-general-option.php:83
+msgid "Select Resource Type"
+msgstr ""
+
+#: admin/class-http2-push-content-general-option.php:95
+msgid "Select Push/Pull"
+msgstr ""
+
+#: admin/class-http2-push-content-general-option.php:116
+msgid "Push or Preload or Do Both to any content:"
+msgstr ""
+
+#: admin/class-http2-push-content-js-option.php:79
+#: admin/class-http2-push-content-style-option.php:79
+#: public/class-http2-push-content-apply-to.php:42
+msgid "Select"
+msgstr ""
+
+#: admin/class-http2-push-content-js-option.php:102
+msgid "Asynchronous or Defer or Remove JS file"
+msgstr ""
+
+#: admin/class-http2-push-content-menu.php:18
+msgid "HTTP2 Push Content List"
+msgstr ""
+
+#: admin/class-http2-push-content-style-option.php:101
+msgid "Asynchronous or Remove CSS file"
+msgstr ""
+
+#. Name of the plugin
+msgid "HTTP2 push content"
+msgstr ""
+
+#. Description of the plugin
+msgid ""
+"Push all CSS and JS file throuhg http2 server, plugin add extra files that "
+"you want to push like images font files and other"
+msgstr ""
+
+#. Author of the plugin
+msgid "Pi websolution"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "piwebsolution.com"
+msgstr ""
