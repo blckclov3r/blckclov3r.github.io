@@ -1,5 +1,4 @@
 <?php
-define('WP_CACHE', true); // WP-Optimize Cache
 /**
  * The base configuration for WordPress
  *
