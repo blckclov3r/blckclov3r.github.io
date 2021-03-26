@@ -10,7 +10,7 @@
 <channel>
 	<title>Blckclov3r</title>
 	<atom:link href="https://blckclov3r.github.io/feed/" rel="self" type="application/rss+xml" />
-	<link>https://blckclov3r.github.io</link>
+	<link>https://blckclov3r.github.io/</link>
 	<description>Freelancer</description>
 	<lastBuildDate>Mon, 22 Mar 2021 17:41:02 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -23,7 +23,7 @@
 <image>
 	<url>https://blckclov3r.github.io/wp-content/uploads/2021/03/cropped-blckclov3r-transparent-32x32.png</url>
 	<title>Blckclov3r</title>
-	<link>https://blckclov3r.github.io</link>
+	<link>https://blckclov3r.github.io/</link>
 	<width>32</width>
 	<height>32</height>
 </image> 
