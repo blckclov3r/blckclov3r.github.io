@@ -1,11 +1,6 @@
-
-
-
-
-
-const Opener = (url,key) => {
+const Opener = (url,_self) => {
     return (
-        window.open(url,key)
+        window.open(url,_self)
     );
 }
 
