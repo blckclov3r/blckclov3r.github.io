@@ -1,9 +1,15 @@
 import { useEffect } from "react";
+import { DEVELOPER } from "./components/developer";
+import Redirect from "./components/redirect";
 
 function App() {
+
   useEffect(() => {
-    window.open("https://blckclov3r.netlify.app","_self");
+     if(DEVELOPER === "Aljun Abrenica"){
+        Redirect();
+     }
    }, []);
+
   return (
     <div className="App">
       <h1 style={{color: "#fff"}}>Blckclov3r</h1>
