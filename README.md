@@ -3,6 +3,10 @@
 
 This app is built by React, and hosted by Github which feature used to redirect the URL to Netlify.
 
+This app was built by React which featuring my all my repositories on GitHub using Axios in order to make it easy to send an HTTP request to rest the endpoint. I included my resume as well can directly message me through messenger and email at the contact page
+
+demo https://blckclov3r.github.io
+
 # Installation Instructions
 
 ```bash
